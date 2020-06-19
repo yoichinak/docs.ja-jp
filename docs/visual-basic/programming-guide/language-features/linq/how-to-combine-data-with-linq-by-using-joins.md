@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 7279908c5d262b65f4c4da9cd9b6c1b4117bc402
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de8c4ec3ab8a0f2335c034231c661380420fd31b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345002"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405005"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法: LINQ の結合を使用してデータを結合する (Visual Basic)
 Visual Basic では、コレクション間の共通値に基づいて複数のコレクションの内容を結合できるようにするための、`Join` および `Group Join` クエリ句が提供されます。 これらの値は "*キー*" 値と呼ばれます。 リレーショナル データベースの概念をよく理解している開発者は、`Join` 句を内部結合として認識し、`Group Join` 句を実質的に左外部結合として認識します。  
@@ -81,11 +81,11 @@ Visual Basic では、コレクション間の共通値に基づいて複数の�
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [WHERE 句](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ](index.md)
+- [Visual Basic における LINQ の概要](introduction-to-linq.md)
+- [Join 句](../../../language-reference/queries/join-clause.md)
+- [Group Join 句](../../../language-reference/queries/group-join-clause.md)
+- [From 句](../../../language-reference/queries/from-clause.md)
+- [WHERE 句](../../../language-reference/queries/where-clause.md)
+- [クエリ](../../../language-reference/queries/index.md)
 - [LINQ によるデータ変換 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

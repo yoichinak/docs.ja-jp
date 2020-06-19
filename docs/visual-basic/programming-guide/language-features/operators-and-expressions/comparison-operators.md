@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: e1feb08539e47ec6fda64aa1a1f8ec2cc19f7b62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7a93928ff95e307c64149da7ab21476ffd4fa77d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346067"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388830"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic における比較演算子
 比較演算子は、2 つの式を比較し、それらの値の関係を表す `Boolean` 値を返します。 数値を比較するための演算子、文字列を比較するための演算子、およびオブジェクトを比較するための演算子があります。 ここでは、3 種類のすべての演算子について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "74346067"
 |`>=` (以上)|最初の式の値が 2 番目の式の値以上であるかどうかを示します。|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>文字列の比較  
- Visual Basic は、[Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)および数値比較演算子を使用して文字列を比較します。 `Like` 演算子を使用すると、パターンを指定できます。 その後、文字列がパターンと比較され、一致する場合、結果は `True` です。 それ以外の場合、結果は `False` です。 数値演算子を使用すると、次の例に示すように、並べ替え順序に基づいて `String` 値を比較できます。  
+ Visual Basic は、[Like 演算子](../../../language-reference/operators/like-operator.md)および数値比較演算子を使用して文字列を比較します。 `Like` 演算子を使用すると、パターンを指定できます。 その後、文字列がパターンと比較され、一致する場合、結果は `True` です。 それ以外の場合、結果は `False` です。 数値演算子を使用すると、次の例に示すように、並べ替え順序に基づいて `String` 値を比較できます。  
   
  `"73" < "9"`  
   
@@ -50,16 +50,16 @@ ms.locfileid: "74346067"
   
  `' The result of the preceding comparison is True.`  
   
- "aa" や "aaa" のように、ある文字列が別の文字列のプレフィックスである場合、長い文字列は短い文字列よりも大きいと見なされます。 次に例を示します。  
+ "aa" や "aaa" のように、ある文字列が別の文字列のプレフィックスである場合、長い文字列は短い文字列よりも大きいと見なされます。 次の例を使って説明します。  
   
  `"aaa" > "aa"`  
   
  `' The result of the preceding comparison is True.`  
   
- 並べ替え順序は、`Option Compare` の設定に応じて、バイナリ比較またはテキスト比較のいずれかに基づきます。 詳細については、「[Option Compare ステートメント](../../../../visual-basic/language-reference/statements/option-compare-statement.md)」を参照してください。  
+ 並べ替え順序は、`Option Compare` の設定に応じて、バイナリ比較またはテキスト比較のいずれかに基づきます。 詳細については、「[Option Compare ステートメント](../../../language-reference/statements/option-compare-statement.md)」を参照してください。  
   
 ## <a name="comparing-objects"></a>オブジェクトの比較  
- Visual Basic は、[Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)および [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)を使用して 2 つのオブジェクト参照変数を比較します。 これらの演算子のいずれかを使用して、2 つの参照変数が同じオブジェクト インスタンスを参照しているかどうかを判断できます。 次に例を示します。  
+ Visual Basic は、[Is 演算子](../../../language-reference/operators/is-operator.md)および [IsNot 演算子](../../../language-reference/operators/isnot-operator.md)を使用して 2 つのオブジェクト参照変数を比較します。 これらの演算子のいずれかを使用して、2 つの参照変数が同じオブジェクト インスタンスを参照しているかどうかを判断できます。 次の例を使って説明します。  
   
  [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "74346067"
   
  前の例では、`x Is y` は `False` と評価されます。これは、変数が同じ型のオブジェクトを参照しているにもかかわらず、その型の異なるインスタンスを参照しているためです。  
   
- 同じインスタンスを指していない 2 つのオブジェクトをテストする場合は、`IsNot` 演算子を使用すると、`Not` と `Is` の文法的にぎこちない組み合わせを回避できます。 次に例を示します。  
+ 同じインスタンスを指していない 2 つのオブジェクトをテストする場合は、`IsNot` 演算子を使用すると、`Not` と `Is` の文法的にぎこちない組み合わせを回避できます。 次の例を使って説明します。  
   
  [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
@@ -80,19 +80,19 @@ ms.locfileid: "74346067"
   
  `TypeOf <objectexpression> Is <typename>`  
   
- `typename` がインターフェイス型を指定するとき、オブジェクトがインターフェイス型を実装している場合、`TypeOf`...`Is` 式は `True` を返します。 `typename` がクラス型の場合、オブジェクトが指定されたクラスのインスタンスであるか、または指定されたクラスから派生したクラスのインスタンスである場合、式は `True` を返します。 次に例を示します。  
+ `typename` がインターフェイス型を指定するとき、オブジェクトがインターフェイス型を実装している場合、`TypeOf`...`Is` 式は `True` を返します。 `typename` がクラス型の場合、オブジェクトが指定されたクラスのインスタンスであるか、または指定されたクラスから派生したクラスのインスタンスである場合、式は `True` を返します。 次の例を使って説明します。  
   
  [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  前の例では、`TypeOf x Is Control` 式は `True` と評価されます。これは、`x` の型が `Button` であり、`Control` から継承されているためです。  
   
- 詳細については、「[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)」を参照してください。  
+ 詳細については、「[TypeOf 演算子](../../../language-reference/operators/typeof-operator.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [演算子](../../../../visual-basic/language-reference/operators/index.md)
-- [Visual Basic における算術演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic の連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Visual Basic の論理演算子とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [値の比較](value-comparisons.md)
+- [比較演算子](../../../language-reference/operators/comparison-operators.md)
+- [演算子](../../../language-reference/operators/index.md)
+- [Visual Basic における算術演算子](arithmetic-operators.md)
+- [Visual Basic の連結演算子](concatenation-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](logical-and-bitwise-operators.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 3c70d958fdcbb1782af22c3a4715676abbeeac0c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a352df0323cfeca1ea0e206ae45c3f85a2cd7da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353786"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404370"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit ステートメント (Visual Basic)
 ファイル内のすべての変数の明示的な宣言を強制させるか、変数の暗黙的な宣言を許可します。  
@@ -43,7 +43,7 @@ Option Explicit { On | Off }
 > `Option Explicit` を `Off` に設定することは、通常お勧めできません。 変数名のスペルを 1 か所以上間違えると、プログラムの実行時に予期しない結果を招く可能性があります。  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Option Explicit ステートメントが指定されていない場合  
- ソース コードに `Option Explicit` ステートメントが含まれていない場合は、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) の **[Option Explicit]** 設定が使用されます。 コマンドライン コンパイラを使用している場合は、[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) コンパイラ オプションを使用します。  
+ ソース コードに `Option Explicit` ステートメントが含まれていない場合は、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) の **[Option Explicit]** 設定が使用されます。 コマンドライン コンパイラを使用している場合は、[-optionexplicit](../../reference/command-line-compiler/optionexplicit.md) コンパイラ オプションを使用します。  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE の Option Explicit を設定するには  
   
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>コマンド ラインで Option Explicit を設定するには  
   
-- **vbc** コマンドに [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) コンパイラ オプションを含めます。  
+- **vbc** コマンドに [-optionexplicit](../../reference/command-line-compiler/optionexplicit.md) コンパイラ オプションを含めます。  
   
 ## <a name="example"></a>例  
  次の例では、`Option Explicit` ステートメントを使用して、すべての変数の明示的な宣言を強制しています。 宣言されていない変数を使用しようとすると、コンパイル時にエラーが発生します。  
@@ -68,11 +68,11 @@ Option Explicit { On | Off }
   
 ## <a name="see-also"></a>関連項目
 
-- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [Dim ステートメント](dim-statement.md)
+- [ReDim ステートメント](redim-statement.md)
+- [Option Compare ステートメント](option-compare-statement.md)
+- [Option Strict ステートメント](option-strict-statement.md)
+- [-optioncompare](../../reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../reference/command-line-compiler/optionstrict.md)
 - [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

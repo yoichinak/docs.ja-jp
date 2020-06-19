@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 064c43274069be3951f816eaafafac0bbece7651
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bbe84ce8a62705027c00bc26db74a3c21fa34fd9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347157"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411801"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
 Visual Basic では匿名型がサポートされています。これを使用すると、データ型のクラス定義を記述せずにオブジェクトを作成できます。 クラスは、コンパイラによって生成されます。 このクラスには使用可能な名前がなく、<xref:System.Object> から直接継承され、オブジェクトの宣言時に指定したプロパティが格納されます。 データ型の名前を指定しないため、*匿名型*と呼ばれます。  
@@ -32,7 +32,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- コンパイラによって作成される匿名型のコードの詳細については、「[匿名型の定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)」を参照してください。  
+ コンパイラによって作成される匿名型のコードの詳細については、「[匿名型の定義](anonymous-type-definition.md)」を参照してください。  
   
 > [!CAUTION]
 > 匿名型の名前はコンパイラによって生成され、コンパイルごとに異なる可能性があります。 プロジェクトが再コンパイルされるときに名前が変更される可能性があるため、コードでは、匿名型の名前を使用したり、それに依存したりしないでください。  
@@ -48,7 +48,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
   
  [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
- 匿名型のプロパティを指定するその他の方法の詳細については、「[方法: 匿名型の宣言におけるプロパティ名と型を推論する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)」を参照してください。  
+ 匿名型のプロパティを指定するその他の方法の詳細については、「[方法: 匿名型の宣言におけるプロパティ名と型を推論する](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)」を参照してください。  
   
 ## <a name="key-properties"></a>キー プロパティ  
  キー プロパティは、次のいくつかの基本的な点で、キー以外のプロパティとは異なります。  
@@ -59,7 +59,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
   
 - コンパイラによって生成された匿名型のハッシュ コード アルゴリズムには、キー プロパティ値のみが含まれます。  
   
-### <a name="equality"></a>等価比較  
+### <a name="equality"></a>等式  
  匿名型のインスタンスは、同じ匿名型のインスタンスである場合にのみ等しくすることができます。 コンパイラは、次の条件を満たす場合、2 つのインスタンスを同じ型のインスタンスとして扱います。  
   
 - これらは同じアセンブリ内で宣言されています。  
@@ -104,7 +104,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
   
  `custs3` によって表されるコレクション内の要素は厳密に型指定されます。IntelliSense を使用して、使用可能なプロパティ間を移動したり、その型を検証したりできます。  
   
- 詳細については、「[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)」を参照してください。  
+ 詳細については、「[Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)」を参照してください。  
   
 ## <a name="deciding-whether-to-use-anonymous-types"></a>匿名型を使用するかどうかの決定  
  オブジェクトを匿名クラスのインスタンスとして作成する前に、それが最適な選択肢かどうかを検討してください。 たとえば、関連データを格納する一時オブジェクトを作成する場合に、完全なクラスに含まれる可能性のある他のフィールドやメソッドが不要な場合は、匿名型が適切な解決策です。 匿名型は、宣言ごとに異なるプロパティを選択する場合や、プロパティの順序を変更する場合にも便利です。 ただし、プロジェクトに同じプロパティを持つ複数のオブジェクトが一定の順序で含まれている場合は、クラス コンストラクターを持つ名前付きの型を使用して、より簡単に宣言することができます。 たとえば、適切なコンストラクターを使用すると、匿名型の複数のインスタンスを宣言するよりも、`Product` クラスの複数のインスタンスを宣言する方が簡単になります。  
@@ -124,13 +124,13 @@ Visual Basic では匿名型がサポートされています。これを使用�
   
  少なくとも 1 つのキー プロパティを持つ匿名型定義は、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスも実装します。ここで `T` は匿名型の型です。  
   
- コンパイラによって作成される匿名型のコードとオーバーライドされたメソッドの機能の詳細については、「[匿名型の定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)」を参照してください。  
+ コンパイラによって作成される匿名型のコードとオーバーライドされたメソッドの機能の詳細については、「[匿名型の定義](anonymous-type-definition.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト初期化子: 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [方法: 匿名型の宣言におけるプロパティ名と型を推論する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
-- [匿名型の定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
-- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+- [オブジェクト初期化子: 名前付きの型と匿名型](object-initializers-named-and-anonymous-types.md)
+- [ローカル型の推論](../variables/local-type-inference.md)
+- [Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)
+- [方法: 匿名型の宣言におけるプロパティ名と型を推論する](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [匿名型の定義](anonymous-type-definition.md)
+- [Key](../../../language-reference/modifiers/key.md)

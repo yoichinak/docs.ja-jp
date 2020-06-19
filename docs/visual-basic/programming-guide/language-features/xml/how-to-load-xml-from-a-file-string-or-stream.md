@@ -5,16 +5,16 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 7a2a0513a066ae8ea8a70f7a5ae340ab29de7d25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f2a961ebb7ecd4fc0512e141b4a437be87bec0e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330960"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392289"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>方法: ファイル、文字列、またはストリームから XML を読み込む (Visual Basic)
 
-複数のメソッドを使用して、[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を作成し、外部ソースからファイル、文字列、ストリームなどの内容を取り込むことができます。 以降の例でこれらのメソッドを示します。
+複数のメソッドを使用して、[XML リテラル](../../../language-reference/xml-literals/index.md)を作成し、外部ソースからファイル、文字列、ストリームなどの内容を取り込むことができます。 以降の例でこれらのメソッドを示します。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -49,6 +49,6 @@ ms.locfileid: "74330960"
 - <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>
-- [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Visual Basic での XML の操作](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [XML リテラル](../../../language-reference/xml-literals/index.md)
+- [XML](index.md)
+- [Visual Basic での XML の操作](manipulating-xml.md)

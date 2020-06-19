@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 95137a9f6a4a4a18655b51b95300bfaf93cca193
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f49f05f1deb2027b03bbf3443ca44f30c44344e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404214"
 ---
 # <a name="resume-statement"></a>Resume ステートメント
 エラー処理ルーチンが終了した後、実行を再開します。  
   
- コードでは、非構造化例外処理と `On Error` および `Resume` ステートメントを使用するのではなく、可能な限り、構造化例外処理を使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
+ コードでは、非構造化例外処理と `On Error` および `Resume` ステートメントを使用するのではなく、可能な限り、構造化例外処理を使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](try-catch-finally-statement.md)」をご覧ください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ Resume [ Next | line ]
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
-> コードでは、非構造化例外処理と `On Error` および `Resume` ステートメントを使用するのではなく、可能な限り、構造化例外処理を使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
+> コードでは、非構造化例外処理と `On Error` および `Resume` ステートメントを使用するのではなく、可能な限り、構造化例外処理を使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](try-catch-finally-statement.md)」をご覧ください。  
   
  エラー処理ルーチン以外の場所で `Resume` ステートメントを使用すると、エラーが発生します。  
   
@@ -58,12 +58,12 @@ Resume [ Next | line ]
  [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **名前空間:** [Microsoft.VisualBasic](../runtime-library-members.md)  
   
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 
-- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)
-- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Try...Catch...Finally ステートメント](try-catch-finally-statement.md)
+- [Error ステートメント](error-statement.md)
+- [On Error ステートメント](on-error-statement.md)

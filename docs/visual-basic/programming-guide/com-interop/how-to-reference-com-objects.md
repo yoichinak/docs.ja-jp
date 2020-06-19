@@ -8,17 +8,17 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: ea0e1d9b0ae9f151d901c425512508ba7bc05343
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2e2cbac6fad5e1686b7383c44619b8c6f5326483
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524363"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396805"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>方法: Visual Basic から COM オブジェクトを参照する
 Visual Basic でタイプ ライブラリがある COM オブジェクトへの参照を追加するには、COM ライブラリ用の相互運用アセンブリを作成する必要があります。 COM オブジェクトのメンバーへの参照は相互運用アセンブリにルーティングされてから、実際の COM オブジェクトに転送されます。 COM オブジェクトからの応答は相互運用アセンブリにルーティングされてから、.NET Framework アプリケーションに転送されます。  
   
- .NET アセンブリに COM オブジェクトの型情報を埋め込むことによって、相互運用アセンブリを使用せずに COM オブジェクトを参照できます。 型情報を埋め込むには、COM オブジェクトへの参照の `Embed Interop Types` プロパティを `True` に設定します。 コマンド ライン コンパイラを使用してコンパイルする場合は、`/link` オプションを使用して COM ライブラリを参照します。 詳細については、「[-link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)」を参照してください。  
+ .NET アセンブリに COM オブジェクトの型情報を埋め込むことによって、相互運用アセンブリを使用せずに COM オブジェクトを参照できます。 型情報を埋め込むには、COM オブジェクトへの参照の `Embed Interop Types` プロパティを `True` に設定します。 コマンド ライン コンパイラを使用してコンパイルする場合は、`/link` オプションを使用して COM ライブラリを参照します。 詳細については、「[-link (Visual Basic)](../../reference/command-line-compiler/link.md)」を参照してください。  
   
  統合開発環境 (IDE) からタイプ ライブラリへの参照を追加すると、Visual Basic によって相互運用アセンブリが自動的に作成されます。 コマンド ラインから作業する場合は、Tlbimp ユーティリティを使用して、相互運用アセンブリを手動で作成できます。  
   
@@ -54,9 +54,9 @@ Visual Basic でタイプ ライブラリがある COM オブジェクトへの�
   
 ## <a name="see-also"></a>関連項目
 
-- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
+- [COM 相互運用](index.md)
 - [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [チュートリアル: COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [相互運用性のトラブルシューティング](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [チュートリアル: COM オブジェクトによる継承の実装](walkthrough-implementing-inheritance-with-com-objects.md)
+- [相互運用性のトラブルシューティング](troubleshooting-interoperability.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

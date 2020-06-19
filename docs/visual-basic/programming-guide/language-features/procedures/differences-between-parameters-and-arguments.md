@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd0a62b6567f3e74763b7f2e9b96803c193c7976
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341375"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403357"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>パラメーターと引数の違い (Visual Basic)
 ほとんどの場合、プロシージャには呼び出された状況に関する情報が必要です。 反復的なタスクや共有タスクを実行するプロシージャでは、呼び出しごとに異なる情報を使用します。 この情報は、呼び出し時にプロシージャに渡す変数、定数、式で構成されます。  
@@ -26,7 +26,7 @@ ms.locfileid: "74341375"
 ## <a name="parameters"></a>パラメーター  
  "*パラメーター*" は、プロシージャを呼び出すときに渡す必要がある値を表します。 プロシージャの宣言でパラメーターを定義します。  
   
- `Function` または `Sub` プロシージャを定義するときは、プロシージャ名の直後にかっこで囲んだ "*パラメーター リスト*" を指定します。 パラメーターごとに、名前、データ型、および引渡し方法 ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) または [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)) を指定します。 パラメーターが省略可能であることを示すこともできます。 これは、呼び出し元のコードから値を渡す必要がないことを意味します。  
+ `Function` または `Sub` プロシージャを定義するときは、プロシージャ名の直後にかっこで囲んだ "*パラメーター リスト*" を指定します。 パラメーターごとに、名前、データ型、および引渡し方法 ([ByVal](../../../language-reference/modifiers/byval.md) または [ByRef](../../../language-reference/modifiers/byref.md)) を指定します。 パラメーターが省略可能であることを示すこともできます。 これは、呼び出し元のコードから値を渡す必要がないことを意味します。  
   
  各パラメーターの名前は、プロシージャ内で "*ローカル変数*" として機能します。 パラメーター名は、他の変数を使用する場合と同じ方法で使用します。  
   

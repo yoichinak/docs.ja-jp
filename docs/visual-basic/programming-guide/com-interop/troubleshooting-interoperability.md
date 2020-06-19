@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 344c180cf0b9426898e17b45db768a337fd45beb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0890bac80396feaf37d4ba917c1e3fafb8579981
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338688"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396767"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>相互運用性のトラブルシューティング (Visual Basic)
 COM と .NET Framework のマネージド コードとの間で相互運用を行うときに、以下に示した一般的な問題が発生することがあります。  
@@ -129,9 +129,9 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
+- [COM 相互運用](index.md)
 - [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [チュートリアル: COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [チュートリアル: COM オブジェクトによる継承の実装](walkthrough-implementing-inheritance-with-com-objects.md)
+- [Inherits ステートメント](../../language-reference/statements/inherits-statement.md)
 - [グローバル アセンブリ キャッシュ](../../../framework/app-domains/gac.md)

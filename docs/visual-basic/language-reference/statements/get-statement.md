@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 9560faf90d531c32f104dbd053a7c1f5584cfb1b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351173"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404603"
 ---
 # <a name="get-statement"></a>Get ステートメント
 プロパティの値を取得するために使用する `Get` プロパティ プロシージャを宣言します。  
@@ -33,8 +33,8 @@ End Get
   
 |用語|定義|  
 |---|---|  
-|`attributelist`|任意。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
-|`accessmodifier`|このプロパティの `Get` および `Set` ステートメントのいずれかで、省略可能です。 次のいずれかの値を指定します。<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`attributelist`|任意。 「[属性リスト](attribute-list.md)」を参照してください。|  
+|`accessmodifier`|このプロパティの `Get` および `Set` ステートメントのいずれかで、省略可能です。 次のいずれかの値を指定します。<br /><br /> -   [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 「 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`statements`|任意。 `Get` プロパティ プロシージャが呼び出されたときに実行される 1 つ以上のステートメント。|  
 |`End Get`|必須です。 `Get` プロパティ プロシージャの定義を終了します。|  
   
@@ -43,7 +43,7 @@ End Get
   
  Visual Basic では、式でプロパティの値が要求されると、プロパティの `Get` プロシージャが自動的に呼び出されます。  
   
- プロパティ宣言の本体には、[Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)と `End Property` ステートメントの間に、プロパティの `Get` と `Set` のプロシージャのみを含めることができます。 これらのプロシージャ以外のものを格納することはできません。 特に、プロパティの現在の値を格納することはできません。 この値は、プロパティの外部に格納する必要があります。それをいずれかのプロパティ プロシージャの内部に格納した場合、他のプロパティ プロシージャからアクセスできなくなるためです。 通常の方法は、プロパティと同じレベルで宣言された [Private](../../../visual-basic/language-reference/modifiers/private.md) 変数に値を格納することです。 `Get` プロシージャは、適用先のプロパティの内部で定義する必要があります。  
+ プロパティ宣言の本体には、[Property ステートメント](property-statement.md)と `End Property` ステートメントの間に、プロパティの `Get` と `Set` のプロシージャのみを含めることができます。 これらのプロシージャ以外のものを格納することはできません。 特に、プロパティの現在の値を格納することはできません。 この値は、プロパティの外部に格納する必要があります。それをいずれかのプロパティ プロシージャの内部に格納した場合、他のプロパティ プロシージャからアクセスできなくなるためです。 通常の方法は、プロパティと同じレベルで宣言された [Private](../modifiers/private.md) 変数に値を格納することです。 `Get` プロシージャは、適用先のプロパティの内部で定義する必要があります。  
   
  `Get` ステートメントで `accessmodifier` を使用しない限り、`Get` プロシージャは既定で、それを含んでいるプロパティのアクセス レベルに設定されます。  
   
@@ -53,7 +53,7 @@ End Get
   
      `ReadOnly` プロパティを定義する場合、`Get` プロシージャはプロパティ全体を表します。 `Get` に対して異なるアクセス レベルを宣言することはできません。それによって、プロパティに 2 つのアクセス レベルが設定されるためです。  
   
-- **戻り値の型。** [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)では、それによって返される値のデータ型を宣言できます。 `Get` プロシージャでは、そのデータ型が自動的に返されます。 任意のデータ型や、列挙、構造体、クラス、またはインターフェイスの名前を指定できます。  
+- **戻り値の型。** [Property ステートメント](property-statement.md)では、それによって返される値のデータ型を宣言できます。 `Get` プロシージャでは、そのデータ型が自動的に返されます。 任意のデータ型や、列挙、構造体、クラス、またはインターフェイスの名前を指定できます。  
   
      `Property` ステートメントで `returntype` を指定していない場合、プロシージャによって `Object` が返されます。  
   
@@ -61,13 +61,13 @@ End Get
   
 - **プロシージャからの復帰。** `Get` プロシージャから呼び出し元のコードに戻ると、そのプロパティ値を要求したステートメント内で実行が続行されます。  
   
-     `Get` プロパティ プロシージャでは、[Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)を使用するか、プロパティ名に戻り値を代入することによって、値を返すことができます。 詳細については、「[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の "戻り値" に関する記述を参照してください。  
+     `Get` プロパティ プロシージャでは、[Return ステートメント](return-statement.md)を使用するか、プロパティ名に戻り値を代入することによって、値を返すことができます。 詳細については、「[Function ステートメント](function-statement.md)」の "戻り値" に関する記述を参照してください。  
   
      `Exit Property` および `Return` ステートメントでは、プロパティ プロシージャがすぐに終了します。 任意の数の `Exit Property` および `Return` ステートメントをプロシージャ内の任意の場所に記述でき、`Exit Property` ステートメントと `Return` ステートメントを混在させることができます。  
   
-- **戻り値。** `Get` プロシージャから値を返すには、プロパティ名に値を代入するか、[Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)に値を含めることができます。 `Return` ステートメントでは、`Get` プロシージャに戻り値を代入すると同時に、プロシージャが終了します。  
+- **戻り値。** `Get` プロシージャから値を返すには、プロパティ名に値を代入するか、[Return ステートメント](return-statement.md)に値を含めることができます。 `Return` ステートメントでは、`Get` プロシージャに戻り値を代入すると同時に、プロシージャが終了します。  
   
-     プロパティ名に値を代入せずに、`Exit Property` を使用すると、`Get` プロシージャからは、プロパティのデータ型の既定値が返されます。 詳細については、「[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の "戻り値" に関する記述を参照してください。  
+     プロパティ名に値を代入せずに、`Exit Property` を使用すると、`Get` プロシージャからは、プロパティのデータ型の既定値が返されます。 詳細については、「[Function ステートメント](function-statement.md)」の "戻り値" に関する記述を参照してください。  
   
      次の例では、読み取り専用プロパティ `quoteForTheDay` で、プライベート変数 `quoteValue` に保持されている値を返すことができる 2 つの方法を示しています。  
   
@@ -84,8 +84,8 @@ End Get
   
 ## <a name="see-also"></a>関連項目
 
-- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [チュートリアル: クラスの定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+- [Set ステートメント](set-statement.md)
+- [Property ステートメント](property-statement.md)
+- [Exit ステートメント](exit-statement.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)
+- [チュートリアル: クラスの定義](../../programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

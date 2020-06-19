@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 3a5de98c6edf795a11bd9f0465aa6919f09eebfa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 514d6e576b9b782387840ae04dcefa00de876aa9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340957"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388739"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: 値を返さないプロシージャを呼び出す (Visual Basic)
 `Sub` プロシージャから呼び出し元コードに対しては値が返されません。 これは、スタンドアロンの呼び出し元ステートメントを使用して明示的に呼び出します。 式内でその名前を使用するだけでは呼び出せません。  
@@ -35,7 +35,7 @@ ms.locfileid: "74340957"
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub ステートメント](../../../language-reference/statements/sub-statement.md)
 - [方法: プロシージャを作成する](./how-to-create-a-procedure.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)
 - [方法: Visual Basic でイベント ハンドラーを呼び出す](./how-to-call-an-event-handler.md)

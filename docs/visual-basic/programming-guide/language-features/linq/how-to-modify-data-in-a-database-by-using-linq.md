@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 9a10efef5ae92dd21888594ae80a3fc07869a8c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eb076d9156fa66858f2e560422eef0dc61ba22b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344943"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403486"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>方法: LINQ を使用してデータベースのデータを変更する (Visual Basic)
 
@@ -37,7 +37,7 @@ ms.locfileid: "74344943"
 
 ### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>LINQ to SQL ファイルを含むプロジェクトを追加するには
 
-1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 プロジェクト タイプとして、Visual Basic の **[Windows フォーム アプリケーション]** を選択します。
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 プロジェクト タイプとして Visual Basic **[Windows フォーム アプリケーション]** を選択します。
 
 2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[LINQ to SQL クラス]** 項目テンプレートを選択します。
 
@@ -163,8 +163,8 @@ ms.locfileid: "74344943"
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ](index.md)
+- [クエリ](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

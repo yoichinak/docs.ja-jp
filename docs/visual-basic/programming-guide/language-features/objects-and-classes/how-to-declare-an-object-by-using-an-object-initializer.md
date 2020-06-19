@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: ae04d338b61027c3917ad3a7f62ff40f0a95e53e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf4954059a4b0bf015bed82a74357ecfd5f5987e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347137"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404876"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)
 オブジェクト初期化子を使用すると、1 つのステートメントで、クラスのインスタンスを宣言してインスタンス化できます。 また、パラメーター化されたコンストラクターを呼び出さずに、インスタンスの 1 つ以上のメンバーを同時に初期化できます。  
@@ -23,7 +23,7 @@ ms.locfileid: "74347137"
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- `Student` クラスの実装については、「[方法:項目のリストを作成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)」を参照してください。 そのトピックからコードをコピーして、クラスを設定し、操作する `Student` オブジェクトの一覧を作成できます。  
+ `Student` クラスの実装については、「[方法:項目のリストを作成する](../../concepts/linq/how-to-create-a-list-of-items.md)」を参照してください。 そのトピックからコードをコピーして、クラスを設定し、操作する `Student` オブジェクトの一覧を作成できます。  
   
 ### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>オブジェクト初期化子を使用して、名前付きクラスのオブジェクトを作成するには  
   
@@ -57,11 +57,11 @@ ms.locfileid: "74347137"
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     詳細については、「[ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。  
+     詳細については、「[ローカル型の推論](../variables/local-type-inference.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [方法: 項目のリストを作成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-- [オブジェクト初期化子: 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [ローカル型の推論](../variables/local-type-inference.md)
+- [方法: 項目のリストを作成する](../../concepts/linq/how-to-create-a-list-of-items.md)
+- [オブジェクト初期化子: 名前付きの型と匿名型](object-initializers-named-and-anonymous-types.md)
+- [匿名型](anonymous-types.md)

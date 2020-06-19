@@ -8,15 +8,15 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: 12fbd1f4332391b1acdcf12e101d82627ebbeaff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 043243eeee7c24d8c63105047fa3e7e0ed58c7b0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335996"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374669"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>宣言する XML 要素と属性の名前 (Visual Basic)
-このトピックでは、XML リテラルで XML 要素と属性に名前を付けるための Visual Basic ガイドラインを示します。  XML リテラルでは、ローカル名を指定することも修飾名を指定することもできます。 修飾名は、XML 名前空間プレフィックス、コロン、およびローカル名から成ります。 XML 名前空間プレフィックスの詳細については、「[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
+このトピックでは、XML リテラルで XML 要素と属性に名前を付けるための Visual Basic ガイドラインを示します。  XML リテラルでは、ローカル名を指定することも修飾名を指定することもできます。 修飾名は、XML 名前空間プレフィックス、コロン、およびローカル名から成ります。 XML 名前空間プレフィックスの詳細については、「[XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
  Visual Basic での要素または属性のローカル名は、次の規則に従う必要があります。  
@@ -42,9 +42,9 @@ ms.locfileid: "74335996"
  XML 要素名では大文字と小文字が区別されます。 つまり、英字の大文字と小文字の違いしかない 2 つの名前を比較した場合、Visual Basic コンパイラではそれらを異なる名前と解釈します。 たとえば、`ABC` と `abc` は別々の要素を示していると解釈されます。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- XML 要素リテラルを作成するときに、要素名に XML 名前空間プレフィックスを指定できます。 詳細については、「[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
+ XML 要素リテラルを作成するときに、要素名に XML 名前空間プレフィックスを指定できます。 詳細については、「[XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Visual Basic での XML の作成](creating-xml.md)
+- [XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)

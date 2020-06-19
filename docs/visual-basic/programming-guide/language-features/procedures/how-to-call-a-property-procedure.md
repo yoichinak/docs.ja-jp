@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340555"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388700"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>方法: プロパティ プロシージャを呼び出す (Visual Basic)
 プロパティ プロシージャを呼び出すには、プロパティに値を格納するか、その値を取得します。 プロパティには、変数にアクセスするのと同じ方法でアクセスします。  
@@ -56,12 +56,12 @@ ms.locfileid: "74340555"
 
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic のプロパティと変数の相違点](./differences-between-properties-and-variables.md)
+- [Property ステートメント](../../../language-reference/statements/property-statement.md)
+- [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
 - [方法: プロパティを作成する](./how-to-create-a-property.md)
 - [方法: 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [方法: 既定のプロパティを宣言して呼び出す (Visual Basic)](./how-to-declare-and-call-a-default-property.md)
 - [方法: プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)
 - [方法: プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)
-- [Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md)
+- [Get ステートメント](../../../language-reference/statements/get-statement.md)
+- [Set ステートメント](../../../language-reference/statements/set-statement.md)

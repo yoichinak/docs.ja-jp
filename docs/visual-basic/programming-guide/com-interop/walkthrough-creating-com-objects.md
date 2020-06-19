@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 5d00aff07358a0c40159fde9c12c70e0842d848b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338616"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396741"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>チュートリアル: Visual Basic での COM オブジェクトの作成
 新しいアプリケーションまたはコンポーネントを作成する場合は、.NET Framework アセンブリを作成することをお勧めします。 ただし、Visual Basic を使用すると、COM への .NET Framework コンポーネントの公開も簡単になります。 これにより、COM コンポーネントを必要とする以前のアプリケーション スイートに対して新しいコンポーネントが提供できるようになります。 このチュートリアルでは、Visual Basic を使用して、COM クラス テンプレートを使用するかどうかにかかわらず、.NET Framework オブジェクトを COM オブジェクトとして公開する方法について説明します。  
@@ -21,7 +21,7 @@ ms.locfileid: "74338616"
  COM オブジェクトを公開する最も簡単な方法は、COM クラス テンプレートを使用することです。 COM クラス テンプレートは新しいクラスを作成し、クラスと相互運用性レイヤーを COM オブジェクトとして生成してオペレーティング システムに登録するようにプロジェクトを構成します。  
   
 > [!NOTE]
-> Visual Basic で作成されたクラスをアンマネージド コードで使用できるように COM オブジェクトとして公開することもできますが、これは実際の COM オブジェクトではなく、Visual Basic では使用できません。 詳細については、「[.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)」を参照してください。  
+> Visual Basic で作成されたクラスをアンマネージド コードで使用できるように COM オブジェクトとして公開することもできますが、これは実際の COM オブジェクトではなく、Visual Basic では使用できません。 詳細については、「[.NET Framework アプリケーションにおける COM 相互運用性](com-interoperability-in-net-framework-applications.md)」を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -88,13 +88,13 @@ ms.locfileid: "74338616"
 9. プロパティ、メソッド、およびイベントをクラスに追加し、`End Class` ステートメントで終了します。 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。 Visual Basic は、アセンブリをビルドし、オペレーティング システムに COM オブジェクトを登録します。  
   
     > [!NOTE]
-    > Visual Basic で生成した COM オブジェクトは、実際の COM オブジェクトではないため、他の Visual Basic アプリケーションでは使用できません。 そのような COM オブジェクトに参照を追加しようとすると、エラーが発生します。 詳細については、「[.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)」を参照してください。  
+    > Visual Basic で生成した COM オブジェクトは、実際の COM オブジェクトではないため、他の Visual Basic アプリケーションでは使用できません。 そのような COM オブジェクトに参照を追加しようとすると、エラーが発生します。 詳細については、「[.NET Framework アプリケーションにおける COM 相互運用性](com-interoperability-in-net-framework-applications.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
-- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
-- [チュートリアル: COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)
-- [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [相互運用性のトラブルシューティング](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [COM 相互運用](index.md)
+- [チュートリアル: COM オブジェクトによる継承の実装](walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region ディレクティブ](../../language-reference/directives/region-directive.md)
+- [.NET Framework アプリケーションにおける COM 相互運用性](com-interoperability-in-net-framework-applications.md)
+- [相互運用性のトラブルシューティング](troubleshooting-interoperability.md)

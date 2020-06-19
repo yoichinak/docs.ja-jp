@@ -13,23 +13,23 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 4e03cd28fed5e0ae109337739251c11a0ff3424a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9d1e327c25689bed1405ea9a627da6232abb707b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331626"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392949"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
 宣言された要素の "*特性*" は、その要素の側面の 1 つで、コードが要素とやり取りする方法に影響を与えます。 宣言されたすべての要素には、次の 1 つ以上の特性が関連付けられています。  
   
-- *データ型*: 要素で保持できる値と、その値を格納する方法。 詳細については、「[Data Types](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
+- *データ型*: 要素で保持できる値と、その値を格納する方法。 詳細については、「[Data Types](../../../language-reference/data-types/index.md)」(データ型) を参照してください。  
   
-- *有効期間*: 要素で使用可能な実行時間。 詳しくは、「[Visual Basic における有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」をご覧ください。  
+- *有効期間*: 要素で使用可能な実行時間。 詳しくは、「[Visual Basic における有効期間](lifetime.md)」をご覧ください。  
   
-- *スコープ*: 名前を修飾せずに要素を参照できるすべてのコードのセット。 詳細については、[方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)」を参照してください。  
+- *スコープ*: 名前を修飾せずに要素を参照できるすべてのコードのセット。 詳細については、「[方法:方法: 変数のスコープを制御する](how-to-control-the-scope-of-a-variable.md)」を参照してください。  
   
-- *アクセス レベル*: 要素を使用するコードのアクセス許可。 詳細については、[方法: 変数の可用性を制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)」を参照してください。  
+- *アクセス レベル*: 要素を使用するコードのアクセス許可。 詳細については、「[方法:方法: 変数の可用性を制御する](how-to-control-the-availability-of-a-variable.md)」を参照してください。  
   
 ## <a name="characteristics-of-the-elements"></a>要素の特性  
  次の表に、宣言された要素と、それぞれに適用される特性を示します。  
@@ -55,11 +55,11 @@ ms.locfileid: "74331626"
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
-- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic における有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [宣言された要素](index.md)
+- [宣言された要素の名前](declared-element-names.md)
+- [宣言された要素の参照](references-to-declared-elements.md)
+- [Visual Basic における有効期間](lifetime.md)
+- [Visual Basic におけるスコープ](scope.md)
+- [Visual Basic でのアクセス レベル](access-levels.md)
+- [データの種類](../data-types/index.md)
+- [変数宣言](../variables/variable-declaration.md)

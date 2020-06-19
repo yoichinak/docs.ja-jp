@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: 8d1ebdcd0a23dff69a7acca22268c03e30ec06d9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a6ea83fadf18ef3be778e6de31c0eb4e65e74824
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345416"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392871"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>シャドウとオーバーライドの違い (Visual Basic)
 基底クラスから継承するクラスを定義する場合、派生クラスの 1 つ以上の基底クラス要素を再定義する必要があることがあります。 この目的では、シャドウとオーバーライドの両方を使用できます。  
@@ -53,10 +53,10 @@ ms.locfileid: "74345416"
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [方法: 自分で宣言した変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [方法: 継承された変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [方法: 派生クラスによって非表示になっている変数にアクセスする](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [宣言された要素の参照](references-to-declared-elements.md)
+- [Visual Basic におけるシャドウ](shadowing.md)
+- [方法: 自分で宣言した変数と同じ名前の変数を隠す](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [方法: 継承された変数を隠す](how-to-hide-an-inherited-variable.md)
+- [方法: 派生クラスによって非表示になっている変数にアクセスする](how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Shadows](../../../language-reference/modifiers/shadows.md)
+- [Overrides](../../../language-reference/modifiers/overrides.md)

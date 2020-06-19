@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 497c5f207b2228412411cc3eb01976564f82bd6c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ef1e2f9045e5509e11557c9fdaf3edd2786b72c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346466"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404227"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop ステートメント (Visual Basic)
 実行を中断します。  
@@ -43,4 +43,4 @@ Stop
   
 ## <a name="see-also"></a>関連項目
 
-- [End ステートメント](../../../visual-basic/language-reference/statements/end-statement.md)
+- [End ステートメント](end-statement.md)

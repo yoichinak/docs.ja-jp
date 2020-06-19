@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: e3af5185d2c2106e6a696a6569ef59897d0f1fe1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 61b138c0851c747ed30eedc10cb882cc3b03c4d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333000"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392611"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>方法: XML リテラルを作成する (Visual Basic)
 XML リテラルを使用して、XML ドキュメント、フラグメント、または要素をコード内で直接作成できます。 このトピックの例では、3 つの子要素を持つ XML 要素を作成する方法と、XML ドキュメントを作成する方法を示します。  
@@ -54,7 +54,7 @@ XML リテラルを使用して、XML ドキュメント、フラグメント、
   
 ## <a name="see-also"></a>関連項目
 
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML](index.md)
+- [Visual Basic での XML の作成](creating-xml.md)
+- [XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)
+- [XML ドキュメント リテラル](../../../language-reference/xml-literals/xml-document-literal.md)

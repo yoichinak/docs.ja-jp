@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: c5c7ec87bc173f724f8c670395bc3b0458444df6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 999050314d674fa98833083d84796e471c22971d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335395"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406341"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 演算子 (Visual Basic)
 2 つの `Boolean` 式の場合は排他的論理和、2 つの数値式の場合はビットごとの排他を求めます。  
@@ -51,7 +51,7 @@ result = expression1 Xor expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> ブール値の比較では、`Xor` 演算子は常に両方の式を評価します。これには、プロシージャ呼び出しを含めることができます。 結果は常に両方のオペランドに依存するため、`Xor` に対応するショートサーキットはありません。 "*ショートサーキット*" 論理演算子については、「[AndAlso 演算子](../../../visual-basic/language-reference/operators/andalso-operator.md)」、および「[OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)」を参照してください。  
+> ブール値の比較では、`Xor` 演算子は常に両方の式を評価します。これには、プロシージャ呼び出しを含めることができます。 結果は常に両方のオペランドに依存するため、`Xor` に対応するショートサーキットはありません。 "*ショートサーキット*" 論理演算子については、「[AndAlso 演算子](andalso-operator.md)」、および「[OrElse 演算子](orelse-operator.md)」を参照してください。  
   
  ビットごとの演算の場合、`Xor` 演算子は、2 つの数値式でまったく同じ位置にあるビットのビットごとの比較を実行し、次の表に従って `result` に対応するビットを設定します。  
   
@@ -70,10 +70,10 @@ result = expression1 Xor expression2
 ## <a name="data-types"></a>データの種類  
  オペランドが 1 つの `Boolean` 式と 1 つの数値式で構成されている場合、Visual Basic では `Boolean` 式が数値に変換され (`True` の場合は –1、`False` の場合は 0)、ビットごとの演算が実行されます。  
   
- `Boolean` の比較の場合、結果のデータ型は `Boolean` になります。 ビットごとの比較の場合、結果のデータ型は `expression1` および `expression2` のデータ型に適した数値型になります。 [演算子の結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)に関するページ内の表 "関係とビットごとの比較" を参照してください。  
+ `Boolean` の比較の場合、結果のデータ型は `Boolean` になります。 ビットごとの比較の場合、結果のデータ型は `expression1` および `expression2` のデータ型に適した数値型になります。 [演算子の結果のデータ型](data-types-of-operator-results.md)に関するページ内の表 "関係とビットごとの比較" を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- `Xor` 演算子を "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コード内で、そのようなクラスまたは構造体に対してこの演算子が使用されている場合は、再定義されたその動作を必ず理解してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Xor` 演算子を "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コード内で、そのようなクラスまたは構造体に対してこの演算子が使用されている場合は、再定義されたその動作を必ず理解してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Xor` 演算子を使用して、2 つの式の排他的論理和 (排他的論理和演算) を実行します。 結果は、それらの式のうちの 1 つだけが `True` であるかどうかを表す `Boolean` 値となります。  
@@ -91,7 +91,7 @@ result = expression1 Xor expression2
   
 ## <a name="see-also"></a>関連項目
 
-- [論理演算子とビット処理演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic の論理演算子とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [論理演算子とビット処理演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Visual Basic の論理演算子とビット演算子](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

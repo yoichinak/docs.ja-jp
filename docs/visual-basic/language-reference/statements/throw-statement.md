@@ -14,12 +14,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 147345990b625e034e651e69b322bc098d0bd8de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 95572b1739490e90f53da6b6ec283bfb532c46d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352793"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404136"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw ステートメント (Visual Basic)
 
@@ -52,5 +52,5 @@ Throw [ expression ]
 
 ## <a name="see-also"></a>関連項目
 
-- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Try...Catch...Finally ステートメント](try-catch-finally-statement.md)
+- [On Error ステートメント](on-error-statement.md)

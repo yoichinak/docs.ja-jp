@@ -13,19 +13,19 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 83ad53e4c75490a75eba0f80a6bf0f078aa4d426
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3088072646278dac13e4d483cb4f99297eaad9ca
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348996"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403473"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>演算子の効率のよい組み合わせ (Visual Basic)
-複合式にはさまざまな演算子を含めることができます。 次に例を示します。  
+複合式にはさまざまな演算子を含めることができます。 次の例を使って説明します。  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- 前の例のいずれかのような複雑な式を作成するには、演算子の優先順位のルールを十分に理解している必要があります。 詳細については、「[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)」を参照してください。  
+ 前の例のいずれかのような複雑な式を作成するには、演算子の優先順位のルールを十分に理解している必要があります。 詳細については、「[Visual Basic における演算子の優先順位](../../../language-reference/operators/operator-precedence.md)」を参照してください。  
   
 ## <a name="parenthetical-expressions"></a>かっこで囲まれた式  
  多くの場合、演算子の優先順位によって決定される順序とは異なる順序で操作を進める必要があります。 例を次に示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "74348996"
  前の例では、`y` と `4` を加算し、その合計を `z` で乗算しています。  
   
 ### <a name="nested-parenthetical-expressions"></a>入れ子になったかっこで囲まれた式  
- 式を複数のレベルのかっこで入れ子にして、優先順位をさらにオーバーライドすることができます。 かっこ内で最も深く入れ子にされている式が最初に評価され、次に最も深く入れ子にされている式、次に最も深く入れ子にされていない式、最後にかっこの外側の式が評価されます。 次に例を示します。  
+ 式を複数のレベルのかっこで入れ子にして、優先順位をさらにオーバーライドすることができます。 かっこ内で最も深く入れ子にされている式が最初に評価され、次に最も深く入れ子にされている式、次に最も深く入れ子にされていない式、最後にかっこの外側の式が評価されます。 次の例を使って説明します。  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
@@ -47,11 +47,11 @@ ms.locfileid: "74348996"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における算術演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic の論理演算子とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [論理/ビット演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [ブール式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [方法: 数値を計算する](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
-- [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic における算術演算子](arithmetic-operators.md)
+- [Visual Basic における比較演算子](comparison-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](logical-and-bitwise-operators.md)
+- [論理/ビット演算子 (Visual Basic)](../../../language-reference/operators/logical-bitwise-operators.md)
+- [ブール式](boolean-expressions.md)
+- [値の比較](value-comparisons.md)
+- [方法: 数値を計算する](how-to-calculate-numeric-values.md)
+- [Visual Basic における演算子の優先順位](../../../language-reference/operators/operator-precedence.md)

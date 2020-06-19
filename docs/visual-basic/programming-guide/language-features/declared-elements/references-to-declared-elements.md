@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345304"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405184"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>宣言された要素の参照 (Visual Basic)
 コードが宣言された要素を参照すると、Visual Basic コンパイラは、参照内の名前と、その名前の適切な宣言を照合します。 同じ名前の複数の要素が宣言されている場合は、その名前を*修飾*することで、それらの要素のうちどれが参照されるかを制御できます。  
@@ -112,7 +112,7 @@ Dim demoClass As class1 = New class1()
 demoClass.someSub[(argumentlist)]  
 ```  
   
- [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) ではないメンバーを修飾するために、クラス名自体を使用することはできません。 まず、オブジェクト変数にインスタンスを作成してから (この場合は `demoClass`)、変数名によって参照する必要があります。  
+ [Shared](../../../language-reference/modifiers/shared.md) ではないメンバーを修飾するために、クラス名自体を使用することはできません。 まず、オブジェクト変数にインスタンスを作成してから (この場合は `demoClass`)、変数名によって参照する必要があります。  
   
  クラスまたは構造体に `Shared` メンバーが含まれている場合は、クラスまたは構造体の名前を使用して、またはインスタンスを指す変数または式を使用して、そのメンバーを修飾できます。  
   
@@ -150,7 +150,7 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>プロジェクトへの参照  
- 別のプロジェクトで定義されている [Public](../../../../visual-basic/language-reference/modifiers/public.md) 要素を使用するには、まず、そのプロジェクトのアセンブリまたは型ライブラリへの*参照*を設定する必要があります。 参照を設定するには、 **[プロジェクト]** メニューで **[参照の追加]** をクリックするか、[-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) コマンドライン コンパイラ オプションを使用します。  
+ 別のプロジェクトで定義されている [Public](../../../language-reference/modifiers/public.md) 要素を使用するには、まず、そのプロジェクトのアセンブリまたは型ライブラリへの*参照*を設定する必要があります。 参照を設定するには、 **[プロジェクト]** メニューで **[参照の追加]** をクリックするか、[-reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) コマンドライン コンパイラ オプションを使用します。  
   
  たとえば、.NET Framework の XML オブジェクト モデルを使用できます。 <xref:System.Xml> 名前空間への参照を設定する場合は、<xref:System.Xml.XmlDocument> など、そのクラスのいずれかを宣言して使用できます。 <xref:System.Xml.XmlDocument> の使用例を次に示します。  
   
@@ -161,7 +161,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>コンテナー要素のインポート  
- [Imports ステートメント (.NET 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) を使用すると、使用するモジュールまたはクラスを含む名前空間を*インポート*できます。 これにより、インポートされた名前空間で定義されている要素を、その名前を完全修飾せずに参照できます。 次の例では、前の例を記述し直して、<xref:System.Xml> 名前空間をインポートします。  
+ [Imports ステートメント (.NET 名前空間と型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) を使用すると、使用するモジュールまたはクラスを含む名前空間を*インポート*できます。 これにより、インポートされた名前空間で定義されている要素を、その名前を完全修飾せずに参照できます。 次の例では、前の例を記述し直して、<xref:System.Xml> 名前空間をインポートします。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -191,14 +191,14 @@ Dim xDoc As xD.XmlDocument
  すべての要素に一意の名前を付けることで、名前のあいまいさを回避できます。 その後、名前を名前空間、モジュール、またはクラスで修飾しなくても、任意の要素を参照できるようになります。 また、間違った要素が誤って参照される可能性を低くすることもできます。  
   
 ## <a name="shadowing"></a>シャドウ  
- 2 つのプログラミング要素が同じ名前を共有している場合、それらのうちの 1 つで他方を非表示にしたり、*シャドウ*したりすることができます。 シャドウされた要素を参照することはできません。代わりに、シャドウされた要素名を使用するコードでは、Visual Basic コンパイラによってシャドウ要素に解決されます。 例の詳細については、「[Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
+ 2 つのプログラミング要素が同じ名前を共有している場合、それらのうちの 1 つで他方を非表示にしたり、*シャドウ*したりすることができます。 シャドウされた要素を参照することはできません。代わりに、シャドウされた要素名を使用するコードでは、Visual Basic コンパイラによってシャドウ要素に解決されます。 例の詳細については、「[Visual Basic におけるシャドウ](shadowing.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [宣言された要素の名前](declared-element-names.md)
+- [宣言された要素の特性](declared-element-characteristics.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
-- [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+- [変数](../variables/index.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 演算子](../../../language-reference/operators/new-operator.md)
+- [Public](../../../language-reference/modifiers/public.md)

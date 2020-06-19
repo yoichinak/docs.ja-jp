@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: e04f2bbaf57789f0bdaa07c1ebd68b22e3ae6178
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 46b93c060a12d82b34dafdf3aa4ea677df6f54cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333058"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404292"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
 クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されたイベントをトリガーします。  
@@ -48,7 +48,7 @@ RaiseEvent eventname[( argumentlist )]
 > 非共有イベントは、それらが宣言されているクラスのコンストラクター内で発生させないでください。 このようなイベントが実行時エラーの原因となることはありませんが、関連付けられたイベント ハンドラーでキャッチされない場合があります。 コンストラクターからイベントを発生させる必要がある場合は、`Shared` 修飾子を使用して共有イベントを作成します。  
   
 > [!NOTE]
-> イベントの既定の動作を変更するには、カスタム イベントを定義します。 カスタム イベントの場合は、`RaiseEvent` ステートメントによってイベントの `RaiseEvent` アクセサーが呼び出されます。 カスタム イベントの詳細については、「[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  
+> イベントの既定の動作を変更するには、カスタム イベントを定義します。 カスタム イベントの場合は、`RaiseEvent` ステートメントによってイベントの `RaiseEvent` アクセサーが呼び出されます。 カスタム イベントの詳細については、「[Event ステートメント](event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメント (`RaiseEvent` など) の例を示しています。  
@@ -77,8 +77,8 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
-- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [イベント](../../programming-guide/language-features/events/index.md)
+- [Event ステートメント](event-statement.md)
+- [AddHandler ステートメント](addhandler-statement.md)
+- [RemoveHandler ステートメント](removehandler-statement.md)
+- [Handles](handles-clause.md)

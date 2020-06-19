@@ -11,18 +11,18 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 2ea8a852a2f012ddb25ec1198c66e09df880ff47
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4d91783429f24abfe4149217542f8f7a6073bfef
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344988"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404992"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>方法: LINQ を使用してクエリ結果をフィルター処理する (Visual Basic)
 
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。
 
-次の例は、SQL Server データベースに対してクエリを実行し、`Where` 句を使用して特定の値で結果をフィルター処理する新しいアプリケーションの作成方法を示しています。 詳細については、「[Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)」を参照してください。
+次の例は、SQL Server データベースに対してクエリを実行し、`Where` 句を使用して特定の値で結果をフィルター処理する新しいアプリケーションの作成方法を示しています。 詳細については、「[Where 句](../../../language-reference/queries/where-clause.md)」を参照してください。
 
 このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、「[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。
 
@@ -32,13 +32,13 @@ ms.locfileid: "74344988"
 
 1. Visual Studio で、 **[表示]** メニューの **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** をクリックして、 **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** を開きます。
 
-2. **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** で **[データ接続]** を右クリックしてから、 **[接続の追加]** をクリックします。
+2. **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** で **[データ接続]** を右クリックし、 **[接続の追加]** をクリックします。
 
 3. Northwind サンプル データベースへの有効な接続を指定します。
 
 ## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL ファイルを含むプロジェクトを追加するには
 
-1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 プロジェクト タイプとして、Visual Basic の **[Windows フォーム アプリケーション]** を選択します。
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 プロジェクト タイプとして Visual Basic **[Windows フォーム アプリケーション]** を選択します。
 
 2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[LINQ to SQL クラス]** 項目テンプレートを選択します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "74344988"
 
 2. Customers テーブルをクリックし、デザイナーの左ペインにドラッグします。 Orders テーブルをクリックし、デザイナーの左ペインにドラッグします。
 
-     デザイナーによって、プロジェクトの新しい `Customer` および `Order` オブジェクトが作成されます。 デザイナーによってテーブル間のリレーションシップが自動的に検出され、関連するオブジェクトの子プロパティが作成されることに注目してください。 たとえば、IntelliSense では、`Customer` オブジェクトに、その顧客に関連するすべての注文の `Orders` プロパティがあることを示します。
+     デザイナーによって、プロジェクトの新しい `Customer` と `Order` オブジェクトが作成されます。 デザイナーによってテーブル間のリレーションシップが自動的に検出され、関連するオブジェクトの子プロパティが作成されることに注目してください。 たとえば、IntelliSense では、`Customer` オブジェクトに、その顧客に関連するすべての注文の `Orders` プロパティがあることを示します。
 
 3. 変更を保存し、デザイナーを閉じます。
 
@@ -64,7 +64,7 @@ ms.locfileid: "74344988"
 
 2. Form1 をダブルクリックして、コードをフォームの `Load` イベントに追加します。
 
-3. テーブルを O/R デザイナーに追加したときに、デザイナーによってプロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトが追加されました。 このオブジェクトには、各テーブルの個々のオブジェクトとコレクションに加え、それらのテーブルにアクセスするために必要なコードが含まれます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトの名前は、.dbml ファイルの名前に基づいて付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext` という名前が付けられています。
+3. テーブルを O/R デザイナーに追加したときに、<xref:System.Data.Linq.DataContext> オブジェクトがプロジェクトに追加されました。 このオブジェクトには、各テーブルの個々のオブジェクトとコレクションに加え、それらのテーブルにアクセスするために必要なコードが含まれます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトの名前は、.dbml ファイルの名前に基づいて付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext` という名前が付けられています。
 
     コードで <xref:System.Data.Linq.DataContext> のインスタンスを作成し、O/R デザイナーによって指定されたテーブルに対してクエリを実行できます。
 
@@ -80,7 +80,7 @@ ms.locfileid: "74344988"
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ](index.md)
+- [クエリ](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

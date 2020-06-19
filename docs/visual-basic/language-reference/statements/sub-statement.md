@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: da498a5e0a3633eb98882aaed145fcd21ab169fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e50b79c31c92ac116d6c82bcececba3340894d74
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346437"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404175"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 
@@ -59,7 +59,7 @@ End Sub
 
 - `Partial`
 
-  任意。 部分メソッドの定義を示します。 「[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)」を参照してください。
+  任意。 部分メソッドの定義を示します。 「[部分メソッド](../../programming-guide/language-features/procedures/partial-methods.md)」を参照してください。
 
 - `accessmodifier`
 
@@ -73,11 +73,11 @@ End Sub
 
   - [Private](../modifiers/private.md)
 
-  - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+  - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Private Protected](../../language-reference/modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
-  「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+  「 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 - `proceduremodifiers`
 
@@ -111,7 +111,7 @@ End Sub
 
 - `name`
 
-  必須です。 プロシージャの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。 クラスのコンストラクター プロシージャを作成するには、`Sub` プロシージャの名前を `New` キーワードに設定します。 詳細については、「[オブジェクトの有効期間:オブジェクトの作成と破棄](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+  必須です。 プロシージャの名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。 クラスのコンストラクター プロシージャを作成するには、`Sub` プロシージャの名前を `New` キーワードに設定します。 詳細については、以下をご覧ください: [オブジェクトの有効期間: オブジェクトの作成と破棄](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 
 - `typeparamlist`
 
@@ -207,7 +207,7 @@ Visual Basic では、内部効率を高めるために算術式が再配置さ�
 
 Async 機能を使用することによって、明示的なコールバックを使用せずに、または複数のメソッドやラムダ式にわたって手動でコードを分割することなく、非同期関数を呼び出すことができます。
 
-プロシージャに [Async](../modifiers/async.md) 修飾子を付けると、そのプロシージャで [Await](../../../visual-basic/language-reference/operators/await-operator.md) 演算子を使用できます。 制御が `Async` プロシージャの `Await` 式に到達すると、制御が呼び出し元に戻り、待機中のタスクが完了するまでプロシージャの進行が中断されます。 タスクが完了すると、プロシージャで実行を再開できます。
+プロシージャに [Async](../modifiers/async.md) 修飾子を付けると、そのプロシージャで [Await](../operators/await-operator.md) 演算子を使用できます。 制御が `Async` プロシージャの `Await` 式に到達すると、制御が呼び出し元に戻り、待機中のタスクが完了するまでプロシージャの進行が中断されます。 タスクが完了すると、プロシージャで実行を再開できます。
 
 > [!NOTE]
 > `Async` プロシージャは、まだ完了していない待機中の最初のオブジェクトが検出されるか、または `Async` プロシージャの最後に達するか、どちらか先に発生したときに、呼び出し元に戻ります。
@@ -218,7 +218,7 @@ Async 機能を使用することによって、明示的なコールバック�
 
 `Async` プロシージャでは、[ByRef](../modifiers/byref.md) パラメーターを宣言することはできません。
 
-`Async` プロシージャの詳細については、「[Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」、「[非同期プログラムにおける制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)」、「[非同期の戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
+`Async` プロシージャの詳細については、「[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」、「[非同期プログラムにおける制御フロー](../../programming-guide/concepts/async/control-flow-in-async-programs.md)」、「[非同期の戻り値の型](../../programming-guide/concepts/async/async-return-types.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -242,7 +242,7 @@ Async 機能を使用することによって、明示的なコールバック�
 - [Dim ステートメント](dim-statement.md)
 - [Call ステートメント](call-statement.md)
 - [Of](of-clause.md)
-- [パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
-- [方法: ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [プロシージャのトラブルシューティング](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
-- [部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [パラメーター配列](../../programming-guide/language-features/procedures/parameter-arrays.md)
+- [方法: ジェネリック クラスを使用する](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [プロシージャのトラブルシューティング](../../programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [部分メソッド](../../programming-guide/language-features/procedures/partial-methods.md)

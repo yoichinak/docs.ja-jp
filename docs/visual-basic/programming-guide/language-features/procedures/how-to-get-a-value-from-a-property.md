@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 85512d4311d3e731a2c4e129d6a01f9b3273b333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339826"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387895"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>方法: プロパティから値を取得する (Visual Basic)
 プロパティの値を取得するには、プロパティ名を式に含めます。  
@@ -43,7 +43,7 @@ ms.locfileid: "74339826"
 - [手順](./index.md)
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property ステートメント](../../../language-reference/statements/property-statement.md)
 - [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
 - [方法: プロパティを作成する](./how-to-create-a-property.md)
 - [方法: 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)

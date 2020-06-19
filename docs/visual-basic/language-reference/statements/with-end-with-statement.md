@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352733"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401382"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With ステートメント (Visual Basic)
 
@@ -64,10 +64,10 @@ End With
 
 ブロック外から `With` ステートメント ブロックに分岐することはできません。
 
-ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、「[入れ子になった制御構造](../../programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 > [!NOTE]
-> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については、「[オブジェクト初期化子:名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)」および「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
+> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については、「[オブジェクト初期化子:名前付きの型と匿名型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)」および「[匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 >
 > 直前にインスタンス化したオブジェクトのプロパティまたはフィールドのみを `With` ブロックを使用して初期化する場合は、代わりにオブジェクト初期化子を使用することを考慮します。
 
@@ -86,6 +86,6 @@ End With
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic.List%601>
-- [入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [オブジェクト初期化子: 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [入れ子になった制御構造](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [オブジェクト初期化子: 名前付きの型と匿名型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

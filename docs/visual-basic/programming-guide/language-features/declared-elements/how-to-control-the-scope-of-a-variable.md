@@ -12,23 +12,23 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 0ee6ce183310aa836ecdbbc0bc819e0e83d1872d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345377"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357349"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数のスコープを制御する (Visual Basic)
 通常、変数は、*スコープ*内にあります。つまり、それを宣言した領域全体で可視になり参照できます。 場合によって、変数の*アクセス レベル*がそのスコープに影響を与えることがあります。  
   
- 詳細については、「 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
+ 詳細については、「 [Scope in Visual Basic](scope.md)」を参照してください。  
   
 ## <a name="scope-at-block-or-procedure-level"></a>ブロック レベルまたはプロシージャ レベルのスコープ  
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>変数をブロック内でのみ可視にするには  
   
-- 変数の [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を、そのブロックの開始と終了の宣言ステートメントの間、たとえば `For` ループの `For` ステートメントと `Next` ステートメントの間などに配置します。  
+- 変数の [Dim ステートメント](../../../language-reference/statements/dim-statement.md)を、そのブロックの開始と終了の宣言ステートメントの間、たとえば `For` ループの `For` ステートメントと `Next` ステートメントの間などに配置します。  
   
      変数は、ブロック内からのみ参照できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74345377"
   
 1. モジュール、クラス、または構造体の内部で、ただしプロシージャの外部に、変数の `Dim` ステートメントを配置します。  
   
-2. `Dim` ステートメントに [Private](../../../../visual-basic/language-reference/modifiers/private.md) キーワードを含めます。  
+2. `Dim` ステートメントに [Private](../../../language-reference/modifiers/private.md) キーワードを含めます。  
   
 3. 変数は、モジュール、クラス、または構造体内のどこからでも参照できますが、その外部から参照することはできません。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74345377"
   
 1. モジュール、クラス、または構造体の内部で、ただしプロシージャの外部に、変数の `Dim` ステートメントを配置します。  
   
-2. `Dim` ステートメントに [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) または [Public](../../../../visual-basic/language-reference/modifiers/public.md) キーワードを含めます。  
+2. `Dim` ステートメントに [Friend](../../../language-reference/modifiers/friend.md) または [Public](../../../language-reference/modifiers/public.md) キーワードを含めます。  
   
 3. 変数は、モジュール、クラス、または構造体を含む名前空間内のどこからでも参照できます。  
   
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic における有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Visual Basic におけるスコープ](scope.md)
+- [Visual Basic における有効期間](lifetime.md)
+- [Visual Basic でのアクセス レベル](access-levels.md)
+- [変数](../variables/index.md)
+- [変数宣言](../variables/variable-declaration.md)
+- [Dim ステートメント](../../../language-reference/statements/dim-statement.md)

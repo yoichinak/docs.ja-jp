@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 0cdb960160457108ddf18c554dae5f5993269833
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d4ff9442aa82a3eb46d56500159562174646ea58
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332354"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410258"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
 埋め込み式を使用すると、実行時に評価される式を含む XML リテラルを作成できます。 埋め込み式の構文は `<%=` `expression` `%>` となります。これは ASP.NET で使用される構文と同じです。  
@@ -70,7 +70,7 @@ ms.locfileid: "74332354"
   
  コンテンツが省略可能な場所では、`Nothing` を含む埋め込み式は無視されます。 つまり、XML リテラルを使用する前に、要素のコンテンツ、属性値、および配列要素が `Nothing` になっていないことを確認する必要はありません。 要素名や属性名などの必須の値を `Nothing` にすることはできません。  
   
- 特定の型のリテラル内に埋め込み式を使用する方法の詳細については、[XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)に関するページ、および [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)に関するページを参照してください。  
+ 特定の型のリテラル内に埋め込み式を使用する方法の詳細については、[XML ドキュメント リテラル](../../../language-reference/xml-literals/xml-document-literal.md)に関するページ、および [XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)に関するページを参照してください。  
   
 ## <a name="scoping-rules"></a>スコープの規則  
  各 XML リテラルはコンパイラによって、適切なリテラル型のコンストラクター呼び出しに変換されます。 XML リテラル内のリテラル コンテンツと埋め込み式は、引数としてコンストラクターに渡されます。 これは、XML リテラルで使用できる Visual Basic プログラミング要素はすべて、その埋め込み式でも使用できることを意味します。  
@@ -82,9 +82,9 @@ ms.locfileid: "74332354"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
-- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+- [Visual Basic での XML の作成](creating-xml.md)
+- [XML ドキュメント リテラル](../../../language-reference/xml-literals/xml-document-literal.md)
+- [XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [XML リテラルの概要](xml-literals-overview.md)

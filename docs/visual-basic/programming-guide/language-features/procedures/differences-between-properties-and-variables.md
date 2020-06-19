@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: bbed3248840803d36607a67c8373fed15c07445f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 162bd71eaebdf55f6be89e0c5dce7acc1b975d79
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341222"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403305"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic のプロパティと変数の違い
 変数とプロパティはどちらも、アクセスできる値を表します。 ただし、ストレージと実装には相違点があります。  
@@ -48,8 +48,8 @@ ms.locfileid: "74341222"
 
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Property ステートメント](../../../language-reference/statements/property-statement.md)
+- [Dim ステートメント](../../../language-reference/statements/dim-statement.md)
 - [方法: プロパティを作成する](./how-to-create-a-property.md)
 - [方法: 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)

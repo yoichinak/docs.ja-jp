@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: ec6b8ddc8769fadde52aaebd6ad3701183fac77a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c7b84a3bb12329ae235e5ea03dc5e86f921112c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338664"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396754"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>チュートリアル: Windows API の呼び出し (Visual Basic)
 Windows API は、Windows オペレーティング システムの一部であるダイナミック リンク ライブラリ (DLL) です。 独自の同等のプロシージャを記述することが困難な場合は、これらを使用してタスクを実行します。 たとえば、Windows には `FlashWindowEx` という名前の関数が用意されていて、これを使用すると、アプリケーションのタイトル バーを交互に明るい色合いと暗い色合いにすることができます。  
@@ -151,9 +151,9 @@ Windows API は、Windows オペレーティング システムの一部であ�
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
-- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
-- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Declare ステートメント](../../language-reference/statements/declare-statement.md)
+- [Auto](../../language-reference/modifiers/auto.md)
+- [Alias](../../language-reference/statements/alias-clause.md)
+- [COM 相互運用](index.md)
 - [マネージド コードでのプロトタイプの作成](../../../framework/interop/creating-prototypes-in-managed-code.md)
 - [コールバック メソッドとしてのデリゲートのマーシャ リング](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
