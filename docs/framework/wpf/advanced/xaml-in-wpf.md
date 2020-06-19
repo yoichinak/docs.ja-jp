@@ -7,20 +7,20 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 7b4811290d58b946bd9f115cb15d5eb0fda03b1d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.openlocfilehash: 00525e8bd085126e15de9c80bdd5fc0106d565d6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741881"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646161"
 ---
 # <a name="xaml-in-wpf"></a>WPF の XAML
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] は、宣言型アプリケーションプログラミングのマークアップ言語です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、XAML プロセッサの実装を実装し、XAML 言語のサポートを提供します。 XAML 表現のために必要な型を提供できるように、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型が実装されています。 一般に、XAML マークアップで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーション UI の大部分を作成できます。  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] は、宣言的アプリケーション プログラミングで使用するマークアップ言語です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、XAML プロセッサが実装され、XAML 言語のサポートが提供されています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の型は、XAML の表現のために必要な型バッキングを提供できるように実装されています。 一般に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの UI の大部分は XAML マークアップで作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
-[XAML の概要 (WPF)](xaml-overview-wpf.md)  
+[XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)  
 [XAML 構文の詳細](xaml-syntax-in-detail.md)  
 [WPF における分離コードと XAML](code-behind-and-xaml-in-wpf.md)  
 [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "76741881"
 [WPF アーキテクチャ](wpf-architecture.md)  
 [基本要素](base-elements.md)  
 [要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
-[Properties](properties-wpf.md)  
+[プロパティ](properties-wpf.md)  
 [イベント](events-wpf.md)  
 [入力](input-wpf.md)  
 [リソース](resources-wpf.md)  

@@ -14,4 +14,4 @@ ms.locfileid: "67859121"
 |提案される解決策|以前の動作を復元するには、次の設定を web.config ファイルに追加して、新しい動作を無効にできます。<pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;aspnet:RequestQueueLimitPerSession&quot; value=&quot;2147483647&quot;/&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
 |スコープ|エッジ|
 |バージョン|4.7|
-|[種類]|再ターゲット中|
+|種類|再ターゲット中|

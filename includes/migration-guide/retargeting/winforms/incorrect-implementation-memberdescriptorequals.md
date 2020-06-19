@@ -14,5 +14,5 @@ ms.locfileid: "67859338"
 |提案される解決策|記述子が等しいときに <code>false</code> を返すことがある <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> にアプリケーションが依存しているとき、.NET Framework のバージョン 4.6.2 以降を対象とする場合、いくつかの選択肢があります。<ol><li>コードを変更し、<xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> メソッドの呼び出しに加え、<xref:System.ComponentModel.MemberDescriptor.Category> フィールドと <xref:System.ComponentModel.MemberDescriptor.Description> フィールドを手動で比較します。</li><li>app.config ファイルに次の値を追加し、この変更を無効にします。</li></ol><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>アプリケーションの対象が .NET Framework 4.6.1 以前であるが .NET Framework 4.6.2 以降で実行しているとき、この変更を有効にする場合、app.config ファイルに次の値を追加することで互換性スイッチを <code>false</code> に設定します。<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |スコープ|エッジ|
 |バージョン|4.6.2|
-|[種類]|再ターゲット中|
+|種類|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType></li></ul>|

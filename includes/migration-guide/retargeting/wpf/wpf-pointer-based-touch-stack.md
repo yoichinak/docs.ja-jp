@@ -14,4 +14,4 @@ ms.locfileid: "67859160"
 |提案される解決策|このスタックを有効にする開発者は、アプリケーションの App.config ファイルに次の行を追加/マージできます。<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>これを削除するか、値を false に設定すると、このオプションのスタックがオフになります。このスタックは Windows 10 Creators Update 以降でのみ使用できることに注意してください。|
 |スコープ|エッジ|
 |バージョン|4.7|
-|[種類]|再ターゲット中|
+|種類|再ターゲット中|

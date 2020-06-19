@@ -6,7 +6,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859349"
 ---
-### <a name="rsacng-now-correctly-loads-rsa-keys-of-non-standard-key-size"></a>RSACng で非標準のキー サイズの RSA キーが正しく読み込まれるようになった
+### <a name="rsacng-now-correctly-loads-rsa-keys-of-non-standard-key-size"></a>RSACng でキー サイズが非標準の RSA キーが正しく読み込まれるようになりました
 
 |   |   |
 |---|---|
@@ -14,5 +14,5 @@ ms.locfileid: "67859349"
 |提案される解決策|非標準サイズのキーが使用されるときに <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> がスローされるという以前の動作に依存する例外処理ロジックがある場合、そのロジックを除くことを検討してください。|
 |スコープ|エッジ|
 |バージョン|4.6.2|
-|[種類]|再ターゲット中|
+|種類|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li></ul>|

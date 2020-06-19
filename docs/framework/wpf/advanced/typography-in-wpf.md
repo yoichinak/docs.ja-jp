@@ -6,22 +6,22 @@ helpviewer_keywords:
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 501a4221c99d405484a2fb908641d27d1f38f266
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79187349"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
-このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキストレンダリングの品質とパフォーマンスの向上、OpenType タイポグラフィのサポート、拡張された国際テキスト、拡張フォントサポート、新しいテキストアプリケーションプログラミングインタフェース(API)などがあります。  
+このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、OpenType タイポグラフィのサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>
 ## <a name="improved-quality-and-performance-of-text"></a>テキストに関する品質とパフォーマンスの向上  
- テキストの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]表示は、テキストのわかりやすさと読みやすさを向上させる Microsoft ClearType を使用してレンダリングされます。 ClearType は、ラップトップの画面、ポケット PC 画面、フラット パネル モニターなどの既存の LCD (液晶ディスプレイ) 上のテキストの読みやすさを向上させるマイクロソフトが開発したソフトウェア テクノロジです。 ClearType は、ピクセルの小数部分に文字を揃えることで、テキストを実際の図形に忠実に表示できるサブピクセル レンダリングを使用します。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 ClearType のもう 1[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]つの改善点は、y 方向アンチエイリアシングで、テキスト文字の浅いカーブの上部と下部を滑らかにします。 ClearType 機能の詳細については、「 [ClearType の概要](cleartype-overview.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める Microsoft ClearType を使用して描画されます。 ClearType は、ラップトップや Pocket PC の画面、フラット パネル モニターなど、既存の LCD (液晶ディスプレイ) でのテキストの読みやすさを向上させるために Microsoft によって開発されたソフトウェア テクノロジです。 ClearType では、ピクセルの画素レベルで文字を表示調整することで実際の形状を忠実に再現したテキストを表示できる、サブピクセル レンダリングが採用されています。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での ClearType のもう 1 つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字の緩やかな曲線部の上下が滑らかになります。 ClearType の機能の詳細については、「[ClearType の概要](cleartype-overview.md)」を参照してください。  
   
  ![ClearType y 方向アンチエイリアシングを含むテキスト](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType の y 方向アンチエイリアシングを適用したテキスト  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、コンピューターがハードウェアの最小要件を満たしている限り、テキスト レンダリング パイプライン全体に対してハードウェア アクセラレータを使用できます。 ハードウェアを使用して実行できないレンダリングは、ソフトウェア レンダリングとなります。 ハードウェア アクセラレーションは、個々のグリフの格納、グリフの実行へのグリフの合成、効果の適用、最終的な表示出力への ClearType ブレンド アルゴリズムの適用など、テキスト レンダリング パイプラインのすべてのフェーズに影響します。 ハードウェア アクセラレータの詳細については、「[グラフィックスの描画層](graphics-rendering-tiers.md)」をご覧ください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、コンピューターがハードウェアの最小要件を満たしている限り、テキスト レンダリング パイプライン全体に対してハードウェア アクセラレータを使用できます。 ハードウェアを使用して実行できないレンダリングは、ソフトウェア レンダリングとなります。 ハードウェア アクセラレータは、個々のグリフの格納から始まり、グリフ実行への複数のグリフの合成、効果の適用、最終的な表示出力への ClearType ブレンディング アルゴリズムの適用まで、テキスト レンダリング パイプラインのすべてのフェーズに影響します。 ハードウェア アクセラレータの詳細については、「[グラフィックスの描画層](graphics-rendering-tiers.md)」をご覧ください。  
   
  ![パイプラインを描画するテキストのダイアグラム](./media/typography-in-wpf/text-rendering-pipeline.png)  
   
@@ -29,17 +29,17 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="Rich_Typography"></a>
 ## <a name="rich-typography"></a>多彩な文字体裁  
- OpenType フォント形式は、TrueType® フォント形式の拡張機能です。 OpenType フォント形式は、マイクロソフトとアドビによって共同で開発され、高度なタイポグラフィ機能の豊富な品揃えを提供します。 この<xref:System.Windows.Documents.Typography>オブジェクトは、スタイルの代替や swashe など、OpenType フォントの高度な機能の多くを公開します。 Windows SDK には、Pericles やペスカデロなどの豊富な機能を使用して設計された OpenType フォントのサンプル セットが用意されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」を参照してください。  
+ OpenType フォント形式は、TrueType® フォント形式の拡張です。 OpenType フォント形式は、Microsoft と Adobe が共同で開発したもので、高度なタイポグラフィ機能を豊富に備えています。 <xref:System.Windows.Documents.Typography> オブジェクトでは、スタイル代替グリフや飾り付きなど、OpenType フォントの高度な機能の多くが公開されています。 Windows SDK には、Pericles フォントや Pescadero フォントなど、豊富な機能を持つ OpenType フォント サンプルが用意されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
   
- Pericles OpenType フォントには、標準のグリフセットに対するスタイルの代替を提供する追加のグリフが含まれています。 次のテキストでは、スタイル代替グリフが表示されています。  
+ Pericles OpenType フォントには、標準グリフ セットにスタイル代替グリフを提供する追加グリフが含まれています。 次のテキストでは、スタイル代替グリフが表示されています。  
   
  ![OpenType のスタイル代替グリフを使用するテキスト](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType のスタイル代替グリフを使用するテキスト")  
   
- 飾り付きは装飾的なグリフで、カリグラフィを連想させる、手の込んだ装飾が使用されます。 次のテキストは、ペスカデロフォントの標準およびスワッシュグリフを表示します。  
+ スワッシュは装飾的なグリフで、カリグラフィを連想させることがよくある、手の込んだ装飾が使用されます。 次のテキストは、Pescadero フォントの標準および飾り付きグリフを示したものです。  
   
- ![OpenType の標準グリフと飾り付きグリフを使用するテキスト](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType の標準グリフと飾り付きグリフを使用するテキスト")  
+ ![OpenType の標準グリフとスワッシュ グリフを使用するテキスト](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType の標準グリフと飾り付きグリフを使用するテキスト")  
   
- OpenType 機能の詳細については、「 [OpenType フォント機能](opentype-font-features.md)」を参照してください。  
+ OpenType の機能の詳細については、「[OpenType フォントの機能](opentype-font-features.md)」を参照してください。  
   
 <a name="Enhanced_International_Text_Support"></a>
 ## <a name="enhanced-international-text-support"></a>国際対応テキストのサポートの強化  
@@ -59,33 +59,33 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 - システム ロケールなど、グローバル設定に左右されないフォント動作。  
   
-- を<xref:System.Windows.FontWeight>定義<xref:System.Windows.FontStretch>するための、 <xref:System.Windows.FontStyle> 、、および<xref:System.Windows.Media.FontFamily>の各型を分離します。 これにより、フォント ファミリを定義するために斜体と太字のブール値の組み合わせを使用する Win32 プログラミングよりも柔軟性が高くなります。  
+- <xref:System.Windows.Media.FontFamily> を定義するための個別の <xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>、<xref:System.Windows.FontStyle> 型。 これにより、斜体と太字のブール値の組み合わせでフォント ファミリを定義する Win32 プログラミングよりも優れた柔軟性が提供されます。  
   
 - フォント名とは関係なく処理される書き込み方向 (横書きまたは縦書き)。  
   
-- フォントリンクとフォントフォールバックは、合成フォント技術を使用して、ポータブル XML ファイルで。 複合フォントは、完全な多言語フォントの構築を可能にします。 また、複合フォントは、欠落グリフの表示を防ぐ機能も備えています。 詳細については、クラスの解説を<xref:System.Windows.Media.FontFamily>参照してください。  
+- 複合フォント技術を使用した、移植可能な XML ファイルにおけるフォント リンクとフォントの代替。 複合フォントは、完全な多言語フォントの構築を可能にします。 また、複合フォントは、欠落グリフの表示を防ぐ機能も備えています。 詳細については、<xref:System.Windows.Media.FontFamily> クラスの「解説」を参照してください。  
   
 - 単一言語フォントのグループを使用した、複合フォントから構築される国際対応フォント。 これにより、複数言語に対応するフォントの開発時にリソースのコストを節約できます。  
   
-- ドキュメントに埋め込むことで移植性が得られる複合フォント。 詳細については、クラスの解説を<xref:System.Windows.Media.FontFamily>参照してください。  
+- ドキュメントに埋め込むことで移植性が得られる複合フォント。 詳細については、<xref:System.Windows.Media.FontFamily> クラスの「解説」を参照してください。  
   
 <a name="New_Text_APIs"></a>
 ## <a name="new-text-application-programming-interfaces-apis"></a>新しいテキスト API (アプリケーション プログラミング インターフェイス)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]には、アプリケーションにテキストを含める開発者向けのテキスト API がいくつか用意されています。 これらの API は、次の 3 つのカテゴリに分類されます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、開発者がアプリケーションにテキストを含めるときに使用できるいくつかのテキスト API が提供されています。 これらの API は、次の 3 つのカテゴリに分類されます。  
   
-- **レイアウトとユーザー インターフェイス**: グラフィカル・ユーザー・インターフェース (GUI) の共通テキスト制御。  
+- **レイアウトとユーザー インターフェイス**: グラフィカル ユーザー インターフェイス (GUI) に対応した一般的なテキスト コントロールです。  
   
 - **軽量テキスト描画**: オブジェクトにテキストを直接描画できます。  
   
-- **高度なテキストフォーマット**: カスタム テキスト エンジンを実装できます。  
+- **テキストの高度な書式設定**: カスタム テキスト エンジンを実装できます。  
   
 ### <a name="layout-and-user-interface"></a>レイアウトとユーザー インターフェイス  
- 機能の最上位レベルでは、テキスト API は、 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 、<xref:System.Windows.Controls.Label><xref:System.Windows.Controls.TextBlock>および などの一般的<xref:System.Windows.Controls.TextBox>なコントロールを提供します。 これらのコントロールは、アプリケーション内に基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を提供し、テキストの表示や操作を簡単に実行できるようにします。 より高度な<xref:System.Windows.Controls.RichTextBox><xref:System.Windows.Controls.PasswordBox>、または特殊なテキスト処理を有効にするなどのコントロール。 また、<xref:System.Windows.Documents.TextRange><xref:System.Windows.Documents.TextSelection>などのクラスは、<xref:System.Windows.Documents.TextPointer>有用なテキスト操作を可能にします。 これらの[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コントロールには、 、<xref:System.Windows.Controls.Control.FontFamily%2A><xref:System.Windows.Controls.Control.FontSize%2A>および<xref:System.Windows.Controls.Control.FontStyle%2A>などのプロパティが用意されており、テキストのレンダリングに使用するフォントを制御できます。  
+ 最上位の機能レベルでは、テキスト API により、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.TextBlock>、<xref:System.Windows.Controls.TextBox> などの一般的な [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] コントロールが提供されます。 これらのコントロールは、アプリケーション内に基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を提供し、テキストの表示や操作を簡単に実行できるようにします。 <xref:System.Windows.Controls.RichTextBox> や <xref:System.Windows.Controls.PasswordBox> などのコントロールを使用すると、より高度で特殊なテキスト処理が可能になります。 そして、<xref:System.Windows.Documents.TextRange>、<xref:System.Windows.Documents.TextSelection>、<xref:System.Windows.Documents.TextPointer> などのクラスにより、便利なテキスト操作を実行できます。 これらの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] コントロールには、<xref:System.Windows.Controls.Control.FontFamily%2A>、<xref:System.Windows.Controls.Control.FontSize%2A>、<xref:System.Windows.Controls.Control.FontStyle%2A> などのプロパティがあり、テキストの描画に使用するフォントを制御できます。  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>ビットマップ効果、変換、テキスト効果の使用  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、ビットマップ効果、変換、テキスト効果などの機能を利用して、人の目をひきつけるテキストを作成できます。 テキストに標準タイプのドロップ シャドウ効果を適用した例を次に示します。  
   
- ![ソフトネス&#61;のテキストシャドウ 0.25](./media/typography-in-wpf/drop-shadow-text-effect.jpg)
+ ![ぼかし &#61; 0.25 のテキスト シャドウ](./media/typography-in-wpf/drop-shadow-text-effect.jpg)
   
  テキストにドロップ シャドウ効果とノイズを適用した例を次に示します。  
   
@@ -107,25 +107,25 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
  ![SkewTransform を使用して傾斜させたテキスト](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
- <xref:System.Windows.Media.TextEffect>オブジェクトは、テキストをテキスト文字列内の 1 つ以上の文字グループとして扱うことを可能にするヘルパー オブジェクトです。 次の例は、回転する個々の文字を示しています。 各文字は、1 秒間隔で個別に回転します。  
+ <xref:System.Windows.Media.TextEffect> オブジェクトは、テキスト文字列内の 1 つまたは複数の文字列のグループとしてテキストを処理できるヘルパー オブジェクトです。 次の例は、回転する個々の文字を示しています。 各文字は、1 秒間隔で個別に回転します。  
   
  ![テキストを回転するテキスト効果のスクリーンショット](./media/typography-in-wpf/rotating-text-effect.jpg)
   
 #### <a name="using-flow-documents"></a>フロー ドキュメントの使用  
- コモン[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コントロールに加えて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキスト表示用のレイアウト コントロール (<xref:System.Windows.Documents.FlowDocument>要素) も提供します。 要素<xref:System.Windows.Documents.FlowDocument>は、<xref:System.Windows.Controls.DocumentViewer>要素と共に、さまざまなレイアウト要件を持つ大量のテキストのコントロールを提供します。 レイアウト コントロールを使用すると、<xref:System.Windows.Documents.Typography>オブジェクトを介した高度な文字体裁や、他[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]のコントロールのフォント関連プロパティにアクセスできます。  
+ 一般的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] コントロールに加えて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、テキスト表示に使用するレイアウト コントロール (<xref:System.Windows.Documents.FlowDocument> 要素) があります。 <xref:System.Windows.Documents.FlowDocument> 要素を <xref:System.Windows.Controls.DocumentViewer> 要素と組み合わせると、さまざまなレイアウト要件を含む大量のテキストに対応するコントロールを作成できます。 レイアウト コントロールでは、<xref:System.Windows.Documents.Typography> オブジェクトと他の [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] コントロールのフォント関連プロパティを通じて、高度なタイポグラフィへのアクセスが提供されます。  
   
- でホストされるテキスト コンテンツの例を<xref:System.Windows.Controls.FlowDocumentReader>次に示します。  
+ 検索、ナビゲーション、改ページ位置の自動修正、コンテンツ スケーリングをサポートする <xref:System.Windows.Controls.FlowDocumentReader> でホストされているテキスト コンテンツを次の例に示します。  
   
  ![OpenType フォントを示すスクリーンショット。](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  詳細については、「[WPF のドキュメント](documents-in-wpf.md)」を参照してください。  
   
 ### <a name="lightweight-text-drawing"></a>軽量テキスト描画  
- オブジェクトのメソッドを使用して[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、オブジェクトに直接<xref:System.Windows.Media.DrawingContext.DrawText%2A>テキストを<xref:System.Windows.Media.DrawingContext>描画できます。 このメソッドを使用するには、オブジェクトを<xref:System.Windows.Media.FormattedText>作成します。 このオブジェクトを使用すると、複数行のテキストを描画できます。このテキストでは、テキスト内の各文字を個々に書式設定できます。 オブジェクトの機能には<xref:System.Windows.Media.FormattedText>、Windows API の DrawText フラグの機能の多くが含まれています。 また、<xref:System.Windows.Media.FormattedText>このオブジェクトには省略記号のサポートなどの機能が含まれており、テキストが境界を超えると省略記号が表示されます。 いくつかの書式を適用したテキストを次の例に示します。たとえば、2 番目と 3 番目の単語には線状グラデーションが適用されています。  
+ <xref:System.Windows.Media.DrawingContext> オブジェクトの <xref:System.Windows.Media.DrawingContext.DrawText%2A> メソッドを使用すると、テキストを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のオブジェクトに直接描画できます。 このメソッドを使用するには、<xref:System.Windows.Media.FormattedText> オブジェクトを作成します。 このオブジェクトを使用すると、複数行のテキストを描画できます。このテキストでは、テキスト内の各文字を個々に書式設定できます。 <xref:System.Windows.Media.FormattedText> オブジェクトの機能には、Windows API の DrawText フラグの多くの機能が含まれています。 また、<xref:System.Windows.Media.FormattedText> オブジェクトは、テキストがその境界を越えたときに省略記号を表示する、省略記号のサポートなどの機能も備えています。 いくつかの書式を適用したテキストを次の例に示します。たとえば、2 番目と 3 番目の単語には線状グラデーションが適用されています。  
   
  ![FormattedText オブジェクトを使用して表示されるテキスト](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)
   
- 書式設定されたテキストをオブジェクトに<xref:System.Windows.Media.Geometry>変換して、他の種類の視覚的に興味深いテキストを作成できます。 たとえば、テキスト文字列のアウトラインに<xref:System.Windows.Media.Geometry>基づいてオブジェクトを作成できます。  
+ 書式設定されたテキストを <xref:System.Windows.Media.Geometry> オブジェクトに変換し、人の目をひきつける他の種類のテキストを作成できます。 たとえば、テキスト文字列のアウトラインに基づいて <xref:System.Windows.Media.Geometry> オブジェクトを作成できます。  
   
  ![線形グラデーション ブラシを使用するテキスト アウトライン](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
@@ -135,14 +135,14 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
  ![ストロークに適用されるイメージ ブラシを含むテキスト](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![イメージ ブラシがストロークとハイライトに適用されたテキスト](./media/typography-in-wpf/image-brush-text-application.jpg)
+ ![ストロークと強調表示に適用されるイメージ ブラシを含むテキスト](./media/typography-in-wpf/image-brush-text-application.jpg)
   
- オブジェクトの詳細については、「<xref:System.Windows.Media.FormattedText>[書式設定されたテキストを描画](drawing-formatted-text.md)する」を参照してください。  
+ <xref:System.Windows.Media.FormattedText> オブジェクトの詳細については、「[書式設定されたテキストの描画](drawing-formatted-text.md)」を参照してください。  
   
 ### <a name="advanced-text-formatting"></a>テキストの高度な書式設定  
- テキスト API の最も高度なレベルでは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、名前空間内のオブジェクトと他の型を使用して<xref:System.Windows.Media.TextFormatting.TextFormatter>カスタム テキスト レイアウトを<xref:System.Windows.Media.TextFormatting>作成する機能が提供されます。 関連<xref:System.Windows.Media.TextFormatting.TextFormatter>付けられたクラスでは、文字書式、段落スタイル、改行ルール、および国際テキストのその他のレイアウト機能の独自の定義をサポートするカスタムテキストレイアウトを実装できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト レイアウト サポートに関する既定の実装のオーバーライドが必要となるケースはほとんどありません。 ただし、テキストを編集するコントロールやアプリケーションを作成する場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定の実装とは異なる実装が必要になることがあります。  
+ テキスト API の最も高度なレベルとして、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、<xref:System.Windows.Media.TextFormatting.TextFormatter> オブジェクトと <xref:System.Windows.Media.TextFormatting> 名前空間の他の型を使用して、カスタム テキスト レイアウトを作成する機能が用意されています。 <xref:System.Windows.Media.TextFormatting.TextFormatter> と関連クラスを使用して、ユーザー定義による文字形式、段落スタイル、改行ルール、国際対応テキストのその他のレイアウト機能をサポートするカスタム テキスト レイアウトを実装できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト レイアウト サポートに関する既定の実装のオーバーライドが必要となるケースはほとんどありません。 ただし、テキストを編集するコントロールやアプリケーションを作成する場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定の実装とは異なる実装が必要になることがあります。  
   
- 従来のテキスト API と<xref:System.Windows.Media.TextFormatting.TextFormatter>は異なり、コールバック メソッドのセットを通じてテキスト レイアウト クライアントと対話します。 クライアントは、クラスの実装でこれらのメソッドを提供する必要<xref:System.Windows.Media.TextFormatting.TextSource>があります。 次の図は、クライアント アプリケーションと のテキスト レイアウト<xref:System.Windows.Media.TextFormatting.TextFormatter>の相互作用を示しています。  
+ 従来のテキスト API とは異なり、<xref:System.Windows.Media.TextFormatting.TextFormatter> では、一連のコールバック メソッドにより、テキスト レイアウト クライアントとの対話が行われます。 クライアントでは、<xref:System.Windows.Media.TextFormatting.TextSource> クラスの実装で、これらのメソッドを提供する必要があります。 次の図は、クライアント アプリケーションと <xref:System.Windows.Media.TextFormatting.TextFormatter> の間で行われるテキスト レイアウトの相互作用を示したものです。  
   
  ![テキスト レイアウト クライアントと TextFormatter のダイアグラム](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
@@ -156,5 +156,5 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 - [OpenType フォントの機能](opentype-font-features.md)
 - [書式設定されたテキストの描画](drawing-formatted-text.md)
 - [テキストの高度な書式設定](advanced-text-formatting.md)
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [Microsoft の文字体裁](https://docs.microsoft.com/typography/)
