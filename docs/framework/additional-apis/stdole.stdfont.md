@@ -1,5 +1,6 @@
 ---
 title: StdFont インターフェイス (stdole)
+description: .NET の StdFont インターフェイスに関するリファレンス情報を参照してください。 このインターフェイスは、stdole 名前空間と、(stdole.dll ライブラリ内の) stdole アセンブリにあります。
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 703a8dd6134ad6045fc46d4d0a9c652feb204ff5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 974d3a3b0ea6dc762f27f812a609eeec4376bc24
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155814"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105273"
 ---
 # <a name="stdfont-interface"></a>StdFont インターフェイス
 
@@ -26,6 +27,6 @@ public interface StdFont : Font,
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**`stdole`
+**名前空間:** `stdole`
 
-**組み立て:** ストドール (stdole.dll 内)
+**アセンブリ:** stdole (stdole.dll)

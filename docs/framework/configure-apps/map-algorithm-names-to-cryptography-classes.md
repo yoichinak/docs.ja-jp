@@ -1,5 +1,6 @@
 ---
 title: 暗号化クラスへのアルゴリズム名の割り当て
+description: アルゴリズム名を .NET の暗号化クラスにマップします。 開発者には、暗号化オブジェクトを作成するための4つのオプションがあります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mapping algorithm names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912863"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105348"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>暗号化クラスへのアルゴリズム名の割り当て
 Windows SDK を使用して、開発者が暗号化オブジェクトを作成するには、次の4つの方法があります。  
@@ -32,7 +33,7 @@ Windows SDK を使用して、開発者が暗号化オブジェクトを作成�
  どのハッシュアルゴリズムが使用されているかに関係なく、開発者はメソッドを呼び出すことができ <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> ます。このメソッドは、ハッシュ変換を実装するオブジェクトを返します。  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>構成ファイルでのアルゴリズム名のマッピング  
- 既定では、ランタイムは <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 4 つのシナリオすべてに対してオブジェクトを返します。 ただし、コンピューターの管理者は、最後の2つのシナリオのメソッドが返すオブジェクトの種類を変更できます。 これを行うには、わかりやすいアルゴリズム名をマシン構成ファイル (machine.config) で使用するクラスにマップする必要があります。  
+ 既定では、ランタイムは <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 4 つのシナリオすべてに対してオブジェクトを返します。 ただし、コンピューターの管理者は、最後の2つのシナリオのメソッドが返すオブジェクトの種類を変更できます。 これを行うには、わかりやすいアルゴリズム名をマシン構成ファイル (Machine.config) で使用するクラスにマップする必要があります。  
   
  次の例は、 **CryptoConfig、CreateFromName ("SHA1")**、および**HashAlgorithm**がオブジェクトを返すようにランタイムを構成する方法を示しています。この例では、この**ランタイムを構成**しています。 `MySHA1HashClass`  
   
@@ -69,5 +70,5 @@ Windows SDK を使用して、開発者が暗号化オブジェクトを作成�
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化サービス](../../standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](configure-cryptography-classes.md)

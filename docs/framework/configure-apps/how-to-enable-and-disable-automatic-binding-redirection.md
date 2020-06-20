@@ -1,16 +1,17 @@
 ---
 title: 自動生成バインドリダイレクトを有効または無効にする
+description: 自動バインドリダイレクトを有効または無効にする方法を参照してください。 この機能は、.NET 4.5.1 以降を対象とするデスクトップアプリと web アプリに影響します。
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69913033"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105390"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>方法: 自動バインディング リダイレクトを有効/無効にする
 
@@ -85,9 +86,9 @@ Visual Studio 2017 バージョン15.7 以降を使用している場合は、�
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Web アプリで自動バインドリダイレクトを有効にする
 
-自動バインド リダイレクトは、Web アプリでは異なる方法で実装されます。 ソース構成 (web.config) ファイル**は web apps**用に変更する必要があるため、バインドリダイレクトは構成ファイルに自動的に追加されません。 ただし、Visual Studio によってバインドの競合が通知されるため、バインド リダイレクトを追加して競合を解決できます。 バインドリダイレクトを追加するように求められるので、web アプリに対してこの機能を明示的に無効にする必要はありません。
+自動バインド リダイレクトは、Web アプリでは異なる方法で実装されます。 ソース構成 (**web.config**) ファイルは web apps 用に変更する必要があるため、バインドリダイレクトは構成ファイルに自動的に追加されません。 ただし、Visual Studio によってバインドの競合が通知されるため、バインド リダイレクトを追加して競合を解決できます。 バインドリダイレクトを追加するように求められるので、web アプリに対してこの機能を明示的に無効にする必要はありません。
 
-**Web.config ファイルに**バインドリダイレクトを追加するには、次のようにします。
+**web.config**ファイルにバインドリダイレクトを追加するには、次のようにします。
 
 1. Visual Studio で、アプリをコンパイルし、ビルドの警告を確認します。
 
@@ -95,11 +96,11 @@ Visual Studio 2017 バージョン15.7 以降を使用している場合は、�
 
 2. アセンブリ バインドの競合がある場合、警告が表示されます。 警告をダブルクリックするか、警告を選択**して enter キーを**押します。
 
-   ソースの**web.config**ファイルに必要なバインドリダイレクトを自動的に追加できるダイアログボックスが表示されます。
+   ソース**web.config**ファイルに必要なバインドリダイレクトを自動的に追加できるダイアログボックスが表示されます。
 
    ![バインディング リダイレクトのアクセス許可ダイアログ](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>関連項目
 
-- [\<bindingRedirect>Element](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect> 要素](./file-schema/runtime/bindingredirect-element.md)
 - [アセンブリ バージョンのリダイレクト](redirect-assembly-versions.md)

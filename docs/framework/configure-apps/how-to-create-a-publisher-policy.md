@@ -1,5 +1,6 @@
 ---
 title: '方法: 発行者ポリシーを作成する'
+description: アセンブリベンダーが、.NET でアップグレードされたアセンブリを使用して発行者ポリシーファイルを作成し、アプリケーションが新しいバージョンを使用する必要があることを規定する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 23e9d8144ec5742e0371d566b7af59dc9dd30c9b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646054"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105404"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 
@@ -49,7 +50,7 @@ ms.locfileid: "81646054"
 
 ## <a name="creating-the-publisher-policy-assembly"></a>発行者ポリシーアセンブリを作成しています
 
-[アセンブリリンカー (al.exe)](../tools/al-exe-assembly-linker.md)を使用して、発行者ポリシーアセンブリを作成します。
+[アセンブリリンカー (Al.exe)](../tools/al-exe-assembly-linker.md)を使用して、発行者ポリシーアセンブリを作成します。
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>発行者ポリシーアセンブリを作成するには
 
@@ -65,7 +66,7 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
 
 - `publisherPolicyAssemblyFile`引数は、このコマンドの結果として生成される発行者ポリシーアセンブリの名前です。 アセンブリファイル名は、次の形式に従う必要があります。
 
-  ' majorNumber ' (' ポリシー.......................)
+  'policy.majorNumber.minorNumber.mainAssemblyName.dll '
 
 - `keyPairFile`引数は、キーペアを含むファイルの名前です。 アセンブリと発行者ポリシーアセンブリには、同じキーペアで署名する必要があります。
 
@@ -88,7 +89,7 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加する
 
-グローバル[アセンブリキャッシュツール (gacutil.exe)](../tools/gacutil-exe-gac-tool.md)を使用して、発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加します。
+グローバル[アセンブリキャッシュツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)を使用して、発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加します。
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加するには
 

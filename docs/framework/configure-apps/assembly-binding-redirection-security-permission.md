@@ -1,16 +1,17 @@
 ---
 title: アセンブリ バインディング リダイレクトのセキュリティ アクセス許可
+description: .NET のアプリケーション構成ファイルで、明示的なアセンブリバインドリダイレクトに必要なセキュリティアクセス許可について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: b59689e78f901637674c0a1df28ed74411e8e7c7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a8596bcac4efb0aea07efcfde6726d8bbf148c24
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69921374"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105091"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>アセンブリ バインディング リダイレクトのセキュリティ アクセス許可
 アプリケーション構成ファイルで明示的にアセンブリ バインディングをリダイレクトするには、セキュリティ アクセス許可が必要です。 これは、.NET Framework アセンブリおよびサードパーティ製アセンブリに適用されます。 権限は、にフラグを設定することによって付与され <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> ます。 マネージアセンブリには、既定ではアクセス許可がありません。  
@@ -28,7 +29,7 @@ ms.locfileid: "69921374"
 |インターネット ゾーン|**OFF**|  
 |信頼されていないゾーン|**OFF**|  
   
- 管理者は、これらのセキュリティ設定を変更して、特定のコンピューター上の特定のシナリオをサポートまたは制限することができます。 既定値から**Bindingredirects**フラグ設定を変更するためのツールはありません。管理者は、ユーザーのコンピューター上のセキュリティ .config ファイルを手動で編集する必要があります。  
+ 管理者は、これらのセキュリティ設定を変更して、特定のコンピューター上の特定のシナリオをサポートまたは制限することができます。 既定値から**Bindingredirects**フラグ設定を変更するためのツールはありません。管理者は、ユーザーのコンピューターの Security.config ファイルを手動で編集する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

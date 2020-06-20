@@ -1,5 +1,6 @@
 ---
 title: '方法: DEVPATH を使用してアセンブリを指定する'
+description: XML コンピューター構成ファイルと DEVPATH 環境変数を使用して、共有アセンブリが .NET の多くのアプリケーションで正しく動作することをテストします。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912993"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105372"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>方法: DEVPATH を使用してアセンブリを指定する
 開発者は、ビルドしている共有アセンブリが複数のアプリケーションで正しく動作することを確認したい場合があります。 開発サイクル中にアセンブリをグローバルアセンブリキャッシュに継続的に配置するのではなく、開発者はアセンブリのビルド出力ディレクトリを指す DEVPATH 環境変数を作成できます。  
