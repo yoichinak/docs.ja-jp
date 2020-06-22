@@ -1,16 +1,17 @@
 ---
 title: スレッド セーフなコレクション
+description: .NET の System.Collections.Concurrent 名前空間を使って、スレッドセーフなコレクションの使用を開始します。これにはスレッドセーフかつスケーラブルなコレクションのクラスが含まれています。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 7af59cf0fdbe8d5c7d7d586b4b86992ae1dc7601
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3a252124ade4c43961c06697367bbc4ca5d0c9cb
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290371"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768587"
 ---
 # <a name="thread-safe-collections"></a>スレッド セーフなコレクション
 .NET Framework 4 では、スレッド セーフかつスケーラブルなコレクション クラスをいくつか含む <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間が導入されています。 ユーザー コードで同期を追加することなく、複数のスレッドでこのようなコレクションの項目を安全かつ効率的に追加または削除できます。 新しいコードを記述する場合、コレクションに対して複数のスレッドが同時に書き込みを行うときは常に同時実行コレクション クラスを使用します。 共有コレクションの読み取りのみを行う場合は、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間のクラスを使用できます。 .NET Framework 1.1 以前のランタイムを対象にする必要がない場合は、1.0 コレクション クラスを使用しないことをお勧めします。  

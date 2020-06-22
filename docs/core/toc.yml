@@ -29,6 +29,8 @@ items:
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
           - name: CentOS
             href: install/linux-centos.md
           - name: Debian
@@ -403,32 +405,34 @@ items:
         href: testing/unit-testing-best-practices.md
       - name: xUnit
         items:
-          - name: 'C# 単体テスト'
+          - name: C# 単体テスト
             href: testing/unit-testing-with-dotnet-test.md
-          - name: 'F# 単体テスト'
+          - name: F# 単体テスト
             href: testing/unit-testing-fsharp-with-dotnet-test.md
           - name: VB 単体テスト
             href: testing/unit-testing-visual-basic-with-dotnet-test.md
       - name: NUnit
         items:
-          - name: 'C# 単体テスト'
+          - name: C# 単体テスト
             href: testing/unit-testing-with-nunit.md
-          - name: 'F# 単体テスト'
+          - name: F# 単体テスト
             href: testing/unit-testing-fsharp-with-nunit.md
           - name: VB 単体テスト
             href: testing/unit-testing-visual-basic-with-nunit.md
       - name: MSTest
         items:
-          - name: 'C# 単体テスト'
+          - name: C# 単体テスト
             href: testing/unit-testing-with-mstest.md
-          - name: 'F# 単体テスト'
+          - name: F# 単体テスト
             href: testing/unit-testing-fsharp-with-mstest.md
           - name: VB 単体テスト
             href: testing/unit-testing-visual-basic-with-mstest.md
       - name: 選択的単体テストの実行
         href: testing/selective-unit-tests.md
-      - name: 注文の単体テスト
+      - name: 単体テストの順序を設定する
         href: testing/order-unit-tests.md
+      - name: 単体テストのコード カバレッジ
+        href: testing/unit-testing-code-coverage.md
       - name: 発行された出力の単体テスト
         href: testing/unit-testing-published-output.md
       - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
