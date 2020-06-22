@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: a2e2a6705fb3d8d4424d46d96bbf49b41e1414af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330257"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411754"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>カスタム My 拡張をパッケージ化して配置する (Visual Basic)
 
@@ -29,7 +29,7 @@ Visual Basic では、Visual Studio テンプレートを使用してカスタ�
 
 ## <a name="create-a-my-namespace-extension"></a>My 名前空間拡張を作成する
 
-カスタムの `My` 拡張の展開パッケージを作成する場合、最初のステップとして、拡張を単一のコード ファイルとして作成します。 カスタムの `My` 拡張を作成する方法の詳細とガイダンスについては、「[Visual Basic における My 名前空間の拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)」を参照してください。
+カスタムの `My` 拡張の展開パッケージを作成する場合、最初のステップとして、拡張を単一のコード ファイルとして作成します。 カスタムの `My` 拡張を作成する方法の詳細とガイダンスについては、「[Visual Basic における My 名前空間の拡張](extending-the-my-namespace.md)」を参照してください。
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>My 名前空間拡張を項目テンプレートとしてエクスポートする
 
@@ -103,7 +103,7 @@ Visual Studio 項目テンプレートを `My` 名前空間拡張として識別
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における My 名前空間の拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
-- [Visual Basic アプリケーション モデルの拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
-- [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [Visual Basic における My 名前空間の拡張](extending-the-my-namespace.md)
+- [Visual Basic アプリケーション モデルの拡張](extending-the-visual-basic-application-model.md)
+- [My で利用可能なオブジェクトのカスタマイズ](customizing-which-objects-are-available-in-my.md)
 - [[マイ拡張] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

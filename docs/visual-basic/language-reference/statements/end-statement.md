@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: cb2fb4abb21b7b9c6575cec4aca1374f63687607
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe17a82662c4014069c77f2da76723a051ab9084
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343724"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404707"
 ---
 # <a name="end-statement"></a>End ステートメント
 直ちに実行を終了します。  
@@ -40,12 +40,12 @@ End
   
  `End` を使用すると、開いている可能性のあるリソースを処理することなくアプリケーションが終了するため、使用する前に完全に終了するようにします。 たとえば、アプリケーションでフォームを開いている場合は、コントロールが `End` ステートメントに到達する前にフォームを閉じる必要があります。  
   
- `End` は慎重に使用し、すぐに停止する必要がある場合にのみ使用してください。 プロシージャを終了する通常の方法 ([Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)と [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)) では、プロシージャが完全に終了されるだけでなく、呼び出し元のコードにも正常に終了する機会が与えられます。 たとえば、コンソール アプリケーションでは、`Main` プロシージャから単に `Return` を実行できます。  
+ `End` は慎重に使用し、すぐに停止する必要がある場合にのみ使用してください。 プロシージャを終了する通常の方法 ([Return ステートメント](return-statement.md)と [Exit ステートメント](exit-statement.md)) では、プロシージャが完全に終了されるだけでなく、呼び出し元のコードにも正常に終了する機会が与えられます。 たとえば、コンソール アプリケーションでは、`Main` プロシージャから単に `Return` を実行できます。  
   
 > [!IMPORTANT]
 > `End` ステートメントを使用すると、<xref:System> 名前空間内の <xref:System.Environment> クラスの <xref:System.Environment.Exit%2A> メソッドが呼び出されます。 <xref:System.Environment.Exit%2A> を使用するには `UnmanagedCode` アクセス許可が必要です。 そうしないと、<xref:System.Security.SecurityException> エラーが発生します。  
   
- その後に追加のキーワードが続く場合、[End \<keyword> ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)を使用して、適切なプロシージャまたはブロックの定義の終わりを示します。 たとえば、`End Function` を使用して `Function` プロシージャの定義を終了します。  
+ 追加のキーワードが続く場合、[End \<keyword> ステートメント](end-keyword-statement.md)を使用して、適切なプロシージャまたはブロックの定義の終わりを示します。 たとえば、`End Function` を使用して `Function` プロシージャの定義を終了します。  
   
 ## <a name="example"></a>例  
  次の例では、`End` ステートメントを使用して、ユーザーから要求された場合にコードの実行を終了します。  
@@ -58,5 +58,5 @@ End
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
-- [Stop ステートメント](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [End \<キーワード> ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [Stop ステートメント](stop-statement.md)
+- [End \<keyword> ステートメント](end-keyword-statement.md)

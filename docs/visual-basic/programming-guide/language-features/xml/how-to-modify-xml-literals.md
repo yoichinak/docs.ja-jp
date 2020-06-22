@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 99ec35addcb9fc8d886c9151cde87227b5113eb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a2ac2e9802d4c8ab522bb430d15cce5616430437
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330857"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374900"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>方法: XML リテラルの変更 (Visual Basic)
 
@@ -110,7 +110,7 @@ Visual Basic には、XML リテラルを変更する便利な方法が用意さ
     </Catalog>
     ```
 
-    XML 属性軸プロパティの詳細については、[XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)に関する記事をご覧ください。
+    XML 属性軸プロパティの詳細については、[XML 属性軸プロパティ](../../../language-reference/xml-axis/xml-attribute-axis-property.md)に関する記事をご覧ください。
 
 ### <a name="to-add-an-element-to-an-xml-literal"></a>XML リテラルに要素を追加するには
 
@@ -288,8 +288,8 @@ Visual Basic には、XML リテラルを変更する便利な方法が用意さ
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic での XML の操作](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [方法: ファイル、文字列、またはストリームからの XML の読み込み](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic での XML の操作](manipulating-xml.md)
+- [XML](index.md)
+- [方法: ファイル、文字列、またはストリームからの XML の読み込み](how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../linq/index.md)
+- [Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)
