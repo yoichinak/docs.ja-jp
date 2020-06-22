@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241410"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803182"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 
@@ -80,7 +80,7 @@ using System.Linq;
 
 オニオン アーキテクチャまたは他のレイヤー化アプリケーション設計を使用する場合は、アプリケーションの境界を越えて通信するために使用できるドメイン エンティティまたはデータ転送オブジェクトのセットを使用するのが一般的です。 これらのオブジェクトには、通常、機能が含まれていないか、またはアプリケーションのすべてのレイヤーに適用される最小限の機能のみが含まれています。 他のレイヤーで必要のないメソッドや望ましくないメソッドを使用してオブジェクトを読み込むことなしに、拡張メソッドを使用して、各アプリケーション レイヤーに固有の機能を追加することができます。
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

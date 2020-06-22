@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447044"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811680"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
@@ -107,7 +107,7 @@ ms.locfileid: "84447044"
 |[/unsafe](unsafe-compiler-option.md)|[unsafe](../keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA256 (既定) または SHA1 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|
 
 ## <a name="obsolete-options"></a>廃止されたオプション
 
