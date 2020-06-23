@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504538"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141782"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy> 要素 (ネットワーク設定)
 プロキシ サーバーを定義します。  
@@ -28,11 +28,11 @@ ms.locfileid: "84504538"
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -43,11 +43,11 @@ ms.locfileid: "84504538"
   
 |**属性**|**説明**|  
 |-------------------|---------------------|  
-|`autoDetect`|プロキシを自動的に検出するかどうかを指定します。 既定値は `unspecified` です。|  
-|`bypassonlocal`|ローカル リソースの場合に、プロキシがバイパスされるかどうかを指定します。 ローカルリソースには、ローカルサーバー ( `http://localhost` 、 `http://loopback` 、または `http://127.0.0.1` ) と、ピリオドなしの URI () が含ま `http://webserver` れます。 既定値は `unspecified` です。|  
+|`autoDetect`|プロキシを自動的に検出するかどうかを指定します。 既定値は `Unspecified` です。|  
+|`bypassonlocal`|ローカル リソースの場合に、プロキシがバイパスされるかどうかを指定します。 ローカルリソースには、ローカルサーバー ( `http://localhost` 、 `http://loopback` 、または `http://127.0.0.1` ) と、ピリオドなしの URI () が含ま `http://webserver` れます。 既定値は `Unspecified` です。|  
 |`proxyaddress`|使用するプロキシ URI を指定します。|  
 |`scriptLocation`|構成スクリプトの場所を指定します。 この属性には属性を使用しない `bypassonlocal` でください。 |  
-|`usesystemdefault`|Internet Explorer のプロキシ設定を使用するかどうかを指定します。 に設定する `true` と、それ以降の属性は Internet Explorer のプロキシ設定よりも優先されます。 既定値は `unspecified` です。|  
+|`usesystemdefault`|Internet Explorer のプロキシ設定を使用するかどうかを指定します。 に設定する `True` と、それ以降の属性は Internet Explorer のプロキシ設定よりも優先されます。 既定値は `Unspecified` です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -60,7 +60,7 @@ ms.locfileid: "84504538"
   
 ## <a name="text-value"></a>テキスト値  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  要素は、 `proxy` アプリケーションのプロキシサーバーを定義します。 この要素が構成ファイルにない場合、.NET Framework は Internet Explorer のプロキシ設定を使用します。  
   
  属性の値は、整形 `proxyaddress` 式の Uniform Resource Indicator (URI) である必要があります。  
@@ -82,9 +82,9 @@ ms.locfileid: "84504538"
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  
