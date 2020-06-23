@@ -1,15 +1,16 @@
 ---
 title: トランスポート セキュリティと証明書認証
+description: 転送セキュリティを使用する場合に、WFC がサーバーとクライアントの認証に証明書を使用する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576019"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244779"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>トランスポート セキュリティと証明書認証
 
@@ -26,8 +27,8 @@ ms.locfileid: "84576019"
 |セキュリティ モード|トランスポート|  
 |相互運用性|既存の Web サービス クライアントおよびサービスとの相互運用性|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (SSL 証明書を使用)<br /><br /> ○ (X.509 証明書を使用)|  
-|データの整合性|はい|  
-|データの機密性|はい|  
+|データの整合性|Yes|  
+|データの機密性|Yes|  
 |トランスポート|HTTPS|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   

@@ -1,16 +1,17 @@
 ---
 title: トランスポート セキュリティと Windows 認証
+description: このシナリオを確認します。これは、Windows セキュリティによって保護された WCF クライアント/サービスを示しています。 この例では、イントラネットサービスは人事情報を表示します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598698"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244765"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
 次のシナリオは、Windows セキュリティによって保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「[方法: Windows 資格情報を使用してサービスをセキュリティで保護](../how-to-secure-a-service-with-windows-credentials.md)する」を参照してください。  
@@ -24,8 +25,8 @@ ms.locfileid: "84598698"
 |セキュリティ モード|トランスポート|  
 |相互運用性|WCF のみ|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (Windows 統合認証を使用)<br /><br /> ○ (Windows 統合認証を使用)|  
-|整合性|はい|  
-|機密情報|はい|  
+|整合性|Yes|  
+|機密情報|Yes|  
 |トランスポート|NET.TCP|  
 |バインド|<xref:System.ServiceModel.NetTcpBinding>|  
   

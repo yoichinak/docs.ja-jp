@@ -1,16 +1,17 @@
 ---
 title: トランスポート セキュリティの概要
+description: WCF システム指定のバインディングの主要なトランスポートセキュリティ機構について説明します。 これらのセキュリティメカニズムは、使用するバインディングとトランスポートによって異なります。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 5c6b6389122b32ed8db701020a8c13ba17225867
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6302a949e8d0a041446b75dd3769b8ba2d1fc2b5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585689"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244830"
 ---
 # <a name="transport-security-overview"></a>トランスポート セキュリティの概要
 Windows Communication Foundation (WCF) のトランスポートセキュリティ機構は、使用されているバインディングとトランスポートによって異なります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> クラスを使用する場合、トランスポートは HTTP であり、トランスポートをセキュリティで保護するための主要機構は SSL (Secure Sockets Layer) over HTTP (一般に HTTPS と呼ばれます) です。 このトピックでは、WCF システム指定のバインディングで使用される主要なトランスポートセキュリティ機構について説明します。  
@@ -49,7 +50,7 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
 #### <a name="basic"></a>Basic  
  これは、IIS の基本認証方法に対応しています。 このモードを使用する場合は、Windows ユーザー アカウントと、適切な NTFS ファイル システムのアクセス許可を使用して IIS サーバーを構成する必要があります。 IIS 6.0 の詳細については、「[基本認証を有効にする」および「領域名を構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))する」を参照してください。 IIS 7.0 の詳細については、「[基本認証を構成する (iis 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))」を参照してください。  
   
-#### <a name="certificate"></a>Certificate  
+#### <a name="certificate"></a>証明書  
  IIS には、クライアントに証明書を使用してログオンすることを要求するオプションがあります。 この機能により、IIS はクライアント証明書を Windows アカウントにマップすることもできます。 IIS 6.0 の詳細については、「 [iis 6.0 でクライアント証明書を有効にする](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「 [iis 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。  
   
 #### <a name="digest"></a>ダイジェスト  

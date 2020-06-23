@@ -1,15 +1,16 @@
 ---
 title: '方法: WCF アクティブ化コンポーネントをインストールして設定する'
+description: Windows Vista で Windows プロセスアクティブ化サービス (WAS) をセットアップして、HTTP では通信しない WCF サービスをホストする方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f7a846b076691394cb855e4978e890cdcac76eb2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597034"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246884"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>方法: WCF アクティブ化コンポーネントをインストールして設定する
 

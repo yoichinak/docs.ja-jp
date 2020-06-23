@@ -1,5 +1,6 @@
 ---
 title: データ コントラクトの使用
+description: 各パラメーターまたは戻り値の型に対して、WCF クライアントとサーバー間で交換されるようにシリアル化されるデータを定義するデータコントラクトについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0d11b48d3021bf0d92d74ab67bc18c2bdd2bdd0e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 80ea2a8bd67c627fbe11ee07e640704c1a41ef7b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594999"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244726"
 ---
 # <a name="using-data-contracts"></a>データ コントラクトの使用
 *データ コントラクト* は、サービスとクライアントの間の正式な取り決めであり、交換されるデータが抽象的に記述されています。 つまり、クライアントとサービスが通信するために必要なのは同じデータ コントラクトだけで、同じ型を共有する必要はありません。 データ コントラクトは、パラメーターまたは戻り値の型ごとに、交換するためにシリアル化する (XML に変換する) 必要があるデータを正確に定義します。  
@@ -35,7 +36,7 @@ ms.locfileid: "84594999"
  [!code-csharp[C_DataContract#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#2)]
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
-### <a name="notes"></a>メモ  
+### <a name="notes"></a>Notes  
  以下に、データ コントラクトを作成する際に考慮する必要がある項目を示します。  
   
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性は、マークされていない型で使用した場合にのみ受け入れられます。 これには、 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>、 <xref:System.Runtime.Serialization.EnumMemberAttribute> のいずれかの属性でマークされていない型、または他の方法 ( <xref:System.Xml.Serialization.IXmlSerializable>など) でシリアル化可能としてマークされた型が含まれます。  

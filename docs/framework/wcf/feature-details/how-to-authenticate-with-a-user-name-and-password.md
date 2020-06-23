@@ -1,15 +1,16 @@
 ---
 title: '方法: ユーザー名とパスワードで認証する'
+description: WCF サービスで、Windows ドメインのユーザー名とパスワードをサンプルコードと共に使用して、クライアントを認証できるようにする方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601284"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247248"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>方法: ユーザー名とパスワードで認証する
 
@@ -32,7 +33,7 @@ Windows ドメイン ユーザー名とパスワードを使用してクライ�
     // ...
     ```
 
-2. ネットワーク経由で送信されるユーザー名とパスワードの情報を暗号化するために使用するサーバー証明書を指定します。 次のコードは、上記のコードの直後に追加します。 次の例では、[メッセージセキュリティユーザー名](../samples/message-security-user-name.md)のサンプルから、セットアップの .bat ファイルによって作成された証明書を使用します。
+2. ネットワーク経由で送信されるユーザー名とパスワードの情報を暗号化するために使用するサーバー証明書を指定します。 次のコードは、上記のコードの直後に追加します。 次の例では、[メッセージセキュリティユーザー名](../samples/message-security-user-name.md)のサンプルから、setup.bat ファイルによって作成された証明書を使用します。
 
     ```csharp
     // ...

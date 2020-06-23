@@ -1,16 +1,17 @@
 ---
 title: 基本認証でのトランスポート セキュリティ
+description: WCF サービスとクライアントの基本認証を示すこの WCF シナリオを確認します。 サービスには、クライアントが信頼する有効な証明書が必要です。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 7c83de70e404fe8304bc2e35c1bb5df9e42f95b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f15a19feaed631a76948efd24ee225acf789cb2d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576097"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244856"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本認証でのトランスポート セキュリティ
 次の図は、Windows Communication Foundation (WCF) サービスとクライアントを示しています。 サーバーには、SSL (Secure Sockets Layer) に使用できる有効な X509 証明書が必要であり、クライアントはサーバーの証明書を信頼する必要があります。 さらに、Web サービスには使用可能な SSL が既に実装されています。 インターネットインフォメーションサービス (IIS) で基本認証を有効にする方法の詳細については、「」を参照してください <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> 。  
@@ -22,8 +23,8 @@ ms.locfileid: "84576097"
 |セキュリティ モード|トランスポート|  
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (HTTPS を使用)<br /><br /> ○ (ユーザー名とパスワードを使用)|  
-|整合性|はい|  
-|機密情報|はい|  
+|整合性|Yes|  
+|機密情報|Yes|  
 |トランスポート|HTTPS|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   

@@ -1,5 +1,6 @@
 ---
 title: '方法: SSL 証明書を使用してポートを構成する'
+description: X.509 証明書を使用してポートを構成する方法について説明します。これは、transport security を使用して、WSHttpBinding クラスの自己ホスト型 WCF サービスに必要です。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 30b24c4ff06cc7249d3ddb6d95549a574e313f52
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579619"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247183"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法: SSL 証明書を使用してポートを構成する
 
@@ -22,7 +23,7 @@ ms.locfileid: "84579619"
   
  ポートを構成する場合に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- Windows Server 2003 を実行している場合は、Httpcfg.exe ツールを使用します。 Windows Server 2003 では、このツールはインストールされています。 詳細については、「 [httpcfg.exe の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))」を参照してください。 [Windows サポートツールのドキュメント](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))では、httpcfg.exe ツールの構文について説明しています。  
+ Windows Server 2003 を実行している場合は、HttpCfg.exe ツールを使用します。 Windows Server 2003 では、このツールはインストールされています。 詳細については、「 [httpcfg.exe の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))」を参照してください。 [Windows サポートツールのドキュメント](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))では、Httpcfg.exe ツールの構文について説明しています。  
   
  Windows Vista を実行している場合は、既にインストールされている Netsh.exe ツールを使用します。
   
@@ -31,7 +32,7 @@ ms.locfileid: "84579619"
   
 ## <a name="determine-how-ports-are-configured"></a>ポートの構成方法を決定する  
   
-1. Windows Server 2003 または Windows XP では、Httpcfg.exe ツールを使用して、次の例に示すように、**クエリ**と**ssl**スイッチを使用して現在のポート構成を表示します。  
+1. Windows Server 2003 または Windows XP では、次の例に示すように、HttpCfg.exe ツールを使用して現在のポート構成を表示します。**クエリ**と**ssl**スイッチを使用します。  
   
     ```console
     httpcfg query ssl  
@@ -55,7 +56,7 @@ ms.locfileid: "84579619"
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number"></a>SSL 証明書をポート番号にバインドする  
   
-1. Windows Server 2003 または Windows XP では、Secure Sockets Layer (SSL) ストアの "設定" モードで Httpcfg.exe ツールを使用して、証明書をポート番号にバインドします。 このツールは、次のように、拇印を使用して証明書を識別します。  
+1. Windows Server 2003 または Windows XP では、Secure Sockets Layer (SSL) ストアの "設定" モードで HttpCfg.exe ツールを使用して、証明書をポート番号にバインドします。 このツールは、次のように、拇印を使用して証明書を識別します。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -73,13 +74,13 @@ ms.locfileid: "84579619"
   
     - **Certhash**パラメーターは、証明書の拇印を指定します。  
   
-    - **Ipport**パラメーターは、IP アドレスとポートを指定し、httpcfg.exe ツールの **-i**スイッチと同様に機能します。  
+    - **Ipport**パラメーターには、IP アドレスとポートを指定します。また、「」で説明されている Httpcfg.exe ツールの **-i**スイッチと同様に機能します。  
   
     - **Appid**パラメーターは、所有しているアプリケーションを識別するために使用できる GUID です。  
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>SSL 証明書をポート番号にバインドし、クライアント証明書をサポートする  
   
-1. Windows Server 2003 または Windows XP で、トランスポート層で x.509 証明書を使用して認証を行うクライアントをサポートするには、前の手順に従いますが、次の例に示すように、Httpcfg.exe に追加のコマンドラインパラメーターを渡します。  
+1. Windows Server 2003 または Windows XP で、トランスポート層で x.509 証明書を使用して認証を行うクライアントをサポートするには、前の手順に従いますが、次の例に示すように、HttpCfg.exe に追加のコマンドラインパラメーターを渡します。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -101,7 +102,7 @@ ms.locfileid: "84579619"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Windows Server 2003 または Windows XP では、Httpcfg.exe ツールと**delete**および**ssl**キーワードを使用します。 **-I**スイッチを使用して、 `IP` : `port` number を指定し、 **-h**スイッチを使用してサムプリントを指定します。  
+2. Windows Server 2003 または Windows XP では、HttpCfg.exe ツールと**delete**および**ssl**キーワードを使用します。 **-I**スイッチを使用して、 `IP` : `port` number を指定し、 **-h**スイッチを使用してサムプリントを指定します。  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
