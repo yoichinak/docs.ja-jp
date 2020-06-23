@@ -1,13 +1,14 @@
 ---
 title: クライアント構成
+description: WCF クライアント構成を使用して、サービスへの接続に使用されるエンドポイントのアドレス、バインディング、動作、およびコントラクトを指定する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 2d17438095e65ccf922061c03e406bab35b07c5d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593660"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245376"
 ---
 # <a name="client-configuration"></a>クライアント構成
 Windows Communication Foundation (WCF) クライアント構成を使用して、クライアントエンドポイントの "ABC" プロパティであるアドレス、バインド、動作、およびコントラクトを指定できます。このプロパティは、クライアントがサービスエンドポイントに接続するために使用します。 [\<client>](../../configure-apps/file-schema/wcf/client.md)要素には、 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) エンドポイント abcs を構成するために使用される属性を持つ要素があります。 これらの属性については、「[エンドポイントの構成](#configuring-endpoints)」セクションで説明します。  

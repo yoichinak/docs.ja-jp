@@ -1,5 +1,6 @@
 ---
 title: 証明書の使用
+description: X.509 デジタル証明書の機能と WCF での使用方法について説明します。 この記事のリソースでは、これらの概念について詳しく説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600115"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246403"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 

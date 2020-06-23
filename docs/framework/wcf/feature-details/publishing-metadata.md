@@ -1,15 +1,16 @@
 ---
 title: メタデータの公開
+description: 1つ以上のメタデータエンドポイントを公開して WCF サービスがメタデータを公開する方法を説明します。これにより、標準プロトコルを使用してメタデータを使用できるように
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 456eecde88fec182d3234c20a4f01971fd045bb8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2aa6d877db4e5b09b4c594e6e87b63fb6c04703b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596761"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244960"
 ---
 # <a name="publishing-metadata"></a>メタデータの公開
 Windows Communication Foundation (WCF) サービスは、1つまたは複数のメタデータエンドポイントを公開することによってメタデータを公開します。 サービス メタデータを公開すると、そのメタデータで WS-MetadataExchange (MEX) や HTTP/GET 要求などの標準化プロトコルを使用できるようになります。 メタデータのエンドポイントはアドレス、バインディング、コントラクトを持つ他のサービス エンドポイントに類似し、それらは構成か命令コードを使用してサービス ホストに追加することができます。  
@@ -22,7 +23,7 @@ Windows Communication Foundation (WCF) サービスは、1つまたは複数の�
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> は、<xref:System.ServiceModel.Description.ServiceMetadataExtension> インスタンスをサービス ホストへの拡張として追加します。 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> により、メタデータ公開プロトコルを実装することができます。 また、<xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> を使用して、<xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType> プロパティにアクセスすることにより、実行時にサービスのメタデータを取得できます。  
   
 ### <a name="mex-metadata-endpoints"></a>MEX メタデータ エンドポイント  
- MEX プロトコルを使用するメタデータ エンドポイントを追加するには、`IMetadataExchange` サービス コントラクトを使用するサービス エンドポイントをサービス ホストに追加します。 WCF には、 <xref:System.ServiceModel.Description.IMetadataExchange> wcf プログラミングモデルの一部として使用できるこのサービスコントラクト名を持つインターフェイスが含まれています。 Ws-metadataexchange エンドポイント (MEX エンドポイント) では、4つの既定のバインディングのいずれかを使用できます。これは、静的ファクトリメソッドが、 <xref:System.ServiceModel.Description.MetadataExchangeBindings> svcutil.exe などの WCF ツールで使用される既定のバインディングに一致するようにクラスで公開します。 また、独自のカスタム バインドを使用して MEX メタデータ エンドポイントを構成することもできます。  
+ MEX プロトコルを使用するメタデータ エンドポイントを追加するには、`IMetadataExchange` サービス コントラクトを使用するサービス エンドポイントをサービス ホストに追加します。 WCF には、 <xref:System.ServiceModel.Description.IMetadataExchange> wcf プログラミングモデルの一部として使用できるこのサービスコントラクト名を持つインターフェイスが含まれています。 Ws-metadataexchange エンドポイント (MEX エンドポイント) は、4つの既定のバインディングのいずれかを使用できます。このバインディングは、静的ファクトリメソッドがクラスに公開し、 <xref:System.ServiceModel.Description.MetadataExchangeBindings> WCF ツールが使用する既定のバインディング (Svcutil.exe など) と一致させます。 また、独自のカスタム バインドを使用して MEX メタデータ エンドポイントを構成することもできます。  
   
 ### <a name="http-get-metadata-endpoints"></a>HTTP GET メタデータ エンドポイント  
  HTTP/GET 要求に応答するメタデータ エンドポイントをサービスに追加するには、<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> の <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> プロパティを `true` に設定します。 また、<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> の <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> プロパティを `true` に設定することで、HTTPS を使用するメタデータ エンドポイントを構成することもできます。  

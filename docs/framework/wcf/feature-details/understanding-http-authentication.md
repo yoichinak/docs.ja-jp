@@ -1,13 +1,14 @@
 ---
 title: HTTP 認証の理解
+description: HTTP 認証スキームや認証スキームの選択など、WCF での HTTP 認証の概要について確認します。
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595090"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246520"
 ---
 # <a name="understanding-http-authentication"></a>HTTP 認証の理解
 認証は、リソースにアクセスする権限をクライアントが持つかどうかを確認するプロセスです。 HTTP プロトコルは、セキュリティで保護されたリソースへのアクセスをネゴシエートする手段として、認証をサポートしています。  

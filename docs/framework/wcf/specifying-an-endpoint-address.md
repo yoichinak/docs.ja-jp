@@ -1,5 +1,6 @@
 ---
 title: エンドポイント アドレスの指定
+description: WCF の ServiceEndpoint の一部であるエンドポイントアドレスについて説明します。 WCF サービスとの通信はすべて、エンドポイントを介して行われます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441020"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245986"
 ---
 # <a name="specifying-an-endpoint-address"></a>エンドポイント アドレスの指定
 
@@ -42,13 +43,13 @@ IIS でホストする場合、ユーザーは <xref:System.ServiceModel.Service
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>構成によるエンドポイント アドレスの定義
 
-構成ファイルでエンドポイントを定義するには、 [ \< エンドポイント>](../configure-apps/file-schema/wcf/endpoint-element.md)要素を使用します。
+構成ファイルでエンドポイントを定義するには、要素を使用し [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) ます。
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>メソッドが呼び出されると (つまり、ホストアプリケーションがサービスを開始しようとしたとき)、システムは "ue-v" を指定する name 属性を持つ[ \< サービス>](../configure-apps/file-schema/wcf/service.md)要素を検索します。HelloService ". [ \< サービス>](../configure-apps/file-schema/wcf/service.md)要素が見つかった場合、システムは指定されたクラスを読み込み、構成ファイルに指定されているエンドポイント定義を使用してエンドポイントを作成します。 このしくみによって、2 行のコードでサービスを読み込んで開始でき、バインディングとアドレス指定情報をコード外に維持することができます。 この方法の利点は、アプリケーションを再度コンパイルしたり、展開したりすることなく、この 2 つの情報を変更できる点です。
+<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>メソッドが呼び出されると (つまり、ホストアプリケーションがサービスを開始しようとしたとき)、システムは [\<service>](../configure-apps/file-schema/wcf/service.md) "ue-v" を指定する name 属性を持つ要素を検索します。HelloService ". [\<service>](../configure-apps/file-schema/wcf/service.md)要素が見つかった場合、システムは、構成ファイルで指定されているエンドポイント定義を使用して、指定されたクラスを読み込み、エンドポイントを作成します。 このしくみによって、2 行のコードでサービスを読み込んで開始でき、バインディングとアドレス指定情報をコード外に維持することができます。 この方法の利点は、アプリケーションを再度コンパイルしたり、展開したりすることなく、この 2 つの情報を変更できる点です。
 
-省略可能なヘッダーは[ \<>ヘッダー](../configure-apps/file-schema/wcf/headers-element.md)で宣言されます。 次に示すのは、構成ファイル内のサービスのエンドポイントを指定するために使用される要素の例です。これにより、の "Gold" クライアント `http://tempuri1.org/` と "標準" クライアントの2つのヘッダーが区別され `http://tempuri2.org/` ます。 このサービスを呼び出すクライアントは、構成ファイルに>適切な[ \< ヘッダー](../configure-apps/file-schema/wcf/headers-element.md)を持っている必要があります。
+オプションのヘッダーは、で宣言され [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) ます。 次に示すのは、構成ファイル内のサービスのエンドポイントを指定するために使用される要素の例です。これにより、の "Gold" クライアント `http://tempuri1.org/` と "標準" クライアントの2つのヘッダーが区別され `http://tempuri2.org/` ます。 このサービスを呼び出すクライアントは、構成ファイルに適切なを持つ必要があり [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) ます。
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 

@@ -1,5 +1,6 @@
 ---
 title: 入門サンプル
+description: WCF を使用して一般的なサービスと一般的なクライアントを実装する方法について説明します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575187"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246234"
 ---
 # <a name="getting-started-sample"></a>入門サンプル
 
@@ -32,7 +33,7 @@ ms.locfileid: "84575187"
 
 サービスが実行する操作は、メタデータとしてパブリックに公開するサービス コントラクト内に表されています。 また、サービスにはその操作を実装するためのコードが含まれています。
 
-クライアントには、サービス コントラクトの定義と、サービスにアクセスするためのプロキシ クラスが含まれています。 プロキシコードは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してサービスメタデータから生成されます。
+クライアントには、サービス コントラクトの定義と、サービスにアクセスするためのプロキシ クラスが含まれています。 プロキシコードは、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してサービスメタデータから生成されます。
 
 Windows Vista では、サービスは Windows アクティブ化サービス (WAS) でホストされます。 Windows XP および Windows Server 2003 では、インターネットインフォメーションサービス (IIS) と ASP.NET によってホストされています。 サービスを IIS または WAS でホストすることにより、サービスに初めてアクセスしたときにそのサービスを自動的にアクティブ化できます。
 
@@ -174,7 +175,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
-クライアントは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されるクライアントクラスを使用して、指定されたコントラクト型を使用して通信します。 このように生成されたクライアントは、ファイル generatedClient.cs または generatedClient.vb に含まれています。 このユーティリティは、特定のサービス用のメタデータを取得し、特定のコントラクト型を使用して通信するクライアント アプリケーションによって使用されるクライアントを生成します。 クライアント コードを生成するには、ホストされるサービスを利用できる必要があります。このサービスは、更新されたメタデータの取得に使用されるためです。
+クライアントは、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されるクライアントクラスを使用して、指定されたコントラクト型を使用して通信します。 このように生成されたクライアントは、ファイル generatedClient.cs または generatedClient.vb に含まれています。 このユーティリティは、特定のサービス用のメタデータを取得し、特定のコントラクト型を使用して通信するクライアント アプリケーションによって使用されるクライアントを生成します。 クライアント コードを生成するには、ホストされるサービスを利用できる必要があります。このサービスは、更新されたメタデータの取得に使用されるためです。
 
  次のコマンドをクライアント ディレクトリで SDK コマンド プロンプトから実行して、型指定のあるプロキシを生成します。
 

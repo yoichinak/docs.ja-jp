@@ -1,16 +1,17 @@
 ---
 title: Net.TCP ポート共有
+description: 高パフォーマンス通信用の TCP ベースのプロトコルと、WCF の複数のユーザープロセス間でポートを共有できるようにするサービスについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598763"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245246"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP ポート共有
 Windows Communication Foundation (WCF) は、高パフォーマンス通信用の新しい TCP ベースのネットワークプロトコル (net.tcp://) を提供します。 また、WCF には、net.tcp ポートを複数のユーザープロセスで共有できるようにする Net.tcp ポート共有サービスである、新しいシステムコンポーネントも導入されています。  
@@ -22,7 +23,7 @@ Windows Communication Foundation (WCF) は、高パフォーマンス通信用�
   
  多くの異なる HTTP アプリケーションのトラフィックを 1 つの TCP ポートに多重化する HTTP.SYS モデルが、Windows プラットフォームで標準になってきました。 このモデルを使用すると、ファイアウォール管理者は共通の制御点を使用できるようになり、また、アプリケーション開発者はネットワークを利用できる新しいアプリケーションを構築する際に、展開コストを最小限にできます。  
   
- インターネット インフォメーション サービス (IIS) には、HTTP アプリケーション間でポートを共有する機能が以前からあります。 ただし、これは HTTP の導入にのみ使用されていました。このインフラストラクチャが完全に一般化された SYS (カーネルモードの HTTP プロトコルリスナー) と IIS 6.0。 実際には、HTTP.SYS が、任意のユーザー プロセスで HTTP トラフィック専用の TCP ポートを共有することを許可します。 この機能により、多数の HTTP アプリケーションが同一の物理コンピューター上にそれぞれ別の独立したプロセスとして共存しながら、TCP ポート 80 でのトラフィックの送受信に必要なネットワーク インフラストラクチャを共有することができます。 Net.TCP ポート共有サービスは、net.tcp アプリケーションで同じ種類のポート共有を可能にします。  
+ インターネット インフォメーション サービス (IIS) には、HTTP アプリケーション間でポートを共有する機能が以前からあります。 ただし、これは、このインフラストラクチャが完全に一般化された HTTP.SYS (カーネルモードの HTTP プロトコルリスナー) と IIS 6.0 の導入のみでした。 実際には、HTTP.SYS が、任意のユーザー プロセスで HTTP トラフィック専用の TCP ポートを共有することを許可します。 この機能により、多数の HTTP アプリケーションが同一の物理コンピューター上にそれぞれ別の独立したプロセスとして共存しながら、TCP ポート 80 でのトラフィックの送受信に必要なネットワーク インフラストラクチャを共有することができます。 Net.TCP ポート共有サービスは、net.tcp アプリケーションで同じ種類のポート共有を可能にします。  
   
 ## <a name="port-sharing-architecture"></a>ポート共有アーキテクチャ  
  WCF のポート共有アーキテクチャには、次の3つの主要なコンポーネントがあります。  

@@ -1,13 +1,14 @@
 ---
 title: 大規模データとストリーミング
+description: WCF XML ベースの通信、エンコーダー、およびストリーミングデータ (バイナリデータの転送など) に関する考慮事項について説明します。
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 21993f230b19a76020807e1f17bd6256f2ee0b1c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586326"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246585"
 ---
 # <a name="large-data-and-streaming"></a>大規模データとストリーミング
 
@@ -127,7 +128,7 @@ class MyData
   
  前述のように、ストリーミングの有効化は、データをセグメントに分割できない場合、メッセージをタイムリーに配信する必要がある場合、または転送の開始時にデータがすべて揃っていない場合に、テキストまたはバイナリのコンテンツを伴う大きなメッセージに関してのみ実行するようにしてください。  
   
-### <a name="restrictions"></a>制限  
+### <a name="restrictions"></a>制約  
  ストリーミングが有効になっている場合、次のような多くの WCF 機能を使用することはできません。  
   
 - メッセージ本体に対するデジタル署名は実行できません。デジタル署名では、メッセージ コンテンツ全体に対してハッシュを計算する必要があります。 ところがストリーミングでは、メッセージ ヘッダーが作成され、送信される時点では、メッセージ コンテンツがすべて揃っているわけではありません。デジタル署名を処理できないのは、このためです。  

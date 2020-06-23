@@ -1,5 +1,6 @@
 ---
 title: サービス ID と認証
+description: サービスのエンドポイント id (サービス WSDL から生成された値) について説明します。この値は、WCF がサービスを認証するために使用します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600375"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246572"
 ---
 # <a name="service-identity-and-authentication"></a>サービス ID と認証
 サービスの*エンドポイント id*は、サービス Web サービス記述言語 (WSDL) から生成された値です。 この値は、すべてのクライアントに反映され、サービスの認証に使用されます。 クライアントがエンドポイントとの通信を開始し、サービスがクライアントに対して認証を行った後に、クライアントは、エンドポイント ID 値とエンドポイントの認証プロセスから返された実際の値を比較します。 この 2 つの値が一致した場合、クライアントは要求したサービス エンドポイントに接続していることを確認できます。 これは、悪意のあるサービスによってホストされるエンドポイントにクライアントがリダイレクトされるのを防ぐことによって、*フィッシング*に対する保護として機能します。  
@@ -32,7 +33,7 @@ ms.locfileid: "84600375"
   
  クライアントでの ID の処理は、サービスでのクライアント認証と似ています。 セキュリティで保護されたサービスは、クライアントの資格情報が認証されるまでコードを実行しません。 同様に、クライアントは、サービスのメタデータによって事前に認識されている内容に基づいて、サービスの資格情報が認証されるまでメッセージを送信しません。  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> クラスの <xref:System.ServiceModel.EndpointAddress> プロパティは、クライアントによって呼び出されるサービスの ID を表します。 サービスはこの <xref:System.ServiceModel.EndpointAddress.Identity%2A> をサービスのメタデータ内に公開します。 クライアント開発者がサービスエンドポイントに対して[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行すると、生成された構成にサービスのプロパティの値が含まれ <xref:System.ServiceModel.EndpointAddress.Identity%2A> ます。 WCF インフラストラクチャ (セキュリティを使用して構成されている場合) は、サービスが指定された id を所有していることを確認します。  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> クラスの <xref:System.ServiceModel.EndpointAddress> プロパティは、クライアントによって呼び出されるサービスの ID を表します。 サービスはこの <xref:System.ServiceModel.EndpointAddress.Identity%2A> をサービスのメタデータ内に公開します。 クライアント開発者がサービスエンドポイントに対して[ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行すると、生成された構成にサービスのプロパティの値が含まれ <xref:System.ServiceModel.EndpointAddress.Identity%2A> ます。 WCF インフラストラクチャ (セキュリティを使用して構成されている場合) は、サービスが指定された id を所有していることを確認します。  
   
 > [!IMPORTANT]
 > メタデータには、サービスに要求される ID が含まれています。したがって、安全な方法 (サービスの HTTPS エンドポイントを作成するなど) でサービス メタデータを公開することをお勧めします。 詳細については、「[方法: メタデータエンドポイントをセキュリティで保護](how-to-secure-metadata-endpoints.md)する」を参照してください。  
@@ -64,7 +65,7 @@ ms.locfileid: "84600375"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>クライアントでの ID の指定  
- 設計時に、クライアント開発者は通常、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してクライアント構成を生成します。 生成された構成ファイル (クライアントが使用するもの) には、サービスの ID が含まれます。 たとえば、次のコードは、前の例で示した DNS ID を指定するサービスから生成されたものです。 クライアントのエンドポイント ID 値が、サービスのエンドポイント ID 値と一致していることに注意してください。 この場合、クライアントは、サービスの Windows (Kerberos) 資格情報を受け取るときに、この値が `contoso.com` であることを要求します。  
+ 設計時に、クライアント開発者は通常、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してクライアント構成を生成します。 生成された構成ファイル (クライアントが使用するもの) には、サービスの ID が含まれます。 たとえば、次のコードは、前の例で示した DNS ID を指定するサービスから生成されたものです。 クライアントのエンドポイント ID 値が、サービスのエンドポイント ID 値と一致していることに注意してください。 この場合、クライアントは、サービスの Windows (Kerberos) 資格情報を受け取るときに、この値が `contoso.com` であることを要求します。  
 
  サービスでクライアント資格情報の種類として Windows ではなく証明書を指定した場合は、証明書の DNS プロパティの値が `contoso.com` であることが要求されます  (DNS プロパティが `null` の場合は、証明書のサブジェクト名が `contoso.com` である必要があります)。  
   

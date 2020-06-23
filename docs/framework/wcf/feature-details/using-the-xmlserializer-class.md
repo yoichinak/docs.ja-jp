@@ -1,5 +1,6 @@
 ---
 title: XmlSerializer クラスの使用
+description: WCF がクライアントとサービスの間で送信される XML にアプリケーションのデータをシリアル化するために使用する XmlSerializer について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600206"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246384"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer クラスの使用
 
@@ -40,7 +41,7 @@ Windows Communication Foundation (WCF) では、2つの異なるシリアル化�
 
 WCF では、クラスもサポートさ <xref:System.Xml.Serialization.XmlSerializer> れています。 <xref:System.Xml.Serialization.XmlSerializer>クラスは WCF に固有ではありません。 これは、ASP.NET Web サービスが使用するのと同じシリアル化エンジンです。 <xref:System.Xml.Serialization.XmlSerializer> クラスでは、<xref:System.Runtime.Serialization.DataContractSerializer> クラスよりもサポートされる型の範囲がずっと狭くなりますが、結果の XML に対する制御の柔軟性に優れています。また、XML スキーマ定義言語 (XSD) 標準のサポート範囲が広く、 シリアル化可能な型で宣言型属性が要求されません。 詳細については、.NET Framework のドキュメントの XML シリアル化に関するトピックを参照してください。 <xref:System.Xml.Serialization.XmlSerializer> クラスは、データ コントラクト型をサポートしません。
 
-Visual Studio の Svcutil.exe または**サービス参照の追加**機能を使用して、サードパーティのサービスのクライアントコードを生成したり、サードパーティのスキーマにアクセスしたりする場合は、適切なシリアライザーが自動的に選択されます。 スキーマに <xref:System.Runtime.Serialization.DataContractSerializer> との互換性がない場合は、<xref:System.Xml.Serialization.XmlSerializer> が選択されます。
+Svcutil.exe または Visual Studio の**サービス参照の追加**機能を使用して、サードパーティのサービスのクライアントコードを生成したり、サードパーティのスキーマにアクセスしたりする場合は、適切なシリアライザーが自動的に選択されます。 スキーマに <xref:System.Runtime.Serialization.DataContractSerializer> との互換性がない場合は、<xref:System.Xml.Serialization.XmlSerializer> が選択されます。
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer への手動切り替え
 
@@ -57,7 +58,7 @@ Visual Studio の Svcutil.exe または**サービス参照の追加**機能を�
 [!code-csharp[c_XmlSerializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_xmlserializer/cs/source.cs#1)]
 [!code-vb[c_XmlSerializer#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_xmlserializer/vb/source.vb#1)]
 
-## <a name="security-considerations"></a>セキュリティに関する考慮事項
+## <a name="security-considerations"></a>セキュリティの考慮事項
 
 > [!NOTE]
 > シリアル化エンジンを切り替える場合は注意が必要です。 同じ型でも、使用するシリアライザーによって XML へのシリアル化方法が異なる場合があります。 誤って、不適切なシリアライザーを使用すると、公開する意図のない型の情報が公開されるおそれがあります。
@@ -173,7 +174,7 @@ WCF は、 <xref:System.Xml.Serialization.SoapIncludeAttribute> <xref:System.Xml
 
 - 生成されるスキーマは、「[データコントラクトスキーマの参照](data-contract-schema-reference.md)」で説明されている有効なデータコントラクトスキーマである場合があります。 この場合は、スキーマを通常どおりにインポートでき、通常のデータ コントラクト型が生成されます。
 
-- 生成されたスキーマが、有効なデータ コントラクト スキーマではない場合があります。 たとえば、スキーマ プロバイダー メソッドによって、データ コントラクト モデルでサポートされていない XML 属性を含むスキーマが生成されることがあります。 この場合、スキーマを `IXmlSerializable` 型としてインポートできます。 このインポートモードは、既定ではオンになっていませんが、 `/importXmlTypes` [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)へのコマンドラインスイッチなどを使用して、簡単に有効にすることができます。 この詳細については、「[クラスを生成するためのスキーマのインポート](importing-schema-to-generate-classes.md)」を参照してください。 型インスタンスを処理するには、XML を直接操作する必要があります。 `XmlSerializer` の使用方法に関するトピックを参照し、より広い範囲のスキーマをサポートする別のシリアル化技術を使用することを検討することもできます。
+- 生成されたスキーマが、有効なデータ コントラクト スキーマではない場合があります。 たとえば、スキーマ プロバイダー メソッドによって、データ コントラクト モデルでサポートされていない XML 属性を含むスキーマが生成されることがあります。 この場合、スキーマを `IXmlSerializable` 型としてインポートできます。 このインポートモードは、既定では有効になっていませんが、たとえば、 `/importXmlTypes` [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)へのコマンドラインスイッチを使用して、簡単に有効にすることができます。 この詳細については、「[クラスを生成するためのスキーマのインポート](importing-schema-to-generate-classes.md)」を参照してください。 型インスタンスを処理するには、XML を直接操作する必要があります。 `XmlSerializer` の使用方法に関するトピックを参照し、より広い範囲のスキーマをサポートする別のシリアル化技術を使用することを検討することもできます。
 
 - 新しい型を生成する代わりに、プロキシ内の既存の `IXmlSerializable` 型を再利用できます。 この場合、「型を作成するためのスキーマのインポート」で説明する参照型の機能を使用して、再利用する型を示すことができます。 これは、Svcutil.exe で `/reference` スイッチを使用して、再利用する型を含むアセンブリを指定することに相当します。
 

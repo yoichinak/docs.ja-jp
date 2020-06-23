@@ -1,5 +1,6 @@
 ---
 title: WCF の委任と偽装
+description: WCF がサービスドメインのリソースへのクライアントアクセスを制限するために使用する偽装と委任の方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599257"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245077"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF の委任と偽装
 *偽装* は、サービス ドメインのリソースへのクライアント アクセスを制限するためにサービスが使用する一般的な手法です。 サービス ドメインのリソースは、ローカル ファイルなどのコンピューター リソースの場合もあれば (偽装)、ファイル共有などの別のコンピューター上のリソースの場合もあります (委任)。 サンプル アプリケーションについては、「 [Impersonating the Client](../samples/impersonating-the-client.md)」を参照してください。 偽装の使用方法の例については、「 [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md)」を参照してください。  
@@ -119,7 +120,7 @@ ms.locfileid: "84599257"
 |権限借用|はい|N/A|権限借用|  
 |権限借用|いいえ|該当なし|識別|  
 |処理の代行|[はい]|はい|処理の代行|  
-|処理の代行|はい|いいえ|権限借用|  
+|処理の代行|Yes|いいえ|権限借用|  
 |処理の代行|いいえ|該当なし|識別|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>ユーザー名資格情報とキャッシュされたトークンの偽装から取得する偽装レベル  
@@ -128,7 +129,7 @@ ms.locfileid: "84599257"
 |`AllowedImpersonationLevel`|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |該当なし|[はい]|はい|処理の代行|  
-|該当なし|はい|いいえ|権限借用|  
+|該当なし|Yes|いいえ|権限借用|  
 |該当なし|いいえ|該当なし|識別|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U ベースの偽装から取得する偽装レベル  
@@ -136,7 +137,7 @@ ms.locfileid: "84599257"
 |サービスに `SeTcbPrivilege`がある|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |[はい]|はい|N/A|権限借用|  
-|はい|いいえ|該当なし|識別|  
+|Yes|いいえ|該当なし|識別|  
 |いいえ|該当なし|該当なし|識別|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>クライアント証明書から Windows アカウントへのマッピング  
@@ -179,7 +180,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |偽装レベル|サービスがプロセス間の委任を実行できる|サービスがコンピューター間の委任を実行できる|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|いいえ|いいえ|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|いいえ|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|はい|いいえ|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|はい|はい|  
   

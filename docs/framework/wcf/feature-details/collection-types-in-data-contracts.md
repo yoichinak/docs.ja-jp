@@ -1,5 +1,6 @@
 ---
 title: データ コントラクトのコレクション型
+description: データコントラクトモデルが .NET Framework のコレクションを処理する方法と、WCF がコレクション型のデータシリアル化をサポートする方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83acf1f74bf3cb117f3f94743eda32d3f2cc4b82
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579750"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245181"
 ---
 # <a name="collection-types-in-data-contracts"></a>データ コントラクトのコレクション型
 
@@ -281,8 +282,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 |参照される型|参照される型で実装されるインターフェイス|例|型の処理|
 |---------------------|----------------------------------------------|-------------|----------------------|
-|非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|非ジェネリック|`MyType : IList`<br /><br /> or<br /><br /> `MyType<T> : IList`<br /><br /> ここでは、T= `int`|`Object` のクローズ ジェネリック (例 : `IList<object>`)|
-|非ジェネリックまたはクローズ ジェネリック (コレクション型と必ずしも一致するわけではない任意の数のパラメーター)|クローズ ジェネリック|`MyType : IList<string>`<br /><br /> or<br /><br /> `MyType<T> : IList<string>` ここでは、T=`int`|クローズ ジェネリック (例 : `IList<string>`)|
+|非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|非ジェネリック|`MyType : IList`<br /><br /> または<br /><br /> `MyType<T> : IList`<br /><br /> ここでは、T= `int`|`Object` のクローズ ジェネリック (例 : `IList<object>`)|
+|非ジェネリックまたはクローズ ジェネリック (コレクション型と必ずしも一致するわけではない任意の数のパラメーター)|クローズ ジェネリック|`MyType : IList<string>`<br /><br /> または<br /><br /> `MyType<T> : IList<string>` ここでは、T=`int`|クローズ ジェネリック (例 : `IList<string>`)|
 |任意の数のパラメーターを持つクローズ ジェネリック|型のパラメーターのいずれかを使用するオープン ジェネリック|`MyType<T,U,V> : IList<U>`<br /><br /> ここでは、T=`int`、U=`string`、V=`bool`|クローズ ジェネリック (例 : `IList<string>`)|
 |パラメーターを 1 つ持つオープン ジェネリック|型のパラメーターを使用するオープン ジェネリック|`MyType<T> : IList<T>`、T はオープン|オープン ジェネリック (例 : `IList<T>`)|
 
@@ -296,9 +297,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 |参照される型|参照される型で実装されるインターフェイス|例|型の処理|
 |---------------------|----------------------------------------------|-------------|---------------------|
-|非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> or<br /><br /> `MyType<T> : IDictionary` ここでは、T=`int`|クローズ ジェネリック `IDictionary<object,object>`|
+|非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> または<br /><br /> `MyType<T> : IDictionary` ここでは、T=`int`|クローズ ジェネリック `IDictionary<object,object>`|
 |クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>、クローズ|`MyType<T> : IDictionary<string, bool>` ここでは、T=`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|
-|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` ここでは、T=`int`、U=`float`、V=`bool`<br /><br /> or<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|
+|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` ここでは、T=`int`、U=`float`、V=`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|
 |クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーと値の両方がオープンであり、それぞれ型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<V,U>` ここでは、T=`int`、U=`bool`、V=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|
 |オープン ジェネリック (2 つのパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、オープン、型のジェネリック パラメーターの両方をその出現順に使用|`MyType<K,V> : IDictionary<K,V>`、K と V は共にオープン|オープン ジェネリック (例 : `IDictionary<K,V>`)|
 

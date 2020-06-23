@@ -1,5 +1,6 @@
 ---
 title: '方法: トランスポート セキュリティとメッセージ資格情報を使用する'
+description: メッセージ資格情報を使用してトランスポートセキュリティを実装する方法について説明します。これにより、WCF でトランスポートとメッセージのセキュリティモードが最適になります。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579385"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246650"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>方法: トランスポート セキュリティとメッセージ資格情報を使用する
 トランスポートとメッセージの両方の資格情報を使用してサービスをセキュリティ保護するには、Windows Communication Foundation (WCF) のトランスポートとメッセージの両方のセキュリティモードを使用します。 つまり、トランスポート層セキュリティでは整合性と機密性が提供され、メッセージ層セキュリティでは、厳密なトランスポート セキュリティ機構では実現できないさまざまな資格情報が提供されます。 ここでは、<xref:System.ServiceModel.WSHttpBinding> バインディングと <xref:System.ServiceModel.NetTcpBinding> バインディングを使用して、メッセージ資格情報付きトランスポートを実装するための基本手順を示します。 セキュリティモードの設定の詳細については、「[方法: セキュリティモードを設定する](../how-to-set-the-security-mode.md)」を参照してください。  

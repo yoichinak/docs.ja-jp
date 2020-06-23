@@ -1,13 +1,14 @@
 ---
 title: ServiceModel 登録ツール (ServiceModelReg.exe)
+description: このコマンドラインツールを使用すると、サービスのアクティブ化に関する問題が発生した場合に、1台のコンピューターで WCF および WF コンポーネントの登録を管理できます。
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: a6f65ccc6caa0a7e496e7de8c83259ab48903753
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 347b1b8071abe7d8eb7e16ffd879c1fdb9825bc7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183100"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245896"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 登録ツール (ServiceModelReg.exe)
 このコマンド ライン ツールは、単一コンピューター上で WCF および WF コンポーネントの登録を管理するための機能を提供します。 WCF および WF コンポーネントはインストール時に構成されるため、通常の状況ではこのツールを使用する必要はありません。 しかし、サービスのアクティブ化に関する問題が発生する場合は、このツールを使用してコンポーネントを登録できます。  
@@ -18,13 +19,13 @@ ms.locfileid: "79183100"
 ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ツールは次の場所にあります。  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> Windows Vista でサービス モデル登録ツールを実行すると **、Windows の機能**ダイアログ ボックスには **、Microsoft .NET Framework 3.0**の下の **[Windows 通信基盤] HTTP アクティブ化**オプションが有効になっていることが反映されない場合があります。 [スタート] ボタンをクリックし、[**ファイル****名を指定して実行**] をクリックし、「オプション機能」と入力すると **、[Windows の機能**] ダイアログ ボックスにアクセス**できます**。  
+> ServiceModel 登録ツールが Windows Vista で実行されている場合、[ **windows の機能**] ダイアログが表示されないことがあります。 **Microsoft .NET Framework 3.0**の**Windows Communication Foundation HTTP Activation**オプションが有効になっていることを示します。 [ **Windows の機能**] ダイアログボックスにアクセスするには、[**スタート**] ボタンをクリックし、[**実行**] をクリックしてから、「」**と入力し**ます。  
   
  次の表は、ServiceModelReg.exe で使用できるオプションを示します。  
   
@@ -35,14 +36,14 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-r`|WCF および WF のすべてのコンポーネントを修復します。|  
 |`-i`|-c で指定された WCF および WF のコンポーネントをインストールします。|  
 |`-u`|-c で指定された WCF および WF のコンポーネントをアンインストールします。|  
-|`-c`|コンポーネントをインストールまたはアンインストールします。<br /><br /> - http 名前空間 – HTTP 名前空間の予約<br />- tcpport 共有 – TCP ポート共有サービス<br />- tcp アクティベーション – TCP アクティベーション サービス (.NET 4 クライアント プロファイルではサポートされていません)<br />- 名前付きパイプのアクティブ化 – 名前付きパイプのアクティブ化サービス (.NET 4 クライアント プロファイルではサポートされていません)<br />- msmq アクティベーション – MSMQ ライセンス認証サービス (.NET 4 クライアント プロファイルではサポートされていません)<br />- etw – ETW イベント トレース マニフェスト (Windows Vista 以降)|  
+|`-c`|コンポーネントをインストールまたはアンインストールします。<br /><br /> -httpnamespace-HTTP 名前空間の予約<br />-tcpportsharing-TCP ポート共有サービス<br />-tcpactivation – TCP activation service (.NET 4 クライアントプロファイルではサポートされていません)<br />-namedpipeactivation –名前付きパイプアクティブ化サービス (.NET 4 クライアントプロファイルではサポートされていません)<br />-msmqactivation – MSMQ アクティブ化サービス (.NET 4 クライアントプロファイルではサポートされていません)<br />-etw – ETW イベントトレースマニフェスト (Windows Vista 以降)|  
 |`-q`|Quiet モード (エラー ログのみ表示)|  
 |`-v`|Verbose モード|  
 |`-nologo`|著作権やバナー メッセージを表示しません。|  
 |`-?`|ヘルプ テキストを表示します。|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>FileLoadException エラーの修正  
- 以前のバージョンの WCF をコンピューターにインストールした場合は、ServiceModelReg ツールを`FileLoadFoundException`実行して新しいインストールを登録するときにエラーが発生することがあります。 旧バージョンのインストールから手動でファイルを削除しても、machine.config 設定が元のままである限り、このエラーが発生する可能性があります。  
+ 以前のバージョンの WCF をコンピューターにインストールした場合、 `FileLoadFoundException` servicemodelreg.exe ツールを実行して新しいインストールを登録すると、エラーが表示されることがあります。 旧バージョンのインストールから手動でファイルを削除しても、machine.config 設定が元のままである限り、このエラーが発生する可能性があります。  
   
  エラー メッセージは、次のようになります。  
   
@@ -51,23 +52,23 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- System.ServiceModel Version 2.0.0.0 アセンブリが旧 CTP (Customer Technology Preview) リリースによってインストールされていたというエラー メッセージに注目する必要があります。 最新バージョンの System.ServiceModel アセンブリは、2.0.0.0 ではなく 3.0.0.0 です。 したがって、この問題は、WCF の初期の CTP リリースがインストールされているが、完全にアンインストールされていないコンピューターに、公式の WCF リリースをインストールする場合に発生します。  
+ System.ServiceModel Version 2.0.0.0 アセンブリが旧 CTP (Customer Technology Preview) リリースによってインストールされていたというエラー メッセージに注目する必要があります。 最新バージョンの System.ServiceModel アセンブリは、2.0.0.0 ではなく 3.0.0.0 です。 そのため、この問題は、WCF の初期リリースがインストールされているが、完全にはアンインストールされていないコンピューターに、正式な WCF リリースをインストールする場合に発生します。  
   
- ServiceModelReg.exe は、旧バージョンのエントリをクリーンアップすることも、新しいバージョンのエントリを登録することもできません。 唯一の回避策は、machine.config を手動で編集することです。このファイルは、次の場所にあります。  
+ ServiceModelReg.exe は、旧バージョンのエントリをクリーンアップすることも、新しいバージョンのエントリを登録することもできません。 唯一の回避策は、machine.config を手動で編集することです。このファイルは次の場所で見つけることができます。  
   
 ```console  
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config
 ```  
   
- 64 ビット コンピューターで WCF を実行している場合は、この場所でも同じファイルを編集する必要があります。  
+ WCF を64ビットコンピューターで実行している場合は、この場所で同じファイルを編集する必要もあります。  
   
 ```console  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config
 ```  
   
- "System.ServiceModel, バージョン = 2.0.0.0" を参照する XML ノードをこのファイル内で見つけ、それらと子ノードを削除します。 ファイルを保存し ServiceModelReg.exe を再実行すると、この問題は解決します。  
+ このファイル内の "System.servicemodel, Version = 2.0.0.0" を参照する XML ノードを検索し、それらのノードを削除します。 ファイルを保存し ServiceModelReg.exe を再実行すると、この問題は解決します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例に、ServiceModelReg.exe ツールの最も一般的なオプションの使用方法を示します。  
   
 ```console  

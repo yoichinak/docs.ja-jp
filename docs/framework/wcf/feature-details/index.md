@@ -1,17 +1,18 @@
 ---
 title: WCF 機能の詳細
+description: WCF がアプリケーションのメッセージング機能に対して提供する広範なコントロールについて詳しく説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 80728cd5f677617e8727e9f8c4b0c4b85767975c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596891"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246637"
 ---
 # <a name="wcf-feature-details"></a>WCF 機能の詳細
 Windows Communication Foundation (WCF) を使用すると、アプリケーションのメッセージング機能を広範囲に制御できます。 このセクションの各トピックでは、使用できる機能について詳しく説明します。 基本的なプログラミングの詳細については、「[基本的な WCF プログラミング](../basic-wcf-programming.md)」を参照してください。  
@@ -38,7 +39,7 @@ Windows Communication Foundation (WCF) を使用すると、アプリケーシ�
  [トランザクション](transactions-in-wcf.md)  
  必要に応じてロールバックできるトランザクション操作を作成する方法について説明します。  
   
- [Security](security.md)  
+ [セキュリティ](security.md)  
  機密性と整合性を持つアプリケーションの作成に WCF セキュリティがどのように役立つかについて説明します。 監査機能として、認証と承認を使用することもできます。  
   
  [ピアツーピア ネットワーク](peer-to-peer-networking.md)  
