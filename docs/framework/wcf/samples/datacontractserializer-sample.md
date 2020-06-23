@@ -1,15 +1,16 @@
 ---
 title: DataContractSerializer サンプル
+description: このサンプルでは、データコントラクトクラスの一般的なシリアル化および逆シリアル化サービスを実行する WCF の DataContractSerializer を示します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 07c6d3b10f2a0478f8fb3835f0b040668c5013ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600011"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244401"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer サンプル
 DataContractSerializer サンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を示して、データ コントラクト クラスに対応した一般的なシリアル化および逆シリアル化の各サービスを実行します。 このサンプルでは、オブジェクトを作成し `Record` 、それをメモリストリームにシリアル化し、メモリストリームを別のオブジェクトに逆シリアル化して `Record` 、の使用方法を示し <xref:System.Runtime.Serialization.DataContractSerializer> ます。 サンプルではその後、バイナリ ライタを使用して `Record` オブジェクトをシリアル化し、バイナリ ライタがシリアル化にどのように影響するかを示します。  

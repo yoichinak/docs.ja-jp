@@ -1,18 +1,19 @@
 ---
 title: トレースとメッセージ ログ
+description: この WFC サンプルを使用して、サービストレースビューアーツール (SvcTraceViewer.exe) を使用してトレースとメッセージログを表示する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9af50f138a2788fc7af0ce5d07e95df49d6675cb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602649"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246026"
 ---
 # <a name="tracing-and-message-logging"></a>トレースとメッセージ ログ
-このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージログは、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示されます。 このサンプルは、[はじめに](getting-started-sample.md)に基づいています。  
+このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージログは、[サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示されます。 このサンプルは、[はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  

@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation とは
+description: サービス指向アプリケーションを構築するためのフレームワークである Windows Communication Foundation について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600855"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245610"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用すると、サービスエンドポイント間で非同期メッセージとしてデータを送信できます。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
@@ -54,7 +55,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
      WCF は .NET Framework を使用して構築されているため、適用するコントラクトを提供するコードフレンドリなメソッドも含まれています。 汎用的な型のコントラクトの 1 つにデータ コントラクトがあります。 本質的に、Visual C# または Visual Basic を使用してサービスをコード化した場合、データを処理する最も簡単な方法は、データ エンティティを表すクラスにデータ エンティティに属するプロパティを作成する方法です。 WCF には、この簡単な方法でデータを操作するための包括的なシステムが含まれています。 データを表すクラスを作成すると、設計したデータ型にクライアントが準拠できるメタデータがサービスによって自動生成されます。 詳細については、「[データコントラクトの使用](feature-details/using-data-contracts.md)」を参照してください。
 
-- **Security**
+- **セキュリティ**
 
      メッセージを暗号化してプライバシーを保護し、メッセージを受信する前にユーザーが自身を認証することを必須化することができます。 SSL や WS-SecureConversation などよく知られた標準を使用してセキュリティを実装できます。 詳細については、[セキュリティ](./feature-details/security.md)に関するページをご覧ください。
 

@@ -1,13 +1,14 @@
 ---
 title: ETW トレース
+description: このサンプルでは、Windows イベントトレーシング (ETW) と ETWTraceListener を使用して、エンドツーエンド (E2E) のトレースを実装する方法を示します。
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600564"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244427"
 ---
 # <a name="etw-tracing"></a>ETW トレース
 このサンプルでは、Event Tracing for Windows (ETW) と、このサンプルに用意されている `ETWTraceListener` を使用して、エンドツーエンド (E2E) のトレースを実装する方法を示します。 このサンプルは[はじめに](getting-started-sample.md)に基づいており、ETW トレースが含まれています。  
@@ -52,7 +53,7 @@ ms.locfileid: "84600564"
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。 これらのツールの詳細については、「」を参照してください。<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- ETWTraceListener を使用する場合、トレースはバイナリの .etl ファイルにログ記録されます。 ServiceModel トレースが有効な場合、生成されるすべてのトレースは同じファイルに表示されます。 .Etl と .svclog のログファイルを表示するには、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用します。 このビューアでは、メッセージを送信側から受信側や使用地点までトレースできる、システムのエンドツーエンドのビューが作成されます。  
+ ETWTraceListener を使用する場合、トレースはバイナリの .etl ファイルにログ記録されます。 ServiceModel トレースが有効な場合、生成されるすべてのトレースは同じファイルに表示されます。 .Etl と .svclog のログファイルを表示するには、[サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用します。 このビューアでは、メッセージを送信側から受信側や使用地点までトレースできる、システムのエンドツーエンドのビューが作成されます。  
   
  ETW トレース リスナは、循環ログをサポートします。 この機能を有効にするには、[**スタート**]、[**実行**] の各ページにアクセスして、 `cmd` コマンドコンソールを起動します。 次のコマンドでは、`<logfilename>` パラメータを使用するログ ファイル名に置き換えます。  
   
@@ -74,7 +75,7 @@ logman start Wcf
 logman stop Wcf  
 ```  
   
- このプロセスでは、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)や Tracerpt など、選択したツールで処理できるバイナリ循環ログが生成されます。  
+ このプロセスでは、[サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)や Tracerpt など、選択したツールで処理できるバイナリ循環ログが生成されます。  
   
  循環[トレース](circular-tracing.md)のサンプルを参照して、循環ログを実行する代替リスナーの詳細情報を確認することもできます。  
   

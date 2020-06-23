@@ -1,15 +1,16 @@
 ---
 title: <netTcpBinding>
+description: TCP を使用する WCF コンピューター間の通信のみを目的とした、セキュリティで保護された、信頼性の高い、最適化されたバインディングを表します。 既定では、信頼できるメッセージはオフになっています。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c43c141093c8287adb6d5a841a43ac893deefccd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95c2c691bf328050f3d189c790d111d2fdeb1bb0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139344"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243998"
 ---
 # \<netTcpBinding>
 
@@ -83,7 +84,7 @@ ms.locfileid: "74139344"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|バインディングのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.NetTcpSecurityElement> 型です。|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
@@ -91,11 +92,11 @@ ms.locfileid: "74139344"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 このバインディングは、既定ではランタイム通信スタックを生成し、トランスポート セキュリティ、メッセージ配信用 TCP、およびバイナリ メッセージ エンコーディングを使用します。 このバインディングは、イントラネット経由で通信するための適切な Windows Communication Foundation (WCF) システム提供の選択肢です。  
   

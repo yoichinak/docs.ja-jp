@@ -1,15 +1,16 @@
 ---
 title: <basicHttpBinding>
+description: WS-I Basic Profile 1.1 に準拠したサービスと通信するために、WCF サービスがエンドポイントを構成および公開するために使用できるバインディングを定義します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: ab8dca7f7065d7c174e38ad3a88ea15e39351bed
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5b2ce1973966468107d7aa4de545a976c67b13ed
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84202043"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244024"
 ---
 # \<basicHttpBinding>
 ASMX ベースの Web サービスやクライアント、および WS-I Basic Profile 1.1 に準拠するその他のサービスとの通信が可能なエンドポイントを構成および公開するために、Windows Communication Foundation (WCF) サービスが使用できるバインドを表します。  
@@ -81,18 +82,18 @@ ASMX ベースの Web サービスやクライアント、および WS-I Basic P
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-basichttpbinding.md)|バインディングのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement> 型です。|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  BasicHttpBinding では、SOAP 1.1 メッセージを送信するために、HTTP をトランスポートとして使用します。 サービスは、ASMX クライアントが消費するエンドポイントなど、WS-I BP 1.1 に準拠するエンドポイントを開示するためにこのバインディングを使用できます。 同様に、クライアントは BasicHttpBinding を使用して、ASMX Web サービスや BasicHttpBinding で構成されるサービスなどの WS-I BP 1.1 に準じるエンドポイントを公開するサービスと通信できます。  
   
  既定ではセキュリティはオフになっていますが、子要素の mode 属性 [\<security>](security-of-basichttpbinding.md) を以外の値に設定することもでき `None` ます。 サービスは、"Text" メッセージ エンコードおよび UTF-8 テキスト エンコードを既定で使用します。  

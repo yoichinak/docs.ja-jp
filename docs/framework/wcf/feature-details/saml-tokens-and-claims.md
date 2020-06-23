@@ -1,5 +1,6 @@
 ---
 title: SAML トークンとクレーム
+description: WFC が SAML トークンを使用して、別のエンティティに関する1つのエンティティによって作成されたクレームのセットであるステートメントを実行する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c054e594af69def96879852a5145675b3123614a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590372"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244947"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML トークンとクレーム
 セキュリティアサーションマークアップ言語 (SAML)*トークン*は、クレームの XML 表現です。 既定では、フェデレーションセキュリティシナリオで使用される SAML トークン Windows Communication Foundation (WCF) では、*トークンが発行*されます。  

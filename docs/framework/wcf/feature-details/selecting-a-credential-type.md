@@ -1,13 +1,14 @@
 ---
 title: 資格情報の種類の選択
+description: 資格情報、WCF での使用方法、要求された id または機能を確立するための適切な資格情報をアプリケーションに選択する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 7bcc5f407077b32d85b7f1e5f7ddbc5aba4b80c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a8a6880e5fc3982bb7f470c34a77c771c26effd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586196"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244921"
 ---
 # <a name="selecting-a-credential-type"></a>資格情報の種類の選択
 *資格情報*は、要求された id または機能のいずれかを確立するために使用されるデータ WINDOWS COMMUNICATION FOUNDATION (WCF) です。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンや x.509 証明書など、さまざまな形式になります。 このトピックでは、資格情報、WCF での使用方法、およびアプリケーションに適切な資格情報を選択する方法について説明します。  
@@ -30,8 +31,8 @@ ms.locfileid: "84586196"
 |ダイジェスト|クライアントにダイジェスト認証を指定します。 詳細については、「RFC2617-[HTTP 認証: 基本認証とダイジェスト認証](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)」を参照してください。|  
 |Ntlm|NT LAN Manager (NTLM) 認証を指定します。 これは、何らかの理由で Kerberos 認証を使用できないときに使用されます。 また、プロパティをに設定すると、フォールバックとしての使用を無効にすることもできます <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> `false` 。これにより、NTLM が使用された場合に WCF がベストエフォートで例外をスローするようになります。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。|  
 |Windows|Windows 認証を指定します。 Windows ドメインで Kerberos プロトコルだけを指定するには、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> プロパティを `false` (既定値は `true`) に設定する必要があります。|  
-|Certificate|X.509 証明書を使用したクライアント認証を実行します。|  
-|パスワード|ユーザーは、ユーザー名とパスワードを提供する必要があります。 Windows 認証または他のカスタム ソリューションを使用して、ユーザー名とパスワードの組み合わせを検証します。|  
+|証明書|X.509 証明書を使用したクライアント認証を実行します。|  
+|Password|ユーザーは、ユーザー名とパスワードを提供する必要があります。 Windows 認証または他のカスタム ソリューションを使用して、ユーザー名とパスワードの組み合わせを検証します。|  
   
 ### <a name="message-client-credential-types"></a>メッセージ クライアント資格情報の種類  
  メッセージ セキュリティを使用するアプリケーションを作成するときに使用できる資格情報の種類を次の表に示します。 これらの値は、コードまたは構成ファイルで使用できます。  
@@ -41,7 +42,7 @@ ms.locfileid: "84586196"
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
 |Windows|Windows 資格情報によって確立されたセキュリティ コンテキストで、SOAP メッセージ交換を実行できます。|  
 |ユーザー名|ユーザー名資格情報を使用したクライアントの認証をサービスで要求できるようにします。 WCF では、署名の生成やデータの暗号化など、ユーザー名を使用した暗号化操作が許可されていないことに注意してください。 WCF では、ユーザー名の資格情報を使用するときに、トランスポートが確実にセキュリティで保護されます。|  
-|Certificate|X.509 証明書を使用したクライアントの認証をサービスで要求できるようにします。|  
+|証明書|X.509 証明書を使用したクライアントの認証をサービスで要求できるようにします。|  
 |IssuedToken|セキュリティ ポリシーに従って構成されるカスタム トークンです。 既定のトークンの種類は、SAML (Security Assertion Markup Language) です。 トークンは、セキュリティ トークン サービスによって発行されます。 詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>サービス資格情報のネゴシエーション モデル  

@@ -1,5 +1,6 @@
 ---
 title: バインディングとセキュリティ
+description: セキュリティニーズに合った適切なバインドを選択する方法について説明します。 WCF に含まれるシステム指定のバインディングを使用すると、WCF アプリケーションをすばやくプログラミングできます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 0c41f357d63158979e448c2cc36f1e80b74b18d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587509"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245336"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 
@@ -192,7 +193,7 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 
 次の表は、セキュリティ モード設定で提供される機能をまとめたものです。つまり、セキュリティ モードを `Transport`、`Message`、または `TransportWithMessageCredential` に設定したときに使用できる機能の一覧です。 アプリケーションで必要なセキュリティ機能を決定するときに、この表を参考にしてください。
 
-|設定|特徴|
+|設定|機能|
 |-------------|--------------|
 |トランスポート|サーバー認証<br /><br /> クライアント認証<br /><br /> Point-to-Point のセキュリティ<br /><br /> 相互運用性<br /><br /> ハードウェアの高速化<br /><br /> 高スループット<br /><br /> セキュリティで保護されたファイアウォール<br /><br /> 待ち時間の長いアプリケーション<br /><br /> 複数のホップでの再暗号化|
 |Message|サーバー認証<br /><br /> クライアント認証<br /><br /> エンドツーエンドのセキュリティ<br /><br /> 相互運用性<br /><br /> 多様なクレーム<br /><br /> フェデレーション<br /><br /> 多要素認証<br /><br /> カスタム トークン<br /><br /> Notary/Timestamp サービス<br /><br /> 待ち時間の長いアプリケーション<br /><br /> メッセージ署名の永続化|
@@ -222,7 +223,7 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 |ダイジェスト|ダイジェスト認証です。 詳細については、「RFC 2617 – HTTP 認証: 基本認証とダイジェスト認証」を参照してください <https://go.microsoft.com/fwlink/?LinkId=84023> 。|
 |NTLM|NTLM (NT LAN Manager) 認証です。|
 |Windows|Windows 認証です。|
-|Certificate|証明書を使用して実行される認証です。|
+|証明書|証明書を使用して実行される認証です。|
 |IssuedToken|サービスが、Security Token Service または CardSpace によって発行されたトークンを使用して、クライアントの認証を要求できるようにします。 詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。|
 
 ### <a name="message-client-credentials-in-bindings"></a>バインディングにおけるメッセージ クライアント資格情報
@@ -234,7 +235,7 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 |なし|サービスが匿名クライアントとやり取りを行うことが可能になります。|
 |Windows|Windows 資格情報の認証済みコンテキストの制御下で SOAP メッセージ交換を行うことができます。|
 |UserName|サービスが、ユーザー名資格情報を使用したクライアントの認証を要求できるようにします。 セキュリティモードがに設定されている場合 `TransportWithMessageCredential` 、WCF では、パスワードダイジェストの送信や、パスワードを使用したキーの派生、およびメッセージモードセキュリティのためのこのようなキーの使用はサポートされていません。 そのため、ユーザー名の資格情報を使用する場合、WCF はトランスポートがセキュリティで保護されることを強制します。|
-|Certificate|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|
+|証明書|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|
 |IssuedToken|サービスは、セキュリティ トークン サービスを使用してカスタム トークンを提供できます。|
 
 ## <a name="see-also"></a>関連項目

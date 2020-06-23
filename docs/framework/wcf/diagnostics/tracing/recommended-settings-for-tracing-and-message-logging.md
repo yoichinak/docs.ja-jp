@@ -1,19 +1,20 @@
 ---
 title: トレースとメッセージ ログの推奨設定
+description: WCF のさまざまなオペレーティング環境で推奨されるトレースとメッセージログの設定について説明します。
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578917"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245328"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>トレースとメッセージ ログの推奨設定
 このトピックでは、さまざまな動作環境における、推奨されるトレースとメッセージ ログの設定について説明します。  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>本運用環境での推奨される設定  
- 本運用環境で WCF トレース ソースを使用する場合は、`switchValue` を Warning に設定します。 WCF `System.ServiceModel` トレース ソースを使用する場合は、`switchValue` 属性を `Warning` に設定し、`propagateActivity` 属性を `true` に設定します。 ユーザー定義のトレース ソースを使用する場合は、`switchValue` 属性を `Warning, ActivityTracing` に設定します。 この操作は、[構成エディターツール (svcconfigeditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)を使用して手動で行うことができます。 前述のすべての場合において、パフォーマンスに影響しないと思われる場合は、`switchValue` 属性を `Information` に設定できます。これにより、相当な量のトレース データが生成されます。 次の例に、これらの推奨設定を示します。  
+ 本運用環境で WCF トレース ソースを使用する場合は、`switchValue` を Warning に設定します。 WCF `System.ServiceModel` トレース ソースを使用する場合は、`switchValue` 属性を `Warning` に設定し、`propagateActivity` 属性を `true` に設定します。 ユーザー定義のトレース ソースを使用する場合は、`switchValue` 属性を `Warning, ActivityTracing` に設定します。 これは、[構成エディターツール (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)を使用して手動で行うことができます。 前述のすべての場合において、パフォーマンスに影響しないと思われる場合は、`switchValue` 属性を `Information` に設定できます。これにより、相当な量のトレース データが生成されます。 次の例に、これらの推奨設定を示します。  
   
 ```xml  
 <configuration>  

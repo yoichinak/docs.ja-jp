@@ -1,13 +1,14 @@
 ---
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
+description: IIS でホストされている WCF サービスを開発および展開するために必要なタスクについて説明します。その際、コンポーネントのインストールを確認します。
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 826a8798ada8f04173b047dc27829c384f79e2b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599244"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245094"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -35,7 +36,7 @@ IIS でホストされる WCF サービスが正常に機能するためには�
 
 IIS が既にコンピューターに存在する場合、.NET Framework のインストールプロセスによって WCF が自動的に IIS に登録されます。 .NET Framework の後に IIS がインストールされている場合は、WCF を IIS と ASP.NET に登録するために追加の手順が必要になります。 使用しているオペレーティング システムに応じて、次のように実行します。
 
-- Windows 7 および Windows Server 2003: [ServiceModel 登録ツール (servicemodelreg.exe)](../servicemodelreg-exe.md)ツールを使用して、WCF を IIS に登録します。 このツールを使用するには、 [Visual Studio の開発者コマンドプロンプト](../../tools/developer-command-prompt-for-vs.md)に「 **servicemodelreg.exe/i/x** 」と入力します。
+- Windows 7 および Windows Server 2003: [ServiceModel 登録ツール (ServiceModelReg.exe)](../servicemodelreg-exe.md)ツールを使用して、WCF を IIS に登録します。 このツールを使用するには、 [Visual Studio の開発者コマンドプロンプト](../../tools/developer-command-prompt-for-vs.md)で「 **ServiceModelReg.exe/i/x** 」と入力します。
 
 - Windows 7: 最後に、.NET Framework バージョン4以降を使用するように ASP.NET が構成されていることを確認する必要があります。 これを行うには、オプションを指定して ASPNET_Regiis ツールを実行し `–i` ます。 詳細については、「 [ASP.NET IIS Registration Tool](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))」を参照してください。
 
@@ -75,7 +76,7 @@ ASP.NET 2.0 コンパイルモデルの詳細については、「 [ASP.NET コ�
 
 ## <a name="configure-the-wcf-service"></a>WCF サービスの構成
 
-IIS でホストされる WCF サービスは、アプリケーションの Web.config ファイルに構成を格納します。 IIS でホストされるサービスは、IIS の外部でホストされる WCF サービスと同じ構成要素と構文を使用します。 ただし、次の制約は、IIS ホスト環境に固有です。
+IIS でホストされる WCF サービスは、アプリケーション Web.config ファイルに構成を格納します。 IIS でホストされるサービスは、IIS の外部でホストされる WCF サービスと同じ構成要素と構文を使用します。 ただし、次の制約は、IIS ホスト環境に固有です。
 
 - IIS でホストされるサービスのベース アドレス。
 
