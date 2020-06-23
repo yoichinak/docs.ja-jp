@@ -1,13 +1,13 @@
 ---
-title: .NET Core のランタイム識別子 (RID) のカタログ
+title: .NET Core ランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
 ms.date: 02/22/2019
-ms.openlocfilehash: b581f46becc6808ca957ac66c0c22e5e5f973bd1
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903286"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 

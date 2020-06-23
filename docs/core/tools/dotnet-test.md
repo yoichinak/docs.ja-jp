@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594453"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803154"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -175,7 +175,7 @@ dotnet test -h|--help
   dotnet test --logger trx
   ```
 
-- 現在のディレクトリでプロジェクトのテストを実行し、([Coverlet](https://github.com/tonerdo/coverlet/blob/master/README.md) をインストールした後) コード カバレッジ ファイルを生成します。
+- 現在のディレクトリでプロジェクトのテストを実行し、([Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md) コレクター統合をインストールした後) コード カバレッジ ファイルを生成します。
 
   ```dotnetcli
   dotnet test --collect:"XPlat Code Coverage"

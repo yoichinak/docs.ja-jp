@@ -2,20 +2,20 @@
 title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
 ms.date: 02/14/2020
-ms.openlocfilehash: 88e85868e2d7de564b2e4c90ce6e78bde4cb350e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9739fe782e17db3955db087ca1781ad4280cd491
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463620"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803169"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
-`dotnet msbuild` - プロジェクトとそのすべての依存関係をビルドします。
+`dotnet msbuild` - プロジェクトとそのすべての依存関係をビルドします。 メモ:複数存在するとき、ソリューションまたはプロジェクト ファイルを場合によっては指定する必要があります。
 
 ## <a name="synopsis"></a>構文
 
@@ -25,15 +25,15 @@ dotnet msbuild <MSBUILD_ARGUMENTS>
 dotnet msbuild -h
 ```
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
 `dotnet msbuild` コマンドでは、完全に機能する MSBuild へのアクセスを許可します。
 
 このコマンドには、SDK スタイルのプロジェクトに対してのみ、既存の MSBuild コマンド ライン クライアントとまったく同じ機能があります。 オプションはすべて同じです。 使用可能なオプションの詳細については、「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。
 
-[dotnet build](dotnet-build.md) コマンドは、`dotnet msbuild -restore -target:Build` に相当します。 [dotnet ビルド](dotnet-build.md)は、プロジェクトのビルドによく使用されますが、ビルド ターゲットを常に実行するため、プロジェクトをビルドしなくてもよい場合は `dotnet msbuild` を使用できます。 たとえば、プロジェクトをビルドせずに実行したい特定のターゲットがある場合は、`dotnet msbuild` を使用してターゲットを指定します。
+[dotnet build](dotnet-build.md) コマンドは、`dotnet msbuild -restore` に相当します。 プロジェクトをビルドしないが、特定のターゲットを実行する場合、`dotnet build` または `dotnet msbuild` を使用し、ターゲットを指定します。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 - プロジェクトとその依存関係をビルドします。
 
@@ -57,4 +57,5 @@ dotnet msbuild -h
 
   ```dotnetcli
   dotnet msbuild -preprocess
+  dotnet msbuild -preprocess:<fileName>.xml
   ```

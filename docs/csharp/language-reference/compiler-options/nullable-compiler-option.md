@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nullable compiler option [C#]
 - /nullable compiler option [C#]
 - -nullable compiler option [C#]
-ms.openlocfilehash: a68255dba18a022784cd4aaf0027c371893c577b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7454bb316507c3aaea208094127552712421dff6
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84449799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990131"
 ---
 # <a name="-nullable-c-compiler-options"></a>-nullable (C# コンパイラ オプション)
 
@@ -42,13 +42,13 @@ Null 許容コンテキスト オプションを指定します。 有効また�
 - 単純な実行前条件: <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute> と <xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute>
 - 単純な実行後条件: <xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute> と <xref:System.Diagnostics.CodeAnalysis.NotNullAttribute>
 - 条件付きの実行後条件: <xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute> および <xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute>
-- <xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute> (例: <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 用の `DoesNotReturnIf(false)`) と <xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute>
+- <xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute> (<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> の `DoesNotReturnIf(false)` など) と <xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute>
 - <xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute>
 - メンバーの実行後条件: <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.%23ctor(System.String)> と <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.%23ctor(System.String[])>
 
 ### <a name="to-set-this-compiler-option-in-a-project"></a>プロジェクトでこのコンパイラ オプションを設定するには
 
-*.csproj* を編集して、`Project/PropertyGroup` 階層に `<Nullable>` タグを追加します。
+*.csproj* ファイルを編集して、`Project/PropertyGroup` 階層に `<Nullable>` タグを追加します。
 
 ```xml
 <Project Sdk="...">

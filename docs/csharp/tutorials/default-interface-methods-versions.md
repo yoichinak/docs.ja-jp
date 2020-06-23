@@ -4,12 +4,12 @@ description: この高度なチュートリアルでは、既存のインター�
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e73f9001414631975248f1a1658833d2785169b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156780"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803210"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>チュートリアル: C# 8.0 で既定のインターフェイス メソッドを使用してインターフェイスを更新する
 
@@ -51,7 +51,7 @@ ms.locfileid: "79156780"
 
 アップグレードでは、2 つのプロパティを設定する機能を提供する必要があります。割引の対象となるために必要な注文数と、割引の割合です。 これは、既定のインターフェイス メソッドに最適なシナリオです。 `ICustomer` インターフェイスにメソッドを追加し、最も確実な実装を提供することができます。 すべての既存の実装とすべての新しい実装では、既定の実装を使用することも、独自の実装を提供することもできます。
 
-まず、実装に新しいメソッドを追加します。
+まず、メソッドの本体を含め、インターフェイスに新しいメソッドを追加します。
 
 [!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
