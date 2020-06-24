@@ -1,22 +1,19 @@
 ---
-title: Visual Studio Code で .NET Standard クラス ライブラリを作成する
+title: Visual Studio Code を使用して .NET Standard クラス ライブラリを作成する
 description: Visual Studio Code を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
-ms.date: 05/29/2020
-ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 06/08/2020
+ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446953"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701800"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>チュートリアル: Visual Studio Code で .NET Standard ライブラリを作成する
-
-"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。 ご自分のクラス ライブラリを完了させたら、それを NuGet パッケージとして配布するか、あるいは 1 つ以上のアプリケーションにコンポーネントとしてバンドルして含めるかどうかを決定します。
-
-> [!NOTE]
-> .NET Standard のバージョンとそれらがサポートするプラットフォームの一覧は、「[.NET Standard](../../standard/net-standard.md)」を参照してください。
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Standard ライブラリを作成する
 
 このチュートリアルでは、1 つの文字列処理メソッドを含む簡単なユーティリティ ライブラリを作成します。 それを[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装し、<xref:System.String> クラスのメンバーと同じように呼び出すことができるようにします。
+
+"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。 クラス ライブラリが完成したら、サードパーティ製のコンポーネントとして配布するか、1 つ以上のアプリケーションを含むバンドルされたコンポーネントとして配布することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -27,9 +24,11 @@ ms.locfileid: "84446953"
 
 まず、クラス ライブラリ プロジェクトを配置する空のソリューションを作成します。 ソリューションは、1 つまたは複数のプロジェクトのコンテナーとして機能します。 さらに関連するプロジェクトを同じソリューションに追加します。
 
-1. Visual Studio Code を開きます。
+1. Visual Studio Code を開始します。
 
-1. メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** / **[開く...]** の順に選択し、*ClassLibraryProjects* フォルダーを作成して、 **[フォルダーの選択]** / **[開く]** の順にクリックします。
+1. メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** (macOS では **[開く...]** ) の順に選択します
+
+1. **[フォルダーを開く]** ダイアログで、*ClassLibraryProjects* フォルダーを作成し、 **[フォルダーの選択]** (macOS では **[開く]** ) をクリックします。
 
 1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。
 
@@ -156,7 +155,21 @@ ms.locfileid: "84446953"
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. 最初は、新しいコンソール アプリ プロジェクトにクラス ライブラリへのアクセス権はありません。 クラス ライブラリでメソッドを呼び出せるようにするには、次のコマンドを実行して、クラス ライブラリ プロジェクトへのプロジェクト参照を作成します。
+1. *ShowCase/Program.cs* を開き、すべてのコードを次のコードに置き換えます。
+
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+
+   このコードでは、`row` 変数を使って、コンソール ウィンドウに書き込まれるデータの行数のカウントを維持します。 これが 25 以上になると、コードによってコンソール ウィンドウがクリアされ、ユーザーにメッセージが表示されます。
+
+   プログラムは、ユーザーに文字列の入力を要求し、 文字列が大文字で始まるかどうかを示します。 ユーザーが文字列を入力せずに <kbd>Enter</kbd> キーを押すと、アプリケーションが終了し、コンソール ウィンドウが閉じます。
+
+1. 変更内容を保存します。
+
+## <a name="add-a-project-reference"></a>プロジェクト参照を追加する
+
+最初は、新しいコンソール アプリ プロジェクトにクラス ライブラリへのアクセス権はありません。 クラス ライブラリでメソッドを呼び出せるようにするには、クラス ライブラリ プロジェクトへのプロジェクト参照を作成します。
+
+1. 次のコマンドを実行します。
 
    ```dotnetcli
    dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
@@ -168,17 +181,9 @@ ms.locfileid: "84446953"
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-1. *ShowCase/Program.cs* を開き、すべてのコードを次のコードに置き換えます。
+## <a name="run-the-app"></a>アプリを実行する
 
-   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
-
-   このコードでは、`row` 変数を使って、コンソール ウィンドウに書き込まれるデータの行数のカウントを維持します。 これが 25 以上になると、コードによってコンソール ウィンドウがクリアされ、ユーザーにメッセージが表示されます。
-
-   プログラムは、ユーザーに文字列の入力を要求し、 文字列が大文字で始まるかどうかを示します。 ユーザーが文字列を入力せずに Enter キーを押すと、アプリケーションが終了し、コンソール ウィンドウが閉じます。
-
-1. 変更内容を保存します。
-
-1. プログラムを実行します。
+1. ターミナルで次のコマンドを実行します。
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
@@ -203,10 +208,11 @@ ms.locfileid: "84446953"
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [.NET Core CLI を使用したライブラリの開発](libraries.md)
+* [.NET Standard のバージョンとそれらでサポートされているプラットフォーム](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、ソリューションを作成し、ライブラリ プロジェクトを追加し、ライブラリを使用するコンソール アプリ プロジェクトを追加しました。 次のチュートリアルでは、ソリューションに単体テスト プロジェクトを追加します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code での .NET Core を使用した .NET Standard ライブラリのテスト](testing-library-with-visual-studio-code.md)
+> [Visual Studio Code を使用して .NET Core で .NET Standard ライブラリをテストする](testing-library-with-visual-studio-code.md)

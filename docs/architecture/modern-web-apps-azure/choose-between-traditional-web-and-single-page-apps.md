@@ -4,12 +4,12 @@ description: Web アプリケーションを構築しているときに、従来
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450109"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662707"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
 
@@ -40,7 +40,9 @@ SPA の使用によって可能になるユーザー エクスペリエンスの
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 には、Blazor と呼ばれる、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 サーバー側 Blazor を使うと、開発者はサーバー上で Razor を使用して UI を構築できます。また、[WebAssembly](https://webassembly.org/) を使用してこのコードをブラウザーに配信し、クライアント側で実行できます。 ASP.NET Core 3.0 以降でサーバー側 Blazor を使用できるようになりました。 クライアント側 Blazor は、2020 年に利用可能になる予定です。
+ASP.NET Core 3.0 には、Blazor と呼ばれる、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 サーバー側 Blazor を使用すると、開発者はサーバー上で C# と Razor を使用して UI を構築し、永続的な SignalR 接続を使用して、リアルタイムで UI をブラウザーと対話的に接続させることができます。
+
+Blazor WebAssembly では、Blazor アプリに対して別のオプションが導入されます。WebAssembly を使用して、それらをブラウザーで実行できます。 WebAssembly で実行される実際の .NET であるため、アプリケーションのサーバー側の部分からコードとライブラリを再利用できます。
 
 Blazor には、完全にサーバー側でレンダリングされる Web アプリケーションまたは SPA をビルドするかどうかを評価する際に検討する、新しい 3 つ目のオプションが用意されています。 Blazor を使用して、SPA に似た豊富なクライアント側の動作を構築できます。このために多くの JavaScript 開発を行う必要はありません。 Blazor アプリケーションでは、API を呼び出してデータを要求したり、サーバー側の操作を実行したりできます。
 
@@ -113,8 +115,8 @@ JavaScript ベースの SPA と同様に、Blazor アプリケーションでは
 
 | **要素**                                           | **従来の Web アプリケーション** | **シングル ページ アプリケーション** | **Blazor アプリ**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
-| チームに必要な JavaScript/TypeScript の精通度 | **最小**             | **必須**                | **最小**     |
-| スクリプトを作成せずにブラウザーをサポート                   | **サポートされています**           | **サポートされていません**           | **サポートされています**   |
+| チームに必要な JavaScript/TypeScript の精通度 | **最小限**             | **必須**                | **最小限**     |
+| スクリプトを作成せずにブラウザーをサポート                   | **サポート状況**           | **サポートされない**           | **サポート状況**   |
 | 最小限のクライアント側アプリケーションの動作             | **適している**         | **過剰**                | **実行可能**      |
 | 高度で複雑なユーザー インターフェイス要件            | **制限がある**             | **適している**             | **適している** |
 

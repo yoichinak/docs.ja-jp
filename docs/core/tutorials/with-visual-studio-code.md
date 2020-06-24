@@ -1,17 +1,17 @@
 ---
-title: Visual Studio Code を使用して .NET Core でコンソール アプリケーションを作成する
+title: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する
 description: Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
 ms.date: 05/22/2020
-ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
+ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201701"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84717511"
 ---
-# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core でコンソール アプリケーションを作成する
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する
 
-このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは CLI を使用して行われるため、このチュートリアルに従って別のコード エディターを使用し、必要に応じてターミナルでコマンドを実行できます。
+このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET Core CLI を使用して実行されます。 必要に応じて、別のコード エディターを使用してこのチュートリアルに従い、ターミナルでコマンドを実行することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -20,25 +20,29 @@ ms.locfileid: "84201701"
 
 ## <a name="create-the-app"></a>アプリを作成する
 
-1. Visual Studio Code を開きます。
+"HelloWorld" という名前の .NET Core コンソール アプリ プロジェクトを作成します。
 
-1. プロジェクトを作成します。
+1. Visual Studio Code を開始します。
 
-   1. メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** / **[開く...]** の順に選択し、*HelloWorld* フォルダーを作成して、 **[フォルダーの選択]** / **[開く]** の順にクリックします。
+1. メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** (macOS では **[ファイル]**  >  **[開く...]** ) の順に選択します。
 
-      フォルダー名は既定でプロジェクト名と名前空間名になります。 このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。
+1. **[フォルダーを開く]** ダイアログで、*HelloWorld* フォルダーを作成し、 **[フォルダーの選択]** (macOS では **[開く]** ) をクリックします。
 
-   1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。
+   フォルダー名は既定でプロジェクト名と名前空間名になります。 このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。
 
-      **ターミナル**が開き、*HelloWorld* フォルダーにコマンド プロンプトが表示されます。
+1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。
 
-   1. **ターミナル**で、次のコマンドを入力します。
+   **ターミナル**が開き、*HelloWorld* フォルダーにコマンド プロンプトが表示されます。
 
-      ```dotnetcli
-      dotnet new console
-      ```
+1. **ターミナル**で、次のコマンドを入力します。
 
-.NET Core のコンソール アプリケーション テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として必要とする単一のメソッド `Main` とともに定義されます。 *Program.cs* ファイルには、次のコードが含まれています。
+   ```dotnetcli
+   dotnet new console
+   ```
+
+このテンプレートでは、シンプルな "Hello World" アプリケーションを作成します。 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出し、"Hello World!" を コンソール ウィンドウに表示します。
+
+テンプレート コードでは、引数として <xref:System.String> 配列を受け取る単一のメソッド `Main` を含む、`Program` というクラスが定義されます。
 
 ```csharp
 using System;
@@ -56,8 +60,6 @@ namespace HelloWorld
 ```
 
 `Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。 アプリケーションが起動されるときに提供されるコマンドライン引数はすべて *args* 配列にあります。
-
-このテンプレートは、<xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出して "Hello World!" を表示する単純なアプリケーションを作成し、 コンソール ウィンドウに表示します。
 
 ## <a name="run-the-app"></a>アプリを実行する
 
@@ -85,11 +87,11 @@ dotnet run
 
    ![足りない資産の入力を求める](media/with-visual-studio-code/missing-assets.png)
 
-1. *Program.cs* の `Main` メソッドの内容 (現在は `Console.WriteLine` を呼び出す行のみ) を以下のコードに置き換えます。
+1. *Program.cs* の `Main` メソッドの内容 (`Console.WriteLine` を呼び出す行) を以下のコードに置き換えます。
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
 
-   このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して **Enter** キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 最後に、これらの値がコンソール ウィンドウに表示されます。
+   このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して <kbd>Enter</kbd> キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 最後に、これらの値がコンソール ウィンドウに表示されます。
 
    `\n` は、改行文字を表します。
 
@@ -106,7 +108,7 @@ dotnet run
    dotnet run
    ```
 
-1. プロンプトに対し、名前を入力し、**Enter** キーを押します。
+1. プロンプトに対し、名前を入力し、<kbd>Enter</kbd> キーを押します。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="プログラムの出力が変更されたターミナル ウィンドウ":::
 
@@ -118,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、.NET Core アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
+このチュートリアルでは、.NET Core コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
 
 > [!div class="nextstepaction"]
 > [Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio-code.md)

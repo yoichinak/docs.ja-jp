@@ -1,5 +1,6 @@
 ---
 title: .NET クラス ライブラリの概要
+description: .NET クラス ライブラリについて説明します。 .NET 実装には、システム機能へのアクセスを提供する、クラス、インターフェイス、デリゲート、および値の型が含まれます。
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289253"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662928"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 

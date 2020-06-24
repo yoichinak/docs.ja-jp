@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする
 description: Visual Studio Code を使用して .NET Core コンソール アプリをデバッグする方法について説明します。
 ms.date: 05/26/2020
-ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241514"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702128"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする
 
@@ -19,25 +19,25 @@ ms.locfileid: "84241514"
 
 ## <a name="use-debug-build-configuration"></a>デバッグ ビルド構成の使用
 
-"*デバッグ*" と "*リリース*" は、.NET Core のビルド構成うちの 2 つです。 デバッグ用のデバッグ ビルド構成と、最終リリース配布用のリリース構成を使用します。
+"*デバッグ*" と "*リリース*" は、.NET Core の組み込みビルド構成です。 デバッグ用のデバッグ ビルド構成と、最終リリース配布用のリリース構成を使用します。
 
 デバッグ構成では、プログラムのコンパイルにシンボリック デバッグ情報が完全に含まれ、最適化は行われません。 ソース コードと生成された命令の関係は非常に複雑であり、最適化を行うとデバッグが困難になるためです。 プログラムのリリース構成は、シンボリック デバッグ情報を含まず、完全に最適化されます。
 
- 既定では、Visual Studio Code ではデバッグ ビルド構成が使用されるため、デバッグの前に変更する必要はありません。
+既定では、Visual Studio Code の起動設定ではデバッグ ビルド構成が使用されるため、デバッグの前に変更を加える必要はありません。
+
+1. Visual Studio Code を開始します。
+
+1. [Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関する記事で作成したプロジェクトのフォルダーを開きます。
 
 ## <a name="set-a-breakpoint"></a>ブレークポイントの設定
 
-ブレークポイントが設定された行が実行される "*前*" に、アプリケーションの実行がブレークポイントにより一時的に中断されます。
-
-1. Visual Studio Code を開きます。
-
-1. [Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関する記事で作成した *HelloWorld* プロジェクト フォルダーを開きます。
+"*ブレークポイント*" によって、ブレークポイントを含む行が実行される前に、アプリケーションの実行が一時的に中断されます。
 
 1. *Program.cs* ファイルを開きます。
 
-1. コード ウィンドウの左側の余白をクリックして、名前、日付、時刻を表示する行に "*ブレークポイント*" を設定します。 左余白は、行番号の左側にあります。 ブレークポイントを設定するもう 1 つの方法は、コード行にカーソルを置き、<kbd>F9</kbd> キーを押すことです。
+1. コード ウィンドウの左側の余白をクリックして、名前、日付、時刻を表示する行に "*ブレークポイント*" を設定します。 左余白は、行番号の左側にあります。 ブレークポイントを設定するその他の方法としては、コード行を選択した状態で <kbd>F9</kbd> キーを押すか、メニューから **[実行]**  >  **[ブレークポイントの設定/解除]** を選択します。
 
-   次の図に示すように、Visual Studio Code では左余白に赤い点を表示することで、ブレークポイントが設定されている行を示しています。
+   Visual Studio Code では、左余白に赤い点を表示することで、ブレークポイントが設定されている行が示されます。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-set.png" alt-text="ブレークポイントの設定":::
 
@@ -69,7 +69,7 @@ ms.locfileid: "84241514"
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code で [デバッグ] タブを開く":::
 
-1. ペインの上部にある **[.NET Core Launch (console)]\(.NET Core の起動 (コンソール)\)** の横の緑色の矢印を選択してデバッグを開始します。  デバッグを開始するもう 1 つの方法は、<kbd>F5</kbd> キーを押すことです。
+1. ペインの上部にある **[.NET Core Launch (console)]\(.NET Core の起動 (コンソール)\)** の横の緑色の矢印を選択します。 デバッグ モードでプログラムを起動するもう 1 つの方法は、メニューから **[実行]**  >  **[デバッグの開始]** を選択することです。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="デバッグの開始":::
 
@@ -83,7 +83,7 @@ ms.locfileid: "84241514"
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-hit.png" alt-text="ブレークポイントのヒット、ローカルの表示":::
 
-## <a name="change-variable-values"></a>変数の値の変更
+## <a name="use-the-debug-console"></a>デバッグ コンソールを使用する
 
 **[デバッグ コンソール]** ウィンドウでは、デバッグ中のアプリケーションと対話できます。 変数の値を変更して、プログラムにどのような影響があるかを確認できます。
 
@@ -127,7 +127,7 @@ ms.locfileid: "84241514"
 
    ブレークポイントにヒットするたびに、デバッガーは `String.IsNullOrEmpty(name)` メソッドを呼び出し、メソッド呼び出しが `true` を返す場合にのみ、この行で中断します。
 
-   条件式の代わりに、ステートメントが指定回数だけ実行される前にプログラムの実行を中断する "*ヒット カウント*"、またはスレッド識別子、プロセス名、スレッド名などの属性に基づいてプログラムの実行を中断する "*フィルター条件*" を指定することができます。
+   条件式の代わりに、"*ヒット カウント*" を指定できます。この場合、ステートメントが指定された回数実行される前にプログラムの実行が中断されます。 もう 1 つのオプションは、"*フィルター条件*" を指定することです。これにより、スレッド識別子、プロセス名、またはスレッド名などの属性に基づいてプログラムの実行が中断されます。
 
 1. <kbd>F5</kbd> を押して、デバッグとともにプログラムを開始します。
 
@@ -149,7 +149,7 @@ ms.locfileid: "84241514"
 
 1. **[ターミナル]** タブを選択し、任意のキーを押してプログラムを終了し、デバッグを停止します。
 
-1. コード ウィンドウの左余白のドットをクリックして、ブレークポイントをクリアします。 ブレークポイントをクリアするもう 1 つの方法は、コード行が選択されている間に <kbd>F9</kbd> キーを押すことです。
+1. コード ウィンドウの左余白のドットをクリックして、ブレークポイントをクリアします。 ブレークポイントをクリアするその他の方法としては、コード行を選択した状態で <kbd>F9</kbd> キーを押すか、メニューから **[実行] > [ブレークポイントの設定/解除]** を選択します。
 
 1. ブレークポイントの条件が失われることを示す警告が表示された場合は、 **[ブレークポイントの削除]** を選択します。
 
@@ -165,17 +165,17 @@ Visual Studio Code では、1 行ずつプログラムをステップ実行し�
 
    この時点で、 **[変数]** ウィンドウに `args` 配列が空であることが示され、`name` と `date` には既定値が設定されています。
 
-1. **[ステップ イン]** を選ぶか、<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ イン]** を選択するか、<kbd>F11</kbd> キーを押します。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="[ステップイン] ボタン":::
 
    Visual Studio Code では次の行が強調表示されます。
 
-1. **[ステップ イン]** を選ぶか、<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ イン]** を選択するか、<kbd>F11</kbd> キーを押します。
 
    Visual Studio Code では、名前プロンプトの `Console.WriteLine` が実行され、次に実行される行が強調表示されます。 次の行は、`name` の `Console.ReadLine` です。 **[変数]** ウィンドウは変更されず、 **[ターミナル]** タブに "What is your name?" プロンプトが表示されます。
 
-1. **[ステップ イン]** を選ぶか、<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ イン]** を選択するか、<kbd>F11</kbd> キーを押します。
 
    Visual Studio によって、`name` 変数代入が強調表示されます。 **[変数]** ウィンドウに、`name` がまだ `null` であることが示されます。
 
@@ -183,19 +183,19 @@ Visual Studio Code では、1 行ずつプログラムをステップ実行し�
 
    **[ターミナル]** タブには、入力時に入力した文字列が表示されない場合がありますが、<xref:System.Console.ReadLine%2A?displayProperty=nameWithType> メソッドによって入力がキャプチャされます。
 
-1. **[ステップ イン]** を選ぶか、<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ イン]** を選択するか、<kbd>F11</kbd> キーを押します。
 
    Visual Studio Code によって、`date` 変数代入が強調表示されます。 **[変数]** ウィンドウには、<xref:System.Console.ReadLine%2A?displayProperty=nameWithType> メソッドの呼び出しによって返された値が表示されます。 **[ターミナル]** タブには、プロンプトで入力した文字列が表示されます。
 
-1. **[ステップ イン]** を選ぶか、<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ イン]** を選択するか、<kbd>F11</kbd> キーを押します。
 
    **[変数]** ウィンドウには、<xref:System.DateTime.Now?displayProperty=nameWithType> プロパティから代入された後の `date` 変数の値が表示されます。
 
-1. **[ステップ イン]** を選ぶか、<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ イン]** を選択するか、<kbd>F11</kbd> キーを押します。
 
    Visual Studio Code によって <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> メソッドが呼び出されます。 コンソール ウィンドウには書式設定された文字列が表示されます。
 
-1. **[ステップ アウト]** を選択するか、<kbd>Shift</kbd>+<kbd>F11</kbd> キーを押します。
+1. **[実行]**  >  **[ステップ アウト]** の順に選択するか、<kbd>Shift</kbd> + <kbd>F11</kbd> キーを押します。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-out.png" alt-text="[ステップアウト] ボタン":::
 
@@ -205,7 +205,7 @@ Visual Studio Code では、1 行ずつプログラムをステップ実行し�
 
 1. 任意のキーを押してプログラムを終了します。
 
-## <a name="select-release-build-configuration"></a>リリース ビルド構成の選択
+## <a name="use-release-build-configuration"></a>リリース ビルド構成を使用する
 
 アプリケーションのデバッグ バージョンのテストが終了したら、リリース バージョンもコンパイルしてテストする必要があります。 リリース バージョンには、アプリケーションの動作に影響を与える可能性があるコンパイラの最適化が組み込まれています。 たとえば、パフォーマンスを向上させるように設計されたコンパイラの最適化では、マルチスレッド アプリケーションで競合状態が生じる場合があります。
 

@@ -3,14 +3,14 @@ title: .NET Core SDK とランタイムの依存関係 - .NET Core
 description: Windows、Linux、および macOS に .NET Core SDK とランタイムをインストールするためのオペレーティング システムと CPU アーキテクチャの前提条件について説明します。
 author: leecow
 ms.author: leecow
-ms.date: 04/30/2020
+ms.date: 06/01/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 81f6ab436428d71f71d9fd0f560bd2b0512a519b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895488"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590761"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core の依存関係と要件
 
@@ -120,7 +120,7 @@ ms.locfileid: "82895488"
 >
 > \- または
 >
-> ライブラリ *hostfxr.dll* はあるが、それを *C:\\\<path_to_app>\\hostfxr.dll* から読み込むと失敗する。
+> ライブラリ *hostfxr.dll* は見つかったが、その *C:\\\<path_to_app>\\hostfxr.dll* からの読み込みに失敗した。
 
 ::: zone-end
 
@@ -337,7 +337,7 @@ macOS Catalina (バージョン 10.15) 以降では、2019 年 6 月 1 日より
 
 *System.Drawing.Common* アセンブリを使用する .NET Core アプリケーションでは、libgdiplus をインストールする必要があります。
 
-libgdiplus を取得する簡単な方法は、macOS の [Homebrew ("brew")](https://brew.sh/) パッケージ マネージャーを使用することです。 *brew* をインストールしたら、ターミナル (コマンド) プロンプトで次のコマンドを実行して libgdiplus をインストールします。
+libgdiplus を取得する簡単な方法は、macOS の [Homebrew ("brew")](https://brew.sh/) パッケージ マネージャーを使用することです。 *brew* をインストールしたら、端末 (コマンド) プロンプトで次のコマンドを実行して libgdiplus をインストールします。
 
 ```console
 brew update

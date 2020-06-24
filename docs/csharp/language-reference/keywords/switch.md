@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493670"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
@@ -86,7 +86,7 @@ match 式に一致する case ラベルが含まれた switch セクションに
 
 各 case ラベルで、match 式と比較するためのパターンを指定します (前の例では `caseSwitch` 変数)。 一致すると、**最初の**一致 case を含む switch セクションに制御が移ります。 match 式と一致する case ラベル パターンがない場合は、`default` case ラベルがあれば、制御はそのラベルを含むセクションに移ります。 `default` case がない場合は、どの switch セクションのステートメントも実行されず、制御は `switch` ステートメント外に移ります。
 
-`switch` ステートメントとパターン マッチングの詳細については、「[`switch` ステートメントによるパターン マッチング](#pattern)」を参照してください。
+`switch` ステートメントとパターン マッチングの詳細については、「[`switch` ステートメントによるパターン マッチング](#pattern-matching with-the-switch-statement)」を参照してください。
 
 C# 6 でサポートされるのは定数パターンのみで、定数値の繰り返しは許可されません。このため、case ラベルでは相互に排他的な値が定義され、match 式と一致するのは 1 つのパターンだけです。 そのため、`case` ステートメントが表示される順序は重要ではありません。
 
@@ -100,7 +100,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 - switch セクションの順序を変更する。
 
-- `case` ラベルで [when 句](#when) を使用する。
+- `case` ラベルで [when 句](#the-case-statement-and-the-when-clause) を使用する。
 
 ## <a name="the-default-case"></a>`default` case
 
@@ -108,7 +108,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 `default` case は、`switch` ステートメントで任意の順序で指定できます。 この case は、ソース コード内での順序に関係なく、すべての `case` ラベルが評価された後、最後に評価されます。
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a>`switch` ステートメントによるパターン マッチング
+## <a name="pattern-matching-with-the-switch-statement"></a>`switch` ステートメントによるパターン マッチング
 
 各 `case` ステートメントで定義されたパターンが match 式と一致した場合に、switch セクションが実行されます。 定数パターンは、すべてのバージョンの C# でサポートされます。 それ以外のパターンは、C# 7.0 以降でサポートされています。
 
@@ -185,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case`ステートメントおよび `when` 句
+## <a name="the-case-statement-and-the-when-clause"></a>`case` ステートメントおよび `when` 句
 
 C# 7.0 以降では、case ステートメントは相互に排他的である必要がないため、`when` 句を追加して、case ステートメントを true に評価するために満たされなければならない条件を指定できます。 `when` 句には、ブール値を返す任意の式を指定できます。
 

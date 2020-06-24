@@ -1,21 +1,19 @@
 ---
-title: Visual Studio での .NET Core Hello World アプリケーションの発行
+title: Visual Studio を使用して .NET Core コンソール アプリケーションを発行する
 description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241496"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701285"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>チュートリアル: Visual Studio での .NET Core コンソール アプリケーションの発行
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core コンソール アプリケーションを発行する
 
 このチュートリアルでは、他のユーザーが実行できるコンソール アプリを発行する方法について説明します。 発行では、アプリケーションを実行するために必要なファイルのセットを作成します。 ファイルを配置するには、それをターゲット マシンにコピーします。
 
@@ -25,7 +23,11 @@ ms.locfileid: "84241496"
 
 ## <a name="publish-the-app"></a>アプリの発行
 
-1. Visual Studio がアプリケーションのリリース バージョンをビルドしていることを確認します。 必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。
+1. Visual Studio を起動します。
+
+1. [Visual Studio での .NET Core コンソール アプリケーションの作成](with-visual-studio.md)に関する記事で作成した *HelloWorld* プロジェクトを開きます。
+
+1. Visual Studio でリリース ビルド構成が使用されていることを確認します。 必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。
 
    ![リリース ビルドが選択された Visual Studio のツールバー](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ ms.locfileid: "84241496"
 
 ## <a name="inspect-the-files"></a>ファイルを検査する
 
-この発行プロセスでは、フレームワークに依存する配置が作成されます。つまり、.NET Core のランタイムがインストールされているコンピューターで、発行されたアプリケーションが実行される配置の種類です。 ユーザーは、実行可能ファイルをダブルクリックするか、コマンドプロンプトから `dotnet HelloWorld.dll` コマンドを実行することで、発行されたアプリを実行できます。
+この発行プロセスでは、フレームワークに依存する配置が既定で作成されます。これは、.NET Core ランタイムがインストールされているコンピューター上で発行されたアプリケーションが実行される配置の種類です。 ユーザーは、実行可能ファイルをダブルクリックするか、コマンドプロンプトから `dotnet HelloWorld.dll` コマンドを実行することで、発行されたアプリを実行できます。
 
 次の手順で、発行プロセスによって作成されるファイルを確認します。
 
@@ -83,7 +85,7 @@ ms.locfileid: "84241496"
 
 1. **ソリューション エクスプローラー**で、 *[publish]* フォルダーを右クリックし、 **[完全なパスのコピー]** を選択します。
 
-1. コマンド プロンプトを開いて、*publish* フォルダーに移動します。 `cd` を入力し、完全なパスを貼り付けます。 次に例を示します。
+1. コマンド プロンプトを開いて、*publish* フォルダーに移動します。 これを行うには、「`cd`」と入力して、完全なパスを貼り付けます。 次に例を示します。
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\

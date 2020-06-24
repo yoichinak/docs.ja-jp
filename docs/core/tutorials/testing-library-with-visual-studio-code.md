@@ -1,15 +1,15 @@
 ---
-title: Visual Studio Code での .NET Core を使用した .NET Standard クラス ライブラリのテスト
+title: Visual Studio Code を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292163"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701034"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>チュートリアル: Visual Studio Code での .NET Core を使用した .NET Standard ライブラリのテスト
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 
 このチュートリアルでは、テスト プロジェクトをソリューションに追加して、単体テストを自動化する方法について説明します。
 
@@ -19,7 +19,9 @@ ms.locfileid: "84292163"
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
-1. Visual Studio Code を開きます。
+単体テストでは、開発および公開時に自動化されたソフトウェア テストが提供されます。 このチュートリアルで使用するテスト フレームワークは MSTest です。 [MSTest](https://github.com/Microsoft/testfx-docs) は、選択できる 3 つのテスト フレームワークのうちの 1 つです。 これ以外は、[xUnit](https://xunit.net/) と [nUnit](https://nunit.org/) です。
+
+1. Visual Studio Code を開始します。
 
 1. 「[Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
@@ -55,16 +57,17 @@ ms.locfileid: "84292163"
 
    [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)でタグ付けされたテスト クラスの [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) でタグ付けされた各テスト メソッドが、単体テスト実行時に自動実行されます。
 
-   > [!NOTE]
-   > MSTest は、選択できる 3 つのテストフレームワークのうちの 1 つです。 これ以外は、xUnit と nUnit です。
-
 1. 次のように、テスト プロジェクトをソリューションに追加します。
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. 次のコマンドを実行して、クラス ライブラリ プロジェクトへのプロジェクト参照を作成します。
+## <a name="add-a-project-reference"></a>プロジェクト参照を追加する
+
+テスト プロジェクトが `StringLibrary` クラスと連動するように、`StringLibraryTest` プロジェクトに `StringLibrary` プロジェクトへの参照を追加します。
+
+1. 次のコマンドを実行します。
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 ライブラリ メソッドでは文字列を処理するため、[空の文字列 (`String.Empty`)](xref:System.String.Empty) および `null` 文字列を正常に処理することも確認します。 空の文字列は、文字を含まない、<xref:System.String.Length> が 0 の文字列です。 `null` 文字列は、初期化されていない文字列です。 しかし、`StartsWithUpper` を静的メソッドとして直接呼び出して、単一の <xref:System.String> 引数を渡すこともできます。 または、`null` に割り当てられた `string` 変数の拡張メソッドとして `StartsWithUpper` を呼び出すこともできます。
 
-メソッドを 3 つ定義します。これらのメソッドでは、文字列配列の各要素について <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> メソッドが繰り返し呼び出されます。 テスト メソッドは最初の失敗を検出するとすぐに失敗するので、メソッドのオーバー ロードを呼び出して、メソッドの呼び出しで使用される文字列値を示す文字列を渡すことができます。
+メソッドを 3 つ定義します。これらのメソッドでは、文字列配列の各要素に対して <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> メソッドが呼び出されます。 メソッドのオーバーロードを呼び出します。これにより、テストが失敗した場合に表示されるエラー メッセージを指定できます。 このメッセージによって、エラーの原因となった文字列が識別されます。
 
 テスト メソッドを作成するには
 
@@ -122,7 +125,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 ## <a name="handle-test-failures"></a>テストの失敗の処理
 
-テスト駆動開発 (TDD) を行っている場合、最初にテストを作成すると、1 回目のテスト実行は失敗します。 その後、テストを成功させるコードをアプリに追加します。 この場合は、検証するアプリ コードを記述した後にテストを作成しているので、テストの失敗が確認されることはありません。 テストの失敗が予想されるときにテストが失敗することを検証するには、テスト入力に無効な値を追加します。
+テスト駆動開発 (TDD) を行っている場合、最初にテストを作成すると、1 回目のテスト実行は失敗します。 その後、テストを成功させるコードをアプリに追加します。 このチュートリアルでは、検証するアプリ コードを記述した後にテストを作成したため、テストが失敗することはありませんでした。 テストの失敗が予想されるときにテストが失敗することを検証するには、テスト入力に無効な値を追加します。
 
 1. `TestDoesNotStartWithUpper` メソッドの `words` 配列を変更し、文字列 "Error" を含めます。
 
@@ -137,7 +140,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   次のターミナル出力は、1 つのテストが失敗したことを示しており、失敗したテストに関するエラー メッセージが表示されています。
+   ターミナルの出力では、1 つのテストが失敗したことが示され、失敗したテストに関するエラー メッセージが表示されます。"Assert.IsFalse failed. Expected for 'Error': false; actual:True" が表示されます。 エラーのため、配列内の "Error" の後ろの文字列はテストされませんでした。
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
    Total time: 1.7825 Seconds
    ```
 
-1. 手順 1 で行った変更を元に戻し、文字列 "Error" を削除します。 テストを再実行すると、テストは成功します。
+1. 手順 1 で追加した文字列 "Error" を削除します。 テストを再実行すると、テストは成功します。
 
 ## <a name="test-the-release-version-of-the-library"></a>ライブラリのリリース バージョンのテスト
 
-ライブラリのデバッグ バージョンを実行すると、すべてのテストが成功するようになったので、さらにライブラリのリリース ビルドに対してテストを行います。 コンパイラの最適化などのさまざまな要因により、デバッグ ビルドとリリース ビルドとでは動作が異なる場合があります。
+これで、ライブラリのデバッグ ビルドを実行したときにすべてのテストが成功したので、さらにライブラリのリリース ビルドに対してテストを行います。 コンパイラの最適化などのさまざまな要因により、デバッグ ビルドとリリース ビルドとでは動作が異なる場合があります。
 
 1. リリース ビルド構成を使用してテストを実行します。
 
@@ -173,7 +176,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- [.NET Core と .NET Standard の単体テスト](../testing/index.md)
+* [.NET Core と .NET Standard の単体テスト](../testing/index.md)
 
 ## <a name="next-steps"></a>次の手順
 

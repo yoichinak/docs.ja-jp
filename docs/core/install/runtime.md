@@ -3,15 +3,15 @@ title: Windows、Linux、および macOS に .NET Core ランタイムをイン�
 description: Windows、Linux、および macOS に .NET Core をインストールする方法について説明します。 .NET Core アプリの実行に必要な依存関係を確認します。
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
+ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca55b8fab4aa9ca9f7e308cce57181e2c7e89f4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c079e1856cdd370a278efc6fdfb4953059b6f2ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596294"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core ランタイムのインストール
 
@@ -53,36 +53,9 @@ export PATH=$PATH:$HOME/dotnet
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>パッケージ マネージャーを使用してインストールする
+## <a name="install-on-linux"></a>Linux にインストールする
 
-多くの一般的な Linux パッケージ マネージャーを使用して .NET Core ランタイムをインストールできます。 詳細については、[Linux パッケージ マネージャー - .NET Core のインストール](linux-package-managers.md)に関するページを参照してください。
-
-パッケージ マネージャーを使用したインストールは、x64 アーキテクチャでのみサポートされています。 ARM などの別のアーキテクチャを使用して .NET Core ランタイムをインストールする場合は、「[手動でダウンロードしてインストールする](#download-and-manually-install)」セクションの手順に従ってください。 サポートされているアーキテクチャの詳細については、「[.NET Core の依存関係と要件](dependencies.md)」を参照してください。
-
-## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
-
-ランタイムを抽出し、.NET Core CLI コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、ターミナルを開き、以下のコマンドを実行します。
-
-```bash
-mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
-
-> [!TIP]
-> 上記の `export` コマンドでは、それを実行したターミナル セッションでのみ .NET Core CLI コマンドを使用できるようになります。
->
-> シェル プロファイルを編集して、コマンドを永続的に追加することができます。 Linux ではさまざまなシェルを使用でき、それぞれに異なるプロファイルがあります。 次に例を示します。
->
-> - **Bash シェル**: *~/.bash_profile*、 *~/.bashrc*
-> - **Korn シェル**: *~/.kshrc* または *.profile*
-> - **Z シェル**: *~/.zshrc* または *.zprofile*
->
-> シェルの適切なソース ファイルを編集し、既存の `PATH` ステートメントの末尾に `:$HOME/dotnet` を追加します。 `PATH` ステートメントが含まれていない場合は、`export PATH=$PATH:$HOME/dotnet` を含む新しい行を追加します。
->
-> また、ファイルの末尾に `export DOTNET_ROOT=$HOME/dotnet` を追加します。
-
-この方法では、別々の場所に異なるバージョンをインストールして、どのアプリケーションにどれを使用するかを明示的に選択できます。
+この記事は間もなく削除されます。 現在、「[Linux に .NET Core をインストールする](linux.md)」に置き換えられています。
 
 ::: zone-end
 
@@ -105,7 +78,7 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 
 ランタイムを抽出し、.NET Core CLI コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、インストール先のディレクトリ (`%USERPROFILE%\dotnet` など) を作成します。 最後に、ダウンロードした zip ファイルをそのディレクトリに抽出します。
 
-既定では、.NET Core CLI コマンドおよびアプリでは、この方法でインストールされた .NET Core は使用されません。 使用するには、明示的に選択する必要があります。 これを行うには、アプリケーションの起動に使用する環境変数を変更します。
+既定では、.NET Core CLI コマンドおよびアプリでは、この方法でインストールされた .NET Core は使用されません。使用することを明示的に選択する必要があります。 これを行うには、アプリケーションの起動に使用する環境変数を変更します。
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet

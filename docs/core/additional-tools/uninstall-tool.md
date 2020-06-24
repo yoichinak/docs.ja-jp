@@ -3,12 +3,12 @@ title: アンインストール ツール
 description: .NET CORE アンインストール ツールの概要です。これは、.NET Core SKD とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446907"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590800"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
 
@@ -27,7 +27,7 @@ macOS では、このツールでアンインストールできるのは */usr/l
 
 ## <a name="install-the-tool"></a>ツールをインストールする
 
-.NET Core アンインストール ツールは、[ここ](https://aka.ms/dotnet-core-uninstall-tool)からダウンロードできます。また、ソース コードは、[dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub リポジトリにあります。
+.NET Core アンインストール ツールは、[ツールのリリース ページ](https://aka.ms/dotnet-core-uninstall-tool)からダウンロードできます。また、ソース コードは [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub リポジトリにあります。
 
 > [!NOTE]
 > このツールでは、.NET Core SDK とランタイムをアンインストールするために昇格が必要です。 そのため、Windows では *C:\Program Files*、macOS では */usr/local/bin* などの書き込み保護されたディレクトリにインストールする必要があります。 「[dotnet コマンドの特権アクセス](../tools/elevated-access.md)」も参照してください。 詳細については、[詳細なインストール手順](https://aka.ms/dotnet-core-uninstall-tool)に関するページを参照してください。

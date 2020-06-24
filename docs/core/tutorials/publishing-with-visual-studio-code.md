@@ -1,15 +1,15 @@
 ---
-title: Visual Studio Code を使用して .NET Core Hello World アプリケーションを発行する
+title: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
 description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246656"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701451"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
 
 このチュートリアルでは、他のユーザーが実行できるコンソール アプリを発行する方法について説明します。 発行では、アプリケーションを実行するために必要なファイルのセットを作成します。 ファイルを配置するには、それをターゲット マシンにコピーします。
 
@@ -21,7 +21,7 @@ ms.locfileid: "84246656"
 
 ## <a name="publish-the-app"></a>アプリの発行
 
-1. Visual Studio Code を開きます。
+1. Visual Studio Code を開始します。
 
 1. [Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関する記事で作成した *HelloWorld* プロジェクト フォルダーを開きます。
 
@@ -85,7 +85,7 @@ ms.locfileid: "84246656"
 
 ## <a name="run-the-published-app"></a>発行済みアプリを実行する
 
-1. **エクスプローラー**で、"*発行*" フォルダーを右クリックして (または、macOS では <kbd>Ctrl</kbd> キーを押しながらクリック)、 **[ターミナルで開く]** を選択します。
+1. **エクスプローラー**で、*publish* フォルダーを右クリック (macOS では <kbd>Ctrl</kbd> キーを押しながらクリック) して、 **[ターミナルで開く]** を選択します。
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="[ターミナルで開く] を表示しているコンテキスト メニュー":::
 
@@ -109,10 +109,7 @@ ms.locfileid: "84246656"
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、コンソール アプリを発行しました。 ライブラリを構築する方法については、「[.NET Core CLI を使用したライブラリの開発](libraries.md)」を参照してください。
-
-<!--In the next tutorial, you create a class library.
+このチュートリアルでは、コンソール アプリを発行しました。 次のチュートリアルでは、クラス ライブラリを作成します。
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Visual Studio for Mac で .NET Standard ライブラリを作成する](library-with-visual-studio-mac.md)
