@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する
 description: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
 ms.date: 06/02/2020
-ms.openlocfilehash: 57f16e510270b7256b285493b1f978101fc11804
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717524"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811669"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する
 
@@ -84,7 +84,7 @@ namespace HelloWorld
 
 1. *Program.cs* で、`Main` メソッドの内容 (`Console.WriteLine` を呼び出す行) を以下のコードに置き換えます。
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して <kbd>enter</kbd> キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 最後に、これらの値がコンソール ウィンドウに表示されます。
 
