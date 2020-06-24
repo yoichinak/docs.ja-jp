@@ -1,13 +1,14 @@
 ---
 title: '方法: 構成にサービス エンドポイントを作成する'
+description: 相対アドレスと絶対アドレスの両方を含む構成ファイルを使用して、WCF サービスのエンドポイントを追加する方法について説明します。
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 56b29da0c147eb9e73a08e2875e33e384da729ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 184bcb5f7f3e83f12608757b55bbb4d57be58f7d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598919"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247066"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>方法: 構成にサービス エンドポイントを作成する
 エンドポイントは、Windows Communication Foundation (WCF) サービスが提供する機能へのアクセスをクライアントに提供します。 エンドポイントの相対アドレスと絶対アドレスを組み合わせてサービスのエンドポイントを 1 つ以上定義できます。または、サービス エンドポイントを定義しない場合、ランタイムは既定で一部を提供します。 このトピックでは、相対アドレスと絶対アドレスの両方を含んでいる構成ファイルを使用したエンドポイントの使用方法について説明します。  

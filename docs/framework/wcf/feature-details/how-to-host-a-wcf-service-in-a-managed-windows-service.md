@@ -1,16 +1,17 @@
 ---
 title: '方法: マネージド Windows サービスで WCF サービスをホストする'
+description: Windows サービスによってホストされる WCF サービスを作成する方法について説明します。 このホスト オプションは Windows のすべてのバージョンで使用できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593179"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246937"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法: マネージド Windows サービスで WCF サービスをホストする
 
@@ -110,7 +111,7 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
     </configuration>
     ```
 
-     **ソリューションエクスプローラー**で app.config ファイルを右クリックし、[**プロパティ**] を選択します。 [**出力ディレクトリにコピー** ] で、[**新しい場合はコピー**する] を選択します。
+     **ソリューションエクスプローラー**で App.config ファイルを右クリックし、[**プロパティ**] を選択します。 [**出力ディレクトリにコピー** ] で、[**新しい場合はコピー**する] を選択します。
 
      この例では、構成ファイルにエンドポイントを明示的に指定します。 エンドポイントをサービスに追加しない場合、ランタイムによって既定のエンドポイントが追加されます。 この例では、サービスには <xref:System.ServiceModel.Description.ServiceMetadataBehavior> に設定された `true` があるので、サービスで公開メタデータも有効化されています。 既定のエンドポイントについては、「[Simplified Configuration](../simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。
 
@@ -122,7 +123,7 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 
      コマンド プロンプトで「`services.msc`」と入力してサービス コントロール マネージャー (SCM) にアクセスします。 Windows サービスは、[Services] に "WCFWindowsServiceSample" として表示されます。 WCF サービスは、Windows サービスが実行されている場合にのみ、クライアントに応答できます。 サービスを開始するには、SCM でそのサービスを右クリックし、[開始] を選択するか、コマンドプロンプトで「 **net Start WCFWindowsServiceSample** 」と入力します。
 
-3. サービスを変更する場合は、まずそのサービスを停止してからアンインストールする必要があります。 サービスを停止するには、SCM でサービスを右クリックし、[停止] を選択するか、コマンドプロンプトで「 **net Stop WCFWindowsServiceSample** 」と入力します。 Windows サービスを停止してクライアントを実行すると、クライアントがこのサービスにアクセスしようとしたときに <xref:System.ServiceModel.EndpointNotFoundException> 例外が発生することに注意してください。 Windows サービスをアンインストールするには、コマンドプロンプトで「 **installutil.exe/u bin\service.exe** 」と入力します。
+3. サービスを変更する場合は、まずそのサービスを停止してからアンインストールする必要があります。 サービスを停止するには、SCM でサービスを右クリックし、[停止] を選択するか、コマンドプロンプトで「 **net Stop WCFWindowsServiceSample** 」と入力します。 Windows サービスを停止してクライアントを実行すると、クライアントがこのサービスにアクセスしようとしたときに <xref:System.ServiceModel.EndpointNotFoundException> 例外が発生することに注意してください。 Windows サービスの種類をアンインストールするには、コマンドプロンプトで「 **installutil.exe/u bin\service.exe**します。
 
 ## <a name="example"></a>例
 
