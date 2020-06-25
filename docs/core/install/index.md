@@ -1,15 +1,15 @@
 ---
 title: Windows、Linux、および macOS に .NET Core をインストールする - .NET Core
 description: Windows、Linux、macOS の各バージョンで、どの .NET Core をどこにインストールするかについて説明します。 .NET Core アプリの開発、配置、および実行に必要な依存関係を確認します。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6dde0f76e23c106397ce6f6767f6edfbdc93152
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74836993"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324802"
 ---
 # <a name="download-and-install-net-core"></a>.NET Core のダウンロードとインストール
 
