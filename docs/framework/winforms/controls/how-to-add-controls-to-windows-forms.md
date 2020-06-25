@@ -1,5 +1,6 @@
 ---
 title: コントロールを追加する
+description: Windows フォームにコントロールを描画する方法について説明します。 コントロールは、フォーム上のコンポーネントであり、情報の表示やユーザー入力の受け入れに使用できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9ab0d78fa0153cce20fb17d22f6e9e781229ece
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743954"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325881"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>方法 : Windows フォームにコントロールを追加する
 
@@ -44,14 +45,14 @@ ms.locfileid: "76743954"
     > [!NOTE]
     > **ツールボックス**のコントロールをダブルクリックすると、既定のサイズでフォームの左上隅に追加できます。
 
-    また、実行時にコントロールをフォームに動的に追加することもできます。 次のコード例では、<xref:System.Windows.Forms.Button> コントロールがクリックされると、<xref:System.Windows.Forms.TextBox> コントロールがフォームに追加されます。
+    また、実行時にコントロールをフォームに動的に追加することもできます。 次のコード例では、コントロール <xref:System.Windows.Forms.TextBox> がクリックされると、コントロールがフォームに追加され <xref:System.Windows.Forms.Button> ます。
 
     > [!NOTE]
-    > 次の手順では、フォームに**Button**コントロールが既に配置されている `Button1`が存在している必要があります。
+    > 次の手順では、**ボタン**コントロールが既に配置されているフォームが存在する必要があり `Button1` ます。
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>プログラムによってフォームにコントロールを追加するには
 
-1. フォームのクラス内でボタンの `Click` イベントを処理するメソッドで、次のようなコードを挿入して、コントロール変数への参照を追加し、コントロールの `Location`を設定して、コントロールを追加します。
+1. フォームのクラス内のボタンのイベントを処理するメソッドで `Click` 、次のようなコードを挿入して、コントロール変数への参照を追加し、コントロールのを設定して、 `Location` コントロールを追加します。
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -85,11 +86,11 @@ ms.locfileid: "76743954"
     > また、コントロールの他のプロパティを初期化するコードを追加することもできます。
 
     > [!IMPORTANT]
-    > 悪意のある `UserControl`を参照することにより、ネットワーク経由でローカルコンピューターをセキュリティ上のリスクにさらすことがあります。 これは、悪意のあるユーザーが有害なカスタムコントロールを作成した後、誤ってプロジェクトに追加した場合にのみ問題になります。
+    > 悪意のあるを参照することにより、ネットワーク経由でローカルコンピューターをセキュリティ上のリスクにさらすことがあり `UserControl` ます。 これは、悪意のあるユーザーが有害なカスタムコントロールを作成した後、誤ってプロジェクトに追加した場合にのみ問題になります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Windows フォーム コントロール](index.md)
-- [方法: Windows フォーム上のコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
-- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows フォームコントロール](index.md)
+- [方法 : Windows フォーム上のコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
+- [方法 : Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

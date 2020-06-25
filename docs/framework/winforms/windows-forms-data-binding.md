@@ -1,5 +1,6 @@
 ---
 title: データ バインディング
+description: Windows フォームのデータバインディングを使用して、フォーム上のコントロールでデータソースの情報を表示したり変更したりする方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3dfce24147caf9b138916ca8dc3b7a9010439f58
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734617"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325550"
 ---
-# <a name="windows-forms-data-binding"></a>Windows フォームのデータ バインディング
+# <a name="windows-forms-data-binding"></a>Windows フォームでのデータ バインディング
 Windows フォームでのデータ バインディングは、データ ソースの情報をフォーム上のコントロールで表示したり変更したりする手段を提供します。 従来のデータ ソースに対してだけでなく、データを格納したほとんどすべての構造に対してバインドできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -30,7 +31,7 @@ Windows フォームでのデータ バインディングは、データ ソー�
  [方法: Windows フォームでデータ間を移動する](how-to-navigate-data-in-windows-forms.md)  
  データ ソースの項目間を移動する方法を示します。  
   
- [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)  
+ [Windows フォーム データ バインディングの変更通知](change-notification-in-windows-forms-data-binding.md)  
  Windows フォーム データ バインドの異なる種類の変更通知について説明します。  
   
  [方法: INotifyPropertyChanged インターフェイスを実装する](how-to-implement-the-inotifypropertychanged-interface.md)  
