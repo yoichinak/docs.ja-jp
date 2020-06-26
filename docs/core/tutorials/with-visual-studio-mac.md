@@ -74,7 +74,7 @@ namespace HelloWorld
 
 1. <kbd>⌥</kbd><kbd>⌘</kbd><kbd>↵</kbd> (<kbd>option</kbd> + <kbd>command</kbd> + <kbd>enter</kbd>) キーを押して、デバッグなしでアプリを実行します。
 
-   :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-output.png" alt-text="ターミナルに "Hello World!" が表示される":::
+   :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-output.png" alt-text="ターミナルに Hello World! が表示される":::
 
 1. **ターミナル** ウィンドウを閉じます。
 
