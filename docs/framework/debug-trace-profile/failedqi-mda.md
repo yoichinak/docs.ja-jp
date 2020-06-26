@@ -1,5 +1,6 @@
 ---
 title: failedQI MDA
+description: .NET の failedQI マネージデバッグアシスタント (MDA) を確認します。これは、のキャストまたはランタイム呼び出し可能ラッパー (RCW) からの COM 呼び出しが失敗したときにアクティブになる場合があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - failed QueryInterface
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217506"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415941"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` マネージド デバッグ アシスタント (MDA: Managed Debugging Asssitant) は、ランタイムがランタイム呼び出し可能ラッパー (RCW: Runtime Callable Wrapper) の代わりに COM インターフェイス ポインター上の `QueryInterface` を呼び出し、その `QueryInterface` 呼び出しに失敗するとアクティブ化されます。  
@@ -48,7 +49,7 @@ ms.locfileid: "77217506"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

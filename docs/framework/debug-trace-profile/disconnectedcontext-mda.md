@@ -1,5 +1,6 @@
 ---
 title: disconnectedContext MDA
+description: .NET で disconnectedContext マネージデバッグアシスタントを確認します。これは、CLR が切断されたアパートメントまたはコンテキストに移行しようとしたときに呼び出されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DisconnectedContext MDA
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-ms.openlocfilehash: 3d04e304a6b30fe6fd4deeda5a97007f11ee7b13
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0b24aadefab7a7cb2a5294f25e674d188beec814
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216541"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416084"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
 CLR が COM オブジェクトに関する要求を処理中に、切断しているアパートメントまたはコンテキストに遷移しようとすると、`disconnectedContext` マネージド デバッグ アシスタント (MDA) がアクティブ化されます。  
@@ -44,7 +45,7 @@ CLR が COM オブジェクトに関する要求を処理中に、切断して�
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

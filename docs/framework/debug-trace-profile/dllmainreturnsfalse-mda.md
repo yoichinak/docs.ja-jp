@@ -1,5 +1,6 @@
 ---
 title: dllMainReturnsFalse MDA
+description: .NET の Dllmain# false マネージデバッグアシスタントについて説明します。 この MDA は、DLL の初期化に失敗した場合にアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), DllMain returns false
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 21d5e37d6823876e07cf5b2cbb881c1cf8b47b11
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216440"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416058"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
 `dllMainReturnsFalse` マネージド デバッグ アシスタント (MDA) は、DLL_PROCESS_ATTACH が原因で呼び出されたユーザー アセンブリのマネージド `DllMain` 関数が FALSE を返す場合にアクティブになります。  
@@ -42,6 +43,6 @@ ms.locfileid: "77216440"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

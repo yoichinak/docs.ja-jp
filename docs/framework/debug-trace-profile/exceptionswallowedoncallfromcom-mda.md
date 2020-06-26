@@ -1,5 +1,6 @@
 ---
 title: exceptionSwallowedOnCallFromCom MDA
+description: .NET の exceptionSwallowedOnCallFromCOM マネージデバッグアシスタントを確認します。 この MDA は、例外がスローされた場合に発生しますが、レポートを作成するための適切な方法はありません。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - messages, informational
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-ms.openlocfilehash: 4ccb03c9a8a473c10f15b00e64810b04f21504c9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 434f06cf953147d5c245e625db997bed6dbef700
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217523"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415954"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
 アンマネージド HRESULT 戻り値の型を持たないメソッドを介して COM から呼び出された 共通言語ランタイム (CLR) コードから、例外がスローされると、`exceptionSwallowedOnCallFromCOM` マネージド デバッグ アシスタント (MDA) がアクティブ化されます。  
@@ -44,7 +45,7 @@ ms.locfileid: "77217523"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

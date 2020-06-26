@@ -1,5 +1,6 @@
 ---
 title: gcManagedToUnmanaged MDA
+description: GcManagedToUnmanaged マネージデバッグアシスタントを確認します。 この MDA は、アンマネージコードへの遷移中にガベージコレクションが途中で発生したためにアクティブになる場合があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-ms.openlocfilehash: f7e6334e20a6e0db1d52307a833de0ecd0d74cc4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 76c621a1f2bb780d38228f2a84d4c77441774770
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415915"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
 `gcManagedToUnmanaged` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、スレッドがマネージド コードからアンマネージド コードに遷移する時に、毎回ガベージ コレクションがなされるようにします。  
@@ -47,7 +48,7 @@ ms.locfileid: "77217483"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

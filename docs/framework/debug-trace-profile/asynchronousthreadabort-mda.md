@@ -1,5 +1,6 @@
 ---
 title: asynchronousThreadAbort MDA
+description: スレッドが非同期アボートを別のスレッドに配置しようとしたときに、asynchronousThreadAbort managed デバッグアシスタント (MDA) がどのようにアクティブ化されるかを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 469372d57d9c21198353d171fec16458691eb25d
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217588"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415668"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 `asynchronousThreadAbort` マネージド デバッグ アシスタント (MDA) は、スレッドが別のスレッドに非同期の中止処理を適用しようとするとアクティブになります。 同期のスレッド中止では、`asynchronousThreadAbort` MDA はアクティブになりません。
@@ -68,7 +69,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

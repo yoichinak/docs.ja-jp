@@ -1,5 +1,6 @@
 ---
 title: dateTimeInvalidLocalFormat MDA
+description: DateTimeInvalidLocalFormat managed デバッグアシスタント (MDA) を確認します。これは、UTC で格納されている DateTime 値がローカル専用の DateTime 形式を取得したときにアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [.NET Framework], formatting
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: b01f030c474e426cb87fb907f99f241eeb76a7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174759"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415993"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 `dateTimeInvalidLocalFormat` MDA は、世界協定時刻 (UTC) として格納されている <xref:System.DateTime> インスタンスが、ローカル <xref:System.DateTime> インスタンス専用の形式で書式指定されたときにアクティブになります。 この MDA は、未指定または既定の <xref:System.DateTime> インスタンスに対してはアクティブになりません。  
@@ -51,7 +52,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA はランタイムに影響しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  この MDA がアクティブになっても特別な出力は生成されませんが、呼び出し履歴を使用すると、この MDA をアクティブにした <xref:System.DateTime.ToString%2A> 呼び出しの位置を確認できます。  
   
 ## <a name="configuration"></a>構成  

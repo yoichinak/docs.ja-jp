@@ -1,5 +1,6 @@
 ---
 title: contextSwitchDeadlock MDA
+description: COM コンテキストの遷移中にデッドロックが検出されたときにアクティブ化される、.NET での contextSwitchDeadlock ロックマネージデバッグアシスタント (MDA) について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 52db4f2c88bac4e8cac621cca989fa10acb43f94
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217553"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416019"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -70,7 +71,7 @@ STA メッセージ ポンプに関する COM 規則に従います。
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
