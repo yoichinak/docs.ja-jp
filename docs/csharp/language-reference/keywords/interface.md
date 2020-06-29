@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 869f1398ae0af3c7379655aa018a9f4aacb934d7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625853"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243972"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# リファレンス)
 
@@ -78,4 +78,3 @@ public interface INamed
 - [インターフェイス](../../programming-guide/interfaces/index.md)
 - [プロパティの使用](../../programming-guide/classes-and-structs/using-properties.md)
 - [インデクサーの使用](../../programming-guide/indexers/using-indexers.md)
-- [インターフェイス](../../programming-guide/interfaces/index.md)

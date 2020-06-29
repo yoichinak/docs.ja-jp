@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/13/2019
 ms.topic: tutorial
-ms.openlocfilehash: 460c37e66c2c0a8a9b197a9abaff9eead842bdeb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187553"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594518"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用してバッチ処理を実行する
 
@@ -28,7 +28,7 @@ ms.locfileid: "79187553"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-.NET for Apache Spark を初めて使用する場合は、「[.NET for Apache Spark の概要](../tutorials/get-started.md)」チュートリアルをチェックし、環境を準備して最初の .NET for Apache Spark アプリケーションを実行する方法を確認してください。
+.NET for Apache Spark を初めて使用する場合は、「[.NET for Apache Spark の概要](get-started.md)」チュートリアルをチェックし、環境を準備して最初の .NET for Apache Spark アプリケーションを実行する方法を確認してください。
 
 ## <a name="download-the-sample-data"></a>サンプル データをダウンロードする
 

@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288044"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599868"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 
@@ -250,7 +250,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 * string "á" は、"á" と同じように見えますが、2 つのスカラー値で表され、2 つの `char` インスタンスが含まれます。
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * 最後に、string "`👩🏽‍🚒`" は 4 つのスカラー値で表され、7 つの `char` インスタンスが含まれます。

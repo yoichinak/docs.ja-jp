@@ -1,15 +1,15 @@
 ---
 title: Alpine に .NET Core をインストールする - .NET Core
 description: Alpine に .NET Core SDK と .NET Core ランタイムをインストールするさまざまな方法を示します。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: bbaf4ee9020dcd33c894b5376bf04ad65db8d378
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771489"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324834"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Alpine に .NET Core SDK または .NET Core ランタイムをインストールする
 

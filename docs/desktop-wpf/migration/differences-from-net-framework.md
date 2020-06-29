@@ -1,15 +1,15 @@
 ---
 title: .NET Framework と .NET Core の相違点
 description: Windows Presentation Foundation (WPF) の .NET Framework の実装と .NET Core の WPF との相違点について説明します。 アプリを移行するときは、次の非互換性について考慮する必要があります。
-author: thraka
+author: adegeo
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3bedc30046c36d4c5430feedf5854276ebaef8aa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021839"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325694"
 ---
 # <a name="differences-in-wpf"></a>WPF の相違点
 

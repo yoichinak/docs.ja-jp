@@ -2,12 +2,12 @@
 title: パラメーター
 ms.date: 12/13/2019
 description: SQL パラメーターの使用方法について説明します。
-ms.openlocfilehash: 1d2f818ad392a919faedd785394de28a9c6f56c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b24610a5cb65e2b24171452acef9bf55b4995431
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401203"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768951"
 ---
 # <a name="parameters"></a>パラメーター
 
@@ -25,7 +25,7 @@ TEXT と BLOB の値を切り捨てるには、<xref:Microsoft.Data.Sqlite.Sqlit
 
 ```csharp
 // Truncate name to 30 characters
-command.Parameters.AddWithValue("$name", name).Length = 30;
+command.Parameters.AddWithValue("$name", name).Size = 30;
 ```
 
 ## <a name="alternative-types"></a>代替型

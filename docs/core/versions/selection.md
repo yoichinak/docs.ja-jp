@@ -1,15 +1,15 @@
 ---
 title: 使用する .NET Core のバージョンを選択する
 description: .NET Core がお使いのプログラム用のランタイム バージョンを自動的に検出して選択するしくみについて説明します。 さらに、この記事では、特定のバージョンを強制的に使用する方法についても説明します。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595729"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324350"
 ---
 # <a name="select-the-net-core-version-to-use"></a>使用する .NET Core のバージョンを選択する
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: fc8b35c89e76a415529d76db687bc96767384e11
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591034"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>チュートリアル: DataGrid コントロールで SQL Server データベースのデータを表示する
 
@@ -37,7 +37,7 @@ ms.locfileid: "77452124"
 
 3. [インストール済みのテンプレート] ペインで **[データ]** を選択し、テンプレート一覧で **[ADO.NET Entity Data Model]** を選択します。
 
-     ![ADO.NET Entity Data Model 項目テンプレート](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
+     ![ADO.NET Entity Data Model 項目テンプレート](../../wcf/feature-details/media/ado-net-entity-data-model-item-template.png)
 
 4. ファイルに `AdventureWorksModel.edmx` と名前を付け、 **[追加]** をクリックします。
 
