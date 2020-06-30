@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
 ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248187"
@@ -22,10 +22,10 @@ ms.locfileid: "80248187"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[WPF アーキテクチャ](wpf-architecture.md)\
+[WPF のアーキテクチャ](wpf-architecture.md)\
 [WPF の XAML](xaml-in-wpf.md)\
 [基本要素クラス](base-elements.md)\
-[要素ツリーとシリアル化](element-tree-and-serialization.md)\
+[要素のツリーおよびシリアル化](element-tree-and-serialization.md)\
 [WPF プロパティ システム](properties-wpf.md)\
 [WPF のイベント](events-wpf.md)\
 [入力](input-wpf.md)\
@@ -38,4 +38,4 @@ ms.locfileid: "80248187"
 [移行と相互運用性](migration-and-interoperability.md)\
 [パフォーマンス](performance.md)\
 [スレッド モデル](threading-model.md)\
-[アンマネージ WPF API リファレンス](wpf-unmanaged-api-reference.md)\
+[WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)\

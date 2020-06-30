@@ -2,12 +2,12 @@
 title: 破壊的変更の種類
 description: .NET Core が .NET のバージョン間で開発者向けの互換性をどのように維持しようとしているか、およびどのような変更が重大な変更と見なされるかについて説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628593"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415746"
 ---
 # <a name="changes-that-affect-compatibility"></a>互換性に影響を与える変更点
 
@@ -19,15 +19,14 @@ ms.locfileid: "77628593"
 
 .NET 実装間の互換性と共に、開発者は .NET Core バージョン間の高いレベルの互換性を期待しています。 特に、以前のバージョンの .NET Core 用に書かれたコードは、新しいバージョンの .NET Core でもシームレスに動作するはずです。 実際、多くの開発者は、新しくリリースされたバージョンの .NET Core にある新しい API が、それらの API が導入されたプレリリース バージョンとも互換性があると期待します。
 
-この記事では、互換性の変更 (つまり破壊的変更) のカテゴリと、.NET チームがこれらの各カテゴリの変更をどのように評価するかについて説明します。 既存の API の動作を変更する [dotnet/runtime](https://github.com/dotnet/runtime) GitHub リポジトリに pull request を開く開発者に対しては、考えられる破壊的変更に .NET チームがどのように対処しているかを理解することは特に役立ちます。
-
-> [!NOTE]
-> バイナリ互換性や下位互換性などの互換性カテゴリの定義については、「[Breaking change categories (破壊的変更のカテゴリ)](categories.md)」を参照してください。
+この記事では、互換性に影響する変更と、.NET チームが各種の変更を評価する方法について説明します。 .NET チームが考えられる破壊的変更にどのように対処しているかの理解は、特に[既存の .NET API](https://github.com/dotnet/runtime) の動作を変更する pull request をオープンする開発者に役立ちます。
 
 次のセクションでは、.NET Core API に加えられた変更のカテゴリと、それがアプリケーションの互換性に与える影響について説明しています。 変更は許可 ✔️ されているか、未許可 ❌ であるか、または以前の動作の予測可能性、明確性、一貫性の程度の判断と評価が必要 ❓ であるかのいずれかです。
 
 > [!NOTE]
-> .NET Core ライブラリの変更がどのように評価されるかのガイドとして利用できるだけでなく、ライブラリ開発者はこれらの基準を使用して、複数の .NET の実装とバージョンをターゲットとするライブラリの変更を評価することもできます。
+>
+> - .NET ライブラリの変更がどのように評価されるかのガイドとして利用できるだけでなく、ライブラリ開発者はこれらの基準を使用して、複数の .NET の実装とバージョンをターゲットとするライブラリの変更を評価することもできます。
+> - 上位互換性と下位互換性などの互換性カテゴリの詳細については、[カテゴリ](categories.md)に関するページを参照してください。
 
 ## <a name="modifications-to-the-public-contract"></a>パブリック コントラクトの変更
 

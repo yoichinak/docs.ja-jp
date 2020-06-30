@@ -1,13 +1,14 @@
 ---
 title: DataSet、DataTable、および DataView
+description: 一貫したリレーショナル プログラミング モデルを提供するメモリ常駐型のデータ表現である、ADO.NET の DataSet を使用するいくつかの方法を学習します。
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
-ms.translationtype: MT
+ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786195"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "85503763"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 <xref:System.Data.DataSet> とは、テーブル間のリレーションシップだけでなく、包括するテーブル、整列するテーブル、およびデータを制約するテーブルを含むデータのセットを表します。  
