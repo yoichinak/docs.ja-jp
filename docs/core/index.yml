@@ -6,12 +6,12 @@ metadata:
   description: .NET Core は、クロスプラットフォーム アプリを構築するためのオープンソースの汎用開発プラットフォームです。
   ms.topic: landing-page
   ms.date: 03/25/2020
-  ms.openlocfilehash: b11a41587e2b9eba2df744da3d8c19baa0936fb2
-  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.openlocfilehash: 0d8e8515512068ba391a906182142eb5ee2f38c4
+  ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "80351687"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85620756"
 landingContent:
 - title: .NET Core について学習する
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
     links:
     - text: .NET Core の概要
       url: get-started.md
+    - text: ASP.NET Core の概要
+      url: /aspnet/core/
   - linkListType: concept
     links:
     - text: .NET Core サポートポリシー
