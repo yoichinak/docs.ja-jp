@@ -1,16 +1,17 @@
 ---
 title: アプリケーション開発
+description: Windows Presentation Foundation (WPF) のフレームワークを使用してさまざまなアプリケーションを構築する方法について説明します。
 ms.date: 01/26/2018
 helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 5ff9f58b72982f79e70b80f60c10828c3b54e5bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac4227785f2fc398217b3aa8984176844264bbaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85613736"
 ---
 # <a name="application-development"></a>アプリケーション開発
 <a name="introduction"></a> Windows Presentation Foundation (WPF) は、次のような種類のアプリケーションの開発に使用できるプレゼンテーション フレームワークです。  

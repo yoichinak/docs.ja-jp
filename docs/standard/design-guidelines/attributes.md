@@ -6,20 +6,19 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617562"
 ---
 # <a name="attributes"></a>属性
-
 <xref:System.Attribute?displayProperty=nameWithType>は、カスタム属性を定義するために使用される基本クラスです。
 
- 属性は、アセンブリ、型、メンバー、パラメーターなどのプログラミング要素に追加できる注釈です。 これらは、アセンブリのメタデータに格納され、実行時にリフレクション Api を使用してアクセスできます。 たとえば、.NET では、型またはメンバー <xref:System.ObsoleteAttribute> に適用できる属性を定義して、型またはメンバーが非推奨とされたことを示すことができます。
+ 属性は、アセンブリ、型、メンバー、パラメーターなどのプログラミング要素に追加できる注釈です。 これらは、アセンブリのメタデータに格納され、リフレクション Api を使用して実行時にアクセスできます。 たとえば、フレームワークはを定義してい <xref:System.ObsoleteAttribute> ます。これを型またはメンバーに適用して、型またはメンバーが非推奨とされたことを示すことができます。
 
- 属性には、属性に関連する追加データを格納する1つ以上のプロパティを含めることができます。 たとえば、は、 `ObsoleteAttribute` 型またはメンバーが非推奨とされたリリースに関する追加情報を伝達し、古い api を置き換える新しい api の説明を含めることができます。
+ 属性には、属性に関連する追加データを格納する1つ以上のプロパティを含めることができます。 たとえば、に `ObsoleteAttribute` は、型またはメンバーが非推奨とされたリリースに関する追加情報が含まれており、新しい api の説明によって古い api が置き換えられています。
 
  属性を適用するときは、属性の一部のプロパティを指定する必要があります。 これらは、位置指定コンストラクターパラメーターとして表現されるため、必須プロパティまたは必須の引数と呼ばれます。 たとえば、 <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> のプロパティ <xref:System.Diagnostics.ConditionalAttribute> は必須プロパティです。
 
