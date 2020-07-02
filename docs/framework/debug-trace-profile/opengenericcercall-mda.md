@@ -1,5 +1,6 @@
 ---
 title: openGenericCERCall MDA
+description: スレッドが中止されたとき、またはアプリケーションドメインがアンロードされたときに CER コードが実行されない場合は、openGenericCERCall マネージデバッグアシスタントを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803938"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -29,7 +30,7 @@ ms.locfileid: "79181775"
 
 JIT コンパイル時には、処理結果のコードが共有され、オブジェクト参照型変数がそれぞれ任意のオブジェクト参照型になる可能性があるため、オブジェクト参照型を含むインスタンス化は代理にすぎません。 このため、一部のランタイム リソースを前もって準備することが妨げられる場合があります。
 
-特に、ジェネリック型変数を含むメソッドは、バックグラウンドでリソースを遅延割り当てする可能性があります。 このようなメソッドは、ジェネリック辞書エントリと呼ばれます。 たとえば、ジェネリック型変数である`List<T> list = new List<T>();``T`ステートメントの場合、ランタイムは実行時に正確なインスタンス化`List<Object>, List<String>`を作成する必要があります( など)。 この操作は、メモリ不足など、開発者が制御できないさまざまな理由で失敗することがあります。
+特に、ジェネリック型変数を含むメソッドは、バックグラウンドでリソースを遅延割り当てする可能性があります。 このようなメソッドは、ジェネリック辞書エントリと呼ばれます。 たとえば、がジェネリック型の変数であるステートメントの場合、 `List<T> list = new List<T>();` `T` ランタイムはを検索し、実行時に正確なインスタンス化を作成する必要があります (たとえば、など) `List<Object>, List<String>` 。 この操作は、メモリ不足など、開発者が制御できないさまざまな理由で失敗することがあります。
 
 この MDA は、JIT コンパイル時にのみアクティブになり、正確なインスタンス化が存在するときにはアクティブになりません。
 
@@ -43,9 +44,9 @@ CER が存在する可能性があるメソッドには、オブジェクト参�
 
 この MDA は CLR に影響しません。
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
-この MDA からの出力例を次に示します。
+この MDA からの出力の例を次に示します。
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.

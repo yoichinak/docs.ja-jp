@@ -1,5 +1,6 @@
 ---
 title: overlappedFreeError MDA
+description: .NET の overlappedFreeError マネージデバッグアシスタント (MDA) を確認します。これにより、アクセス違反またはガベージコレクトされたヒープの破損に対してアクティブ化される場合があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - OverlappedFreeError MDA
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9be33c59723ecb2743f2bc610d7fb69d24ff388c
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803917"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-オーバーラップされた操作が完了する前に `overlappedFreeError` メソッドが呼び出されると、<xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> マネージド デバッグ アシスタント (MDA) がアクティブになります。  
+オーバーラップされた操作が完了する前に <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> メソッドが呼び出されると、`overlappedFreeError` マネージド デバッグ アシスタント (MDA) がアクティブになります。  
   
 ## <a name="symptoms"></a>現象  
  アクセス違反またはガベージ コレクションされたヒープの破損。  
@@ -48,7 +49,7 @@ ms.locfileid: "77217257"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

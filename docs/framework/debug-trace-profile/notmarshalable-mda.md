@@ -1,5 +1,6 @@
 ---
 title: notMarshalable MDA
+description: NotMarshalable マネージデバッグアシスタントを確認します。これは、呼び出しが処理されない場合、または COM インターフェイスポインターのコンテキストが間違っている場合にアクティブ化される可能性があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), interface pointer not marshalable
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b464d914a8d83504daaf4cb276914da7798262dc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803795"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
-共通言語ランタイム (CLR: Common Language Runtime) がコンテキスト間でインターフェイスをマーシャリングするときに、有効な登録済みのプロキシやスタブのない COM インターフェイス ポインター、または不正な `notMarshalable` インターフェイスの実装を検出すると、`IMarshal` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブになります。  
+共通言語ランタイム (CLR: Common Language Runtime) がコンテキスト間でインターフェイスをマーシャリングするときに、有効な登録済みのプロキシやスタブのない COM インターフェイス ポインター、または不正な `IMarshal` インターフェイスの実装を検出すると、`notMarshalable` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブになります。  
   
 ## <a name="symptoms"></a>現象  
  呼び出しが処理されないか、COM インターフェイス ポインターの不正なコンテキストで発生します。  
@@ -46,7 +47,7 @@ ms.locfileid: "77217285"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,5 +1,6 @@
 ---
 title: nonComVisibleBaseClass MDA
+description: COR_E_INVALIDOPERATION で失敗したネイティブコードからの QueryInterface 呼び出しに対して呼び出される、nonComVisibleBaseClass managed デバッグアシスタント (MDA) を参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - visible classes
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f32b2c57f50fcd900b1fd78f4f8df1ec656a6db
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803922"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
 `nonComVisibleBaseClass` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、COM 参照可能ではない基本クラスから派生した COM 参照可能マネージド クラスの COM 呼び出し可能ラッパー (CCW: COM Callable Wrapper) で、ネイティブ コードまたはアンマネージド コードによって `QueryInterface` 呼び出しがなされるとアクティブになります。  `QueryInterface` 呼び出しによって MDA がアクティブになるのは、COM 参照可能マネージド クラスのクラス インターフェイスまたは既定の `IDispatch` が呼び出しによって要求された場合のみです。  `QueryInterface` 呼び出しが、<xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 属性が適用され、COM 参照可能クラスによって明示的に実装された明示的なインターフェイスに対する呼び出しである場合、この MDA はアクティブになりません。  
@@ -31,7 +32,7 @@ ms.locfileid: "79181790"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  非 COM 参照可能クラス `Base` から派生した COM 参照可能クラス `Derived` で `QueryInterface` 呼び出しを実行した場合のメッセージ例を次に示します。  
   
 ```output
