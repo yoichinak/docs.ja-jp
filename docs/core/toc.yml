@@ -8,22 +8,12 @@ items:
   - name: インストール
     items:
       - name: 概要
-        href: install/index.md
-      - name: SDK をインストールする
-        href: install/sdk.md
-      - name: ランタイムをインストールする
-        href: install/runtime.md
-      - name: サポートされる OS と依存関係
-        href: install/dependencies.md
-      - name: 期限切れのランタイムと SDK の削除
-        href: install/remove-runtime-sdk-versions.md
-      - name: .NET テンプレートの管理
-        href: install/templates.md
-      - name: macOS の公証の問題
-        href: install/macos-notarization-issues.md
-      - name: .NET Core のバージョンを確認する方法
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: Windows にインストールする
+        href: install/windows.md
+      - name: macOS へのインストール
+        href: install/macos.md
+      - name: Linux にインストールする
         items:
           - name: 概要
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: 期限切れのランタイムと SDK の削除
+        href: install/remove-runtime-sdk-versions.md
+      - name: .NET テンプレートの管理
+        href: install/templates.md
+      - name: macOS の公証の問題
+        href: install/macos-notarization-issues.md
+      - name: .NET Core のバージョンを確認する方法
+        href: install/how-to-detect-installed-versions.md
       - name: ローカライズされた IntelliSense をインストールする
         href: install/localized-intellisense.md
   - name: 作業開始
