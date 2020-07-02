@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619534"
 ---
 # <a name="events-and-callbacks"></a>イベントとコールバック
 コールバックは、フレームワークがデリゲートを通じてユーザーコードにコールバックすることを可能にする拡張ポイントです。 これらのデリゲートは、通常、メソッドのパラメーターを使用してフレームワークに渡されます。
@@ -38,7 +38,7 @@ ms.locfileid: "84289799"
 
  デリゲートを呼び出すことによって、任意のコードを実行し、セキュリティ、正確性、および互換性の影響を与える可能性があることを✔️理解することができます。
 
- *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
+ *部分 &copy; 2005、2009 Microsoft Corporation。すべての権限が予約されています。*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 

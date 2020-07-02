@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620769"
 ---
 # <a name="virtual-members"></a>仮想メンバー
 仮想メンバーをオーバーライドして、サブクラスの動作を変更することができます。 これらの関数は、提供される機能拡張に関してコールバックとよく似ていますが、実行のパフォーマンスとメモリの消費に関しては優れています。 また、仮想メンバーは、特別な種類の既存の型 (特殊化) を作成する必要があるシナリオでは、より自然に感じられます。
@@ -33,7 +33,7 @@ ms.locfileid: "84288499"
 
  クラスのパブリックメンバーは、そのクラスの直接のコンシューマーに適切な一連の機能を提供する必要があります。 仮想メンバーはサブクラスでオーバーライドされるように設計されており、保護されたアクセシビリティは、すべての仮想拡張ポイントを使用できる場所にスコープを設定するための優れた方法です。
 
- *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
+ *部分 &copy; 2005、2009 Microsoft Corporation。すべての権限が予約されています。*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 

@@ -1,13 +1,13 @@
 ---
 title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
-ms.date: 07/26/2018
-ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.date: 06/24/2020
+ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619755"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -103,6 +103,9 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.1       | 最大 2.0     |
 | 2.2       | 最大 2.0     |
 | 3.0       | 最大 2.1     |
+| 3.1       | 最大 2.1     |
+
+.NET Standard のバージョンの対話型テーブルと、それらが .NET 実装にどのように対応しているのかについては、「[.NET Standard のバージョン](https://dotnet.microsoft.com/platform/dotnet-standard#versions)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

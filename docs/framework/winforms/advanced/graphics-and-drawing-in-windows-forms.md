@@ -1,5 +1,6 @@
 ---
 title: グラフィックスと描画
+description: グラフィックス、ペン、ブラシ、カラーの各オブジェクトについて、および Windows フォームで図形の描画、テキストの描画、画像の表示などのタスクを実行する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58d8cde6aa102225cf9e3c342efe37218c818307
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618403"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows フォームにおけるグラフィックスと描画
 共通言語ランタイムは、GDI + と呼ばれる Windows グラフィックスデバイスインターフェイス (GDI) の高度な実装を使用します。 GDI + を使用すると、グラフィックスの作成、テキストの描画、およびオブジェクトとしてのグラフィックイメージの操作を行うことができます。 GDI + は、パフォーマンスと使いやすさを提供するように設計されています。 GDI + を使用して、Windows フォームとコントロールにグラフィカルイメージを表示できます。 GDI + は Web フォームで直接使用することはできませんが、画像 Web サーバーコントロールを使用してグラフィカルイメージを表示できます。  

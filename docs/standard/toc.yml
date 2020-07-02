@@ -639,6 +639,8 @@
       items:
         - name: クラスと構造体の間の選択
           href: design-guidelines/choosing-between-class-and-struct.md
+        - name: 匿名型と組型の選択
+          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: 抽象クラスのデザイン
           href: design-guidelines/abstract-class.md
         - name: 静的クラスのデザイン

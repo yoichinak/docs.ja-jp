@@ -1,5 +1,6 @@
 ---
 title: FlowLayoutPanel を使用してコントロールを整列する
+description: FlowLayoutPanel コントロールと TableLayoutPanel コントロールを使用して、直感的な方法で Windows フォームプロジェクトにコントロールを配置する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efcb38275be7b0cf94afb6b68aa139876f7cf5fd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619287"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>チュートリアル : FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置
 
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。
 
 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールと <xref:System.Windows.Forms.TableLayoutPanel> コントロールを使用すると、コントロールをフォームに直感的な方法で配置できます。 これら 2 つのコントロールは、それぞれに含まれる子コントロールの相対位置を制御するための自動的で構成可能な機能を提供します。また、どちらも実行時に動的なレイアウト機能を提供するため、親フォームの寸法の変更に応じて子コントロールのサイズと位置を変更できます。 レイアウト パネルは他のレイアウト パネルの入れ子にすることができるため、高度なユーザー インターフェイスを実現できます。
 
-<xref:System.Windows.Forms.TableLayoutPanel> は、HTML \<table > 要素と同様の機能を提供して、コンテンツをグリッドに配置します。 セルは行と列に配置され、それぞれに異なるサイズを設定できます。 詳細については、「 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)」を参照してください。
+は、 <xref:System.Windows.Forms.TableLayoutPanel> その内容をグリッドに配置し、HTML 要素に似た機能を提供し \<table> ます。 セルは行と列に配置され、それぞれに異なるサイズを設定できます。 詳細については、「 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)」を参照してください。
 
 <xref:System.Windows.Forms.FlowLayoutPanel> はその内容を特定のフローの方向 (水平または垂直) に配置します。 ある行から次の行、またはある列から次の列に内容をラップすることができます。 また、ラップする代わりにクリップすることもできます。 このチュートリアルでは、以下のタスクを行います。
 
@@ -44,9 +45,9 @@ ms.locfileid: "76745405"
 
 完了すると、これらの重要なレイアウト機能によって果たす役割について理解できるようになります。
 
-## <a name="create-the-project"></a>プロジェクトを作成する
+## <a name="create-the-project"></a>プロジェクトの作成
 
-1. Visual Studio で、"flowlayoutを example" という名前の Windows ベースのアプリケーションプロジェクトを作成します (**ファイル** > **新しい** > **プロジェクト** >  **C# Visual**または**Visual Basic** > **クラシックデスクトップ** > **Windows フォームアプリケーション**)。
+1. Visual Studio で、"flowlayoutパネル example" という名前の Windows ベースのアプリケーションプロジェクトを作成します ([**ファイル**] [  >  **新しい**  >  **プロジェクト**] [  >  **Visual C#** ]、または**Visual Basic**  >  **クラシックデスクトップ**  >  **Windows フォームアプリケーション**)。
 
 2. **フォーム デザイナー**でフォームを選びます。
 
@@ -137,7 +138,7 @@ ms.locfileid: "76745405"
 
 ### <a name="to-insert-a-control-by-drawing-its-outline"></a>アウトラインを描画してコントロールを挿入するには
 
-1. **[ツールボックス]** で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
+1. **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
 
 2. <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにマウス ポインターを置きます。 ポインターが <xref:System.Windows.Forms.Button> コントロール アイコンが付いた十字カーソルに変わることにご注意ください。
 
@@ -150,7 +151,7 @@ ms.locfileid: "76745405"
 
 ### <a name="to-insert-a-control-using-the-caret"></a>キャレットを使用してコントロールを挿入するには
 
-1. <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドラッグし、2 つの <xref:System.Windows.Forms.Button> コントロールの間の領域をポイントします。 挿入バーが描画され、<xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドロップされたときに <xref:System.Windows.Forms.Button> が配置される場所を示していることに注意してください。 新しい <xref:System.Windows.Forms.Button> コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドロップする前に、マウス ポインターを移動して、挿入バーがどのように移動するかを確認します。
+1. <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドラッグし、2 つの <xref:System.Windows.Forms.Button> コントロールの間の領域をポイントします。 挿入バーが描画され、コントロールにドロップされたときにが配置される場所が示されることに注意して <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.FlowLayoutPanel> ください。 新しい <xref:System.Windows.Forms.Button> コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドロップする前に、マウス ポインターを移動して、挿入バーがどのように移動するかを確認します。
 
 2. 新しい <xref:System.Windows.Forms.Button> コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドロップします。 新しい <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Margin%2A> プロパティの値が異なるため、他のコントロールとは位置が揃わないことにご注意ください。
 
@@ -159,9 +160,9 @@ ms.locfileid: "76745405"
 
 ### <a name="to-reparent-existing-controls"></a>既存のコントロールの親を変更するには
 
-1. <xref:System.Windows.Forms.Button> ツールボックス **から 3 つの** コントロールをフォームにドラッグします。 これらを互いに近づけて配置しますが、整列はさせません。
+1. <xref:System.Windows.Forms.Button> [ツールボックス] **から 3 つの** コントロールをフォームにドラッグします。 これらを互いに近づけて配置しますが、整列はさせません。
 
-2. **[ツールボックス]** で <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
+2. **ツールボックス**で <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
 
 3. マウス ポインターを 3 つの <xref:System.Windows.Forms.Button> コントロールに近づけます。 ポインターが <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンが付いた十字カーソルに変わることにご注意ください。
 
@@ -182,13 +183,13 @@ ms.locfileid: "76745405"
 
 - いずれかのコントロールの <xref:System.Windows.Forms.Control.Visible%2A> プロパティを `false` に設定し、これに呼応して <xref:System.Windows.Forms.FlowLayoutPanel> のフローがどのように変化するか確認します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)
-- [方法: Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
-- [方法: Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)
-- [チュートリアル: Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)
+- [方法 : Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
+- [方法 : Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)
+- [チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)
