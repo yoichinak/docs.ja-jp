@@ -1,19 +1,21 @@
 ---
 title: Windows で .NET for Apache Spark アプリケーションをビルドする
 description: Windows で .NET for Apache Spark アプリケーションをビルドする方法について学習します。
-ms.date: 01/29/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: cb7154185fc9aa08bc447cb846798995301a6651
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d52e5be8c8e528880eece5a9b46fb08933c1eb3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617666"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows で .NET for Apache Spark アプリケーションをビルドする方法を学習する
 
 この記事では、Windows で .NET for Apache Spark アプリケーションをビルドする方法について説明します。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

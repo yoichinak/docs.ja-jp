@@ -3,14 +3,14 @@ title: .NET for Apache Spark を使用した構造化ストリーミングのチ
 description: このチュートリアルでは、Spark 構造化ストリーミング用の .NET for Apache Spark の使用方法について説明します。
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/04/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5420fe081db1704d7af647e8c88826c1bcf614d9
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79186509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617844"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用した構造化ストリーミング
 
@@ -23,6 +23,8 @@ ms.locfileid: "79186509"
 > * .NET for Apache Spark アプリケーションを作成して実行する
 > * netcat を使用してデータ ストリームを作成する
 > * ユーザー定義関数と SparkSQL を使用してストリーミング データを分析する
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

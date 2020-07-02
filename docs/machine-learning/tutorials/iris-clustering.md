@@ -2,15 +2,15 @@
 title: 'チュートリアル: あやめ花の分類 - K-means クラスタリング'
 description: クラスタリングのシナリオで ML.NET を使用する方法について説明します
 author: pkulikov
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fe9c3eb1313fbacf512710f6872c543dca281b17
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0cc42a196589a7ffe77300c9f2cd9cb28229a0a9
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803977"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>チュートリアル: ML.NET でクラスタリングを使用してあやめの花を分類する
 
@@ -48,6 +48,8 @@ ms.locfileid: "81607429"
     **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
 
 1. **Microsoft.ML** NuGet パッケージをインストールします。
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 

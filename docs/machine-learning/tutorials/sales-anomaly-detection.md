@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: 製品売上の異常を検出する'
 description: 製品売上データの異常検出アプリケーションを構築する方法について説明します。 このチュートリアルでは、Visual Studio 2019 の C# を使って .NET Core コンソール アプリケーションを作成します。
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2fc9c552f5a00d59ea2fddcbcfcbd240cf2fc83c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: b744b2597abceb91d2c36f596b79fb75c2492563
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803288"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>チュートリアル: ML.NET で製品売上の異常を検出する
 
@@ -43,6 +43,8 @@ ms.locfileid: "84201988"
 2. データ セット ファイルを保存するために、プロジェクトに *Data* という名前のディレクトリを作成します。
 
 3. **Microsoft.ML NuGet パッケージ**をインストールします。
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。[参照] タブを選択し、「**Microsoft.ML**」を検索し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.TimeSeries** についてもこれらの手順を繰り返します。
 

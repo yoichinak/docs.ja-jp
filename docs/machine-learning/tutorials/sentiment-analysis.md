@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: Web サイトのコメントを分析する - 二項分類'
 description: このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。 この二項センチメント分類子には、Visual Studio で C# を使用します。
-ms.date: 09/30/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b193752437c3e84476858bb3b70ba642d8562769
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803249"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
@@ -42,7 +42,9 @@ ms.locfileid: "81243298"
 
 3. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 パッケージ ソースとして "nuget.org" を選択してから、 **[参照]** タブを選択します。**Microsoft.ML** を検索し、目的のパッケージを選択して、 **[インストール]** ボタンを選択します。 選択したパッケージのライセンス条項に同意してインストールを続行します。 **Microsoft.ML.FastTree** NuGet パッケージに対して同じことを行います。
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 パッケージ ソースとして "nuget.org" を選択してから、 **[参照]** タブを選択します。**Microsoft.ML** を検索し、目的のパッケージを選択して、 **[インストール]** ボタンを選択します。 選択したパッケージのライセンス条項に同意してインストールを続行します。
 
 ## <a name="prepare-your-data"></a>データを準備する
 

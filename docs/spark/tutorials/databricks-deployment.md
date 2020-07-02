@@ -1,15 +1,15 @@
 ---
 title: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 description: .NET for Apache Spark アプリケーションを Databricks にデプロイする方法を説明します。
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618338"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -23,6 +23,8 @@ ms.locfileid: "84202243"
 > - .NET for Apache Spark アプリを発行する。
 > - Spark ジョブと Spark クラスターを作成する。
 > - Spark クラスターでアプリを実行する。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

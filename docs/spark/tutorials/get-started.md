@@ -1,15 +1,15 @@
 ---
 title: .NET for Apache Spark の概要
 description: Windows、macOS、Ubuntu で .NET Core を使用して .NET for Apache Spark アプリを実行する方法について説明します。
-ms.date: 01/31/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7375c385245a05d7dc29d5df89d875bf6cb4141a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be150bcef0029f69136e21c35791c863220af244
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617653"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark の概要
 
@@ -22,6 +22,8 @@ ms.locfileid: "79187537"
 > * .NET for Apache Spark の環境を準備する
 > * 最初の .NET for Apache Spark アプリケーションを作成する
 > * .NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>環境を準備する
 

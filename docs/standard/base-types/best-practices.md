@@ -1,7 +1,7 @@
 ---
 title: .NET の正規表現に関するベスト プラクティス
 description: .NET での効率的で効果的な正規表現の作成方法について説明します。
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,18 +10,20 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802928"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 
 .NET の正規表現エンジンは、リテラル テキストの比較と照合ではなくパターン一致に基づいてテキストを処理する、完全な機能を備えた強力なツールです。 ほとんどの場合は、すばやく効率的にパターン一致が実行されますが、 処理が非常に遅く見えることもあります。 極端なケースでは、比較的小さな入力の処理に何時間も何日もかかり、応答しなくなったように見えることさえあります。
 
 ここでは、正規表現で最適なパフォーマンスを確保するためのいくつかのベスト プラクティスの概要を説明します。
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="consider-the-input-source"></a>入力ソースを考慮に入れる
 

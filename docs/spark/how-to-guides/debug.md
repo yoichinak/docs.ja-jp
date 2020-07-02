@@ -1,19 +1,21 @@
 ---
 title: Windows で .NET for Apache Spark アプリケーションをデバッグする
 description: Windows で .NET for Apache Spark アプリケーションをデバッグする方法について学習します。
-ms.date: 01/29/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9209d5bdec6dd85f6d21a502fb07204effef1934
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617757"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションをデバッグする
 
 このハウツーでは、Windows 上で .NET for Apache Spark アプリケーションをデバッグするための手順について説明します。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="debug-your-application"></a>アプリケーションをデバッグする
 
@@ -81,7 +83,7 @@ spark-submit \
 
 コマンドを実行した後、[Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html) を使用して実行中のプロセスにデバッガーを追加します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [.NET for Apache Spark の概要](../tutorials/get-started.md)
 * [.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする](../tutorials/hdinsight-deployment.md)
