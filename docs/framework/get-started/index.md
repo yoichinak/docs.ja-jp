@@ -1,17 +1,18 @@
 ---
 title: .NET Framework の概要
+description: .NET の使用を開始します。これは、アプリを管理するランタイム実行環境です。 これには、共通言語ランタイム (CLR) と広範なクラス ライブラリが含まれています。
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: b6ad74d2984443a3b8345c2261996e7ab30acdff
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621653"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework の使用を開始する
 

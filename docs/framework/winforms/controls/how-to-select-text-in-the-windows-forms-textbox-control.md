@@ -1,5 +1,6 @@
 ---
 title: TextBox コントロール内のテキストを選択する
+description: Windows フォーム TextBox コントロールでプログラムによってテキストを選択する方法について説明します。 また、検出された文字列の位置を視覚的に通知する方法についても説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +11,29 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: 8a32e40f14ddae6f8ddcaa6d62337329df6fde26
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b8fdaff76461c4d6766dfc6afaef5e814d982834
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621562"
 ---
-# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>方法 : Windows フォーム TextBox コントロールでテキストを選択する
-Windows フォーム <xref:System.Windows.Forms.TextBox> コントロールでプログラムによってテキストを選択できます。 たとえば、特定の文字列を検索する関数を作成する場合、テキストを選択して、検出された文字列の位置のリーダーを視覚的に警告することができます。  
+# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールでテキストを選択する
+Windows フォームコントロールで、プログラムによってテキストを選択でき <xref:System.Windows.Forms.TextBox> ます。 たとえば、特定の文字列を検索する関数を作成する場合、テキストを選択して、検出された文字列の位置のリーダーを視覚的に警告することができます。  
   
 ### <a name="to-select-text-programmatically"></a>プログラムによってテキストを選択するには  
   
-1. <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> プロパティを、選択するテキストの先頭に設定します。  
+1. プロパティを、 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 選択するテキストの先頭に設定します。  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> プロパティは、テキストの文字列内の挿入ポイントを示す数値です。0は左端の位置を示します。 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> プロパティがテキストボックス内の文字数以上に設定されている場合、挿入ポイントは最後の文字の後に配置されます。  
+     プロパティは、 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> テキストの文字列内の挿入ポイントを示す数値です。0は左端の位置を表します。 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>プロパティがテキストボックス内の文字数以上に設定されている場合、挿入ポイントは最後の文字の後に配置されます。  
   
-2. <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> プロパティを、選択するテキストの長さに設定します。  
+2. プロパティを、 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 選択するテキストの長さに設定します。  
   
-     <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> プロパティは、挿入ポイントの幅を設定する数値です。 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> を0より大きい数値に設定すると、現在の挿入ポイントから始まる文字数が選択されます。  
+     プロパティは、 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 挿入ポイントの幅を設定する数値です。 を <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 0 より大きい数値に設定すると、現在の挿入ポイントから始まる文字数が選択されます。  
   
-3. Optional<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> プロパティを使用して、選択したテキストにアクセスします。  
+3. Optionalプロパティを使用して、選択したテキストにアクセスし <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> ます。  
   
-     次のコードでは、コントロールの <xref:System.Windows.Forms.Control.Enter> イベントが発生したときにテキストボックスの内容を選択します。 この例では、テキストボックスに `null` または空の文字列ではない <xref:System.Windows.Forms.TextBox.Text%2A> プロパティの値があるかどうかを確認します。 テキストボックスがフォーカスを受け取ると、テキストボックス内の現在のテキストが選択されます。 `TextBox1_Enter` イベントハンドラーはコントロールにバインドされている必要があります。詳細については、「[方法: Windows フォームの実行時にイベントハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)する」を参照してください。  
+     次のコードでは、コントロールのイベントが発生したときにテキストボックスの内容を選択し <xref:System.Windows.Forms.Control.Enter> ます。 この例では、テキストボックスに、または空の文字列ではないプロパティの値があるかどうかを確認 <xref:System.Windows.Forms.TextBox.Text%2A> `null` します。 テキストボックスがフォーカスを受け取ると、テキストボックス内の現在のテキストが選択されます。 `TextBox1_Enter`イベントハンドラーはコントロールにバインドされている必要があります。詳細については、「[方法: 実行時にイベントハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)する」を参照して Windows フォームしてください。  
   
      この例をテストするには、テキストボックスにフォーカスが移動するまで Tab キーを押します。 テキストボックス内をクリックすると、テキストは選択されません。  
   
@@ -67,7 +68,7 @@ Windows フォーム <xref:System.Windows.Forms.TextBox> コントロールで�
     }  
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)

@@ -1,5 +1,6 @@
 ---
 title: トレース リスナー
+description: .NET で送信されたトレースメッセージを収集して記録するためのメカニズムであるトレースリスナーについて説明します。 リスナーは、メッセージを収集、格納、およびルーティングします。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +15,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803524"
 ---
 # <a name="trace-listeners"></a>トレース リスナー
-**Trace**、**Debug**、および <xref:System.Diagnostics.TraceSource> を使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレース メッセージは*リスナー*によって受け取られます。 リスナーの目的は、トレース メッセージを収集し、保存し、ルーティングすることです。 リスナーは、ログ、ウィンドウ、テキスト ファイルなどの適切なターゲットにトレース出力を送ります。  
+**Trace**、**Debug**、および <xref:System.Diagnostics.TraceSource> を使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレースメッセージは*リスナー*によって受信されます。 リスナーの目的は、トレース メッセージの収集、格納、およびルーティングを行うことです。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  
   
  リスナーは、**Debug**、**Trace**、および <xref:System.Diagnostics.TraceSource> の各クラスで使用できます。それらのクラスからも出力を各種のリスナー オブジェクトに送ることができます。 一般的に使用される定義済みのリスナーは、次のとおりです。  
   
@@ -30,11 +31,11 @@ ms.locfileid: "77216144"
   
 - <xref:System.Diagnostics.EventLogTraceListener> は、出力をイベント ログにリダイレクトします。  
   
-- <xref:System.Diagnostics.DefaultTraceListener> は、**Write** メッセージと **WriteLine** メッセージを **OutputDebugString** と **Debugger.Log** メソッドに出力します。 Visual Studio では、これによってデバッグ メッセージが [出力] ウィンドウに表示されます。 **Fail** メッセージと、失敗した **Assert** メッセージも **OutputDebugString** Windows API と **Debugger.Log** メソッドに出力され、これらはメッセージ ボックスとしても表示されます。 **DefaultTraceListener** はすべての **コレクションに自動的に取り込まれる唯一のリスナーであるため、この動作は**Debug**メッセージと**Trace`Listeners` メッセージの既定の動作になります。  
+- <xref:System.Diagnostics.DefaultTraceListener> は、**Write** メッセージと **WriteLine** メッセージを **OutputDebugString** と **Debugger.Log** メソッドに出力します。 Visual Studio では、これによってデバッグ メッセージが [出力] ウィンドウに表示されます。 **Fail** メッセージと、失敗した **Assert** メッセージも **OutputDebugString** Windows API と **Debugger.Log** メソッドに出力され、これらはメッセージ ボックスとしても表示されます。 **DefaultTraceListener** はすべての `Listeners` コレクションに自動的に取り込まれる唯一のリスナーであるため、この動作は **Debug** メッセージと **Trace** メッセージの既定の動作になります。  
   
 - <xref:System.Diagnostics.ConsoleTraceListener> は、トレース出力またはデバッグ出力を、標準出力と標準エラー出力ストリームのいずれかに転送します。  
   
-- <xref:System.Diagnostics.DelimitedListTraceListener> は、トレース出力またはデバッグ出力を、テキスト ライター (ストリーム ライターなど) またはストリーム (ファイル ストリームなど) に送ります。 トレース出力は、<xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> プロパティによって指定された区切り記号を使用する区切りテキスト形式になっています。  
+- <xref:System.Diagnostics.DelimitedListTraceListener> は、トレース出力またはデバッグ出力を、テキスト ライター (ストリーム ライターなど) またはストリーム (ファイル ストリームなど) に送ります。 トレース出力は、プロパティで指定された区切り記号を使用する区切りテキスト形式です <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 。  
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> は、トレース出力またはデバッグ出力を、XML でエンコードされたデータとして <xref:System.IO.TextWriter> または <xref:System.IO.Stream> (<xref:System.IO.FileStream> など) に送ります。  
   
@@ -74,7 +75,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>開発者が定義するリスナー  
  **TraceListener** 基底クラスから継承することにより、独自のリスナーを定義し、カスタマイズされたメソッドで既存のメソッドをオーバーライドできます。 開発者が定義するリスナーの作成については、「.NET Framework リファレンス」の「<xref:System.Diagnostics.TraceListener>」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
