@@ -1,19 +1,21 @@
 ---
 title: .NET for Apache Spark でユーザー定義関数 (UDF) を作成する
 description: .NET for Apache Spark アプリケーションでユーザー定義関数 (UDF) を実装する方法を学習します。
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 97afda8ed17d3719c534d72ad3ad026745a70922
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85142018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620925"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>.NET for Apache Spark でユーザー定義関数 (UDF) を作成する
 
 この記事では、.NET for Apache Spark でユーザー定義関数 (UDF) を使用する方法を学習します。 [UDF](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/expressions/UserDefinedFunction.html) は、システムの組み込み機能を拡張するためにカスタム関数を使用できるようにする Spark の機能です。 UDF では、テーブル内の 1 行から値を変換し、UDF で定義されているロジックに基づいて、行ごとに 1 つの対応する出力値を生成します。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="define-udfs"></a>UDF を定義する
 
