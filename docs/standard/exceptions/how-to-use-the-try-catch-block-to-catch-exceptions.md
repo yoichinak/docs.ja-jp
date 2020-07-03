@@ -1,5 +1,6 @@
 ---
 title: '方法: Try ブロックと Catch ブロックを使用して例外をキャッチする'
+description: Try ブロックを使用して、例外を発生させたりスローしたりする可能性のあるステートメントを含めます。 例外を処理するステートメントを 1 つまたは複数の Catch ブロックに配置します。
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708467"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768912"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Try ブロックと Catch ブロックを使用して例外をキャッチする方法
 
@@ -36,7 +37,7 @@ ms.locfileid: "75708467"
 > [!NOTE]
 > ほとんどのコードで例外がスローされる可能性があります。また、<xref:System.OutOfMemoryException> のように、CLR 自体によっていつでもスローされる可能性のある例外もあります。 アプリケーションではこのようの例外を処理する必要はありませんが、他のユーザーが使用するライブラリを記述する際には、必要となる可能性があるので注意してください。 `try` ブロック内でコードを設定するタイミングに関しては、「[例外の推奨事項](best-practices-for-exceptions.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [例外](index.md)
 - [.NET での I/O エラーの処理](../io/handling-io-errors.md)

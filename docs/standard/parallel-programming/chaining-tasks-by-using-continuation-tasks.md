@@ -1,5 +1,6 @@
 ---
 title: 継続タスクを使用したタスクの連結
+description: .NET の継続タスクを使用してタスクを連鎖させる方法について説明します。 継続タスクは、別のタスクによって呼び出される非同期タスクです。
 ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 90317f3db5bcf2371494e14a1ca1dd16d049e0bd
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285613"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662473"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 非同期プログラミングでは、非同期操作で完了時に 2 番目の操作を呼び出してデータを渡すのが一般的です。 これまで、継続はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 *継続タスク*に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" *継続元*" と呼ばれます) が終了したときにそのタスクによって呼び出される非同期タスクのことです。  
@@ -119,7 +120,7 @@ ms.locfileid: "84285613"
 ## <a name="associating-state-with-continuations"></a>状態と継続の関連付け  
  任意の状態とタスクの継続を関連付けることができます。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドは、それぞれが継続の状態を表す <xref:System.Object> 値を受け取る、オーバーロードされたバージョンを提供します。 後でこの状態オブジェクトにアクセスするには、 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> プロパティを使用します。 値を指定しない場合、この状態オブジェクトは `null` です。  
   
- 継続の状態は、TPL を使用するために、[非同期プログラミング モデル (APM)](../asynchronous-programming-patterns/asynchronous-programming-model-apm.md) を使った既存のコードを変換する場合に有用です。 APM では通常、**Begin**_Method_ メソッドでオブジェクト状態を指定し、後から <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> プロパティを使って、その状態にアクセスします。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用すると、APM を使用するコードを TPL を使用するように変換するときに、この状態を維持できます。  
+ 継続の状態は、TPL を使用するために、 [非同期プログラミング モデル (APM)](../asynchronous-programming-patterns/asynchronous-programming-model-apm.md) を使った既存のコードを変換する場合に有用です。 APM では通常、**Begin**_Method_ メソッドでオブジェクト状態を指定し、後から <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> プロパティを使って、その状態にアクセスします。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用すると、APM を使用するコードを TPL を使用するように変換するときに、この状態を維持できます。  
   
  継続の状態は、Visual Studio デバッガーで <xref:System.Threading.Tasks.Task> オブジェクトを使用するときにも有用です。 たとえば、 **[並列タスク]** ウィンドウの **[タスク]** の列に、各タスクの状態オブジェクトの文字列表現が表示されます。 **[並列タスク]** ウィンドウの詳細については、「[[タスク] ウィンドウの使用](/visualstudio/debugger/using-the-tasks-window)」を参照してください。  
   
@@ -150,6 +151,6 @@ ms.locfileid: "84285613"
   
 - アタッチされた子タスクで、 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](attached-and-detached-child-tasks.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [タスク並列ライブラリ (TPL)](task-parallel-library-tpl.md)

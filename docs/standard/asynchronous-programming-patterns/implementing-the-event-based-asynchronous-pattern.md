@@ -1,5 +1,6 @@
 ---
 title: イベントベースの非同期パターンの実装
+description: .NET でイベントベースの非同期パターン (EAP) を実装する方法について説明します。 EAP は、非同期機能を持つクラスをパッケージ化するための標準的な方法です。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289383"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904378"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装
 

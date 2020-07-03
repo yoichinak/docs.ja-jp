@@ -1,13 +1,14 @@
 ---
 title: Enterprise Services および COM+ トランザクションとの相互運用性
+description: System.Transactions 名前空間を利用した、.NET での Enterprise Services および COM+ トランザクションとの相互運用性を理解します。
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: 98890c4c054a5063f91e429b13cfd6bab9f3dc15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebd6166fbd99ef102cf10ba1bcef9e3eb8aaa5da
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596855"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141902"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Enterprise Services および COM+ トランザクションとの相互運用性
 <xref:System.Transactions> 名前空間は、この名前空間を使用して作成されたトランザクション オブジェクトと COM+ によって作成されたトランザクションとの間の相互運用をサポートします。  
@@ -63,7 +64,7 @@ ms.locfileid: "64596855"
   
 |ES コンテキスト|None|自動|完全|  
 |----------------|----------|---------------|----------|  
-|既定のコンテキスト|既定のコンテキスト|既定のコンテキスト|新規作成 <br /> コンテキストの作成|  
+|既定のコンテキスト|既定のコンテキスト|既定のコンテキスト|新規作成 <br />コンテキストの作成|  
 |既定以外のコンテキスト|クライアントのコンテキストの保守|新しいトランザクション コンテキストの作成|新しいトランザクション コンテキストの作成|  
   
  次の表は、特定の <xref:System.EnterpriseServices> コンテキストと、<xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用するトランザクションを必要とするトランザクション スコープがあると、アンビエント トランザクションがどうなるかを示しています。  
@@ -73,7 +74,7 @@ ms.locfileid: "64596855"
 |既定のコンテキスト|ST|ST|ES|  
 |既定以外のコンテキスト|ST|ES|ES|  
   
- 注:   
+ 注:  
   
 - ST は、スコープのアンビエント トランザクションが <xref:System.Transactions> によって管理され、どの <xref:System.EnterpriseServices> コンテキストのトランザクション (存在する場合) にも関連付けられていないことを示します。  
   

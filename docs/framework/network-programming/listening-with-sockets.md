@@ -1,5 +1,6 @@
 ---
 title: リッスン (ソケットで)
+description: サーバー ソケットでネットワーク上のポートを開き、クライアントがそのポートに接続するのを待つリモート サービスを作成する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180734"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502315"
 ---
 # <a name="listening-with-sockets"></a>リッスン (ソケットで)
 リスナーまたはサーバー ソケットは、ネットワーク上のポートを開き、クライアントがそのポートに接続するまで待機します。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、TCP/IP ネットワーク用のリモート サービスを作成する方法を説明します。  
@@ -59,7 +60,7 @@ listener.Listen(100);
   
  **Listen** メソッドには、**Socket** に対する保留中の接続数の上限を指定する 1 つのパラメーターがあります。この上限を超えると、サーバー ビジー エラーが接続クライアントに返されます。 この例では、接続キューに格納できるクライアント数の上限は 100 個で、クライアント番号 101 にはサーバー ビジー応答が返されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)
 - [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)

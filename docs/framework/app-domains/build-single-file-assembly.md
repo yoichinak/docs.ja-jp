@@ -1,5 +1,6 @@
 ---
 title: '方法: .NET Framework シングルファイル アセンブリをビルドする'
+description: .NET のシングルファイル アセンブリをビルドする方法について確認します。 シングルファイル アセンブリは、.NET を対象とするライブラリ (.dll) または実行可能ファイル (.exe) を指定できます。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644303"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104929"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>方法: .NET Framework シングルファイル アセンブリをビルドする
 
@@ -33,7 +34,7 @@ ms.locfileid: "81644303"
 
 コマンド プロンプトに次のコマンドを入力します。
 
-\<*コンパイラ コマンド*> \<*モジュール名*>
+\<*compiler command*> \<*module name*>
 
 このコマンドでは、*コンパイラ コマンド*はお使いのコード モジュールで使用されている言語のコンパイラ コマンドで、*モジュール名*はアセンブリにコンパイルするコード モジュールの名前です。
 
@@ -51,7 +52,7 @@ vbc myCode.vb
 
 コマンド プロンプトに次のコマンドを入力します。
 
-\<*コンパイラ コマンド*>  **/out:** \<*ファイル名*> \<*モジュール名*>
+\<*compiler command*> **/out:** \<*file name*> \<*module name*>
 
 このコマンドでは、*コンパイラ コマンド*はお使いのコード モジュールで使用されている言語のコンパイラ コマンド、*ファイル名*は出力ファイル名、*モジュール名*はアセンブリにコンパイルするコード モジュールの名前です。
 
@@ -70,7 +71,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ライブラリ アセンブリを作成するには、コマンド プロンプトで次のコマンドを入力します。
 
-\<*コンパイラ コマンド*>  **-t:library** \<*モジュール名*>
+\<*compiler command*> **-t:library** \<*module name*>
 
 このコマンドでは、*コンパイラ コマンド*はお使いのコード モジュールで使用されている言語のコンパイラ コマンドで、*モジュール名*はアセンブリにコンパイルするコード モジュールの名前です。 **/out:** オプションなど、他のコンパイラ オプションも使用できます。
 

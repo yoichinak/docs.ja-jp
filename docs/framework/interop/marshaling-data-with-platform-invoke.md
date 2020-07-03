@@ -1,5 +1,6 @@
 ---
 title: プラットフォーム呼び出しによるデータのマーシャリング
+description: .NET でプラットフォーム呼び出しを使用してデータをマーシャリングします。 Windows API および C スタイルの関数で使用されるデータ型の一覧を参照し、対応する .NET マネージド型を検索します。
 ms.date: 03/20/2019
 dev_langs:
 - cpp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27045790780c1eef9537bdf7e52deb579e2b467c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400945"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904105"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>プラットフォーム呼び出しによるデータのマーシャリング
 

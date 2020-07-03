@@ -1,5 +1,6 @@
 ---
 title: '方法: アプリケーション ドメインにアセンブリを読み込む'
+description: .NET のアプリケーション ドメインにアセンブリを読み込む方法について説明します。 推奨されているのは、System.Reflection.Assembly で Static (または Shared) Load メソッドを使用する方法です。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c91c70625b79002e9297755dfdfac8aa6e283208
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119894"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104748"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>方法: アプリケーション ドメインにアセンブリを読み込む
 アプリケーション ドメインにアセンブリを読み込むには、いくつかの方法があります。 推奨されているのは、<xref:System.Reflection.Assembly?displayProperty=nameWithType> クラスの `static` (Visual Basic では `Shared`) <xref:System.Reflection.Assembly.Load%2A> メソッドを使用する方法です。 それ以外には、以下の方法でアセンブリを読み込むことができます。  

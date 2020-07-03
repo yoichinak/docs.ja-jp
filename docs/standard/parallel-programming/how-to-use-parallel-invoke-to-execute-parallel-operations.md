@@ -1,5 +1,6 @@
 ---
 title: '方法: Parallel.Invoke を使用して並列操作を実行する'
+description: タスク並列ライブラリ (TPL) で Parallel.Invoke を使用する方法を確認します。これにより、.NET で共有データ ソースに対して並列操作が行われます。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 084ade48b1406d23a11eb311739525f35ac973df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596346"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>方法: Parallel.Invoke を使用して並列操作を実行する
 

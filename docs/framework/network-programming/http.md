@@ -1,5 +1,6 @@
 ---
 title: HTTP
+description: HttpWebRequest と HttpWebResponse クラスを使用することで .NET Framework によって提供される、HTTP の包括的なサポートについて学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, HTTP
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffb7a5d027ef7691d03caf0ac45d4a3dd9bdb652
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048012"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502419"
 ---
 # <a name="http"></a>HTTP
 .NET Framework は、<xref:System.Net.HttpWebRequest> クラスと <xref:System.Net.HttpWebResponse> クラスを使用して、すべてのインターネット トラフィックの大部分を構成する HTTP プロトコルに対して包括的なサポートを提供します。 <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> から派生したこれらのクラスは、静的メソッド <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> が "http" または "https" で始まる URI に遭遇するたびに既定で返されます。 ほとんどの場合、**WebRequest** クラスと **WebResponse** クラスは、要求を行うために必要なすべてを提供しますが、プロパティとして公開されている HTTP 固有の機能にアクセスする必要がある場合は、これらのクラスを **HttpWebRequest** または **HttpWebResponse** に型キャストすることができますです。  
@@ -31,7 +32,7 @@ ms.locfileid: "71048012"
   
  アプリケーションでは、<xref:System.Net.WebException.Status%2A> を <xref:System.Net.WebExceptionStatus> に設定し、<xref:System.Net.WebException> をキャッチすることによって HTTP プロトコル エラーを受信します。 <xref:System.Net.WebException.Response%2A> プロパティは、サーバーによって送信された **WebResponse** を含み、実際の HTTP エラーがに発生したことを示します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [プロキシを介したインターネットへのアクセス](accessing-the-internet-through-a-proxy.md)
 - [アプリケーション プロトコルの使用](using-application-protocols.md)

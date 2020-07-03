@@ -1,18 +1,18 @@
 ---
 title: データ バインディングの概要
 description: .NET Core 向けの Windows Presentation Foundation でプロジェクトに追加できるさまざまなデータ ソースについて説明します。 データ ソースは、動的なアプリを作成するために XAML 要素にバインドできます。
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7f17ff094a35c04ba880c87c6966d7d249817516
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433254"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325758"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF のデータ バインディングの概要
 
@@ -327,7 +327,7 @@ WPF はビュー (指定したビュー、またはコレクションの既定�
 <Button Content="{Binding /Offices/}" />
 ```
 
-現在の項目のポインターは、コレクションに適用されている任意の並べ替えまたはフィルター処理の影響を受ける場合があります。 並べ替えは、現在の項目のポインターを最後に選択した項目に保持しますが、コレクション ビューはそれを中心に再構築されています  (以前はリストの先頭にあった選択した項目が、現在はリストの中ほどにある場合があります)。フィルター処理後に選択した項目がビューに残っている場合、フィルター処理はその項目を保持します。 それ以外の場合は、現在の項目のポインターが、フィルター処理されたコレクション ビューの最初の項目に設定されます。
+現在の項目のポインターは、コレクションに適用されている任意の並べ替えまたはフィルター処理の影響を受ける場合があります。 並べ替えは、現在の項目のポインターを最後に選択した項目に保持しますが、コレクション ビューはそれを中心に再構築されています (以前はリストの先頭にあった選択した項目が、現在はリストの中ほどにある場合があります)。フィルター処理後に選択した項目がビューに残っている場合、フィルター処理はその項目を保持します。 それ以外の場合は、現在の項目のポインターが、フィルター処理されたコレクション ビューの最初の項目に設定されます。
 
 #### <a name="master-detail-binding-scenario"></a>マスターと詳細のバインディング シナリオ
 

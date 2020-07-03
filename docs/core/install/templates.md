@@ -1,19 +1,19 @@
 ---
 title: SDK テンプレートのインストールと管理 - .NET Core
 description: Windows、Linux、macOS に .NET Core テンプレートをインストールする方法について説明します。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200601"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324486"
 ---
 # <a name="manage-net-project-and-item-templates"></a>.NET のプロジェクトと項目のテンプレートを管理する
 
@@ -29,7 +29,7 @@ ms.locfileid: "82200601"
 
 .NET CLI テンプレートは広範囲に配布する目的で [NuGet](https://www.nuget.org/) にアップロードされます。 テンプレートはプライベート フィードからもインストールできます。 テンプレートを NuGet フィードにアップロードする代わりに、*nupkg* テンプレート ファイルを配布し、手動でインストールできます。詳細は「[ローカル NuGet パッケージ](#local-nuget-package)」セクションにあります。
 
-NuGet フィードの構成については、「[dotnet nuget add source](../tools/dotnet-nuget-add-source.md)」を参照してください。
+NuGet フィード構成の詳細については、「[dotnet nuget add source](../tools/dotnet-nuget-add-source.md)」を参照してください。
 
 既定の NuGet フィードからテンプレート パックをインストールするには、`dotnet new -i {package-id}` コマンドを使用します。
 

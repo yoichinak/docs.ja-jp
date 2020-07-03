@@ -1,5 +1,6 @@
 ---
 title: マネージド スレッドの例外
+description: .NET でハンドルされない例外をハンドルする方法について参照します。 .NET バージョン 2.0 では、ほとんどのハンドルされないスレッド例外がそのまま続行して、アプリケーションが終了します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279699"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767885"
 ---
 # <a name="exceptions-in-managed-threads"></a>マネージド スレッドの例外
 .NET Framework バージョン 2.0 以降では、共通言語ランタイムはスレッド内のほとんどのハンドルされない例外をそのまま続行させます。 ほとんどの場合、これはハンドルされない例外によってアプリケーションが終了することを意味します。  
@@ -76,6 +77,6 @@ ms.locfileid: "84279699"
 ## <a name="host-override"></a>ホストのオーバーライド  
  .NET Framework バージョン 2.0 では、アンマネージ ホストはホスト API の [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) インターフェイスを使用して、共通言語ランタイムの既定のハンドルされない例外ポリシーをオーバーライドできます。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 関数を使用して、ハンドルされない例外のポリシーを設定します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [マネージド スレッド処理の基本](managed-threading-basics.md)

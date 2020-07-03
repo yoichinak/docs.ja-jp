@@ -1,5 +1,6 @@
 ---
 title: '方法: 要求のキャッシュ ポリシーを設定する'
+description: .NET Framework で要求のキャッシュ ポリシーを設定する方法について学習します。 このキャッシュ ポリシーによって、キャッシュからリソースを最大 1 日使用できるようになります。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180763"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502432"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>方法: 要求のキャッシュ ポリシーを設定する
 次の例では、要求のキャッシュ ポリシーの設定方法を示します。 入力の例は、`http://www.contoso.com/` などの URI です。  
@@ -105,7 +106,7 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](cache-policy.md)

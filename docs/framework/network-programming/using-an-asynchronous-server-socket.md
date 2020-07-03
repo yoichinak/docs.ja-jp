@@ -1,5 +1,6 @@
 ---
 title: 非同期サーバー ソケットの使用
+description: この例では、非同期サーバー ソケットを示しています。 Socket クラスでは .NET Framework の非同期プログラミング モデルを使用し、ネットワーク サービス要求を処理します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 467804e685d800643c421ed1aad040a842b42886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180633"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502029"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>非同期サーバー ソケットの使用
 非同期サーバー ソケットは、.NET Framework の非同期プログラミング モデルを使用してネットワーク サービス要求を処理します。 <xref:System.Net.Sockets.Socket> クラスは、標準の .NET Framework の非同期名前付けパターンに従います。たとえば、同期の <xref:System.Net.Sockets.Socket.Accept%2A> メソッドは非同期の <xref:System.Net.Sockets.Socket.BeginAccept%2A> メソッドと <xref:System.Net.Sockets.Socket.EndAccept%2A> メソッドに対応します。  
@@ -268,7 +269,7 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)
 - [非同期サーバー ソケットの例](asynchronous-server-socket-example.md)

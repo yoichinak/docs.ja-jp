@@ -1,14 +1,14 @@
 ---
 title: ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 description: ML.NET コマンド ライン インターフェイス (CLI) ツールをインストール、アップグレード、ダウングレード、およびアンインストールする方法を説明します。
-ms.date: 12/18/2019
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848640"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602272"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 
@@ -21,13 +21,13 @@ ML.NET CLI では、自動機械学習 (AutoML) とトレーニング データ�
 
 ## <a name="pre-requisites"></a>前提条件
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (省略可能) [Visual Studio 2017 または 2019](https://visualstudio.microsoft.com/vs/)
+- (省略可能) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
 生成された C# コード プロジェクトを Visual Studio で実行するには、`F5` キーを押すか、`dotnet run` (.NET Core CLI) を使用します。
 
-メモ:[.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) のインストール後に `dotnet tool` コマンドが機能しない場合は、Windows からサインアウトしてから再度サインインします。
+メモ:.NET Core SDK のインストール後に `dotnet tool` コマンドが機能しない場合は、Windows からサインアウトしてから再度サインインします。
 
 ## <a name="install"></a>インストール
 
@@ -54,7 +54,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 mlnet
 ```
 
-"auto-train" コマンドなど、mlnet ツールに利用できるコマンドのヘルプを参照することをお勧めします。
+"classification" コマンドなど、mlnet ツールに利用できるコマンドのヘルプを参照することをお勧めします。
 
 ## <a name="install-a-specific-release-version"></a>特定のリリース バージョンをインストールする
 

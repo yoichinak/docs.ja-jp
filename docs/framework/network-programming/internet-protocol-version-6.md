@@ -1,5 +1,6 @@
 ---
 title: インターネット プロトコル バージョン 6
+description: IPv6 プロトコルと IPv4 との違いについて学習します。 .NET Framework アプリケーションでは IPv6 をサポートしますが、構成が必要になる場合があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IPv6, improvements
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047876"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502393"
 ---
 # <a name="internet-protocol-version-6"></a>インターネット プロトコル バージョン 6
 インターネット プロトコル バージョン 6 (IPv6) は、インターネットのネットワーク層の標準プロトコルの新しいスイートです。 IPv6 は、アドレスの不足、セキュリティ、自動構成、拡張性などに関して、インターネット プロトコル スイートの現在のバージョン (IPv4) が抱える多くの問題を解決するために設計されています。 IPv6 は、インターネットの機能を拡張して、ピア ツー ピア アプリケーションやモバイル アプリケーションなどの新しい種類のアプリケーションを有効にします。 現在の IPv4 プロトコルの主な問題を次に示します。  
@@ -42,9 +43,9 @@ ms.locfileid: "71047876"
   
 - 組み込み認証と機密性。  
   
- 詳細については、「[IPv6 アドレス指定](ipv6-addressing.md)」、「[IPv6 のルーティング](ipv6-routing.md)」、「[IPv6 の自動構成](ipv6-auto-configuration.md)」、「[IPv6 の有効化と無効化](enabling-and-disabling-ipv6.md)」、および「[方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)」を参照してください。  
+ 詳細については、「[IPv6 アドレス指定](ipv6-addressing.md)」、「[IPv6 のルーティング](ipv6-routing.md)」、「[IPv6 の自動構成](ipv6-auto-configuration.md)」、「[IPv6 の有効化と無効化](enabling-and-disabling-ipv6.md)」、および「[方法:IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)」を参照してください。  
   
-## <a name="references"></a>References  
+## <a name="references"></a>関連項目  
  [インターネット技術標準化委員会 (IETF)](https://www.ietf.org/) Web サイトで検索できる厳選した RFC ドキュメントを次に示します。  
   
 - RFC 1287、Towards the Future Internet Architecture (将来のインターネットアーキテクチャに向けて)  
@@ -57,7 +58,7 @@ ms.locfileid: "71047876"
   
  [IP バージョン 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29) でも IPv6 関連の情報を見つけることができます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IPv6 ソケットのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [ネットワーク プログラミングのサンプル](network-programming-samples.md)

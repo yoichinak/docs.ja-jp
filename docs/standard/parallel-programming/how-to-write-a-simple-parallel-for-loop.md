@@ -1,5 +1,6 @@
 ---
 title: '方法: 単純な Parallel.For ループを記述する'
+description: ループをキャンセルしたり、ループのイテレーションを中断したり、スレッドローカルの状態を維持したりする必要のない、.NET の Parallel.For ループの記述を学びます。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,19 +11,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8307f2205653fbd213d824acffc405ee97580166
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290734"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662694"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>方法: 単純な Parallel.For ループを記述する
 
 このトピックでは、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドを示す 2 つの例を示しています。 最初の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> メソッドのオーバー ロードを使用し、2 番目の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> のオーバー ロードを使用しています。これらは <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドの 2 つの最も単純なオーバーロードです。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドのこれらの 2 つのオーバー ロードは、ループをキャンセルする必要がない場合、ループのイテレーションから抜ける場合、またはいずれかのスレッドローカル状態を維持する場合に使用します。
 
 > [!NOTE]
-> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[PLINQ および TPL のラムダ式](lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
+> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[Lambda Expressions in PLINQ and TPL (PLINQ および TPL のラムダ式)](lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
 
 最初の例では、1 つのディレクトリ内のファイルのサイズを計算します。 2 つ目の例では、2 つの行列の積を計算します。
 
@@ -68,7 +69,7 @@ ms.locfileid: "84290734"
 
 このコードをコピーして、Visual Studio プロジェクトに貼り付けます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>

@@ -1,14 +1,14 @@
 ---
 title: ML.NET CLI を使用してモデルのトレーニングを自動化する
 description: ML.NET CLI ツールを使用してコマンドラインから最適なモデルを自動的にトレーニングする方法について説明します。
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212413"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589664"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI を使用してモデルのトレーニングを自動化する
 
@@ -33,24 +33,24 @@ ML.NET CLI は [.NET Core ツール](../core/tools/global-tools.md)です。 ツ
 
 現在、ML.NET CLI でサポートされている ML タスクは次のとおりです。
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- 予定: `recommendation`、`ranking`、`anomaly-detection`、`clustering` などの他の機械学習タスク
+- 分類 (バイナリおよび複数クラス)
+- 回帰
+- 推奨
+- 今後: イメージ分類、順位付け、異常検出、クラスタリングなどの他の機械学習タスク
 
-使用例:
+使用例 (分類シナリオ):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![イメージ](media/automate-training-with-cli/cli-model-generation.gif)
+![イメージ](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 *Windows PowerShell*、*macOS/Linux bash*、または *Windows CMD* でも同じ方法で実行できます。 ただし、タブのオートコンプリート (パラメーター候補) は *Windows CMD* では機能しません。
 
 ## <a name="output-assets-generated"></a>生成される出力資産
 
-CLI `auto-train` コマンドを使用すると、出力フォルダーに以下の資産が生成されます。
+CLI で ML タスク コマンドを使用すると、出力フォルダーに以下の資産が生成されます。
 
 - 予測を実行する準備が完了したシリアル化されたモデル .zip ("最適なモデル")。
 - C# ソリューション:
@@ -68,23 +68,15 @@ CLI ツールを使用して "最適なモデル" を生成すると、対象の
 
 ここでは、自動生成された "最適なモデル" の品質を理解できるように、これらのメトリックを ML タスク別にグループ化してまとめています。
 
-### <a name="metrics-for-binary-classification-models"></a>二値分類モデルのメトリック
+### <a name="metrics-for-classification-models"></a>分類モデルのメトリック
 
-CLI によって検出される上位 5 つのモデルの二項分類 ML タスク メトリック一覧を次に示します。
-
-![イメージ](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-正確度は分類問題の一般的なメトリックですが、以下のリファレンスで説明されているように、最適なモデルを選択する場合に正確度が常に最適なメトリックとは限りません。 必要に応じて追加のメトリックを使用してモデルの品質を評価する場合があります。
-
-CLI によって出力されるメトリックを調べて理解するには、[二項分類の評価メトリック](resources/metrics.md#evaluation-metrics-for-binary-classification)に関するトピックをご覧ください。
-
-### <a name="metrics-for-multi-class-classification-models"></a>多クラス分類モデルのメトリック
-
-CLI によって検出される上位 5 つのモデルの多クラス分類 ML タスク メトリック一覧を次に示します。
+CLI によって検出される上位 5 つのモデルの分類メトリックの一覧を次に示します。
 
 ![イメージ](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-CLI によって出力されるメトリックを調べて理解するには、[多クラス分類の評価メトリック](resources/metrics.md#evaluation-metrics-for-multi-class-classification)に関するトピックをご覧ください。
+ 正確度は分類問題の一般的なメトリックですが、以下のリファレンスで説明されているように、最適なモデルを選択する場合に正確度が常に最適なメトリックとは限りません。 必要に応じて追加のメトリックを使用してモデルの品質を評価する場合があります。
+
+CLI によって出力されるメトリックを調べて理解するには、[分類の評価メトリック](resources/metrics.md#evaluation-metrics-for-multi-class-classification)に関する記事をご覧ください。
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>回帰とレコメンデーション モデルのメトリック
 

@@ -1,5 +1,6 @@
 ---
 title: ネットワーク上でストリームを使用する
+description: .NET Framework では、ネットワーク リソースはストリームとして表されます。 NetworkStream クラスでは、ネットワーク リソースを使用するために Stream クラスが実装されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180621"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501977"
 ---
 # <a name="using-streams-on-the-network"></a>ネットワーク上でストリームを使用する
 .NET Framework では、ネットワーク リソースはストリームとして表されます。 .NET Framework は、ストリームを汎用的に扱うことで、次の機能を提供しています。  
@@ -102,7 +103,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [方法: WebRequest クラスを使用してデータを要求する](how-to-request-data-using-the-webrequest-class.md)
 - [データの要求](requesting-data.md)

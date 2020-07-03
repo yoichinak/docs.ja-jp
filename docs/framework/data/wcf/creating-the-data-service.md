@@ -1,16 +1,17 @@
 ---
 title: Visual Studio で WCF のデータ サービスを作成する
+description: WCF Data Services を使用するサンプル データ サービスを作成し、サンプル データベースに基づいて OData フィードを公開する方法について説明します。
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802268"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247792"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
 
@@ -52,7 +53,7 @@ ms.locfileid: "74802268"
 
 5. 次のいずれかの手順を実行してデータ モデルをデータベースに接続してから **[次へ]** をクリックします。
 
-    - データベース接続がまだ構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、[SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - データベース接続がまだ構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「[方法:SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または
 

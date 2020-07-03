@@ -1,5 +1,6 @@
 ---
 title: エラー処理
+description: WebRequest と WebResponse によってスローされるシステムおよび Web 固有の例外について学習します。 問題を理解して解決するには、Status プロパティを使用します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180866"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502575"
 ---
 # <a name="handling-errors"></a>エラー処理
 
@@ -46,7 +47,7 @@ ms.locfileid: "79180866"
   
 **Status** プロパティの有効な値を次の表に示します。  
   
-|Status|[説明]|  
+|Status|説明|  
 |------------|-----------------|  
 |ConnectFailure|トランスポート レベルでリモート サービスに接続できませんでした。|  
 |ConnectionClosed|接続は処理の途中で中断されました。|  
@@ -58,7 +59,7 @@ ms.locfileid: "79180866"
 |SecureChannelFailure|セキュリティで保護されたチャネル リンクでエラーが発生しました。|  
 |SendFailure|リモート サーバーに完全な要求を送信できませでした。|  
 |ServerProtocolViolation|サーバーの応答が有効な HTTP 応答ではありません。|  
-|Success|エラーは発生しませんでした。|  
+|成功|エラーは発生しませんでした。|  
 |Timeout|要求に対して設定されたタイムアウト時間内で応答が受信されませんでした。|  
 |TrustFailure|サーバー証明書を検証できませんでした。|  
 |MessageLengthLimitExceeded|要求の送信時またはサーバーから応答の受信時に指定された制限を超えるメッセージが受信されました。|  
@@ -168,7 +169,7 @@ Windows ソケットでエラーが発生した場合、<xref:System.Net.Sockets
   
 **SocketException** がスローされると、**SocketException** クラスは <xref:System.Net.Sockets.SocketException.ErrorCode%2A> プロパティを、最後に発生したオペレーティング システムのソケット エラーに設定します。 ソケット エラー コードの詳細については、MSDN の Winsock 2.0 API エラー コードに関するドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET での例外の処理とスロー](../../standard/exceptions/index.md)
 - [データの要求](requesting-data.md)

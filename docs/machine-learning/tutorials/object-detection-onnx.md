@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144748"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767781"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -94,7 +94,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
     - [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。
     - **[インストール]** ボタンを選択します。
     - **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
-    - **Microsoft.ML.ImageAnalytics** と **Microsoft.ML.OnnxTransformer** に対してこれらの手順を繰り返します。
+    - **Microsoft.ML.ImageAnalytics**、**Microsoft.ML.OnnxTransformer**、**Microsoft.ML.OnnxRuntime** に対してこれらの手順を繰り返します。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>データと事前トレーニング済みモデルを準備する
 

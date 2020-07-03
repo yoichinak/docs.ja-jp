@@ -1,5 +1,6 @@
 ---
 title: 非同期要求を行う
+description: System.Net クラスで、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用するしくみについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: a49233596bafebd4f07372e59f29ea77afb21458
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0af143b723c90b146dc5de8447d4a7e1866e7105
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180722"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502302"
 ---
 # <a name="making-asynchronous-requests"></a>非同期要求を行う
 <xref:System.Net> クラスは、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用します。 <xref:System.Net.WebRequest> クラスの <xref:System.Net.WebRequest.BeginGetResponse%2A> および <xref:System.Net.WebRequest.EndGetResponse%2A> メソッドは、インターネット リソースの非同期要求の開始と完了を行います。  

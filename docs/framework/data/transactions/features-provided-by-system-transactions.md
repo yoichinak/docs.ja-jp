@@ -1,13 +1,14 @@
 ---
 title: System.Transactions により提供される機能
+description: .NET の System.Transactions 名前空間によって提供される機能を確認し、独自のトランザクション アプリケーションとリソース マネージャーを記述します。
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: c3ef924edf34ae19be9eace85aaee5340025de7d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0278e9248305572c6156c6500f1fe51a8b3f3338
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205965"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141863"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions により提供される機能
 ここでは、<xref:System.Transactions> 名前空間により提供される機能を使用して、独自のトランザクション アプリケーションとリソース マネージャーを作成する方法について説明します。 特に、1 つまたは複数の参加要素を含むローカル トランザクションまたは分散トランザクションを作成し、参加する方法について説明します。  

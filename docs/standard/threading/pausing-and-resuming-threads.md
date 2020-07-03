@@ -1,5 +1,6 @@
 ---
 title: スレッドの一時中断および中断
+description: .NET でスレッドを一時中断および中断する方法について説明します。 Thread.Sleep や Thread.Interrupt のようなメソッドや、ThreadInterruptedException などの例外を使用する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291163"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769120"
 ---
 # <a name="pausing-and-interrupting-threads"></a>スレッドの一時中断および中断
 
@@ -47,7 +48,7 @@ ms.locfileid: "84291163"
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによってスレッドで <xref:System.Threading.ThreadAbortException> がスローされます。 詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>

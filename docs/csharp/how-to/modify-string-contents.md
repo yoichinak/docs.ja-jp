@@ -3,16 +3,16 @@ title: 文字列の内容を変更する方法 - C# ガイド
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663006"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324169"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\# で文字列の内容を変更する方法
 
-この記事では、既存の `string` を変更して `string` を生成するためのいくつかの手法を示します。 紹介するすべての手法で、変更の結果が `string` オブジェクトとして返されます。 これを明確に示すため、すべての例で、新しい変数に結果を格納します。 これで、それぞれの例を実行したときに、元の `string` と、変更から生じる `string` の両方を確認できます。
+この記事では、既存の `string` を変更して `string` を生成するためのいくつかの手法を示します。 紹介するすべての手法で、変更の結果が `string` オブジェクトとして返されます。 元と変更後の文字列が異なるインスタンスであることを示すために、例では、新しい変数に結果が格納されています。 各例を実行するとき、元の `string` と変更後の新しい `string` を調べることができます。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "84663006"
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-アンセーフ コードを使用して固定ブロック内の文字列を変更することは可能ですが、文字列が作成された後に文字列の内容を変更することは**強く**お勧めしません。 そうすると、予期できない方法で中断が発生します。 たとえば、他のユーザーがあなたの文字列と同じ内容の文字列をインターンした場合、彼らによってコピーが取得され、あなたが文字列を変更しようとしているとは全く想定されません。
+アンセーフ コードを使用して固定ブロック内の文字列を変更することは可能ですが、文字列が作成された後に文字列の内容を変更することは**強く**お勧めしません。 そうすると、予期できない方法で中断が発生します。 たとえば、誰かがあなたの文字列と同じ内容の文字列をインターン処理する場合、その人はあなたのコピーを取得し、あなたが文字列を変更しようとしているとは想定しません。
 
 ## <a name="see-also"></a>関連項目
 

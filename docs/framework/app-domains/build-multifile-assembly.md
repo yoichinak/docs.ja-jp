@@ -1,5 +1,6 @@
 ---
 title: '方法: マルチファイル アセンブリをビルドする'
+description: プロシージャの各手順を示すサンプル コードを使用して、.NET のマルチファイル アセンブリをビルド (作成) する方法について説明します。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,12 +18,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429559"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104949"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイル アセンブリをビルドする
 
@@ -209,7 +210,7 @@ ms.locfileid: "74429559"
 
     コマンド プロンプトに次のコマンドを入力します。
 
-    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*> **/out:** \<*file name*> **/target:** \<*assembly file type*>
 
     このコマンドで、*module name* 引数はアセンブリに含める各モジュールの名前を指定します。 **/main:** オプションは、アセンブリのエントリ ポイントであるメソッド名を指定します。 **/out:** オプションは、アセンブリ メタデータを格納する出力ファイルの名前を指定します。 **/target:** オプションは、アセンブリがコンソール アプリケーション実行可能 ( *.exe*) ファイル、Windows 実行可能 ( *.win*) ファイル、またはライブラリ ( *.lib*) ファイルであることを指定します。
 

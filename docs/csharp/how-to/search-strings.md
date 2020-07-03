@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662954"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324124"
 ---
 # <a name="how-to-search-strings"></a>文字列を検索する方法
 
@@ -23,7 +23,7 @@ ms.locfileid: "84662954"
 
 ## <a name="does-a-string-contain-text"></a>文字列にテキストが含まれていますか?
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>、<xref:System.String.StartsWith%2A?displayProperty=nameWithType> および <xref:System.String.EndsWith%2A?displayProperty=nameWithType>メソッドでは、特定のテキストの文字列を検索します。 次の例は、これらの各メソッドと、大文字と小文字を区別しない検索を使用するバリエーションを示しています。
+<xref:System.String.Contains%2A?displayProperty=nameWithType>、<xref:System.String.StartsWith%2A?displayProperty=nameWithType>、<xref:System.String.EndsWith%2A?displayProperty=nameWithType> メソッドでは、特定のテキストの文字列を検索します。 次の例は、これらの各メソッドと、大文字と小文字を区別しない検索を使用するバリエーションを示しています。
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 

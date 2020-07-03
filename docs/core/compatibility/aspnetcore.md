@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 06/11/2020
+ms.date: 06/23/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803271"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325452"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -45,15 +45,18 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [HTTP:応答本文のインフラストラクチャの変更](#http-response-body-infrastructure-changes)
 - [HTTP:一部の cookie SameSite の既定値の変更](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP:同期 IO を既定で無効化](#http-synchronous-io-disabled-in-all-servers)
+- [HttpSys:既定で無効になっているクライアント証明書の再ネゴシエーション](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [ID:AddDefaultUI メソッド オーバーロードの削除](#identity-adddefaultui-method-overload-removed)
 - [ID:UI ブートストラップ バージョンの変更](#identity-default-bootstrap-version-of-ui-changed)
 - [ID:SignInAsync が認証されていない ID に対して例外をスロー](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [ID:SignInManager コンストラクターで新しいパラメーターの受け入れ](#identity-signinmanager-constructor-accepts-new-parameter)
 - [ID:UI で静的な Web 資産機能を使用](#identity-ui-uses-static-web-assets-feature)
+- [IIS:UrlRewrite ミドルウェア クエリ文字列は保持されます](#iis-urlrewrite-middleware-query-strings-are-preserved)
 - [Kestrel:実行時に構成変更が既定で検出される](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel:接続アダプターを削除](#kestrel-connection-adapters-removed)
 - [Kestrel:既定でサポートされている TLS プロトコル バージョンの変更](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel:空の HTTPS アセンブリを削除](#kestrel-empty-https-assembly-removed)
+- [Kestrel:互換性のない Windows バージョンでの TLS 経由の HTTP/2 の無効化](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
 - [Kestrel:要求トレーラー ヘッダーを新しいコレクションに移動](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel:トランスポート抽象化レイヤーの変更](#kestrel-transport-abstractions-removed-and-made-public)
 - [ローカリゼーション:API を古いとしてマーク](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -100,10 +103,22 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 
 ***
 
+[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
+
+***
+
+[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
+
+***
+
 [!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
 
 ***
 [!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
 
 ***
 

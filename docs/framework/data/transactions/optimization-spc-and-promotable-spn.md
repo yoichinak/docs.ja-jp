@@ -1,13 +1,14 @@
 ---
 title: 単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
+description: 単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用したパフォーマンスを最適化します。 .NET の System.Transactions インフラストラクチャについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 89ce82e673340c93254983c078f78a2501129383
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205901"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141979"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
 

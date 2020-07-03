@@ -1,5 +1,6 @@
 ---
 title: .NET の StringBuilder クラスを使用する
+description: .NET の StringBuilder クラスを使用する方法を説明します。 このクラスを使用すると、オブジェクトを作成せずに文字列を変更できます。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289266"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803223"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET の StringBuilder クラスを使用する
 <xref:System.String> オブジェクトは、変更できません。 <xref:System.String?displayProperty=nameWithType> クラスのメソッドのいずれかを使用するたびに、新しい文字列オブジェクトをメモリ内に作成します。その際、その新しいオブジェクトに対して領域を新たに割り当てる必要があります。 文字列に対して何度も変更を実行する必要がある場合、新しい <xref:System.String> オブジェクトの作成に関連したオーバーヘッドが高コストになる可能性があります。 新しいオブジェクトを作成せずに文字列を変更したい場合は、<xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスを使用することができます。 たとえば、ループで多数の文字列を連結する場合に、<xref:System.Text.StringBuilder> クラスを使用してパフォーマンスを向上させることができます。  
@@ -66,7 +67,7 @@ ms.locfileid: "84289266"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|文字列に渡される書式指定子を、書式設定されたテキスト文字列で置き換えます。|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|現行の **StringBuilder** の指定されたインデックスに、文字列またはオブジェクトを挿入します。|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|現行の **StringBuilder** から、指定された文字数を削除します。|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|指定されたインデックスで、指定された文字を置き換えます。|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|現行の **StringBuilder** に出現する指定された文字または文字列をすべて、指定された別の文字または文字列に置換します。|  
   
 ### <a name="append"></a>追加  
  **Append** メソッドを使用して、現行 **StringBuilder** によって表される文字列の末尾にオブジェクトのテキストまたは文字列形式を追加することができます。 次の例では、**StringBuilder** を "Hello World" に初期設定し、テキストをオブジェクトの末尾に追加しています。 領域は、必要に応じて自動的に割り当てられます。  

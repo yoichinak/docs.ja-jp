@@ -1,13 +1,14 @@
 ---
 title: Peer Name Resolution Protocol
+description: セキュリティで保護され、拡張性があり動的な名前登録および名前解決プロトコルであるピア名解決プロトコル (PNRP) について説明します。
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72eb63c2c90f398c515d77cd2b2d693237e533a5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428215"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502224"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution Protocol
 ピアツーピア環境において、ピアは特定の名前解決システムを使用して、互いのネットワーク上の場所 (アドレス、プロトコル、およびポート) をその名前や他の識別子から解決します。 これまで、ドメイン ネーム システム (DNS) でのピア名の解決は、本質的に一時的な接続やその他の不具合によって複雑化していました。  
@@ -36,17 +37,17 @@ ms.locfileid: "74428215"
   
 - 使用可能な PNRP サービスに名前を登録して解決するために使用する基本的な型は、次のとおりです。  
   
-- <xref:System.Net.PeerToPeer.Cloud>: 使用可能な PNRP クラウドとそのスコープを説明する情報を定義します。  
+- <xref:System.Net.PeerToPeer.Cloud>:使用可能な PNRP クラウドとそのスコープを説明する情報を定義します。  
   
-- <xref:System.Net.PeerToPeer.PeerName>: クラウド内でピアを登録し、その後解決するために使用できるピア名を定義します。  
+- <xref:System.Net.PeerToPeer.PeerName>:クラウド内でピアを登録し、その後解決するために使用できるピア名を定義します。  
   
-- <xref:System.Net.PeerToPeer.PeerNameRecord>: ピアの登録情報を含む、PNRP クラウド内のレコードを定義します。この情報は、ピアに接続できるネットワーク エンドポイントを含みます。  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>:ピアの登録情報を含む、PNRP クラウド内のレコードを定義します。この情報は、ピアに接続できるネットワーク エンドポイントを含みます。  
   
-- <xref:System.Net.PeerToPeer.PeerNameRegistration>: ピア名の登録を開始および停止するメソッドを含む、ピア名の登録プロセスを定義します。  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>:ピア名の登録を開始および停止するメソッドを含む、ピア名の登録プロセスを定義します。  
   
-- <xref:System.Net.PeerToPeer.PeerNameResolver>: 解決の同期および非同期のメソッドなど、ピア名をネットワーク エンドポイントに解決するためのプロセスを定義します。  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>:解決の同期および非同期のメソッドなど、ピア名をネットワーク エンドポイントに解決するためのプロセスを定義します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>

@@ -4,12 +4,12 @@ description: .NET Portability Analyzer ツールを使って、さまざまな .
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903611"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -32,6 +32,20 @@ Visual Studio で .NET Portability Analyzer を使用するには、[Visual Stud
 ![移植性アナライザーのスクリーンショット。](./media/portability-analyzer/portability-screenshot.png)
 
 ApiPort コンソール アプリケーションを使用して、[ApiPort リポジトリ](https://aka.ms/apiportdownload)からダウンロードすることもできます。 `listTargets` コマンド オプションを使って使用可能なターゲットの一覧を表示した後、`-t` または `--target` コマンド オプションを指定することによってターゲット プラットフォームを選択できます。
+
+### <a name="solution-wide-view"></a>ソリューション全体の表示
+
+多数のプロジェクトが含まれるソリューションを分析するためのステップとしては、アセンブリのサブセットのどれが何に依存しているのかを把握するために、依存関係を視覚化するのが有用です。 一般的には、依存関係グラフのリーフ ノードで始まるボトムアップ アプローチで分析結果を適用することが推奨されます。
+
+これを取得するには、次のコマンドを実行します。
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+この結果を Visual Studio で開くと次のようになります。
+
+![DGML 分析のスクリーンショット。](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>移植性を分析する
 Visual Studio でプロジェクト全体を分析するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[Analyze Assembly Portability]\(アセンブリの移植性を分析する\)** を選択します。 または、 **[分析]** メニューで **[Analyze Assembly Portability]** (アセンブリの移植性を分析) を選択します。 そこから、プロジェクトの実行可能ファイルまたは DLL を選択します。

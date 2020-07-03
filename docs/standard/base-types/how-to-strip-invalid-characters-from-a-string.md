@@ -1,5 +1,6 @@
 ---
-title: '方法 : 文字列から無効な文字を取り除く'
+title: '方法: 文字列から無効な文字を取り除く'
+description: 静的 Regex.Replace メソッドを使用して、文字列から害を及ぼす可能性のある文字を取り除く方法を示す例について確認します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: 5f2a1e7a3202b14d32ed02c6808fe2411465d9b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f9d671587d174a1eb2bb6a5dac24bdd0220be3dd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290436"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600829"
 ---
-# <a name="how-to-strip-invalid-characters-from-a-string"></a>方法 : 文字列から無効な文字を取り除く
+# <a name="how-to-strip-invalid-characters-from-a-string"></a>方法: 文字列から無効な文字を取り除く
 次の例では、静的 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを使用して、文字列から無効な文字を取り除いています。  
   
 ## <a name="example"></a>例  
@@ -34,6 +35,6 @@ ms.locfileid: "84290436"
   
  正規表現パターン `[^\w\.@-]` は、単語に使用される文字、ピリオド、@ 記号、またはハイフンではないすべての文字に一致します。 単語に使用される文字とは、すべての英字、数字、または区切りのコネクタ文字 (アンダースコアなど) です。 このパターンに一致するすべての文字は、置換パターンで定義されている <xref:System.String.Empty?displayProperty=nameWithType> で置き換えられます。 ユーザー入力で他の文字も許可するには、正規表現パターンの文字クラスにその文字を追加します。 たとえば、正規表現パターン `[^\w\.@-\\%]` は、入力文字列にパーセント記号とバックスラッシュも許可しています。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET の正規表現](regular-expressions.md)

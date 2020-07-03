@@ -1,5 +1,6 @@
 ---
 title: 同期サーバー ソケットの例
+description: この .NET Framework プログラムの例では、非同期ソケットを使用してクライアントから接続を受信するサーバーを作成します。 これは文字列を受信してエコーを返します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: e8924051a7087ac26793722457f934e58a75f23d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e2fb91dc493b2da4c68a98ac8a62494e78a9fd1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180663"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502107"
 ---
 # <a name="synchronous-server-socket-example"></a>同期サーバー ソケットの例
-次のプログラム例では、クライアントからの接続要求を受け取るサーバーを作成します。 このサーバーは同期ソケットで構築されます。そのため、サーバー アプリケーションの実行は、クライアントからの接続を待っている間、一時停止となります。 このアプリケーションはクライアントから文字列を受信し、それをコンソールに表示してから、クライアントにエコーで返します。 クライアントからの文字列には、文字列 "\<EOF>" が含まれている必要があります。これは、メッセージの終わりを伝えるためのものです。  
+次のプログラム例では、クライアントからの接続要求を受け取るサーバーを作成します。 このサーバーは同期ソケットで構築されます。そのため、サーバー アプリケーションの実行は、クライアントからの接続を待っている間、一時停止となります。 このアプリケーションはクライアントから文字列を受信し、それをコンソールに表示し、クライアントにエコー バックします。 クライアントからの文字列には、メッセージの終わりを伝えるための文字列 "\<EOF>" が含まれている必要があります。  
   
 ```vb  
 Imports System  
@@ -155,7 +156,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [同期クライアント ソケットの例](synchronous-client-socket-example.md)
 - [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)

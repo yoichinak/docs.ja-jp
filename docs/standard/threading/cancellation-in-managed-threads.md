@@ -1,5 +1,6 @@
 ---
 title: マネージド スレッドのキャンセル
+description: マネージド スレッドのキャンセルについて理解します。 非同期操作または長時間にわたる同期操作に対する連携によるキャンセルでのキャンセル トークンについて説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277883"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662837"
 ---
 # <a name="cancellation-in-managed-threads"></a>マネージド スレッドのキャンセル
 .NET Framework 4 以降、.NET Framework では、非同期操作または長時間にわたる同期操作に対する連携によるキャンセルのために、統一されたモデルが使用されます。 このモデルは、キャンセル トークンと呼ばれる軽量のオブジェクトに基づいています。 新しいスレッドまたは新しいタスクの作成などによって 1 つ以上のキャンセル可能な操作を呼び出すオブジェクトは、各操作にトークンを渡します。 次いで、個々の操作は他の操作にトークンのコピーを渡すことができます。 その後、トークンを作成したオブジェクトは、操作が実行している処理を停止するように、そのトークンを使用してその操作に要求できます。 キャンセル要求は、要求側のオブジェクトからのみ発行できます。各リスナーは要求を確認し、適切な時に定期的にその要求に応答する必要があります。  

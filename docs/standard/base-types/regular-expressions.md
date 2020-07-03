@@ -1,5 +1,6 @@
 ---
 title: .NET Framework の正規表現
+description: 正規表現を使用して、特定の文字パターンの検索、テキストの検証、テキスト部分文字列の処理、抽出した文字列の .NET のコレクションへの追加を行います。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635720"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768834"
 ---
 # <a name="net-regular-expressions"></a>.NET の正規表現
 

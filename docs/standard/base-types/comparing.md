@@ -1,5 +1,6 @@
 ---
 title: .NET で文字列を比較する
+description: .NET で文字列を比較する方法について確認します。 Compare、CompareOrdinal、CompareTo、StartsWith、EndsWith、Equals、IndexOf、LastIndexOf の各メソッドについて説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,24 +19,24 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289331"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602194"
 ---
 # <a name="comparing-strings-in-net"></a>.NET で文字列を比較する
 .NET は、文字列の値を比較するためのメソッドをいくつか提供します。 これらの値の比較メソッドとその説明を次の表に示します。  
   
-|メソッド名|用途|  
+|メソッド名|使用|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|2 つの文字列の値を比較します。 整数値を返します。|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|ローカル カルチャに関係なく、2 つの文字列を比較します。 整数値を返します。|  
 |<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|現在の文字列オブジェクトを別の文字列と比較します。 整数値を返します。|  
-|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|文字列が、渡された文字列で始まるかどうかを確認します。 ブール値を返します。|  
-|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|文字列が、渡された文字列で終わるかどうかを確認します。 ブール値を返します。|  
-|<xref:System.String.Equals%2A?displayProperty=nameWithType>|2 つの文字列が等しいかどうかを確認します。 ブール値を返します。|  
+|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|文字列が、渡された文字列で始まるかどうかを確認します。 Boolean 値を返します。|  
+|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|文字列が、渡された文字列で終わるかどうかを確認します。 Boolean 値を返します。|  
+|<xref:System.String.Equals%2A?displayProperty=nameWithType>|2 つの文字列が等しいかどうかを確認します。 Boolean 値を返します。|  
 |<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|検索対象文字列の先頭から開始して、特定の文字または文字列が見つかったインデックス位置を返します。 整数値を返します。|  
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|検索対象文字列の末尾から開始して、特定の文字または文字列が見つかったインデックス位置を返します。 整数値を返します。|  
   
@@ -44,9 +45,9 @@ ms.locfileid: "84289331"
   
 |戻り値|条件|  
 |------------------|---------------|  
-|負の整数|最初の文字列は、並べ替え順序が 2 番目の文字列の前に置かれます。<br /><br /> または<br /><br /> 最初の文字列は `null`です。|  
-|0|最初の文字列と 2 番目の文字列は等価です。<br /><br /> または<br /><br /> 両方の文字列が `null`です。|  
-|正の整数<br /><br /> または<br /><br /> 1|最初の文字列は、並べ替え順序が 2 番目の文字列の後に続きます。<br /><br /> または<br /><br /> 第 2 文字列は `null`です。|  
+|負の整数|最初の文字列は、並べ替え順序が 2 番目の文字列の前に置かれます。<br /><br /> \- または -<br /><br /> 最初の文字列は `null`です。|  
+|0|最初の文字列と 2 番目の文字列は等価です。<br /><br /> \- または -<br /><br /> 両方の文字列が `null`です。|  
+|正の整数<br /><br /> \- または -<br /><br /> 1|最初の文字列は、並べ替え順序が 2 番目の文字列の後に続きます。<br /><br /> \- または -<br /><br /> 第 2 文字列は `null`です。|  
   
 > [!IMPORTANT]
 > <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
@@ -91,7 +92,7 @@ ms.locfileid: "84289331"
   
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのすべてのオーバーロードは、既定で、カルチャに依存して大文字小文字を区別する比較を実行します。 このメソッドのオーバーロードで、カルチャに依存しない比較を実行できるものはありません。 コードを理解しやすくするために、 **String.Compare** メソッドを使用することをお勧めします。その際、カルチャに依存する操作には <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> を指定し、カルチャに依存しない操作には <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> を指定します。 **String.Compare** メソッドを使用してカルチャに依存する比較とカルチャに依存しない比較の両方を実行する例については、「 [カルチャを認識しない文字列比較の実行](../globalization-localization/performing-culture-insensitive-string-comparisons.md)」を参照してください。  
   
-## <a name="equals"></a>等しい  
+## <a name="equals"></a>次の値に等しい  
  **String.Equals** メソッドを使用すると、2 つの文字列が等しいかどうかを簡単に確認できます。 このメソッドは大文字と小文字を区別し、 **True** または **False** の Boolean 値を返します。 このメソッドは、次の例に示すように、既存のクラスで使用できます。 **Equals** メソッドを使用して、文字列オブジェクトに "Hello World" という語句が含まれているかどうかを確認する例を次に示します。  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
@@ -146,9 +147,9 @@ ms.locfileid: "84289331"
   
  この例は、コンソールに `9` と出力します。  
   
- いずれのメソッドも、**String.Remove** メソッドと組み合わせて使用すると便利です。 **IndexOf** メソッドまたは **LastIndexOf** メソッドのいずれかを使用して文字の位置を取得し、その位置を **Remove** メソッドに渡すことによって、その文字またはその文字で始まる単語を削除できます。  
+ いずれのメソッドも、 **String.Remove** メソッドと組み合わせて使用すると便利です。 **IndexOf** メソッドまたは **LastIndexOf** メソッドのいずれかを使用して文字の位置を取得し、その位置を **Remove** メソッドに渡すことによって、その文字またはその文字で始まる単語を削除できます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [基本的な文字列操作](basic-string-operations.md)
 - [カルチャを認識しない文字列操作の実行](../globalization-localization/performing-culture-insensitive-string-operations.md)

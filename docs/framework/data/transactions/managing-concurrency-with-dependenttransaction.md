@@ -1,13 +1,14 @@
 ---
 title: DependentTransaction によるコンカレンシーの管理
+description: .NET の DependentTransaction クラスを使用することで、非同期タスクなど、トランザクション コンカレンシーを管理します。
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: a8ddcab4b065c3400f9f9f7ec9ce04befdd0f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c825c977419718c8b9870b40699c4d3516e8533
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174382"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141889"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction によるコンカレンシーの管理
 <xref:System.Transactions.Transaction> オブジェクトは、<xref:System.Transactions.Transaction.DependentClone%2A> メソッドを使用して作成されます。 このオブジェクトの唯一の目的は、他のコード (ワーカー スレッドなど) でトランザクションの処理を実行している間、トランザクションをコミットできないように保証することです。 複製されたトランザクション内の処理が完了してコミットの準備が整うと、<xref:System.Transactions.DependentTransaction.Complete%2A> メソッドを使用して、そのトランザクションの作成者に通知できます。 これにより、データの一貫性と正確性を保持できます。  

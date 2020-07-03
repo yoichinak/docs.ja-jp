@@ -1,17 +1,18 @@
 ---
 title: WCF Data Services クライアント ライブラリ
+description: WCF Data Services クライアント ライブラリを使用して .NET Framework クライアント アプリケーションからデータにアクセスしてデータを変更する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 556482e3e43460016162dfbdd9b31f9a68c0af46
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 58d038d5c2ac4973c2b41f4d49c1746f48f2a2fb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900881"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247741"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services クライアント ライブラリ
 HTTP 要求を送信し、データ サービスが返す Open Data Protocol (OData) フィードを処理できるのであれば、どのようなアプリケーションでも OData ベースのデータ サービスと対話できます。 この相互運用性によって、広範な Web 対応アプリケーションから OData ベースのサービスにアクセスすることが可能になります。 WCF Data Services には、.NET Framework ベースのアプリケーションまたは Silverlight ベースのアプリケーションから OData フィードを使用する際のプログラミング エクスペリエンスを向上させるクライアント ライブラリが含まれています。  

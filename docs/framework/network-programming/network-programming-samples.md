@@ -1,13 +1,14 @@
 ---
 title: ネットワーク プログラミングのサンプル
+description: .NET Framework System.Net および拡張クラスに以下のダウンロード可能なネットワーク プログラミング サンプルを使用します。
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087b4b85c705ddfcda850422fa6d0392ba0bdc23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180715"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502263"
 ---
 # <a name="network-programming-samples"></a>ネットワーク プログラミングのサンプル
 このセクションでは、<xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets>、および関連する名前空間のクラスを使用した、ダウンロード可能なネットワーク プログラミング サンプルの説明とリンクを示します。

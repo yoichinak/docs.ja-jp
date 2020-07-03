@@ -1,5 +1,6 @@
 ---
 title: '方法: ログ ファイルを開いて情報を追加する'
+description: ログ ファイルを開いて、.NET で StreamWriter クラスと StreamReader クラスを使用して情報を追加します。ここでは、ストリームへの文字の書き込みと、ストリームからの文字の読み込みを行います。
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: 025c35344b9262e1f2fa6da87b68e46e21a54222
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291826"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769172"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>方法: ログ ファイルを開いて情報を追加する
 <xref:System.IO.StreamWriter> および <xref:System.IO.StreamReader> は、ストリームから文字の書き込んだり、読み取りを行います。 次のコード例は、入力用に *log.txt* ファイルを開くか、まだファイルがない場合、ファイルを作成し、ファイルの末尾に情報を追加します。 次に、ファイルの内容が表示用に標準出力に書き込まれます。

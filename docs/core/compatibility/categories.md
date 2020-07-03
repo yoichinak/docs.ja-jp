@@ -1,17 +1,17 @@
 ---
-title: 破壊的変更のカテゴリ
-description: .NET Core での破壊的変更のカテゴリの分類方法について説明します。
+title: 互換性
+description: コードの変更が .NET の互換性に影響を与えるしくみについて説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cf14b7ff4143367653bd1c305cc1dda6711f980
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093046"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415694"
 ---
-# <a name="breaking-change-categories"></a>破壊的変更のカテゴリ
+# <a name="how-code-changes-can-affect-compatibility"></a>コード変更が互換性に影響を与えるしくみ
 
-"*互換性*" とは、コードが最初に開発されたときのものとは異なる .NET 実装のバージョンで、コードがコンパイルまたは実行できることを指します。 特定の変更があると、6 つの異なる方法で互換性に影響する場合があります。 互換性を評価するときに考慮される[変更の個々の種類](index.md)は、次の 5 つのカテゴリに分類できます。
+"*互換性*" とは、コードが最初に開発されたときのものとは異なる .NET 実装のバージョンで、コードがコンパイルまたは実行できることを指します。 [特定の変更](index.md)があると、6 つの異なる方法で互換性に影響する場合があります。
 
 - [動作の変更](#behavioral-change)
 - [バイナリの互換性](#binary-compatibility)
@@ -52,6 +52,6 @@ ms.locfileid: "77093046"
 
 上位互換性の維持が .NET Core の目標ではないのです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Core の破壊的変更を評価する](index.md)

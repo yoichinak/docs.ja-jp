@@ -1,5 +1,6 @@
 ---
 title: 正規表現のオブジェクト モデル
+description: .NET の正規表現のオブジェクト モデルについて確認します。 正規表現エンジンの操作、および一致、グループ化、キャプチャに関連するオブジェクトやコレクションの操作を行います。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -35,15 +36,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43672b85ecb64a15179881ec23c7fadd13d64868
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290903"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768054"
 ---
 # <a name="the-regular-expression-object-model"></a>正規表現のオブジェクト モデル
-<a name="introduction"></a> ここでは、.NET の正規表現を扱うときに使用するオブジェクト モデルについて説明します。 次のセクションが含まれます。  
+<a name="introduction"></a> ここでは、.NET の正規表現を扱うときに使用するオブジェクト モデルについて説明します。 このチュートリアルは、次のセクションで構成されています。  
   
 - [正規表現エンジン](#Engine)  
   
@@ -89,7 +90,7 @@ ms.locfileid: "84290903"
   
  この正規表現パターン `^\d{3}-\d{2}-\d{4}$` の解釈を次の表に示します。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`^`|入力文字列の先頭と一致します。|  
 |`\d{3}`|3 個の 10 進数と一致します。|  
@@ -107,7 +108,7 @@ ms.locfileid: "84290903"
   
  この正規表現パターン `\b(\w+)\W+(\1)\b` の解釈を次の表に示します。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`(\w+)`|1 つ以上の単語文字に一致します。 これが最初のキャプチャ グループです。|  
@@ -129,7 +130,7 @@ ms.locfileid: "84290903"
   
  この正規表現パターン `\b\d+\.\d{2}\b` の解釈を次の表に示します。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`\d+`|1 個以上の 10 進数と一致します。|  
@@ -152,7 +153,7 @@ ms.locfileid: "84290903"
   
  この正規表現パターン `\b\d{1,2}\.\s` の解釈を次の表に示します。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`\d{1,2}`|1 桁または 2 桁の 10 進数と一致します。|  
@@ -215,7 +216,7 @@ ms.locfileid: "84290903"
   
  正規表現パターン `\b\d+(,\d{3})*\.\d{2}\b` は、次の表に示すように定義されています。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`\d+`|1 個以上の 10 進数と一致します。|  
@@ -226,7 +227,7 @@ ms.locfileid: "84290903"
   
  置換パターン `$$ $&` は、一致した部分文字列がドル記号 ($) (`$$` パターン)、空白、および一致文字列の値 (`$&` パターン) に置き換えられることを示します。  
   
- [先頭に戻る](#introduction)  
+ [ページのトップへ](#introduction)  
   
 <a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>GroupCollection  
@@ -246,7 +247,7 @@ ms.locfileid: "84290903"
   
  正規表現パターン `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` は、次の表に示すように定義されています。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`(\w+)`|1 つ以上の単語文字に一致します。 これが最初のキャプチャ グループです。|  
@@ -257,7 +258,7 @@ ms.locfileid: "84290903"
 |`(\d{4})`|4 桁の 10 進数と一致します。 これが 3 番目のキャプチャ グループです。|  
 |`\b`|ワード境界で照合を終了します。|  
   
- [先頭に戻る](#introduction)  
+ [ページのトップへ](#introduction)  
   
 <a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>キャプチャ グループ  
@@ -275,7 +276,7 @@ ms.locfileid: "84290903"
   
  正規表現パターン `^(?<name>\w+):(?<value>\w+)` は、次の表に示すように定義されています。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`^`|入力文字列の先頭から照合を開始します。|  
 |`(?<name>\w+)`|1 つ以上の単語文字に一致します。 このキャプチャ グループの名前は `name` です。|  
@@ -288,13 +289,13 @@ ms.locfileid: "84290903"
   
 - `*` 量指定子または `*?` 量指定子 (0 回以上の一致を指定する) をグループに適用した場合、キャプチャ グループには入力文字列で一致した文字列が含まれない可能性があります。 キャプチャされたテキストがない場合、<xref:System.Text.RegularExpressions.Group> オブジェクトのプロパティは次の表に示すように設定されます。  
   
-    |Group プロパティ|値|  
+    |Group プロパティ|[値]|  
     |--------------------|-----------|  
     |`Success`|`false`|  
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     次に例を示します。 正規表現パターン `aaa(bbb)*ccc` では、最初のキャプチャ グループ (部分文字列 "bbb") は 0 回以上一致できます。 入力文字列 "aaaccc" はパターンに一致するので、キャプチャ グループには一致文字列が含まれません。  
+     具体的な例を次に示します。 正規表現パターン `aaa(bbb)*ccc` では、最初のキャプチャ グループ (部分文字列 "bbb") は 0 回以上一致できます。 入力文字列 "aaaccc" はパターンに一致するので、キャプチャ グループには一致文字列が含まれません。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
@@ -304,7 +305,7 @@ ms.locfileid: "84290903"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
   
- [先頭に戻る](#introduction)  
+ [ページのトップへ](#introduction)  
   
 <a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>CaptureCollection  
@@ -326,7 +327,7 @@ ms.locfileid: "84290903"
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  
   
- [先頭に戻る](#introduction)  
+ [ページのトップへ](#introduction)  
   
 <a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>個々のキャプチャ  
@@ -339,7 +340,7 @@ ms.locfileid: "84290903"
   
  正規表現は、次の表に示すように定義されています。  
   
-|パターン|[説明]|  
+|パターン|説明|  
 |-------------|-----------------|  
 |`\w+`|1 つ以上の単語文字に一致します。|  
 |`(\s\w+)*`|空白文字の後に 1 個以上の単語文字が続くパターンの 0 回以上の出現と一致します。 このパターンは、複数の単語で構成される都市名と一致します。 これが 3 番目のキャプチャ グループです。|  
@@ -349,7 +350,7 @@ ms.locfileid: "84290903"
 |`;`|セミコロンと一致します。|  
 |`((\w+(\s\w+)*),(\d+);)+`|単語、追加の単語、コンマ、1 桁以上の数字、およびセミコロンが 1 回以上続くパターンと一致します。 これが最初のキャプチャ グループです。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Text.RegularExpressions>
 - [.NET の正規表現](regular-expressions.md)

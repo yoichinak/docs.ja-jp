@@ -1,13 +1,14 @@
 ---
 title: バージョン 3.5 のソケット パフォーマンスの強化
+description: .NET Framework のバージョン 3.5 における System.Net.Sockets.Socket クラスのパフォーマンス改善について説明します。
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047238"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502146"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>バージョン 3.5 のソケット パフォーマンスの強化
 非同期ネットワーク I/O を利用して最高のパフォーマンスを達成するために、バージョン 3.5 で、<xref:System.Net.Sockets.Socket?displayProperty=nameWithType> クラスが機能強化されました。 <xref:System.Net.Sockets.Socket> クラスの機能強化の一環として、一連の新しいクラスが追加されました。これが提供する代替非同期パターンは、目的に特化した高パフォーマンスのソケット アプリケーションで利用できます。 この機能強化は、高いパフォーマンスを必要とするネットワーク サーバー アプリケーションのために設計されたものです。 あるアプリケーションで、機能強化された非同期パターンを排他的に、言い換えると、アプリケーションの高負荷領域 (大量のデータを受け取るときなど) のみで使用できます。  
@@ -33,7 +34,7 @@ ms.locfileid: "71047238"
   
  新しい非同期ソケット操作コンテキスト オブジェクトの有効期間は、アプリケーション コードの参照と非同期 I/O の参照により決定されます。 非同期ソケット操作メソッドの 1 つにパラメーターとして送信された後、非同期ソケット操作コンテキスト オブジェクトの参照をアプリケーションが維持する必要はありません。 完了コールバックが戻るまで、参照状態が維持されます。 ただし、コンテキスト オブジェクトの参照をアプリケーションが維持することには、将来の非同期ソケット操作で再利用できるため、利便性があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>

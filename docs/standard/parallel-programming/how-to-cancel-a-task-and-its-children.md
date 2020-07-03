@@ -1,5 +1,6 @@
 ---
 title: '方法: タスクとその子を取り消す'
+description: .NET でタスクとその子を取り消す方法の例を参照します。 この例では、取り消し可能なタスクの作成から、タスクが取り消されたことを知らせる通知までの手順を説明しています。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290033"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662681"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>方法: タスクとその子を取り消す
 以下の例では、次のタスクを実行する方法を説明します。  
@@ -36,7 +37,7 @@ ms.locfileid: "84290033"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスは、<xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> の型および <xref:System.Threading.CancellationToken?displayProperty=nameWithType> の型に基づくキャンセル モデルに完全に統合されています。 詳細については、「[マネージド スレッドのキャンセル](../threading/cancellation-in-managed-threads.md)」と「[タスクのキャンセル](task-cancellation.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>
 - <xref:System.Threading.CancellationToken?displayProperty=nameWithType>

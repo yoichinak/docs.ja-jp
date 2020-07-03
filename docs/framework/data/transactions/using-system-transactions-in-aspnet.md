@@ -1,13 +1,14 @@
 ---
 title: ASP.NET での System.Transactions の使用
+description: ASP.NET アプリケーション内で System.Transactions を使用します。 分散トランザクションのアクセス許可を有効にし、動的コンパイルを使用します。
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 2bddebc13897408839e18f42b17a9fbaefdc5b87
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 48907faf99953e34d045a1e0d79eed8a788187b5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040410"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141645"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>ASP.NET での System.Transactions の使用
 ここでは、ASP.NET アプリケーション内で <xref:System.Transactions> を正しく使用する方法について説明します。

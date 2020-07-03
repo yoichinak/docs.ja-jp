@@ -1,5 +1,6 @@
 ---
 title: '方法: ソケットを作成する'
+description: ソケットを初期化してリモート デバイスと通信する方法について学習します。 Socket クラスを使用して、アドレス ファミリ、ソケットの種類、プロトコルの種類を指定します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502549"
 ---
 # <a name="how-to-create-a-socket"></a>方法: ソケットを作成する
 ソケットを使用してリモート デバイスと通信するには、ソケットをプロトコルとネットワーク アドレスの情報を使用して事前に初期化する必要があります。 <xref:System.Net.Sockets.Socket> クラスのコンストラクターには、アドレス ファミリ、ソケットの種類、およびソケットが接続を行うために使用するプロトコルの種類を指定するパラメーターがあります。  
@@ -60,7 +61,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  **Socket** が作成されたら、リモート エンドポイントへの接続を開始したり、リモート デバイスから接続を受信したりすることができます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [クライアント ソケットの使用](using-client-sockets.md)
 - [リッスン (ソケットで)](listening-with-sockets.md)

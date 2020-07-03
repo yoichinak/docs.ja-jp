@@ -1,5 +1,6 @@
 ---
 title: マルチスレッド処理のためのデータの同期
+description: .NET でのマルチスレッド処理のためにデータを同期させる方法について説明します。 同期されたコード領域、手動同期、同期されたコンテキストなどの方法を選択します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291098"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769107"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -35,7 +36,7 @@ ms.locfileid: "84291098"
 |同期なし|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |同期されたコンテキスト|いいえ|いいえ|いいえ|はい|はい|いいえ|  
 |同期されたコード領域|いいえ|いいえ|マークされている場合にのみ|いいえ|マークされている場合にのみ|マークされている場合にのみ|  
-|手動での同期|マニュアル|マニュアル|マニュアル|マニュアル|マニュアル|マニュアル|  
+|手動での同期|手動|手動|手動|手動|手動|手動|  
   
 ## <a name="no-synchronization"></a>同期なし  
  これは、オブジェクトに対する既定の設定です。 すべてのスレッドが、すべてのメソッドまたはフィールドにいつでもアクセスできます。 ただし、これらのオブジェクトにアクセスできるスレッドは一度に 1 つだけです。  
@@ -67,7 +68,7 @@ ms.locfileid: "84291098"
 
 .NET Framework と Xamarin のアプリケーションでのみ、任意の <xref:System.ContextBoundObject> で <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用して、すべてのインスタンス メソッドとフィールドを同期できます。 同じコンテキスト ドメイン内のすべてのオブジェクトが同じロックを共有します。 複数のスレッドがメソッドやフィールドにアクセスできますが、これらのオブジェクトに一度にアクセスできるのは 1 つのスレッドだけです。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [スレッドおよびスレッド処理](threads-and-threading.md)

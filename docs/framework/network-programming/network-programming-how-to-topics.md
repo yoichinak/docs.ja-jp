@@ -1,5 +1,6 @@
 ---
 title: ネットワーク プログラミング方法のトピック
+description: .NET Framework のネットワーク プログラミングのさまざまなファセットについて学習するとき、以下のハウツー記事を使用してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047633"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502276"
 ---
 # <a name="network-programming-how-to-topics"></a>ネットワーク プログラミング方法のトピック
 概念を説明したドキュメントに用意されている、ネットワーク プログラミングに関する方法を説明したトピックへのリンクの一覧を次に示します。  
@@ -77,7 +78,7 @@ ms.locfileid: "71047633"
   
 - [方法: ホストに対して ping を実行](how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Framework のネットワーク プログラミング](index.md)
 - [ネットワーク プログラミングのサンプル](network-programming-samples.md)

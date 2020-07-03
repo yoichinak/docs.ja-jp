@@ -1,5 +1,6 @@
 ---
 title: '方法: グローバル アセンブリ キャッシュからアセンブリを削除する'
+description: グローバル アセンブリ キャッシュ ツール (Gacutil.exe) または Windows インストーラーを使用して、グローバル アセンブリ キャッシュからアセンブリを削除する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3a596ea6029ded190c33032e96b601de9d4012d
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119853"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104768"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>方法: グローバル アセンブリ キャッシュからアセンブリを削除する
 
@@ -30,7 +31,7 @@ ms.locfileid: "73119853"
 
 コマンド プロンプトに次のコマンドを入力します。
 
-**gacutil –u** \<*アセンブリ名*>
+**gacutil –u** \<*assembly name*>
 
 このコマンドで、*assembly name* はグローバル アセンブリ キャッシュから削除するアセンブリの名前です。
 

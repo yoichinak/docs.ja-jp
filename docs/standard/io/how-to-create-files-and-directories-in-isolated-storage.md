@@ -14,15 +14,16 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: d5e086e77ab6309fa0757ef32b620e0fdbc1f627
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b9ae108d9416bb834fc230fde1e62b929c21eb20
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990168"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>方法: 分離ストレージでファイルおよびディレクトリを作成する
-分離ストアを取得したら、データを格納するためのファイルとディレクトリを作成することができます。 ストア内では、ファイル名とディレクトリ名は仮想ファイル システムのルートに対して指定されます。  
+
+分離ストアを取得したら、データを格納するためのディレクトリとファイルを作成することができます。 ストア内では、ファイル名とディレクトリ名は仮想ファイル システムのルートに対して指定されます。  
   
  ディレクトリを作成するには、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> インスタンス メソッドを使用します。 存在しないディレクトリのサブディレクトリを指定した場合、両方のディレクトリが作成されます。 既に存在するディレクトリを指定した場合、メソッドはディレクトリを作成せずに制御を返し、例外はスローされません。 ただし、無効な文字を含むディレクトリ名を指定した場合、<xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外がスローされます。  
   

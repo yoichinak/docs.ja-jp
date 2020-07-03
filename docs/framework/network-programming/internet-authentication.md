@@ -1,5 +1,6 @@
 ---
 title: インターネット認証
+description: .NET Framework でアプリケーションに対して System.Net クラスがサポートする、さまざまなクライアント認証メカニズムについて学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502380"
 ---
 # <a name="internet-authentication"></a>インターネット認証
 <xref:System.Net> クラスは、さまざまなクライアント認証メカニズムをサポートしています。これには、基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の標準のインターネット認証方法の他に、ユーザーが作成できるカスタム メソッドも含まれます。  
@@ -39,7 +40,7 @@ ms.locfileid: "71047914"
   
  一部の認証スキームでは、最初にリソースの要求を作成しなくても、ユーザーを認証することができます。 リソースでユーザーを事前認証することで、サーバーへのラウンド トリップを少なくとも 1 回減らせるため、アプリケーションが時間を節約できます。 または、後でユーザーへの応答性を高めるため、プログラムの起動中に認証を実行できます。 事前認証を使用できる認証スキームで <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> プロパティを **true** に設定します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [基本認証とダイジェスト認証](basic-and-digest-authentication.md)
 - [NTLM 認証および Kerberos 認証](ntlm-and-kerberos-authentication.md)

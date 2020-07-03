@@ -1,5 +1,6 @@
 ---
 title: .NET で新しい文字列を作成する
+description: 割り当て、クラス コンストラクター、または System.String メソッドを使用して文字列を作成する方法について学習します。これにより、.NET で複数の文字列、文字列の配列、またはオブジェクトが結合されます。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596449"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET で新しい文字列を作成する
 .NET Framework では、単純な割り当てを使用した文字列の作成をサポートしています。また、多数の異なるパラメーターを使用した文字列の作成をサポートするために、クラス コンストラクターをオーバーロードします。 また、.NET Framework では、複数の文字列、文字列の配列、またはオブジェクトを組み合わせて新しい文字列オブジェクトを作成する、<xref:System.String?displayProperty=nameWithType> クラスのいくつかのメソッドも提供しています。  
@@ -32,7 +33,7 @@ ms.locfileid: "84279013"
 ## <a name="methods-that-return-strings"></a>文字列を返すメソッド  
  次の表は、新しい文字列オブジェクトを返すいくつかの便利なメソッドを示しています。  
   
-|メソッド名|用途|  
+|メソッド名|使用|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|入力オブジェクトのセットから、書式設定された文字列をビルドします。|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|2 つ以上の文字列から文字列をビルドします。|  
@@ -40,7 +41,7 @@ ms.locfileid: "84279013"
 |<xref:System.String.Insert%2A?displayProperty=nameWithType>|既存の文字列の指定のインデックスに文字列を挿入することで、新しい文字列をビルドします。|  
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|文字配列内の指定の位置に、文字列内の指定の文字をコピーします。|  
   
-### <a name="format"></a>Format  
+### <a name="format"></a>形式  
  **String.Format** メソッドを使用すると、書式設定された文字列を作成し、複数のオブジェクトを表す文字列を連結できます。 このメソッドは、渡されたすべてのオブジェクトを文字列に自動的に変換します。 たとえば、アプリケーションでユーザーに対して **Int32** 値と **DateTime** 値を表示する必要がある場合、**Format** メソッドを使用して、これらの値を表す文字列を簡単に作成できます。 このメソッドで使用される書式設定規則については、[複合書式指定](composite-formatting.md)に関するセクションを参照してください。  
   
  次の例では、**Format** メソッドを使用して、整数型の変数を使用する文字列を作成します。  
@@ -56,7 +57,7 @@ ms.locfileid: "84279013"
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
-### <a name="join"></a>結合  
+### <a name="join"></a>Join  
  **String.Join** メソッドは、文字列の配列および区切り文字列から新しい文字列を作成します。 このメソッドは、複数の文字列を連結して、たとえばコンマで区切られたリストを作成する場合に便利です。  
   
  次の例では、スペースを使用して文字列の配列をバインドします。  
@@ -78,7 +79,7 @@ ms.locfileid: "84279013"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [基本的な文字列操作](basic-string-operations.md)
 - [複合書式指定](composite-formatting.md)

@@ -1,13 +1,14 @@
 ---
 title: リソースへのアクセス時のセキュリティ信頼レベル
+description: .NET でのリソースへのアクセス時のセキュリティ信頼レベルを理解します。 System.Transactions には主な信頼レベルが 3 つあります。
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 64f298460bde99181ab8dc8be13ae95aaa846299
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205875"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141953"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>リソースへのアクセス時のセキュリティ信頼レベル
 ここでは、<xref:System.Transactions> が公開するリソースの種類に対して、アクセスがどのように制限されるかについて説明します。  

@@ -1,5 +1,6 @@
 ---
 title: データとタスクの並列化における注意点
+description: 並列化では逐次コードでは発生しない複雑さが加わるため、データとタスクの並列化における注意点について学習します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291696"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599764"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>データとタスクの並列化における注意点
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> を使用すると、多くの場合、通常の順次ループよりもパフォーマンスが大幅に向上します。 ただし、ループを並列化すると複雑になるため、逐次コードでは一般的でない、またはまったく発生しない問題の原因になる可能性があります。 このトピックでは、並列ループを記述するときに回避すべきプラクティスをいくつか説明します。  
@@ -22,7 +23,7 @@ ms.locfileid: "84291696"
  並列ループは、場合によっては対応する順次処理よりも時間がかかる可能性があります。 基本的な経験則では、イテレーションが少なく、高速ユーザー デリゲートを使用する並列ループの速度が大幅に向上することはほとんどありません。 ただし、パフォーマンスには多くの要因が関係するため、常に実際の結果を測定することをお勧めします。  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>共有メモリの位置への書き込みを回避する  
- 逐次コードでは、静的変数またはクラス フィールドから読み取ることや、これらの場所に書き込むことはよくあります。 ただし、複数のスレッドからこのような変数に同時にアクセスしているときは、著しい競合状態になる場合がよくあります。 ロックを使用して変数へのアクセスを同期できる場合でも、同期のコストでパフォーマンスが低下する可能性があります。 そのため、並列ループにおける共有状態へのアクセスは、可能な限り回避するか、少なくとも制限することをお勧めします。 この場合の最適な方法は、ループの実行中に <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 変数を使用してスレッド ローカルの状態を格納する、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> のオーバーロードを使用することです。 詳細については、[スレッド ローカル変数を使用する Parallel.For ループを記述する](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」および「[方法:パーティション ローカル変数を使用する Parallel.ForEach ループを記述する](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」をご覧ください。  
+ 逐次コードでは、静的変数またはクラス フィールドから読み取ることや、これらの場所に書き込むことはよくあります。 ただし、複数のスレッドからこのような変数に同時にアクセスしているときは、著しい競合状態になる場合がよくあります。 ロックを使用して変数へのアクセスを同期できる場合でも、同期のコストでパフォーマンスが低下する可能性があります。 そのため、並列ループにおける共有状態へのアクセスは、可能な限り回避するか、少なくとも制限することをお勧めします。 この場合の最適な方法は、ループの実行中に <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 変数を使用してスレッド ローカルの状態を格納する、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> のオーバーロードを使用することです。 詳細については、「[方法:スレッド ローカル変数を使用する Parallel.For ループを記述する](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」および「[方法:パーティション ローカル変数を使用する Parallel.ForEach ループを記述する](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」をご覧ください。  
   
 ## <a name="avoid-over-parallelization"></a>過剰な並列化を回避する  
  並列ループを使用することで、ソース コレクションのパーティション分割とワーカー スレッドの同期によるオーバヘッド コストが発生します。 並列化の利点は、コンピューター上のプロセッサ数によってさらに制限されます。 1 つのプロセッサで複数の計算主体のスレッドを実行しても、高速化は実現しません。 そのため、ループを過剰に並列処理しないように注意する必要があります。  

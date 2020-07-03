@@ -1,16 +1,17 @@
 ---
 title: トランザクションの参加要素としてのリソースの参加
+description: .NET トランザクションで参加要素としてリソースを参加させる トランザクションの各リソースは、リソース マネージャーによって管理され、トランザクション マネージャーによって調整されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
-ms.openlocfilehash: 83d83df0f747198e93dd64308b904cad5c7439ec
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c3c777593750b3a4f05ae97ed6e26e19f58e4d72
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205981"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141876"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>トランザクションの参加要素としてのリソースの参加
 

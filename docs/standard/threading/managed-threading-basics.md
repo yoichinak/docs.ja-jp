@@ -1,5 +1,6 @@
 ---
 title: マネージド スレッド処理の基本
+description: 例外、データの同期、フォアグラウンド スレッドとバックグラウンド スレッド、ローカル ストレージなど、マネージド スレッド処理に関する他の記事へのリンクを示します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: 4d2a96619fd1c48c79b5590efdb52c307d29710c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291007"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769094"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
 
@@ -22,7 +23,7 @@ ms.locfileid: "84291007"
  このセクションの残りのトピックには、マネージド スレッド処理と Windows オペレーティング システムとの相互作用など、高度なトピックが含まれます。  
   
 > [!NOTE]
-> .NET Framework 4 では、タスク並列ライブラリと PLINQ によって、マルチスレッド プログラムでのタスクとデータの並列処理のための API が提供されます。 詳細については、「[並列プログラミング](../parallel-programming/index.md)」を参照してください。  
+> .NET Framework 4 では、タスク並列ライブラリと PLINQ によって、マルチスレッド プログラムでのタスクとデータの並列処理のための API が提供されます。 詳細については、[並列プログラミング](../parallel-programming/index.md)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -41,10 +42,10 @@ ms.locfileid: "84291007"
  [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](managed-and-unmanaged-threading-in-windows.md)  
  マネージド スレッド処理とアンマネージド スレッド処理の関係について説明し、Windows のスレッド処理 API に相当するマネージド API をリストし、COM アパートメントとマネージド スレッドの相互作用について説明します。  
   
- [スレッド ローカル ストレージ: スレッド相対静的フィールドとデータ スロット](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  スレッド相対ストレージ メカニズムについて説明します。  
   
-## <a name="reference"></a>リファレンス
+## <a name="reference"></a>関連項目
 
  <xref:System.Threading.Thread>  
  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  

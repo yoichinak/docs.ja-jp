@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802725"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324433"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
+bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。
+
 ## <a name="description"></a>説明
 
-`dotnet-install` スクリプトは、.NET Core CLI や共有ランタイムを含む .NET Core SDK の非管理者インストールを実行するために使用されます。
+`dotnet-install` スクリプトによって、.NET Core CLI や共有ランタイムを含む .NET Core SDK の非管理者インストールが実行されます。 次の 2 つのスクリプトがあります。
+
+* Windows 上で動作する PowerShell スクリプト。
+* Linux/macOS で動作する bash スクリプト。
+
+### <a name="purpose"></a>目的
+
+ このスクリプトの用途は本来、次のような継続的インテグレーション (CI) シナリオ向けとして意図されています。
+
+* ユーザーの操作と管理者権限なしで SDK をインストールする必要がある。
+* SDK インストールを複数の CI 実行間で保持する必要がない。
+
+  イベントの一般的なシーケンス:
+  * CI がトリガーされます。
+  * CI により、これらのスクリプトの 1 つを利用して SDK がインストールされます。
+  * CI でその作業が完了し、SDK インストールを含む、一時的なデータが消去されます。
+
+開発環境を設定するか、アプリを実行するには、これらのスクリプトではなく、インストーラーを使用します。
+
+### <a name="recommended-version"></a>推奨されるバージョン
 
 安定したバージョンのスクリプトを使用することをお勧めします。
 
 - Bash (Linux、macOS): <https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
-これらのスクリプトの主な有用性は、オートメーションのシナリオと管理者以外のインストールにおいてです。 2 つのスクリプトがあります。1 つは Windows 上で動作する PowerShell スクリプトで、もう 1 つは Linux/macOS 上で動作する bash スクリプトです。 スクリプトの動作は両方とも同じです。 bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。
+### <a name="script-behavior"></a>スクリプトの動作
 
-インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`-Runtime|--runtime` 引数を指定します。
+スクリプトの動作は両方とも同じです。 CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。
 
-既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `-NoPath|--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。
+既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`-Runtime|--runtime` 引数を指定します。
+
+既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `-NoPath|--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。 スクリプトでは、`DOTNET_ROOT` 環境変数は設定されません。
 
 スクリプトを実行する前に、必要な[依存関係](../install/dependencies.md)をすべてインストールします。
 
-`-Version|--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンは 3 つの部分からなるバージョン (`2.1.0` など) を指定する必要があります。 指定しない場合は、`latest` バージョンが使用されます。
+`-Version|--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンには 3 つの部分からなるバージョン番号 (`2.1.0` など) を指定する必要があります。 バージョンが指定されていない場合、スクリプトでは `latest` バージョンがインストールされます。
 
 インストール スクリプトでは、Windows 上のレジストリは更新されません。 zip 形式のバイナリがダウンロードされて、フォルダーにコピーされるだけです。 レジストリ キーの値を更新する必要がある場合は、.NET Core インストーラーを使用します。
 
@@ -94,9 +117,9 @@ dotnet-install.sh --help
 
   Azure フィードに付加するクエリ文字列として使用されます。 非公開の BLOB ストレージ アカウントを使用するように URL を変更することができます。
 
-- **`-Help|--help`**
+- **`--help`**
 
-  スクリプトのヘルプを出力します。
+  スクリプトのヘルプを出力します。 bash スクリプトのみに適用されます。 PowerShell の場合、`Get-Help ./dotnet-install.ps1` を使用します。
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 

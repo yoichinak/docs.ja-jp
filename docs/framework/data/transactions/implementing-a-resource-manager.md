@@ -1,13 +1,14 @@
 ---
 title: リソース マネージャーの実装
+description: .NET でリソース マネージャーを実装する リソース マネージャーにより、トランザクションで使用されるリソースが管理されます。 トランザクション マネージャーにより、リソース マネージャー アクションが調整されます。
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: f64a729f49d546dd16c25a2be1f9bd64a2ca8f63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205952"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141850"
 ---
 # <a name="implementing-a-resource-manager"></a>リソース マネージャーの実装
 トランザクションで使用される各リソースはリソース マネージャーによって管理され、その動作はトランザクション マネージャーによって調整されます。 リソース マネージャーは、トランザクション マネージャーと連携してアプリケーションに原子性と分離を保証します。 Microsoft SQL Server、永続的なメッセージ キュー、メモリ内ハッシュ テーブルはすべて、リソース マネージャーの例です。  

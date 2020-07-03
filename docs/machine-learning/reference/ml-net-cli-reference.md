@@ -1,18 +1,18 @@
 ---
 title: ML.NET CLI コマンド リファレンス
 description: ML.NET CLI ツールの auto-train コマンドの概要、サンプル、およびリファレンス。
-ms.date: 12/18/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848926"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594544"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI コマンド リファレンス
 
-`auto-train` コマンドは、ML.NET CLI ツールが提供するメイン コマンドです。 このコマンドを使用すると、自動機械学習 (AutoML) を使用する高品質の ML.NET モデルと、そのモデルを実行/スコア付けするサンプル C# コードを生成できます。 さらに、そのモデルをトレーニングするための C# コードも生成され、そのモデルのアルゴリズムと設定を調べることができます。
+`classification`、`regression`、`recommendation` コマンドは、ML.NET CLI ツールによって提供されるメイン コマンドです。 このコマンドを使用すると、自動機械学習 (AutoML) を使用する分類、回帰、推奨モデル用の高品質の ML.NET モデルと、そのモデルを実行またはスコア付けする C# のコード例を生成できます。 さらに、そのモデルをトレーニングするための C# コードも生成され、そのモデルのアルゴリズムと設定を調べることができます。
 
 > [!NOTE]
 > このトピックは、現在プレビュー段階の ML.NET CLI と ML.NET AutoML について述べており、内容が変更される場合があります。
@@ -22,10 +22,10 @@ ms.locfileid: "78848926"
 使用例:
 
 ```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-`mlnet auto-train` コマンドで、以下の資産が生成されます。
+`mlnet` ML タスク コマンド (`classification`、`regression`、`recommendation`) では、次の資産が生成されます。
 
 - すぐに使用できるシリアル化されたモデル .zip ("最適なモデル")。
 - その生成されたモデルを実行/スコア付けする C# コード。
@@ -37,75 +37,136 @@ mlnet auto-train --task regression --dataset "cars.csv" --label-column-name pric
 
 ## <a name="examples"></a>使用例
 
-二項分類問題に適した最も簡単な CLI コマンド (AutoML では、指定されたデータからほとんどの構成を推測します):
+分類問題に適した最も簡単な CLI コマンド (AutoML では、指定されたデータからほとんどの構成が推測されます):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
 ```
 
 回帰問題に適したもう 1 つの簡単な CLI コマンド:
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-トレーニング データセット、テスト データセット、およびその他のカスタマイズの明示的な引数を使用して、二項分類モデルを作成し、トレーニングします。
+トレーニング データセット、テスト データセット、その他のカスタマイズの明示的な引数を使用して、分類モデルを作成し、トレーニングします。
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
 ## <a name="command-options"></a>コマンド オプション
 
-`mlnet auto-train` は、指定されたデータセットに基づいて複数のモデルをトレーニングし、最後に最適なモデルを選択し、シリアル化された .zip ファイルとして保存します。さらに、スコア付けとトレーニングに関連する C# コードを生成します。
+`mlnet` ML タスク コマンド (`classification`、`regression`、`recommendation`) によって、指定されたデータセットと ML.NET CLI オプションに基づいて複数のモデルがトレーニングされます。 これらのコマンドから、最適なモデルの選択、シリアル化された .zip ファイルとしてのモデルの保存、スコア付けとトレーニングを行うための C# の関連コードの生成を行うこともできます。
+
+### <a name="classification-options"></a>分類オプション
+
+`mlnet classification` を実行すると、分類モデルがトレーニングされます。 ML モデルでデータを 2 つ以上のクラスに分類する場合 (例: 感情分析) は、このコマンドを選択します。
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="regression-options"></a>回帰オプション
+
+`mlnet regression` を実行すると、回帰モデルがトレーニングされます。 ML モデルで数値を予測する場合 (例: 価格予測) は、このコマンドを選択します。
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--label-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--ignore-cols <cols>
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="recommendation-options"></a>推奨オプション
+
+`mlnet recommendation` を実行すると、推奨モデルがトレーニングされます。  ML モデルで評価に基づいてユーザーに項目を推奨する場合 (例: 製品推奨) は、このコマンドを選択します。
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--item-col <col> (REQUIRED)
+
+--rating-col <col> (REQUIRED)
+
+--user-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
 無効な入力オプションを指定すると、CLI ツールによって、有効な入力の一覧とエラー メッセージが生成されます。
-
-## <a name="task"></a>タスク
-
-`--task | --mltask | -T` (文字列)
-
-解決する ML の問題を示す 1 つの文字列。 たとえば、次のいずれかのタスクです (CLI は、最終的には AutoML でサポートされているすべてのタスクをサポートする予定です)。
-
-- `regression` - 数値の予測に ML モデルを使用するかどうかを選択します
-- `binary-classification` - ML モデルの結果に、2 つの可能なカテゴリ別のブール値 (0 または 1) があるかどうかを選択します。
-- `multiclass-classification` - ML モデルの結果に、複数の可能なカテゴリ別の値があるかどうかを選択します。
-
-この引数には、ML タスクを 1 つのみ指定する必要があります。
 
 ## <a name="dataset"></a>データセット
 
@@ -154,27 +215,41 @@ mlnet auto-train
 
 いずれの場合でも、これらのパーセンテージは、既に分割されているファイルを指定する CLI の使用ユーザーが決定します。
 
-## <a name="label-column-name"></a>ラベル列の名前
+## <a name="label-column"></a>ラベル列
 
-`--label-column-name | -n` (文字列)
+`--label-col` (整数または文字列)
 
-この引数を使用すると、データセットのヘッダーに設定されている列の名前を使って、特定の目的/ターゲット列 (予測する変数) を指定できます。
+この引数を使用すると、データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、特定の目的またはターゲット列 (予測する変数) を指定できます (列インデックス値は 0 から始まります)。
 
-この引数は、*分類問題*など、教師ありの ML タスクにのみ使用されます。 *クラスタリング*など、教師なしの ML タスクには使用できません。
+この引数は、"*分類*" および "*回帰*" の問題に使用されます。
 
-## <a name="label-column-index"></a>ラベル列のインデックス
+## <a name="item-column"></a>アイテム列
 
-`--label-column-index | -i` (int)
+`--item-col` (整数または文字列)
 
-この引数を使用すると、データセットのファイル内の列の数値インデックスを使用して、特定の目的/ターゲット列 (予測する変数) を指定できます (列インデックス値は 1 から始まります)。
+アイテム列には、ユーザーによって評価されるアイテムの一覧が含まれます (ユーザーにはアイテムをお勧めします)。 データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、この列を指定できます (列インデックス値は 0 から始まります)。
 
-*注:* ユーザーが `--label-column-name` も使用している場合は、`--label-column-name` が使用されます。
+この引数は、"*推奨*" タスクにのみ使用されます。
 
-この引数は、*分類問題*など、教師ありの ML タスクにのみ使用されます。 *クラスタリング*など、教師なしの ML タスクには使用できません。
+## <a name="rating-column"></a>評価列
+
+`--rating-col` (整数または文字列)
+
+評価列には、ユーザーによってアイテムに指定された評価の一覧が含まれます。 データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、この列を指定できます (列インデックス値は 0 から始まります)。
+
+この引数は、"*推奨*" タスクにのみ使用されます。
+
+## <a name="user-column"></a>ユーザー列
+
+`--user-col` (整数または文字列)
+
+ユーザー列には、アイテムに評価を指定するユーザーの一覧が含まれます。 データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、この列を指定できます (列インデックス値は 0 から始まります)。
+
+この引数は、"*推奨*" タスクにのみ使用されます。
 
 ## <a name="ignore-columns"></a>列を無視
 
-`--ignore-columns | -I` (文字列)
+`--ignore-columns` (文字列)
 
 この引数を使用すると、トレーニング プロセスで読み込まれたり使用されたりしないように、データセット ファイル内の既存の列を無視することができます。
 
@@ -186,7 +261,7 @@ mlnet auto-train
 
 ## <a name="has-header"></a>ヘッダーの有無
 
-`--has-header | -h` (ブール値)
+`--has-header` (ブール値)
 
 データセット ファイルにヘッダー行があるかどうかを指定します。
 指定できる値は次のとおりです。
@@ -194,15 +269,13 @@ mlnet auto-train
 - `true`
 - `false`
 
-この引数がユーザーによって指定されていない場合、既定で値は `true` です。
+この引数がユーザーによって指定されていない場合、ML.NET CLI ではこのプロパティの検出が試行されます。
 
-`--label-column-name` 引数を使用するには、データセット ファイルにヘッダーを含め、`--has-header` を `true` に設定する必要があります (これが既定値です)。
+## <a name="train-time"></a>トレーニング時間
 
-## <a name="max-exploration-time"></a>最大探索時間
+`--train-time` (文字列)
 
-`--max-exploration-time | -x` (文字列)
-
-既定では、最大探索時間は 30 分です。
+既定では、探索またはトレーニングの最長時間は 30 分です。
 
 この引数では、プロセスで複数のトレーナーと構成を探索できる最長時間 (秒単位) を設定します。 指定した時間が 1 回の反復処理に対して短すぎる (たとえば 2 秒) 場合、構成された時間を超えることがあります。 この場合、実際の時間は、1 回の反復処理で 1 つのモデル構成を作成するために必要な時間です。
 
@@ -210,7 +283,7 @@ mlnet auto-train
 
 ## <a name="cache"></a>キャッシュ
 
-`--cache | -c` (文字列)
+`--cache` (文字列)
 
 キャッシングを使用すると、トレーニング データセット全体がメモリ内に読み込まれます。
 
@@ -228,7 +301,7 @@ mlnet auto-train
 
 ## <a name="name"></a>名前
 
-`--name | -N` (文字列)
+`--name` (文字列)
 
 作成される出力プロジェクトまたはソリューションの名前。 名前が指定されていない場合は、名前 `sample-{mltask}` が使用されます。
 
@@ -242,7 +315,7 @@ ML.NET モデル ファイル (.ZIP ファイル) も同じ名前になります
 
 ## <a name="verbosity"></a>詳細度
 
-`--verbosity | -V` (文字列)
+`--verbosity | -v` (文字列)
 
 標準出力の詳細レベルを設定します。
 
@@ -252,11 +325,11 @@ ML.NET モデル ファイル (.ZIP ファイル) も同じ名前になります
 - `m[inimal]` (既定値)
 - `diag[nostic]` (ログ情報レベル)
 
-既定で CLI ツールには、作業時に最小限のフィードバック (最小) が表示されます。たとえば、作業中かどうか、可能であれば残り時間、または完了した時間の割合などが示されます。
+既定で CLI ツールには、作業時に最小限のフィードバック (`minimal`) が表示されます。たとえば、作業中かどうか、可能であれば残り時間、または完了した時間の割合などが示されます。
 
 ## <a name="help"></a>ヘルプ
 
-`-h|--help`
+`-h |--help`
 
 各コマンドのパラメーターの説明と共に、コマンドのヘルプを出力します。
 

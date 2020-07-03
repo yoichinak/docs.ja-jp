@@ -1,13 +1,14 @@
 ---
 title: トランザクション管理のエスカレーション
+description: トランザクション マネージャーのいずれかのコンポーネントから別のコンポーネントにトランザクションを移行するプロセスである、.NET のトランザクション管理エスカレーションについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: d2f027f8a94ee8f0cd23d0f0909ecc9137873bc2
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a0b70f4be0f041be95b02537e06f9ec19a9b6183
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205845"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141658"
 ---
 # <a name="transaction-management-escalation"></a>トランザクション管理のエスカレーション
 Windows は、トランザクション マネージャーを構成する一連のサービスとモジュールをホストします。 トランザクション管理のエスカレーションとは、トランザクション マネージャーのいずれかのコンポーネントから別のコンポーネントにトランザクションを移行するプロセスを表します。  

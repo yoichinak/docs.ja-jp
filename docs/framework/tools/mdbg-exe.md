@@ -1,16 +1,17 @@
 ---
 title: MDbg.exe (.NET Framework コマンド ライン デバッガー)
+description: .NET のコマンド ライン デバッガーであり、CLR を対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援する MDbg.exe について理解します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-ms.openlocfilehash: 58502626fed6c9cee52acb673ae34f6024f78b9b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c663474e5084afa1824f0f6b0740ae03a344e92
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904222"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
 .NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
@@ -81,7 +82,7 @@ MDbg [ProgramName[arguments]] [options]
 |**uwgc** **[handle]** [*var*] &#124; [*address*]|ハンドルによって追跡された変数を出力します。 ハンドルは、名前またはアドレスで指定できます。|  
 |**when**|現在アクティブな `when` ステートメントを表示します。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - 番号で指定された `when` ステートメントを削除します。`all` が指定されている場合は、すべての `when` ステートメントを削除します。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - *stopReason* パラメーターには、次のいずれかの値を指定できます。<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* には、次のいずれかの値を指定できます。<br /><br /> -   *number* - `ThreadCreated` および `BreakpointHit` の場合、同じ値を持つスレッド ID 番号とブレークポイント番号によって停止した場合にだけアクションを発生させます。<br />-   [`!`]*name* - `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown`、`UnhandledExceptionThrown` の場合、名前が *stopReason* の名前と一致する場合にだけアクションを発生させます。<br /><br /> *specific_condition* は、*stopReason* の他の値に対しては空であることが必要です。|  
 |**w** **[here]** [`-v`] [`-c` *depth*] [*threadID*]|スタック フレームのデバッグ情報を表示します。<br /><br /> -   `-v` オプションを指定すると、表示された各スタック フレームの詳細情報が表示されます。<br />-   `depth` に数値を指定すると、表示するフレームの数を制限できます。 すべてのフレームを表示するには、**all** コマンドを使用します。 既定値は 100 です。<br />-   *threadID* パラメーターを指定すると、スタックに関連付けるスレッドを制御できます。 既定値は、現在のスレッドのみです。 すべてのスレッドを取得するには、**all** コマンドを使用します。|  
-|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|モジュールの `pattern` に一致する関数を表示します。<br /><br /> *numSymbols* を指定すると、出力が指定した数に制限されます。 `!` (正規表現を示す) が *pattern* に対して指定されていない場合は、すべての関数が表示されます。 *module* が指定されていない場合は、読み込まれたすべてのモジュールが表示されます。 **break** コマンドを使用してブレークポイントを設定するには、シンボル (*~#*) を使用します。|  
+|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|モジュールの `pattern` に一致する関数を表示します。<br /><br /> *numSymbols* を指定すると、出力が指定した数に制限されます。 `!` (正規表現を示す) が *pattern* に対して指定されていない場合は、すべての関数が表示されます。 *module* が指定されていない場合は、読み込まれたすべてのモジュールが表示されます。 **break** コマンドを使用してブレークポイントを設定するには、シンボル ( *~#* ) を使用します。|  
   
 ## <a name="remarks"></a>Remarks  
  デバッグするアプリケーションをコンパイルするときは、コンパイラ固有のフラグを使用します。このフラグによって、コンパイラがデバッグ シンボルを生成します。 コンパイラ固有のフラグの詳細については、コンパイラのドキュメントを参照してください。 最適化したアプリケーションでもデバッグはできますが、一部のデバッグ情報が欠落しています。 たとえば、ローカル変数の多くを表示できなくなり、ソース行も不正確になります。  

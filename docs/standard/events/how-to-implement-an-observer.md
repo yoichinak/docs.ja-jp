@@ -1,5 +1,6 @@
 ---
 title: '方法: オブザーバーを実装する'
+description: .NET でオブザーバーを実装します。 オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、プロバイダーを分ける必要があります。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43236ead15be0777f4284ba553a2f2f5e09d0a73
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289721"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768996"
 ---
 # <a name="how-to-implement-an-observer"></a>方法: オブザーバーを実装する
-オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法: プロバイダーを実装する](how-to-implement-a-provider.md)」を参照してください。  
+オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法:プロバイダーを実装する](how-to-implement-a-provider.md)」を参照してください。  
   
 ### <a name="to-create-an-observer"></a>オブザーバーを作成するには  
   
@@ -47,7 +48,7 @@ ms.locfileid: "84289721"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IObserver%601>
 - [オブサーバー デザイン パターン](observer-design-pattern.md)

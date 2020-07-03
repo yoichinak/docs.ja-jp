@@ -1,5 +1,6 @@
 ---
 title: '方法: ファイルを圧縮して抽出する'
+description: System.IO.Compression を使用してファイルを圧縮して抽出します。 ZipFile、ZipArchive、ZipArchiveEntry、DeflateStream、GZipStream の使用例を参照します。
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 28f9a0baa73f58b0a5c7f93a4b0b3ece3b87c3a5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c13f464432aa6f67136d3a844bdeda256e7ab9b6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288564"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769237"
 ---
 # <a name="how-to-compress-and-extract-files"></a>方法: ファイルを圧縮して抽出する
 

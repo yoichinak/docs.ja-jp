@@ -1,13 +1,14 @@
 ---
 title: 回復の実行
+description: .NET で復旧を実行します。 リソース マネージャーでは、リソース障害の後にトランザクション参加要素を再参加させ、トランザクションの永続参加リストを解決できます。
 ms.date: 03/30/2017
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
-ms.openlocfilehash: fe0e096c31b2ef62a1bc50d40c87f2e12c87343f
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bb00d2f574cc2651b733f3308cf2ffc6b430cc31
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205886"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141966"
 ---
 # <a name="performing-recovery"></a>回復の実行
 リソース マネージャーは、リソース障害の後にトランザクション参加要素を再参加させることにより、トランザクションの永続参加リストの解決を容易にします。  

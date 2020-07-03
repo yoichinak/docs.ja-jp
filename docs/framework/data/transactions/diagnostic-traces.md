@@ -1,13 +1,14 @@
 ---
 title: 診断トレース
+description: .NET の診断トレースについて説明します。 トレースとは、アプリケーションの実行中に生成される特定のメッセージの発行です。
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174421"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141812"
 ---
 # <a name="diagnostic-traces"></a>診断トレース
 トレースとは、アプリケーションの実行中に生成される特定のメッセージの発行です。 トレースを使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレース メッセージは "リスナー" によって受け取られます。 リスナーの目的は、トレース メッセージの収集、格納、およびルーティングを行うことです。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  

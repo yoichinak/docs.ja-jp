@@ -1,5 +1,6 @@
 ---
 title: Semaphore と SemaphoreSlim
+description: Semaphore と SemaphoreSlim について学習します。 クラス Semaphore は、Win32 セマフォ オブジェクトの Thin ラッパーです。 クラス SemaphoreSlim は、軽量で高速のセマフォです。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600452"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore と SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> クラスは、名前付きセマフォ (システム全体) またはローカル セマフォを表します。 これは、Win32 セマフォ オブジェクトの Thin ラッパーです。 Win32 セマフォは、リソースのプールへのアクセスの制御に使用できるカウント セマフォです。  
@@ -44,7 +45,7 @@ ms.locfileid: "84291137"
   
  アクセス制御セキュリティを使用して、名前付きセマフォを表す <xref:System.Threading.Semaphore> オブジェクトを保護します。可能であれば <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> オブジェクトを指定するコンストラクターを使用して保護します。 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> メソッドを使用してアクセス制御セキュリティを適用することもできますが、この場合、セマフォが作成されてから保護されるまでの間に無防備な時間帯が生じてしまいます。 アクセス制御セキュリティによりセマフォを保護すると、悪意のある攻撃を防ぐことができますが、意図しない名前の競合の問題の解決にはなりません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

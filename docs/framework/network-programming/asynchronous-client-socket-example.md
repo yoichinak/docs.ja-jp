@@ -1,5 +1,6 @@
 ---
 title: 非同期クライアント ソケットの例
+description: この .NET Framework プログラムの例では、非同期ソケットを使用してサーバーに接続するクライアントを作成します。 これは文字列を送信し、結果を表示します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 9cf8ffff1b219614cd57b56af48d72c03ac63dda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180924"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502731"
 ---
 # <a name="asynchronous-client-socket-example"></a>非同期クライアント ソケットの例
-次のサンプル プログラムでは、サーバーに接続するクライアントが作成されます。 このクライアントは非同期ソケットで構築されます。そのため、サーバーが応答を返す間にクライアント アプリケーションの実行が中断されることはありません。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  
+次のプログラム例では、サーバーに接続するクライアントを作成します。 このクライアントは非同期ソケットで構築されます。そのため、サーバーが応答を返す間にクライアント アプリケーションの実行が中断されることはありません。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  
   
 ```vb  
 Imports System  
@@ -321,7 +322,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [非同期サーバー ソケットの例](asynchronous-server-socket-example.md)
 - [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)

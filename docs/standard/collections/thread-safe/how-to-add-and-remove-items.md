@@ -1,5 +1,6 @@
 ---
-title: '方法: ConcurrentDictionary の項目を追加および削除する'
+title: ConcurrentDictionary の項目を追加および削除する
+description: .NET の ConcurrentDictionary<TKey,TValue> コレクション クラスの項目を追加、取得、更新、削除する方法の例をご覧ください。
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287901"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325957"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>方法: ConcurrentDictionary の項目を追加および削除する
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>ConcurrentDictionary の項目を追加し、削除する方法
 
 この例では、<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> の項目を追加、取得、更新、削除する方法を示します。 このコレクション クラスは、スレッド セーフな実装です。 同時に複数のスレッドが要素へのアクセスを試みる可能性がある場合は常に、このクラスを使用することをお勧めします。
 
@@ -36,7 +37,7 @@ ms.locfileid: "84287901"
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> はマルチスレッド シナリオ向けに設計されています。 コレクションの項目を追加または削除するために、コードでロックを使用する必要はありません。 ただし、あるスレッドが値を取得した直後に、別のスレッドが同じキーと新しい値を指定してコレクションを更新する可能性が常にあります。
 
-また、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> のメソッドはすべてスレッド セーフですが、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> や <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> などの一部のメソッドはアトミックではありません。 これらのメソッドに渡されるユーザー デリゲートは、ディクショナリの内部ロックの外側で呼び出されます (これは、不明なコードがすべてのスレッドをブロックするのを阻止するために実行されます)。 そのため、次のような一連のイベントが発生する可能性があります。
+また、<xref:System.Collections.Concurrent.ConcurrentDictionary%602> のメソッドはすべてスレッド セーフですが、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> や <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> などの一部のメソッドはアトミックではありません。 不明なコードがすべてのスレッドをブロックするのを阻止するために、これらのメソッドに渡されるユーザー デリゲートは、ディクショナリの内部ロックの外側で呼び出されます。 そのため、次のような一連のイベントが発生する可能性があります。
 
 1. _threadA_ が <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> を呼び出しましたが、項目が見つからないため、`valueFactory` デリゲートを呼び出すことにより新しい項目を作成して追加します。
 

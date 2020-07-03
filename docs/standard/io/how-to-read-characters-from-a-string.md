@@ -1,5 +1,6 @@
 ---
 title: '方法: 文字列からの文字の読み取り'
+description: .Net で文字列から文字を読み取る方法について学習します。 同期的および非同期的に文字を読み取る方法の例を参照してください。
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 6d32e9c5f89dba7590958bae6cc0489f104cd19a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40ff144e0899f3560805a31fa76f391afaeccd67
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594843"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>方法: 文字列からの文字の読み取り
 次のコード例は、文字列から同期的または非同期的に文字を読み取る方法を示しています。  

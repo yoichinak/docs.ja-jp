@@ -1,7 +1,7 @@
 ---
 title: WPF でテンプレートを作成する - .NET デスクトップ
 description: Windows Presentation Foundation と .NET Core でコントロール テンプレートを作成して参照する方法について説明します。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 11/15/2019
 no-loc:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - skinning controls [WPF]
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
-ms.openlocfilehash: c901864d387b8de976bbfa9a9b3c14a7d5a0b4d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c372659676b450cde789c96e45c7ec5de2aea194
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "81432540"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325730"
 ---
 # <a name="create-a-template-for-a-control"></a>コントロールのためのテンプレートを作成する
 
@@ -59,9 +59,9 @@ Windows Presentation Foundation (WPF) を使用すると、独自の再利用可
 
 |     |     |
 | --- | --- |
-| **[!OP.NO-LOC(Title)]**         | `Template Intro Sample` |
-| **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
-| **[!OP.NO-LOC(MinWidth)]**      | `250` |
+| **Title**         | `Template Intro Sample` |
+| **SizeToContent** | `WidthAndHeight` |
+| **MinWidth**      | `250` |
 
 **\<Window>** 要素のコンテンツを次の XAML に設定します。
 
@@ -83,7 +83,7 @@ Windows Presentation Foundation (WPF) を使用すると、独自の再利用可
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-次のプロパティ セットで、新しい **\<ControlTemplate>** を作成します。
+次のプロパティ セットで新しい **\<ControlTemplate>** を作成します。
 
 |     |     |
 | --- | --- |
@@ -174,7 +174,7 @@ WPF で提供されている動的イベントおよびプロパティ システ
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-次に、コントロール テンプレートの **\<Grid>** ルートに、`CommonStates` の **\<VisualStateGroup>** が指定された **\<VisualStateManager.VisualStateGroups>** 要素を追加します。 `Normal` と `MouseOver` の 2 つの状態を定義します。
+次に、コントロール テンプレートの **\<Grid>** ルートで、`CommonStates` に **\<VisualStateGroup>** を指定して **\<VisualStateManager.VisualStateGroups>** 要素を追加します。 `Normal` と `MouseOver` の 2 つの状態を定義します。
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
@@ -192,11 +192,11 @@ WPF で提供されている動的イベントおよびプロパティ システ
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-これで、 **\<ControlTemplate>** は次のようになります。
+**\<ControlTemplate>** は次のようになるはずです。
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 
-プロジェクトを実行します。 ボタンの上にマウスを移動すると、 **\<Ellipse>** の色にアニメーションが付けられます。
+プロジェクトを実行します。 ボタンの上にマウスを移動すると、 **\<Ellipse>** の色がアニメーションになる点に注意してください。
 
 ![WPF ボタンの上にマウスを移動したことで塗りつぶしの色が変化](media/create-apply-template/mouse-move-over-button-visualstate.gif)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990192"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,15 +24,15 @@ ms.locfileid: "84307086"
 
 ## <a name="when-to-use-shared"></a>Shared を使用する場面
 
-クラスまたは構造体のメンバーを共有すると、各インスタンスが独自のコピーを維持する*非共有*とは異なり、すべてのインスタンスでそれを使用できるようになります。 これは、変数の値をアプリケーション全体に適用する場合などに便利です。 この変数を `Shared` として宣言すると、すべてのインスタンスが同じストレージの場所にアクセスするため、1 つのインスタンスで変数の値が変更されると、すべてのインスタンスが更新された値にアクセスするようになります。
+クラスまたは構造体のメンバーを共有すると、各インスタンスが独自のコピーを維持する*非共有*とは異なり、すべてのインスタンスでそれを使用できるようになります。 共有は、変数の値をアプリケーション全体に適用する場合などに便利です。 この変数を `Shared` として宣言すると、すべてのインスタンスが同じストレージの場所にアクセスするため、1 つのインスタンスで変数の値が変更されると、すべてのインスタンスが更新された値にアクセスするようになります。
 
-共有によってメンバーのアクセス レベルが変更されることはありません。 たとえば、クラス メンバーには、共有とプライベート (クラス内からのみアクセス可能)、または非共有とパブリックを指定できます。 詳しくは、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+共有によってメンバーのアクセス レベルが変更されることはありません。 たとえば、クラス メンバーには、共有とプライベート (クラス内からのみアクセス可能)、または非共有とパブリックを指定できます。 詳しくは、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
 - **宣言コンテキスト。** `Shared` は、モジュール レベルでのみ使用できます。 つまり、`Shared` 要素の宣言コンテキストは、クラスまたは構造体にする必要があり、ソース ファイル、名前空間、プロシージャにすることはできません。
 
-- **結合された修飾子。** `Shared` は、同じ宣言内で、[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)、[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)、[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、または [Static](../../../visual-basic/language-reference/modifiers/static.md) と一緒に指定することはできません。
+- **結合された修飾子。** `Shared` は、同じ宣言内で、[Overrides](overrides.md)、[Overridable](overridable.md)、[NotOverridable](notoverridable.md)、[MustOverride](mustoverride.md)、または [Static](static.md) と一緒に指定することはできません。
 
 - **アクセス。** 共有要素にアクセスするには、そのクラスまたは構造体の特定のインスタンスの変数名ではなく、そのクラスまたは構造体の名前で修飾します。 その共有メンバーにアクセスするために、クラスまたは構造体のインスタンスを作成する必要もありません。
 
@@ -42,7 +42,7 @@ ms.locfileid: "84307086"
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **暗黙的共有。** [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)では `Shared` 修飾子を使用できませんが、定数は暗黙的に共有されます。 同様に、モジュールまたはインターフェイスのメンバーを `Shared` として宣言できませんが、それらは暗黙的に共有されます。
+- **暗黙的共有。** [Const ステートメント](../statements/const-statement.md)では `Shared` 修飾子を使用できませんが、定数は暗黙的に共有されます。 同様に、モジュールまたはインターフェイスのメンバーを `Shared` として宣言できませんが、それらは暗黙的に共有されます。
 
 ## <a name="behavior"></a>動作
 
@@ -50,7 +50,7 @@ ms.locfileid: "84307086"
 
 - **インスタンス変数によるアクセス。** 共有要素にアクセスするには、そのクラスまたは構造体の特定のインスタンスを格納する変数の名前でそれを修飾します。 これは通常、想定どおりに動作しますが、コンパイラでは警告メッセージが生成され、変数ではなくクラスまたは構造体の名前によってアクセスが行われます。
 
-- **インスタンス式によるアクセス。** クラスまたは構造体のインスタンスを返す式によって共有要素にアクセスする場合、コンパイラでは、式を評価するのではなく、クラスまたは構造体の名前によってアクセスが行われます。 これにより、式でインスタンスを返すことに加えて、他のアクションを実行することを意図した場合に、予期しない結果が発生します。 次に例を示します。
+- **インスタンス式によるアクセス。** クラスまたは構造体のインスタンスを返す式によって共有要素にアクセスする場合、コンパイラでは、式を評価するのではなく、クラスまたは構造体の名前によってアクセスが行われます。 このアクセスにより、式でインスタンスを返すことに加えて、他のアクションを実行することを意図した場合に、予期しない結果が発生します。 この状況を次の例に示します。
   
     ```vb
     Sub Main()

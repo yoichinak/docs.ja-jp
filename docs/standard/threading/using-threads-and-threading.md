@@ -1,17 +1,18 @@
 ---
 title: スレッドの使用とスレッド処理
+description: .NET でのスレッドの使用とスレッド処理の方法について説明します。これにより、多数の操作を同時に実行するアプリケーション (マルチスレッド) を作成できます。
 ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: c092994818c9105a555acaf63ceba4b8e99bcada
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588425"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663032"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
 
@@ -44,7 +45,7 @@ ms.locfileid: "80588425"
 
 <xref:System.Threading.Thread> プロパティの一部を次の表に示します。  
   
-|property|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|スレッドが起動していて、正常終了しておらず中止されてもいない場合は、`true` が返されます。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|スレッドがバックグラウンド スレッドかどうかを示すブール値を取得または設定します。 バックグラウンド スレッドはフォアグラウンド スレッドに似ていますが、プロセスの停止を防ぐことはありません。 あるプロセスに属するフォアグラウンド スレッドがすべて停止すると、共通言語ランタイムは、アライブ状態のバックグラウンド スレッドで <xref:System.Threading.Thread.Abort%2A> メソッドを呼び出し、プロセスを終了します。 詳細については、「[フォアグラウンド スレッドとバックグラウンド スレッド](foreground-and-background-threads.md)」を参照してください。|  
@@ -52,7 +53,7 @@ ms.locfileid: "80588425"
 |<xref:System.Threading.Thread.Priority%2A>|オペレーティング システムがスレッド スケジュールに優先順位を設定するために使用する <xref:System.Threading.ThreadPriority> 値を取得または設定します。 詳細については、「[スレッドのスケジューリング](scheduling-threads.md)」と <xref:System.Threading.ThreadPriority> リファレンスを参照してください。|  
 |<xref:System.Threading.Thread.ThreadState%2A>|スレッドの現在の状態を示す <xref:System.Threading.ThreadState> 値を取得します。|  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [スレッドおよびスレッド処理](threads-and-threading.md)

@@ -1,5 +1,6 @@
 ---
 title: 正規表現での置換
+description: .NET の正規表現を使用して置換を実行し、一致するテキストを置換します。 置換は、置換パターン内でのみ認識される言語要素です。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288005"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768106"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正規表現での置換
 置換は、置換パターン内でのみ認識される言語要素です。 置換では、正規表現パターンを使用して、入力文字列内の一致するテキストを置換するテキストの全体または一部を定義します。 置換パターンは、1 個以上の置換と、リテラル文字で構成されます。 置換パターンは、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> パラメーターを持つ `replacement` メソッドのオーバーロードおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドに対して用意されています。 メソッドは、一致するパターンを、 `replacement` パラメーターで定義されているパターンで置換します。  

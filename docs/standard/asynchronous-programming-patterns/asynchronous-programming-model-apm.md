@@ -1,5 +1,6 @@
 ---
 title: 非同期プログラミング モデル (APM)
+description: .NET の非同期プログラミング モデル (APM) について説明します。 非同期操作を開始および終了する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289981"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769185"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  
@@ -29,7 +30,7 @@ ms.locfileid: "84289981"
 ## <a name="beginning-an-asynchronous-operation"></a>非同期操作の開始  
  `BeginOperationName` メソッドは非同期操作 *OperationName* を開始し、<xref:System.IAsyncResult> インターフェイスを実装するオブジェクトを返します。 <xref:System.IAsyncResult> オブジェクトは非同期操作に関する情報を格納します。 非同期操作に関する情報を次の表に示します。  
   
-|メンバー|[説明]|  
+|メンバー|説明|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|非同期操作についての情報を格納するオプションのアプリケーション固有オブジェクト。|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|<xref:System.Threading.WaitHandle> 。非同期操作が完了するまでアプリケーションの実行をブロックするために使用できます。|  
@@ -63,7 +64,7 @@ ms.locfileid: "84289981"
   
 - <xref:System.AsyncCallback> デリゲートを使用して、操作が完了したときに呼び出されるメソッドを指定します。 この手法の例については、「 [AsyncCallback デリゲートの使用による非同期操作の終了](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)
 - [同期メソッドの非同期呼び出し](calling-synchronous-methods-asynchronously.md)

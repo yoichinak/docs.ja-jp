@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 725441f5399f72b6457af461d51419c35077f4c2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662915"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324180"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\# で文字列を比較する方法
 
@@ -55,7 +55,7 @@ ms.locfileid: "84662915"
 ## <a name="linguistic-comparisons"></a>言語的な比較
 
 現在のカルチャの言語の規則を使用して文字列の順序を指定することもできます。
-これは、"単語の並べ替え順序" と呼ばれることもあります。 言語的な比較を実行するときには、一部の英数字以外の Unicode 文字に、特別な重みが割り当てられる場合があります。 たとえば、ハイフン ("-") に割り当てられる重みは非常に小さいため、並べ替え順序で "coop" と "co-op" の出現位置が隣接します。 さらに、いくつかの Unicode 文字が <xref:System.Char> インスタンスのシーケンスと等しくなる可能性があります。 次の例では、ドイツ語で "They dance in the street" という語句を 一方の文字列では "ss" (U+0073 U+0073)、もう一方の文字列では 'ß' (U+00DF) を使って表しています。 言語的に (Windows では)、"en-US" と "de-DE" の両方のカルチャで、"ss" はドイツ語の Essetz: 'ß' 文字と同じです。
+これは、"単語の並べ替え順序" と呼ばれることもあります。 言語的な比較を実行するときには、一部の英数字以外の Unicode 文字に、特別な重みが割り当てられる場合があります。 たとえば、ハイフン ("-") に割り当てられる重みは小さいため、並べ替え順序で "coop" と "co-op" の出現位置が隣接します。 さらに、いくつかの Unicode 文字が <xref:System.Char> インスタンスのシーケンスと等しくなる可能性があります。 次の例では、ドイツ語で "They dance in the street" という語句を 一方の文字列では "ss" (U+0073 U+0073)、もう一方の文字列では 'ß' (U+00DF) を使って表しています。 言語的に (Windows では)、"en-US" と "de-DE" の両方のカルチャで、"ss" はドイツ語の Essetz: 'ß' 文字と同じです。
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet3":::
 
@@ -92,7 +92,7 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-言語的な比較は、現在のカルチャに依存し、OS に依存します。 文字列の比較を使用する場合は、これを考慮する必要があります。
+言語的な比較は、現在のカルチャに依存し、OS に依存します。 文字列の比較を使用する場合は、これを考慮してください。
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>配列の言語的な並べ替えと文字列の検索
 
@@ -122,7 +122,7 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 
 ## <a name="reference-equality-and-string-interning"></a>参照の等価性と文字列インターン
 
-どの例でも <xref:System.Object.ReferenceEquals%2A> を使用していません。 このメソッドは、2 つの文字列が同じオブジェクトかどうかを判断します。 これは、文字列比較で一貫性のない結果につながる可能性があります。 次の例は、C# の*文字列のインターン*機能を示しています。 プログラムで 2 つ以上の同じ文字列変数を宣言すると、コンパイラはそれらをすべて同じ場所に保管します。 <xref:System.Object.ReferenceEquals%2A> メソッドを呼び出すと、2 つの文字列がメモリ内の同じオブジェクトを実際に参照していることを確認できます。 インターン処理を回避するには、<xref:System.String.Copy%2A?displayProperty=nameWithType> メソッドを使用します。 コピーが行われた後、同じ値が含まれていても、2 つの文字列は別の記憶場所を使用します。 次の例を実行し、文字列 `a` と `b` が*インターン処理される*ことを示します。これは、同じ記憶域を共有することを意味します。 文字列 `a` と `c` は異なります。
+どの例でも <xref:System.Object.ReferenceEquals%2A> を使用していません。 このメソッドによって、2 つの文字列が同じオブジェクトであるかどうかが判断されます。異なる場合、文字列比較で結果が一致しません。 次の例は、C# の*文字列のインターン*機能を示しています。 プログラムで 2 つ以上の同じ文字列変数を宣言すると、コンパイラはそれらをすべて同じ場所に保管します。 <xref:System.Object.ReferenceEquals%2A> メソッドを呼び出すと、2 つの文字列がメモリ内の同じオブジェクトを実際に参照していることを確認できます。 インターン処理を回避するには、<xref:System.String.Copy%2A?displayProperty=nameWithType> メソッドを使用します。 コピーが行われた後、同じ値が含まれていても、2 つの文字列は別の記憶場所を使用します。 次の例を実行し、文字列 `a` と `b` が*インターン処理される*ことを示します。これは、同じ記憶域を共有することを意味します。 文字列 `a` と `c` は異なります。
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 

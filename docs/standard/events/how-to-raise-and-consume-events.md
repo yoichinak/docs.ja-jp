@@ -1,5 +1,6 @@
 ---
-title: '方法 : イベントを発生させる/処理する'
+title: '方法: イベントを発生させる/処理する'
+description: .NET でイベントを発生させ、使用します。 EventHandler デリゲート、EventHandler<TEventArgs> デリゲート、カスタム デリゲートを使用する例を参照します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4054e1a26c3392870af994a6eceafae92176a332
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279959"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769276"
 ---
-# <a name="how-to-raise-and-consume-events"></a>方法 : イベントを発生させる/処理する
+# <a name="how-to-raise-and-consume-events"></a>方法: イベントを発生させる/処理する
 このトピックの例では、イベントを使用する方法を示します。 ここでは、<xref:System.EventHandler> デリゲートと <xref:System.EventHandler%601> デリゲート、およびカスタム デリゲートの例を使用して、データを持つイベントと持たないイベントを示します。  
   
  この例では、「[イベント](index.md)」で説明されている概念を使用します。  
@@ -42,6 +43,6 @@ ms.locfileid: "84279959"
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [イベント](index.md)

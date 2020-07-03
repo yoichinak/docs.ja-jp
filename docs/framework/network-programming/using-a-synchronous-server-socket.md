@@ -1,5 +1,6 @@
 ---
 title: 同期サーバー ソケットの使用
+description: この例では、.NET Framework の同期サーバーソケットを示しています。これにより、ソケットで接続要求が受信されるまでアプリケーションが中断されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502055"
 ---
 # <a name="using-a-synchronous-server-socket"></a>同期サーバー ソケットの使用
 同期サーバー ソケットは、ソケットで接続要求が受け取られるまでアプリケーションの実行を一時停止させます。 同期ソケットは動作のためにネットワークを多用するアプリケーションには適しませんが、単純なネットワーク アプリケーションには適しています。  
@@ -75,7 +76,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
 - [同期サーバー ソケットの例](synchronous-server-socket-example.md)

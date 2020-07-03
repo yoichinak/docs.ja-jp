@@ -3,25 +3,25 @@ title: ML.NET CLI を使用してセンチメントを分析する
 description: サンプル データセットから ML モデルと関連する C# コードを自動的に生成する
 author: cesardl
 ms.author: cesardl
-ms.date: 12/23/2019
+ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243337"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326026"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 
-ML.NET CLI を使用して ML.NET モデルと基礎となる C# コードを自動生成する方法について説明します。 データセットと実装する機械学習タスクを指定すると、CLI では、AutoML エンジンを使用してモデルの生成と展開のソース コードと、二項モデルが作成されます。
+ML.NET CLI を使用して ML.NET モデルと基礎となる C# コードを自動生成する方法について説明します。 データセットと実装する機械学習タスクを指定すると、CLI では、AutoML エンジンを使用してモデルの生成と展開のソース コードと、分類モデルが作成されます。
 
 このチュートリアルでは、次の手順を実行します。
 > [!div class="checklist"]
 >
 > - 選択した機械学習タスク用にデータを準備する
-> - CLI から "mlnet auto-train" コマンドを実行する
+> - CLI から "mlnet classification" コマンドを実行する
 > - 品質メトリックの結果を確認する
 > - アプリケーションでモデルを使用するために生成された C# コードを理解する
 > - モデルのトレーニングに使用された生成済み C# コードを調べる
@@ -35,8 +35,8 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 ## <a name="pre-requisites"></a>前提条件
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 以降
-- (省略可能) [Visual Studio 2017 または 2019](https://visualstudio.microsoft.com/vs/)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) 以降
+- (省略可能) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 - [ML.NET CLI](../how-to-guides/install-ml-net-cli.md)
 
 生成された C# コード プロジェクトは、Visual Studio から、または `dotnet run` (.NET Core CLI) を使用して実行できます。
@@ -76,34 +76,26 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
     これで、この "感情分析" シナリオに CLI を使用する準備が整いました。
 
     > [!NOTE]
-    > このチュートリアルを完了した後は、現在 ML.NET CLI プレビューでサポートされているいずれかの ML タスク ( *"二項分類"、"多クラス分類"、"回帰"* ) に使用する準備ができていれば、お持ちのデータセットで試すこともできます。
+    > このチュートリアルを完了した後は、現在 ML.NET CLI プレビューでサポートされているいずれかの ML タスク ( *"二項分類"、"分類"、"回帰"* 、 *"レコメンデーション"* ) に使用する準備ができていれば、お持ちのデータセットで試すこともできます。
 
-## <a name="run-the-mlnet-auto-train-command"></a>"mlnet auto-train" コマンドを実行する
+## <a name="run-the-mlnet-classification-command"></a>"mlnet classification" コマンドを実行する
 
 1. 次の ML.NET CLI コマンドを実行します。
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
     ```
 
-    このコマンドによって **`mlnet auto-train` コマンド** が次のように実行されます。
-    - 種類が **`binary-classification`** の **ML タスク**に対して
+    このコマンドによって **`mlnet classification` コマンド** が次のように実行されます。
+    - "*classification*" の **ML タスク**に対して
     - **データセット ファイル `yelp_labelled.txt`** をトレーニングおよびテスト データセットとして使用します (内部的には、CLI によってクロス検証が使用されるか、トレーニング用に 1 つとテスト用に 1 つという 2 つのデータセットに分割されます)。
     - この予測する**目的列/ターゲット列** (一般的に **"ラベル"** と呼ばれます) は、**インデックス 1 の列**です (インデックスは 0 ベースなので、これは 2 列目です)。
     - この特定のデータセット ファイルにはヘッダーがないため、列名を含む**ファイル ヘッダーは使用しません**。
-    - 実験の**目標探索時間**は **10 秒**です
+    - 実験の**目標探索およびトレーニング時間**は **10 秒**です
 
     CLI からの出力が次のように表示されます。
 
-    <!-- markdownlint-disable MD023 MD025 -->
-
-    # <a name="windows"></a>[Windows](#tab/windows)
-
-    ![PowerShell 上の ML.NET CLI の auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
-
-    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
-
-    ![PowerShell 上の ML.NET CLI の auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
+    ![PowerShell での ML.NET CLI 分類](./media/mlnet-cli/mlnet-classification-powershell.gif)
 
     この特定のケースでは、CLI ツールでは、わずか 10 秒の間に指定した小さなデータセットに対してかなりの回数の反復処理を実行できました。つまり、内部データ変換とアルゴリズムのハイパーパラメーターが異なるさまざまなアルゴリズム/構成の組み合わせに基づいて、複数回のトレーニングを行いました。
 
@@ -137,12 +129,12 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 ## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>生成された C# コードを調べて予測するモデルの実行に使用する
 
-1. Visual Studio (2017 または 2019) で、元の保存先フォルダー内の `SampleBinaryClassification` という名前のフォルダーに生成されたソリューションを開きます (このチュートリアルでは `/cli-test` という名前でした)。 次のようなソリューションが表示されます。
+1. Visual Studio (2017 または 2019) で、元の保存先フォルダー内の `SampleClassification` という名前のフォルダーに生成されたソリューションを開きます (このチュートリアルでは `/cli-test` という名前でした)。 次のようなソリューションが表示されます。
 
     > [!NOTE]
     > このチュートリアルでは Visual Studio を使用することをお勧めしますが、生成された C# コード (2 つのプロジェクト) を任意のテキスト エディターで調べ、生成されたコンソール アプリを macOS、Linux または Windows マシン上で `dotnet CLI` を使用して実行することもできます。
 
-    ![CLI によって生成された VS ソリューション](./media/mlnet-cli/generated-csharp-solution-detailed.png)
+    ![CLI によって生成された VS ソリューション](./media/mlnet-cli/mlnet-cli-solution-explorer.png)
 
     - シリアル化された ML モデル (.zip ファイル) とデータ クラス (データ モデル) を含む、生成された**クラス ライブラリ**は、エンドユーザー アプリケーションで直接使用できます。さらに、そのクラス ライブラリを直接参照する (または必要に応じてコードを移動する) こともできます。
     - 生成された**コンソール アプリ**には、確認する必要がある実行コードが含まれているので、通常、単純なコード (わずか数行) を予測を行うエンドユーザー アプリケーションに移動することで、"スコア付けコード" (予測する ML モデルを実行するコード) を再利用します。
@@ -156,64 +148,38 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
     ```csharp
     static void Main(string[] args)
     {
-        MLContext mlContext = new MLContext();
+        // Create single instance of sample data from first line of dataset for model input
+        ModelInput sampleData = new ModelInput()
+        {
+            Col0 = @"Wow... Loved this place.",
+        };
 
-        // Training code used by ML.NET CLI and AutoML to generate the model
-        //ModelBuilder.CreateModel();
+        // Make a single prediction on the sample data and print results
+        var predictionResult = ConsumeModel.Predict(sampleData);
 
-        ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-        // Create sample data to do a single prediction with it
-        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
-
-        // Try a single prediction
-        ModelOutput predictionResult = predEngine.Predict(sampleData);
-
-        Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
+        Console.WriteLine("Using model to make single prediction -- Comparing actual Col1 with predicted Col1 from sample data...\n\n");
+        Console.WriteLine($"Col0: {sampleData.Col0}");
+        Console.WriteLine($"\n\nPredicted Col1 value {predictionResult.Prediction} \nPredicted Col1 scores: [{String.Join(",", predictionResult.Score)}]\n\n");
+        Console.WriteLine("=============== End of process, hit any key to finish ===============");
+        Console.ReadKey();
     }
     ```
 
-    - コードの最初の行では、ML.NET コードを実行するたびに、必要な `MLContext` オブジェクトを作成するだけです。
-
-    - 2 行目のコードはコメント化されています。なぜなら、モデルは既に CLI ツールによってトレーニングされ、モデルのシリアル化された .ZIP ファイルに保存されているので、モデルをトレーニングする必要がないからです。 ただし、CLI による *"モデルのトレーニング方法"* を確認するには、その行をコメント解除し、その特定の ML モデルに使用されるトレーニング コードを実行/デバッグすることができます。
-
-    - 3 行目のコードでは、シリアル化されたモデルの .ZIP ファイルからそのモデルを読むために、そのモデルの .ZIP ファイルのパスを指定して `mlContext.Model.Load()` API を使用します。
-
-    - 4 行目のコードでは、`mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API を使用して `PredictionEngine` オブジェクトを作成します。 1 つのデータ サンプル (この場合は、センチメントを予測するための 1 つのテキスト) をターゲットにして予測する場合は、常に `PredictionEngine` オブジェクトが必要です。
-
-    - コードの 5 行目では、関数 `CreateSingleDataSample()` を呼び出して、予測に使用するその *1 つのサンプル データ*を作成します。 CLI ツールでは、使用するサンプル データの種類が認識されないので、この関数内ではデータセットの最初の行が読み込まれます。 ただし、この場合は、その関数を実装してこの簡単なコードを更新することで、現在の `CreateSingleDataSample()` 関数の実装ではなく独自の "ハードコーディングされた" データを作成することもできます。
+    - 最初のコード行では、この場合は予測に使用するデータセットの最初の行に基づいて "*単一のサンプル データ*" が作成されます。 コードを更新し、独自の "ハードコーディングされたデータ" を作成することもできます。
 
         ```csharp
-        private static ModelInput CreateSingleDataSample()
+        ModelInput sampleData = new ModelInput()
         {
-            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-            return sampleForPrediction;
-        }
+            Col0 = "The ML.NET CLI is great for getting started. Very cool!"
+        };
         ```
+
+    - 次のコード行では、指定の入力データ上で `ConsumeModel.Predict()` メソッドを使用して予測を行い、(ModelOutput.cs スキーマに基づいて) 結果を返します。
+    - 最後のコード行では、サンプル データのプロパティに加え、Sentiment 予測と、肯定的なセンチメントの場合は (1)、否定的なセンチメントの場合は (2) という対応スコアが出力されます。
 
 1. プロジェクトを実行するには、データセットの最初の行から読み込まれた元のサンプル データを使用するか、ハードコーディングされた独自のカスタム サンプル データを指定します。 次のような予測が得られます。
 
-    # <a name="windows"></a>[Windows](#tab/windows)
-
-    Visual Studio から F5 キー ([再生] ボタン) を押してコンソール アプリを実行します。
-
-    ![PowerShell 上の ML.NET CLI の auto-train](./media/mlnet-cli/sample-cli-prediction-execution.png))
-
-    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
-
-    次のコマンドを入力して、コマンドプロンプトからコンソール アプリを実行します。
-
-    ```dotnetcli
-    cd SampleBinaryClassification
-    cd SampleBinaryClassification.ConsoleApp
-
-    dotnet run
-    ```
-
-    ![PowerShell 上の ML.NET CLI の auto-train](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
-
-    ---
+![ML.NET CLI で Visual Studio からアプリを実行する](./media/mlnet-cli/mlnet-cli-console-app.png))
 
 1. ハードコーディングされたサンプル データをセンチメントが異なる他の文に変更して、モデルがどのように肯定的センチメントまたは否定的センチメントを予測するかを確認してみてください。
 
@@ -252,7 +218,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 > [!div class="checklist"]
 >
 > - 選択した ML タスク (解決する問題) 用のデータを準備する
-> - CLI ツールで "mlnet auto-train" コマンドを実行する
+> - CLI ツールで "mlnet classification" コマンドを実行する
 > - 品質メトリックの結果を確認する
 > - モデルを実行するために生成された C# コード (エンドユーザー アプリで使用するコード) を理解する
 > - "最高品質" のモデルのトレーニングに使用された生成済み C# コードを調べる (学習目的)

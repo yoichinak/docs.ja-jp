@@ -1,16 +1,17 @@
 ---
 title: 単一フェースおよび複数フェーズでのトランザクションのコミット
+description: .NET における単一フェースおよび複数フェーズでのトランザクションのコミットについて説明します。 トランザクションに複数のリソースが含まれる場合は、2 フェーズ コミット (2PC) を実行する必要があります。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 8d6c51249f104d35573507a9477a24d66d770693
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f4486998f347bf1db6d22433e6e48b553609c18
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174434"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141825"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>単一フェースおよび複数フェーズでのトランザクションのコミット
 トランザクションで使用される各リソースは、リソース マネージャー (RM) によって管理され、その動作はトランザクション マネージャー (TM) によって調整されます。 「[トランザクションの参加要素としてのリソースの参加](enlisting-resources-as-participants-in-a-transaction.md)」トピックでは、単一 (または複数) のリソースがトランザクションに参加する方法が説明されています。 ここでは、参加リソース間でトランザクションのコミットメントを調整する方法について説明します。  

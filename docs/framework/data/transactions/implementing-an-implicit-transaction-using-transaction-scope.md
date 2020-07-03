@@ -1,16 +1,17 @@
 ---
 title: トランザクション スコープを使用した暗黙的なトランザクションの実装
+description: .NET で TransactionScope クラスを使用して暗黙的なトランザクションを実装します。 このクラスでは、トランザクションに参加しているマークをコードのブロックに付けることができます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: 33b51cf26a35bbdda70582d86db6ac39c22597da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48dd96dbba89a33cfce7d1b4efb776ef4ce4fada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174395"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141927"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>トランザクション スコープを使用した暗黙的なトランザクションの実装
 <xref:System.Transactions.TransactionScope> クラスを使用すると、コード ブロックがトランザクションに参加しているものとして簡単にマークすることができ、トランザクション自体と対話する必要がありません。 トランザクション スコープは、アンビエント トランザクションを自動的に選択して管理することができます。 トランザクション アプリケーションを開発する際は、使いやすさと効率の点から、<xref:System.Transactions.TransactionScope> クラスを使用することをお勧めします。  
@@ -28,7 +29,7 @@ ms.locfileid: "79174395"
  <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 この決定は 2 つの要因に基づいて行われます。1 つはアンビエント トランザクションが存在するかどうか、もう 1 つはコンストラクターの `TransactionScopeOption` パラメーターの値です。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用法の詳細については、このトピックの「[TransactionScopeOption を使用したトランザクション フローの管理](#ManageTxFlow)」を参照してください。  
   
 ## <a name="completing-a-transaction-scope"></a>トランザクション スコープの完了  
- アプリケーションがトランザクション内で実行する必要のあるすべての作業を完了したら、トランザクションをコミットできることをトランザクション マネージャーに知らせるために、<xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> メソッドを一度だけ呼び出す必要があります。 `using` ブロックの最後のステートメントとして <xref:System.Transactions.TransactionScope.Complete%2A> の呼び出しを配置するのは非常によい方法です。  
+ アプリケーションがトランザクション内で実行する必要のあるすべての作業を完了したら、トランザクションをコミットできることをトランザクション マネージャーに知らせるために、<xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWithType> メソッドを一度だけ呼び出す必要があります。 `using` ブロックの最後のステートメントとして <xref:System.Transactions.TransactionScope.Complete%2A> の呼び出しを配置するのは非常によい方法です。  
   
  この呼び出しを行わないと、トランザクション マネージャーは、システム障害が発生したかまたはトランザクションのスコープ内で例外がスローされたと解釈するため、トランザクションが中止されます。 ただし、このメソッドを呼び出したからといって必ずしもトランザクションのコミットが保証されるわけではありません。 これはトランザクション マネージャーにステータスを通知する手段にすぎません。 <xref:System.Transactions.TransactionScope.Complete%2A> メソッドを呼び出した後は、<xref:System.Transactions.Transaction.Current%2A> プロパティを使用してアンビエント トランザクションにアクセスできなくなります。アクセスしようとすると例外がスローされます。  
   

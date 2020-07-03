@@ -1,5 +1,6 @@
 ---
 title: 属性に格納されている情報の取得
+description: 属性インスタンスの場合など、属性に格納されている情報を取得する方法について説明します。属性には、同じスコープのものや、異なるスコープのものが多数あります。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276136"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661862"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>属性に格納されている情報の取得
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
   
 > [!IMPORTANT]
-> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」で説明されているように、<xref:System.Reflection.CustomAttributeData> クラスを使用する必要があります。  
+> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキスト<xref:System.Reflection.CustomAttributeData> に読み込まれたコードの属性を取得するには、「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
  このセクションでは、以下の属性の取得方法について説明します。  
   
@@ -82,7 +83,7 @@ The attribute was not found.
   
  <xref:System.Type> クラスのメンバーを使用して、渡されたクラスの個々のメソッドとメンバーを取得できます。 この例では、まず **Type** オブジェクトに対してクエリを実行して、クラス レベルの属性情報を取得します。 次に、<xref:System.Type.GetMethods%2A?displayProperty=nameWithType> を使用してすべてのメソッドのインスタンスを <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> オブジェクトの配列に配置し、メソッド レベルの属性情報を取得します。 <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> メソッドを使用して、プロパティ レベルまたは <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> で属性を確認したり、コンストラクター レベルで属性を確認したりすることもできます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>

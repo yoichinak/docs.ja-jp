@@ -1,13 +1,14 @@
 ---
 title: Web ブラウザーからサービスへのアクセス (WCF Data Services クイックスタート)
+description: Visual Studio で WCF Data Services を開始し、ブラウザーでフィード読み取りを無効にする方法について説明します。 サービス定義ドキュメントを取得し、データ サービス リソースにアクセスします。
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: d89f84cd3ea4f56bbae34cbefe0c3891df96fa8b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 713436c31bc3f622c4f44a83e33fff3fcbba1c1c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894338"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247779"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Web ブラウザーからサービスへのアクセス (WCF Data Services クイックスタート)
 

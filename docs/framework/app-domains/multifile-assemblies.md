@@ -1,5 +1,6 @@
 ---
 title: マルチファイル アセンブリ
+description: コマンド ライン コンパイラまたは Visual C++ で Visual Studio を使って、.NET をターゲットとするマルチファイル アセンブリを作成できます。 アセンブリ内のファイルには、アセンブリ マニフェストが保持されている必要があります。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-ms.openlocfilehash: 2a70e45d50763cf99c55cf08600c3c816b4043b7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a5fb41b3b136a325e6b8658da521cba3176e929f
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644216"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104636"
 ---
 # <a name="multifile-assemblies"></a>マルチファイル アセンブリ
 

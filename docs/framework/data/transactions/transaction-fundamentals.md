@@ -1,13 +1,14 @@
 ---
 title: トランザクションの基礎
+description: .NET のトランザクションの基礎を確認します。 すべてのトランザクションは基本 ACID プロパティ (atomic、consistent、isolated、durable) を持つ必要があります。
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: ed5865121a32f05f9b58c0ca0fca475fe7b98723
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 49292172b07985d379bfa5d520798d7d97af5749
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346215"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141940"
 ---
 # <a name="transaction-fundamentals"></a>トランザクションの基礎
 トランザクションとは、複数のタスクを互いに結合したものです。 たとえば、あるアプリケーションが 2 つのタスクを実行するものとします。 まず、このアプリケーションはデータベースに新しいテーブルを作成します。 次に、データを収集、フォーマットし、新しく作成したテーブルに挿入する特定のオブジェクトを呼び出します。 この 2 つのタスクは、単に関連しているだけでなく、相互に依存しており、たとえば、新しいテーブルにデータを格納できなければ新しいテーブルを作成しないようにできます。 単一のトランザクションのスコープ内でこの 2 つのタスクを実行すると、両タスク間の結合が行われます。 第 2 のタスクが失敗すると、新しいテーブルの作成以前の時点まで第 1 のタスクがロールバックされます。  

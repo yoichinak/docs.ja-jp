@@ -1,5 +1,6 @@
 ---
 title: カスタム属性の記述
+description: .NET で独自のカスタム属性を設計します。 カスタム属性は、基本的には、System.Attribute から直接的または間接的に派生した従来のクラスです。
 ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276133"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768483"
 ---
 # <a name="writing-custom-attributes"></a>カスタム属性の記述
-独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、<xref:System.Attribute?displayProperty=nameWithType> から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
+独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、 <xref:System.Attribute?displayProperty=nameWithType>から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
   
  カスタム属性クラスを適切にデザインするための主要な手順は次のとおりです。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "84276133"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> には、カスタム属性を作成するために重要な 3 つのメンバーがあります。それらは、[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property)、[AllowMultiple](#allowmultiple-property) です。  
+ <xref:System.AttributeUsageAttribute> には、カスタム属性を作成するために重要な 3 つのメンバー([AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property)、[AllowMultiple](#allowmultiple-property)) があります。  
   
 ### <a name="attributetargets-member"></a>AttributeTargets メンバー  
  前の例では、<xref:System.AttributeTargets.All?displayProperty=nameWithType> を指定し、この属性をすべてのプログラム要素に適用できることが示されています。 代わりに、属性をクラスにのみ適用できることを示す <xref:System.AttributeTargets.Class?displayProperty=nameWithType> を指定するか、属性をメソッドにのみ適用できることを示す <xref:System.AttributeTargets.Method?displayProperty=nameWithType> を指定できます。 この方法で、カスタム属性を使って、説明としてすべてのプログラム要素をマークすることができます。  
@@ -63,13 +64,13 @@ ms.locfileid: "84276133"
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
  [!code-vb[Conceptual.Attributes.Usage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#7)]  
   
- その後、2 つの属性が基底クラス `MyClass` のメソッドに適用されます。  
+ その後、2 つの属性が基底クラス `MyClass`に適用されます。  
   
  [!code-cpp[Conceptual.Attributes.Usage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#9)]
  [!code-csharp[Conceptual.Attributes.Usage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#9)]
  [!code-vb[Conceptual.Attributes.Usage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#9)]  
   
- 最後に、クラス `YourClass` が基底クラス `MyClass` から継承されます。 メソッド `MyMethod` により `MyAttribute` は表示されますが、`YourAttribute` は表示されません。  
+ 最後に、クラス `YourClass` が基底クラス `MyClass`から継承されます。 メソッド `MyMethod` は `MyAttribute`を表示しますが、 `YourAttribute`を表示しません。  
   
  [!code-cpp[Conceptual.Attributes.Usage#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#10)]
  [!code-csharp[Conceptual.Attributes.Usage#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#10)]
@@ -84,7 +85,7 @@ ms.locfileid: "84276133"
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]
  [!code-vb[Conceptual.Attributes.Usage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#11)]  
   
- これらの属性の複数のインスタンスが適用されると、`MyAttribute` ではコンパイラ エラーが発生します。 次のコード例は、`YourAttribute` の正しい使い方と `MyAttribute` の正しくない使い方を示しています。  
+ これらの属性の複数のインスタンスが適用されると、 `MyAttribute` ではコンパイラ エラーが発生します。 次のコード例は、 `YourAttribute` の正しい使い方と `MyAttribute`の正しくない使い方を示しています。  
   
  [!code-cpp[Conceptual.Attributes.Usage#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#13)]
  [!code-csharp[Conceptual.Attributes.Usage#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#13)]
@@ -110,7 +111,7 @@ ms.locfileid: "84276133"
 - Microsoft Visual Basic では、すべてのカスタム属性クラスに <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 属性が必要です。  
   
 ## <a name="declaring-constructors"></a>コンストラクターを宣言する  
- 属性は、従来のクラスと同様の方法によりコンストラクターで初期化されます。 次のコード フラグメントは、一般的な属性のコンストラクターを示しています。 このパブリック コンストラクターは、パラメーターを使って、メンバー変数と同じ値を設定します。  
+ 属性は、従来のクラスと同じ方法で、コンストラクターで初期化されます。 次のコード フラグメントは、一般的な属性のコンストラクターを示しています。 このパブリック コンストラクターは、パラメーターを使って、メンバー変数と同じ値を設定します。  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
@@ -138,7 +139,7 @@ ms.locfileid: "84276133"
  [!code-csharp[Conceptual.Attributes.Usage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#4)]
  [!code-vb[Conceptual.Attributes.Usage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#4)]  
   
- 完全名 `DeveloperAttribute` や省略名 `Developer` を使って、次のいずれかの方法でこの属性を適用できます。  
+ 完全名 `DeveloperAttribute`や省略名 `Developer`を使って、次のいずれかの方法でこの属性を適用できます。  
   
  [!code-cpp[Conceptual.Attributes.Usage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#12)]
  [!code-csharp[Conceptual.Attributes.Usage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#12)]
@@ -146,7 +147,7 @@ ms.locfileid: "84276133"
   
  最初の例は、必須の名前付きパラメーターのみを使って適用された属性を示し、2 番目の例は、必須パラメーターと省略可能なパラメーターの両方を使って適用された属性を示しています。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
