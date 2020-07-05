@@ -1,17 +1,18 @@
 ---
 title: 作業の開始
+description: .NET Framework のサブセットである Windows Presentation Foundation (WPF) の UI フレームワークを使用して、デスクトップ クライアント アプリケーションを作成します。
 ms.date: 01/26/2018
 helpviewer_keywords:
 - getting started [WPF]
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: 68e0be41acd1206ccad34dcbb478c6e628ad9f04
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 2977831bf17ac11a67f71037d26e4f4665131721
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853855"
 ---
 # <a name="get-started-wpf"></a>WPF の使用を開始する
 

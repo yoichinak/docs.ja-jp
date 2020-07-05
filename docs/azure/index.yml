@@ -1,0 +1,198 @@
+### YamlMime:Hub
+title: .NET 開発者向けの Azure
+summary: Azure で .NET を使用するために必要な情報を見つけることができます
+brand: dotnet
+metadata:
+  title: .NET 開発者向けの Azure
+  description: Azure 上の .NET に関するサンプル、チュートリアル、および教育
+  ms.topic: hub-page
+  ms.prod: azure-dotnet
+  ms.date: 03/04/2020
+  ms.openlocfilehash: d1fc6298f5a1aa03ba3df3f99c38245a3165b5be
+  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/29/2020
+  ms.locfileid: "85840379"
+highlightedContent:
+  items:
+  - itemType: quickstart
+    title: ASP.NET Web アプリをデプロイする
+    url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet
+  - itemType: quickstart
+    title: サーバーレス関数を構築する
+    url: https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio
+  - itemType: quickstart
+    title: ASP.NET Core と Docker
+    url: https://docs.microsoft.com/visualstudio/containers/container-tools?view=vs-2019
+  - itemType: learn
+    title: Azure 基礎
+    url: https://docs.microsoft.com/learn/paths/azure-fundamentals/
+  - itemType: tutorial
+    title: Azure DevOps を使用して .NET アプリをデプロイする
+    url: https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
+  - itemType: tutorial
+    title: App Service でのエンドツーエンドの完全なスタック認証
+    url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-auth-aad
+  - itemType: learn
+    title: Microsoft Identity を使用してカスタム API をセキュリティで保護する
+    url: https://docs.microsoft.com/learn/modules/identity-secure-custom-api/
+  - itemType: download
+    title: サンプル コード
+    url: https://docs.microsoft.com/samples/browse/?products=azure&languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
+conceptualContent:
+  items:
+  - title: Web アプリの構築
+    links:
+    - itemType: learn
+      text: Azure App Service で Web アプリケーションをホストする
+      url: https://docs.microsoft.com/learn/modules/host-a-web-app-with-azure-app-service/
+    - itemType: tutorial
+      text: App Service と Azure SQL Database を使用した ASP.NET Core Web アプリ
+      url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
+    - itemType: tutorial
+      text: ASP.NET と Azure SQL Database を使用したマネージド ID
+      url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-connect-msi
+    - itemType: tutorial
+      text: Azure App Service の CORS を使用した Web API
+      url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api
+    - itemType: learn
+      text: Azure API Management を使用して API を公開および管理する
+      url: https://docs.microsoft.com/learn/modules/publish-manage-apis-with-azure-api-management/
+  - title: クラウド ネイティブ アプリの構築
+    links:
+    - itemType: quickstart
+      text: Kubernetes でマイクロサービスを実行してデバッグする
+      url: https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore-visualstudio
+    - itemType: tutorial
+      text: Visual Studio コンテナー ツールを使用した ASP.NET Core アプリ
+      url: https://docs.microsoft.com/visualstudio/containers/container-tools?view=vs-2019
+    - itemType: tutorial
+      text: AKS で複数のコンテナーをデプロイおよびデバッグする
+      url: https://docs.microsoft.com/azure/dev-spaces/multi-service-netcore-visualstudio
+    - itemType: tutorial
+      text: Azure App Configuration を使用した動的な構成と機能フラグ
+      url: https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core
+    - itemType: how-to-guide
+      text: .NET Core アプリを Azure Container Registry にデプロイする
+      url: https://docs.microsoft.com/en-us/visualstudio/containers/hosting-web-apps-in-docker?view=vs-2019
+  - title: ストレージとデータの操作
+    links:
+    - itemType: learn
+      text: Azure SQL データベースのクエリを実行する ASP.NET アプリケーションを開発して構成する
+      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+    - itemType: learn
+      text: Visual Studio Code で Azure Cosmos DB 用の .NET Core アプリをビルドする
+      url: https://docs.microsoft.com/learn/modules/build-cosmos-db-app-with-vscode/
+    - itemType: learn
+      text: Azure Blob ストレージを使用してアプリケーション データを格納する
+      url: https://docs.microsoft.com/learn/modules/store-app-data-with-azure-blob-storage/
+    - itemType: tutorial
+      text: Azure Cosmos DB SQL API を使用して ASP.NET Web アプリを作成する
+      url: https://docs.microsoft.com/azure/cosmos-db/sql-api-dotnet-application
+    - itemType: quickstart
+      text: .NET を使用して Azure PostgreSQL にクエリを実行する
+      url: https://docs.microsoft.com/azure/postgresql/connect-csharp
+  - title: 認証とセキュリティ
+    links:
+    - itemType: overview
+      text: Microsoft ID プラットフォーム (Azure AD)
+      url: https://docs.microsoft.com/azure/active-directory/develop/
+    - itemType: tutorial
+      text: ASP.NET Core で Azure Key Vault を使用する
+      url: https://docs.microsoft.com/azure/key-vault/tutorial-net-create-vault-azure-web-app
+    - itemType: tutorial
+      text: Azure AD B2C と Web API を統合する
+      url: https://docs.microsoft.com/azure/active-directory-b2c/tutorial-single-page-app-webapi
+    - itemType: tutorial
+      text: ASP.NET Web アプリに Microsoft へのサインインを追加する
+      url: https://docs.microsoft.com/azure/active-directory/develop/tutorial-v2-asp-webapp
+  - title: 移行
+    links:
+    - itemType: concept
+      text: Azure ホスティング オプションを選択する
+      url: ./migration/choose.md
+    - itemType: how-to-guide
+      text: .NET Web アプリまたはサービスを Azure App Service に移行する
+      url: ./migration/app-service.md
+    - itemType: how-to-guide
+      text: ASP.NET アプリを Azure VM に移行する
+      url: ./migration/vm.md
+    - itemType: how-to-guide
+      text: SQL Server データベースを Azure に移行する
+      url: ./migration/sql.md
+  - title: 無料の .NET および Azure トレーニング
+    links:
+    - itemType: learn
+      text: Microsoft Learn
+      url: https://docs.microsoft.com/learn/
+    - itemType: video
+      text: Pluralsight:.NET と C# を用いた Azure での開発
+      url: https://www.pluralsight.com/courses/developing-dotnet-microsoft-azure-getting-started?twoid=d6abac77-7dcc-4d33-9e03-f85e78989f02
+    - itemType: video
+      text: .NET 101 ビデオ シリーズ
+      url: https://dot.net/videos
+  - title: .NET アーキテクチャ ガイド
+    links:
+    - itemType: overview
+      text: Azure と .NET の概要
+      url: intro.md
+    - itemType: learn
+      text: Azure での最新のアプリケーションの設計
+      url: https://docs.microsoft.com/learn/paths/architect-modern-apps/
+    - itemType: architecture
+      text: '.NET マイクロサービス: コンテナー化された .NET アプリのアーキテクチャ'
+      url: https://docs.microsoft.com/dotnet/architecture/microservices/
+    - itemType: architecture
+      text: ASP.NET Core および Azure での最新の Web アプリケーションの設計
+      url: https://docs.microsoft.com/dotnet/architecture/modern-web-apps-azure/
+    - itemType: architecture
+      text: Microsoft プラットフォームとツールでのコンテナー化された Docker アプリケーションのライフサイクル
+      url: https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/
+    - itemType: architecture
+      text: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する
+      url: https://docs.microsoft.com/dotnet/architecture/modernize-with-azure-containers/
+    footerLink:
+      url: https://docs.microsoft.com/dotnet/architecture/
+      text: 詳しく見る
+tools:
+  title: Azure SDK for .NET
+  items:
+  - imageSrc: https://www.nuget.org/Content/gallery/img/default-package-icon.svg
+    title: NuGet パッケージ
+    url: https://www.nuget.org/packages?q=windowsazureofficial
+  - imageSrc: https://docs.microsoft.com/en-us/media/common/i_reference.svg
+    title: ドキュメント
+    url: ./sdk/index.yml
+  - imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_visual-studio.svg
+    title: ツール
+    url: ./sdk/tools.md
+additionalContent:
+  sections:
+  - title: .NET および Azure のコミュニティ リソース
+    items:
+    - title: .NET
+      links:
+      - text: .NET のドキュメント
+        url: https://docs.microsoft.com/dotnet
+      - text: ASP.NET ドキュメント
+        url: https://docs.microsoft.com/aspnet
+    - title: Web キャストとショー
+      links:
+      - text: Azure Friday
+        url: https://azure.microsoft.com/resources/videos/azure-friday/
+      - text: クラウド ネイティブ ショー
+        url: https://channel9.msdn.com/Shows/The-Cloud-Native-Show
+      - text: オン .NET
+        url: https://channel9.msdn.com/Shows/On-NET
+      - text: ASP.NET コミュニティ スタンドアップ
+        url: https://dotnet.microsoft.com/platform/community/standup
+    - title: オープン ソース
+      links:
+      - text: Azure SDK for .NET
+        url: https://github.com/Azure/azure-sdk-for-net
+      - text: Microsoft Identity Web
+        url: https://github.com/AzureAD/microsoft-identity-web
+      - text: .NET プラットフォーム
+        url: https://github.com/dotnet/
+  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)をお読みください。

@@ -1,0 +1,35 @@
+### YamlMime:Landing
+title: Azure SDK for .NET
+summary: Azure SDK for .NET のドキュメント
+metadata:
+  title: Azure SDK for .NET
+  description: Azure SDK for .NET のドキュメント
+  ms.prod: azure-dotnet
+  ms.topic: landing-page
+  ms.date: 03/17/2020
+  ms.custom: azure-sdk-dotnet
+  ms.openlocfilehash: 087bcb8361a48d708653b7a61ed475c4644c7746
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "85840373"
+landingContent:
+- title: Azure SDK for .NET
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 認証
+      url: authentication.md
+    - text: ログの記録
+      url: logging.md
+  - linkListType: download
+    links:
+    - text: パッケージ
+      url: https://www.nuget.org/packages?q=windowsazureofficial
+    - text: ツール
+      url: tools.md
+  - linkListType: reference
+    links:
+    - text: API リファレンス
+      url: https://docs.microsoft.com/dotnet/api/overview/azure/?view=azure-dotnet

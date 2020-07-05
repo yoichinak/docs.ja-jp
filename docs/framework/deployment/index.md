@@ -1,5 +1,6 @@
 ---
 title: .NET Framework およびアプリケーションの配置
+description: .NET とアプリケーションのデプロイすることから始めます。 .NET には、ゼロインパクト アプリケーション、プライベート コンポーネント (既定で)、制御コードの共有などが用意されています。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803503"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework およびアプリケーションの配置
 
@@ -32,7 +33,7 @@ ms.locfileid: "75716460"
 
     - [Web インストーラー](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [オフライン インストーラー](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - インストール モード:
 
@@ -118,7 +119,7 @@ ms.locfileid: "75716460"
 
 .NET Framework でのパッケージ化および配置についての情報の一部は、ドキュメントの別のトピックで説明します。 それらのトピックでは、レジストリ エントリを必要としない[アセンブリ](../../standard/assembly/index.md)と呼ばれる自己言及的な単位、名前の一意性を保証し、名前の悪用を防止する[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)、DLL 競合に関連した問題の多くを解決する[アセンブリのバージョン管理](../../standard/assembly/versioning.md)についての情報を提供します。 以下のセクションでは、.NET Framework アプリケーションのパッケージ化および配布について説明します。
 
-### <a name="packaging"></a>梱包
+### <a name="packaging"></a>パッケージ化
 
 .NET Framework は、アプリケーション パッケージ化のために、次のオプションを提供します。
 
@@ -134,7 +135,7 @@ ms.locfileid: "75716460"
 
      このオプションでは、Windows インストーラーで使用する .msi ファイルを作成するか、または他のインストーラー用としてアプリケーションをパッケージ化します。
 
-### <a name="distribution"></a>Distribution
+### <a name="distribution"></a>配布
 
 .NET Framework には、アプリケーション配布のために、次のオプションが用意されています。
 
@@ -158,7 +159,7 @@ ms.locfileid: "75716460"
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|[説明]|
+|Title|説明|
 |-----------|-----------------|
 |[ランタイムがアセンブリを検索する方法](how-the-runtime-locates-assemblies.md)|共通言語ランタイムが、バインド要求を満たすために、使用するアセンブリをどのように特定するかを説明します。|
 |[アセンブリの読み込みのベスト プラクティス](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。|
@@ -169,8 +170,8 @@ ms.locfileid: "75716460"
 |[ClickOnce アプリケーションの発行](/visualstudio/deployment/publishing-clickonce-applications)|Windows フォーム アプリケーションをパッケージ化し、これを ClickOnce でネットワーク上のクライアント コンピューターに配置する方法を説明します。|
 |[リソースのパッケージ化と配置](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework でリソースのパッケージ化と配置に使用する、ハブ アンド スポーク モデルについて説明します。リソースの名前付け規則、フォールバック プロセス、およびパッケージ化の代替策についても説明します。|
 |[相互運用アプリケーションの配置](../interop/deploying-an-interop-application.md)|相互運用アプリケーションの出荷方法とインストール方法について説明します。通常、相互運用アプリケーションには、.NET Framework クライアント アセンブリ、個別の COM タイプ ライブラリを表す 1 つ以上の相互運用機能アセンブリ、および 1 つ以上の登録済み COM コンポーネントが含まれています。|
-|[How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)|進行状況のビューを独自に表示する一方で、.NET Framework セットアップ プロセスをサイレントで起動および追跡する方法を説明します。|
+|[方法: .NET Framework 4.5 インストーラーの進行状況を表示する](how-to-get-progress-from-the-dotnet-installer.md)|進行状況のビューを独自に表示する一方で、.NET Framework セットアップ プロセスをサイレントで起動および追跡する方法を説明します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [開発ガイド](../development-guide.md)
