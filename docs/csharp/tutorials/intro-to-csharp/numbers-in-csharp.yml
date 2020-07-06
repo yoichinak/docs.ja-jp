@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# の分岐とループ
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: ac4f7318dc25fef9f612649f2c3f57a5142f3ead
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: 87ffc9668191a52774f21470dbc415bba3579a49
+  ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860951"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85853914"
 items:
 - durationInMinutes: 1
   content: >
@@ -291,9 +291,6 @@ items:
     > [!NOTE]
 
     > 文字 `M` は、`double` キーワードと `decimal` キーワードの間で最も視覚的に区別される文字として選択されています。
-
-
-    decimal 型を使用した演算では、小数点の右側の桁数がより多いことに注目してください。
 
 
     ***課題***

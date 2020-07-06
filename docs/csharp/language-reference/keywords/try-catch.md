@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619703"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# リファレンス)
 
@@ -141,7 +141,7 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 ## <a name="example"></a>例
 
-例外が発生する可能性がある `ProcessString` メソッドへの呼び出しを含む `try` ブロックの例を次に示します。 `catch` 句には、メッセージを画面に表示するだけの例外ハンドラーがあります。 `throw` ステートメントが `MyMethod` の内側から呼び出されると、システムによって `catch` ステートメントが検索され、メッセージ `Exception caught` が表示されます。
+例外が発生する可能性がある `ProcessString` メソッドへの呼び出しを含む `try` ブロックの例を次に示します。 `catch` 句には、メッセージを画面に表示するだけの例外ハンドラーがあります。 `throw` ステートメントが `ProcessString` の内側から呼び出されると、システムによって `catch` ステートメントが検索され、メッセージ `Exception caught` が表示されます。
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 

@@ -1,5 +1,6 @@
 ---
 title: ストーリーボードの概要
+desription: Organize and apply animations in storyboards. Use property-targeting syntax and combine timelines in Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: 5c058dbaf2ae209a198a8299790d4002447ac443
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 50f45953da3801bf73016c09b78a6a1b54878bc0
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559694"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853642"
 ---
 # <a name="storyboards-overview"></a>ストーリーボードの概要
 
