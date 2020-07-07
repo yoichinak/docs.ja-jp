@@ -1,6 +1,7 @@
 ---
 title: Visual Studio での WPF の概要
 titleSuffix: ''
+description: Windows Presentation Foundation (WPF) で提供される統合プログラミング モデルを使用して基幹業務デスクトップ アプリケーションを構築します。
 ms.date: 01/26/2018
 helpviewer_keywords:
 - typography [WPF]
@@ -16,12 +17,11 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: fc911d5d33820ba382446d15f8c7fac8f2cebf06
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: HT
+ms.openlocfilehash: 21c5311382b509fc3004f2609b2acc54e919eb56
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112337"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853820"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio での WPF の概要
 Visual Studio の Windows Presentation Foundation (WPF) では、Windows 上の基幹業務デスクトップ アプリケーションを構築するための統一されたプログラミング モデルが開発者に提供されます。  

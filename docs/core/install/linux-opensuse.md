@@ -4,12 +4,11 @@ description: openSUSE に .NET Core SDK と .NET Core ランタイムをイン�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619469"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>openSUSE に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -69,7 +68,22 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 ## <a name="dependencies"></a>依存関係
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET Core をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
+
+- krb5
+- libicu
+- libopenssl1_0_0
+
+ターゲット ランタイム環境の OpenSSL バージョンが 1.1 以降である場合は、**compat-openssl10** をインストールする必要があります。
+
+依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
+
+*System.Drawing.Common* アセンブリを使用する .NET Core アプリの場合は、次の依存関係も必要です。
+
+- [libgdiplus (バージョン 6.0.1 以降)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > 最新バージョンの *libgdiplus* をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
 ## <a name="scripted-install"></a>スクリプトでのインストール
 

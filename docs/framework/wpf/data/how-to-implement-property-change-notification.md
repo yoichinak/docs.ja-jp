@@ -1,5 +1,6 @@
 ---
 title: '方法: プロパティの変更通知を実装する'
+description: Windows Presentation Foundation (WPF) で、プロパティ値が変更されたときにプロパティがバインディング ソースに自動的に通知できるようにします。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: 4f9ff49a443577e119b0c1079abbe23bd7ede4c4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: HT
+ms.openlocfilehash: 6c298930b7b1f812e94ea6add8f53c67d3453530
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620782"
 ---
 # <a name="how-to-implement-property-change-notification"></a>方法: プロパティの変更通知を実装する
 バインディング ターゲットのプロパティにバインディング ソースの動的変更が自動的に反映される (たとえば、ユーザーがフォームを編集するとプレビュー ペインが自動的に更新される) ようにするために、<xref:System.Windows.Data.BindingMode.OneWay> または <xref:System.Windows.Data.BindingMode.TwoWay> バインディングをサポートするには、クラスが適切なプロパティ変更通知を提供する必要があります。 この例では、<xref:System.ComponentModel.INotifyPropertyChanged> を実装するクラスを作成する方法を示します。  

@@ -1,15 +1,14 @@
 ---
 title: 'チュートリアル: TensorFlow からの ML.NET 画像分類モデル'
 description: 既存の TensorFlow モデルから新しい ML.NET 画像分類モデルに知識を転移する方法について説明します。 TensorFlow モデルは、画像を 1,000 個のカテゴリに分類するためにトレーニングされました。 ML.NET モデルでは、転移学習を利用して、さらに少ない数のカテゴリに画像を分類します。
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804003"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>チュートリアル: 事前トレーニング済みの TensorFlow モデルから ML.NET 画像分類モデルを生成する
 
@@ -122,12 +121,14 @@ toaster2.png    appliance
 
 1. **Microsoft.ML NuGet パッケージ**をインストールします。
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
     * [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。
-    * **[バージョン]** ドロップダウンをクリックし、一覧から **1.4.0** パッケージを選択し、 **[インストール]** ボタンを選択します。
+    * **[インストール]** ボタンを選択します。
     * **[変更のプレビュー]** ダイアログで **[OK]** ボタンを選択します。
     * 一覧表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスへの同意]** ダイアログで **[同意する]** ボタンを選択します。
-    * **Microsoft.ML.ImageAnalytics v1.4.0**、**SciSharp.TensorFlow.Redist v1.15.0**、**Microsoft.ML.TensorFlow v1.4.0** にこれらの手順を繰り返します。
+    * **Microsoft.ML.ImageAnalytics**、**SciSharp.TensorFlow.Redist**、および **Microsoft.ML.TensorFlow** に対して、これらの手順を繰り返します。
 
 ### <a name="download-assets"></a>資産をダウンロードする
 

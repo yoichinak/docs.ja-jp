@@ -4,12 +4,11 @@ description: SLES に .NET Core SDK と .NET Core ランタイムをインスト
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: e1a2490c1d653eb07aebdd51e34e1bf462906482
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 8f64efcc8206b47855871104e5b6914570c06da0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619417"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-sles"></a>SLES に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -78,7 +77,22 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 ## <a name="dependencies"></a>依存関係
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET Core をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
+
+- krb5
+- libicu
+- libopenssl1_1
+
+ターゲット ランタイム環境の OpenSSL バージョンが 1.1 以降である場合は、**compat-openssl10** をインストールする必要があります。
+
+依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
+
+*System.Drawing.Common* アセンブリを使用する .NET Core アプリの場合は、次の依存関係も必要です。
+
+- [libgdiplus (バージョン 6.0.1 以降)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > 最新バージョンの *libgdiplus* をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
 ## <a name="scripted-install"></a>スクリプトでのインストール
 

@@ -1,5 +1,6 @@
 ---
 title: パス マークアップ構文
+description: Windows Presentation Foundation (WPF) でコンパクト パス ジオメトリを指定するために使用できる、強力で複雑なミニ言語について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: adcedcea6c8d6d988021cbbccf87bd25a042fd16
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 6d2778522b622f0b0dcb59673e793a6d772a4b4f
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181861"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853650"
 ---
 # <a name="path-markup-syntax"></a>パス マークアップ構文
 パスについては、「[WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)」と「[ジオメトリの概要](geometry-overview.md)」で説明されていますが、このトピックでは、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用してパス ジオメトリをよりコンパクトに指定するために使用できる強力で複雑なミニ言語について詳しく説明します。  

@@ -1,15 +1,15 @@
 ---
 title: '方法: ラッパーを手動で作成する'
+description: COM の型のラッパーを手動で作成します。 既存の IDL ファイルまたはタイプ ライブラリを使用するか、マネージド宣言を作成し、アセンブリをタイプ ライブラリにエクスポートします。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619586"
 ---
 # <a name="how-to-create-wrappers-manually"></a>方法: ラッパーを手動で作成する
 マネージド ソース コード内で COM の型を手動で宣言することにした場合、まず既存のインターフェイス定義言語 (IDL: Interface Definition Language) ファイルまたはタイプ ライブラリを用意することをお勧めします。 IDL ファイルがないか、またはタイプ ライブラリ ファイルを生成できない場合には、マネージド宣言を作成してその結果のアセンブリをタイプ ライブラリにエクスポートすることで、COM の型をシミュレートできます。  

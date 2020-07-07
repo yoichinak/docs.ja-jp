@@ -1,16 +1,16 @@
 ---
 title: チュートリアル
+description: WPF 製品または特定の機能分野に関する一般的なシナリオの詳しい手順を使用します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: d7853019b109fa7be97f83134be223b1c65375ac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 9ed97b316dfd5608ee9cefb068e36dbc4a7421c0
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746916"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853811"
 ---
 # <a name="wpf-walkthroughs"></a>WPF のチュートリアル
 チュートリアルには、一般的なシナリオの詳しい手順が説明されています。 このため、製品や特定の機能領域について知るための最初のステップとして適しています。

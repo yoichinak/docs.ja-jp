@@ -3,15 +3,14 @@ title: 'チュートリアル: 転移学習を利用した自動ビジュアル�
 description: このチュートリアルでは、転移学習を利用し、ML.NET で TensorFlow ディープ ラーニング モデルをトレーニングする方法を説明します。具体的には、画像検出 API を利用し、コンクリートの表面の画像をひび割れあり/ひび割れなしに分類します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803743"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>チュートリアル: 転移学習と ML.NET Image Classification API を利用した自動ビジュアル検査
 
@@ -81,7 +80,10 @@ Image Classification API のトレーニング プロセスは、事前トレー
 転移学習と Image Classification API の概要を理解できたところで、アプリケーションを構築しましょう。
 
 1. "DeepLearning_ImageClassification_Binary" という名前の **C# .NET Core コンソール アプリケーション**を作成します。
-1. **Microsoft.ML** バージョン **1.4.0** NuGet パッケージをインストールします。
+1. **Microsoft.ML** NuGet パッケージをインストールします。
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
     1. [パッケージ ソース] として [nuget.org] を選択します。
     1. **[参照]** タブを選択します。
@@ -89,7 +91,7 @@ Image Classification API のトレーニング プロセスは、事前トレー
     1. **Microsoft.ML** を探します。
     1. **[インストール]** ボタンを選択します。
     1. **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
-    1. **Microsoft.ML.Vision** バージョン **1.4.0**、**SciSharp.TensorFlow.Redist** バージョン **1.15.0**、**Microsoft.ML.ImageAnalytics** バージョン **1.4.0** NuGet パッケージに対してもこれらの手順を繰り返します。
+    1. **Microsoft.ML.Vision**、**SciSharp.TensorFlow.Redist**、および **Microsoft.ML.ImageAnalytics** NuGet パッケージに対して、これらの手順を繰り返します。
 
 ### <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 

@@ -1,5 +1,6 @@
 ---
 title: '方法: ObservableCollection を作成およびバインドする'
+description: Windows Presentation Foundation で ObservableCollection クラスから派生するコレクションを作成し、それにバインドする方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: HT
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617870"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>方法: ObservableCollection を作成およびバインドする
 この例では、項目が追加または削除されたときに通知するコレクション クラスである <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスから派生したコレクションを作成およびバインドする方法を示します。  

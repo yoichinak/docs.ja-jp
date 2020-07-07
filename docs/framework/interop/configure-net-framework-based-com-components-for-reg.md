@@ -1,5 +1,6 @@
 ---
 title: '方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する'
+description: 登録を必要としないアクティベーション用の .NET ベースの COM コンポーネントを構成します。 セットアップには、Win32 スタイルのアプリケーション マニフェストと .NET コンポーネント マニフェストが必要です。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: HT
+ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622199"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  

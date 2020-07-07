@@ -1,5 +1,6 @@
 ---
 title: アニメーションの概要
+description: Windows Presentation Foundation (WPF) のドラマチックな画面切り替え効果や、鮮やかな視覚的刺激で、魅力的なユーザーインターフェイスをさらに豪華にすることができます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
-ms.translationtype: HT
+ms.openlocfilehash: d761be0c95fb8aa7eb39cb26b57979185226b8fb
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453118"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853862"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
 
@@ -223,7 +223,7 @@ XAML で <xref:System.Windows.Controls.StackPanel> に <xref:System.Windows.Shap
 
 - \<*Type*>AnimationBase
 
-  抽象クラスを実装すると、\<*Type*> 値がアニメーション化されます。 このクラスは、\<*Type*>Animation クラスと \<*Type*>AnimationUsingKeyFrames クラスの基底クラスとして機能します。 これらのクラスは、ユーザー独自のカスタム アニメーションを作成する場合にのみ直接扱う必要があります。 それ以外の場合は、\<*Type*>Animation または KeyFrame\<*Type*>Animation を使います。
+  抽象クラスを実装すると、\<*Type*> 値がアニメーション化されます。 このクラスは、\<*Type*>Animation と \<*Type*>AnimationUsingKeyFrames のクラスの基底クラスとして機能します。 これらのクラスは、ユーザー独自のカスタム アニメーションを作成する場合にのみ直接扱う必要があります。 それ以外の場合は、\<*Type*>Animation または KeyFrame\<*Type*>Animation を使います。
 
 ほとんどの場合、<xref:System.Windows.Media.Animation.DoubleAnimation> や <xref:System.Windows.Media.Animation.ColorAnimation> などの \<*Type*>Animation クラスを使用します。
 

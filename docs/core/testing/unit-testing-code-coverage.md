@@ -3,13 +3,12 @@ title: 単体テストにコードカバレッジを使用する
 description: .NET の単体テストでコードカバレッジ機能を使用する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
-ms.translationtype: HT
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853905"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>単体テストにコードカバレッジを使用する
 
@@ -18,6 +17,8 @@ ms.locfileid: "85105417"
 この記事では、Coverlet での単体テストでのコードカバレッジの用途と、ReportGenerator でのレポートの生成について説明します。 この記事では、テスト フレームワークとして C# と xUnit を使用していますが、MSTest と NUnit のいずれも使用することが可能です。 Coverlet とは、C# 用のクロスプラットフォームのコードカバレッジのフレームワークである、[GitHub 上のオープン ソース プロジェクト](https://github.com/coverlet-coverage/coverlet)です。 [Coverlet](https://dotnetfoundation.org/projects/coverlet) は .NET Foundation に含まれています。 Coverlet は、レポートの生成に使用する Cobertura のカバレッジのテストの実行データを収集します。
 
 この記事では、Coverlet のテストの実行から収集したコードカバレッジ情報を使用して、レポートを生成する方法についても詳しく説明します。 レポートは、別の [GitHub 上のオープンソース プロジェクトである ReportGenerator](https://github.com/danielpalme/ReportGenerator) を使用して生成できます。 ReportGenerator では、Cobertura などから生成されたカバレッジレポートを、人間が判読できるさまざまな形式のレポートに変換します。
+
+この記事は、サンプル ブラウザーで使用できる、[サンプル ソース コード プロジェクト](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)に基づいています。
 
 ## <a name="system-under-test"></a>テスト対象のシステム
 
@@ -270,7 +271,7 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 > ```
 >
 > *coverage.cobertura.xml* ファイルが結果として出力されます。  
-> [こちらの](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) msbuild 統合ガイドに従ってください。
+> [こちらの](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) msbuild 統合ガイドに従ってください
 
 ## <a name="generate-reports"></a>レポートの生成
 
@@ -300,6 +301,7 @@ reportgenerator
 - [GitHub - ReportGenerator リポジトリ](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator プロジェクト サイト](https://danielpalme.github.io/ReportGenerator)
 - [.NET Core CLI テスト コマンド](../tools/dotnet-test.md)
+- [サンプル ソース コード](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>次の手順
 

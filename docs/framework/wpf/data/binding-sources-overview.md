@@ -1,17 +1,17 @@
 ---
 title: バインディング ソースの概要
+description: Windows Presentation Foundation (WPF) でアプリケーションのバインディング ソースとして使用できるオブジェクトの型について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
-ms.translationtype: HT
+ms.openlocfilehash: 11d19d904e632ca2c7c7795946d350d078c38e70
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619625"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。

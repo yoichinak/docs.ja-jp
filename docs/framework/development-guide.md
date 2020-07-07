@@ -1,15 +1,15 @@
 ---
 title: .NET Framework の開発ガイド
+description: .Net 開発ガイドを確認します。このガイドでは、.NET アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明しています。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
-ms.translationtype: HT
+ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622576"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 

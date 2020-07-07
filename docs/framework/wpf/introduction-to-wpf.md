@@ -1,18 +1,18 @@
 ---
 title: WPF の概要
 titleSuffix: ''
+description: Windows で視覚的に美しいユーザー エクスペリエンスを作成します。 Windows Presentation Foundation (WPF) の主な機能と概念について説明します。
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 759c1ca20ac139ef856df08ec42fb259fc3920d1
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: HT
+ms.openlocfilehash: 7a79174f5f3aebe90190db45566b37bd5e9fbe3f
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112012"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853572"
 ---
 # <a name="wpf-overview"></a>WPF の概要
 

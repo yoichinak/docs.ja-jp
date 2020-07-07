@@ -1,16 +1,16 @@
 ---
 title: インプロセスの side-by-side 実行
+description: インプロセスの side-by-side ホスティングを使用して、1 つの .NET プロセスで多くのバージョンの共通言語ランタイム (CLR) を実行します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622602"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
 .NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
@@ -58,7 +58,7 @@ ms.locfileid: "79181660"
   
      インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework および .NET Framework 4。  
   
-     対処方法: アプリケーション ディレクトリ内の[アプリケーション構成ファイル](../configure-apps/index.md)で、次のように設定された [\<startup> 要素](../configure-apps/file-schema/startup/startup-element.md)と [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)を使用します。  
+     対処方法: アプリケーション ディレクトリ内の[アプリケーション構成ファイル](../configure-apps/index.md)で、[\<startup> 要素](../configure-apps/file-schema/startup/startup-element.md)と、次のように設定された [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)を使用します。  
   
     ```xml  
     <configuration>  

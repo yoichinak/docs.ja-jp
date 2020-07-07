@@ -1,5 +1,6 @@
 ---
 title: '方法: TextBox テキストでソースを更新するタイミングを制御する'
+description: Windows Presentation Foundation (WPF) で UpdateSourceTrigger プロパティを使用して、バインディング ソースの更新のタイミングを制御します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: b211eb67e3bac95f74255935a39cc0d6aec61531
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: HT
+ms.openlocfilehash: 8f6eb5beb0d14a951f6e6cf6eb81e130f5a3e194
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622784"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>方法: TextBox テキストでソースを更新するタイミングを制御する
 このトピックでは、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> プロパティを使用して、バインディング ソースの更新のタイミングを制御する方法について説明します。 このトピックでは、例として <xref:System.Windows.Controls.TextBox> コントロールを使用します。

@@ -1,5 +1,6 @@
 ---
 title: 相互運用アプリケーションの配置
+description: 相互運用アプリケーションを配置します。これには、通常、.NET クライアント アセンブリ、個別の COM タイプ ライブラリの相互運用機能アセンブリ、および登録済み COM コンポーネントが含まれています。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -14,12 +15,11 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617484"
 ---
 # <a name="deploying-an-interop-application"></a>相互運用アプリケーションの配置
 通常、相互運用アプリケーションには、.NET クライアント アセンブリ、個別の COM タイプ ライブラリを表す 1 つ以上の相互運用機能アセンブリ、および 1 つ以上の登録済み COM コンポーネントが含まれています。 Visual Studio および Windows SDK には、タイプ ライブラリをインポートして相互運用アセンブリに変換するためのツールが用意されています。詳しくは「[タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)」をご覧ください。 相互運用アプリケーションを配置する方法には、次の 2 つがあります。  

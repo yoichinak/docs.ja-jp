@@ -1,5 +1,6 @@
 ---
 title: ウィンドウの概要
+description: Windows Presentation Foundation (WPF) におけるスタンドアロン アプリケーションでのウィンドウの作成と管理の基本について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,12 +29,11 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 24f2d1fc64333230c10afb79baed5dc373b3d590
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
-ms.translationtype: HT
+ms.openlocfilehash: e1ad3c118fbaea8f1e23d012721f0cf3c2c50015
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622888"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、ウィンドウを通じて Windows Presentation Foundation (WPF) スタンドアロン アプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロンの WPF アプリケーションには、<xref:System.Windows.Window> クラスを使用した独自のウィンドウがあります。 このトピックでは、<xref:System.Windows.Window> について説明してから、スタンドアロン アプリケーションにおけるウィンドウの作成と管理の基本について説明します。  

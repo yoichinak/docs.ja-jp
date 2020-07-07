@@ -1,17 +1,17 @@
 ---
 title: '方法: メソッドにバインドする'
+description: 次の例に従って、Windows Presentation Foundation (WPF) でオブジェクトのメソッドにバインドする方法を確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], binding to methods using ObjectDataProvider
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9501e6357203c21651e85f1d65059be1d70becf2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619599"
 ---
 # <a name="how-to-bind-to-a-method"></a>方法: メソッドにバインドする
 次の例では、<xref:System.Windows.Data.ObjectDataProvider> を使用してメソッドにバインドする方法を示します。  

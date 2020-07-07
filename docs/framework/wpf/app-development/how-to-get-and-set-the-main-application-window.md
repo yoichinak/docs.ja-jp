@@ -1,5 +1,6 @@
 ---
 title: '方法: メイン アプリケーション ウィンドウを取得して設定する'
+description: 次の例に従って、Windows Presentation Foundation (WPF) アプリケーション内でメイン アプリケーション ウィンドウを取得して設定します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-ms.openlocfilehash: 5894761c4b6258cbf90d369a722ffc5abca51885
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: HT
+ms.openlocfilehash: 9bb5bce9b90482796acd8c62e77dc8bd9a850eeb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622680"
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>方法: メイン アプリケーション ウィンドウを取得して設定する
 この例では、メイン アプリケーション ウィンドウを取得および設定する方法を示します。  

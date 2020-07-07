@@ -1,17 +1,17 @@
 ---
 title: .NET Framework 配置ガイド (開発者向け)
+description: 開発者向けの .NET 配置ガイドをお読みください。 バージョン 4.5 から 4.8 の .NET の任意のバージョンをアプリと共にインストールする場合は、この情報を使用してください。
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622667"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。

@@ -4,12 +4,11 @@ description: Ubuntu に .NET Core SDK と .NET Core ランタイムをインス�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619430"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -201,16 +200,17 @@ sudo apt-get update; \
 
 パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET Core をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
 
-- liblttng-ust0
-- libcurl3 (14.x および 16.x 用)
-- libcurl4 (18.x 用)
-- libssl1.0.0
-- libkrb5-3
-- zlib1g
+- libc6
+- libgcc1
+- libgssapi-krb5-2
 - libicu52 (14.x 用)
 - libicu55 (16.x 用)
-- libicu57 (17.x 用)
 - libicu60 (18.x 用)
+- libicu66 (20.x 用)
+- libssl1.0.0 (14.x、16.x 用)
+- libssl1.1 (18.x、20.x 用)
+- libstdc++6
+- zlib1g
 
 *System.Drawing.Common* アセンブリを使用する .NET Core アプリの場合は、次の依存関係も必要です。
 

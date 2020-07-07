@@ -1,5 +1,6 @@
 ---
 title: アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
+description: Windows Presentation Foundation (WPF) でのアプリケーション データ ファイルの構成、識別、および使用に関する特別なサポートについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,11 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 19cb530fc5c70df3a7af7ac41836b3dfd97594e9
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 324b3eb922f0fd1d1d9ad00105a06a7fbdb8effd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622862"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 Microsoft Windows アプリケーションは、多くの場面で、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、イメージ、ビデオ、オーディオなどの実行可能ではないデータを格納したファイルを必要とします。 Windows Presentation Foundation (WPF) には、アプリケーション データ ファイルと呼ばれるこれらの種類のデータ ファイルを構成、識別、および使用するための特殊なサポート機能があります。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  

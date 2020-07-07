@@ -1,5 +1,6 @@
 ---
 title: バインディング宣言の概要
+description: Windows Presentation Foundation (WPF) でアプリケーション開発のバインディングを XAML で宣言する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,11 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: HT
+ms.openlocfilehash: 8d4943de0cacb5fe0b5a0c37a5a68f15243ad528
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619638"
 ---
 # <a name="binding-declarations-overview"></a>バインディング宣言の概要
 

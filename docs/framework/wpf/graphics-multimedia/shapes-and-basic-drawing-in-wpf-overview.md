@@ -1,5 +1,6 @@
 ---
 title: 図形と基本描画の概要
+description: Windows Presentation Foundation (WPF) で、すぐに使用できるシェイプと複数レイヤーのレンダリング サービスを使用して、ユーザー インターフェイスを強化します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,11 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 44104bec478f1fbb10acc0e591af43ea95fecdc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 41d8f2b87232740c8945bd6a6099aa86dbe77bc6
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853694"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF での図形と基本描画の概要
 このトピックでは、<xref:System.Windows.Shapes.Shape> オブジェクトを使用して描画する方法の概要について説明します。 <xref:System.Windows.Shapes.Shape> は <xref:System.Windows.UIElement> の一種であり、これを使用すると、画面に図形を描画できます。 <xref:System.Windows.Shapes.Shape> オブジェクトは UI 要素であるため、<xref:System.Windows.Controls.Panel> 要素やほとんどのコントロール内で使用できます。  

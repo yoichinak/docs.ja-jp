@@ -1,13 +1,13 @@
 ---
 title: .NET Core とオープン ソース
+description: .NET Core の概要について説明します。これは、汎用、モジュール型、クロスプラットフォーム、およびオープンソースの .NET Standard の実装です。
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 4d9d42304c58c631020d8b12bec5c038bc0c07ab
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
-ms.translationtype: HT
+ms.openlocfilehash: 08d30d047c25b3b6d681d72b46b81a0cb21f8e0a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622758"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core とオープン ソース
 

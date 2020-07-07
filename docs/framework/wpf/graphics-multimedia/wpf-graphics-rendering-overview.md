@@ -1,5 +1,6 @@
 ---
 title: グラフィックス レンダリングの概要
+description: Windows Presentation Foundation (WPF) ですべてのオブジェクトを派生させる基本的なグラフィックス レンダリング クラスの役割について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 9d58aa973f7de6c073611e13f2889913ff26dd55
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: HT
+ms.openlocfilehash: 96a7ea999f27e89dc22c10329214de7e3fa60341
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111921"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853629"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF グラフィックス レンダリングの概要
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のビジュアル層の概要について説明します。 特に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] モデルでのレンダリングをサポートする <xref:System.Windows.Media.Visual> クラスの役割に重点を置いて説明します。  

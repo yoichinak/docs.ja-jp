@@ -1,5 +1,6 @@
 ---
 title: '方法: ストーリーボードを使ってプロパティをアニメーション化する'
+description: Windows Presentation Foundation (WPF) で、プロパティのアニメーションとストーリーボードを使用してユーザー インターフェイスに動きを加えます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - animation [WPF], Storyboards
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
-ms.openlocfilehash: 6cfce9a5b070a23ed9ac03473888bf572b61393b
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: HT
+ms.openlocfilehash: f21b606751b845905a7bde6d3a7658b214369cc6
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853749"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>方法: ストーリーボードを使ってプロパティをアニメーション化する
 この例では、<xref:System.Windows.Media.Animation.Storyboard> を使用してプロパティをアニメーション化する方法を示します。 <xref:System.Windows.Media.Animation.Storyboard> を使用してプロパティをアニメーション化するには、アニメーション化するプロパティごとにアニメーションを作成し、アニメーションを格納するための <xref:System.Windows.Media.Animation.Storyboard> も作成します。  

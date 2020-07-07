@@ -1,5 +1,6 @@
 ---
 title: ナビゲーションの概要
+description: Windows Presentation Foundation (WPF) のスタンドアロン アプリケーションと XAML ブラウザー アプリケーションで使用されるブラウザー スタイルのナビゲーションに対するサポートについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,12 +25,11 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 8afda2a314bd04e91c6686fb254a1bd9e773913d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 2aac1b3a38b6240bfba1b90983fd9cbd18b31b6f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621705"
 ---
 # <a name="navigation-overview"></a>ナビゲーションの概要
 

@@ -1,5 +1,6 @@
 ---
 title: マネージド コードでのプロトタイプの作成
+description: .NET マネージド コードでプロトタイプを作成することにより、アンマネージド関数にアクセスして、マネージド コードでメソッド定義に注釈を付ける属性フィールドを使用できるようにします。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,11 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622160"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
 このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  

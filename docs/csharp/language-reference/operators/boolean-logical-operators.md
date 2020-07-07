@@ -1,7 +1,7 @@
 ---
 title: ブール論理演算子 - C# リファレンス
 description: ブール オペランドを使用した論理否定演算、論理積演算 (AND)、および包含的および排他的論理和演算 (OR) を実行する C# 演算子について説明します。
-ms.date: 09/27/2019
+ms.date: 06/29/2020
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,11 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
-ms.translationtype: HT
+ms.openlocfilehash: a19c804c624153ef608885bc6493537302275765
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618195"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -115,8 +114,14 @@ C# 8.0 以降では、単項後置の `!` 演算子は [null 免除演算子](nu
 
 ## <a name="nullable-boolean-logical-operators"></a>null 許容ブール論理演算子
 
-`bool?` オペランドの場合、`&` 演算子と `|` 演算子では 3 値ロジックをサポートします。 次の表に、これらの演算子のセマンティクスが定義されています。  
-  
+`bool?` オペランドの場合、[`&` (論理 AND)](#logical-and-operator-) 演算子および [`|` (論理 OR)](#logical-or-operator-) 演算子は、次のように 3 値論理をサポートします。
+
+- `&` 演算子は、その両方のオペランドが `true` に評価される場合にのみ `true` を生成します。 `x` または `y` のいずれかが `false` に評価される場合、(もう一方のオペランドが `null` に評価された場合でも) `x & y` は `false` を生成します。 それ以外の場合、`x & y` の結果は `null` になります。
+
+- `|` 演算子は、その両方のオペランドが `false` に評価される場合にのみ `false` を生成します。 `x` または `y` のいずれかが `true` に評価される場合、(もう一方のオペランドが `null` に評価された場合でも) `x | y` は `true` を生成します。 それ以外の場合、`x | y` の結果は `null` になります。
+
+そのセマンティクスを次の表に示します。
+
 |x|Y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  

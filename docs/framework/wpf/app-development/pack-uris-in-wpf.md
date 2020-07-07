@@ -1,5 +1,6 @@
 ---
 title: パック URI
+description: Uniform Resource Identifier (URI) を使用して Windows Presentation Foundation (WPF) でファイルを識別して読み込む多くの方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
-ms.translationtype: HT
+ms.openlocfilehash: 1d19dec0d846659f8de6ed518a7f98d224354a82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621692"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF におけるパッケージの URI
 

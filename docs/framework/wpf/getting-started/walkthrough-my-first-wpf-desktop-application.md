@@ -1,6 +1,7 @@
 ---
 title: Visual Studio 2019 で最初の WPF アプリを作成する - .NET Framework
 titleSuffix: ''
+description: ほとんどの WPF アプリケーションに共通する要素を含む、Windows Presentation Foundation (WPF) デスクトップ アプリケーションを開発します。
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
-ms.translationtype: HT
+ms.openlocfilehash: c9af988bcf291325b11df4fd22827b47090c0b48
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646416"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853889"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で最初の WPF アプリケーションを作成する
 
@@ -323,7 +323,7 @@ ms.locfileid: "81646416"
 
 ## <a name="add-code-to-handle-events"></a>イベントを処理するコードを追加する
 
-1. *`ExpenseItHome.xaml`* で、<xref:System.Windows.Controls.Button> 要素に <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベント ハンドラーを追加します。 詳細については、「[方法: 単純なイベント ハンドラーを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))」を参照してください。
+1. *`ExpenseItHome.xaml`* で、<xref:System.Windows.Controls.Button> 要素に <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベント ハンドラーを追加します。 詳細については、「[方法:単純なイベント ハンドラーを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))」を参照してください。
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 

@@ -1,5 +1,6 @@
 ---
 title: 'COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー'
+description: .NET クライアントが COM サーバーにアクセスして COM コクラス インスタンスを作成し、クラス メンバーを呼び出して住宅ローンの計算を行う方法を示すコード サンプルをお読みください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: d854f474845322ae6df1da5788890a69720a5272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620873"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー
 このサンプルでは、[COM サーバー](#cpconcominteropsamplenetclientcomserveranchor2)にアクセスするように作成された [.NET クライアント](#cpconcominteropsamplenetclientcomserveranchor1)で、COM コクラスのインスタンスを作成し、クラスのメンバーを呼び出して住宅ローンの計算を行う方法を示します。  

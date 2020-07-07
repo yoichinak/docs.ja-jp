@@ -1,5 +1,6 @@
 ---
 title: 配列に対する既定のマーシャリング
+description: 配列に対する既定のマーシャリングについて説明します。 マネージド配列、アンマネージド配列、.NET コードへの配列パラメーターの受け渡し、および COM への配列の受け渡しについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622563"
 ---
 # <a name="default-marshaling-for-arrays"></a>配列に対する既定のマーシャリング
 全体がマネージド コードで構成されるアプリケーションでは、共通言語ランタイムは、配列型を In/Out パラメーターとして渡します。 これに対し、相互運用マーシャラーは、既定で In パラメーターとして配列を渡します。  
@@ -184,7 +184,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型はシグネチャで提供されます。 ランクは常に 1 で、下限は常に 0 です。 サイズは実行時に常に把握されています。|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型、ランク、境界はシグネチャで提供されます。 サイズは実行時に常に把握されています。|  
-|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>** >**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
   
  LPSTR または LPWSTR を含む構造体の配列に関連する OLE オートメーションの制限があります。  そのため、**String** フィールドは **UnmanagedType.BSTR** としてマーシャリングする必要があります。 この操作を行わない場合、例外がスローされます。  
   

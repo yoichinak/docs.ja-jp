@@ -1,5 +1,6 @@
 ---
 title: グラフィックス レンダリングのレジストリ設定
+description: Windows Presentation Foundation (WPF) で、トラブルシューティング、デバッグ、および製品サポートの目的でレジストリ設定を使用する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - rendering graphics [WPF], registry settings
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 642dfdd784af4b85672cf5b0c8e60079763f4c47
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: HT
+ms.openlocfilehash: a2c6cfa5a207ae89c053f6ee81597f01458b5933
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853754"
 ---
 # <a name="graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに影響を与える [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス レンダリングのレジストリ設定の概要を示します。  

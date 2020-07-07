@@ -1,5 +1,6 @@
 ---
 title: '方法: バインディングの検証の実装'
+description: Windows Presentation Foundation (WPF) で、無効な値が入力されたときにバインディングの検証を使用してユーザーに視覚的フィードバックを提供する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 245b05d9cfa7ca66dec310bd9a5291def0101d19
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: HT
+ms.openlocfilehash: 0813be9f79a83a9dae26db1dadb58b5e973339fd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617883"
 ---
 # <a name="how-to-implement-binding-validation"></a>方法: バインディングの検証の実装
 

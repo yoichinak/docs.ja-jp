@@ -4,12 +4,11 @@ description: Alpine に .NET Core SDK と .NET Core ランタイムをインス�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619521"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Alpine に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -47,12 +46,11 @@ Alpine Linux 上の .NET Core には、次の依存関係がインストール�
 
 - icu-libs
 - krb5-libs
+- libgcc
 - libintl
 - libssl1.1 (Alpine v3.9 以上)
-- libssl1.0 (Alpine v3.8)
+- libssl1.0 (Alpine v3.8 以下)
 - libstdc++
-- lttng-ust
-- numactl (省略可能)
 - zlib
 
 ## <a name="scripted-install"></a>スクリプトでのインストール

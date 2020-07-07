@@ -1,15 +1,15 @@
 ---
 title: COM 相互運用機能によるデータのマーシャリング
+description: COM 相互運用機能によるデータのマーシャリングに関する記事をご覧ください。 Tlbimp.exe と Tlbexp.exe ツールは、COM タイプ ライブラリと相互運用機能アセンブリ間の変換を行います。
 ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621510"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM 相互運用機能によるデータのマーシャリング
 COM 相互運用は、マネージド コードから COM オブジェクトを使用すること、およびマネージド オブジェクトを COM に公開することの、両方の操作をサポートします。 COM との間でデータをマーシャリングする操作のサポートは広範で、ほとんどの場合、正しいマーシャリング動作が提供されます。  

@@ -1,5 +1,6 @@
 ---
 title: Drawing オブジェクトの概要
+description: オブジェクトについて理解し、それらを使用して Windows Presentation Foundation (WPF) でシェイプ、ビットマップ、テキスト、メディアを効率的に描画する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 7a5d00eb2fb7c66e5e42d40893806e13717e1d2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: f00a59cd6e799e57f238c5f9b72ecc48e8445475
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853841"
 ---
 # <a name="drawing-objects-overview"></a>Drawing オブジェクトの概要
 このトピックでは、<xref:System.Windows.Media.Drawing> オブジェクトについて紹介し、それを使用して図形、ビットマップ、テキスト、メディアを効率的に描画する方法を説明します。 クリップアートを作成するとき、<xref:System.Windows.Media.DrawingBrush> で描画するとき、または <xref:System.Windows.Media.Visual> オブジェクトを使用するときは、<xref:System.Windows.Media.Drawing> オブジェクトを使用します。  
@@ -23,7 +23,7 @@ ms.locfileid: "79186536"
 ## <a name="what-is-a-drawing-object"></a>Drawing オブジェクトとは  
  <xref:System.Windows.Media.Drawing> オブジェクトでは、シェイプ、ビットマップ、ビデオ、テキスト行などの表示可能なコンテンツを記述します。 さまざまな種類の描画で、さまざまな種類のコンテンツを記述します。 次の一覧に、さまざまな種類の描画オブジェクトを示します。  
   
-- <xref:System.Windows.Media.GeometryDrawing> - シェイプを描画します。  
+- <xref:System.Windows.Media.GeometryDrawing> - 図形を描画します。  
   
 - <xref:System.Windows.Media.ImageDrawing> - イメージを描画します。  
   

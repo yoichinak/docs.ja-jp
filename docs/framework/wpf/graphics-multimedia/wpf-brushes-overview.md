@@ -1,5 +1,6 @@
 ---
 title: ブラシの概要
+description: Windows Presentation Foundation (WPF) でグラデーションとパターンを使用して、単純な純色で描画することによって、概念を示す方法を説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,11 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 7a9474b392052900952f5b677ad94b16025de8dd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 9bfd702d7a5a9d807e2b922874119c2bb2e68f39
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186572"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853715"
 ---
 # <a name="wpf-brushes-overview"></a>WPF のブラシの概要
 画面上に表示されるすべてのものが見えるのは、ブラシで描画されているからです。 たとえば、ボタンの背景、テキストの前景、図形の塗りつぶしを表現するためにブラシが使用されます。 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ブラシを使用した塗りつぶしの概念を紹介し、いくつかの例を示します。 ブラシを使用すると、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] オブジェクトを単色で塗りつぶすことも、パターンとイメージの複雑な組み合わせで塗りつぶすこともできます。  

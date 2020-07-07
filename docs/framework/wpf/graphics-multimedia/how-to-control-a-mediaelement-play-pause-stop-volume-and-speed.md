@@ -1,5 +1,6 @@
 ---
 title: '方法: MediaElement (再生、一時停止、停止、ボリューム、および速度) を制御する'
+description: Windows Presentation Foundation (WPF) でメディアの再生を制御します。 開始、停止、一時停止、前後へのスキップ、ボリュームと速度の調整を行います。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: cde7c32b48dff3d6d054e700b2f95771ba3b3773
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: da846299eaa1e36b6e5caab08bc1f861e9f9c46d
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853601"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>方法: MediaElement (再生、一時停止、停止、ボリューム、および速度) を制御する
 次の例では、<xref:System.Windows.Controls.MediaElement> を使用してメディアの再生を制御する方法を示します。 この例では、メディアの再生、一時停止、停止、前後へのスキップに加え、ボリュームと速度の調整も可能な簡単なメディア プレーヤーを作成します。  

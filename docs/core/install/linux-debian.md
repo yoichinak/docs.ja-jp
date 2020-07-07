@@ -4,12 +4,11 @@ description: Debian に .NET Core SDK と .NET Core ランタイムをインス�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619495"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Debian に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -127,7 +126,26 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>依存関係
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET Core をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
+
+- libc6
+- libgcc1
+- libgssapi-krb5-2
+- libicu52 (8.x 用)
+- libicu57 (9.x 用)
+- libicu63 (10.x 用)
+- libicu67 (11.x 用)
+- libssl1.0.0 (8.x 用)
+- libssl1.1 (9.x - 11.x 用)
+- libstdc++6
+- zlib1g
+
+*System.Drawing.Common* アセンブリを使用する .NET Core アプリの場合は、次の依存関係も必要です。
+
+- libgdiplus (バージョン 6.0.1 以降)
+
+  > [!WARNING]
+  > 最新バージョンの *libgdiplus* をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
 ## <a name="scripted-install"></a>スクリプトでのインストール
 

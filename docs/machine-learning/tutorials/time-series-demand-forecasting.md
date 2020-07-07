@@ -1,17 +1,16 @@
 ---
 title: 'チュートリアル: 自転車レンタル需要の予測 - 時系列'
 description: このチュートリアルでは、一変量時系列解析と ML.NET を使用して、自転車レンタル サービスの需要を予測する方法について説明します。
-ms.date: 11/07/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: HT
+ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803218"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>チュートリアル: 時系列解析と ML.NET を使用して自転車レンタル サービスの需要を予測する
 
@@ -46,13 +45,16 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 ## <a name="create-console-application"></a>コンソール アプリケーションを作成する
 
 1. "BikeDemandForecasting" という名前の新しい **C# .NET Core コンソール アプリケーション**を作成します。
-1. **Microsoft.ML** バージョン **1.4.0** NuGet パッケージをインストールします。
+1. **Microsoft.ML** バージョン NuGet パッケージをインストールします。
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
     1. [パッケージ ソース] として "nuget.org" を選択し、 **[参照]** タブを選択し、"**Microsoft.ML**" を検索します。
     1. **[プレリリースを含める]** チェックボックスをオンにします。
     1. **[インストール]** ボタンを選択します。
     1. **[変更のプレビュー]** ダイアログで **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、[ライセンスの同意] ダイアログの **[同意する]** を選択します。
-    1. **System.Data.SqlClient** バージョン **4.7.0** および **Microsoft.ML.TimeSeries** バージョン **1.4.0** に対して、この手順を繰り返します。
+    1. **System.Data.SqlClient** と **Microsoft.ML.TimeSeries** に対して、この手順を繰り返します。
 
 ### <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 

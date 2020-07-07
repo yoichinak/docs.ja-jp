@@ -1,5 +1,6 @@
 ---
 title: '方法: バインディング ソースを指定する'
+description: この例では、Windows Presentation Foundation (WPF) でバインディング ソースを指定する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 4fde66b22bac6b4a2cfeb4eceb50027daadee387
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: HT
+ms.openlocfilehash: 02f27da007ebe8c5985f91b83adfba7d3d00219a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621666"
 ---
 # <a name="how-to-specify-the-binding-source"></a>方法: バインディング ソースを指定する
 データ バインディングでは、バインド ソース オブジェクトとは、そこからデータを取得するオブジェクトを指します。 このトピックでは、バインド ソースを指定するさまざまな方法について説明します。  

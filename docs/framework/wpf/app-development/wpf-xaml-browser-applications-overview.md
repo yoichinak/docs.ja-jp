@@ -1,5 +1,6 @@
 ---
 title: XAML ブラウザー アプリケーションの概要
+description: Windows Presentation Foundation (WPF) で、Web アプリケーションとリッチクライアント アプリケーションの機能が XAML ブラウザー アプリケーションでどのように組み合わされているかについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
-ms.translationtype: HT
+ms.openlocfilehash: 3395445dd5639e25f62aeef09d070e326704ed40
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617913"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
 <a name="introduction"></a> XAML ブラウザー アプリケーション (XBAP) は、Web アプリケーションとリッチ クライアント アプリケーションの両方の機能を兼ね備えています。 たとえば、Web アプリケーションと同様、Web サーバーに配置して、Internet Explorer または Firefox から開始できます。 また、リッチ クライアント アプリケーションと同様、WPF の機能を利用することができます。 XBAP の開発方法もリッチ クライアントの開発に似ています。 このトピックでは、XBAP 開発の概要を示し、XBAP 開発が標準的なリッチ クライアント開発と異なる点について説明します。
@@ -34,7 +34,7 @@ ms.locfileid: "77124209"
 
 <a name="creating_a_new_xaml_browser_application_xbap"></a>
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>新しい XAML ブラウザー アプリケーション (XBAP) の作成
- 新しい XBAP プロジェクトを作成する最も簡単な方法は、Visual Studio を使用することです。 新しいプロジェクトを作成するときに、テンプレートの一覧で **[WPF ブラウザー アプリケーション]** を選択します。 詳細については、[新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。
+ 新しい XBAP プロジェクトを作成する最も簡単な方法は、Visual Studio を使用することです。 新しいプロジェクトを作成するときに、テンプレートの一覧で **[WPF ブラウザー アプリケーション]** を選択します。 詳細については、「[方法:新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。
 
  XBAP プロジェクトを実行すると、そのプロジェクトは、スタンドアロン ウィンドウではなくブラウザー ウィンドウで開きます。 XBAP を Visual Studio でデバッグするとき、アプリケーションはインターネット ゾーン アクセス許可に基づいて実行されます。したがって、そのアクセス許可を超えると、セキュリティ例外がスローされます。 詳細については、[セキュリティ](../security-wpf.md)に関するページと、「[WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)」を参照してください。
 

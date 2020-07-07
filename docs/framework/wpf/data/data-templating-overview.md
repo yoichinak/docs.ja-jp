@@ -1,5 +1,6 @@
 ---
 title: データ テンプレートの概要
+description: Windows Presentation Foundation (WPF) でデータ プレゼンテーションを定義するデータ テンプレート モデルの柔軟性について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: b9e55eac1c72cd3deec21754373da4364a7cfed2
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
-ms.translationtype: HT
+ms.openlocfilehash: 0226085a82cf97ea799a5a2d38e879b239d9b52a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619651"
 ---
 # <a name="data-templating-overview"></a>データ テンプレートの概要
 WPF のデータ テンプレート モデルは、データのプレゼンテーションを定義する優れた柔軟性を提供します。 WPF のコントロールには、データ プレゼンテーションのカスタマイズをサポートする組み込み機能があります。 このトピックでは、最初に <xref:System.Windows.DataTemplate> の定義方法を示した後、カスタム ロジックに基づくテンプレートの選択や、階層データの表示のサポートなど、他のデータ テンプレート機能について説明します。

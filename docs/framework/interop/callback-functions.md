@@ -1,16 +1,16 @@
 ---
 title: コールバック関数
+description: アンマネージド DLL 関数がタスクを完了するのに役立つマネージド アプリケーションを使用したコードであるコールバック関数について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-ms.openlocfilehash: 8b8bb4dff4f73247282060c0b4fd778ae0169b1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: e28756b5ed935aff83363b38d6f33982e87718b2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621718"
 ---
 # <a name="callback-functions"></a>コールバック関数
 コールバック関数は、アンマネージド DLL 関数がタスクを完了できるように支援するマネージド アプリケーション内のコードです。 コールバック関数の呼び出しは、マネージド アプリケーションから、DLL 関数を介して、マネージド実装へと間接的に渡されます。 多数ある DLL 関数の一部はプラットフォーム呼び出しと呼ばれ、正常に実行されるには、マネージド コード内にコールバック関数が必要です。  

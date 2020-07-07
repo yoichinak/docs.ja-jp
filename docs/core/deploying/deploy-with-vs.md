@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
-ms.translationtype: HT
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803028"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -98,7 +97,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
    インバリアント モードを有効にするには、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、 **[SCD.csproj の編集]** または **[SCD.vbproj の編集]** を選択します。 次の強調表示された行をファイルに追加します。
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. アプリケーションのデバッグ ビルドを作成します。
 

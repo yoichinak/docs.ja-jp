@@ -1,5 +1,6 @@
 ---
 title: ダイアログ ボックスの概要
+description: 情報を収集して表示するために使用できる、Windows Foundation Presentation (WPF) のさまざまなダイアログ ボックスについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: c98d6a45d151d4b683a21e48eaeb5f4a19eaadb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 822604dd694f2f6260496872fd7a1a8440a62535
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618143"
 ---
 # <a name="dialog-boxes-overview"></a>ダイアログ ボックスの概要
 スタンドアロン アプリケーションには、通常、メイン ウィンドウがあり、そこには、アプリケーションが操作する主なデータが表示され、そのデータをメニュー バー、ツール バー、ステータス バーなどの [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] メカニズムを通じて処理する機能が公開されます。 重要なアプリケーションは、次のようなことをするための追加のウィンドウを表示することもあります。  

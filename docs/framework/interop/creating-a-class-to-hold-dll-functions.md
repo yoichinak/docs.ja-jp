@@ -1,5 +1,6 @@
 ---
 title: DLL 関数を保持するクラスの作成
+description: .NET で DLL 関数を保持するマネージド クラス ラッパーを作成します。これにより、プラットフォームの機能をカプセル化できます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, DLL functions
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-ms.openlocfilehash: 765d4344553a6e65b930a7bf586a41144d220fc6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: b8aa0361ee5213cb947a102f903d1a7a35331f17
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622173"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL 関数を保持するクラスの作成
 マネージド クラス内の頻繁に使用される DLL 関数をラップすることは、プラットフォームの機能をカプセル化するための効果的な方法です。 これはすべてのケースで必須であるわけではありませんが、DLL 関数の定義には手間がかかり、エラーが発生しやすくなるため、クラス ラッパーを用意しておくと便利です。 Visual Basic や C# でプログラミングしている場合は、DLL 関数をクラスまたは Visual Basic モジュール内で宣言する必要があります。  

@@ -1,13 +1,13 @@
 ---
 title: .NET Framework および特別なリリース
+description: .NET およびアウトオブバンドのリリースについて説明します。 クロスプラットフォームでの開発の強化や新機能の導入を目的として、新しい機能をアウトオブバンド (OOB) でリリースしています。
 ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-ms.openlocfilehash: 058bc1a5180060d3c3c6ba4ead1f074a14336b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 9653696f46279e0c23418f92030d64839cc20518
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618767"
 ---
 # <a name="net-framework-and-out-of-band-releases"></a>.NET Framework および特別なリリース
 

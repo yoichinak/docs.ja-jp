@@ -1,5 +1,6 @@
 ---
 title: 既定のマーシャリングの動作
+description: .NET での既定のマーシャリング動作について説明します。 相互運用マーシャリングを使用したメモリ管理を検討し、クラス、デリゲート、および値型での既定のマーシャリングを確認します。
 ms.date: 06/26/2018
 dev_langs:
 - csharp
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
-ms.translationtype: HT
+ms.openlocfilehash: 0469874d016725eb6423bb8453e9657b2be923d4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618572"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  

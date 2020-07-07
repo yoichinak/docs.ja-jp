@@ -1,17 +1,17 @@
 ---
 title: ASP.NET での Web アプリケーションの開発
+description: ASP.NET Core を使用して Web アプリを開発します。ASP.NET Core は ASP.NET 4.x を再設計したもので、クロスプラットフォームで、無駄がなく、よりモジュール化されており、Web UI と Web API をビルドするために統合されています。
 ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 60d7cf67a21216a8deada2baf0d6a30183c3ee44
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: HT
+ms.openlocfilehash: 82f6b9421abbfd9f547cac1c7e08c63de2b2cf48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619378"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>ASP.NET で Web アプリを開発する
 
@@ -39,6 +39,6 @@ ASP.NET Core](/aspnet/core) の詳細については、以下を参照してく�
 - [Web API の作成](/aspnet/core/tutorials/first-web-api)
 - [Azure に ASP.NET Core Web アプリを作成する](/azure/app-service/app-service-web-get-started-dotnet)
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [開発ガイド](development-guide.md)

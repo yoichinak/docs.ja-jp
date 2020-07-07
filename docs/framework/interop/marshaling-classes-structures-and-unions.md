@@ -1,5 +1,6 @@
 ---
 title: クラス、構造体、および共用体のマーシャリング
+description: クラス、構造体、および共用体をマーシャリングする方法を確認します。 クラス、入れ子になった構造体を含む構造体、構造体の配列、および共用体のマーシャリング サンプルを表示します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,11 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
-ms.translationtype: HT
+ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621523"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>クラス、構造体、および共用体のマーシャリング
 

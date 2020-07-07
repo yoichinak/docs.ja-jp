@@ -1,5 +1,6 @@
 ---
 title: 3D グラフィックスの概要
+description: Windows Presentation Foundation (WPF) の 3D グラフィックスを使用する、マークアップと手続き型コードの両方での 3D グラフィックスの描画、変換、およびアニメーション化について理解を深めます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: HT
+ms.openlocfilehash: 51da6a1ed6d5e98b99c64ee23be52f7b2385897f
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853875"
 ---
 # <a name="3d-graphics-overview"></a>3D グラフィックスの概要
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の 3D 機能を使用すると、開発者は、マークアップと手続き型コードの両方で 3D グラフィックスを描画、変換、およびアニメーション化できます。 開発者は 2D と 3D グラフィックスを組み合わせて、リッチなコントロールを作成したり、データの複雑なイラストを提供したり、アプリケーションのインターフェイスのユーザー エクスペリエンスを拡張したりすることができます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での 3D のサポートは、フル機能のゲーム開発プラットフォームを提供するようには設計されていません。 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス システムでの 3D 機能の概要について説明します。  

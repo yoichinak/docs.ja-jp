@@ -1,5 +1,6 @@
 ---
 title: '方法: XAML でデータをバインディング可能にする'
+description: Windows Presentation Foundation (WPF) でアプリケーションのニーズに応じてデータを使用できるようにするさまざまな方法を紹介します。
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 91e89dbf36024c31f4afcd9b6d956944baf13576
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 16618ce8b19f5dd5854c4d126e7fc455f0428a28
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620795"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>方法: XAML でデータをバインディング可能にする
 このトピックでは、アプリケーションのニーズに応じて、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] でデータをバインドできるようにするさまざまな方法について説明します。  

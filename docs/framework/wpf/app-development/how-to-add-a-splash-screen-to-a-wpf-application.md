@@ -1,5 +1,6 @@
 ---
 title: スプラッシュ スクリーンを追加する方法
+description: Windows Presentation Foundation (WPF) アプリケーションにスタートアップ ウィンドウまたはスプラッシュ スクリーンを追加する方法について説明します。
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 0d0cf2e2a550320650c3b4a0c257071a0403c32b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617961"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>方法: スプラッシュ スクリーンを WPF アプリケーションに追加する
 

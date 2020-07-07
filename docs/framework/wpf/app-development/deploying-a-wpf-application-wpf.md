@@ -1,16 +1,16 @@
 ---
 title: アプリのデプロイ
+description: Windows と .NET Framework が Windows Presentation Foundation (WPF) アプリケーションに使用する配置テクノロジについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 54d14503a0f65bb50f2dfb14d40af3b47d51589c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 62904ccd47800c8340d68c223e50688902170063
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619300"
 ---
 # <a name="deploy-a-wpf-application"></a>WPF アプリケーションを配置する
 
@@ -99,7 +99,7 @@ ms.locfileid: "79186313"
 > [!NOTE]
 > 配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
   
- これらのファイルは、XBAP がビルドされるときに生成されます。 詳細については、[新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページと同様に、XBAP は、通常、Web サーバーに発行され、Internet Explorer を使用して表示されます。  
+ これらのファイルは、XBAP がビルドされるときに生成されます。 詳細については、「[方法:新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページと同様に、XBAP は、通常、Web サーバーに発行され、Internet Explorer を使用して表示されます。  
   
  XBAP は、任意の配置技術を使用してクライアントに配置できます。 ただし、次の機能を備えている ClickOnce をお勧めします。  
   

@@ -1,5 +1,6 @@
 ---
 title: 純色およびグラデーションによる塗りつぶしの概要
+description: Windows Presentation Foundation (WPF) でオブジェクトを使用して、純色、線状グラデーション、放射状グラデーションで塗りつぶす方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - solid colors [WPF], painting with
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: fb6b7da4be46f361b263c573339b1a6b73ef24bd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 957593d758afda06db106c99f6695294d4f84f73
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855895"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853664"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>純色およびグラデーションによる塗りつぶしの概要
 
@@ -99,7 +99,7 @@ ms.locfileid: "70855895"
 
 グラデーション境界の間の各点のカラーは、2 つのグラデーション境界によって指定されたカラーの混合として線形補間されます。 次の図は、前の例のグラデーション境界を強調しています。 円はグラデーション境界の位置をマークし、破線はグラデーション軸を示しています。
 
-![線状グラデーションでのグラデーション境界](./media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")
+![線状グラデーションのグラデーション境界](./media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")
 
 最初のグラデーション境界は、オフセット`0.0` に黄色を指定しています。  2 番目のグラデーション境界は、オフセット `0.25` に赤色を指定しています。  これら 2 つの境界の間の点は、グラデーション軸に沿って左から右に移動するにつれて、黄色から徐々に赤色に変化します。  3 番目のグラデーション境界は、オフセット `0.75` に青色を指定しています。  2 番目と 3 番目のグラデーション境界の間の点は、赤から青に徐々に変化します。 4 番目のグラデーション境界は、オフセット `1.0` に緑色を指定しています。 3 番目と 4 番目のグラデーション境界の間の点は、青から緑に徐々に変化します。
 
@@ -131,7 +131,7 @@ ms.locfileid: "70855895"
 
 次の図は、作成されるグラデーションを示しています。 グラデーション軸は破線でマークされ、グラデーション境界は円でマークされています。
 
-![垂直方向のグラデーションのグラデーション軸](./media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")
+![垂直グラデーションのグラデーション軸](./media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")
 
 <a name="radialgradients"></a>
 
@@ -147,13 +147,13 @@ ms.locfileid: "70855895"
 
 次の図は、前の例で作成されるグラデーションを示しています。 ブラシのグラデーション境界が強調されています。 結果は異なっていますが、この例のグラデーション境界は、前の線状グラデーション ブラシの例のグラデーション境界と同じであることに注目してください。
 
-![放射状グラデーションでのグラデーション境界](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")
+![放射状グラデーションのグラデーション境界](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")
 
 <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> では、放射状グラデーション ブラシのグラデーション軸の始点を指定します。 グラデーション軸は、グラデーションの原点からグラデーション円に放射状に広がります。 ブラシのグラデーション円は、その <xref:System.Windows.Media.RadialGradientBrush.Center%2A>、<xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>、<xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> プロパティによって定義されます。
 
 次の図には、<xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>、<xref:System.Windows.Media.RadialGradientBrush.Center%2A>、<xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>、<xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> の設定が異なる複数の放射状グラデーションが示されています。
 
-![RadialGradientBrush の設定](./media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii") GradientOrigin、Center、RadiusX、RadiusY の設定が異なる RadialGradientBrush。
+![RadialGradientBrush の設定](./media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")GradientOrigin、Center、RadiusX、および RadiusY の設定が異なる RadialGradientBrushes。
 
 <a name="specifyinggradientcolors"></a>
 
@@ -165,7 +165,7 @@ ms.locfileid: "70855895"
 
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML" でのカラーの不透明度の指定
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、ARGB の 16 進表記を使用して、個々の色の不透明度を指定します。 ARGB の 16 進表記では、次の構文を使用します。
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、ARGB の 16 進表記を使用して、個々のカラーの不透明度を指定します。 ARGB の 16 進表記では、次の構文を使用します。
 
 `#` **aa** *rrggbb*
 

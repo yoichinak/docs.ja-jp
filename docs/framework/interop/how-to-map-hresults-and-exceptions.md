@@ -1,5 +1,6 @@
 ---
 title: '方法: HRESULT に例外を割り当てる'
+description: COM メソッドから返された HRESULT 値を .NET メソッドによってスローされる例外にマップする方法を確認します。 ランタイムは、COM と .NET の間の遷移を処理します。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619105"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>方法: HRESULT に例外を割り当てる
 COM メソッドでは、HRESULT を返してエラーを報告します。 .NET メソッドでは、例外をスローしてエラーを報告します。 ランタイムは、この 2 つの間の遷移を処理します。 .NET Framework の例外クラスはそれぞれ HRESULT に割り当てられます。  

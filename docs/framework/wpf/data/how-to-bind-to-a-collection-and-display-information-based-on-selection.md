@@ -1,5 +1,6 @@
 ---
 title: '方法: コレクションにバインドして選択に基づく情報を表示する'
+description: 次の例に従って、Windows Presentation Foundation (WPF) でコレクションにバインドし、選択に基づいて情報を表示する方法を確認します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 032a1d98e1aa80ea755f5922f79d43a796e9697e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: HT
+ms.openlocfilehash: fb8757ee6818a2812308a0a132fa9d06951ad52e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619612"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>方法: コレクションにバインドして選択に基づく情報を表示する
 簡単なマスター詳細シナリオでは、<xref:System.Windows.Controls.ListBox> などのデータ バインドされた <xref:System.Windows.Controls.ItemsControl> があります。 ユーザーの選択に基づいて、選択された項目に関する詳細情報を表示します。 この例では、このシナリオを実装する方法を示します。  

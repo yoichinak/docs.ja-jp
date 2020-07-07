@@ -1,5 +1,6 @@
 ---
 title: 文字列のマーシャリング
+description: 文字列をマーシャリングする方法を確認します。 文字列をマーシャリングするためのオプション (値渡しまたは参照渡し、結果として、構造体またはクラスで値渡しまたは参照渡し、その他) について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, samples
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 0be5a5817bd92c5be6b701200a74650ef9de1955
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621484"
 ---
 # <a name="marshaling-strings"></a>文字列のマーシャリング
 プラットフォーム呼び出しは、文字列のパラメーターをコピーし、必要な場合は、.NET Framework 形式 (Unicode) からアンマネージ形式 (ANSI) に変換します。 マネージド文字列は変更できないため、プラットフォーム呼び出しでは、関数から戻るときに、アンマネージド メモリからマネージド メモリに文字列がコピーされて戻されることはありません。  

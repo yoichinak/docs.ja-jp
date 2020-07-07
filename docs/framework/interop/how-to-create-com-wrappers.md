@@ -1,16 +1,16 @@
 ---
 title: '方法: COM ラッパーを作成する'
+description: Visual Studio または .NET のツール (Tlbimp.exe と Regasm.exe) を使用して、コンポーネント オブジェクト モデル (COM) ラッパーを作成します。 どちらの方法でも、2 種類の COM ラッパーが生成されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
-ms.translationtype: HT
+ms.openlocfilehash: 286526c710287e6efa3e49a7f7c55e3687076e29
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617393"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
