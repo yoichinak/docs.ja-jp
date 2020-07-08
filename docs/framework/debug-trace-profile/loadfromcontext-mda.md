@@ -1,5 +1,6 @@
 ---
 title: loadFromContext MDA
+description: .NET の loadFromContext マネージデバッグアシスタント (MDA) について説明します。これは、アセンブリが LoadFrom コンテキストに読み込まれた場合にアクティブ化されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: d0090a0272d1c3b6175b351175689df1e1e4fdbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181810"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051650"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 アセンブリが `LoadFrom` コンテキストに読み込まれると、`loadFromContext` マネージド デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
@@ -23,7 +23,7 @@ ms.locfileid: "79181810"
 ## <a name="cause"></a>原因  
  一般的に、アセンブリは `Load` コンテキスト以外のパス (グローバル アセンブリ キャッシュや <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> プロパティなど) から読み込まれた場合、`LoadFrom` コンテキストに読み込まれていました。  
   
-## <a name="resolution"></a>解決策  
+## <a name="resolution"></a>解決方法  
  <xref:System.Reflection.Assembly.LoadFrom%2A> の呼び出しが不要になるようにアプリケーションを構成します。 そのためには、次の手法を使用できます。  
   
 - グローバル アセンブリ キャッシュにアセンブリをインストールします。  
@@ -37,7 +37,7 @@ ms.locfileid: "79181810"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  MDA は、CLR にまったく影響がありません。 MDA では、読み込み要求の結果として使用されたコンテキストが報告されます。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  MDA では、アセンブリが `LoadFrom` コンテキストに読み込まれたことが報告されます。 また、アセンブリの簡易名とパスが指定されます。 `LoadFrom` コンテキストの使用を回避する軽減策も提案されます。  
   
 ## <a name="configuration"></a>構成  

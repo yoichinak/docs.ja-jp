@@ -5,20 +5,19 @@ ms.technology: dotnet-networking
 topic_type:
 - apiref
 api_name:
-- System.Net.MailAddressParser
-- System.Net.MailAddressParser.ParseAddress
+- System.Net.Mail.MailAddressParser
+- System.Net.Mail.MailAddressParser.ParseAddress
 api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 2c17970614ff9b6f1e6793a064a956da7248d693
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
-ms.translationtype: MT
+ms.openlocfilehash: ff83f6946539fa262ccde980052627f98c75601d
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990541"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051351"
 ---
-# <a name="mailaddressparser-class"></a>Mailaddressparc Ser クラス
+# <a name="mailaddressparser-class"></a>MailAddressParser クラス
 
 RFC 2822 で説明されているように、電子メールアドレスを解析します。 このクラスは継承できません。
 
