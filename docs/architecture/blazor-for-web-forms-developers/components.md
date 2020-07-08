@@ -4,12 +4,11 @@ description: Blazor を使用して再利用可能な UI コンポーネント�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378321"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051453"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor を使用して再利用可能な UI コンポーネントを構築する
 
@@ -88,7 +87,7 @@ Razor ディレクティブは、文字で始まり、 `@` 通常、ファイル
 |`@namespace` |コンポーネントの名前空間を設定します。|`@namespace MyNamespace`|なし|
 |`@page`      |コンポーネントのルートを指定します。|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |コンポーネントのジェネリック型パラメーターを指定します。|`@typeparam TItem`|コードビハインドを使用する|
-|`@using`     |スコープに取り込む名前空間を指定します|`@using MyComponentNamespace`|*Web.config に名前*空間を追加する|
+|`@using`     |スコープに取り込む名前空間を指定します|`@using MyComponentNamespace`|*web.config*に名前空間を追加する|
 
 また、Razor コンポーネントでは、要素に対して*ディレクティブ属性*を広範に使用して、コンポーネントのコンパイル (イベント処理、データバインディング、コンポーネント & 要素参照など) のさまざまな側面を制御します。 ディレクティブ属性は、かっこ内の値が省略可能である一般的なジェネリック構文に従います。
 
@@ -98,7 +97,7 @@ Razor ディレクティブは、文字で始まり、 `@` 通常、ファイル
 
 次の表は、Blazor で使用される Razor ディレクティブのさまざまな属性をまとめたものです。
 
-|属性    |説明|例|
+|属性    |[説明]|例|
 |-------------|-----------|-------|
 |`@attributes`|属性のディクショナリをレンダリングします|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |双方向のデータバインディングを作成します。    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,7 +109,7 @@ Blazor によって使用されるさまざまなディレクティブ属性 (�
 
 *.Aspx*および *.ascx*ファイルで使用される構文の多くには、Razor の並列構文があります。 次に、ASP.NET Web フォームと Razor の構文を簡単に比較します。
 
-|機能                      |Web フォーム           |構文               |Razor         |構文 |
+|特徴量                      |Web フォーム           |構文               |Razor         |構文 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |ディレクティブ                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |コード ブロック                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +145,7 @@ Razor は c# に基づいているため、C# プロジェクト (*.csproj*) 内
 ASP.NET Web フォームとは異なり、Blazor のコンポーネントは次のとおりです。
 
 - 要素のプレフィックスは使用しないでください (たとえば、 `asp:` )。
-- ページまた*は web.config で*の登録は必要ありません。
+- ページまたは*web.config*での登録は必要ありません。
 
 .NET 型のような Razor コンポーネントについて考えてみましょう。これはまさにそのようなものです。 コンポーネントを含むアセンブリが参照されている場合は、コンポーネントを使用できます。 コンポーネントの名前空間をスコープに入れるには、ディレクティブを適用し `@using` ます。
 
@@ -602,12 +601,12 @@ Blazor コンポーネントは、子コンテンツをとしてキャプチャ 
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 
-## <a name="code-behind"></a>コードビハインド
+## <a name="code-behind"></a>分離コード
 
 Blazor コンポーネントは、通常、単一の*razor*ファイルで作成されます。 ただし、分離コードファイルを使用して、コードとマークアップを分離することもできます。 コンポーネントファイルを使用するには、コンポーネントファイルのファイル名と一致し、 *.cs*拡張子を追加した C# ファイルを追加します (*Counter.razor.cs*)。 コンポーネントの基本クラスを定義するには、C# ファイルを使用します。 基底クラスには任意の名前を指定できますが、クラスにはコンポーネントクラスと同じ名前を付けますが、 `Base` 拡張機能が追加され `CounterBase` ます ()。 コンポーネントベースのクラスも、から派生する必要があり `ComponentBase` ます。 次に、Razor コンポーネントファイルで、ディレクティブを追加して、 `@inherits` コンポーネントの基本クラスを指定し `@inherits CounterBase` ます ()。
 

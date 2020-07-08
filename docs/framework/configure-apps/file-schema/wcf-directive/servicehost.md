@@ -2,12 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
-ms.translationtype: MT
+ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76787799"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051364"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -15,7 +14,7 @@ ms.locfileid: "76787799"
 
 ## <a name="syntax"></a>構文
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service = "Service, ServiceNamespace"
 Factory = "Factory, FactoryNamespace"
@@ -47,7 +46,7 @@ CodeBehind = "CodeBehind"
 
 Xml web サービスを実装するクラスが同じファイル内に存在せず、アセンブリにコンパイルされずに*\bin*ディレクトリに配置されている場合に、xml web サービスを実装するソースファイルを指定します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 <xref:System.ServiceModel.ServiceHost>サービスをホストするために使用されるは、Windows Communication Foundation (WCF) プログラミングモデル内の機能拡張ポイントです。 ファクトリ パターンは、ホスティング環境が直接インスタンス化できないポリモーフィック型の可能性があるため、<xref:System.ServiceModel.ServiceHost> のインスタンス化に使用されます。
 
@@ -63,7 +62,7 @@ Xml web サービスを実装するクラスが同じファイル内に存在せ
 
 たとえば、の AJAX 対応エンドポイントを有効にするには、 `MyService` <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 次の `Factory` <xref:System.ServiceModel.Activation.ServiceHostFactory> `@ServiceHost` 例に示すように、ディレクティブで属性の値としてを指定します。既定値は使用しません。
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service="MyService"
 Language="C#"
