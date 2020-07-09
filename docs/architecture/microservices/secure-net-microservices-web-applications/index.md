@@ -3,12 +3,12 @@ title: NET マイクロサービスおよび Web アプリケーションをセ�
 description: .NET マイクロサービスおよび Web アプリケーションのセキュリティ - ASP.NET Core Web アプリケーションの認証オプションをご確認ください。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 56ebd95c8a24c7c8d30d3c6acef6650cb63383c6
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2b503b326d1869ae095f9b177c04389bda9fe46c
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988116"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100783"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
