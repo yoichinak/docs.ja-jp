@@ -13,6 +13,7 @@ api_type:
 - Assembly
 ms.openlocfilehash: ff83f6946539fa262ccde980052627f98c75601d
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051351"

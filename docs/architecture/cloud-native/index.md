@@ -3,12 +3,12 @@ title: Azure 向けクラウド ネイティブ .NET アプリケーションの
 description: Azure のコンテナー、マイクロサービス、サーバーレス機能を活用するクラウドネイティブなアプリケーションを構築するためのガイド。
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144384"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051507"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 
@@ -84,7 +84,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 - ID とセキュリティ
 - DevOps
 
-このガイドは PDF 形式とオンラインの両方で利用できます。 本書やそのオンライン版のリンクをチームに転送し、トピックの共通理解に役立ててください。 トピックのほとんどは、基礎的な原則、基礎的なパターン、トピックに関連する意思決定に関係する折り合いが同じように理解されることで効果を発揮します。 本書の目標は、アプリケーションのアーキテクチャ、開発、ホスティングについて、十分に情報が与えられた上で意思決定するために必要な情報をチームとそのリーダーに与えることです。
+このガイドは [PDF](https://dotnet.microsoft.com/download/e-book/cloud-native-azure/pdf) 形式とオンラインの両方で利用できます。 本書やそのオンライン版のリンクをチームに転送し、トピックの共通理解に役立ててください。 トピックのほとんどは、基礎的な原則、基礎的なパターン、トピックに関連する意思決定に関係する折り合いが同じように理解されることで効果を発揮します。 本書の目標は、アプリケーションのアーキテクチャ、開発、ホスティングについて、十分に情報が与えられた上で意思決定するために必要な情報をチームとそのリーダーに与えることです。
 
 ## <a name="send-your-feedback"></a>フィードバックの送信
 
