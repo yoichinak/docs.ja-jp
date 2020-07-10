@@ -1,46 +1,48 @@
 ---
 title: アプリの構成
-description: 構成マネージャーを使用せずに Blazor アプリを構成する方法について説明します。
+description: ConfigurationManager を使用せずにアプリを構成する方法につい Blazor て説明します。
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: c780a395f72e2520af86c20c7f6618953a528ff7
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588249"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173316"
 ---
 # <a name="app-configuration"></a>アプリの構成
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Web フォームでアプリ構成を読み込む主な方法は、サーバー上の*web.config*ファイル&mdash;または*web.config*によって参照される関連する構成ファイルのエントリを使用することです。静的`ConfigurationManager`オブジェクトを使用して、アプリ設定、データ リポジトリ接続文字列、およびアプリに追加されるその他の拡張構成プロバイダーと対話できます。 次のコードに示すように、アプリの構成との相互作用を確認するのが一般的です。
+Web フォームでアプリ構成を読み込む主な方法は、 *web.config*ファイルのエントリを、 &mdash; サーバー上または*web.config*が参照する関連構成ファイルに入力することです。静的オブジェクトを使用して、アプリ `ConfigurationManager` の設定、データリポジトリの接続文字列、およびアプリに追加されたその他の拡張構成プロバイダーとやり取りすることができます。 一般的に、次のコードに示すように、アプリ構成との相互作用を確認します。
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
 var connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionName"].ConnectionString;
 ```
 
-ASP.NETコアとサーバー側の Blazor を使用すると、アプリが Windows IIS サーバーでホストされている場合 *、web.config*ファイルが存在する場合があります。 ただし、この構成との`ConfigurationManager`対話は行われず、他のソースからより構造化されたアプリ構成を受け取ることができます。 構成がどのように収集され *、web.config*ファイルから構成情報にアクセスする方法について説明します。
+ASP.NET Core とサーバー側で Blazor は、アプリが WINDOWS IIS サーバーでホストされている場合、 *web.config*ファイルが存在する可能性があります。 ただし、 `ConfigurationManager` この構成は相互作用しないため、他のソースからさらに構造化されたアプリ構成を受け取ることができます。 構成の収集方法と、 *web.config*ファイルから構成情報にアクセスする方法を見てみましょう。
 
 ## <a name="configuration-sources"></a>構成元
 
-ASP.NET Core では、アプリに使用する構成ソースが多数あると認識しています。 フレームワークは、既定でこれらの機能を最大限に提供しようとします。 構成は、ASP.NET Core によってこれらのさまざまなソースから読み取られ、集計されます。 後で同じコンフィギュレーション キーに対して読み込まれた値は、以前の値よりも優先されます。
+ASP.NET Core は、アプリに使用できる多くの構成ソースがあることを認識しています。 フレームワークは、既定では、これらの機能の最適な提供を試みます。 構成は、ASP.NET Core によって、これらのさまざまなソースから読み取りおよび集計されます。 同じ構成キーの後で読み込まれる値は、以前の値よりも優先されます。
 
-ASP.NET Core は、クラウド対応で、オペレーターと開発者の両方にとってアプリの構成を容易にするように設計されています。 ASP.NET Core は環境に対応しており、お客様または`Production``Development`環境で実行されているかどうかを認識します。 システム環境変数に環境標識が`ASPNETCORE_ENVIRONMENT`設定されます。 値が設定されていない場合、アプリはデフォルトで`Production`環境内で実行されます。
+ASP.NET Core は、クラウド対応であり、オペレーターと開発者の両方にとってアプリの構成を容易にするように設計されています。 ASP.NET Core は環境に対応し、または環境内で実行されているかどうかを認識し `Production` `Development` ます。 環境インジケーターは、システム環境変数で設定され `ASPNETCORE_ENVIRONMENT` ます。 値が構成されていない場合、アプリは既定で環境で実行され `Production` ます。
 
-アプリは、環境名に基づいて複数のソースから構成をトリガーし、追加できます。 デフォルトでは、以下のリソースから構成がリストされた順にロードされます。
+アプリは、環境の名前に基づいて複数のソースから構成をトリガーし、構成を追加することができます。 既定では、構成は次のリソースから順に読み込まれます。
 
-1. *存在する場合は、ファイルを指定*します。
-1. *アプリ設定。{ENVIRONMENT_NAME}.json*ファイルが存在する場合
-1. ディスク上のユーザー シークレット ファイル (存在する場合)
+1. ファイル*のappsettings.js* (存在する場合)
+1. *appsettings。{ENVIRONMENT_NAME}. json*ファイル (存在する場合)
+1. ディスク上のユーザーシークレットファイル (存在する場合)
 1. 環境変数
 1. コマンド ライン引数
 
-## <a name="appsettingsjson-format-and-access"></a>フォーマットとアクセス
+## <a name="appsettingsjson-format-and-access"></a>形式とアクセスに appsettings.js
 
-*appsettings.json*ファイルは、次の JSON のように構造化された値を使用して階層構造にすることができます。
+ファイル*のappsettings.js*は、次の JSON のように構造化された値を使用して階層化できます。
 
 ```json
 {
@@ -55,40 +57,40 @@ ASP.NET Core は、クラウド対応で、オペレーターと開発者の両�
 }
 ```
 
-上記の JSON と共に提供された場合、構成システムは子の値を平坦化し、その完全に修飾された階層パスを参照します。 コロン (`:`) 文字は、階層内の各プロパティを区切ります。 たとえば、コンフィギュレーション キー`section1:key0`はオブジェクト リテラル`section1`の`key0`値にアクセスします。
+上記の JSON が表示された場合、構成システムは子の値を平坦化し、完全修飾された階層パスを参照します。 コロン ( `:` ) 文字は、階層内の各プロパティを区切ります。 たとえば、構成キーは、 `section1:key0` `section1` オブジェクトリテラルの値にアクセスし `key0` ます。
 
 ## <a name="user-secrets"></a>ユーザーシークレット
 
-ユーザーの秘密は次のとおりです。
+ユーザーシークレットは次のとおりです。
 
-* 開発者のワークステーションの JSON ファイルに格納される構成値 (アプリ開発フォルダーの外部)。
-* 環境で実行されている場合にのみ`Development`ロードされます。
-* 特定のアプリに関連付けられます。
-* .NET Core CLI の`user-secrets`コマンドで管理されます。
+* アプリ開発フォルダーの外部にある、開発者のワークステーション上の JSON ファイルに格納されている構成値。
+* 環境内での実行時にのみ読み込ま `Development` れます。
+* 特定のアプリに関連付けられています。
+* .NET Core CLI のコマンドを使用して管理さ `user-secrets` れます。
 
-次のコマンドを実行して、シークレット ストレージ`user-secrets`用にアプリを構成します。
+次のコマンドを実行して、シークレットストレージ用にアプリを構成し `user-secrets` ます。
 
 ```dotnetcli
 dotnet user-secrets init
 ```
 
-上記のコマンドは、プロジェクト`UserSecretsId`ファイルに要素を追加します。 要素には、アプリにシークレットを関連付けるために使用される GUID が含まれています。 その後、コマンドを使用してシークレット`set`を定義できます。 次に例を示します。
+上記のコマンドは、 `UserSecretsId` プロジェクトファイルに要素を追加します。 要素には、シークレットをアプリに関連付けるために使用される GUID が含まれています。 その後、コマンドを使用してシークレットを定義でき `set` ます。 次に例を示します。
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"
 ```
 
-上記のコマンドは、値`Parent:ApiKey`を持つ開発者のワークステーションでコンフィギュレーション キーを使用`12345`できるようにします。
+上記のコマンドは、 `Parent:ApiKey` 値を使用して、開発者のワークステーションで構成キーを使用できるようにし `12345` ます。
 
-ユーザー シークレットの作成、保存、および管理の詳細については[、「ASP.NET Core ドキュメントの開発におけるアプリ シークレットの安全な保管](/aspnet/core/security/app-secrets)」を参照してください。
+ユーザーシークレットの作成、格納、および管理の詳細については、 [ASP.NET Core ドキュメントの「開発におけるアプリシークレットの安全な格納](/aspnet/core/security/app-secrets)」を参照してください。
 
 ## <a name="environment-variables"></a>環境変数
 
-アプリ構成に読み込まれる値の次のセットは、システムの環境変数です。 システムのすべての環境変数設定に、構成 API を通じてアクセスできるようになりました。 階層値は、アプリ内で読み取るときに、フラット化され、コロン文字で区切られます。 ただし、一部のオペレーティング システムでは、コロン文字環境変数名を使用できません。 ASP.NET Core は、二重アンダースコア ( )`__`を持つ値がアクセスされたときにコロンに変換することで、この制限に対処します。 上記`Parent:ApiKey`のユーザー シークレット セクションの値は、環境変数`Parent__ApiKey`で上書きできます。
+アプリケーション構成に読み込まれる次の値のセットは、システムの環境変数です。 システムの環境変数のすべての設定は、構成 API を使用してアクセスできるようになりました。 アプリケーション内で読み取られるときに、階層値はフラット化され、コロン文字で区切られます。 ただし、一部のオペレーティングシステムでは、コロン文字環境変数名を使用できません。 ASP.NET Core は、2つのアンダースコア () を持つ値をアクセス時にコロンに変換することによって、この制限に対処 `__` します。 `Parent:ApiKey`上記のユーザーシークレットセクションの値は、環境変数でオーバーライドでき `Parent__ApiKey` ます。
 
 ## <a name="command-line-arguments"></a>コマンド ライン引数
 
-アプリの起動時に、構成をコマンド ライン引数として指定することもできます。 設定する構成値の名前`--`と構成する値を示`/`すには、ダブルダッシュ () またはスラッシュ () を使用します。 構文は、次のコマンドに似ています。
+アプリを起動するときに、構成をコマンドライン引数として指定することもできます。 `--` `/` 設定する構成値の名前と構成する値を示すには、二重ダッシュ () またはスラッシュ () 表記を使用します。 構文は次のコマンドのようになります。
 
 ```dotnetcli
 dotnet run CommandLineKey1=value1 --CommandLineKey2=value2 /CommandLineKey3=value3
@@ -98,7 +100,7 @@ dotnet run Parent:ApiKey=67890
 
 ## <a name="the-return-of-webconfig"></a>web.config の戻り値
 
-IIS 上の Windows にアプリを展開した場合でも *、web.config*ファイルは引き続き IIS を構成してアプリを管理します。 既定では、IIS は ASP.NET コア モジュール (ANCM) への参照を追加します。 ANCM は、Kestrel Web サーバーの代わりにアプリをホストするネイティブ IIS モジュールです。 この*web.config*セクションは、次の XML マークアップに似ています。
+アプリを IIS の Windows にデプロイした場合、 *web.config*ファイルによって、アプリケーションを管理するための iis が引き続き構成されます。 既定では、IIS は ASP.NET Core モジュール (モジュール) への参照を追加します。 モジュールは、Kestrel web サーバーの代わりにアプリをホストするネイティブ IIS モジュールです。 この*web.config*セクションは、次の XML マークアップに似ています。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,7 +119,7 @@ IIS 上の Windows にアプリを展開した場合でも *、web.config*ファ
 </configuration>
 ```
 
-アプリケーション固有の構成は、`environmentVariables``aspNetCore`要素内の要素を入れ子にすることで定義できます。 このセクションで定義された値は、ASP.NET Core アプリに環境変数として表示されます。 環境変数は、アプリの起動のそのセグメント中に適切に読み込まれます。
+アプリ固有の構成は、要素内に要素を入れ子にすることによって定義でき `environmentVariables` `aspNetCore` ます。 このセクションで定義されている値は、環境変数として ASP.NET Core アプリに提示されます。 環境変数は、アプリの起動のセグメント中に適切に読み込まれます。
 
 ```xml
 <aspNetCore processPath="dotnet"
@@ -132,34 +134,34 @@ IIS 上の Windows にアプリを展開した場合でも *、web.config*ファ
 </aspNetCore>
 ```
 
-## <a name="read-configuration-in-the-app"></a>アプリでの構成の読み取り
+## <a name="read-configuration-in-the-app"></a>アプリの構成の読み取り
 
-ASP.NET Core は、インターフェイス<xref:Microsoft.Extensions.Configuration.IConfiguration>を通じてアプリの構成を提供します。 この構成インターフェイスは、Blazor コンポーネント、Blazor ページ、および構成にアクセスする必要があるその他のASP.NETコア管理クラスによって要求される必要があります。 ASP.NET Core フレームワークは、このインターフェイスに、先ほど構成された解決済みの構成を自動的に設定します。 Blazor ページまたはコンポーネントの Razor マークアップで *、.razor*ファイル`IConfiguration`の先頭に`@inject`次のようなディレクティブをオブジェクトに挿入できます。
+ASP.NET Core は、インターフェイスを使用してアプリの構成を提供 <xref:Microsoft.Extensions.Configuration.IConfiguration> します。 この構成インターフェイスは、 Blazor コンポーネント、 Blazor ページ、および構成へのアクセスを必要とするその他の ASP.NET Core マネージクラスによって要求される必要があります。 ASP.NET Core framework は、前に構成した解決済みの構成をこのインターフェイスに自動的に設定します。 Blazorページまたはコンポーネントの razor マークアップでは、次のように、 `IConfiguration` `@inject` *razor*ファイルの先頭にディレクティブを使用してオブジェクトを挿入できます。
 
 ```razor
 @inject IConfiguration Configuration
 ```
 
-このステートメントを使用すると、Razor テンプレート`IConfiguration`の`Configuration`残りの部分でオブジェクトを変数として使用できるようになります。
+この前のステートメントにより、オブジェクトは、 `IConfiguration` `Configuration` Razor テンプレートの残りの部分を通じて変数として使用できるようになります。
 
-個々の構成設定は、インデクサー パラメーターとして求める構成設定階層を指定することによって読み取ることができます。
+インデクサーパラメーターとして使用する構成設定の階層を指定することで、個々の構成設定を読み取ることができます。
 
 ```csharp
 var mySetting = Configuration["section1:key0"];
 ```
 
-このメソッドを使用して、前の<xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A>例から section1 の構成を取得`GetSection("section1")`する構文と類似した構文を使用して、特定の場所にあるキーのコレクションを取得することにより、構成セクション全体をフェッチできます。
+<xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> `GetSection("section1")` 前の例から section1 の構成を取得する場合と同様の構文を使用して、メソッドを使用して構成セクション全体を取得できます。
 
 ## <a name="strongly-typed-configuration"></a>厳密に型指定された構成
 
-Web フォームでは、型と関連付けられた型から継承した厳密に型指定<xref:System.Configuration.ConfigurationSection>された構成型を作成できました。 では`ConfigurationSection`、いくつかのビジネス ルールと、それらの構成値の処理を構成できます。
+Web フォームでは、 <xref:System.Configuration.ConfigurationSection> 型とそれに関連付けられている型から継承される厳密に型指定された構成の型を作成できました。 では、 `ConfigurationSection` これらの構成値に対していくつかのビジネスルールと処理を構成できます。
 
-ASP.NET Core では、構成値を受け取るクラス階層を指定できます。 これらのクラス:
+ASP.NET Core では、構成値を受け取るクラス階層を指定できます。 次のクラス:
 
 * 親クラスから継承する必要はありません。
-* キャプチャする`public`構成構造のプロパティと型参照に一致するプロパティを含める必要があります。
+* には、 `public` キャプチャする構成構造のプロパティおよび型参照に一致するプロパティが含まれている必要があります。
 
-以前の*appsettings.json*サンプルでは、値をキャプチャする次のクラスを定義できます。
+サンプルの前の*appsettings.js*では、次のクラスを定義して値をキャプチャできます。
 
 ```csharp
 public class MyConfig
@@ -177,13 +179,13 @@ public class MyConfigSection
 }
 ```
 
-このクラス階層は、`Startup.ConfigureServices`メソッドに次の行を追加することで設定できます。
+このクラス階層は、メソッドに次の行を追加することによって設定でき `Startup.ConfigureServices` ます。
 
 ```csharp
 services.Configure<MyConfig>(Configuration);
 ```
 
-アプリの残りの部分では、厳密に型指定された構成設定を受け`@inject`取る入力パラメーターをクラス`IOptions<MyConfig>`または Razor テンプレートの型のディレクティブに追加できます。 プロパティ`IOptions<MyConfig>.Value`は、構成設定`MyConfig`から設定された値を生成します。
+アプリの残りの部分では、厳密に型 `@inject` 指定された構成設定を受け取るために、型の Razor テンプレート内のクラスまたはディレクティブに入力パラメーターを追加でき `IOptions<MyConfig>` ます。 プロパティは、 `IOptions<MyConfig>.Value` 構成設定から設定された値を生成し `MyConfig` ます。
 
 ```razor
 @inject IOptions<MyConfig> options
@@ -193,7 +195,7 @@ services.Configure<MyConfig>(Configuration);
 }
 ```
 
-オプション機能の詳細については、core ドキュメントの[オプション パターンASP.NET](/aspnet/core/fundamentals/configuration/options#options-interfaces)参照してください。
+オプションの機能の詳細については ASP.NET Core ドキュメント[のオプションパターン](/aspnet/core/fundamentals/configuration/options#options-interfaces)を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](middleware.md)

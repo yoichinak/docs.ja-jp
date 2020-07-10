@@ -1,15 +1,17 @@
 ---
 title: データアクセスと管理
-description: ASP.NET Web Forms および Blazor でデータにアクセスして処理する方法について説明します。
+description: ASP.NET Web フォームおよびでデータにアクセスして処理する方法について説明し Blazor ます。
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: b9805da60722de1b5d4f91107e856f647f7564a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446478"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173305"
 ---
 # <a name="work-with-data"></a>データの処理
 
@@ -75,7 +77,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-上記のコードは、指定された接続文字列を使用して SQL Server データベースに接続します。 この接続文字列は、 *appsettings*ファイル、環境変数、またはその他の構成ストレージの場所に配置して、適切に置き換えることができます。
+上記のコードは、指定された接続文字列を使用して SQL Server データベースに接続します。 appsettings.jsの接続文字列を、ファイル、環境変数、またはその他の構成ストレージの場所に配置し、この埋め込み文字列を適切*に*置き換えることができます。
 
 その後、次のコマンドを使用して、このクラスに適したデータベーステーブルを生成できます。
 
@@ -102,7 +104,7 @@ dotnet ef dbcontext scaffold "CONNECTION STRING" Microsoft.EntityFrameworkCore.S
 
 ## <a name="interact-with-web-services"></a>Web サービスとの対話
 
-ASP.NET が最初にリリースされたときに、web サーバーとクライアントがデータを交換するために、SOAP サービスが推奨されていました。 その後、多くの変更が行われ、HTTP クライアントとの対話を直接行うためにサービスとの優先的なやり取りが行われています。 ASP.NET Core と Blazor を使用すると、の構成を `HttpClient` `Startup` クラスのメソッドに登録でき `ConfigureServices` ます。 HTTP エンドポイントと対話する必要がある場合は、その構成を使用します。 次の構成コードを考えてみます。
+ASP.NET が最初にリリースされたときに、web サーバーとクライアントがデータを交換するために、SOAP サービスが推奨されていました。 その後、多くの変更が行われ、HTTP クライアントとの対話を直接行うためにサービスとの優先的なやり取りが行われています。 と ASP.NET Core を使用 Blazor すると、 `HttpClient` クラスのメソッドにの構成を登録でき `Startup` `ConfigureServices` ます。 HTTP エンドポイントと対話する必要がある場合は、その構成を使用します。 次の構成コードを考えてみます。
 
 ```csharp
 services.AddHttpClient("github", client =>
@@ -115,7 +117,7 @@ services.AddHttpClient("github", client =>
 });
 ```
 
-GitHub からデータにアクセスする必要がある場合は常に、という名前のクライアントを作成 `github` します。 クライアントはベースアドレスを使用して構成され、要求ヘッダーが適切に設定されます。 `IHttpClientFactory`ディレクティブまたはプロパティの属性を使用して、Blazor コンポーネントにを挿入し `@inject` `[Inject]` ます。 次の構文を使用して、名前付きクライアントを作成し、サービスと対話します。
+GitHub からデータにアクセスする必要がある場合は常に、という名前のクライアントを作成 `github` します。 クライアントはベースアドレスを使用して構成され、要求ヘッダーが適切に設定されます。 `IHttpClientFactory` Blazor ディレクティブまたはプロパティの属性を使用して、をコンポーネントに挿入し `@inject` `[Inject]` ます。 次の構文を使用して、名前付きクライアントを作成し、サービスと対話します。
 
 ```razor
 @inject IHttpClientFactory factory

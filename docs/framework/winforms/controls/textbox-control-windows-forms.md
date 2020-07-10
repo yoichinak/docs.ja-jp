@@ -1,19 +1,20 @@
 ---
 title: TextBox コントロール
+description: 編集可能なテキストに使用し、読み取り専用にするなど、Windows フォーム TextBox コントロールのさまざまな側面について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-ms.openlocfilehash: 7bdca52e62b6e7b014d28478b291a1157486527b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 026f6d2653e41dabd3db7490660b6ce19846d397
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742785"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174446"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox コントロール (Windows フォーム)
-Windows フォームテキストボックスを使用して、ユーザーからの入力を取得したり、テキストを表示したりします。 `TextBox` コントロールは、通常、編集可能なテキストに使用されますが、読み取り専用にすることもできます。 テキストボックスでは、複数の行を表示したり、テキストをコントロールのサイズに折り返したり、基本的な書式を追加したりできます。 `TextBox` コントロールでは、コントロールに表示または入力されるテキストに対して1つの形式を使用できます。  
+Windows フォームテキストボックスを使用して、ユーザーからの入力を取得したり、テキストを表示したりします。 コントロールは、 `TextBox` 通常、編集可能なテキストに使用されますが、読み取り専用にすることもできます。 テキストボックスでは、複数の行を表示したり、テキストをコントロールのサイズに折り返したり、基本的な書式を追加したりできます。 コントロール `TextBox` では、コントロールに表示または入力されるテキストに対して1つの形式を使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)  

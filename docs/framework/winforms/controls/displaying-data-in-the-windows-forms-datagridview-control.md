@@ -1,5 +1,6 @@
 ---
 title: DataGridView コントロールでのデータの表示
+description: Windows フォーム DataGridView コントロールを使用して、さまざまな外部データソースのデータを表示する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - displaying data [Windows Forms], data grids
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-ms.openlocfilehash: d02362895d75df3735d19554bd44bb8ac443c6c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a0f3e6627290521b8c10477c31459f1486e79162
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745868"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174576"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデータの表示
-`DataGridView` コントロールは、さまざまな外部データソースのデータを表示するために使用されます。 または、コントロールに行と列を追加し、データを手動で設定することもできます。  
+`DataGridView`コントロールは、さまざまな外部データソースのデータを表示するために使用されます。 または、コントロールに行と列を追加し、データを手動で設定することもできます。  
   
  コントロールをデータソースにバインドすると、データソースのスキーマに基づいて列が自動的に生成されます。 これらの列が希望どおりに表示されない場合は、それらの列を非表示、削除、または再配置することができます。 また、非バインド列を追加して、データソースから取得されていない補足データを表示することもできます。  
   
- また、標準形式 (通貨形式など) を使用してデータを表示したり、表示形式をカスタマイズして必要なデータを表示したり (負の数値の背景色の変更、文字列値の置換など) することもできます。対応するイメージを含む)。  
+ また、標準形式 (通貨形式など) を使用してデータを表示することも、必要に応じてデータを表示するように表示形式をカスタマイズすることもできます (負の数値の背景色を変更する、文字列値を対応するイメージに置き換えるなど)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Windows フォーム DataGridView コントロールでのデータ表示モード](data-display-modes-in-the-windows-forms-datagridview-control.md)  
@@ -28,11 +29,11 @@ ms.locfileid: "76745868"
  [Windows フォーム DataGridView コントロールでのデータの書式設定](data-formatting-in-the-windows-forms-datagridview-control.md)  
  セルの表示値を書式設定するためのオプションについて説明します。  
   
- [チュートリアル: バインドされていない Windows フォーム DataGridView コントロールの作成](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ [チュートリアル: バインドされていない Windows フォーム DataGridView コントロールを作成する](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
  コントロールにデータを手動で設定する方法について説明します。  
   
  [方法: データを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- データベースから取得した情報を含む `BindingSource` にバインドして、コントロールにデータを設定する方法について説明します。  
+ データベースから取得した情報を含むにバインドすることによって、コントロールにデータを設定する方法について説明し `BindingSource` ます。  
   
  [方法: データバインドされた Windows フォーム DataGridView コントロールに列を自動生成する](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
  バインドされたデータソースに基づいて列を自動的に生成する方法について説明します。  
@@ -46,24 +47,24 @@ ms.locfileid: "76745868"
  [方法: データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する](unbound-column-to-a-data-bound-datagridview.md)  
  バインドされていない列を追加して、バインドされたデータソースからデータを補う方法について説明します。  
   
- [方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ [方法 : オブジェクトを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
  コントロールを任意のオブジェクトのコレクションにバインドして、各オブジェクトがそれぞれの行に表示されるようにする方法について説明します。  
   
- [方法: Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ [方法 : Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
  コントロールの特定の行にバインドされたオブジェクトを取得する方法について説明します。  
   
- [チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームの作成](creating-a-master-detail-form-using-two-datagridviews.md)  
- 1つの `DataGridView` 制御に表示される値が、別のコントロールで現在選択されている行に依存するように、関連する2つのデータベーステーブルのデータを表示する方法について説明します。  
+ [チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームを作成する](creating-a-master-detail-form-using-two-datagridviews.md)  
+ 1つのコントロールに表示される値が、別のコントロール `DataGridView` で現在選択されている行に依存するように、関連する2つのデータベーステーブルのデータを表示する方法について説明します。  
   
  [方法: Windows フォーム DataGridView コントロールのデータの書式設定をカスタマイズする](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> イベントを処理して、セルの値に応じてセルの外観を変更する方法について説明します。  
+ イベントを処理して、 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> セルの値に応じてセルの外観を変更する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.DataSource%2A> プロパティのリファレンスドキュメントを提供します。  
+ プロパティに関するリファレンスドキュメントを提供 <xref:System.Windows.Forms.DataGridView.DataSource%2A> します。  
   
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> コンポーネントのリファレンス ドキュメントを提供します。  
@@ -72,7 +73,7 @@ ms.locfileid: "76745868"
  [Windows フォーム DataGridView コントロールでのデータ入力](data-entry-in-the-windows-forms-datagridview-control.md)  
  コントロールのデータに対してユーザーが実行できる追加および修正の仕方を変更する方法を説明するトピックを示します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)

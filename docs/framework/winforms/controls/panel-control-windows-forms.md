@@ -1,20 +1,21 @@
 ---
 title: Panel コントロール
+description: Windows フォーム Panel コントロールの使用方法について説明します。具体的には、パネルを使用して、関数ごとにフォームを分割する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - grouping controls
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
-ms.openlocfilehash: 2ebf058383296db82a5451d743abd9e9fdc76085
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58190eb740696862571e1a246a56bf5daffc2864
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744299"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174459"
 ---
 # <a name="panel-control-windows-forms"></a>Panel コントロール (Windows フォーム)
-Windows フォーム `Panel` コントロールを使用して、他のコントロールの識別可能なグループ化を提供します。 通常、パネルを使用して、関数によってフォームを分割します。 `Panel` コントロールは、<xref:System.Windows.Forms.GroupBox> コントロールに似ています。ただし、スクロールバーを持つことができるのは `Panel` コントロールだけで、<xref:System.Windows.Forms.GroupBox> コントロールのみがキャプションを表示します。  
+Windows フォーム `Panel` コントロールは、他のコントロールの識別可能なグループ化を提供するために使用されます。 通常、パネルを使用して、関数によってフォームを分割します。 コントロール `Panel` はコントロールに似ていますが、 <xref:System.Windows.Forms.GroupBox> スクロールバーを持つことができるのはコントロールだけで、 `Panel` キャプションはコントロールのみに <xref:System.Windows.Forms.GroupBox> 表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Panel コントロールの概要](panel-control-overview-windows-forms.md)  

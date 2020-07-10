@@ -1,5 +1,6 @@
 ---
 title: ComboBox と ListBox
+description: Windows フォーム ComboBox と Windows フォーム ListBox を使用する方法について説明します。また、タスクに適しているかどうかを判断する方法についても説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms], adding and removing items
@@ -11,21 +12,21 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: 7087760a393bb58d83d899c1741c745fb28585bb
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ca6ad6bec2dbc30128ea09808af2806687b17a8c
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739931"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174420"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>ListBox の代わりに Windows フォーム ComboBox を使用する場合
-<xref:System.Windows.Forms.ComboBox> と <xref:System.Windows.Forms.ListBox> のコントロールには同様の動作があり、場合によっては交換可能である場合もあります。 ただし、タスクにより適切なものがある場合もあります。  
+とのコントロールには <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ListBox> 同様の動作があり、場合によっては交換可能である場合もあります。 ただし、タスクにより適切なものがある場合もあります。  
   
- 一般的に、コンボボックスは、推奨される選択肢のリストがある場合に適しています。また、リストボックスは、入力を一覧の内容に限定する場合に適しています。 コンボボックスにはテキストボックスフィールドが含まれているので、一覧にない選択肢を入力することもできます。 例外は、<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> プロパティが <xref:System.Windows.Forms.ComboBoxStyle.DropDownList>に設定されている場合です。 この場合、最初の文字を入力すると、コントロールによって項目が選択されます。  
+ 一般的に、コンボボックスは、推奨される選択肢のリストがある場合に適しています。また、リストボックスは、入力を一覧の内容に限定する場合に適しています。 コンボボックスにはテキストボックスフィールドが含まれているので、一覧にない選択肢を入力することもできます。 この例外は、 <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> プロパティがに設定されている場合に発生し <xref:System.Windows.Forms.ComboBoxStyle.DropDownList> ます。 この場合、最初の文字を入力すると、コントロールによって項目が選択されます。  
   
- また、コンボボックスでは、フォーム上の領域が節約されます。 ユーザーが下矢印をクリックするまでは完全な一覧が表示されないため、コンボボックスは、リストボックスが収まらない小さなスペースに簡単に収めることができます。 例外は、<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> プロパティが <xref:System.Windows.Forms.ComboBoxStyle.Simple>に設定されている場合です。完全な一覧が表示されます。コンボボックスは、リストボックスの場合よりも多くの領域を必要とします。  
+ また、コンボボックスでは、フォーム上の領域が節約されます。 ユーザーが下矢印をクリックするまでは完全な一覧が表示されないため、コンボボックスは、リストボックスが収まらない小さなスペースに簡単に収めることができます。 例外は、プロパティがに設定されている場合です <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> <xref:System.Windows.Forms.ComboBoxStyle.Simple> 。完全な一覧が表示されます。コンボボックスは、リストボックスの場合よりも多くの領域を必要とします。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
