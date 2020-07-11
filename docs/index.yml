@@ -10,13 +10,13 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 04/21/2020
-  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
-  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+  ms.date: 07/10/2020
+  ms.openlocfilehash: d6ff1e976117bedd4a64b47a9856bbd64dff0080
+  ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82624931"
+  ms.lasthandoff: 07/10/2020
+  ms.locfileid: "86226648"
 highlightedContent:
   items:
   - title: .NET をダウンロードする
@@ -34,6 +34,9 @@ highlightedContent:
   - title: .NET の新機能に関するドキュメント
     itemType: whats-new
     url: whats-new/index.yml
+  - title: .NET 開発者向けの Azure
+    itemType: overview
+    url: azure/index.yml
 conceptualContent:
   title: '.NET: フリー。 クロス プラットフォーム。 オープン ソース。'
   summary: Web、モバイル、デスクトップ、ゲーム、IoT など、あらゆるアプリを構築するための開発者用プラットフォームです。 Windows、Linux、macOS でサポートされています。
