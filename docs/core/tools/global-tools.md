@@ -3,12 +3,12 @@ title: .NET Core ツール
 description: .NET Core ツールをインストール、使用、更新、および削除する方法。 グローバル ツール、tool-path ツール、およびローカル ツールについて説明します。
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 2f0101c6385c41eda49bcb2458428c1f14552617
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847789"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226609"
 ---
 # <a name="how-to-manage-net-core-tools"></a>.NET Core ツールの管理方法
 
@@ -251,7 +251,7 @@ dotnet tool update <packagename>
 
 ```dotnetcli
 dotnet tool uninstall --global <packagename>
-dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall --tool-path <packagename>
 dotnet tool uninstall <packagename>
 ```
 

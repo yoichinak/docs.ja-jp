@@ -1,5 +1,6 @@
 ---
 title: '方法 : サンドボックスで部分信頼コードを実行する'
+description: .NET のサンドボックスで部分信頼コードを実行する方法について説明します。 AppDomain クラスは、マネージアプリケーションをサンドボックス化するための効果的な方法です。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181176"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282035"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法 : サンドボックスで部分信頼コードを実行する
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -114,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - アセンブリが保存されていない場所を示すコード ベースを使用できます。  
   
-    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (これは、アセンブリに透過性のマーキングがなく、完全に信頼されたアセンブリとして読み込まれる場合に発生します)。したがって、この関数で信頼するコードのみを作成するように注意する必要があります。  
+    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (これは、アセンブリに透明度のマークがなく、完全に信頼されているものとして読み込まれるたびに発生します)。したがって、この関数で信頼するコードのみを作成するように注意する必要があります。また、新しいアプリケーションドメインでは、完全に信頼されたクラスのインスタンスのみを作成することをお勧めします。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

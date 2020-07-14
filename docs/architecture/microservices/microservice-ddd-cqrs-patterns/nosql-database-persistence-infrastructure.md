@@ -2,12 +2,12 @@
 title: 永続インフラストラクチャとして NoSQL データベースを使用する
 description: 永続性実装のオプションとしての NoSql データベースの一般的な使用と、特に Azure Cosmos DB の使用について理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988441"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100809"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 
@@ -342,5 +342,5 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[前へ](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[前へ](infrastructure-persistence-layer-implementation-entity-framework-core.md)
 >[次へ](microservice-application-layer-web-api-design.md)

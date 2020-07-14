@@ -3,12 +3,12 @@ title: C# の型と変数 - C# 言語のツアー
 description: C# における型の定義と変数の宣言について説明します
 ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: a14291d1eec4d090b0275875326c5a580e5abe9d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141007"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174128"
 ---
 # <a name="types-and-variables"></a>型と変数
 
@@ -51,7 +51,7 @@ C# の値型はさらに、"*単純型*"、"*列挙型*"、"*構造体型*"、�
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
-[TupleTypes]: ../tuples.md
+[TupleTypes]: ../language-reference/builtin-types/value-tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md

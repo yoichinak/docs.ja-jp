@@ -1,5 +1,6 @@
 ---
 title: 危険なアクセス許可とポリシー管理
+description: 「.NET でのさまざまな危険なアクセス許可へのリンク」を参照してください。 これらのアクセス許可は、信頼できるコードにのみ付与し、必要な場合にのみ指定する必要があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], policy administration
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 15d28ff7d11b5d15ce44d9ab1f56548256850ff8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: ba3d47dc445e4b368f57d59d735fc331f5d6de81
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645756"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281616"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危険なアクセス許可とポリシー管理
 .NET Framework がアクセス許可を提供する保護された操作のいくつかで、セキュリティ システムが回避されてしまう可能性があります。 これらの危険なアクセス許可は信頼できるコードにのみ付与し、その付与は必要な場合に限る必要があります。 これらのアクセス許可が付与されると、通常、悪意のあるコードに対する防御策はありません。  
   
 > [!NOTE]
-> .NET Framework 4 では、.NET Framework のセキュリティ モデルと用語に重要な変更が加えられており、この点は変更されました。 これらの変更の詳細については、「[セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」を参照してください。  
+> .NET Framework 4 では、.NET Framework セキュリティモデルと用語に重要な変更が加えられています。 これらの変更の詳細については、「[セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」を参照してください。  
   
  危険なアクセス許可については、次の表で説明します。  
   

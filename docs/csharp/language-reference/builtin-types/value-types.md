@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a05b2b0f3f2a8377fdba6144b8aeb12bdee1086
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398269"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86172952"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -56,7 +56,7 @@ C# には、*単純型*とも呼ばれる次の組み込み値型が用意され
 
 - オペランドがすべて単純型の定数の定数式は、コンパイル時に評価されます。
 
-C# は C# 7.0 以降で、[値のタプル](../../tuples.md)をサポートしています。 値のタプルは単純型ではない値型です。
+C# は C# 7.0 以降で、[値のタプル](value-tuples.md)をサポートしています。 値のタプルは単純型ではない値型です。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

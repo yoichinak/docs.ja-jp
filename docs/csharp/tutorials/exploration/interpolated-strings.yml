@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: a82fe645524e526d0373a4e4733c2fef9ca7c14f
+  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860995"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86174115"
 items:
 - durationInMinutes: 2
   content: >
@@ -53,7 +53,7 @@ items:
     前の手順では、文字列補間を使用して、1 つの文字列内に別の文字列を挿入しましたが、 ただし、挿入文字列式に含まれる各補間式にはあらゆるデータ型を指定できます。 挿入文字列にさまざまなデータ型式の値を含めてみましょう。
 
 
-    次の例では、最初に `Name`、`Price`、`perPackage` というメンバーを持つ[タプル](../../tuples.md)を定義します。 対話型ウィンドウで次のコードを実行します。
+    次の例では、最初に `Name`、`Price`、`perPackage` というメンバーを持つ[タプル](../../language-reference/builtin-types/value-tuples.md)を定義します。 対話型ウィンドウで次のコードを実行します。
 
 
     ```csharp

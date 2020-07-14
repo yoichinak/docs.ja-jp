@@ -2,12 +2,12 @@
 title: ドメイン モデル レイヤーでの検証の設計
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | ドメイン モデル検証の主要な概念を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988506"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100913"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を設計する
 
@@ -53,7 +53,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>データ注釈に基づいてモデルで検証属性を使用する
 
-Required 属性や MaxLength 属性のようなデータ注釈を使用すると、「[テーブル マッピング](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)」セクションで詳述したように、EF Core データベースのフィールド プロパティを構成することができます。しかし、.NET Framework の EF 4.x 以降に行われているので、[それらは EF Core でのエンティティ検証では機能しなくなりました](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> メソッドも機能しません)。
+Required 属性や MaxLength 属性のようなデータ注釈を使用すると、「[テーブル マッピング](infrastructure-persistence-layer-implementation-entity-framework-core.md#table-mapping)」セクションで詳述したように、EF Core データベースのフィールド プロパティを構成することができます。しかし、.NET Framework の EF 4.x 以降に行われているので、[それらは EF Core でのエンティティ検証では機能しなくなりました](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> メソッドも機能しません)。
 
 コントローラーの通常どおりのアクション呼び出しの前に行われるモデル バインディングの際にモデル検証で、データ注釈と <xref:System.ComponentModel.DataAnnotations.IValidatableObject> インターフェイスを引き続き使用することができます。しかし、そのモデルは ViewModel または DTO であることを前提としており、それはドメイン モデルに関する問題ではなく、MVC または API に関する問題です。
 

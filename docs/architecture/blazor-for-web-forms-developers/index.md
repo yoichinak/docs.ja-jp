@@ -1,15 +1,18 @@
 ---
 title: ASP.NET Web Forms 開発者向け Blazor
-description: Blazor と .NET Core を使用し、使い慣れた簡単な方法で、.NET を含むフルスタック Web アプリを構築する方法について説明します。
+description: Blazor と .NET Core を使用し、使い慣れた簡単な方法で、.NET によるフルスタック Web アプリを構築する方法について説明します。
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 779eb47d9796c61df9939d0e7de287443870576e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73088126"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173251"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms 開発者向け Blazor
 
@@ -35,7 +38,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 本書は "現状有姿" で提供され、著者の見解と意見を表しています。 URL および他の参照されているインターネットの Web サイトをはじめ、本書に記載されている見解、意見、および情報は、通知なく変更されることがあります。
 
-使用している例は、例示のみを目的に提供された、架空のものです。 実際の関連やつながりはなく、推測によるものです。
+ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
 <https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
 
@@ -71,9 +74,9 @@ Mac および macOS は Apple Inc. の商標です。
 
 ## <a name="what-this-book-doesnt-cover"></a>本書で取り上げないもの
 
-本書は Blazor の紹介文であり、包括的な移行ガイドではありません。 ASP.NET Web Forms から Blazor にプロジェクトを移行する方法に関するガイドが含まれていますが、微妙な違いや詳細をあらゆる点で説明する試みはありません。 ASP.NET から ASP.NET Core に移行する一般的な手順については、ASP.NET Core ドキュメントの[移行ガイダンス](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/)を参照してください。
+本書は Blazor の紹介文であり、包括的な移行ガイドではありません。 ASP.NET Web Forms から Blazor にプロジェクトを移行する方法に関するガイダンスが含まれていますが、微妙な違いや詳細をあらゆる点で説明する試みはありません。 ASP.NET から ASP.NET Core に移行する一般的な手順については、ASP.NET Core ドキュメントの[移行ガイダンス](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/)を参照してください。
 
-### <a name="additional-resources"></a>その他のリソース
+### <a name="additional-resources"></a>その他の技術情報
 
 Blazor の公式ホーム ページとドキュメントは <https://blazor.net> にあります。
 

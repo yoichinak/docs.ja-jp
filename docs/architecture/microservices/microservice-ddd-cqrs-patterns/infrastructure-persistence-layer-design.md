@@ -2,12 +2,12 @@
 title: インフラストラクチャの永続レイヤーの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | インフラストラクチャの永続レイヤーの設計でリポジトリ パターンを調べる。
 ms.date: 10/08/2018
-ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988480"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100848"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>インフラストラクチャの永続レイヤーの設計
 
@@ -129,4 +129,4 @@ eShopOnContainers に実装されたリポジトリは、その変更追跡を�
 
 >[!div class="step-by-step"]
 >[前へ](domain-events-design-implementation.md)
->[次へ](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[次へ](infrastructure-persistence-layer-implementation-entity-framework-core.md)

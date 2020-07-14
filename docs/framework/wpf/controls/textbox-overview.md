@@ -5,19 +5,19 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 9fbae5ac4de4c78a1086bcbd9bfc9e01eb597fb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86b2cf8cb0c72186fd92bdad0af6bf5bd3fa9f3f
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186644"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174433"
 ---
 # <a name="textbox-overview"></a>TextBox の概要
 <xref:System.Windows.Controls.TextBox> クラスでは、書式設定されていないテキストを表示または編集できます。 <xref:System.Windows.Controls.TextBox> の一般的な用途は、フォームで書式設定されていないテキストを編集することです。 たとえば、ユーザーの名前、電話番号などの入力を求めるフォームでは、テキスト入力用に <xref:System.Windows.Controls.TextBox> コントロールを使用します。 このトピックでは、<xref:System.Windows.Controls.TextBox> クラスを紹介し、それを [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] と C# の両方で使用する方法の例を示します。  
 
 <a name="textbox_or_richtextbox"></a>
 ## <a name="textbox-or-richtextbox"></a>TextBox か RichTextBox か  
- <xref:System.Windows.Controls.TextBox> と <xref:System.Windows.Controls.RichTextBox> のどちらを使用しても、ユーザーはテキストを入力できますが、この 2 つのコントロールは異なるシナリオで使用されます。 <xref:System.Windows.Controls.TextBox> は、必要なシステム リソースが <xref:System.Windows.Controls.RichTextBox> より少ないため、プレーンテキストのみを編集する必要がある場合に理想的です (つまりフォームでの使用)。 <xref:System.Windows.Controls.RichTextBox> は、書式設定されたテキスト、イメージ、テーブルなどのサポート対象コンテンツを編集する必要がある場合に適しています。 たとえば、書式設定やイメージなどを必要とするドキュメント、記事、またはブログを編集する場合は、<xref:System.Windows.Controls.RichTextBox> を使用することをお勧めします。 次の表は、<xref:System.Windows.Controls.TextBox> と <xref:System.Windows.Controls.TextBox> の主な機能をまとめたものです。  
+ <xref:System.Windows.Controls.TextBox> と <xref:System.Windows.Controls.RichTextBox> のどちらを使用しても、ユーザーはテキストを入力できますが、この 2 つのコントロールは異なるシナリオで使用されます。 <xref:System.Windows.Controls.TextBox> は、必要なシステム リソースが <xref:System.Windows.Controls.RichTextBox> より少ないため、プレーンテキストのみを編集する必要がある場合に理想的です (つまりフォームでの使用)。 <xref:System.Windows.Controls.RichTextBox> は、書式設定されたテキスト、イメージ、テーブルなどのサポート対象コンテンツを編集する必要がある場合に適しています。 たとえば、書式設定やイメージなどを必要とするドキュメント、記事、またはブログを編集する場合は、<xref:System.Windows.Controls.RichTextBox> を使用することをお勧めします。 次の表は、<xref:System.Windows.Controls.TextBox> と <xref:System.Windows.Controls.RichTextBox> の主な機能をまとめたものです。  
   
 |Control|リアルタイム スペル チェック|コンテキスト メニュー|<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctrl + B) のような書式設定コマンド|イメージ、段落、テーブルのような <xref:System.Windows.Documents.FlowDocument> コンテンツ|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  

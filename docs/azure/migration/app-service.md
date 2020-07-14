@@ -2,17 +2,17 @@
 title: .NET Web アプリまたはサービスを Azure App Service に移行する
 description: .NET Web アプリまたはサービスをオンプレミスから Azure App Service に移行する方法について説明します。
 ms.topic: conceptual
-ms.date: 08/11/2018
-ms.openlocfilehash: 8761642469b6f3d3c93d2e2e0fa7e02dbf3de6d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 07/08/2020
+ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447005"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174310"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web アプリまたはサービスを Azure App Service に移行する
 
-[App Service](https://docs.microsoft.com/azure/app-service/overview) は、スケーラブルな Web サイトと Web アプリケーションをホストするために最適化された、フル マネージドのコンピューティング プラットフォーム サービスです。 この記事では、既存のアプリケーションを Azure App Service にリフトアンドシフトする方法、考慮すべき変更、および[クラウドへの移行](https://azure.microsoft.com/migration/web-applications/)に関するその他のリソースについて説明します。 ほとんどの ASP.NET Web サイト (WebForms、MVC) とサービス (Web API、WCF) は、変更なしで Azure App Service に直接移行できます。 若干の変更が必要なものもあれば、リファクタリングが必要なものもあります。
+[App Service](/azure/app-service/overview) は、スケーラブルな Web サイトと Web アプリケーションをホストするために最適化された、フル マネージドのコンピューティング プラットフォーム サービスです。 この記事では、既存のアプリケーションを Azure App Service にリフトアンドシフトする方法、考慮すべき変更、および[クラウドへの移行](https://azure.microsoft.com/migration/web-applications/)に関するその他のリソースについて説明します。 ほとんどの ASP.NET Web サイト (WebForms、MVC) とサービス (Web API、WCF) は、変更なしで Azure App Service に直接移行できます。 若干の変更が必要なものもあれば、リファクタリングが必要なものもあります。
 
 開始するには、 [ASP.NET および SQL アプリケーションを Azure App Service に発行](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)します。
 
@@ -22,10 +22,10 @@ ms.locfileid: "84447005"
 
 移行または変更が必要になる可能性のあるオンプレミスのリソースへのアクセスを確認します。 オンプレミスのリソースへのアクセスを軽減するには、次のような方法があります。
 
-* [Azure Virtual Network](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet) を使用して、App Service をオンプレミスのリソースに接続する VPN を作成します。
-* [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it) を使用して、ファイアウォールを変更せずに、オンプレミス サービスをクラウドに安全に公開します。
+* [Azure Virtual Network](/azure/app-service/web-sites-integrate-with-vnet) を使用して、App Service をオンプレミスのリソースに接続する VPN を作成します。
+* [Azure Relay](/azure/service-bus-relay/relay-what-is-it) を使用して、ファイアウォールを変更せずに、オンプレミス サービスをクラウドに安全に公開します。
 * [SQL データベース](https://go.microsoft.com/fwlink/?linkid=863217)などの依存関係を Azure に移行します。
-* クラウドのサービスとしてのプラットフォーム サービスを使用して依存関係を減らします。 たとえば、オンプレミスのメール サーバーに接続するのではなく、[SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email) を使用することを検討します。
+* クラウドのサービスとしてのプラットフォーム サービスを使用して依存関係を減らします。 たとえば、オンプレミスのメール サーバーに接続するのではなく、[SendGrid](/azure/sendgrid-dotnet-how-to-send-email) を使用することを検討します。
 
 ### <a name="port-bindings"></a>ポートのバインド
 
@@ -33,20 +33,20 @@ Azure App Service では、HTTP トラフィック用のポート 80 と、HTTPS
 
 WCF では、次のバインドがサポートされています。
 
-バインド | メモ
---------|--------
-BasicHttp |
-WSHttp |
-WSDualHttpBinding | [Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。
-NetHttpBinding | 双方向コントラクトに対して、[Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。
-NetHttpsBinding | 双方向コントラクトに対して、[Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。
-BasicHttpContextBinding |
-WebHttpBinding |
-WSHttpContextBinding |
+| バインド | メモ |
+|--|--|
+| `BasicHttp` |  |
+| `WSHttp` |  |
+| `WSDualHttpBinding` | [Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。 | [Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
+| `NetHttpBinding` | 双方向コントラクトに対して、[Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。 | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
+| `NetHttpsBinding` | 双方向コントラクトに対して、[Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。 | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
+| `BasicHttpContextBinding` |  |
+| `WebHttpBinding` |  |
+| `WSHttpContextBinding` |  |
 
 ### <a name="authentication"></a>認証
 
-Azure App Service では既定で匿名認証がサポートされており、意図した場合はフォーム認証がサポートされます。 Windows 認証は、Azure Active Directory および ADFS と統合する場合にのみ使用できます。 オンプレミスのディレクトリを Azure Active Directory と統合する方法の詳細については、[こちら](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)をご覧ください。
+Azure App Service では既定で匿名認証がサポートされており、意図した場合はフォーム認証がサポートされます。 Windows 認証は、Azure Active Directory および ADFS と統合する場合にのみ使用できます。 オンプレミスのディレクトリを Azure Active Directory と統合する方法の詳細については、[こちら](/azure/active-directory/connect/active-directory-aadconnect)をご覧ください。
 
 ### <a name="assemblies-in-the-gac-global-assembly-cache"></a>GAC (グローバル アセンブリ キャッシュ) 内のアセンブリ
 
@@ -54,11 +54,11 @@ Azure App Service では既定で匿名認証がサポートされており、�
 
 ### <a name="iis-settings"></a>IIS 設定
 
-従来、アプリケーションの applicationHost.config で構成していたあらゆるものを、Azure Portal で構成できるようになりました。 AppPool のビット、WebSocket の有効化/無効化、マネージド パイプライン バージョン、.NET Framework バージョン (2.0/4.0) などがこれに該当します。 [アプリケーション設定](https://docs.microsoft.com/azure/app-service/web-sites-configure)を変更するには、[Azure Portal](https://portal.azure.com) に移動し、Web アプリのブレードを開いて、 **[アプリケーションの設定]** タブを選択します。
+従来、アプリケーションの applicationHost.config で構成していたあらゆるものを、Azure Portal で構成できるようになりました。 AppPool のビット、WebSocket の有効化/無効化、マネージド パイプライン バージョン、.NET Framework バージョン (2.0/4.0) などがこれに該当します。 [アプリケーション設定](/azure/app-service/web-sites-configure)を変更するには、[Azure Portal](https://portal.azure.com) に移動し、Web アプリのブレードを開いて、 **[アプリケーションの設定]** タブを選択します。
 
 #### <a name="iis5-compatibility-mode"></a>IIS5 互換モード
 
-IIS5 互換モードはサポートされていません。 Azure App Service では、各 Web App とその下のすべてのアプリケーションが、[アプリケーション プール](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10))の特定のセットを使用して同じワーカー プロセスで実行されます。
+IIS5 互換モードはサポートされていません。 Azure App Service では、各 Web App とその下のすべてのアプリケーションが、[アプリケーション プール](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10))の特定のセットを使用して同じワーカー プロセスで実行されます。
 
 #### <a name="iis7-schema-compliance"></a>IIS7+ スキーマ準拠
 
@@ -74,7 +74,7 @@ Azure App Service では、プラットフォーム上で COM コンポーネン
 
 ### <a name="physical-directories"></a>物理ディレクトリ
 
-Azure App Service では、物理ドライブへのアクセスは許可されていません。 [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) を使用して、SMB 経由でファイルにアクセスすることが必要な場合があります。 HTTPS 経由でアクセスする場合は、[Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction) にファイルを格納できます。
+Azure App Service では、物理ドライブへのアクセスは許可されていません。 [Azure Files](/azure/storage/files/storage-files-introduction) を使用して、SMB 経由でファイルにアクセスすることが必要な場合があります。 HTTPS 経由でアクセスする場合は、[Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) にファイルを格納できます。
 
 ### <a name="isapi-filters"></a>ISAPI フィルター
 
@@ -82,7 +82,7 @@ Azure App Service では、ISAPI フィルターの使用をサポートでき�
 
 ### <a name="https-bindings-and-ssl"></a>HTTPS バインドと SSL
 
-HTTPS バインドは移行されず、SSL 証明書も Web サイトに関連付けられません。 ただし、サイトの移行が完了したら、[SSL 証明書を手動でアップロード](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl)できます。
+HTTPS バインドは移行されず、SSL 証明書も Web サイトに関連付けられません。 ただし、サイトの移行が完了したら、[SSL 証明書を手動でアップロード](/azure/app-service/app-service-web-tutorial-custom-ssl)できます。
 
 ### <a name="sharepoint-and-frontpage"></a>SharePoint と FrontPage
 
@@ -102,15 +102,15 @@ AAD は無料のアプリでは機能しません。 AAD を使用するには�
 
 ### <a name="monitoring-and-diagnostics"></a>監視と診断
 
-監視と診断に現在使用しているオンプレミスのソリューションは、クラウドでは機能しない可能性があります。 ただし、Web アプリでの問題を特定し、デバッグできるように、Azure には、ログ記録、監視、診断用のツールが用意されています。 Web アプリの診断は、アプリの構成で簡単に有効にすることができます。また、記録されたログは、Azure Application Insights で表示できます。 Web アプリの診断ログの有効化の詳細については、[こちら](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log)をご覧ください。
+監視と診断に現在使用しているオンプレミスのソリューションは、クラウドでは機能しない可能性があります。 ただし、Web アプリでの問題を特定し、デバッグできるように、Azure には、ログ記録、監視、診断用のツールが用意されています。 Web アプリの診断は、アプリの構成で簡単に有効にすることができます。また、記録されたログは、Azure Application Insights で表示できます。 Web アプリの診断ログの有効化の詳細については、[こちら](/azure/app-service/web-sites-enable-diagnostic-log)をご覧ください。
 
 ### <a name="connection-strings-and-application-settings"></a>接続文字列とアプリケーション設定
 
-[Azure KeyVault](https://docs.microsoft.com/azure/key-vault/) を使用することを検討してください。これは、アプリケーションで使用される機密情報を安全に格納するサービスです。 また、このデータを App Service 設定として保存することもできます。
+[Azure KeyVault](/azure/key-vault/) を使用することを検討してください。これは、アプリケーションで使用される機密情報を安全に格納するサービスです。 また、このデータを App Service 設定として保存することもできます。
 
 ### <a name="dns"></a>DNS
 
-アプリケーションの要件に基づいて、DNS 構成を更新することが必要な場合があります。 これらの DNS 設定は、App Service の[カスタム ドメイン設定](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain)で構成できます。
+アプリケーションの要件に基づいて、DNS 構成を更新することが必要な場合があります。 これらの DNS 設定は、App Service の[カスタム ドメイン設定](/azure/app-service/app-service-web-tutorial-custom-domain)で構成できます。
 
 ## <a name="azure-app-service-with-windows-containers"></a>Windows コンテナーを使用した Azure App Service
 

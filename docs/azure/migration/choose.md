@@ -4,12 +4,12 @@ description: ASP.NET Web アプリケーションに適した Azure への移行
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81433350"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174297"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>適切な Azure ホスティング オプションの選択
 
@@ -46,7 +46,7 @@ ms.locfileid: "81433350"
 
 ## <a name="networking-and-security-considerations"></a>ネットワークとセキュリティに関する考慮事項
 
-Microsoft Azure のようなパブリック クラウドにアプリケーションをデプロイする場合、[Azue とオンプレミスの間の DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) や、[Azure とインターネットの間の DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz) など、[ネットワーク DMZ を作成](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/)して特定のネットワークを分離し、セキュリティで保護することができます。 DMZ は、[Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) を使用して実装できます。
+Microsoft Azure のようなパブリック クラウドにアプリケーションをデプロイする場合、[Azue とオンプレミスの間の DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) や、[Azure とインターネットの間の DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz) など、[ネットワーク DMZ を作成](/azure/architecture/reference-architectures/dmz/)して特定のネットワークを分離し、セキュリティで保護することができます。 DMZ は、[Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) を使用して実装できます。
 
 Azure Virtual Network を使用すると、次のことが可能になります。
 
@@ -57,15 +57,15 @@ Azure Virtual Network を使用すると、次のことが可能になります�
 - 仮想アプライアンスを使用して高度なネットワーク トポロジを作成する
 - アプリケーション用に安全性の高い分離された環境を実現する
 
-独自の仮想ネットワークの構築を開始するには、[Azure Virtual Network のドキュメント](https://docs.microsoft.com/azure/virtual-network/)に関するページをご覧ください。
+独自の仮想ネットワークの構築を開始するには、[Azure Virtual Network のドキュメント](/azure/virtual-network/)に関するページをご覧ください。
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Azure に移行する際の認証と承認に関する考慮事項
 
 クラウドに移行する組織の最大の懸念事項はセキュリティです。 ほとんどの企業が、セキュリティ モデルの設計と開発にかなりの時間、資金、エンジニアリングを投資しており、ID ストアやシングル サインオン ソリューションなどの既存の投資を活用できることが重要です。
 
-オンプレミスで実行されている多くの既存のエンタープライズ B2E .NET アプリケーションでは、認証と ID 管理に Active Directory を使用しています。 Azure AD Connect を使用すると、オンプレミスのディレクトリを Azure Active Directory と統合できます。 作業を開始するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)」をご覧ください。
+オンプレミスで実行されている多くの既存のエンタープライズ B2E .NET アプリケーションでは、認証と ID 管理に Active Directory を使用しています。 Azure AD Connect を使用すると、オンプレミスのディレクトリを Azure Active Directory と統合できます。 作業を開始するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](/azure/active-directory/connect/active-directory-aadconnect)」をご覧ください。
 
-Azure Active Directory に関する詳細な計画については、[ハイブリッド ID ソリューションの ID 要件](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs)に関する記事をご覧ください。
+Azure Active Directory に関する詳細な計画については、[ハイブリッド ID ソリューションの ID 要件](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs)に関する記事をご覧ください。
 
 認証プロトコルの他の選択として、コンシューマー向けのアプリケーションで一般的な [OAuth](https://en.wikipedia.org/wiki/OAuth) と [OpenID](https://en.wikipedia.org/wiki/OpenID) があります。 OAuth を使用する IdentityServer4 によってラップされた ASP.NET Identity SQL データベースなど、自律的な ID データベースを使用する場合は、通常、オンプレミスのデータベースやディレクトリへの接続は不要です。
 

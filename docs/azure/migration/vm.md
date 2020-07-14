@@ -2,13 +2,13 @@
 title: Azure VM に ASP.NET Web アプリを移行する
 description: ASP.NET Web アプリケーションをオンプレミスから Azure 仮想マシンに移行する方法について説明します。
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: cc9477de92e6105762636ed3a2241949e69ac8ea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.date: 06/20/2020
+ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81433362"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174245"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Azure 仮想マシンへの ASP.NET Web アプリケーションの移行
 
@@ -24,12 +24,12 @@ ms.locfileid: "81433362"
 
 - 次の方法のいずれかを使用して、Azure に ASP.NET アプリケーション用の仮想マシンを作成します。
   - [ASP.NET アプリケーション用の新しい仮想マシンを作成する](https://go.microsoft.com/fwlink/?linkid=863237)
-  - [オンプレミスの既存の VMWare 仮想マシンを移行する](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
-  - [オンプレミスの既存の Hyper-V 仮想マシンを移行する](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
+  - [オンプレミスの既存の VMWare 仮想マシンを移行する](/azure/migrate/tutorial-migrate-vmware)
+  - [オンプレミスの既存の Hyper-V 仮想マシンを移行する](/azure/migrate/tutorial-migrate-hyper-v)
 - [Visual Studio を使用してアプリを発行する](https://go.microsoft.com/fwlink/?linkid=863240)
-- [VM 用のセキュリティで保護された仮想ネットワークを作成する](https://docs.microsoft.com/azure/virtual-network/virtual-network-get-started-vnet-subnet)
-- [アプリケーションの CI/CD パイプラインを作成する](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
-- [高可用性とスケーラビリティを確保するために VM スケール セットに移行する](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
+- [VM 用のセキュリティで保護された仮想ネットワークを作成する](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
+- [アプリケーションの CI/CD パイプラインを作成する](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
+- [高可用性とスケーラビリティを確保するために VM スケール セットに移行する](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
 
 ## <a name="considerations"></a>注意事項
 
@@ -39,13 +39,13 @@ ms.locfileid: "81433362"
 
 ### <a name="virtual-machine-size"></a>仮想マシンのサイズ
 
-ワークロードに最も最適化された仮想マシンのサイズと種類を選択します。 詳細については、「[Azure の Windows 仮想マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)」をご覧ください。
+ワークロードに最も最適化された仮想マシンのサイズと種類を選択します。 詳細については、「[Azure の Windows 仮想マシンのサイズ](/azure/virtual-machines/windows/sizes)」をご覧ください。
 
 ### <a name="maintenance"></a>メンテナンス 
 
-オンプレミス コンピューターと同様に、仮想マシンの管理と更新はユーザーが行う必要があります<sup>&#42;</sup>。 [Azure App Service](https://docs.microsoft.com/azure/app-service/) や[コンテナー](https://docs.microsoft.com/azure/app-service/containers/)などのサービスとしてのプラットフォーム (PaaS) 環境でアプリケーションを実行できる場合、その必要はなくなります。
+オンプレミス コンピューターと同様に、仮想マシンの管理と更新はユーザーが行う必要があります<sup>&#42;</sup>。 [Azure App Service](/azure/app-service/) や[コンテナー](/azure/app-service/containers/)などのサービスとしてのプラットフォーム (PaaS) 環境でアプリケーションを実行できる場合、その必要はなくなります。
 
-*<sup>&#42;</sup>[仮想マシン スケール セットの OS の自動アップグレード](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)は、現在、プレビュー サービスとして提供されています。*
+*<sup>&#42;</sup>[仮想マシン スケール セットの OS の自動アップグレード](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)は、現在、プレビュー サービスとして提供されています。*
 
 ### <a name="virtual-networks"></a>仮想ネットワーク
 
@@ -54,15 +54,15 @@ Azure Virtual Network を使用すると、次のことが可能になります�
 - 制御可能なハイブリッド インフラストラクチャを構築する
 - 独自の IP アドレスと DNS サーバーを使用する
 - アプリケーション用に安全性の高い分離された環境を作成する
-- 複数の[接続オプション](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti)のいずれかを使用して、VM をオンプレミス ネットワークに接続する
+- 複数の[接続オプション](/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti)のいずれかを使用して、VM をオンプレミス ネットワークに接続する
 - [ExpressRoute](https://azure.microsoft.com/services/expressroute/) を使用して、仮想マシンをオンプレミス ネットワークに統合する
 
-作業を開始するには、「[Virtual Network のドキュメント](https://docs.microsoft.com/azure/virtual-network/)」をご覧ください。
+作業を開始するには、「[Virtual Network のドキュメント](/azure/virtual-network/)」をご覧ください。
 
 ### <a name="active-directory"></a>Active Directory
 多くのアプリケーションでは、認証と ID 管理に Active Directory を使用しています。
 
-- Azure AD Connect を使用すると、オンプレミスのディレクトリを Azure Active Directory と統合できます。 作業を開始するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)」をご覧ください。
+- Azure AD Connect を使用すると、オンプレミスのディレクトリを Azure Active Directory と統合できます。 作業を開始するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](/azure/active-directory/connect/active-directory-aadconnect)」をご覧ください。
 - [ExpressRoute](https://azure.microsoft.com/services/expressroute/) を使用すると、アプリケーションはオンプレミスの Active Directory にアクセスできます。
 
 ### <a name="sql-databases"></a>SQL データベース
@@ -77,10 +77,10 @@ Azure Virtual Network を使用すると、次のことが可能になります�
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
 アプリケーションの高可用性とスケーラビリティを確保する場合、VM イメージを Azure 仮想マシン スケール セットに移行すると、アプリケーションの可用性とスケーラビリティが向上します。 VM Scale Sets では、構成済みの既存の VM を使用したり、アプリケーションでイメージをビルドするためのビルド パイプラインを設定したりできます。
 
-作業を開始するには、「[仮想マシン スケール セットへのアプリケーションのデプロイ](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)」をご覧ください。
+作業を開始するには、「[仮想マシン スケール セットへのアプリケーションのデプロイ](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)」をご覧ください。
 
 #### <a name="centralized-logging"></a>ログの一元化
-複数のインスタンスでアプリケーションを実行する場合は、[Azure Storage](https://docs.microsoft.com/azure/storage/) などの一元化された場所にログを保存することを検討します。
+複数のインスタンスでアプリケーションを実行する場合は、[Azure Storage](/azure/storage/) などの一元化された場所にログを保存することを検討します。
 
 ## <a name="next-steps"></a>次の手順
 
