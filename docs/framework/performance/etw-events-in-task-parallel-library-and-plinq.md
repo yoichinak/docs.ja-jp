@@ -1,19 +1,20 @@
 ---
 title: タスク並列ライブラリおよび PLINQ での ETW イベント
+description: タスク並列ライブラリおよび PLINQ での ETW イベントについて説明します。 これらのイベントを使用して、アプリケーションのプロファイリングとトラブルシューティングを行います。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 61429babf7378b9d271ffd60a6228ae4bfe7a5e5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644247"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309639"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>タスク並列ライブラリおよび PLINQ での ETW イベント
 
-タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオで、並列アプリケーション コードをプロファイリングする最善の方法は、Visual Studio で[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)を使用することです。
+タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオでは、並列アプリケーションコードをプロファイリングする最良の方法は、Visual Studio で[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)を使用することです。
 
 ## <a name="task-parallel-library-etw-events"></a>タスク並列ライブラリの ETW イベント
 

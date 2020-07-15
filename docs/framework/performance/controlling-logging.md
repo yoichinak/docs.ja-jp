@@ -1,15 +1,16 @@
 ---
 title: .NET Framework のログ記録の制御
+description: Event tracing for Windows (ETW) を使用して、.NET のログ記録を制御し、共通言語ランタイム (CLR) イベントを記録します。 Logman、Tracerpt、Xperf などのツールを使用します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504105"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309587"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
 
@@ -17,7 +18,7 @@ Windows イベント トレーシング (ETW: Event Tracing for Windows) を使�
 
 - Windows オペレーティング システムに含まれる [Logman](/windows-server/administration/windows-commands/logman) および [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) コマンド ライン ツール。
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/xperf-command-line-reference) の [Xperf](/windows-hardware/test/wpt/) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://docs.microsoft.com/archive/blogs/pigscanfly/)を参照してください。
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/) の [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://docs.microsoft.com/archive/blogs/pigscanfly/)を参照してください。
 
 CLR イベントの情報をキャプチャするには、コンピューターに CLR プロバイダーがインストールされている必要があります。 プロバイダーがインストールされているかどうかを確認するには、コマンド プロンプトで「`logman query providers`」と入力します。 プロバイダーの一覧が表示されます。 その一覧に、次のような CLR プロバイダーのエントリが含まれている必要があります。
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開きます。 Prompt ディレクトリを .NET Framework 4 フォルダー (%WINDIR%\Microsoft.NET\Framework [64] \ v4.\<.NET バージョン > \) に変更します。 このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。
+一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開きます。 Prompt ディレクトリを .NET Framework 4 フォルダー (%WINDIR%\Microsoft.NET\Framework [64] \ v4) に変更します。 \<.NET version>\ ). このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。
 
 `wevtutil im CLR-ETW.man`
 
@@ -49,7 +50,7 @@ Provider                                 GUID
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     各値の説明:
+     それぞれの文字について以下に説明します。
 
     - `-p` パラメーターはプロバイダーの GUID を識別します。
 
@@ -99,7 +100,7 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 
      `xperf clrevents.etl`
 
-     Xperf ETL ファイル ビューアーが開きます。 このビューアーでは、CLR イベントは、 **[一般的なイベント]** ビューに表示されます。 種類別に分類されたイベントのデータ グリッドを表示するには、このビューで時間帯を選択し、マウスを右クリックして **[概要]** を選択します。
+     Xperf ETL ファイル ビューアーが開きます。 このビューアーでは、CLR イベントは、**[一般的なイベント]** ビューに表示されます。 種類別に分類されたイベントのデータ グリッドを表示するには、このビューで時間帯を選択し、マウスを右クリックして **[概要]** を選択します。
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl ファイルをコンマ区切り値ファイルに変換するには
 
@@ -109,7 +110,7 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 
      このコマンドを使用すると、XPerf によって、表示可能なコンマ区切り値 (CSV) ファイルとしてイベントがダンプされます。 イベントが異なればフィールドも異なるので、この CSV ファイルには、データの前に複数のヘッダー行が含まれます。 すべての行の先頭のフィールドはイベントの種類を表します。このフィールドは、残りのフィールドを判別するために使用されるヘッダーを示します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Windows パフォーマンスツールキット](/windows-hardware/test/wpt/)
+- [Windows パフォーマンス ツールキット](/windows-hardware/test/wpt/)
 - [共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)

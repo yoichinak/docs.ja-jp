@@ -1,23 +1,24 @@
 ---
 title: CLR ETW プロバイダー
+description: 2つの共通言語ランタイム (CLR) event tracing for Windows (ETW) プロバイダー (runtimne プロバイダーとランダウンプロバイダー) の詳細を確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f86e8334482880c4f7cb23ec93a3c826c083389
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401005"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309652"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW プロバイダー
 共通言語ランタイム (CLR: Common Language Runtime) には、ランタイム プロバイダーとランダウン プロバイダーという 2 つのプロバイダーがあります。  
   
  ランタイム プロバイダーは、有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 たとえば、ローダー イベントを収集するには `LoaderKeyword` キーワードを有効にします。  
   
- Windows イベント トレース (ETW) イベントは、拡張子が .etl のファイルに記録され、後で必要に応じてコンマ区切り値 (.csv) ファイルで後処理できます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](controlling-logging.md)」を参照してください。  
+ Windows イベントトレーシング (ETW) イベントは、.etl 拡張子を持つファイルに記録されます。このファイルは、必要に応じてコンマ区切り値 (.csv) ファイルで後から処理できます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](controlling-logging.md)」を参照してください。  
   
 ## <a name="the-runtime-provider"></a>ランタイム プロバイダー  
  ランタイム プロバイダーは、メインの CLR ETW プロバイダーです。  
@@ -35,7 +36,7 @@ ms.locfileid: "79401005"
   
  通常は、プロセスが開始される前に ETW のログを有効にし、プロセスの終了後にログを無効にしますが、 プロセスの実行中に ETW ログを有効にする場合もあります。その場合は、そのプロセスについて追加の情報が必要です。 たとえば、シンボルを解決するには、ログを有効にする前に既に読み込まれていたメソッドのメソッド イベントを記録する必要があります。  
   
- `DCStart` イベントと `DCEnd` イベントは、データの収集が開始されたときと停止されたときのプロセスの状態をキャプチャします  (状態は、既にジャスト イン タイム (JIT) コンパイル済みのメソッドや読み込まれたアセンブリなど、高いレベルの情報を参照します。これら 2 つのイベントは、プロセスで既に発生した処理に関する情報を提供できます。たとえば、JIT コンパイルされたメソッドなどです。  
+ `DCStart` イベントと `DCEnd` イベントは、データの収集が開始されたときと停止されたときのプロセスの状態をキャプチャします  (状態とは、既に just-in-time (JIT) コンパイルされたメソッドや読み込まれたアセンブリなど、高レベルの情報を指します)。この2つのイベントでは、プロセスで既に発生した内容に関する情報を提供できます。たとえば、どのメソッドが JIT コンパイルされたかなどです。  
   
  ランダウン プロバイダーで発生するイベントは、名前に `DC`、`DCStart`、`DCEnd`、または `DCInit` を含むイベントだけです。 また、これらのイベントはランダウン プロバイダーでしか発生しません。  
   

@@ -1,5 +1,6 @@
 ---
 title: 透過的セキュリティ コード、レベル 2
+description: レベル2の透過的なコードについて説明します。 使用例と動作、オーバーライドパターン、継承規則などを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645729"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309210"
 ---
 # <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-レベル 2 の透過性は .NET Framework 4 で導入されました。 このモデルには、透過的なコード、セキュリティ セーフ クリティカル コード、およびセキュリティ クリティカル コードの 3 つの基本思想があります。
+レベル2の透過性は .NET Framework 4 で導入されました。 このモデルには、透過的なコード、セキュリティ セーフ クリティカル コード、およびセキュリティ クリティカル コードの 3 つの基本思想があります。
 
 - 透過的なコード (完全に信頼されて実行されているコードを含む) は、他の透過的なコードまたはセキュリティ セーフ クリティカル コードのみを呼び出すことができます。 また、ドメインの部分信頼アクセス許可セット (存在する場合) で許可されるアクションのみを実行できます。 透過的なコードでは、次のアクションは実行できません。
 
@@ -42,7 +43,7 @@ ms.locfileid: "81645729"
 
 ## <a name="usage-examples-and-behaviors"></a>使用例と動作
 
-.NET Framework 4 の規則 (レベル 2 の透過性) を指定するには、アセンブリに次の注釈を使用します。
+.NET Framework 4 つの規則 (レベル2の透過性) を指定するには、アセンブリに次の注釈を使用します。
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +55,7 @@ ms.locfileid: "81645729"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-アセンブリにアポイントを付けていない場合は、既定で .NET Framework 4 規則が使用されます。 ただし、推奨されるベスト プラクティスは、デフォルト<xref:System.Security.SecurityRulesAttribute>に応じてではなく、属性を使用することです。
+アセンブリに注釈を設定しない場合は、既定で .NET Framework 4 ルールが使用されます。 ただし、推奨されるベストプラクティスは、 <xref:System.Security.SecurityRulesAttribute> 既定値に応じてではなく、属性を使用することです。
 
 ### <a name="assembly-wide-annotation"></a>アセンブリ全体の注釈
 
@@ -68,7 +69,7 @@ ms.locfileid: "81645729"
 
 - `AllowPartiallyTrustedCallers` (レベル 2 のみ): すべてのコードが既定で透過的になります。 ただし、個々の型やメンバーに他の属性を設定することもできます。
 
-次の表は、レベル 2 のアセンブリ レベルの動作とレベル 1 を比較したものです。
+次の表は、レベル2のアセンブリレベルの動作とレベル1を比較したものです。
 
 |Assembly 属性|[レベル 2]|[レベル 1]|
 |------------------------|-------------|-------------|
@@ -165,7 +166,7 @@ ms.locfileid: "81645729"
 <xref:System.Reflection> 名前空間に追加された <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>、および <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> の各プロパティを使用すると、型、メソッド、またはフィールドが `SecurityCritical`、`SecuritySafeCritical`、または `SecurityTransparent` のどれであるかを判断できます。 属性の存在を確認する代わりに、リフレクションを使用して透過性を判断するには、これらのプロパティを使用します。 透過性の規則は複雑なので、属性のチェックでは不十分なことがあります。
 
 > [!NOTE]
-> メソッド`SafeCritical`は、`true`実際には<xref:System.Type.IsSecurityCritical%2A>重要<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>であるため、`SafeCritical`と の両方を返します (クリティカル コードと同じ機能を持っていますが、透過的なコードから呼び出すことができます)。
+> `SafeCritical`メソッドは、 `true` との両方に対してを返し <xref:System.Type.IsSecurityCritical%2A> <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> `SafeCritical` ます。は実際には重要です (クリティカルなコードと同じ機能を持ちますが、透過的なコードから呼び出すことができます)。
 
 動的メソッドは、関連付けられているモジュールの透過性を継承します。型の透過性は継承しません (型に関連付けられている場合)。
 
@@ -175,9 +176,9 @@ ms.locfileid: "81645729"
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティは既定では `false` であるため、検証をスキップするにはこのプロパティを `true` に設定する必要があります。 これをするのは、最適化のためだけにしてください。 `transparent` [PEVerify ツール](../tools/peverify-exe-peverify-tool.md)のオプションを使用して、アセンブリ内の透過的なコードが検証可能であることを確認する必要があります。
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティは既定では `false` であるため、検証をスキップするにはこのプロパティを `true` に設定する必要があります。 これをするのは、最適化のためだけにしてください。 PEVerify ツールのオプションを使用して、アセンブリ内の透過的なコードが検証可能であることを確認する必要があり `transparent` ます。 [PEVerify tool](../tools/peverify-exe-peverify-tool.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティ透過的コード、レベル 1](security-transparent-code-level-1.md)
+- [透過的セキュリティコード、レベル1](security-transparent-code-level-1.md)
 - [セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

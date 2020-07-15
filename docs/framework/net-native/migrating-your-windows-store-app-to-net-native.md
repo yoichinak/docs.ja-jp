@@ -2,12 +2,12 @@
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389703"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309197"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET ネイティブに移行する
 
@@ -58,7 +58,7 @@ ms.locfileid: "81389703"
 > [!NOTE]
 > アプリを .NET ネイティブに移植するときは、すべての動的コードパスを十分にテストする必要があります。
 
-ほとんどの開発者にとって .NET ネイティブの既定の構成で十分ですが、開発者によっては、ランタイムディレクティブ (.xml) ファイルを使用して構成を微調整することが必要になる場合があります。 また、場合によっては、.NET ネイティブコンパイラは、リフレクションで使用できる必要があるメタデータを判断できず、次の場合には特にヒントに依存します。
+ほとんどの開発者には .NET ネイティブの既定の構成で十分ですが、ランタイムディレクティブ (.rd.xml) ファイルを使用して構成を微調整する場合もあります。 また、場合によっては、.NET ネイティブコンパイラは、リフレクションで使用できる必要があるメタデータを判断できず、次の場合には特にヒントに依存します。
 
 - <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> や <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> などの一部の構造体は、静的に決定できません。
 
@@ -79,7 +79,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 - .NET Framework クラス ライブラリでの型とメンバーに対するプライベート リフレクションはサポートされません。 ただし、独自のプライベート型とメンバー、およびサードパーティ ライブラリの型とメンバーに対するリフレクションは行うことができます。
 
-- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> プロパティは、戻り値を表す `false` オブジェクトに対し、正しく <xref:System.Reflection.ParameterInfo> を返します。 Windows ストア アプリ用 .NET の場合、これは `true`を返します。 中間言語 (IL) はこれを直接サポートせず、解釈は言語に任されます。
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> プロパティは、戻り値を表す `false` オブジェクトに対し、正しく <xref:System.Reflection.ParameterInfo> を返します。 Windows ストア アプリ用 .NET の場合、これは `true`を返します。 中間言語 (IL) はこれを直接サポートしておらず、解釈は言語に残されています。
 
 - <xref:System.RuntimeFieldHandle> 構造体と <xref:System.RuntimeMethodHandle> 構造体のパブリック メンバーはサポートされません。 これらの型は、LINQ、式ツリー、および静的な配列の初期化でのみサポートされます。
 
@@ -105,7 +105,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 - [HttpClient](#HttpClient)
 
-- [相互運用](#Interop)
+- [Interop](#Interop)
 
 - [サポートされていない API](#APIs)
 
@@ -278,7 +278,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
 - 代理人
 
-- 文字列 (Unicode、Ansi、および HSTRING)
+- 文字列 (Unicode、ANSI、および HSTRING)
 
 - 構造体 (`byref` と `byval`)
 

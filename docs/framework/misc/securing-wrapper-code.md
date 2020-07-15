@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281447"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309379"
 ---
 # <a name="securing-wrapper-code"></a>ラッパー コードの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "86281447"
  このようなセキュリティホールを防ぐために、共通言語ランタイムは、 **LinkDemand**によって保護されたメソッド、コンストラクター、プロパティ、またはイベントに対する間接呼び出しに対する完全なスタックウォーク要求に対して、チェックを拡張します。 この保護により若干のパフォーマンス コストが発生し、セキュリティ チェックのセマンティクスが変更されます。より高速な単一レベルのチェックに合格していた場合にも完全なスタック ウォーク要求が失敗する可能性があります。  
   
 ## <a name="assembly-loading-wrappers"></a>アセンブリ読み込みラッパー  
- マネージド コードの読み込みに使用されるいくつかのメソッド (<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> など) は、呼び出し元の証拠に基づいてアセンブリを読み込みます。 これらのメソッドのいずれかをラップする場合、セキュリティ システムがアセンブリを読み込むとき、ラッパーに対する呼び出し元のアクセス許可ではなく、ご使用のコードのアクセス許可を使用できることがあります。 信頼性の低いコードに対して、ラッパーへの呼び出し元のアクセス許可より高いアクセス許可が付与されているコードの読み込みを許可しないでください。  
+ マネージド コードの読み込みに使用されるいくつかのメソッド (<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> など) は、呼び出し元の証拠に基づいてアセンブリを読み込みます。 これらのメソッドのいずれかをラップする場合、セキュリティ システムがアセンブリを読み込むとき、ラッパーに対する呼び出し元のアクセス許可ではなく、ご使用のコードのアクセス許可を使用できることがあります。 信頼度の低いコードが、呼び出し元のより高いアクセス許可がラッパーに付与されているコードを読み込むことを許可しないでください。  
   
  完全な信頼のあるコード、または潜在的な呼び出し元 (インターネット アクセス許可レベルの呼び出し元など) よりも信頼が高いコードであっても、こうした方法でセキュリティが弱体化する可能性があります。 コードに、バイト配列を受け取り、それを**アセンブリ**に渡すパブリックメソッドがある場合、呼び出し元に代わってアセンブリを作成すると、セキュリティが損なわれる可能性があります。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281447"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Demand とLinkDemand  
- 宣言型セキュリティには 2 種類のセキュリティ チェックがあり、どちらも似ていますが、実行するチェックがかなり異なります。 選択を誤るとセキュリティの脆弱性やパフォーマンスの低下を招くことがあるため、両方の形式について理解する必要があります。  
+ 宣言型のセキュリティでは、類似しているが異なるチェックを実行する2種類のセキュリティチェックが提供されます。 どちらのフォームも理解しておくことをお勧めします。誤って選択すると、セキュリティが脆弱になり、パフォーマンスが低下する可能性があるためです。  
   
  宣言型のセキュリティには、次のセキュリティ チェックがあります。  
   

@@ -1,16 +1,17 @@
 ---
 title: .NET Framework の ETW イベント
+description: .NET での event tracing for Windows (ETW) に関する記事のリンクを参照してください。 ETW は、高パフォーマンスで低オーバーヘッドでスケーラブルなトレースシステムです。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-ms.openlocfilehash: f2ad939f2ee840bfe697b0202675c309843aedd0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 48d0723f0f010e5102d60940f515a478725f8263
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644269"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309522"
 ---
 # <a name="etw-events-in-the-net-framework"></a>.NET Framework の ETW イベント
 Windows イベント トレーシング (ETW) は、Windows オペレーティング システムによって提供される高パフォーマンスで低オーバーヘッドかつスケーラブルなトレース システムです。 .NET Framework で提供されるプロファイリングとデバッグのサポートを補完し、さまざまなシナリオのトラブルシューティングに使用できます。  

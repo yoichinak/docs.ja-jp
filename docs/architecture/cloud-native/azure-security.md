@@ -2,12 +2,12 @@
 title: クラウドネイティブアプリ向けの Azure セキュリティ
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブアプリ向けの Azure セキュリティ
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614254"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374495"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>クラウドネイティブアプリ向けの Azure セキュリティ
 
@@ -66,7 +66,7 @@ Azure 自体は、 [Microsoft 社内のハッカーチーム](https://azure.micr
 
 .NET Framework は、既に非常に安全なフレームワークです。 これにより、配列の終端のウォークなど、アンマネージコードの落とし穴が回避されます。 作業は、検出されたセキュリティホールを修正するために積極的に実行されます。 [バグバウンティプログラム](https://www.microsoft.com/msrc/bounty)もあります。これは、調査担当者がフレームワークの問題を発見し、それらを活用する代わりに報告するために利用します。
 
-.NET コードをより安全にするには、さまざまな方法があります。 [.Net 用のセキュリティで保護](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines)されたコーディングのガイドラインなどのガイドラインに従うことは、コードが最初からセキュリティで保護されていることを確認するための合理的な手順です。 [Owasp の上位 10](https://owasp.org/www-project-top-ten/)は、セキュリティで保護されたコードを構築するための非常に有益なガイドです。
+.NET コードをより安全にするには、さまざまな方法があります。 [.Net 用のセキュリティで保護](../../standard/security/secure-coding-guidelines.md)されたコーディングのガイドラインなどのガイドラインに従うことは、コードが最初からセキュリティで保護されていることを確認するための合理的な手順です。 [Owasp の上位 10](https://owasp.org/www-project-top-ten/)は、セキュリティで保護されたコードを構築するための非常に有益なガイドです。
 
 ビルドプロセスでは、運用環境に移行する前に、ソースコードの問題を検出するためにスキャンツールを配置することをお勧めします。 ほとんどのプロジェクトには、他のパッケージに依存関係があります。 古くなったパッケージをスキャンできるツールは、夜間ビルドで問題をキャッチします。 Docker イメージを構築する場合でも、基本イメージに既知の脆弱性がないことを確認して確認すると便利です。 もう1つの注意点は、資格情報が誤ってチェックインされていないことです。
 

@@ -1,21 +1,22 @@
 ---
 title: Exception Thrown_V1 ETW イベント
+description: ExceptionThrown_V1 ETW イベントに関する詳細情報を表示します。 スローされた例外に対して、フィールド名、データ型、説明などのイベントデータが与えられます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-ms.openlocfilehash: 80faf6e607755ee79c7ec17f2d7d3d5bdce822b7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f800a43d0ed2a82bc51a5e3a028b5fa1870df3fb
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716059"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309457"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Exception Thrown_V1 ETW イベント
 このイベントは、スローされる例外に関する情報をキャプチャします。  
   
- イベントが発生するキーワードとイベントのレベルを次の表に示します (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
+ イベントが発生するキーワードとイベントのレベルを次の表に示します  (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
@@ -29,7 +30,7 @@ ms.locfileid: "75716059"
   
  次の表にイベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |例外の種類|win:UnicodeString|例外の種類 (`System.NullReferenceException` など)。|  
 |例外メッセージ|win:UnicodeString|実際の例外メッセージ。|  
