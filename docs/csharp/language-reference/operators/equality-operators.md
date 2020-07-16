@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 011ef8b570a0bbbc38ec71df4286c3b08c3109da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110920"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174784"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -43,7 +43,7 @@ ms.locfileid: "80110920"
 
 既定ではユーザー定義 [struct](../builtin-types/struct.md) 型は `==` 演算子をサポートしていません。 `==` 演算子をサポートするには、ユーザー定義 struct でそれを[オーバーロード](operator-overloading.md)する必要があります。
 
-C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.md)によってサポートされています。 詳細については、「[C# のタプル型](../../tuples.md)」の記事の「[等値とタプル](../../tuples.md#equality-and-tuples)」のセクションを参照してください。
+C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../builtin-types/value-tuples.md)によってサポートされています。 詳細については、[タプル型](../builtin-types/value-tuples.md)に関する記事の[タプルの等価性](../builtin-types/value-tuples.md#tuple-equality)に関するセクションを参照してください。
 
 ### <a name="reference-types-equality"></a>参照型の等価性
 

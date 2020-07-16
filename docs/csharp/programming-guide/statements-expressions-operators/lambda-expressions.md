@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761838"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174154"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -141,7 +141,7 @@ public partial class Form1 : Form
 
 ## <a name="lambda-expressions-and-tuples"></a>ラムダ式とタプル
 
-C# 7.0 以降、C# 言語には、[タプル](../../tuples.md)のサポートが組み込まれています。 タプルは、ラムダ式への引数として指定できるほか、ラムダ式で返すこともできます。 場合によっては、C# コンパイラは、型の推定を使用して、タプル コンポーネントの型を判定することもあります。
+C# 7.0 以降、C# 言語には、[タプル](../../language-reference/builtin-types/value-tuples.md)のサポートが組み込まれています。 タプルは、ラムダ式への引数として指定できるほか、ラムダ式で返すこともできます。 場合によっては、C# コンパイラは、型の推定を使用して、タプル コンポーネントの型を判定することもあります。
 
 タプルを定義するには、そのコンポーネントのコンマ区切りリストをかっこで囲みます。 次の例では、3 つのコンポーネントを持つタプルを使用して、ラムダ式に連続した数値を渡します。このラムダ式により、各値が 2 倍になり、乗算の結果を格納する 3 つのコンポーネントを持つタプルが返されます。
 
@@ -151,7 +151,7 @@ C# 7.0 以降、C# 言語には、[タプル](../../tuples.md)のサポートが
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-C# のタプルの詳細については、「[C# のタプル型](../../tuples.md)」を参照してください。
+C# のタプルの詳細については、[タプル型](../../language-reference/builtin-types/value-tuples.md)に関するページを参照してください。
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>標準クエリ演算子を使用したラムダ
 

@@ -3,13 +3,16 @@ title: 従来の Web アプリケーションかシングル ページ アプリ
 description: Web アプリケーションを構築しているときに、従来の Web アプリかシングル ページ アプリケーション (SPA) を選択する方法について説明します。
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662707"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174368"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
 
@@ -38,13 +41,13 @@ ms.locfileid: "84662707"
 
 SPA の使用によって可能になるユーザー エクスペリエンスの向上と、これらの考慮事項を比較検討する必要があります。
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 ASP.NET Core 3.0 には、Blazor と呼ばれる、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 サーバー側 Blazor を使用すると、開発者はサーバー上で C# と Razor を使用して UI を構築し、永続的な SignalR 接続を使用して、リアルタイムで UI をブラウザーと対話的に接続させることができます。
 
 Blazor WebAssembly では、Blazor アプリに対して別のオプションが導入されます。WebAssembly を使用して、それらをブラウザーで実行できます。 WebAssembly で実行される実際の .NET であるため、アプリケーションのサーバー側の部分からコードとライブラリを再利用できます。
 
-Blazor には、完全にサーバー側でレンダリングされる Web アプリケーションまたは SPA をビルドするかどうかを評価する際に検討する、新しい 3 つ目のオプションが用意されています。 Blazor を使用して、SPA に似た豊富なクライアント側の動作を構築できます。このために多くの JavaScript 開発を行う必要はありません。 Blazor アプリケーションでは、API を呼び出してデータを要求したり、サーバー側の操作を実行したりできます。
+Blazor には、完全にサーバー側でレンダリングされる Web アプリケーションまたは SPA をビルドするかどうかを評価する場合に検討する、新しい 3 つ目のオプションが用意されています。 Blazor を使用して、SPA に似た豊富なクライアント側の動作を構築できます。このために多くの JavaScript 開発を行う必要はありません。 Blazor アプリケーションでは、API を呼び出してデータを要求したり、サーバー側の操作を実行したりできます。
 
 次の場合は、Blazor を使用して Web アプリケーションをビルドすることを検討してください。
 
@@ -52,7 +55,7 @@ Blazor には、完全にサーバー側でレンダリングされる Web ア�
 
 - チームは JavaScript や TypeScript の開発よりも .NET の開発に慣れている
 
-Blazor の詳細については、[Blazor の概要](https://blazor.net/docs/get-started.html)に関するページをご覧ください。
+Blazor の詳細については、[Blazor の概要](https://blazor.net/docs/get-started.html)に関するページを参照してください。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>従来の Web アプリケーションを選択する場合
 
@@ -111,7 +114,7 @@ JavaScript ベースの SPA と同様に、Blazor アプリケーションでは
 
 ## <a name="decision-table"></a>意思決定テーブル
 
-次の意思決定テーブルは、従来の Web アプリケーション、SPA、または Blazor アプリのどれかを選択する際に考慮する基本的な要素の一部をまとめたものです。
+次の意思決定テーブルは、従来の Web アプリケーション、SPA、または Blazor アプリのどれかを選択する場合に考慮する基本的な要素の一部をまとめたものです。
 
 | **要素**                                           | **従来の Web アプリケーション** | **シングル ページ アプリケーション** | **Blazor アプリ**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |

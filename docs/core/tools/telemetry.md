@@ -3,12 +3,12 @@ title: .NET Core SDK 製品利用統計情報
 description: 利用情報を収集して分析する .NET Core SDK の製品利用統計情報機能や収集されるデータ、およびこの機能を無効にする方法について説明します。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507283"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226570"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -52,7 +52,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 製品利用統計情報機能では、ユーザー名やメール アドレスなどの個人データは収集されません。 コードはスキャンされず、名前、リポジトリ、作成者などのプロジェクト レベルのデータは抽出されません。 データは、[Azure Monitor](https://azure.microsoft.com/services/monitor/) テクノロジを使用して Microsoft サーバーに安全に送信され、制限されたアクセスの下で保持され、厳格なセキュリティ コントロールの下で、安全な [Azure Storage](https://azure.microsoft.com/services/storage/) システムから公開されます。
 
-ユーザーのプライバシー保護は Microsoft にとって重要です。 製品利用統計情報で機密データが収集されている、またはデータが安全でないか不適切な方法で処理されていることが疑われる場合、[dotnet/cli](https://github.com/dotnet/cli/issues) リポジトリで問題を提出するか、[dotnet@microsoft.com](mailto:dotnet@microsoft.com) に電子メールを送信し、調査を依頼してください。
+ユーザーのプライバシー保護は Microsoft にとって重要です。 製品利用統計情報で機密データが収集されている、またはデータが安全でないか不適切な方法で処理されていることが疑われる場合、[dotnet/sdk](https://github.com/dotnet/sdk/issues) リポジトリで問題を提出するか、[dotnet@microsoft.com](mailto:dotnet@microsoft.com) に電子メールを送信し、調査を依頼してください。
 
 製品利用統計情報の機能では次のデータが収集されます。
 
@@ -139,4 +139,4 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ## <a name="see-also"></a>関連項目
 
 - [.NET Core CLI 製品利用統計情報 - 2019 年第 2 四半期データ](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
-- [製品利用統計情報の参照のソース (dotnet/cli リポジトリ)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [製品利用統計情報の参照のソース (dotnet/sdk リポジトリ)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

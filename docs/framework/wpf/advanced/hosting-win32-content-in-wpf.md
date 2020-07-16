@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: b3113d9f3146e1590363dc9db6f751a429dda74b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c0c62f1999feaf591c512314515f01e83fa12591
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747014"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052092"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 
@@ -209,8 +209,9 @@ virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
 {
     ::MSG m = ConvertMessage(msg);
 }
+```
 
-Both MSGs have the same data, but sometimes it is easier to work with the unmanaged definition, so in this sample you can define the obvious conversion routine:
+いずれの MSG にも同じデータがありますが、アンマネージドの定義を使用した方が簡単なときがあります。そのため、このサンプルでは、見てすぐわかる変換ルーチンを定義できます。
 
 ```cpp
 ::MSG ConvertMessage(System::Windows::Interop::MSG% msg) {

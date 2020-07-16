@@ -3,13 +3,16 @@ title: 最新の Web アプリケーションの特徴
 description: ASP.NET Core と Azure を使用した最新の Web アプリケーションの設計 | 最新の Web アプリケーションの特徴
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451565"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174797"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>最新の Web アプリケーションの特徴
 
@@ -67,13 +70,13 @@ ASP.NET Core アプリケーションは、単純なテキスト エディター
 
 ASP.NET Core だけでなく、従来の ASP.NET 4.x も、Web アプリケーションの構築に適した堅牢で信頼性の高いプラットフォームです。 ASP.NET では MVC および Web API 開発モデルと Web Forms がサポートされており、高度なページ ベースのアプリケーション開発に適しています。また、豊富なサード パーティのコンポーネント エコシステムを備えています。 Microsoft Azure は ASP.NET 4.x アプリケーションを長年にわたってサポートしているので、多くの開発者はこのプラットフォームに精通しています。
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 ASP.NET Core 3.0 以降には Blazor が含まれています。 それによって、Razor、C#、および ASP.NET Core を使用して、機能豊富な対話型 Web クライアント アプリケーションをビルドするための新しいメカニズムが提供されます。 それは、最新の Web アプリケーションを開発するときに考慮する別のソリューションです。 検討する Blazor のバージョンには、サーバー側とクライアント側の 2 つがあります。
 
 サーバー側の Blazor は、2019 年に ASP.NET Core 3.0 と共にリリースされました。 名前が示すように、それはサーバー上で実行され、クライアント ドキュメントへの変更をネットワーク経由でブラウザーにレンダリングします。 サーバー側の Blazor では、クライアント側の JavaScript を必要とせず、クライアント ページの操作ごとに個別のページ読み込みを必要としない、豊富なクライアント エクスペリエンスが提供されます。 読み込まれたページの変更は、サーバーによって要求および処理された後、SignalR を使用してクライアントに返されます。
 
-クライアント側の Blazor は 2020 年にリリースされる予定であり、サーバー上で変更をレンダリングする必要がなくなります。 代わりに、クライアント内で WebAssembly を活用して .NET コードが実行されます。 クライアントでは、必要に応じてサーバーに API 呼び出しを行ってデータを要求できますが、すべてのクライアント側の動作は WebAssembly 経由でクライアント内で実行されます。これはすべての主要ブラウザーで既にサポートされている Javascript ライブラリです。
+クライアント側の Blazor は 2020 年にリリースされる予定であり、サーバー上で変更をレンダリングする必要がなくなります。 代わりに、クライアント内で WebAssembly を活用して .NET コードが実行されます。 クライアントでは、必要に応じてサーバーに API 呼び出しを行ってデータを要求できますが、すべてのクライアント側の動作は WebAssembly を経由してクライアント内で実行されます。これはすべての主要ブラウザーで既にサポートされている Javascript ライブラリです。
 
 > ### <a name="references--modern-web-applications"></a>参照 – 最新の Web アプリケーション
 >
@@ -81,7 +84,7 @@ ASP.NET Core 3.0 以降には Blazor が含まれています。 それによっ
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **ASP.NET Core でのテスト**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazor - 作業開始**  
+> - **Blazor - はじめに**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]

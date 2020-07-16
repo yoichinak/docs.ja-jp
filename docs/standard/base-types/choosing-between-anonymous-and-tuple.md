@@ -1,13 +1,16 @@
 ---
 title: 匿名型またはタプル型の選択
 description: 匿名型またはタプル型を選択する適切なタイミングについて学習します。
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 24ab770d709b9f3968f4c7fe4b01eb0729dbd751
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853985"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174219"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>匿名型またはタプル型の選択
 
@@ -87,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-C# では、<xref:System.ValueTuple> 型のタプルの言語サポートと、次のセマンティクスが提供されます。
-
-- [タプルの割り当て](../../csharp/tuples.md#assignment-and-tuples)
-- [タプルの分解](../../csharp/deconstruct.md) (タプルに限定されるものではない)
-- [タプルの等値性チェック](../../csharp/tuples.md#equality-and-tuples)
-- [タプル プロジェクション初期化子](../../csharp/tuples.md#tuple-projection-initializers)
+タプルの詳細については、「[タプル型 (C# リファレンス)](../../csharp/language-reference/builtin-types/value-tuples.md)」または「[タプル (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)」を参照してください。
 
 上記の例はすべて機能的には同等ですが、その使いやすさと基盤となる実装にはわずかな違いがあります。
 
@@ -102,7 +100,7 @@ C# では、<xref:System.ValueTuple> 型のタプルの言語サポートと、�
 
 ### <a name="key-differences"></a>主な相違点
 
-| 名前                     | アクセス修飾子 | 種類     | カスタム プロパティ名 | 分解のサポート | 式ツリーのサポート |
+| 名前                     | アクセス修飾子 | 種類     | カスタム メンバー名 | 分解のサポート | 式ツリーのサポート |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | 匿名型          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -124,5 +122,6 @@ C# では、<xref:System.ValueTuple> 型のタプルの言語サポートと、�
 
 - [匿名型](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [式ツリー](../../csharp/expression-trees.md)
-- [タプル型](../../csharp/tuples.md)
+- [タプル型 (C# リファレンス)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [タプル (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [型のデザインのガイドライン](../design-guidelines/type.md)

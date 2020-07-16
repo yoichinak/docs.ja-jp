@@ -2,17 +2,18 @@
 title: オブジェクト指向プログラミング (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241891"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226635"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 
-C# は、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。
+C# は、抽象化、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。
 
+- "*抽象化*" とは、型コンシューマーから不要な詳細を隠すことです。
 - "*カプセル化*" とは、関連するプロパティ、メソッド、およびその他のメンバーのグループが 1 つの単位またはオブジェクトとして扱われることを意味します。
 - "*継承*" は、既存のクラスに基づいて新しいクラスを作成する機能です。
 - "*ポリモーフィズム*" とは、同じプロパティまたはメソッドを異なる方法で実装している複数のクラスを、交換して使用できることです。
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-C# には "*構造体*" と呼ばれている型もありますが、継承とポリモーフィズムに対応する必要がないときに便利です。
+C# には "*構造体*" と呼ばれている型もありますが、継承とポリモーフィズムに対応する必要がないときに便利です。 詳細については、「[クラスまたは構造体の選択](../../../standard/design-guidelines/choosing-between-class-and-struct.md)」を参照してください。
 
 構造体を定義するコード例を次に示します。
 

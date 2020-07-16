@@ -4,12 +4,12 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805857"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174810"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out パラメーター修飾子 (C# リファレンス)
 
@@ -56,7 +56,7 @@ class CS0663_Example
 
 ## <a name="declaring-out-parameters"></a>`out` パラメーターの宣言
 
-`out` 引数を含むメソッドの宣言は、複数の値を返すための従来の回避策です。 C#7.0 以降、同様のシナリオでは[タプル](../../tuples.md)を検討してください。 次の例では `out` を使用して、1 つのメソッド呼び出しで 3 つの変数を返します。 3 番目の引数が null に割り当てられます。 これにより、必要に応じてメソッドが値を返すことができます。  
+`out` 引数を含むメソッドの宣言は、複数の値を返すための従来の回避策です。 C# 7.0 以降、同様のシナリオでは[値タプル](../builtin-types/value-tuples.md)を検討してください。 次の例では `out` を使用して、1 つのメソッド呼び出しで 3 つの変数を返します。 3 番目の引数が null に割り当てられます。 これにより、必要に応じてメソッドが値を返すことができます。  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 

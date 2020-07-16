@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396283"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100939"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -17,6 +17,25 @@ ms.locfileid: "83396283"
 このチュートリアルでは、Roslyn API を使用して**アナライザー**とそれに付随する**コード修正**の作成について説明します。 アナライザーは、ソース コードの分析を実行し、問題をユーザーに報告する方法の 1 つです。 必要に応じて、アナライザーは、ユーザーのソース コードに対する変更を表すコード修正を提供することもできます。 このチュートリアルでは、`const` 修飾子を使用して宣言できますが、実際は宣言されていないローカル変数宣言を検出するアナライザーを作成します。 付随するコード修正は、それらの宣言を修正して `const` 修飾子を追加します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
+
+> [!NOTE]
+> 現行の Visual Studio **コード修正付きアナライザー (.NET Standard)** テンプレートには既知のバグが含まれていますが、Visual Studio 2019 バージョン 16.7 で修正されます。 テンプレートのプロジェクトは、次の変更が行われない限り、コンパイルされません。
+>
+> 1. **[ツール]** 、 **[オプション]** 、 **[NuGet パッケージ マネージャー]** 、 **[パッケージ ソース]** の順に選択します。
+>    - プラス記号ボタンを選択すると、新しいソースが追加されます。
+>    - **[ソース]** を `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` に設定し、 **[更新]** を選択します。
+> 1. **[ソリューション エクスプローラー]** で **[MakeConst.Vsix]** プロジェクトを右クリックし、 **[プロジェクト ファイルの編集]** を選択します。
+>    - `<AssemblyName>` ノードを更新し、`.Visx` サフィックスを追加します。
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - 41 行目の `<ProjectReference>` ノードを更新し、`TargetFramework` の値を変更します。
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. *[MakeConst.Test]* プロジェクトで *MakeConstUnitTests.cs* ファイルを更新します。
+>    - 9 行目を次のように変更します。名前空間の変更に注目してください。
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - 24 行目を次のメソッドに変更します。
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - 62 行目を次のメソッドに変更します。
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ Console.WriteLine(x);
 - **[Visual C#] > [Extensibility]** で、 **[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
 - プロジェクトに「**MakeConst**」という名前を付けて、[OK] をクリックします。
 
-コード修正テンプレート付きアナライザー テンプレートを使用すると、アナライザーとコード修正を含むプロジェクト、単体テスト プロジェクト、VSIX プロジェクトという 3 つのプロジェクトが作成されます。 既定のスタートアップ プロジェクトは VSIX プロジェクトです。 **F5** キーを押して、VSIX プロジェクトを開始します。 これにより、新しいアナライザーが読み込まれた Visual Studio の 2 つ目のインスタンスが開始されます。
+コード修正テンプレート付きアナライザー テンプレートを使用すると、アナライザーとコード修正を含むプロジェクト、単体テスト プロジェクト、VSIX プロジェクトという 3 つのプロジェクトが作成されます。 既定のスタートアップ プロジェクトは VSIX プロジェクトです。 <kbd>F5</kbd> キーを押して、VSIX プロジェクトを開始します。 これにより、新しいアナライザーが読み込まれた Visual Studio の 2 つ目のインスタンスが開始されます。
 
 > [!TIP]
 > アナライザーを実行するときは、Visual Studio の 2 つ目のコピーを開始します。 この 2 つ目のコピーは、別のレジストリ ハイブを使用して設定を保存します。 これにより、Visual Studio の 2 つのコピーのビジュアル設定を区別することができます。 Visual Studio の実験的な実行のために、別のテーマを選択することができます。 また、設定のローミングや、Visual Studio アカウントへのログインには、Visual Studio の実験的な実行が使用されません。 そのため、設定を分けておくことができます。
@@ -170,7 +189,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-**F5** キーを押してアナライザーを実行して、進行状況を確認できます。 以前に作成したコンソール アプリケーションを読み込み、次のテスト コードを追加することができます。
+<kbd>F5</kbd> キーを押してアナライザーを実行して、進行状況を確認できます。 以前に作成したコンソール アプリケーションを読み込み、次のテスト コードを追加することができます。
 
 ```csharp
 int x = 0;
@@ -251,7 +270,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-コード修正を試す準備が整いました。  F5 キーを押して、Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成し、定数値を使用して初期化されたローカル変数宣言をいくつか Main メソッドに追加します。 次のように警告として報告されることがわかります。
+コード修正を試す準備が整いました。  <kbd>F5</kbd> キーを押して、Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成し、定数値を使用して初期化されたローカル変数宣言をいくつか Main メソッドに追加します。 次のように警告として報告されることがわかります。
 
 ![const 警告を生成できる](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。  **[すべて実行]** リンクをクリックします。
+これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。 次に、 **[すべて実行]** リンクを選択します。
 
 ## <a name="create-tests-for-valid-declarations"></a>有効な宣言のテストを作成する
 
@@ -503,12 +522,12 @@ var' キーワードを正しい型名に置き換えるには、コード修正
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-テストを実行します。テストはすべて合格するはずです。 完成したアナライザーを実行してみてください。 Ctrl + F5 キーを押して Roslyn Preview 拡張機能が読み込まれた Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。
+テストを実行します。テストはすべて合格するはずです。 完成したアナライザーを実行してみてください。 <kbd>Ctrl + F5</kbd> キーを押して Roslyn Preview 拡張機能が読み込まれた Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。
 
 - 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成し、`int x = "abc";` を Main メソッドに追加します。 最初のバグ修正のおかげで、このローカル変数宣言について警告は報告されません (ただし、想定どおりコンパイラ エラーが発生します)。
 - 次に、Main メソッドに `object s = "abc";` を追加します。 2 つ目のバグ修正のおかげで、警告は報告されません。
 - 最後に、`var` キーワードを使用する別のローカル変数を追加します。 警告が報告され、左側の下部に推奨が表示されます。
-- 波線にエディターのカレットを移動し、Ctrl + . キーを押します。 推奨されたコード修正が表示されます。 コード修正を選択して、var' キーワードが正しく処理されていることを確認します。
+- 波線にエディターのカレットを移動し、<kbd>Ctrl +</kbd> キーを押します。 推奨されたコード修正が表示されます。 コード修正を選択して、var' キーワードが正しく処理されていることを確認します。
 
 最後に、次のコードを追加します。
 

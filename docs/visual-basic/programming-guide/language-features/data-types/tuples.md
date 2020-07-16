@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: e0310f31d7becb1f79bb023a277bd565421b44fb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350495"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226661"
 ---
 # <a name="tuples-visual-basic"></a>タプル (Visual Basic)
 

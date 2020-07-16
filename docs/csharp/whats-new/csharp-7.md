@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392250"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174745"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -88,7 +88,7 @@ C# には、設計の意図を説明するために使用される、クラス�
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-タプルの詳細については、[タプルに関する記事](../tuples.md)を参照してください。
+詳細については、[タプル型](../language-reference/builtin-types/value-tuples.md)に関するページを参照してください。
 
 ## <a name="discards"></a>破棄
 

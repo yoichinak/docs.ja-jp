@@ -8,17 +8,17 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396741"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051481"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>チュートリアル: Visual Basic での COM オブジェクトの作成
 新しいアプリケーションまたはコンポーネントを作成する場合は、.NET Framework アセンブリを作成することをお勧めします。 ただし、Visual Basic を使用すると、COM への .NET Framework コンポーネントの公開も簡単になります。 これにより、COM コンポーネントを必要とする以前のアプリケーション スイートに対して新しいコンポーネントが提供できるようになります。 このチュートリアルでは、Visual Basic を使用して、COM クラス テンプレートを使用するかどうかにかかわらず、.NET Framework オブジェクトを COM オブジェクトとして公開する方法について説明します。  
   
- COM オブジェクトを公開する最も簡単な方法は、COM クラス テンプレートを使用することです。 COM クラス テンプレートは新しいクラスを作成し、クラスと相互運用性レイヤーを COM オブジェクトとして生成してオペレーティング システムに登録するようにプロジェクトを構成します。  
+ COM オブジェクトを公開する最も簡単な方法は、COM クラス テンプレートを使用することです。 このテンプレートでは、新しいクラスが作成され、クラスと相互運用性レイヤーを COM オブジェクトとして生成してオペレーティング システムに登録するようにプロジェクトが構成されます。  
   
 > [!NOTE]
 > Visual Basic で作成されたクラスをアンマネージド コードで使用できるように COM オブジェクトとして公開することもできますが、これは実際の COM オブジェクトではなく、Visual Basic では使用できません。 詳細については、「[.NET Framework アプリケーションにおける COM 相互運用性](com-interoperability-in-net-framework-applications.md)」を参照してください。  

@@ -4,12 +4,12 @@ description: すべての C# プログラムの中核となる型 (数値、文�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202208"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174180"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -74,7 +74,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
   
 場合によっては、メソッドの境界を越えて格納したり受け渡したりする予定のない単純な一連の関連値に名前付きの型を作成するのは便利ではないこともあります。 このような場合は、*匿名型*を作成できます。 詳細については、「[匿名型](programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。
 
-１ つのメソッドから複数の値を返したいというのはよくあることです。 そのような場合は、１ つのメソッド呼び出しで複数の値を返す*タプル型*を作成できます。 詳細については、「[タプル](tuples.md)」を参照してください
+１ つのメソッドから複数の値を返したいというのはよくあることです。 そのような場合は、１ つのメソッド呼び出しで複数の値を返す*タプル型*を作成できます。 詳細については、[タプル型](language-reference/builtin-types/value-tuples.md)に関するページを参照してください。
 
 ## <a name="the-common-type-system"></a>共通型システム
 

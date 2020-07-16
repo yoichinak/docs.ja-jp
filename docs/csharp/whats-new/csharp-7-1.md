@@ -2,12 +2,12 @@
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
-ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe6e49eb01e24a27bc7970900c05150378ab194a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398353"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174771"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -106,7 +106,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-この機能の詳細については、[タプル](../tuples.md)に関する記事を参照してください。
+この機能の詳細については、[タプルの型](../language-reference/builtin-types/value-tuples.md)に関する記事を参照してください。
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>ジェネリック型パラメーターのパターン マッチ
 

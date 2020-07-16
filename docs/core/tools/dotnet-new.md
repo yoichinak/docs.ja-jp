@@ -1,13 +1,16 @@
 ---
 title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 04/10/2020
-ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283976"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173121"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -164,7 +167,7 @@ dotnet new -h|--help
 
 プロジェクト テンプレートはそれぞれ、追加のオプションが与えられている場合があります。 コア テンプレートの場合、次のオプションが追加されています。
 
-### <a name="console"></a>コンソール
+### <a name="console"></a>console
 
 - **`-f|--framework <FRAMEWORK>`**
 
