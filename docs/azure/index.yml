@@ -8,12 +8,12 @@ metadata:
   ms.topic: hub-page
   ms.prod: azure-dotnet
   ms.date: 03/04/2020
-  ms.openlocfilehash: b31d52e3b061dc29a83f3f3ec3e702974a10e854
-  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.openlocfilehash: c92263407ab15bd78ec323bb417d2d9f37dd77bc
+  ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/09/2020
-  ms.locfileid: "86174331"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86401955"
 highlightedContent:
   items:
   - itemType: overview
@@ -87,9 +87,15 @@ conceptualContent:
       url: /visualstudio/containers/hosting-web-apps-in-docker?view=vs-2019
   - title: モバイル アプリの作成
     links:
+    - itemType: learn
+      text: Xamarin アプリで Azure から REST サービスを使用する
+      url: /learn/modules/consume-rest-services/
     - itemType: quickstart
       text: .NET SDK と Azure Cosmos DB の MongoDB 用 API を使用して Xamarin.Forms アプリを作成する
       url: /azure/cosmos-db/create-mongodb-xamarin
+    - itemType: quickstart
+      text: Azure Blob Storage クライアント ライブラリと Xamarin.Forms
+      url: /azure/storage/blobs/storage-quickstart-blobs-xamarin
     - itemType: tutorial
       text: ASP.NET Cor と Azure Notification Hubs を使用して Xamarin.Forms アプリにプッシュ通知を送信する
       url: /azure/notification-hubs/notification-hubs-backend-service-xamarin-forms
@@ -261,4 +267,4 @@ additionalContent:
         url: https://github.com/AzureAD/microsoft-identity-web
       - text: .NET プラットフォーム
         url: https://github.com/dotnet/
-  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](/contribute/dotnet/dotnet-contribute)をお読みください。
+  footer: Contribute to .NET docs. Read our [contributor guide](/contribute/dotnet/dotnet-contribute).
