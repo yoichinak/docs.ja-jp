@@ -15,60 +15,58 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6f5eec282aec6a2757664023ce8031410e316f10
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501847"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 関数
-作成、 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)オブジェクトが指定されたバージョン情報に基づきます。  
+指定されたバージョン情報に基づいて[ICorDebug](../debugging/icordebug-interface.md)オブジェクトを作成します。  
   
- この関数は、.NET Framework 4 で廃止されています。 代わりに、共通言語ランタイム (CLR) 2.0 のインターフェイスを取得、使用、 [iclrruntimeinfo::getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)メソッド CLSID_CLRDebuggingLegacy クラス識別子と IID_ICorDebug インターフェイス識別子を指定します。 CLR 4 のインターフェイスを取得します。 または、後で呼び出し、 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)関数とクラス識別子 CLSID_CLRDebugging と IID_ICLRDebugging インターフェイス識別子を指定します。  
+ この関数は、.NET Framework 4 では廃止されています。 代わりに、共通言語ランタイム (CLR) 2.0 のインターフェイスを取得するには、 [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md)メソッドを使用して、クラス識別子 CLSID_CLRDebuggingLegacy とインターフェイス識別子 IID_ICorDebug を指定します。 CLR 4 以降のインターフェイスを取得するには、 [Clrcreateinstance](clrcreateinstance-function.md)関数を呼び出し、クラス識別子 CLSID_CLRDebugging とインターフェイス識別子 IID_ICLRDebugging を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
-    [in]  int      iDebuggerVersion,   
-    [in]  LPCWSTR  szDebuggeeVersion,   
+    [in]  int      iDebuggerVersion,
+    [in]  LPCWSTR  szDebuggeeVersion,
     [out] IUnknown **ppCordb  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `iDebuggerVersion`  
- [in]バージョンの`ICorDebug`デバッガーによって必要なことができます。 参照してください、 [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)有効な値の列挙体。  
+ から`ICorDebug`デバッガーによって想定されているのバージョン。 有効な値については、 [Cordebuginterfaceversion](../debugging/cordebuginterfaceversion-enumeration.md)列挙体を参照してください。  
   
  `szDebuggeeVersion`  
- [in]デバッグするには、アプリケーションまたはプロセスに関連付けられている、共通言語ランタイム バージョン。 参照してください、 [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)または[GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)メソッドについては、この値を取得する方法。  
+ からデバッグ対象のアプリケーションまたはプロセスに関連付けられている共通言語ランタイムのバージョン。 この値を取得する方法については、「 [Getversionfromprocess](getversionfromprocess-function.md) 」または「 [Getversionfromprocess](getrequestedruntimeversion-function.md)メソッド」を参照してください。  
   
  `ppCordb`  
- [out]ポインターを受け取る場所、`ICorDebug`オブジェクト。  
+ 入出力オブジェクトへのポインターを受け取る位置 `ICorDebug` 。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値だけでなく、WinError.h ファイルで定義されている標準の COM エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h ファイルで定義されている標準 COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`szDebuggeeVersion` または`ppCordb`が null の場合、または、バージョン文字列が正しくありません。|  
+|E_INVALIDARG|`szDebuggeeVersion`または `ppCordb` が null であるか、またはバージョン文字列が正しくありません。|  
   
-## <a name="remarks"></a>Remarks  
- `szDebuggeeVersion` MSCorDbi.dll の対応するバージョンにパラメーターがマップされます。  
+## <a name="remarks"></a>解説  
+ パラメーターは、 `szDebuggeeVersion` 対応するバージョンの mscordbi.dll にマップされます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

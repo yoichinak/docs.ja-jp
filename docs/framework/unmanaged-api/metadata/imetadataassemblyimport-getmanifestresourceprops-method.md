@@ -15,63 +15,61 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e47b1807e51427487d6af2f96ff5af437c4653eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760948"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009029"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps メソッド
-指定したメタデータ シグネチャを持つマニフェスト リソースのプロパティのセットを取得します。  
+指定されたメタデータシグネチャを持つマニフェストリソースのプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
-    [in]  mdManifestResource   mdmr,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] mdToken              *ptkImplementation,   
-    [out] DWORD                *pdwOffset,   
+    [in]  mdManifestResource   mdmr,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] mdToken              *ptkImplementation,
+    [out] DWORD                *pdwOffset,
     [out] DWORD                *pdwResourceFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `mdmr`  
- [in]`mdManifestResource`プロパティを取得する対象のリソースを表すトークン。  
+ から`mdManifestResource`プロパティを取得する対象のリソースを表すトークン。  
   
  `szName`  
- [out]リソースの名前。  
+ 入出力リソースの名前。  
   
  `cchName`  
- [in]ワイド文字単位のサイズの`szName`します。  
+ からのサイズ (ワイド文字数) `szName` 。  
   
  `pchName`  
- [out]実際に返されるワイド文字数へのポインター`szName`します。  
+ 入出力実際にで返されるワイド文字数へのポインター `szName` 。  
   
  `ptkImplementation`  
- [out]ポインター、`mdFile`トークンまたは`mdAssemblyRef`リソースを格納するファイルまたはアセンブリをそれぞれ表すトークン。  
+ 入出力リソースを格納し `mdFile` `mdAssemblyRef` ているファイルまたはアセンブリを表すトークンまたはトークンへのポインター。  
   
  `pdwOffset`  
- [out]リソース ファイル内の先頭までのオフセットを指定する値へのポインター。  
+ 入出力ファイル内のリソースの先頭へのオフセットを指定する値へのポインター。  
   
  `pdwResourceFlags`  
- [out]リソースに適用されるメタデータを記述するフラグをへのポインター。 フラグの値は、1 つ以上の組み合わせ[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)値。  
+ 入出力リソースに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つ以上の[Cormanifestresourceflags](cormanifestresourceflags-enumeration.md)値を組み合わせたものです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)

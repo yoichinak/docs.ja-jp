@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3626998c456e23fb922ae45a68bedb0e45a7ccba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755319"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490433"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind メソッド
-取得ポータブル実行可能 (PE) でコードの性質を識別する値ファイルで、通常、DLL または EXE ファイルの現在のメタデータ スコープで定義されています。  
+現在のメタデータスコープで定義されている、ポータブル実行可能 (PE) ファイル (通常は DLL または EXE ファイル) 内のコードの性質を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +36,13 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>パラメーター  
  `pdwPEKind`  
- [out]値へのポインター、 [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE ファイルを表す列挙体。  
+ 入出力PE ファイルを記述する[Corpekind](corpekind-enumeration.md)列挙型の値へのポインター。  
   
  `pdwMachine`  
- [out]コンピューターのアーキテクチャを識別する値へのポインター。 使用可能な値は次のセクションを参照してください。  
+ 入出力コンピューターのアーキテクチャを識別する値へのポインター。 使用可能な値については、次のセクションを参照してください。  
   
-## <a name="remarks"></a>Remarks  
- によって参照される値、`pdwMachine`パラメーターは、次のいずれかを指定できます。  
+## <a name="remarks"></a>解説  
+ パラメーターによって参照される値には、 `pdwMachine` 次のいずれかを指定できます。  
   
 |値|コンピューターのアーキテクチャ|  
 |-----------|--------------------------|  
@@ -52,17 +50,17 @@ HRESULT GetPEKind (
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [CorPEKind 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [CorPEKind 列挙型](corpekind-enumeration.md)

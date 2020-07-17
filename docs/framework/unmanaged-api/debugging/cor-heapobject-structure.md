@@ -14,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a236103b8ca1501ae4c9109c1fd9e78865ab9c9c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: efb3d913e1d8ef0c486d7e5e1d9777ae7d88bc71
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740594"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179333"
 ---
-# <a name="corheapobject-structure"></a>COR_HEAPOBJECT 構造体
+# <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT 構造体
 マネージド ヒープ上のオブジェクトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef struct _COR_HEAPOBJECT {  
-    CORDB_ADDRESS address;    
-    ULONG64 size;             
-    COR_TYPEID type;          
+    CORDB_ADDRESS address;
+    ULONG64 size;
+    COR_TYPEID type;
 } COR_HEAPOBJECT;  
 ```  
   
@@ -41,22 +39,22 @@ typedef struct _COR_HEAPOBJECT {
 |メンバー|説明|  
 |------------|-----------------|  
 |`address`|メモリ内のオブジェクトのアドレス。|  
-|`size`|(バイト単位)、オブジェクトの合計サイズ。|  
-|`type`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)オブジェクトの型を表すトークン。|  
+|`size`|オブジェクトの合計サイズ (バイト単位)。|  
+|`type`|オブジェクトの型を表す[COR_TYPEID](cor-typeid-structure.md)トークン。|  
   
-## <a name="remarks"></a>Remarks  
- `COR_HEAPOBJECT` インスタンスを列挙することによって取得できます、 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)インターフェイス オブジェクトの呼び出しによって設定される、 [icordebugprocess 5::enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)メソッド。  
+## <a name="remarks"></a>解説  
+ `COR_HEAPOBJECT`インスタンスは、メソッドを呼び出すことによって設定される[ICorDebugHeapEnum](icordebugheapenum-interface.md)インターフェイス オブジェクトを列挙することによって取得[ICorDebugProcess5::EnumerateHeap](icordebugprocess5-enumerateheap-method.md)できます。  
   
- A`COR_HEAPOBJECT`インスタンスか、または任意のオブジェクトでルートがありませんが、ガベージ コレクターによって収集されていないオブジェクトについて、マネージ ヒープ上のライブ オブジェクトに関する情報を提供します。  
+ インスタンス`COR_HEAPOBJECT`は、マネージ ヒープ上のライブ オブジェクトに関する情報、またはオブジェクトによってルートされていないが、まだガベージ コレクターによって収集されていないオブジェクトに関する情報を提供します。  
   
- パフォーマンスの向上のため、`COR_HEAPOBJECT.address`フィールドは、`CORDB_ADDRESS`値ではなく、ICorDebugValue インターフェイス デバッグ API の多くで使用される値。 指定したオブジェクトのアドレスの ICorDebugValue オブジェクトを取得するには、渡すことができます、`CORDB_ADDRESS`値を[icordebugprocess 5::getobject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)メソッド。  
+ パフォーマンスを`COR_HEAPOBJECT.address`向上させるには、このフィールドは`CORDB_ADDRESS`、デバッグ API の多くで使用される ICorDebugValue インターフェイス値ではなく値です。 特定のオブジェクト アドレスのオブジェクトを取得するには、値を`CORDB_ADDRESS` [ICorDebugProcess5::GetObject](icordebugprocess5-getobject-method.md)メソッドに渡します。  
   
- パフォーマンスの向上のため、`COR_HEAPOBJECT.type`フィールドは、`COR_TYPEID`値ではなく、ICorDebugType インターフェイス デバッグ API の多くで使用される値。 渡す ICorDebugType オブジェクトの指定した型の ID を取得することができます、`COR_TYPEID`値を[icordebugprocess 5::gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)メソッド。  
+ パフォーマンスを`COR_HEAPOBJECT.type`向上させるには、このフィールドは`COR_TYPEID`、デバッグ API の多くで使用される ICorDebugType インターフェイス値ではなく値です。 特定の型 ID のオブジェクトを取得するには、`COR_TYPEID`値を[ICorDebugProcess5::GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md)メソッドに渡します。  
   
- `COR_HEAPOBJECT`構造体には、参照カウントの COM インターフェイスが含まれています。 取得する場合、`COR_HEAPOBJECT`を呼び出して列挙子からのインスタンス、 [icordebugheapenum::next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)メソッドでは、後で参照を解放する必要があります。  
+ 構造体`COR_HEAPOBJECT`には、参照カウントされる COM インターフェイスが含まれています。 列挙子からインスタンス`COR_HEAPOBJECT`を取得する場合は、呼び出すことによって、 [ICorDebugHeapEnum::Next](icordebugheapenum-next-method.md)メソッド、後で参照を解放する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -66,5 +64,5 @@ typedef struct _COR_HEAPOBJECT {
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

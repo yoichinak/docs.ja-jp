@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2d5daa5-b990-4ae5-bf2a-c0862fe58bd7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4103925462732fa8ddc509a9538ef5b485266a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3d5527fc34ad7292974c005179e9d9cad210c94
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503121"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags メソッド
-1 つまたは複数のフラグを設定、 [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)を - just-in-time (JIT) のコード生成を制御する列挙型の再コンパイルされた関数。  
+[COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md)列挙型の1つ以上のフラグを設定して、JUST-IN-TIME (JIT) 再コンパイル関数のコード生成を制御します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,22 +34,22 @@ HRESULT SetCodegenFlags(
   
 ## <a name="parameters"></a>パラメーター  
  `flags`  
- [in]1 つまたは複数のフラグ、 [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)列挙体。  
+ から[COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md)列挙体の1つ以上のフラグ。  
   
-## <a name="remarks"></a>Remarks  
- プロファイラーは、使用して、このインターフェイスのインスタンスを取得、 [icorprofilercallback 4::getrejitparameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)コールバック。 `SetCodegenFlags` 再コンパイルされた関数のコード生成を制御するプロファイラーを使用できます。 他のすべての JIT 再コンパイル パラメーターと同様、コード生成フラグは、関数のすべてのインスタンスに適用されます。  
+## <a name="remarks"></a>解説  
+ プロファイラーは、 [ICorProfilerCallback4:: GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md)コールバックを使用して、このインターフェイスのインスタンスを取得します。 `SetCodegenFlags`プロファイラーが再コンパイルされた関数のコード生成を制御できるようにします。 他のすべての JIT 再コンパイルパラメーターと同様に、コード生成フラグは関数のすべてのインスタンスに適用されます。  
   
- JIT コンパイラでは、関数をコンパイルするときに、その他のソースで指定されたその他のフラグと共に、これらのコンパイル フラグと見なします。  その他のソースには、デバッガーが含まれます、、を使用して、起動時にプロファイラーがグローバル フラグが設定、 [icorprofilerinfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)メソッド (値を持つ`COR_PRF_DISABLE_INLINING`と`COR_PRF_DISABLE_OPTIMIZATIONS`)、およびプロファイラーの[。Icorprofilercallback::jitinlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)コールバック。  JIT コンパイラでは、最小限の最適化を要求するソースを優先します。  たとえば、プロファイラーを指定します`COR_PRF_DISABLE_INLINING`スタートアップ時が指定されていません`COR_PRF_CODEGEN_DISABLE_INLINING`で、 [icorprofilerfunctioncontrol::setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)コールバック、インライン展開は引き続き無効です。  同様に、プロファイラーが指定されていない場合`COR_PRF_CODEGEN_DISABLE_INLINING`で`SetCodegenFlags`を使用してインライン化、無効、 [icorprofilercallback::jitinlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)コールバック、インライン化が無効になっています。  
+ JIT コンパイラは、関数をコンパイルするときに、これらのコンパイルフラグを他のソースによって指定された他のフラグと共に考慮します。  その他のソースには、デバッガー、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッド (値と) を使用した起動時のプロファイラーによって設定されたグローバルフラグ、 `COR_PRF_DISABLE_INLINING` `COR_PRF_DISABLE_OPTIMIZATIONS` およびプロファイラーの[ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md)コールバックが含まれます。  JIT コンパイラは、最小限の最適化を要求するソースに優先順位を付けます。  たとえば、プロファイラーが起動時にを指定し、 `COR_PRF_DISABLE_INLINING` `COR_PRF_CODEGEN_DISABLE_INLINING` [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)コールバックでを指定していない場合でも、インライン展開は無効になります。  同様に、プロファイラーででを指定せず、 `COR_PRF_CODEGEN_DISABLE_INLINING` `SetCodegenFlags` [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md)コールバックを使用してインライン展開を無効にした場合は、インライン展開が無効になります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerFunctionControl インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [ICorProfilerFunctionControl インターフェイス](icorprofilerfunctioncontrol-interface.md)

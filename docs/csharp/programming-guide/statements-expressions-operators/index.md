@@ -1,6 +1,5 @@
 ---
 title: ステートメント、式、および演算子 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743881"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "75698639"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>ステートメント、式、および演算子 (C# プログラミング ガイド)
 
@@ -29,8 +28,6 @@ ms.locfileid: "67743881"
 
   - [式形式のメンバー](expression-bodied-members.md)
 
-- [演算子](operators.md)
-
 - [匿名関数](anonymous-functions.md)
 
 - [等価比較](equality-comparisons.md)
@@ -39,7 +36,7 @@ ms.locfileid: "67743881"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [C# プログラミングガイド](../index.md)
+- [キャストと型変換](../types/casting-and-type-conversions.md)

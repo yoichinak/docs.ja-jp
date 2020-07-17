@@ -1,5 +1,6 @@
 ---
 title: '方法: 描画する Graphics オブジェクトを作成する'
+description: GDI + を使用して、線や図形を描画したり、テキストをレンダリングしたり、イメージを表示および操作したりするために必要なグラフィックオブジェクトを作成する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,51 +11,51 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 1a0884c1e9956dc6f4608e32372deeea24ef4670
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903208"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画する Graphics オブジェクトを作成する
-直線と図形の描画して、テキストのレンダリングや、表示するか、および GDI + を使用したイメージを操作することができます、前に作成する必要があります、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトは、GDI + 描画サーフェイスを表すし、グラフィカル イメージを作成するために使用するオブジェクトです。  
+GDI + を使用して、線や形状の描画、テキストのレンダリング、イメージの表示と操作を行うには、オブジェクトを作成する必要があり <xref:System.Drawing.Graphics> ます。 <xref:System.Drawing.Graphics>オブジェクトは GDI + の描画サーフェイスを表し、はグラフィックイメージを作成するために使用されるオブジェクトです。  
   
- グラフィックスを操作には、2 つの手順があります。  
+ グラフィックスを操作するには、次の2つの手順を実行します。  
   
-1. 作成、<xref:System.Drawing.Graphics>オブジェクト。  
+1. オブジェクトを作成 <xref:System.Drawing.Graphics> しています。  
   
-2. 使用して、<xref:System.Drawing.Graphics>直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するオブジェクト。  
+2. オブジェクトを使用して、 <xref:System.Drawing.Graphics> 線と形状を描画したり、テキストを表示したり、イメージを表示および操作したりします。  
   
-## <a name="creating-a-graphics-object"></a>グラフィックス オブジェクトを作成します。  
- グラフィックス オブジェクトは、さまざまな方法で作成できます。  
+## <a name="creating-a-graphics-object"></a>グラフィックスオブジェクトの作成  
+ グラフィックスオブジェクトは、さまざまな方法で作成できます。  
   
-#### <a name="to-create-a-graphics-object"></a>グラフィックス オブジェクトを作成するには  
+#### <a name="to-create-a-graphics-object"></a>グラフィックスオブジェクトを作成するには  
   
-- 一部として、グラフィックス オブジェクトへの参照を受け取る、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>フォームまたはコントロールのイベント。 これは、グラフィックス オブジェクトへの参照を取得する方法、コントロールの描画コードを作成するときに、通常は。 同様に、取得することも、グラフィックス オブジェクトのプロパティとして、<xref:System.Drawing.Printing.PrintPageEventArgs>処理するときに、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベントを<xref:System.Drawing.Printing.PrintDocument>します。  
+- <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> フォームまたはコントロールのイベントで、の一部としてグラフィックスオブジェクトへの参照を受け取ります。 これは、通常、コントロールの描画コードを作成するときに、グラフィックスオブジェクトへの参照を取得する方法です。 同様に、のイベントを処理するときに、グラフィックスオブジェクトをのプロパティとして取得することもでき <xref:System.Drawing.Printing.PrintPageEventArgs> <xref:System.Drawing.Printing.PrintDocument.PrintPage> <xref:System.Drawing.Printing.PrintDocument> ます。  
   
-     \- または -  
+     または  
   
-- 呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>コントロールまたはフォームへの参照を取得する方法、<xref:System.Drawing.Graphics>コントロールまたはフォームの描画サーフェイスを表すオブジェクト。 フォームまたは既に存在しているコントロールを描画する場合は、このメソッドを使用します。  
+- コントロールまたはフォームのメソッドを呼び出して、 <xref:System.Windows.Forms.Control.CreateGraphics%2A> <xref:System.Drawing.Graphics> そのコントロールまたはフォームの描画サーフェイスを表すオブジェクトへの参照を取得します。 既に存在するフォームまたはコントロールに描画する場合は、このメソッドを使用します。  
   
-     \- または -  
+     または  
   
-- 作成、<xref:System.Drawing.Graphics>オブジェクトから継承する任意のオブジェクトから<xref:System.Drawing.Image>します。 この方法は、既存のイメージを変更するときに便利です。  
+- <xref:System.Drawing.Graphics>を継承する任意のオブジェクトからオブジェクトを作成 <xref:System.Drawing.Image> します。 この方法は、既存のイメージを変更する場合に便利です。  
   
-     次のセクションでは、これらの各プロセスの詳細を提供します。  
+     次のセクションでは、これらの各プロセスについて詳しく説明します。  
   
-## <a name="painteventargs-in-the-paint-event-handler"></a>ペイントのイベント ハンドラーで PaintEventArgs  
- プログラミングを行う際、<xref:System.Windows.Forms.PaintEventHandler>コントロールまたは<xref:System.Drawing.Printing.PrintDocument.PrintPage>の<xref:System.Drawing.Printing.PrintDocument>、グラフィックス オブジェクトは、いずれかのプロパティとして提供されます<xref:System.Windows.Forms.PaintEventArgs>または<xref:System.Drawing.Printing.PrintPageEventArgs>します。  
+## <a name="painteventargs-in-the-paint-event-handler"></a>描画イベントハンドラーの PaintEventArgs  
+ コントロールまたはのをプログラミングする場合、 <xref:System.Windows.Forms.PaintEventHandler> <xref:System.Drawing.Printing.PrintDocument.PrintPage> <xref:System.Drawing.Printing.PrintDocument> グラフィックスオブジェクトはまたはのプロパティの1つとして提供され <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Drawing.Printing.PrintPageEventArgs> ます。  
   
-#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>描画イベントで PaintEventArgs からグラフィックス オブジェクトへの参照を取得するには  
+#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>描画イベントの PaintEventArgs からグラフィックスオブジェクトへの参照を取得するには  
   
-1. 宣言、<xref:System.Drawing.Graphics>オブジェクト。  
+1. オブジェクトを宣言 <xref:System.Drawing.Graphics> します。  
   
-2. 参照する変数を割り当てる、<xref:System.Drawing.Graphics>の一部として渡されたオブジェクト、<xref:System.Windows.Forms.PaintEventArgs>します。  
+2. 変数を割り当て <xref:System.Drawing.Graphics> て、の一部として渡されたオブジェクトを参照し <xref:System.Windows.Forms.PaintEventArgs> ます。  
   
-3. フォームまたはコントロールを描画するコードを挿入します。  
+3. フォームまたはコントロールを描画するためのコードを挿入します。  
   
-     次の例を参照する方法を示しています、<xref:System.Drawing.Graphics>オブジェクトから、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>イベント。  
+     次の例は、イベントでからオブジェクトを参照する方法を示してい <xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> ます。  
   
     ```vb  
     Private Sub Form1_Paint(sender As Object, pe As PaintEventArgs) Handles _  
@@ -67,8 +68,8 @@ ms.locfileid: "67505507"
     ```  
   
     ```csharp  
-    private void Form1_Paint(object sender,   
-       System.Windows.Forms.PaintEventArgs pe)   
+    private void Form1_Paint(object sender,
+       System.Windows.Forms.PaintEventArgs pe)
     {  
        // Declares the Graphics object and sets it to the Graphics object  
        // supplied in the PaintEventArgs.  
@@ -90,11 +91,11 @@ ms.locfileid: "67505507"
     ```  
   
 ## <a name="creategraphics-method"></a>CreateGraphics メソッド  
- 使用することも、<xref:System.Windows.Forms.Control.CreateGraphics%2A>コントロールまたはフォームへの参照を取得する方法、<xref:System.Drawing.Graphics>コントロールまたはフォームの描画サーフェイスを表すオブジェクト。  
+ また、コントロールまたはフォームのメソッドを使用して、 <xref:System.Windows.Forms.Control.CreateGraphics%2A> <xref:System.Drawing.Graphics> そのコントロールまたはフォームの描画サーフェイスを表すオブジェクトへの参照を取得することもできます。  
   
-#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics メソッドを使用して、グラフィックス オブジェクトを作成するには  
+#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics メソッドを使用してグラフィックスオブジェクトを作成するには  
   
-- 呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>なるグラフィックスをレンダリングするフォームまたはコントロールのメソッド。  
+- <xref:System.Windows.Forms.Control.CreateGraphics%2A>グラフィックスをレンダリングするフォームまたはコントロールのメソッドを呼び出します。  
   
     ```vb  
     Dim g as Graphics  
@@ -117,14 +118,14 @@ ms.locfileid: "67505507"
     g = this->CreateGraphics();  
     ```  
   
-## <a name="create-from-an-image-object"></a>イメージ オブジェクトから作成します。  
- さらから派生した任意のオブジェクトから graphics オブジェクトを作成することができます、<xref:System.Drawing.Image>クラス。  
+## <a name="create-from-an-image-object"></a>イメージオブジェクトから作成する  
+ さらに、クラスから派生した任意のオブジェクトからグラフィックスオブジェクトを作成することもでき <xref:System.Drawing.Image> ます。  
   
-#### <a name="to-create-a-graphics-object-from-an-image"></a>イメージから Graphics オブジェクトを作成するには  
+#### <a name="to-create-a-graphics-object-from-an-image"></a>イメージからグラフィックスオブジェクトを作成するには  
   
-- 呼び出す、<xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>メソッドを作成したいイメージの変数の名前を指定して、<xref:System.Drawing.Graphics>オブジェクト。  
+- オブジェクトを <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> 作成するイメージ変数の名前を指定して、メソッドを呼び出し <xref:System.Drawing.Graphics> ます。  
   
-     次の例は、使用する方法を示します、<xref:System.Drawing.Bitmap>オブジェクト。  
+     次の例は、オブジェクトの使用方法を示してい <xref:System.Drawing.Bitmap> ます。  
   
     ```vb  
     Dim myBitmap as New Bitmap("C:\Documents and Settings\Joe\Pics\myPic.bmp")  
@@ -132,7 +133,7 @@ ms.locfileid: "67505507"
     ```  
   
     ```csharp  
-    Bitmap myBitmap = new Bitmap(@"C:\Documents and   
+    Bitmap myBitmap = new Bitmap(@"C:\Documents and
        Settings\Joe\Pics\myPic.bmp");  
     Graphics g = Graphics.FromImage(myBitmap);  
     ```  
@@ -144,35 +145,35 @@ ms.locfileid: "67505507"
     ```  
   
 > [!NOTE]
->  作成できるだけ<xref:System.Drawing.Graphics>16、24 ビットおよび 32 ビットの .bmp ファイルなど、インデックスなしの .bmp ファイルからオブジェクト。 インデックスなしの .bmp ファイルの各ピクセルは、カラー テーブルにインデックスを保持するインデックス付きの .bmp ファイルのピクセルとは異なり、色を保持します。  
+> オブジェクトを作成できるのは、 <xref:System.Drawing.Graphics> 16 ビット、24ビット、32ビットの .bmp ファイルなど、インデックスのない .bmp ファイルのオブジェクトだけです。 インデックス付けされていない .bmp ファイルの各ピクセルには、カラーテーブルのインデックスを保持するインデックス付き .bmp ファイルのピクセルとは対照的に、色が保持されます。  
   
-## <a name="drawing-and-manipulating-shapes-and-images"></a>描画と図形と画像の操作  
- 作成した後、<xref:System.Drawing.Graphics>オブジェクトは、直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するために使用可能性があります。 使用されるプリンシパルのオブジェクト、<xref:System.Drawing.Graphics>オブジェクトには。  
+## <a name="drawing-and-manipulating-shapes-and-images"></a>図形とイメージの描画と操作  
+ オブジェクトを作成した後、オブジェクトを使用して、 <xref:System.Drawing.Graphics> 線や図形の描画、テキストの表示、画像の表示と操作を行うことができます。 オブジェクトで使用されるプリンシパルオブジェクト <xref:System.Drawing.Graphics> は次のとおりです。  
   
-- <xref:System.Drawing.Pen>クラス: 線を描画、図形のアウトラインまたは他の幾何学的表現のレンダリングに使用します。  
+- <xref:System.Drawing.Pen>クラス。線の描画、図形のアウトライン表示、またはその他の幾何学的表現のレンダリングに使用されます。  
   
-- <xref:System.Drawing.Brush>クラス、塗りつぶされた図形、イメージ、テキストなどのグラフィックスの領域を塗りつぶすときのために使用します。  
+- <xref:System.Drawing.Brush>塗りつぶされた図形、画像、テキストなど、グラフィックスの領域を塗りつぶすために使用されるクラス。  
   
-- <xref:System.Drawing.Font>クラス-テキストのレンダリング時に使用する図形の内容の説明を提供します。  
+- <xref:System.Drawing.Font>クラス: テキストを表示するときに使用する図形の説明を提供します。  
   
-- <xref:System.Drawing.Color>構造体などを表示するさまざまな色を表します。  
+- <xref:System.Drawing.Color>構造体は、表示するさまざまな色を表します。  
   
-#### <a name="to-use-the-graphics-object-you-have-created"></a>作成したグラフィック オブジェクトを使用するには  
+#### <a name="to-use-the-graphics-object-you-have-created"></a>作成したグラフィックスオブジェクトを使用するには  
   
-- 必要なものを描画するために上記の適切なオブジェクトを使用します。  
+- 上記の適切なオブジェクトを使用して、必要なものを描画します。  
   
      詳細については、次のトピックを参照してください。  
   
-    |表示するには|解決方法|  
+    |レンダリングするには|解決方法については、|  
     |---------------|---------|  
-    |線|[方法: Windows フォームに直線を描画します。](how-to-draw-a-line-on-a-windows-form.md)|  
-    |図形|[方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)|  
-    |テキスト|[方法: Windows フォーム上のテキストの描画](how-to-draw-text-on-a-windows-form.md)|  
-    |イメージ|[方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)|  
+    |路線|[方法: Windows フォームに直線を描画する](how-to-draw-a-line-on-a-windows-form.md)|  
+    |図形|[方法: 形状のアウトラインを描画する](how-to-draw-an-outlined-shape.md)|  
+    |テキスト|[方法: Windows フォームにテキストを描画する](how-to-draw-text-on-a-windows-form.md)|  
+    |イメージ|[方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)
+- [方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)

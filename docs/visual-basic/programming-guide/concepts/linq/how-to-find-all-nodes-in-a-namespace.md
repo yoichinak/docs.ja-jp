@@ -1,15 +1,15 @@
 ---
-title: '方法: Namespace (Visual Basic) ですべてのノードを検索します。'
+title: '方法: 名前空間内のすべてのノードを検索する'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: f1660020db59b63dea86ed8953faef743c0f40d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855674"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405314"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>方法: Namespace (Visual Basic) ですべてのノードを検索します。
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>方法: 名前空間内のすべてのノードを検索する (Visual Basic)
 各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。  
   
 ## <a name="example"></a>例  
@@ -45,7 +45,7 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>例  
  次のクエリでアクセスする XML ファイルには、2 つの異なる名前空間内にある購買発注書が含まれています。 このクエリは、いずれかの名前空間内にある要素だけを含む新しいツリーを作成します。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 統合購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)」。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:統合購買発注書](sample-xml-file-consolidated-purchase-orders.md)」。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

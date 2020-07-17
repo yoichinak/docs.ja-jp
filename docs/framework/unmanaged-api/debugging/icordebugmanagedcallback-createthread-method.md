@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5fa3bafd35912a7729833896f7e6f0bb2ff9b121
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759668"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212387"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread メソッド
-スレッドのマネージ コードの実行が開始されたことをデバッガーに通知します。  
+スレッドがマネージコードの実行を開始したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +36,23 @@ HRESULT CreateThread (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]スレッドがあるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からスレッドを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `thread`  
- [in]スレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からスレッドを表す、スレッドオブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- スレッドは、実行されるマネージ コードの最初の命令に配置されます。  
+ スレッドは、実行される最初のマネージコード命令に配置されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

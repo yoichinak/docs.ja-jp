@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08919e05f8396d37cb50ca24989b86000c854411
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a77780621032e2ce59b9db04a179c7086588219b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679321"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291644"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM の属性へのアクセス
 
@@ -28,7 +26,6 @@ ms.locfileid: "57679321"
 属性コレクションを取得し、**Count** メソッドをループ インデックスとして使用して、コレクションに対して反復処理を行うコード サンプルを次に示します。 このコードは、その後、コレクションから属性を 1 つ取得して、その値を表示します。
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -122,7 +119,7 @@ public class Sample
 
 コレクション内のすべての属性を表示します。
 
-```
+```console
 genre = novel
 ISBN = 1-861001-57-5
 misc = sale item
@@ -147,7 +144,6 @@ sale item
 Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -197,7 +193,6 @@ public class Sample
 要素から属性ノードを 1 つ取得するには、<xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドは、**XmlAttribute** 型のオブジェクトを返します。 **XmlAttribute** の取得後は、<xref:System.Xml.XmlAttribute?displayProperty=nameWithType> クラスのすべてのメソッドとプロパティを使用できます。たとえば、**OwnerElement** で、どの要素に所属しているかを調べることができます。
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -265,4 +260,4 @@ XmlAttribute attr = doc.DocumentElement.Attributes[0];
 
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

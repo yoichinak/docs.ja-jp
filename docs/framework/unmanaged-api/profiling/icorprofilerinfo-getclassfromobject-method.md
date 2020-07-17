@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57f57d67c4f7641495feca0b9c128e6ccf456cab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780203"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498532"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject メソッド
-取得、 `ClassID` 、指定したオブジェクトの`ObjectID`します。  
+を指定して、オブジェクトのを取得し `ClassID` `ObjectID` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +35,23 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in]取得する対象のオブジェクトの ID、`ClassID`します。  
+ からを取得する対象のオブジェクトの ID `ClassID` 。  
   
  `pClassId`  
- [out]返されたポインター`ClassID`します。  
+ 入出力返されたへのポインター `ClassID` 。  
   
-## <a name="remarks"></a>Remarks  
- Null`pClassId`ことを示します`objectId`型をアンロードしていますがあります。  
+## <a name="remarks"></a>解説  
+ Null は、が `pClassId` `objectId` アンロード中の型を持つことを示します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: ^ 演算子 (Visual Basic)
+title: ^ 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.^
@@ -14,80 +14,80 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: 54de9c91d4e166b8ca1733952dfa9c98ebf11ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: e139becf74ae367266a23513e18d0bdbdd24cdea
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778496"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371389"
 ---
 # <a name="-operator-visual-basic"></a>^ 演算子 (Visual Basic)
 
-数値のべき乗する数値を生成します。
+一方の数値をもう一方の数値で累乗します。
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 number ^ exponent
 ```
 
 ## <a name="parts"></a>指定項目
 
 `number`\
-必須。 任意の数式。
+必須です。 任意の数式。
 
 `exponent`\
-必須。 任意の数式。
+必須です。 任意の数式。
 
 ## <a name="result"></a>結果
 
-結果は`number`の累乗`exponent`、として常に、`Double`値。
+結果は、`number` を `exponent` で累乗したもので、常に `Double` 値になります。
 
 ## <a name="supported-types"></a>サポートされている型
 
-`Double`。 さまざまな型のオペランドが変換されます`Double`します。
+`Double`。 異なる型のオペランドはすべて `Double` に変換されます。
 
 ## <a name="remarks"></a>Remarks
 
-Visual Basic の指数演算を常に実行する、 [Double データ型](../../../visual-basic/language-reference/data-types/double-data-type.md)します。
+Visual Basic では、常に [Double データ型](../data-types/double-data-type.md)で指数演算が実行されます。
 
-値`exponent`、小数部は、負の値、またはその両方です。
+`exponent` の値には、小数、負、またはその両方を指定できます。
 
-1 つの式で複数の指数演算を実行すると、`^`左から右にした、演算子が評価されます。
+1 つの式で複数の累乗が実行される場合、`^` 演算子は左から右の出現順に評価されます。
 
 > [!NOTE]
-> `^`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+> `^` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がそのクラスまたは構造体であるとき、そのクラスまたは構造体でその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、`^`演算子を使って数値の指数。 最初のオペランドが 2 番目の累乗になります。
+次の例では、`^` 演算子を使用して数値を指数で累乗します。 結果は、最初のオペランドを 2 番目のオペランドで累乗したものになります。
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-前の例では、次の結果が生成されます。
+前の例を実行すると、次の結果が得られます。
 
-`exp1` 4 (2 乗) に設定されます。
+`exp1` は 4 (2 の 2 乗) に設定されます。
 
-`exp2` 19683 (3 乗を 2 乗し、その値) に設定されます。
+`exp2` は 19683 (3 を 3 乗してから、その値を 3 乗) に設定されます。
 
-`exp3` -125 (アイス -5) に設定されます。
+`exp3` は -125 (-5 の 3 乗) に設定されます。
 
-`exp4` 625 (4 番目の電源を-5) に設定されます。
+`exp4` は 625 (-5 の 4 乗) に設定されます。
 
-`exp5` 2 (8 の立方根) に設定されます。
+`exp5` は 2 (8 の立方根) に設定されます。
 
-`exp6` 0.5 (8 の立方根で割った値 1.0) に設定されます。
+`exp6` は 0.5 (1.0 を 8 の立方根で除算) に設定されます。
 
-上記の例の式のかっこの中の重要性に注意してください。 ため*演算子の優先順位*、Visual Basic が通常は、`^`する前に、他の演算子も、単項`–`演算子。 場合`exp4`と`exp6`が計算されたかっこがない場合、次の結果を作成した場合します。
+上の例の式におけるかっこの重要性に注意してください。 "*演算子の優先順位*" のため、Visual Basic では、通常は `^` 演算子が、他の演算子 (単項演算子 `–` であっても) よりも前に実行されます。 `exp4` と `exp6` がかっこなしで計算された場合、次のような結果になります。
 
-`exp4 = -5 ^ 4` -(4 番目の電源を 5) として計算されます-625 されると、します。
+`exp4 = -5 ^ 4` は -(5 の 4 乗) として計算されるため、結果は -625 になります。
 
-`exp6 = 8 ^ -1.0 / 3.0` (– 1 の電源または 0.125 8) として計算は 3.0 では、0.041666666666666666666666666666667 なりますで割った値します。
+`exp6 = 8 ^ -1.0 / 3.0` は (8 の -1 乗、つまり 0.125) を 3.0 で除算として計算されるため、結果は 0.041666666666666666666666666666667 になります。
 
 ## <a name="see-also"></a>関連項目
 
-- [^= 演算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
-- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [^= 演算子](exponentiation-assignment-operator.md)
+- [算術演算子](arithmetic-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Visual Basic における算術演算子](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

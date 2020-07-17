@@ -1,16 +1,15 @@
 ---
 title: ポインター型 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423523"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396260"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -21,18 +20,9 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-ポインター型の `*` の前に指定された型は、**参照型**と呼ばれます。 次の型はいずれも参照型になります。
+ポインター型の `*` の前に指定された型は、**参照型**と呼ばれます。 参照型にできるのは[アンマネージド型](../../language-reference/builtin-types/unmanaged-types.md)だけです。
 
-- 任意の整数型: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md)、[byte](../../language-reference/builtin-types/integral-numeric-types.md)、[short](../../language-reference/builtin-types/integral-numeric-types.md)、[ushort](../../language-reference/builtin-types/integral-numeric-types.md)、[int](../../language-reference/builtin-types/integral-numeric-types.md)、[uint](../../language-reference/builtin-types/integral-numeric-types.md)、[long](../../language-reference/builtin-types/integral-numeric-types.md)、[ulong](../../language-reference/builtin-types/integral-numeric-types.md)。
-- 任意の浮動小数点型: [float](../../language-reference/keywords/float.md)、[double](../../language-reference/keywords/double.md)。
-- [char](../../language-reference/keywords/char.md)。
-- [bool](../../language-reference/keywords/bool.md)。
-- [decimal](../../language-reference/keywords/decimal.md)。
-- 任意の[列挙](../../language-reference/keywords/enum.md)型。
-- 任意のポインター型。 `void**` などの式を使用できます。
-- アンマネージ型のフィールドのみを含むユーザー定義の struct 型。
-
-ポインター型は [object](../../language-reference/keywords/object.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
+ポインター型は [object](../../language-reference/builtin-types/reference-types.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
 
 同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 次に例を示します。
 
@@ -41,7 +31,7 @@ int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-オブジェクト参照は、それを指すポインターがあってもガベージ コレクションされる可能性があるため、ポインターによって参照や参照を含む[構造体](../../language-reference/keywords/struct.md)を指すことはできません。 ガベージ コレクターは、オブジェクトを指すポインター型があるかどうかを追跡しません。
+オブジェクト参照は、それを指すポインターがあってもガベージ コレクションされる可能性があるため、ポインターによって参照や参照を含む[構造体](../../language-reference/builtin-types/struct.md)を指すことはできません。 ガベージ コレクターは、オブジェクトを指すポインター型があるかどうかを追跡しません。
 
 `myType*` 型のポインター変数の値は、`myType` 型の変数のアドレスです。 ポインター型の宣言の例を次に示します。
 
@@ -61,9 +51,9 @@ int* myVariable;
 
 この例の式 `*myVariable` は、`int` に含まれているアドレスの位置にある `myVariable` 変数を示しています。
 
-トピック「[fixed ステートメント](../../language-reference/keywords/fixed-statement.md)」および「[ポインター変換](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)」に、ポインターの例がいくつか記載されています。 次の例は、`unsafe` キーワードと `fixed` ステートメントの使用例と、内部ポインターのインクリメント方法を示しています。  このコードは、コンソール アプリケーションの Main 関数に貼り付けて実行することができます これらの例は、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを設定してコンパイルする必要があります。
+トピック「[fixed ステートメント](../../language-reference/keywords/fixed-statement.md)」および「[ポインター変換](./pointer-conversions.md)」に、ポインターの例がいくつか記載されています。 次の例は、`unsafe` キーワードと `fixed` ステートメントの使用例と、内部ポインターのインクリメント方法を示しています。  このコードは、コンソール アプリケーションの Main 関数に貼り付けて実行することができます これらの例は、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを設定してコンパイルする必要があります。
 
-[!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
+[!code-csharp[Using pointer types](snippets/FixedKeywordExamples.cs#5)]
 
 間接演算子は、`void*` 型のポインターに適用できません。 ただし、void ポインターと他のポインター型はキャストを使用して相互に変換できます。
 
@@ -82,7 +72,7 @@ int* myVariable;
 |`++` および `--`|ポインターをインクリメントおよびデクリメントします。|
 |`+` および `-`|ポインター演算を実行します。|
 |`==`、`!=`、`<`、`>`、`<=`、`>=`|ポインターを比較します。|
-|[`stackalloc` 演算子](../../language-reference/operators/stackalloc.md)|スタックにメモリを割り当てます。|
+|[`stackalloc`](../../language-reference/operators/stackalloc.md)|スタックにメモリを割り当てます。|
 |[`fixed` ステートメント](../../language-reference/keywords/fixed-statement.md)|変数を一時的に固定して、そのアドレスを取得できるようにします。|
 
 ポインター関連の演算子について詳しくは、「[ポインターに関連する演算子](../../language-reference/operators/pointer-related-operators.md)」をご覧ください。
@@ -96,5 +86,6 @@ int* myVariable;
 - [C# プログラミング ガイド](../index.md)
 - [アンセーフ コードとポインター](index.md)
 - [ポインター変換](pointer-conversions.md)
-- [型](../../language-reference/keywords/types.md)
+- [参照型](../../language-reference/keywords/reference-types.md)
+- [値型](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

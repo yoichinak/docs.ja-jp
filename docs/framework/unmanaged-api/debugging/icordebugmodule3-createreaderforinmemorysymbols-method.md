@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a8200f942405395429db182b7501a07fc1f930a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764013"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212322"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols メソッド
-動的モジュールのデバッグのシンボル リーダーを作成します。  
+動的モジュールのデバッグシンボルリーダーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,43 +35,43 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>パラメーター  
  riid  
- [in]返す COM インターフェイスの IID。 通常、これは、 [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)します。  
+ から返す COM インターフェイスの IID。 通常、これは[ISymUnmanagedReader インターフェイス](../diagnostics/isymunmanagedreader-interface.md)です。  
   
  ppObj  
- [out]返されるインターフェイスへのポインターへのポインター。  
+ 入出力返されたインターフェイスへのポインターへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
- リーダーが正常に作成します。  
+ リーダーが正常に作成されました。  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
- モジュールは、メモリ内または動的モジュールではありません。  
+ モジュールがメモリ内または動的モジュールではありません。  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- シンボルは、アプリケーションで指定されていないまたはまだ提供されていません。  
+ シンボルは、アプリケーションによって提供されていないか、まだ使用できません。  
   
  E_FAIL (またはその他の E_ リターン コード)  
  リーダーを作成できません。  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドも、メモリ内の (非動的) モジュールのシンボル リーダー オブジェクトを作成するために使用のみするシンボルが利用可能に最初 (で示される、 [UpdateModuleSymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)コールバック)。  
+ このメソッドを使用して、インメモリ (非動的) モジュール用のシンボルリーダーオブジェクトを作成することもできますが、最初にシンボルを使用できるようになった後 ( [UpdateModuleSymbols メソッド](icordebugmanagedcallback-updatemodulesymbols-method.md)コールバックによって示されます) にのみ使用できます。  
   
- このメソッドが呼び出されるたびに、新しいリーダーのインスタンスを返します (など[CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance))。 そのため、デバッガーが結果をキャッシュして、基になるデータが変更されたときにのみ、新しいインスタンスを要求する必要があります (つまりとき、 [LoadClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)コールバックを受信した)。  
+ このメソッドは、呼び出されるたびに新しいリーダーインスタンスを返します ( [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)など)。 したがって、デバッガーは、基になるデータが変更されている (つまり、 [Loadclass メソッド](icordebugmanagedcallback-loadclass-method.md)のコールバックが受信された) 場合にのみ、結果をキャッシュし、新しいインスタンスを要求します。  
   
- 最初の型が読み込まれるまで動的モジュールは使用可能なすべてのシンボルはありません (で示されている、 [LoadClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)コールバック)。  
+ 動的モジュールでは、最初の型が読み込まれるまで ( [Loadclass メソッド](icordebugmanagedcallback-loadclass-method.md)コールバックによって示されるように) シンボルは使用できません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 4.5、4、3.5 SP1  
+ **.NET Framework のバージョン:** 4.5、4、3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget インターフェイス](icordebugremotetarget-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

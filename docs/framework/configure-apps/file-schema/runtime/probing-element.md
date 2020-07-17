@@ -9,22 +9,20 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704610"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73115860"
 ---
-# <a name="probing-element"></a>\<probing > 要素
-アプリケーション ベース、共通言語ランタイム アセンブリを読み込むときに検索するサブディレクトリを指定します。  
+# <a name="probing-element"></a>\<probing> 要素
+アセンブリの読み込み時に共通言語ランタイムが検索するアプリケーションの基本サブディレクトリを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<probing >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +37,22 @@ ms.locfileid: "61704610"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`privatePath`|必須の属性です。<br /><br /> アセンブリを含む可能性があるアプリケーションのベース ディレクトリのサブディレクトリを指定します。 各サブディレクトリをセミコロンで区切ります。|  
+|`privatePath`|必須の属性です。<br /><br /> アセンブリを含む可能性のあるアプリケーションのベースディレクトリのサブディレクトリを指定します。 各サブディレクトリをセミコロンで区切ります。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+
+なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`assemblyBinding`|アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="example"></a>例  
- 次の例では、アプリケーションの基本サブディレクトリが、ランタイムがアセンブリを検索する必要がありますを指定する方法を示します。  
+ 次の例では、ランタイムがアセンブリを検索するアプリケーションベースのサブディレクトリを指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -67,7 +66,7 @@ ms.locfileid: "61704610"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイルスキーマ](../index.md)
+- [アセンブリの場所を指定します](../../../../standard/assembly/location.md)
+- [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)

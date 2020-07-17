@@ -7,27 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 554c38c8f44999feba4cfa04d58ce2f07e955eb1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054381"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409921"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'GUID '\<number>' の形式が正しくないため、'\<attribute>' を適用できません。
-`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定されています。 `COMClassAttribute` は GUID を使ってクラス、インターフェイス、および作成イベントを一意に識別します。  
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>GUID '\<attribute>' の形式が正しくないため、'\<number>' を適用できません。
+
+`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID) の適切な形式に準拠していない GUID が指定されています。 `COMClassAttribute` では、GUID を使用して、クラス、インターフェイス、および作成イベントが一意に識別されます。  
   
- GUID は 16 バイトで構成され、前の 8 バイトは数値、後の 8 バイトはバイナリです。 GUID は uuidgen.exe などの Microsoft ユーティリティで生成され、空間および時間内で一意であることが保証されています。  
+ GUID は、16 バイトで構成されます。前半の 8 バイトは数値、後半の 8 バイトはバイナリです。 これは、uuidgen.exe などの Microsoft ユーティリティで生成され、空間と時間において一意であることが保証されます。  
   
  **エラー ID:** BC32500  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. COM オブジェクトを識別するために必要な正しい GUID を決定します。  
+1. COM オブジェクトを識別するために必要な正しい GUID (1 つまたは複数) を特定します。  
   
-2. `COMClassAttribute` 属性ブロックに示される GUID 文字列が正しくコピーされていることを確認します。  
+2. `COMClassAttribute` 属性ブロックに表示される GUID 文字列が正しくコピーされていることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Guid>
-- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [属性の概要](../../programming-guide/concepts/attributes/index.md)

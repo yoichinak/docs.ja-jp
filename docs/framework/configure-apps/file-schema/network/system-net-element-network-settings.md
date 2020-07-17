@@ -1,5 +1,6 @@
 ---
 title: <system.Net> 要素 (ネットワーク設定)
+description: <system.Net> network settings 要素には、.NET Framework が .NET Framework のネットワークオプションに接続する方法を指定する設定が含まれています。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504486"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 要素 (ネットワーク設定)
 .NET Framework がネットワークに接続する方法を指定するための設定が含まれています。  
   
- \<configuration>  
-\<system.net>  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.net>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.net>   
+<system.net>
 </system.net>  
 ```  
   
@@ -38,25 +39,25 @@ ms.locfileid: "61674338"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|インターネット要求の認証に使用されるモジュールを指定します。|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|インターネット ホストへの接続の最大数を指定します。|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュ メカニズムを制御します。|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|クラスの基本的なネットワーク オプションを構成、<xref:System.Net>および関連子名前空間。|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|使用してインターネット ホストから情報を要求するモジュールを指定します。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|インターネット要求を認証するために使用するモジュールを指定します。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|インターネットホストへの接続の最大数を指定します。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
+|[mailSettings](mailsettings-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) メール送信オプションを構成します。|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
+|[設定](settings-element-network-settings.md)|および関連する子名前空間のクラスの基本的なネットワークオプションを構成し <xref:System.Net> ます。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|インターネットホストから情報を要求するために使用するモジュールを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|すべての名前空間の設定が含まれています。|  
+|[configuration](../configuration-element.md)|すべての名前空間の設定が含まれます。|  
   
-## <a name="remarks"></a>Remarks  
- [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)要素には内のクラスの設定が含まれています、<xref:System.Net>および関連子名前空間。 設定は、認証モジュール、接続の管理、メールの設定、プロキシ サーバー、およびインターネット ホストから情報を受け取るためのインターネット要求モジュールを構成します。  
+## <a name="remarks"></a>解説  
+ [\<system.net>](system-net-element-network-settings.md)要素には、 <xref:System.Net> および関連する子名前空間のクラスの設定が含まれます。 この設定では、インターネットホストから情報を受信するための認証モジュール、接続管理、メール設定、プロキシサーバー、およびインターネット要求モジュールを構成します。  
   
 ## <a name="example"></a>例  
- 次の例で使用される一般的な構成を示しています。<xref:System.Net>クラス。  
+ 次の例は、クラスによって使用される一般的な構成を示して <xref:System.Net> います。  
   
 ```xml  
 <configuration>  
@@ -94,4 +95,4 @@ ms.locfileid: "61674338"
   
 ## <a name="see-also"></a>関連項目
 
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

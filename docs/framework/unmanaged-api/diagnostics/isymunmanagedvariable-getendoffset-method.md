@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ef32a963b73f2109b9747ef303e8ccd6a729838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 91117eae23d38f3bc608f3203ebe53f92516c9c9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778263"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610497"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset メソッド
-親内でこの変数の終了オフセットを取得します。 スコープ内でローカル変数の場合は、終了オフセットは、スコープに対して定義されたオフセット内で分類されます。  
+親内のこの変数の終了オフセットを取得します。 スコープ内のローカル変数の場合は、スコープに対して定義されたオフセット内に終了オフセットが適用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,15 +34,15 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインターを`ULONG32`を受け取る、終了オフセット。  
+ 入出力終了オフセットを受け取るへのポインター `ULONG32` 。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedVariable インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetStartOffSet メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
+- [ISymUnmanagedVariable インターフェイス](isymunmanagedvariable-interface.md)
+- [GetStartOffSet メソッド](isymunmanagedvariable-getstartoffset-method.md)

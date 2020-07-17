@@ -1,13 +1,13 @@
 ---
-title: WordprocessingML ドキュメント1 のスタイル パーツ
+title: WordprocessingML ドキュメントのスタイル パーツ
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 5f4db2834aae01bf451d7430e923729a7d7069c4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56726a7ea7594bfd1c68e5b1f8e45f585138eac6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483426"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "68868627"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML ドキュメントのスタイル パーツ
 このトピックでは、Office Open XML WordprocessingML ドキュメントのスタイル パーツの例について説明します。  

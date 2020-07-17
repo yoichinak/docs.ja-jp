@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: e7b8f6b4-95bc-4ba5-b9eb-f5590a7326a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d19d7ed2262db6d3c6e7f15db0e96da52f86db4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500859"
 ---
-# <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 列挙型
+# <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE 列挙型
 キャッシュされている関数検索の結果を示します。  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` そのため、0 の値を持つ`COR_PRF_JIT_CACHE`ブール サロゲートとして使用できません。  
+> `COR_PRF_CACHED_FUNCTION_FOUND`の値は0であるため、 `COR_PRF_JIT_CACHE` ブールサロゲートとして使用することはできません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,18 +40,18 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|検索では、関数が見つかりました。|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|検索、関数が見つかりませんでした。|  
+|`COR_PRF_FUNCTION_FOUND`|検索によって関数が検出されました。|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|検索で関数が見つかりませんでした。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [列挙体のプロファイリング](profiling-enumerations.md)

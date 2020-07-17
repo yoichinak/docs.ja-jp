@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612863"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130028"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>完全修飾型名の指定
 
@@ -149,7 +147,7 @@ AssemblyNameSpec を除くすべての TypeSpec コンポーネントで、ス�
 |**PublicKey**|完全な公開鍵|16 進数形式の完全な公開鍵の文字列値。 プライベート アセンブリを明示的に指定するには、null 参照を指定します (Visual Basic では **Nothing**)。|
 |**PublicKeyToken**|公開鍵トークン (完全な公開鍵の 8 バイト ハッシュ)|16 進数形式の公開鍵トークンの文字列値。 プライベート アセンブリを明示的に指定するには、null 参照を指定します (Visual Basic では **Nothing**)。|
 |**カルチャ**|アセンブリのカルチャ|RFC 1766 形式のアセンブリのカルチャ。言語に依存しない (非サテライト) アセンブリの場合は "neutral"。|
-|**カスタム**|カスタム バイナリ ラージ オブジェクト (BLOB)。 現在、 [Native Image Generator (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) で生成されたアセンブリでのみ使用されています。|アセンブリがインストールされていることをアセンブリ キャッシュに通知するために Native Image Generator ツールに使用されているカスタム文字列は、ネイティブ イメージです。そのため、ネイティブ イメージ キャッシュにインストールされます。 zap 文字列とも呼ばれます。|
+|**カスタム**|カスタム バイナリ ラージ オブジェクト (BLOB)。 現在、 [Native Image Generator (Ngen)](../tools/ngen-exe-native-image-generator.md) で生成されたアセンブリでのみ使用されています。|アセンブリがインストールされていることをアセンブリ キャッシュに通知するために Native Image Generator ツールに使用されているカスタム文字列は、ネイティブ イメージです。そのため、ネイティブ イメージ キャッシュにインストールされます。 zap 文字列とも呼ばれます。|
 
 次に、カルチャが既定で単純な名前のアセンブリの**AssemblyName** の例を示します。
 
@@ -224,4 +222,4 @@ BNF 文法では、ReflectionEmitDimension は <xref:System.Reflection.Emit.Modu
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [型情報の表示](viewing-type-information.md)

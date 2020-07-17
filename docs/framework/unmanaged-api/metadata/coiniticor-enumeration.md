@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89d2f9c9cfa7d4c2498710b36796f3e2605bcbf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763646"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005948"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 列挙型
-使用される定数を指定します[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)ときに、共通言語ランタイムを初期化します。  
+共通言語ランタイムを初期化するときに、 [Co初期化 Ecor](../hosting/coinitializecor-function.md)によって使用される定数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,14 +40,14 @@ typedef enum tagCOINITCOR
 |`COINITCOR`|既定の初期化モードを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: 値 (Visual Basic) を返すプロシージャを呼び出す'
+title: '方法: 値を返すプロシージャを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,40 +7,40 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a110cf9f3b42c7244d8d5bf7b49d5e6dac8c2e21
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864183"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388765"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値 (Visual Basic) を返すプロシージャを呼び出す
-A`Function`プロシージャが呼び出し元のコードに値を返します。 呼び出すことが、名前と引数を含めることによって、式または代入ステートメントの右側にあるいずれか。  
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値を返すプロシージャを呼び出す (Visual Basic)
+`Function` プロシージャからは、呼び出し元のコードに値が返されます。 それを呼び出すには、その名前と引数を代入ステートメントの右辺に、または式に含めます。  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>式の中で関数のプロシージャを呼び出す  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>式内で Function プロシージャを呼び出すには  
   
-1. 使用して、`Function`プロシージャ名の変数を使用する場合と同じ方法です。 使用することができます、`Function`プロシージャを呼び出す任意の場所、式で変数または定数を使用することができます。  
+1. `Function` プロシージャ名は、変数を使用する場合と同じ方法で使用します。 式内の変数または定数を使用できる場所であればどこでも、`Function` プロシージャ呼び出しを使用できます。  
   
-2. 引数リストを囲む中かっこでプロシージャ名に従ってください。 引数がない場合、かっこを省略することができます。 ただし、かっこを使用して、コードを読みやすくします。  
+2. プロシージャ名の後にかっこを使用して引数リストを囲みます。 引数がない場合は、必要に応じてかっこを省略できます。 ただし、かっこを使用すると、コードが読みやすくなります。  
   
-3. コンマで区切り、かっこ内の引数リストで、引数を配置します。 同じ順序で引数を指定するかどうかを必ずを`Function`プロシージャが、対応するパラメーターを定義します。  
+3. 引数リストの引数をコンマで区切ってかっこ内に配置します。 引数の指定は必ず、`Function` プロシージャで定義されている対応するパラメーターと同じ順序で行ってください。  
   
-     また、名前で、1 つまたは複数の引数を渡すことができます。 詳細については、次を参照してください。[位置と名前による引数を渡す](./passing-arguments-by-position-and-by-name.md)します。  
+     または、1 つまたは複数の引数を名前で渡すこともできます。 詳細については、「[位置と名前による引数渡し](./passing-arguments-by-position-and-by-name.md)」を参照してください。  
   
-4. プロシージャから返される値は、式は、変数の値と同じように参加または定数します。  
+4. プロシージャから返される値は、変数または定数の値と同じように、式に含められます。  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>代入ステートメントでプロシージャを関数を呼び出す  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>代入ステートメントで Function プロシージャを呼び出すには  
   
-1. 使用して、`Function`プロシージャ名の後に続く (`=`) 代入ステートメントにサインインします。  
+1. 代入ステートメント内で等号 (`=`) の後に `Function` プロシージャ名を使用します。  
   
-2. 引数リストを囲む中かっこでプロシージャ名に従ってください。 引数がない場合、かっこを省略することができます。 ただし、かっこを使用して、コードを読みやすくします。  
+2. プロシージャ名の後にかっこを使用して引数リストを囲みます。 引数がない場合は、必要に応じてかっこを省略できます。 ただし、かっこを使用すると、コードが読みやすくなります。  
   
-3. コンマで区切り、かっこ内の引数リストで、引数を配置します。 同じ順序で引数を指定するかどうかを必ずを`Function`名で渡すことがない限り、プロシージャが、対応するパラメーターを定義します。  
+3. 引数リストの引数をコンマで区切ってかっこ内に配置します。 引数を名前で渡さない場合、それらは必ず、`Function` プロシージャで定義されている対応するパラメーターと同じ順序で指定してください。  
   
-4. プロシージャから返される値は、変数または代入ステートメントの左側にあるプロパティに格納されます。  
+4. プロシージャから返された値は、代入ステートメントの左側にある変数またはプロパティに格納されます。  
   
 ## <a name="example"></a>例  
- 次の例では、Visual Basic<xref:Microsoft.VisualBasic.Interaction.Environ%2A>オペレーティング システム環境変数の値を取得します。 最初の行呼び出し`Environ`代入ステートメントでその行によって式と、2 つ目の呼び出し。 `Environ` その単一の引数として変数名を受け取ります。 呼び出し元のコードに変数の値を返します。  
+ 次の例では、Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> を呼び出して、オペレーティング システムの環境変数の値を取得します。 最初の行では式内で `Environ` が呼び出され、2 番目の行では代入ステートメントでそれが呼び出されます。 `Environ` では、その唯一の引数として変数名を取ります。 これにより、呼び出し元のコードに変数の値が返されます。  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
@@ -48,7 +48,7 @@ A`Function`プロシージャが呼び出し元のコードに値を返します
 
 - [Function プロシージャ](./function-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [方法: 値を返すプロシージャを作成します。](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Function ステートメント](../../../language-reference/statements/function-statement.md)
+- [方法: 値を返すプロシージャを作成する](./how-to-create-a-procedure-that-returns-a-value.md)
 - [方法: プロシージャから値を返す](./how-to-return-a-value-from-a-procedure.md)
 - [方法: 値を返さないプロシージャを呼び出す](./how-to-call-a-procedure-that-does-not-return-a-value.md)

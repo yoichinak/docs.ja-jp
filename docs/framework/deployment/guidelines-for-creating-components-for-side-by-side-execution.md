@@ -1,18 +1,16 @@
 ---
 title: side-by-side 実行用のコンポーネントを作成するためのガイドライン
+description: side-by-side 実行用のコンポーネントを作成するためのガイドラインを確認します。 たとえば、型 ID を特定のファイル バージョンにバインドしたり、バージョンを認識するストレージを使用したりします。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622641"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>side-by-side 実行用のコンポーネントを作成するためのガイドライン
 side-by-side 実行用にデザインしたマネージド アプリケーションまたはマネージド コンポーネントを作成するときのガイドラインを次に示します。  
@@ -60,9 +58,9 @@ side-by-side 実行用にデザインしたマネージド アプリケーショ
   
  アセンブリのバージョンは、アセンブリ バインディングのためにランタイムによって使用されます。 2 つの同一のアセンブリであっても、バージョン番号が異なると、ランタイムによって 2 つの異なるアセンブリとして扱われます。  
   
- [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) では、ファイルのバージョン番号が新しい場合にのみ、アセンブリを置換できます。 一般的に、インストーラーは、アセンブリのバージョン番号が大きくない限り、アセンブリを上書きでインストールしません。  
+ [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) では、ファイルのバージョン番号が新しい場合にのみ、アセンブリを置換できます。 一般的に、インストーラーは、アセンブリのバージョン番号が大きくない限り、アセンブリを上書きでインストールしません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [side-by-side 実行](../../../docs/framework/deployment/side-by-side-execution.md)
-- [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [side-by-side 実行](side-by-side-execution.md)
+- [方法: 自動バインディング リダイレクトを有効/無効にする](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

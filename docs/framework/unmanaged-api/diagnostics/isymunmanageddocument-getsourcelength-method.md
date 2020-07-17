@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf79c05b3b16bb61ac59534dd83cb8eb2bb1f823
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e84639c1d63e6935b9b363f01c12bf0fbd3390e3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776703"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615619"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength メソッド
 埋め込まれたソースの長さをバイト数で取得します。  
@@ -36,11 +34,11 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]埋め込みのソースの長さをバイト単位で示す変数へのポインター。  
+ 入出力埋め込まれたソースの長さ (バイト単位) を示す変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument インターフェイス](isymunmanageddocument-interface.md)

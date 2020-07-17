@@ -1,5 +1,6 @@
 ---
 title: 弱い参照
+description: アプリケーションからオブジェクトへのアクセスを許容したまま、そのオブジェクトを .NET ガベージ コレクターが収集できるようにする、弱い参照について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,14 +9,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622651"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768184"
 ---
 # <a name="weak-references"></a>弱い参照
 ガベージ コレクターでは、アプリケーションのコードがオブジェクトにアクセスできる間、そのアプリケーションで使用中のオブジェクトを収集することはできません。 アプリケーションには、オブジェクトへの強い参照があると考えられます。  
@@ -35,7 +34,7 @@ ms.locfileid: "64622651"
   
 - Short  
   
-     短期間の弱い参照の対象は、オブジェクトがガベージ コレクションによって回収されると、`null` になります。 弱い参照自体が管理オブジェクトであり、その他の管理オブジェクトと同じようにガベージ コレクションの対象です。  短期間の弱い参照は、<xref:System.WeakReference> の既定のコンストラクターです。  
+     短期間の弱い参照の対象は、オブジェクトがガベージ コレクションによって回収されると、`null` になります。 弱い参照自体が管理オブジェクトであり、その他の管理オブジェクトと同じようにガベージ コレクションの対象です。  短期間の弱い参照は、<xref:System.WeakReference> のパラメーターなしのコンストラクターです。  
   
 - Long  
   
@@ -54,4 +53,4 @@ ms.locfileid: "64622651"
   
 ## <a name="see-also"></a>関連項目
 
-- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)
+- [ガベージ コレクション](index.md)

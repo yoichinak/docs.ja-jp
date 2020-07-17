@@ -8,20 +8,20 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c4cb1065807d16c1d1f5a95c8ac9c9cbe5a0fdab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947811"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424691"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>方法: ページがブラウザーでホストされているかを確認する
-かどうか確認する方法を示します、<xref:System.Windows.Controls.Page>がブラウザーでホストされています。  
+この例では、<xref:System.Windows.Controls.Page> がブラウザーでホストされているかどうかを確認する方法を示します。  
   
 ## <a name="example"></a>例  
- A<xref:System.Windows.Controls.Page>ホストに依存しないことができ、その結果、読み込むことができるなど、ホストのさまざまな種類に、 <xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Navigation.NavigationWindow>、またはブラウザー。 これは、1 つまたは複数のページを格納していると、複数のスタンドアロンによって参照されると、参照可能であるライブラリ アセンブリがある場合に発生することができます ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) アプリケーションをホストします。  
+ <xref:System.Windows.Controls.Page> はホストに依存しないので、<xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>、ブラウザーなど、さまざまな種類のホストに読み込むことができます。 これは、1 つまたは複数のページを含むライブラリ アセンブリがあり、複数のスタンドアロンおよび閲覧可能な (XAML ブラウザー アプリケーション (XBAP)) ホスト アプリケーションによって参照されている場合に、発生する可能性があります。  
   
- 次の例を使用する方法を示します<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>どうかを判断する<xref:System.Windows.Controls.Page>がブラウザーでホストされています。  
+ 次の例では、<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> を使用して <xref:System.Windows.Controls.Page> がブラウザーでホストされているかどうかを確認する方法を示します。  
   
  [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  

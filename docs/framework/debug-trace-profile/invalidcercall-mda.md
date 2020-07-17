@@ -1,5 +1,6 @@
 ---
 title: invalidCERCall MDA
+description: InvalidCERCall マネージデバッグアシスタント (MDA) を確認します。これは、制約された実行領域 (CER) グラフ内に無効な呼び出しがある場合にアクティブになります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -9,19 +10,16 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754429"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051793"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` マネージド デバッグ アシスタント (MDA) は、制約された実行領域 (CER) グラフ内で信頼契約がないかまたは過度に脆弱な契約を持つメソッドの呼び出しがある場合に、アクティブ化されます。 脆弱な契約とは、最悪のケースの状態の破損が、呼び出しに渡されるインスタンスよりも大きい範囲であることを宣言する契約です。つまり、<xref:System.AppDomain> またはプロセスの状態が破損するか、または CER 内で呼び出されたときにその結果を常に確定的に計算できるとは限りません。  
   
-## <a name="symptoms"></a>症状  
+## <a name="symptoms"></a>現象  
  CER でコードを実行するときの予期しない結果。 この現象は固有ではありません。 ランタイムがメソッドを事前に準備しないか、実行時に <xref:System.Threading.ThreadAbortException> 例外から保護しないため、信頼できないメソッドの呼び出し時に予期しない <xref:System.OutOfMemoryException>、<xref:System.Threading.ThreadAbortException>、または他の例外が発生する可能性があります。 より大きな脅威は、実行時にメソッドから結果として発生する例外が <xref:System.AppDomain> またはプロセスを CER の目的とは反対の不安定な状態にする可能性があることです。 CER が作成される理由は、このような状態の破損を避けるためです。 一貫性のある状態の定義がアプリケーション間で異なるために、破損状態の現象はアプリケーションに固有です。  
   
 ## <a name="cause"></a>原因  
@@ -33,7 +31,7 @@ ms.locfileid: "61754429"
   
  弱い契約または存在しない契約を持つメソッドは、予期しない方法で失敗する可能性があるため、ランタイムは、レイジーな JIT コンパイル、ジェネリック ディクショナリの読み込み、スレッドの中断などによって発生する、メソッドからの独自の予期しないエラーを削除しようとしません。 つまり、この MDA がアクティブになっているときは、ランタイムが、定義されている CER に呼び出されたメソッドを含めなかったことを意味します。引き続きこのサブツリーを準備すると潜在的なエラーが隠される可能性があるので、呼び出し先はこのノードで終了しました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
  有効な信頼契約を関数に追加するか、その関数呼び出しを使用しないでください。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -58,4 +56,4 @@ ms.locfileid: "61754429"
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,18 +1,20 @@
 ---
-title: <extensions> セクション
+title: <extensions>下
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 0f77f621bbf9bbef00b206ef43a174f6f69364d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35621acaf96a80ffa3ffe4a3c6605143c48995a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673005"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70855359"
 ---
-# <a name="extensions-section"></a>\<拡張機能 > セクション
+# <a name="extensions-section"></a>\<extensions>下
 この構成セクションには、拡張のコレクションが含まれています。この拡張のコレクションによってユーザーは、ユーザー定義のバインディング、動作、およびその他の拡張機能を作成できます。  
   
-\<system.ServiceModel >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<extensions>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +43,10 @@ ms.locfileid: "61673005"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behaviorExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|このセクションには、動作拡張を指定する子要素が含まれています。この動作拡張により、ユーザーはサービスまたはエンドポイントの動作をカスタマイズできます。|  
-|[\<bindingElementExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインディング要素を使用できます。|  
-|[\<bindingExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingextensions.md)|このセクションには、バインディング拡張を指定する子要素が含まれています。このバインディング拡張によって、ユーザーはバインディングをカスタマイズできます。|  
-|[\<endpointExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointextensions.md)|このセクションには、標準エンドポイントを登録する子要素が含まれています。|  
+|[\<behaviorExtensions>](behaviorextensions.md)|このセクションには、動作拡張を指定する子要素が含まれています。この動作拡張により、ユーザーはサービスまたはエンドポイントの動作をカスタマイズできます。|  
+|[\<bindingElementExtensions>](bindingelementextensions.md)|このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインディング要素を使用できます。|  
+|[\<bindingExtensions>](bindingextensions.md)|このセクションには、バインディング拡張を指定する子要素が含まれています。このバインディング拡張によって、ユーザーはバインディングをカスタマイズできます。|  
+|[\<endpointExtensions>](endpointextensions.md)|このセクションには、標準エンドポイントを登録する子要素が含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   

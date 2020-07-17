@@ -2,22 +2,23 @@
 title: <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 0e56bb5c9e485559d712281a51e79f54c9661b5a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 842173c7bd9673a1e08c93d5ed650a42b9d979e5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423133"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70400478"
 ---
-# <a name="connectionpoolsettings"></a>\<connectionPoolSettings>
+# \<connectionPoolSettings>
 名前付きパイプ バインディングの追加の接続プール設定を指定します。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<binding>  
-\<namePipeTransport>  
-\<connectionPoolSettings>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedPipeTransport>**](namedpipetransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionPoolSettings>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,9 +44,9 @@ ms.locfileid: "67423133"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
+|[\<namedPipeTransport>](namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -54,9 +55,9 @@ ms.locfileid: "67423133"
 - <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [トランスポート](../../../wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
+- [バインド](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

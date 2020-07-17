@@ -14,28 +14,26 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38c663bc2db780c89ca666702534a75525ae189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ea2b70f37668587fb02513ab54da6c1915e2918d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771959"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176982"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile 関数
 指定したファイルの内容に対してハッシュが生成されます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)メソッド代わりにします。  
+ この関数は廃止されました。 代わりに[、](../hosting/iclrstrongname-gethashfromfile-method.md)メソッドを使用します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
-    [in, out] unsigned int   *piHashAlg,   
-    [out] BYTE     *pbHash,      
-    [in]  DWORD    cchHash,      
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE     *pbHash,
+    [in]  DWORD    cchHash,
     [out] DWORD    *pchHash  
 );  
 ```  
@@ -45,31 +43,31 @@ HRESULT GetHashFromFile (
  [in]ハッシュするファイルの名前。  
   
  `piHashAlg`  
- [入力、出力]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムを使用して、Win32 CryptoAPI で定義されています。 場合`piHashAlg`CALG_SHA 1 が使用される既定のアルゴリズムを 0 に設定されます。  
+ [イン、アウト]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されるアルゴリズムです。 0`piHashAlg`に設定すると、デフォルトのアルゴリズム CALG_SHA-1 が使用されます。  
   
  `pbHash`  
- [out]生成されたハッシュを含むバイト配列。  
+ [アウト]生成されたハッシュを含むバイト配列。  
   
  `cchHash`  
- [in]バッファーの最大サイズを`pbHash`を指します。  
+ [in]指す`pbHash`バッファーの最大サイズ。  
   
  `pchHash`  
- [out]サイズ (バイト単位)、返された`pbHash`します。  
+ [アウト]返された`pbHash`のサイズ (バイト単位)  
   
-## <a name="remarks"></a>Remarks  
- この関数は、同じ[GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)ファイル名の指定が Unicode ではなく ANSI を点が異なります。  
+## <a name="remarks"></a>解説  
+ この関数は、ファイル名の指定が Unicode ではなく ANSI であることを除けば[、GetHashFromFileW](gethashfromfilew-function.md)と同じです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** ストロングネーム.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetHashFromFile メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [GetHashFromFileW メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFile メソッド](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [GetHashFromFileW メソッド](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

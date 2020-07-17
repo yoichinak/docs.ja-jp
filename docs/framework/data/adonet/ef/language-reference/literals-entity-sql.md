@@ -2,12 +2,12 @@
 title: リテラル (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: e07dd3217e133fff98beb11ecad47e1474e4974a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760663"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319665"
 ---
 # <a name="literals-entity-sql"></a>リテラル (Entity SQL)
 このトピックでは、リテラルに関する [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のサポートについて説明します。  
@@ -15,14 +15,14 @@ ms.locfileid: "61760663"
 ## <a name="null"></a>Null  
  NULL リテラルは、あらゆる型で NULL 値を表す際に使用されます。 NULL リテラルは、すべての型と互換性があります。  
   
- NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、次を参照してください。[キャスト](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)します。  
+ NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳しくは、「[CAST](cast-entity-sql.md)」をご覧ください。  
   
- Null リテラルが使用できるを参照してくださいかの規則については、浮動小数点を無料の[Null リテラルと型推論](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)します。  
+ 型指定されない NULL リテラルを使用できる場合に関する規則については、「[NULL リテラルと型推論](null-literals-and-type-inference-entity-sql.md)」をご覧ください。  
   
 ## <a name="boolean"></a>ブール型  
  ブール型リテラルは、`true` と `false` のキーワードで表されます。  
   
-## <a name="integer"></a>整数  
+## <a name="integer"></a>整数型  
  整数リテラルには、<xref:System.Int32> 型と <xref:System.Int64> 型とがあります。 <xref:System.Int32> リテラルは、一連の数字で構成されます。 <xref:System.Int64> リテラルは、一連の数字で構成され、最後に大文字の L が付きます。  
   
 ## <a name="decimal"></a>Decimal (10 進数型)  
@@ -34,7 +34,7 @@ ms.locfileid: "61760663"
 ## <a name="string"></a>String  
  文字列は、引用符で囲まれた一連の文字です。 引用符には、単一引用符 (`'`) または二重引用符 (") を使用できますが、両者を混在させることはできません。 文字列リテラルには、Unicode と非 Unicode のどちらでも使用できます。 文字列リテラルを Unicode として宣言するには、リテラルの前に大文字の "N" を付けます。 既定では、Unicode でない文字列リテラルです。 N と文字列リテラルの間に空白は含めません。また、N は大文字にする必要があります。  
   
-```  
+```sql  
 'hello' -- non-Unicode character string literal  
 N'hello' -- Unicode character string literal  
 "x"  
@@ -45,13 +45,13 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  datetime リテラルは、日付部分と時刻部分とで構成され、ロケールに依存しません。 日付部分と時刻部分のどちらも省略することはできず、既定値はありません。  
   
- 日付の部分は、形式が必要: `YYYY` - `MM` -`DD`ここで、 `YYYY` 0001 ~ 9999 の 4 桁の年の値は、`MM`は 1 ~ 12 の月と`DD`は指定された月は有効な日付の値`MM`します。  
+ 日付部分は、`YYYY`-`MM`-`DD` という形式になっている必要があります。`YYYY` は 0001 から 9999 の 4 桁の年、`MM` は 1 から 12 の月、`DD` は特定の月 (`MM`) に対して有効な日を表します。  
   
  時刻部分は `HH`:`MM`[:`SS`[.fffffff]] の形式にする必要があります。ここで、`HH` は 0 ～ 23 時の値、`MM` は 0 ～ 59 分の値、`SS` は 0 ～ 59 秒の値、fffffff は 0 ～ 9999999 の 1 秒未満部分の値を表します。 いずれも両端の値を含みます。 1 秒未満部分は省略可能です。 1 秒未満部分を指定しなければ、秒は省略可能です。1 秒未満部分を指定する場合、秒は必須です。 秒も 1 秒未満部分も指定しない場合は、既定値の 0 が使用されます。  
   
  DATETIME 記号とリテラル ペイロード間の空白の数に制限はありませんが、改行はできません。  
   
-```  
+```sql  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
@@ -61,46 +61,46 @@ DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'
   
  TIME 記号とリテラル ペイロード間の空白の数に制限はありませんが、改行はできません。  
   
-```  
+```sql  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- datetimeoffset リテラルは、日付部分、時刻部分、およびオフセット部分で構成され、ロケールに依存しません。 日付部分、時刻部分、オフセット部分はすべて必須で、既定値はありません。 日付部分は YYYY-MM-DD の形式にする必要があります。ここで、YYYY は 0001 ～ 9999 の 4 桁の年、MM は 1 ～ 12 の月、DD は特定の月の有効な日付を表します。 時刻部分は HH:MM[:SS[.fffffff]] の形式にする必要があります。ここで、HH は 0 ～ 23 時の値、MM は 0 ～ 59 分の値、SS は 0 ～ 59 秒の値、fffffff は 0 ～ 9999999 の 1 秒未満部分の値を表します。 いずれも両端の値を含みます。 1 秒未満部分は省略可能です。 1 秒未満部分を指定しなければ、秒は省略可能です。1 秒未満部分を指定する場合、秒は必須です。 秒も 1 秒未満部分も指定しない場合は、既定値の 0 が使用されます。 オフセットの部分は、形式が必要 {0} +&#124;-} HH:MM、HH と MM が時刻部分と同じ意味があります。 オフセットの範囲は -14:00 ～ + 14:00 でなければなりません。  
+ datetimeoffset リテラルは、日付部分、時刻部分、およびオフセット部分で構成され、ロケールに依存しません。 日付部分、時刻部分、オフセット部分はすべて必須で、既定値はありません。 日付部分は YYYY-MM-DD の形式にする必要があります。ここで、YYYY は 0001 ～ 9999 の 4 桁の年、MM は 1 ～ 12 の月、DD は特定の月の有効な日付を表します。 時刻部分は HH:MM[:SS[.fffffff]] の形式にする必要があります。ここで、HH は 0 ～ 23 時の値、MM は 0 ～ 59 分の値、SS は 0 ～ 59 秒の値、fffffff は 0 ～ 9999999 の 1 秒未満部分の値を表します。 いずれも両端の値を含みます。 1 秒未満部分は省略可能です。 1 秒未満部分を指定しなければ、秒は省略可能です。1 秒未満部分を指定する場合、秒は必須です。 秒も 1 秒未満部分も指定しない場合は、既定値の 0 が使用されます。 オフセット部分は、{+&#124;-}HH:MM の形式にする必要があります。ここで、HH と MM は時刻部分と同じ意味です。 オフセットの範囲は -14:00 ～ + 14:00 でなければなりません。  
   
  DATETIMEOFFSET 記号とリテラル ペイロード間の空白の数に制限はありませんが、改行はできません。  
   
-```  
+```sql  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
 DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’  
 ```  
   
 > [!NOTE]
->  有効な Entity SQL リテラル値は、CLR またはデータ ソースに対してサポートされている範囲に含まれないことがあります。 その結果、例外が発生する可能性があります。  
+> 有効な Entity SQL リテラル値は、CLR またはデータ ソースに対してサポートされている範囲に含まれないことがあります。 その結果、例外が発生する可能性があります。  
   
 ## <a name="binary"></a>2 項  
  バイナリ文字列リテラルは、binary キーワードあるいは簡略記号 `X` または `x` と、それに続く単一引用符で囲まれた一連の 16 進数字で構成されます。 簡略記号 `X` は、大文字と小文字は区別されません。 キーワード `binary` と、バイナリ文字列値との間には、0 個以上の空白文字が許容されます。  
   
  16 進文字についても、大文字と小文字は区別されません。 リテラルが奇数個の 16 進数字で構成されていた場合、桁数が次に大きな偶数個となるように、先頭に 16 進数の 0 を付けることによって調整されます。 バイナリ文字列にサイズの制限はありません。  
   
-```  
+```sql  
 Binary'00ffaabb'  
 X'ABCabc'  
 BINARY    '0f0f0f0F0F0F0F0F0F0F'  
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
- `GUID` リテラルは、グローバル一意識別子を表します。 キーワードを使用して形成されたシーケンスが`GUID`と呼ばれる形式で 16 進数の数字が続く*レジストリ*形式。8-4-4-4-12 単一引用符で囲まれています。 16 進数字の大文字と小文字は区別されません。  
+## <a name="guid"></a>GUID  
+ `GUID` リテラルは、グローバル一意識別子を表します。 キーワード `GUID` の後に、"*レジストリ*" 形式と呼ばれる次のような形式の 16 進数字が続きます: 単一引用符で囲まれた 8-4-4-4-12。 16 進数字の大文字と小文字は区別されません。  
   
  GUID 記号とリテラル ペイロード間の空白の数に制限はありませんが、改行はできません。  
   
-```  
+```sql  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL の概要](entity-sql-overview.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5557da1531eb55c13d1c7540a50b044d1a7b8a1d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337696"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276336"
 ---
 # <a name="applying-attributes"></a>属性の適用
 コードの要素に属性を適用するには、次のプロセスを使用します。  
@@ -50,12 +48,12 @@ ms.locfileid: "59337696"
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- この属性が適用されると、ファイルのメタデータ部分のアセンブリ マニフェストの中に、文字列 `"My Assembly"` が挿入されます。 この属性を表示するには、[MSIL 逆アセンブラー (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用するか、または属性を取得するためのプログラムを作成します。  
+ この属性が適用されると、ファイルのメタデータ部分のアセンブリ マニフェストの中に、文字列 `"My Assembly"` が挿入されます。 この属性を表示するには、[MSIL 逆アセンブラー (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用するか、または属性を取得するためのプログラムを作成します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [属性](../../../docs/standard/attributes/index.md)
-- [属性に格納されている情報の取得](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [属性](index.md)
+- [属性に格納されている情報の取得](retrieving-information-stored-in-attributes.md)
 - [概念](/cpp/windows/attributed-programming-concepts)
 - [属性 (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [属性の概要 (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

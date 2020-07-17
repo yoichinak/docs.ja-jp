@@ -1,13 +1,13 @@
 ---
-title: メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML) (Visual Basic)
+title: メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 5b43d28390927fa1426f914fa6fd88a1a5d00b9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: efdbf51efa0f502ac9991d520defe45bb95678b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613606"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397610"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML) (Visual Basic)
 XML ドキュメントの構造を変更する場合は、XML ツリーを直接変更するのが従来の方法です。 一般的なアプリケーションでは、ドキュメントを DOM や [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] などのデータ ストアに読み込み、プログラミング インターフェイスを使用してノードの挿入、削除、または内容変更を行い、その後に XML をファイルに保存するか、またはネットワーク上に送信します。  
@@ -76,4 +76,4 @@ Console.WriteLine(newTree)
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリー (LINQ to XML) の変更 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [XML ツリーの変更 (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

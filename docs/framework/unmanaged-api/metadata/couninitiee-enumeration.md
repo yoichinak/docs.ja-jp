@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d8189365a73e85c0b9f5efb2aa03074385a3fb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14942680a79c4d1fcc69092a4f752738db1fb0b0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750745"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008918"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列挙型
-使用される定数を指定します[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)共通言語ランタイムを初期化するときにします。  
+共通言語ランタイムを初期化するときに[CoUninitializeEE](../hosting/couninitializeee-function.md)によって使用される定数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
 {  
-    COUNINITEE_DEFAULT  = 0x0,   
+    COUNINITEE_DEFAULT  = 0x0,
     COUNINITEE_DLL      = 0x1  
 } COUNINITIEE;  
 ```  
@@ -40,18 +38,18 @@ typedef enum tagCOUNINITEE
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|既定の初期化解除モードを示します。|  
-|`COUNINITEE_DLL`|アセンブリをアンロードするための初期化解除モードを示します。|  
+|`COUNINITEE_DEFAULT`|既定の初期化解除中モードを示します。|  
+|`COUNINITEE_DLL`|アセンブリをアンロードするための初期化解除中モードを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 436683ef-9849-4b24-89a9-28c06d148dce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a342abd12cf75b6f7c38a5103ad7cbed49c0d5f
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922006"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842219"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle インターフェイス
-ラップ解除の値渡しのマーシャ リングするオブジェクトの間接参照メソッドを提供します。  
+値渡しのマーシャリングオブジェクトを間接参照からラップ解除するためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Unwrap メソッド](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|間接参照から値渡しのマーシャ リングするオブジェクトをアンラップされます。|  
+|[Unwrap メソッド](iobjecthandle-unwrap-method.md)|間接参照から値渡しのマーシャリングオブジェクトをラップ解除します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ホスト インターフェイス](hosting-interfaces.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82b03a59-5a87-43ed-9b75-e04b256e1a46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d1733b423b2c49de3c36fc5448f7f24da1b5c44
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2174afe0ee96bd153b7b40c73c0185d9058a0dc
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751334"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760339"
 ---
 # <a name="icorthreadpoolcorchangetimer-method"></a>ICorThreadpool::CorChangeTimer メソッド
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
@@ -31,22 +29,22 @@ ms.locfileid: "67751334"
   
 ```cpp  
 HRESULT CorChangeTimer (  
-    [in]  HANDLE Timer,   
-    [in]  ULONG  DueTime,   
+    [in]  HANDLE Timer,
+    [in]  ULONG  DueTime,
     [in]  ULONG  Period,  
     [out] BOOL*  result  
 );  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorThreadpool インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool インターフェイス](icorthreadpool-interface.md)

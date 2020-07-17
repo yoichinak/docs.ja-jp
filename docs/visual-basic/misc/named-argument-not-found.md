@@ -1,15 +1,15 @@
 ---
-title: 名前付き引数が見つかりません (Visual Basic)
+title: 名前付き引数が見つかりません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID448
 ms.assetid: b7d63962-9cac-466b-8bee-41debd7d79c7
-ms.openlocfilehash: d57e46d1b1317978dad91b077b75e6fb95eff474
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba8620caa5146c78e2cf17fca9b4f586db49e9b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626504"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402058"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>名前付き引数が見つかりません (Visual Basic)
 名前付き引数は、プロシージャの定義で使用される場合を除き、プロシージャの呼び出しでは使用されません。 名前付き引数を指定しましたが、プロシージャがその名前の引数を受け入れるように定義されていません。  
@@ -20,4 +20,4 @@ ms.locfileid: "64626504"
   
 ## <a name="see-also"></a>関連項目
 
-- [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)
+- [エラーの種類](../programming-guide/language-features/error-types.md)

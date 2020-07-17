@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0cf9aceef54998f269e9e377fe5d0a48492969c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648738"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408687"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -18,7 +18,7 @@ ms.locfileid: "61648738"
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 -deterministic
 ```
 
@@ -44,7 +44,7 @@ ms.locfileid: "61648738"
   - アナライザーによって使用される可能性がある追加のファイル
 - 現在のカルチャ (診断と例外メッセージが生成される言語)。
 - エンコードが指定されていない場合の既定のエンコード (または現在のコード ページ)。
-- コンパイラの検索パス上のファイルの有無、および内容 (たとえば、`/lib` や `/recurse` で指定)。
+- コンパイラの検索パス上のファイルの有無、および内容 (たとえば、`-lib` や `-recurse` で指定)。
 - コンパイラが実行される CLR プラットフォーム。
 - `%LIBPATH%` の値。アナライザーの依存関係の読み込みに影響する場合があります。
 
@@ -52,5 +52,5 @@ ms.locfileid: "61648738"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

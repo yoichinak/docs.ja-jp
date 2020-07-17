@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739528"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795665"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 列挙型
 デバッグのスレッドの状態を指定します。  
@@ -39,23 +37,23 @@ typedef enum CorDebugThreadState {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`THREAD_RUN`|デバッグ イベントが発生しない限り、スレッドは、自由に実行されます。|  
-|`THREAD_SUSPEND`|スレッドは実行できません。|  
+|`THREAD_RUN`|デバッグイベントが発生しない限り、スレッドは自由に実行できます。|  
+|`THREAD_SUSPEND`|スレッドを実行できません。|  
   
 ## <a name="remarks"></a>Remarks  
- デバッガーを使用して、`CorDebugThreadState`スレッドの実行を制御する列挙。 使用してスレッドの状態を設定することができます、 [icordebugthread::setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)または[icordebugcontroller::setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)メソッド。  
+ デバッガーは、列挙`CorDebugThreadState`体を使用してスレッドの実行を制御します。 スレッドの状態を設定するには、次のように指定する必要があります: [: SetDebugState](icordebugthread-setdebugstate-method.md)または、モジュール[:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md)メソッド。  
   
- 提供されるコールバック、 [API をホストしている](../../../../docs/framework/unmanaged-api/hosting/index.md)メッセージ ポンプを使用するため、中断状態は必要ありません。  
+ [ホスティング API](../hosting/index.md)に提供されるコールバックによってメッセージポンプが可能になるため、中断された状態は必要ありません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)

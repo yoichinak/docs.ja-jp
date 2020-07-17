@@ -3,24 +3,24 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 064b01a30410b147e89b0f87180d5af9269a3a87
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634511"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396893"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
 このチュートリアルでは、C# 言語の概要と <xref:System.Collections.Generic.List%601> クラスの基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="a-basic-list-example"></a>基本のリストの例
 
-**list-tutorial** という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console` を実行します。
+*list-tutorial* という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console` を実行します。
 
-好みのエディターで **Program.cs** を開き、既存のコードを次のコードで置き換えます。
+好みのエディターで *Program.cs* を開き、既存のコードを次のコードで置き換えます。
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-`<name>` をユーザー名で置き換えます。 **Program.cs** を保存します。 コンソール ウィンドウに「`dotnet run`」と入力して試します。
+`<name>` をユーザー名で置き換えます。 *Program.cs* を保存します。 コンソール ウィンドウに「`dotnet run`」と入力して試します。
 
 文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
 
@@ -86,14 +86,15 @@ Console.WriteLine($"The list has {names.Count} people in it");
 
 ## <a name="search-and-sort-lists"></a>リストを検索して並び替える
 
-サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 `Main` メソッドの下部に次のコードを追加します。
+サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 項目がリストにない場合、`IndexOf` は `-1` を返します。 `Main` メソッドの下部に次のコードを追加します。
 
 ```csharp
 var index = names.IndexOf("Felipe");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 }
@@ -102,7 +103,8 @@ index = names.IndexOf("Not Found");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 
@@ -136,7 +138,7 @@ namespace list_tutorial
             WorkingWithStrings();
         }
 
-        public static void WorkingWithStrings()
+        static void WorkingWithStrings()
         {
             var names = new List<string> { "<name>", "Ana", "Felipe" };
             foreach (var name in names)
@@ -159,10 +161,25 @@ namespace list_tutorial
             Console.WriteLine($"The list has {names.Count} people in it");
 
             var index = names.IndexOf("Felipe");
-            Console.WriteLine($"The name {names[index]} is at index {index}");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+            }
 
-            var notFound = names.IndexOf("Not Found");
-            Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+            index = names.IndexOf("Not Found");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+
+            }
 
             names.Sort();
             foreach (var name in names)
@@ -192,7 +209,7 @@ var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
 
 fibonacciNumbers.Add(previous + previous2);
 
-foreach(var item in fibonacciNumbers)
+foreach (var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
@@ -207,10 +224,10 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>課題完了
 
-[GitHub にある完成したサンプル コード](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)で、ソリューションの例を確認できます。
+[GitHub にある完成したサンプル コードを表示すること](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)で、ソリューションの例を確認できます。
 
 ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
 
 おつかれさまでした。リストについてのチュートリアルはこれで終了です。 続けて独自の開発環境で[クラスの概要](introduction-to-classes.md)のチュートリアルに進むことができます。
 
-`List` 型の使用方法の詳細については、[.NET ガイド](../../../standard/index.md)の[コレクション](../../../standard/collections/index.md)に関するトピックで学習できます。 その他の多くのコレクション型についても学習できます。
+`List` 型の使用方法の詳細については、「[.NET ガイド](../../../standard/index.yml)」の[コレクション](../../../standard/collections/index.md)に関する記事を参照してください。 その他の多くのコレクション型についても学習できます。

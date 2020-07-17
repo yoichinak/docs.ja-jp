@@ -1,17 +1,16 @@
 ---
 title: クエリ キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633023"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173524"
 ---
 # <a name="query-keywords-c-reference"></a>クエリ キーワード (C# リファレンス)
 
@@ -19,12 +18,12 @@ ms.locfileid: "65633023"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|句|説明|
+|句|[説明]|
 |------------|-----------------|
 |[from](from-clause.md)|データ ソースおよび範囲変数 (反復変数に類似) を指定します。|
 |[where](where-clause.md)|論理 AND 演算子 (`&&`) と論理 OR 演算子 (<code>&#124;&#124;</code>) で区切られた 1 つ以上のブール式に基づき、ソース要素をフィルター処理します。|
 |[select](select-clause.md)|クエリ実行で返されるシーケンスに含まれる要素の型と形状を指定します。|
-|[group](group-clause.md)|指定したキー値に基づき、クエリ結果をグループ化します。|
+|[グループ](group-clause.md)|指定したキー値に基づき、クエリ結果をグループ化します。|
 |[into](into.md)|join 句、group 句、または select 句の結果への参照として機能する識別子を指定します。|
 |[orderby](orderby-clause.md)|要素型の既定の比較子に基づき、クエリ結果を昇順または降順で並べ替えます。|
 |[join](join-clause.md)|指定した 2 つの一致基準の等価比較に基づき、2 つのデータ ソースを結合します。|
@@ -36,9 +35,8 @@ ms.locfileid: "65633023"
 |[ascending](ascending.md)|[orderby](orderby-clause.md) 句のコンテキスト キーワードです。|
 |[descending](descending.md)|[orderby](orderby-clause.md) 句のコンテキスト キーワードです。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# のキーワード](index.md)
 - [統合言語クエリ (LINQ)](../../programming-guide/concepts/linq/index.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# での LINQ](../../linq/index.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8fc581904351443f4368a68a653fd39b3548999a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741418"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179382"
 ---
 # <a name="setpekind-method"></a>SetPEKind メソッド
-コンピューター固有またはマシンに依存しないのいずれかのノートブックの実行可能ファイル タイプを決定します。  
+ポータブル実行可能ファイルの種類を、コンピューター固有またはマシンに依存しない型を決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +32,7 @@ HRESULT SetPEKind(
     mdToken FileToken,  
     DWORD dwPEKind,  
     DWORD dwMachine  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>パラメーター  
@@ -42,23 +40,23 @@ HRESULT SetPEKind(
  アセンブリの ID。  
   
  `FileToken`  
- PE の種類を設定するファイルのトークン。 場合に NULL が`AssemblyID`バインドされていない netmodule では示されません。  
+ PE タイプが設定されるファイルのトークン。 非バインドネットモジュール`AssemblyID`を示さない場合は NULL にできます。  
   
  `dwPEKind`  
- 示されている PE の型、 [CorPEKind 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)します。  
+ [CorPEKind 列挙](../metadata/corpekind-enumeration.md)で示されている PE の型。  
   
  `dwMachine`  
- ターゲット コンピューターのアーキテクチャ、NT ヘッダーに記載されています。  
+ NT ヘッダーに示されている、ターゲット コンピュータのアーキテクチャ。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は、S_OKを返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetPEKind メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [GetPEKind メソッド](../metadata/imetadataimport2-getpekind-method.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

@@ -2,14 +2,14 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673460"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "77448686"
 ---
-# <a name="behaviorextensions"></a>\<behaviorExtensions>
+# \<behaviorExtensions>
 動作の拡張により、ユーザーはユーザー定義の動作要素を作成できます。 これらの要素は、標準の Windows Communication Foundation (WCF) 動作要素と共に使用できます。 `behaviorExtensions` セクションでは、構成で使用できるように要素を定義します。 次の例は、一般的な動作拡張を示します。  
   
 ```xml  
@@ -47,11 +47,11 @@ ms.locfileid: "61673460"
   
  型のアセンブリが判明している場合、ローダーは構成ファイルのリダイレクトの場所、GAC、構成情報を使用する現在のアセンブリ、およびアプリケーションの基本ディレクトリを検索します。 アセンブリが判明していない場合、ローダーは現在のアセンブリ、mscorlib、および `TypeResolve` イベント ハンドラーによって返される場所を検索します。 この CLR 検索順序は、Type Forwarding 機構や AppDomain.TypeResolve イベントなどのフックを使用して変更できます。  
   
- 攻撃者が CLR 検索順序を悪用して、未承認のコードを実行する可能性があります。 (厳密な) 完全修飾名を使用すると、型が一意に識別され、システムのセキュリティがさらに強化されます。  
+ 攻撃者が CLR 検索順序を悪用して、未承認のコードを実行する可能性があります。 完全修飾名 (厳密な名前) を使用することで型が一意に識別され、システムのセキュリティが強化されます。  
   
- 詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](https://go.microsoft.com/fwlink/?LinkId=95336)と<xref:System.AppDomain.TypeResolve>します。  
+ 詳細については、「[ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)」と「」を参照してください <xref:System.AppDomain.TypeResolve> 。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
-- [動作を使用したランタイムの構成と拡張](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [動作を使用したランタイムの構成と拡張](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

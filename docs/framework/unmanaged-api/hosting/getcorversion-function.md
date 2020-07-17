@@ -15,49 +15,47 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe5525fc29bc01bb84f7f2997d115eec12d72b13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23d68e8e4bbd87779e3b49f0c40f5a5ab9f5124f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736271"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617218"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 関数
 現在のプロセスで実行されている共通言語ランタイム (CLR) のバージョン番号を返します。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetCORVersion (  
     [in] LPWSTR  pbuffer,  
-    [in]  DWORD   cchBuffer,   
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pbuffer`  
- CLR がプロセスに現在読み込まれてはランタイムのバージョンを指定する文字列を返すバッファーへのポインター。 渡される文字列として返される文字列は同じ形式を取ります[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)、たとえば、"v1.0.1216"。 ランタイムがプロセスにまだ読み込まれていない場合は、コンピューターにインストールされているランタイムの最新バージョンの適切なディレクトリ情報を返します。  
+ 現在プロセスに読み込まれているランタイムのバージョンを指定する文字列を CLR が返すバッファーへのポインター。 返される文字列は、 [Corbindtoruntimeex](corbindtoruntimeex-function.md)に渡される文字列と同じ形式になります (例、"v 1.0.1216")。 ランタイムがまだプロセスに読み込まれていない場合、関数はコンピューターにインストールされている最新バージョンのランタイムの適切なディレクトリ情報を返します。  
   
  `cchBuffer`  
- 文字数 (`WCHAR`秒) 内に保持することができますを`pbuffer`します。  
+ `WCHAR`で保持できる文字の数 `pbuffer` です。  
   
  `dwLength`  
- 実際に返される文字数へのポインター`pbuffer`します。 場合`pbuffer`が null ポインターの場合、ランタイムが E_POINTER を返します。 文字の数が大きい場合の長さ、`pbuffer`ランタイムは ERROR_INSUFFICIENT_BUFFER を返します。  
+ で実際に返された文字数へのポインター `pbuffer` 。 `pbuffer`が null ポインターの場合、ランタイムは E_POINTER を返します。 文字数がの長さを超える場合 `pbuffer` 、ランタイムは ERROR_INSUFFICIENT_BUFFER を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

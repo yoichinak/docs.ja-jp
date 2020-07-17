@@ -1,5 +1,6 @@
 ---
 title: '方法: .NET Framework 4.5 インストーラーの進行状況を表示する'
+description: .NET 4.5 インストーラーの進行状況を表示する方法について説明します。 このバージョンの .NET 用アプリを開発する場合は、アプリのセットアップに .NET 4.5 セットアップを含める (チェーンする) ことができます。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379930"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904261"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 
@@ -24,13 +23,11 @@ ms.locfileid: "66379930"
 
     1. .NET Framework 4.5 再頒布可能プログラムを呼び出します。
 
-        ```
-        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
-        ```
+        `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
         この *section name* は、アプリの識別に使用する名前です。 .NET Framework のセットアップでは MMIO セクションに対する読み書きを非同期に行うので、その間、イベントおよびメッセージの使用が役立つ場合があります。 この例では、.NETFramework セットアップ プロセスは、MMIO セクションの割り当て (`TheSectionName`) とイベントの定義 (`TheEventName`) の両方を行うコンストラクターによって作成されます。
 
-        ```
+        ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 
@@ -52,18 +49,18 @@ ms.locfileid: "66379930"
 
 ## <a name="chainer-sample"></a>チェーン元のサンプル
 
-チェーン元のサンプルが、進行状況を表示しながらサイレントで起動し、.NET Framework 4.5 セットアップを追跡します。 このサンプルは、.NET Framework 4 用のチェーン元サンプルに似ています。 ただし、.NET Framework 4 アプリケーションを閉じるためのメッセージ ボックスを処理することで、システムの再起動を避けることができます。 このメッセージ ボックスの詳細については、「[.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)」を参照してください。 このサンプルは .NET Framework 4 インストーラーで使用できます。そのシナリオではメッセージは送信されません。
+チェーン元のサンプルが、進行状況を表示しながらサイレントで起動し、.NET Framework 4.5 セットアップを追跡します。 このサンプルは、.NET Framework 4 用のチェーン元サンプルに似ています。 ただし、.NET Framework 4 アプリケーションを閉じるためのメッセージ ボックスを処理することで、システムの再起動を避けることができます。 このメッセージ ボックスの詳細については、「[.NET Framework 4.5 のインストール中のシステム再起動の削減](reducing-system-restarts.md)」を参照してください。 このサンプルは .NET Framework 4 インストーラーで使用できます。そのシナリオではメッセージは送信されません。
 
 > [!WARNING]
 > 例の実行は、管理者として行う必要があります。
 
-MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元のサンプル](https://go.microsoft.com/fwlink/?LinkId=231345)の完全な Visual Studio ソリューションをダウンロードできます。
+MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元のサンプル](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba)の完全な Visual Studio ソリューションをダウンロードできます。
 
 以下のセクションでは、この例の重要なファイルである MMIOChainer.h、ChainingdotNet4.cpp、および IProgressObserver.h について説明します。
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h ファイル ([完全なコード](https://go.microsoft.com/fwlink/?LinkId=231369)を参照) には、データ構造体の定義と、チェーン元クラスが派生する基底クラスが含まれます。 .NET Framework 4.5 によって、MMIO データ構造体が拡張され、.NET Framework 4.5 インストーラーが必要とするデータが処理されます。 MMIO 構造体への変更には下位互換性があるため、.NET Framework 4 チェーン元は、再コンパイルを必要とせずに .NET Framework 4.5 のセットアップで機能します。 ただし、このシナリオはシステムの再起動を削減するための機能をサポートしていません。
+- MMIOChainer.h ファイル ([完全なコード](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)を参照) には、データ構造体の定義と、チェーン元クラスが派生する基底クラスが含まれます。 .NET Framework 4.5 によって、MMIO データ構造体が拡張され、.NET Framework 4.5 インストーラーが必要とするデータが処理されます。 MMIO 構造体への変更には下位互換性があるため、.NET Framework 4 チェーン元は、再コンパイルを必要とせずに .NET Framework 4.5 のセットアップで機能します。 ただし、このシナリオはシステムの再起動を削減するための機能をサポートしていません。
 
     バージョン フィールドは、構造体およびメッセージ形式へのリビジョンを識別するための手段を提供します。 .NET Framework セットアップでは、`VirtualQuery` 関数を呼び出してファイル マップのサイズを判断することで、チェーン元インターフェイスのバージョンを判別します。 サイズがバージョン フィールドに対応できる十分な大きさである場合、.NET Framework セットアップでは指定された値を使用します。 .NET Framework 4 の場合のように、バージョン フィールドを含めるにはファイル マップが小さすぎる場合、セットアップ プロセスではバージョン 0 (4) を使用します。 .NET Framework セットアップが送信しようとするメッセージのバージョンをチェーン元がサポートしていない場合、.NET Framework セットアップでは応答を無視します。
 
@@ -100,7 +97,7 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
-- IProgressObserver.h ファイルは進行状況のオブザーバー ([完全なコードを参照](https://go.microsoft.com/fwlink/?LinkId=231370)) を実装します。 このオブザーバーは、ダウンロードとインストールの進行状況 (1% ～ 100% 完了を示す、符号なしの `char` 0 ～ 255 の値で指定) の通知を受け取ります。 オブザーバーは、チェーン対象がメッセージを送信したときにも通知を受け取ります。通知を受け取ったオブザーバーは、応答を送信する必要があります。
+- IProgressObserver.h ファイルは進行状況のオブザーバー ([完全なコードを参照](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)) を実装します。 このオブザーバーは、ダウンロードとインストールの進行状況 (1% ～ 100% 完了を示す、符号なしの `char` 0 ～ 255 の値で指定) の通知を受け取ります。 オブザーバーは、チェーン対象がメッセージを送信したときにも通知を受け取ります。通知を受け取ったオブザーバーは、応答を送信する必要があります。
 
     ```cpp
         class IProgressObserver
@@ -114,7 +111,7 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
 
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
-- [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) ファイルは、`Server` クラスを実装します。このクラスは `MmioChainer` クラスから派生し、適切なメソッドをオーバーライドして進行状況情報を表示します。 MmioChainer は、指定されたセクション名でセクションを作成し、指定されたイベント名でチェーン元を初期化します。 イベント名は、マップされたデータ構造体に保存されます。 セクションとイベント名は一意にする必要があります。 次のコードの `Server` クラスは、指定されたセットアップ プログラムを起動して進行状況を監視し、終了コードを返します。
+- [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) ファイルは、`Server` クラスを実装します。このクラスは `MmioChainer` クラスから派生し、適切なメソッドをオーバーライドして進行状況情報を表示します。 MmioChainer は、指定されたセクション名でセクションを作成し、指定されたイベント名でチェーン元を初期化します。 イベント名は、マップされたデータ構造体に保存されます。 セクションとイベント名は一意にする必要があります。 次のコードの `Server` クラスは、指定されたセットアップ プログラムを起動して進行状況を監視し、終了コードを返します。
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver
@@ -313,5 +310,5 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
 
 ## <a name="see-also"></a>関連項目
 
-- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [配置](../../../docs/framework/deployment/index.md)
+- [配置ガイド (開発者向け)](deployment-guide-for-developers.md)
+- [配置](index.md)

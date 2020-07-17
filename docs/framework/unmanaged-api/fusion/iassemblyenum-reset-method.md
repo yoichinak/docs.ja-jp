@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e08308d2-7397-4616-b7a6-f81b7686fed6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 528a385657721298772693809dd696531c6a4e8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134403"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset メソッド
-これをリセット[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)オブジェクトを開始位置。  
+この[Iassemblyenum](iassemblyenum-interface.md)オブジェクトを開始位置にリセットします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,13 +33,13 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyEnum インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyEnum インターフェイス](iassemblyenum-interface.md)

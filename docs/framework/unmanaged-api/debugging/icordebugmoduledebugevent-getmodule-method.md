@@ -2,14 +2,12 @@
 title: ICorDebugModuleDebugEvent::GetModule メソッド
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: debf2e9dd08f6a35801932b22fbd985e7299b79f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1df71ddbf1ee76cc8202d8f9e263b9d95b4aaa09
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764352"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213362"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent::GetModule メソッド
 ロードまたはアンロードされたばかりのマージ モジュールを取得します。  
@@ -24,24 +22,24 @@ HRESULT GetModule(
   
 ## <a name="parameters"></a>パラメーター  
  `ppModule`  
- [out]ICorDebugModule だけロードまたはアンロードされたマージ モジュールを表すオブジェクトのアドレスへのポインター。  
+ [out] ロードまたはアンロードされたばかりのマージ モジュールを表す ICorDebugModule オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出すことができます、 [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)モジュールの読み込みまたはアンロードされたかどうかを判断するメソッド。  
+ [Geteventkind](icordebugdebugevent-geteventkind-method.md)メソッドを呼び出して、モジュールが読み込まれたかアンロードされたかを確認できます。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugModuleDebugEvent インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugModuleDebugEvent インターフェイス](icordebugmoduledebugevent-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

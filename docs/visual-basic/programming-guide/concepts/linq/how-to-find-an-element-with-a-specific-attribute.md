@@ -1,21 +1,21 @@
 ---
-title: '方法: 特定の属性 (Visual Basic) を持つ要素を検索します。'
+title: '方法: 特定の属性を持つ要素を検索する'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: ec5d3bf46d517e2cfb27c228674d9b86fefffa14
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855622"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405249"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>方法: 特定の属性 (Visual Basic) を持つ要素を検索します。
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>方法: 特定の属性を持つ要素を検索する (Visual Basic)
 このトピックでは、特定の値を含む属性を持つ要素を検索する方法について説明します。  
   
 ## <a name="example"></a>例  
  この例では、"Billing" の値を含む `Address` 属性を持つ `Type` 要素を検索する方法を示します。  
   
- この例では、XML ドキュメント、[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) を使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md) を使用します。  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,12 +41,12 @@ Next
 </Address>  
 ```  
   
- この例では使用に注意してください、 [XML 子軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)、および[XML Value プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)します。  
+ この例では、[XML 子軸プロパティ](../../../language-reference/xml-axis/xml-child-axis-property.md)、[XML 属性軸プロパティ](../../../language-reference/xml-axis/xml-attribute-axis-property.md)、および [XML 値プロパティ](../../../language-reference/xml-axis/xml-value-property.md)が使用されることに注意してください。  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
- この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。  
+ この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -82,6 +82,6 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [射影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [射影操作 (Visual Basic)](projection-operations.md)

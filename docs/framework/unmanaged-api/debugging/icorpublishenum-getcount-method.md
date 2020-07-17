@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1465a667763c12593c4bc89148d70f85371fcc67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ed4236187fab1c1e81be9ddcdff1f1852e38f70
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775557"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421190"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount メソッド
 列挙に含まれる項目の数を取得します。  
@@ -37,17 +35,17 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>パラメーター  
  `pcelt`  
- [out]列挙に含まれる項目数へのポインター。  
+ 入出力列挙体に含まれる項目の数へのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl, CorPub.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorPublishEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [ICorPublishEnum インターフェイス](icorpublishenum-interface.md)

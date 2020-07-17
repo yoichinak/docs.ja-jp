@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b159c712-00f4-4fc7-a990-40bf9f642e8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abe0a0fc177c9ec89f4621e7defb5330c911034b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462fc7222243f8cad4e1d03d1717eedace549836
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778609"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502939"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody メソッド
 指定したモジュール内の指定した関数の本体を置き換えます。  
@@ -38,30 +36,30 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]関数が存在するモジュールの ID。  
+ から関数が存在するモジュールの ID。  
   
  `methodid`  
- [in]本文を置換する関数のトークンです。  
+ から本文の置換対象となる関数のトークン。  
   
  `pbNewILMethodHeader`  
- [in]関数の新しいヘッダー。  
+ から関数の新しいヘッダー。  
   
-## <a name="remarks"></a>Remarks  
- `SetILFunctionBody`メソッドは、関数の新しい本文をポイントし、必要に応じて内部データ構造を調整できるように、メタデータ内の関数の相対仮想アドレスを置き換えます。  
+## <a name="remarks"></a>解説  
+ メソッドは、 `SetILFunctionBody` メタデータ内の関数の相対仮想アドレスを置き換えて、新しい関数本体をポイントし、必要に応じて内部データ構造を調整します。  
   
- `SetILFunctionBody`ことはありません - イン タイム (JIT) コンパイラによってコンパイルされた関数のみでメソッドを呼び出すことができます。  
+ メソッドは、 `SetILFunctionBody` just-in-time (JIT) コンパイラによってコンパイルされたことがない関数に対してのみ呼び出すことができます。  
   
- 使用して、 [icorprofilerinfo::getilfunctionbodyallocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)バッファーとの互換性があることを確認する新しいメソッドの領域を割り当てるためのメソッド。  
+ [ICorProfilerInfo:: GetILFunctionBodyAllocator](icorprofilerinfo-getilfunctionbodyallocator-method.md)メソッドを使用して、新しいメソッドの領域を割り当て、バッファーに互換性があることを確認します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

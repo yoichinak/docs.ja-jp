@@ -6,453 +6,451 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: c4b9cdc2bc90096ab7c3b041bd8aa2742b48c35c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025948"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179161"
 ---
 # <a name="debugging-interfaces"></a>デバッグのインターフェイス
 ここでは、共通言語ランタイム (CLR: Common Language Runtime) で実行するプログラムのデバッグを処理するアンマネージ インターフェイスについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ICLRDataEnumMemoryRegions インターフェイス](iclrdataenummemoryregions-interface.md)\
+ [インターフェイス](iclrdataenummemoryregions-interface.md)\
  呼び出し元が指定したメモリ範囲を列挙するメソッドを提供します。  
   
- [ICLRDataEnumMemoryRegionsCallback インターフェイス](iclrdataenummemoryregionscallback-interface.md)\
+ [コールバック インターフェイス](iclrdataenummemoryregionscallback-interface.md)\
  メモリの指定された領域を列挙した結果の `EnumMemoryRegions` をデバッガーにレポートするコールバック メソッドを提供します。  
   
- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)\
+ [インターフェイス](iclrdatatarget-interface.md)\
  対象の CLR プロセスと対話するためのメソッドを提供します。  
   
- [ICLRDataTarget2 インターフェイス](iclrdatatarget2-interface.md)\
+ [インターフェイス](iclrdatatarget2-interface.md)\
  データ アクセス サービス層で使用して対象プロセスの仮想メモリ領域を操作する、`ICLRDataTarget` のサブクラスです。  
   
- [ICLRDataTarget3 インターフェイス](iclrdatatarget3-interface.md)\
- サブクラス[ICLRDataTarget2](iclrdatatarget2-interface.md)例外情報へのアクセスを提供します。  
+ [インターフェイス](iclrdatatarget3-interface.md)\
+ 例外情報へのアクセスを提供する[ICLRDataTarget2](iclrdatatarget2-interface.md)のサブクラス。  
   
- [ICLRDebugging インターフェイス](iclrdebugging-interface.md)\
+ [インターフェイスのデバッグ](iclrdebugging-interface.md)\
  デバッグ用にモジュールの読み込みとアンロードを処理するメソッドを提供します。  
   
- [ICLRDebuggingLibraryProvider インターフェイス](iclrdebugginglibraryprovider-interface.md)\
- 含まれています、 [ProvideLibrary メソッド](iclrdebugginglibraryprovider-providelibrary-method.md)メソッドで、ライブラリ プロバイダーの共通言語ランタイム バージョン固有デバッグ ライブラリを検索しに読み込む要求を許可するコールバック インターフェイスを取得します。  
+ [インターフェイス](iclrdebugginglibraryprovider-interface.md)\
+ メソッドを含む[、 ProvideLibrary メソッド](iclrdebugginglibraryprovider-providelibrary-method.md)は、共通言語ランタイムのバージョン固有のデバッグ ライブラリを配置し、要求に応じて読み込むライブラリ プロバイダーのコールバック インターフェイスを取得します。  
   
- [ICLRMetadataLocator インターフェイス](iclrmetadatalocator-interface.md)\
+ [ICLR メタデータ ロケーター インターフェイス](iclrmetadatalocator-interface.md)\
  データ アクセス サービス層で使用して、対象プロセス内のアセンブリのメタデータを見つけるためのインターフェイスです。  
   
- [ICorDebug インターフェイス](icordebug-interface.md)\
+ [インターフェイス](icordebug-interface.md)\
  開発者が CLR 環境でアプリケーションをデバッグできるようにするメソッドを提供します。  
   
- [ICorDebugAppDomain インターフェイス](icordebugappdomain-interface.md)\
+ [インターフェイス](icordebugappdomain-interface.md)\
  アプリケーション ドメインをデバッグするためのメソッドを提供します。  
   
- [ICorDebugAppDomain2 インターフェイス](icordebugappdomain2-interface.md)\
+ [インターフェイス](icordebugappdomain2-interface.md)\
  配列、ポインター、関数ポインター、および ByRef 型を使用するメソッドを提供します。 これは、`ICorDebugAppDomain` インターフェイスの機能を拡張するインターフェイスです。  
   
- [ICorDebugAppDomain3 インターフェイス](icordebugappdomain3-interface.md)\
- アプリケーション ドメインで Windows ランタイム型を使用するメソッドを提供します。 このインターフェイスは、`ICorDebugAppDomain` インターフェイスと `ICorDebugAppDomain2` インターフェイスを拡張します。  
+ [インターフェイス](icordebugappdomain3-interface.md)\
+ アプリケーション ドメイン内の Windows ランタイム型を操作するメソッドを提供します。 このインターフェイスは、`ICorDebugAppDomain` インターフェイスと `ICorDebugAppDomain2` インターフェイスを拡張します。  
   
- [ICorDebugAppDomain4 インターフェイス](icordebugappdomain4-interface.md)\
- 論理的に拡張し、 [ICorDebugAppDomain](icordebugappdomain-interface.md)インターフェイスが COM 呼び出し可能ラッパーからマネージ オブジェクトを取得します。  
+ [インターフェイス](icordebugappdomain4-interface.md)\
+ COM 呼び出し可能ラッパーからマネージ オブジェクトを取得する[ICorDebugAppDomain](icordebugappdomain-interface.md)インターフェイスを論理的に拡張します。  
   
- [ICorDebugAppDomainEnum インターフェイス](icordebugappdomainenum-interface.md)\
+ [インターフェイス](icordebugappdomainenum-interface.md)\
  列挙体の次の位置から、指定した数の `ICorDebugAppDomain` の値を返すメソッドを提供します。  
   
- [ICorDebugArrayValue インターフェイス](icordebugarrayvalue-interface.md)\
+ [インターフェイス](icordebugarrayvalue-interface.md)\
  1 次元または多次元の配列を表す `ICorDebugHeapValue` のサブクラスです。  
   
- [ICorDebugAssembly インターフェイス](icordebugassembly-interface.md)\
+ [インターフェイスを指定します。](icordebugassembly-interface.md)\
  アセンブリを表します。  
   
- [ICorDebugAssembly2 インターフェイス](icordebugassembly2-interface.md)\
+ [インターフェイス](icordebugassembly2-interface.md)\
  アセンブリを表します。 これは、`ICorDebugAssembly` インターフェイスの機能を拡張するインターフェイスです。  
   
- [ICorDebugAssembly3 インターフェイス](icordebugassembly3-interface.md)\
- 論理的に拡張し、 [ICorDebugAssembly](icordebugassembly-interface.md)コンテナー アセンブリとその格納されているアセンブリのサポートを提供するインターフェイス。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイス](icordebugassembly3-interface.md)\
+ コンテナー アセンブリとその含まれているアセンブリをサポートするために[、ICorDebugAssembly](icordebugassembly-interface.md)インターフェイスを論理的に拡張します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugAssemblyEnum インターフェイス](icordebugassemblyenum-interface.md)\
+ [インターフェイスを作成します。](icordebugassemblyenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugAssembly` 配列を列挙します。  
   
- [ICorDebugBlockingObjectEnum インターフェイス](icordebugblockingobjectenum-interface.md)\
- 一覧については、列挙子を提供します。 [CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体。  
+ [インターフェイスをブロックします。](icordebugblockingobjectenum-interface.md)\
+ [構造体の](cordebugblockingobject-structure.md)一覧の列挙子を提供します。  
   
- [ICorDebugBoxValue インターフェイス](icordebugboxvalue-interface.md)\
+ [インターフェイスを返します。](icordebugboxvalue-interface.md)\
  ボックス化された値クラスのオブジェクトを表す `ICorDebugHeapValue` のサブクラス。  
   
- [ICorDebugBreakpoint インターフェイス](icordebugbreakpoint-interface.md)\
+ [インターフェイスのデバッグのデバッグ](icordebugbreakpoint-interface.md)\
  関数のブレークポイント、または値のウォッチ ポイントを表します。  
   
- [ICorDebugBreakpointEnum インターフェイス](icordebugbreakpointenum-interface.md)\
+ [インターフェイスをデバッグします。](icordebugbreakpointenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugBreakpoint` 配列を列挙します。  
   
- [ICorDebugChain インターフェイス](icordebugchain-interface.md)\
+ [インターフェイス](icordebugchain-interface.md)\
  物理呼び出し履歴または論理呼び出し履歴のセグメントを表します。  
   
- [ICorDebugChainEnum インターフェイス](icordebugchainenum-interface.md)\
+ [インターフェイスをデバッグします。](icordebugchainenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugChain` 配列を列挙します。  
   
- [ICorDebugClass インターフェイス](icordebugclass-interface.md)\
+ [インターフェイス](icordebugclass-interface.md)\
  基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugClass` はインスタンス化されないジェネリック型を表します。  
   
- [ICorDebugClass2 インターフェイス](icordebugclass2-interface.md)\
+ [インターフェイス](icordebugclass2-interface.md)\
  ジェネリック、または <xref:System.Type> 型のメソッド パラメーターを持つクラスを表します。 このインターフェイスは、`ICorDebugClass` の機能を拡張します。  
   
- [ICorDebugCode インターフェイス](icordebugcode-interface1.md)\
+ [インターフェイスを指定します。](icordebugcode-interface1.md)\
  Microsoft Intermediate Language (MSIL) コードまたはネイティブ コードのセグメントを表します。  
   
- [ICorDebugCode2 インターフェイス](icordebugcode2-interface.md)\
+ [インターフェイス](icordebugcode2-interface.md)\
  `ICorDebugCode` の機能を拡張するメソッドを提供します。  
   
- [ICorDebugCode3 インターフェイス](icordebugcode3-interface.md)\
- 拡張メソッドを提供[ICorDebugCode](icordebugcode-interface1.md)と[ICorDebugCode2](icordebugcode2-interface.md)マネージ戻り値に関する情報を提供します。  
+ [インターフェイス](icordebugcode3-interface.md)\
+ マネージ戻り値に関する情報を提供するために[ICorDebugCode](icordebugcode-interface1.md)と[ICorDebugCode2](icordebugcode2-interface.md)を拡張するメソッドを提供します。  
   
- [ICorDebugCode4 インターフェイス](icordebugcode4-interface.md)\
- ローカル変数と関数の引数を列挙するためにデバッガーをできるようにするメソッドを提供します。  
+ [インターフェイス](icordebugcode4-interface.md)\
+ デバッガーが関数のローカル変数と引数を列挙できるようにするメソッドを提供します。  
   
- [ICorDebugCodeEnum インターフェイス](icordebugcodeenum-interface.md)\
+ [インターフェイスをデバッグします。](icordebugcodeenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugCode` 配列を列挙します。  
   
- [ICorDebugComObjectValue のインターフェイス](icordebugcomobjectvalue-interface.md)\
+ [インターフェイスを指定します。](icordebugcomobjectvalue-interface.md)\
  キャッシュされたインターフェイス オブジェクトを取得するメソッドを提供します。  
   
- [ICorDebugContext インターフェイス](icordebugcontext-interface.md)\
+ [インターフェイス](icordebugcontext-interface.md)\
  コンテキストのオブジェクトを表します。 このインターフェイスはまだ実装されていません。  
   
- [ICorDebugController インターフェイス](icordebugcontroller-interface.md)\
+ [インターフェイスを使用します。](icordebugcontroller-interface.md)\
  コードの実行コンテキストを制御できる <xref:System.Diagnostics.Process> または <xref:System.AppDomain> のスコープを表します。  
   
- [ICorDebugDataTarget インターフェイス](icordebugdatatarget-interface.md)\
+ [インターフェイスを指定します。](icordebugdatatarget-interface.md)\
  特定のターゲット プロセスにアクセスするためのコールバック インターフェイスが用意されています。  
   
- [ICorDebugDataTarget2 インターフェイス](icordebugdatatarget2-interface.md)\
- 論理的に拡張し、 [ICorDebugDataTarget](icordebugdatatarget-interface.md)インターフェイス。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイス](icordebugdatatarget2-interface.md)\
+ [インターフェイス](icordebugdatatarget-interface.md)を論理的に拡張します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugDataTarget3 インターフェイス](icordebugdatatarget3-interface.md)\
- 論理的に拡張し、 [ICorDebugDataTarget](icordebugdatatarget-interface.md)インターフェイスが読み込まれたモジュールに関する情報を提供します。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイス](icordebugdatatarget3-interface.md)\
+ 読み込まれたモジュールに関する情報を提供する[ICorDebugDataTarget](icordebugdatatarget-interface.md)インターフェイスを論理的に拡張します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugDebugEvent インターフェイス](icordebugdebugevent-interface.md)\
+ [インターフェイスをデバッグします。](icordebugdebugevent-interface.md)\
  すべての `ICorDebug` デバッグ イベントを派生させる基本インターフェイスを定義します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugEditAndContinueErrorInfo インターフェイス](icordebugeditandcontinueerrorinfo-interface.md)\
+ [インターフェイスをデバッグします。](icordebugeditandcontinueerrorinfo-interface.md)\
  互換性のために残されています。 このインターフェイスは使用しないでください。  
   
- [ICorDebugEditAndContinueSnapshot インターフェイス](icordebugeditandcontinuesnapshot-interface.md)\
+ [インターフェイスを継続します。](icordebugeditandcontinuesnapshot-interface.md)\
  互換性のために残されています。 このインターフェイスは使用しないでください。  
   
- [ICorDebugEnum インターフェイス](icordebugenum-interface1.md)\
+ [インターフェイス](icordebugenum-interface1.md)\
  デバッグ中の列挙子の抽象基底インターフェイスとして機能します。  
   
- [ICorDebugErrorInfoEnum インターフェイス](icordebugerrorinfoenum-interface.md)\
+ [インターフェイスをデバッグします。](icordebugerrorinfoenum-interface.md)\
  互換性のために残されています。 このインターフェイスは使用しないでください。  
   
- [ICorDebugEval インターフェイス](icordebugeval-interface.md)\
+ [インターフェイス](icordebugeval-interface.md)\
  デバッガーが、デバッグ中のコードのコンテキスト内でコードを実行できるメソッドを提供します。  
   
- [ICorDebugEval2 インターフェイス](icordebugeval2-interface.md)\
+ [インターフェイス](icordebugeval2-interface.md)\
  ジェネリック型をサポートできるように `ICorDebugEval` を拡張します。  
   
- [ICorDebugExceptionDebugEvent インターフェイス](icordebugexceptiondebugevent-interface.md)\
- 拡張、 [ICorDebugDebugEvent](icordebugdebugevent-interface.md)例外イベントをサポートするインターフェイス。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイスを呼び出します。](icordebugexceptiondebugevent-interface.md)\
+ 例外イベントをサポートするために[インターフェイス](icordebugdebugevent-interface.md)を拡張します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugExceptionObjectCallStackEnum インターフェイス](icordebugexceptionobjectcallstackenum-interface.md)\
+ [インターフェイスを呼び出します。](icordebugexceptionobjectcallstackenum-interface.md)\
  例外オブジェクトに埋め込まれているコール スタックの情報の列挙子を提供します。  
   
- [ICorDebugExceptionObjectValue インターフェイス](icordebugexceptionobjectvalue-interface.md)\
- 拡張、 [ICorDebugObjectValue](icordebugobjectvalue-interface.md)マネージ例外オブジェクトからスタック トレース情報を提供するインターフェイス。  
+ [インターフェイスを呼び出します。](icordebugexceptionobjectvalue-interface.md)\
+ [マネージ例外](icordebugobjectvalue-interface.md)オブジェクトからスタック トレース情報を提供するインターフェイスを拡張します。  
   
- [ICorDebugFrame インターフェイス](icordebugframe-interface.md)\
+ [インターフェイスを指定します。](icordebugframe-interface.md)\
  現在のスタックのフレームを表します。  
   
- [ICorDebugFrameEnum インターフェイス](icordebugframeenum-interface.md)\
+ [インターフェイスをデバッグします。](icordebugframeenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugFrame` 配列を列挙します。  
   
- [ICorDebugFunction インターフェイス](icordebugfunction-interface1.md)\
+ [インターフェイス](icordebugfunction-interface1.md)\
  マネージド関数またはマネージド メソッドを表します。  
   
- [ICorDebugFunction2 インターフェイス](icordebugfunction2-interface.md)\
+ [インターフェイス](icordebugfunction2-interface.md)\
  `ICorDebugFunction` を論理的に拡張して、"マイ コードのみ" ステップ実行によるデバッグをサポートします。  
   
- [ICorDebugFunction3 インターフェイス](icordebugfunction3-interface.md)\
- 論理的に拡張し、 [ICorDebugFunction](icordebugfunction-interface1.md) ReJIT 要求からコードへのアクセスを提供するインターフェイス。  
+ [インターフェイス](icordebugfunction3-interface.md)\
+ 論理的に、ReJIT 要求からコードへのアクセスを提供する[ICorDebugFunction](icordebugfunction-interface1.md)インターフェイスを拡張します。  
   
- [ICorDebugFunctionBreakpoint インターフェイス](icordebugfunctionbreakpoint-interface.md)\
+ [インターフェイスを関数のブレークポイントのインターフェイスを使用します。](icordebugfunctionbreakpoint-interface.md)\
  関数内のブレークポイントをサポートするように `ICorDebugBreakpoint` を拡張します。  
   
- [ICorDebugGCReferenceEnum インターフェイス](icordebuggcreferenceenum-interface.md)\
+ [インターフェイスを指定します。](icordebuggcreferenceenum-interface.md)\
  ガベージ コレクトされるオブジェクトの列挙子を提供します。  
   
- [ICorDebugGenericValue インターフェイス](icordebuggenericvalue-interface.md)\
+ [インターフェイスを使用します。](icordebuggenericvalue-interface.md)\
  すべての値に適用する `ICorDebugValue` のサブクラスです。 このインターフェイスは、値に対して Get メソッドと Set メソッドを提供します。  
   
- [ICorDebugGuidToTypeEnum インターフェイス](icordebugguidtotypeenum-interface.md)\
+ [インターフェイスを使用します。](icordebugguidtotypeenum-interface.md)\
  GUID およびその対応する `ICorDebugType` オブジェクトをマップするオブジェクトの列挙子を提供します。  
   
- [ICorDebugHandleValue インターフェイス](icordebughandlevalue-interface.md)\
+ [インターフェイスを処理します。](icordebughandlevalue-interface.md)\
  デバッガーが作成したガベージ コレクションのハンドルへの参照値を表す `ICorDebugReferenceValue` のサブクラスです。  
   
- [ICorDebugHeapEnum インターフェイス](icordebugheapenum-interface.md)\
+ [インターフェイス](icordebugheapenum-interface.md)\
  マネージド ヒープのオブジェクトの列挙子を提供します。  
   
- [ICorDebugHeapSegmentEnum インターフェイス](icordebugheapsegmentenum-interface.md)\
+ [インターフェイスを指定します。](icordebugheapsegmentenum-interface.md)\
  マネージド ヒープのメモリ領域の列挙子を提供します。  
   
- [ICorDebugHeapValue インターフェイス](icordebugheapvalue-interface.md)\
+ [インターフェイスを指定します。](icordebugheapvalue-interface.md)\
  CLR ガベージ コレクターによって収集されたオブジェクトを表す `ICorDebugValue` のサブクラスです。  
   
- [ICorDebugHeapValue2 インターフェイス](icordebugheapvalue2-interface1.md)\
+ [インターフェイス](icordebugheapvalue2-interface1.md)\
  ランタイム ハンドルのサポートを提供する `ICorDebugHeapValue` の拡張機能です。  
   
- [ICorDebugHeapValue3 インターフェイス](icordebugheapvalue3-interface.md)\
+ [インターフェイス](icordebugheapvalue3-interface.md)\
  オブジェクトのモニター ロック プロパティを公開します。  
   
- [ICorDebugILCode インターフェイス](icordebugilcode-interface.md)\
+ [インターフェイス](icordebugilcode-interface.md)\
  中間言語 (IL) コードのセグメントを表します。  
   
- [ICorDebugILCode2 インターフェイス](icordebugilcode2-interface.md)\
- 論理的に拡張し、 [ICorDebugILCode](icordebugilcode-interface.md)に元のメソッド IL オフセットを関数のローカル変数シグネチャのトークンを返すし、プロファイラーのインストルメント化された中間言語 (IL) をマップする方法を提供するインターフェイスオフセットします。  
+ [インターフェイス](icordebugilcode2-interface.md)\
+ 関数のローカル変数シグネチャのトークンを返すメソッドを提供するために[ICorDebugILCode](icordebugilcode-interface.md)インターフェイスを論理的に拡張し、プロファイラーのインストルメント化された中間言語 (IL) オフセットを元のメソッドの IL オフセットにマップします。  
   
- [ICorDebugILFrame インターフェイス](icordebugilframe-interface.md)\
+ [インターフェイス](icordebugilframe-interface.md)\
  MSIL コードのスタック フレームを表します。  
   
- [ICorDebugILFrame2 インターフェイス](icordebugilframe2-interface.md)\
+ [インターフェイス](icordebugilframe2-interface.md)\
  `ICorDebugILFrame` の論理拡張機能です。  
   
- [ICorDebugILFrame3 インターフェイス](icordebugilframe3-interface.md)\
+ [インターフェイス](icordebugilframe3-interface.md)\
  関数の戻り値をカプセル化するメソッドを提供します。  
   
- [ICorDebugILFrame4 インターフェイス](icordebugilframe4-interface.md)\
+ [インターフェイス](icordebugilframe4-interface.md)\
  ローカル変数にアクセスできるようにするメソッドおよび中間言語 (IL) コードのスタック フレームのコードを提供します。 パラメーターは、プロファイラーの ReJIT インストルメンテーションに追加される変数およびコードへデバッガーがアクセスできるかどうかを指定します。  
   
- [ICorDebugInstanceFieldSymbol インターフェイス](icordebuginstancefieldsymbol-interface.md)\
+ [フィールド インターフェイス](icordebuginstancefieldsymbol-interface.md)\
  インスタンス フィールドのデバッグ シンボル情報を表します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugInternalFrame インターフェイス](icordebuginternalframe-interface.md)\
+ [インターフェイス](icordebuginternalframe-interface.md)\
  デバッガーのフレーム種類を識別します。  
   
- [ICorDebugInternalFrame2 インターフェイス](icordebuginternalframe2-interface.md)\
- スタックのアドレスや位置などの内部フレームに関する情報を提供します[ICorDebugFrame](icordebugframe-interface.md)オブジェクト。  
+ [インターフェイス](icordebuginternalframe2-interface.md)\
+ [ICorDebugFrame](icordebugframe-interface.md)オブジェクトに関連するスタック アドレスと位置を含む、内部フレームに関する情報を提供します。  
   
- [ICorDebugLoadedModule インターフェイス](icordebugloadedmodule-interface.md)\
+ [インターフェイスを使用します。](icordebugloadedmodule-interface.md)\
  読み込まれたモジュールについての情報を提供します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)\
+ [インターフェイスをデバッグします。](icordebugmanagedcallback-interface.md)\
  デバッガーのコールバックを処理するメソッドを提供します。  
   
- [ICorDebugManagedCallback2 インターフェイス](icordebugmanagedcallback2-interface.md)\
+ [インターフェイスをマネージ デバッグします。](icordebugmanagedcallback2-interface.md)\
  デバッガーの例外処理およびマネージド デバッグ アシスタント (MDA: Managed Debugging Assistants) をサポートするメソッドを提供します。 `ICorDebugManagedCallback2` は、`ICorDebugManagedCallback` の論理拡張機能です。  
   
- [ICorDebugManagedCallback3 インターフェイス](icordebugmanagedcallback3-interface.md)\
+ [インターフェイスをデバッグします。](icordebugmanagedcallback3-interface.md)\
  有効なカスタムのデバッガー通知が発生したことを示すコールバック メソッドを提供します。  
   
- [ICorDebugMDA インターフェイス](icordebugmda-interface.md)\
+ [インターフェイス](icordebugmda-interface.md)\
  マネージド デバッグ アシスタント (MDA) メッセージを表します。  
   
- [ICorDebugMemoryBuffer インターフェイス](icordebugmemorybuffer-interface.md)\
+ [インターフェイスをデバッグします。](icordebugmemorybuffer-interface.md)\
  メモリ内のバッファーを表します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugMergedAssemblyRecord インターフェイス](icordebugmergedassemblyrecord-interface.md)\
+ [レコード インターフェイスをマージしました。](icordebugmergedassemblyrecord-interface.md)\
  マージされたアセンブリに関する情報を提供します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugMetaDataLocator インターフェイス](icordebugmetadatalocator-interface.md)\
+ [インターフェイスをデバッグします。](icordebugmetadatalocator-interface.md)\
  デバッガーにメタデータ情報を提供します。  
   
- [ICorDebugModule インターフェイス](icordebugmodule-interface.md)\
+ [インターフェイス](icordebugmodule-interface.md)\
  実行可能ファイルまたはダイナミック リンク ライブラリ (DLL: Dynamic-Link Library) のいずれかの CLR モジュールを表します。  
   
- [ICorDebugModule2 インターフェイス](icordebugmodule2-interface.md)\
+ [インターフェイス](icordebugmodule2-interface.md)\
  `ICorDebugModule` の論理的な拡張機能として動作します。  
   
- [ICorDebugModule3 インターフェイス](icordebugmodule3-interface.md)\
+ [インターフェイス](icordebugmodule3-interface.md)\
  動的モジュールのシンボル リーダーを作成します。  
   
- [ICorDebugModuleBreakpoint インターフェイス](icordebugmodulebreakpoint-interface.md)\
+ [インターフェイスをデバッグモジュールのブレークポイント](icordebugmodulebreakpoint-interface.md)\
  特定のモジュールにアクセスできるように `ICorDebugBreakpoint` を拡張します。  
   
- [ICorDebugModuleDebugEvent インターフェイス](icordebugmoduledebugevent-interface.md)\
- 拡張、 [ICorDebugDebugEvent](icordebugdebugevent-interface.md)モジュール レベルのイベントをサポートするインターフェイス。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイスをデバッグします。](icordebugmoduledebugevent-interface.md)\
+ モジュール レベルの[イベント](icordebugdebugevent-interface.md)をサポートするようにインターフェイスを拡張します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugModuleEnum インターフェイス](icordebugmoduleenum-interface.md)\
+ [インターフェイスを使用します。](icordebugmoduleenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugModule` 配列を列挙します。  
   
- [ICorDebugMutableDataTarget インターフェイス](icordebugmutabledatatarget-interface.md)\
- 拡張、 [ICorDebugDataTarget](icordebugdatatarget-interface.md)変更可能なデータのターゲットをサポートするインターフェイス。  
+ [インターフェイスを変更します。](icordebugmutabledatatarget-interface.md)\
+ 変更可能なデータ[ターゲット](icordebugdatatarget-interface.md)をサポートするインターフェイスを拡張します。  
   
- [ICorDebugNativeFrame インターフェイス](icordebugnativeframe-interface.md)\
+ [インターフェイス](icordebugnativeframe-interface.md)\
  ネイティブ フレームで使用される `ICorDebugFrame` の特化された実装。  
   
- [ICorDebugNativeFrame2 インターフェイス](icordebugnativeframe2-interface.md)\
+ [インターフェイス](icordebugnativeframe2-interface.md)\
  子と親のフレームの関係をテストするメソッドを提供します。  
   
- [ICorDebugObjectEnum インターフェイス](icordebugobjectenum-interface.md)\
+ [インターフェイス](icordebugobjectenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、オブジェクトの配列を相対仮想アドレス (RVA: Relative Virtual Address) で列挙します。  
   
- [ICorDebugObjectValue インターフェイス](icordebugobjectvalue-interface.md)\
+ [インターフェイスを指定します。](icordebugobjectvalue-interface.md)\
  オブジェクトが含まれた値を表す `ICorDebugValue` のサブクラスです。  
   
- [ICorDebugObjectValue2 インターフェイス](icordebugobjectvalue2-interface.md)\
+ [インターフェイス](icordebugobjectvalue2-interface.md)\
  継承およびオーバーライドをサポートするように `ICorDebugObjectValue` を拡張します。  
   
- [ICorDebugProcess インターフェイス](icordebugprocess-interface.md)\
+ [インターフェイス](icordebugprocess-interface.md)\
  マネージド コードを実行しているプロセスを表します。  
   
- [ICorDebugProcess2 インターフェイス](icordebugprocess2-interface1.md)\
+ [インターフェイス](icordebugprocess2-interface1.md)\
  `ICorDebugProcess` の論理拡張機能です。  
   
- [ICorDebugProcess3 インターフェイス](icordebugprocess3-interface.md)\
+ [インターフェイス](icordebugprocess3-interface.md)\
  カスタムのデバッガー通知を制御します。
 
- [ICorDebugProcess4 インターフェイス](icordebugprocess4-interface.md)\
- プロセス実行の制御外のサポートを提供します。
+ [インターフェイス](icordebugprocess4-interface.md)\
+ プロセスの実行制御のサポートを提供します。
   
- [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)\
- 拡張、 [ICorDebugProcess](icordebugprocess-interface.md)マネージ オブジェクトのガベージ コレクションに関する情報を提供し、デバッガーがアプリケーションからイメージを読み込むかどうかを判断する、マネージ ヒープへのアクセスをサポートするインターフェイスのローカルネイティブ イメージ キャッシュします。  
+ [インターフェイス](icordebugprocess5-interface.md)\
+ マネージ ヒープへのアクセスをサポートし、マネージ オブジェクトのガベージ コレクションに関する情報を提供し、デバッガーがアプリケーションのローカル ネイティブ イメージ キャッシュからイメージを読み込むかどうかを判断するために[、ICorDebugProcess](icordebugprocess-interface.md)インターフェイスを拡張します。  
   
- [ICorDebugProcess6 インターフェイス](icordebugprocess6-interface.md)\
- 論理的に拡張し、 [ICorDebugProcess](icordebugprocess-interface.md)ネイティブ例外デバッグ イベントや仮想モジュール分割でエンコードされたマネージ デバッグ イベントをデコードなどの機能を有効にするインターフェイス。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイス](icordebugprocess6-interface.md)\
+ [ICorDebugProcess](icordebugprocess-interface.md)インターフェイスを論理的に拡張して、ネイティブ例外デバッグ イベントでエンコードされたマネージ デバッグ イベントのデコードや仮想モジュール分割などの機能を有効にします。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugProcess7 インターフェイス](icordebugprocess7-interface.md)\
+ [インターフェイス](icordebugprocess7-interface.md)\
  ターゲット プロセスでメモリ内のメタデータ更新を処理するようにデバッガーを構成するメソッドを提供します。  
   
- [ICorDebugProcess8 インターフェイス](icordebugprocess8-interface.md)\
- 論理的に拡張し、 [ICorDebugProcess](icordebugprocess-interface.md)を有効にするまたはの特定の種類を無効にするインターフェイス[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)例外コールバック。  
+ [インターフェイス](icordebugprocess8-interface.md)\
+ 特定の種類の[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)例外コールバックを有効または無効にするインターフェイスを論理的に拡張します。 [ICorDebugProcess](icordebugprocess-interface.md)  
   
- [ICorDebugProcessEnum インターフェイス](icordebugprocessenum-interface.md)\
+ [インターフェイスを処理します。](icordebugprocessenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugProcess` 配列を列挙します。  
   
- [ICorDebugReferenceValue インターフェイス](icordebugreferencevalue-interface.md)\
+ [インターフェイスを指定します。](icordebugreferencevalue-interface.md)\
  参照型をサポートする `ICorDebugValue` のサブクラス。  
   
- [ICorDebugRegisterSet インターフェイス](icordebugregisterset-interface.md)\
+ [インターフェイスを設定します。](icordebugregisterset-interface.md)\
  現在コードを実行しているマシン上で使用できるレジスタ セットを表します。  
   
- [ICorDebugRegisterSet2 インターフェイス](icordebugregisterset2-interface.md)\
+ [インターフェイス](icordebugregisterset2-interface.md)\
  64 を超えるレジスタを持つハードウェア プラットフォーム用に `ICorDebugRegisterSet` の機能を拡張します。  
   
- [ICorDebugRemote インターフェイス](icordebugremote-interface.md)\
+ [リモート インターフェイス](icordebugremote-interface.md)\
  リモート ターゲット プロセスに対してマネージド デバッガーを起動または接続する機能を提供します。  
   
- [ICorDebugRemoteTarget インターフェイス](icordebugremotetarget-interface.md)\
+ [インターフェイスをデバッグします。](icordebugremotetarget-interface.md)\
  開発者が CLR 環境で Silverlight ベース アプリケーションをデバッグできるようにするメソッドを提供します。  
   
- [ICorDebugRuntimeUnwindableFrame インターフェイス](icordebugruntimeunwindableframe-interface.md)\
+ [アンワインドブルフレームインターフェイス](icordebugruntimeunwindableframe-interface.md)\
  共通言語ランタイム (CLR: Common Language Runtime) でフレームをアンワインドする必要のあるアンマネージ メソッドに対してサポートを提供します。  
   
- [ICorDebugStackWalk インターフェイス](icordebugstackwalk-interface.md)\
+ [インターフェイス](icordebugstackwalk-interface.md)\
  スレッドのスタック上のマネージド メソッド (フレーム) を取得するメソッドを提供します。  
   
- [ICorDebugStaticFieldSymbol インターフェイス](icordebugstaticfieldsymbol-interface.md)\
+ [インターフェイスを呼び出します。](icordebugstaticfieldsymbol-interface.md)\
  静的フィールドのデバッグ シンボル情報を表します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugStepper インターフェイス](icordebugstepper-interface.md)\
+ [インターフェイスをデバッグします。](icordebugstepper-interface.md)\
  デバッガーが実行するコード実行内のステップを表します。コマンドの発行から完了までの間は識別子として機能します。これを使用するとステップをキャンセルできます。  
   
- [ICorDebugStepper2 インターフェイス](icordebugstepper2-interface1.md)\
+ [インターフェイス](icordebugstepper2-interface1.md)\
  マイ コードのみ (JMC: Just My Code) デバッグのサポートを提供します。  
   
- [ICorDebugStepperEnum インターフェイス](icordebugstepperenum-interface.md)\
+ [インターフェイスをデバッグします。](icordebugstepperenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugStepper` 配列を列挙します。  
   
- [ICorDebugStringValue インターフェイス](icordebugstringvalue-interface.md)\
+ [インターフェイスを返します。](icordebugstringvalue-interface.md)\
  文字列値に適用する `ICorDebugHeapValue` のサブクラスです。  
   
- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)\
+ [インターフェイスを指定します。](icordebugsymbolprovider-interface.md)\
  デバッグ シンボル情報を取得するために使用できるメソッドを提供します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugSymbolProvider2 インターフェイス](icordebugsymbolprovider2-interface.md)\
- 論理的に拡張し、 [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)追加のデバッグ シンボル情報を取得するインターフェイス。 **.NET ネイティブのみで使用できます。**  
+ [インターフェイス](icordebugsymbolprovider2-interface.md)\
+ [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)インターフェイスを論理的に拡張して、追加のデバッグ シンボル情報を取得します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugThread インターフェイス](icordebugthread-interface.md)\
+ [インターフェイス](icordebugthread-interface.md)\
  プロセス内のスレッドを表します。 `ICorDebugThread` インスタンスの有効期間は、それが表しているスレッドの有効期間と同じです。  
   
- [ICorDebugThread2 インターフェイス](icordebugthread2-interface.md)\
+ [インターフェイス](icordebugthread2-interface.md)\
  `ICorDebugThread` の論理的な拡張機能として動作します。  
   
- [ICorDebugThread3 インターフェイス](icordebugthread3-interface.md)\
- エントリ ポイントを提供します、 [ICorDebugStackWalk](icordebugstackwalk-interface.md)と対応するインターフェイス。  
+ [インターフェイス](icordebugthread3-interface.md)\
+ [エントリ](icordebugstackwalk-interface.md)ポイントを提供します。  
   
- [ICorDebugThread4 インターフェイス](icordebugthread4-interface.md)\
+ [インターフェイス](icordebugthread4-interface.md)\
  スレッドのブロック情報を提供します。  
   
- [ICorDebugThreadEnum インターフェイス](icordebugthreadenum-interface1.md)\
+ [インターフェイス](icordebugthreadenum-interface1.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugThread` 配列を列挙します。  
   
- [ICorDebugType インターフェイス](icordebugtype-interface.md)\
+ [インターフェイス](icordebugtype-interface.md)\
  基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugType` はインスタンス化されたジェネリック型を表します。  
   
- [ICorDebugType2 インターフェイス](icordebugtype2-interface.md)\
- 拡張、 [ICorDebugType](icordebugtype-interface.md)基本型または複合 (ユーザー定義) の型の型の識別子を取得するインターフェイス。  
+ [インターフェイス](icordebugtype2-interface.md)\
+ 基本型または複合 (ユーザー定義) 型の型識別子を取得する[ICorDebugType](icordebugtype-interface.md)インターフェイスを拡張します。  
   
- [ICorDebugTypeEnum インターフェイス](icordebugtypeenum-interface.md)\
+ [インターフェイス](icordebugtypeenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugType` 配列を列挙します。  
   
- [ICorDebugUnmanagedCallback インターフェイス](icordebugunmanagedcallback-interface.md)\
+ [インターフェイスをデバッグします。](icordebugunmanagedcallback-interface.md)\
  CLR に直接関連していないネイティブ イベントについて通知します。  
   
- [ICorDebugValue](icordebugvalue-interface.md)\
+ [を指定します。](icordebugvalue-interface.md)\
  デバッグ中のプロセス内の読み取り値または書き込み値を表します。  
   
- [ICorDebugValue2](icordebugvalue2-interface.md)\
+ [2](icordebugvalue2-interface.md)\
  `ICorDebugValue` をサポートできるように `ICorDebugType` を拡張します。  
   
- [ICorDebugValue3 インターフェイス](icordebugvalue3-interface.md)\
- 2 GB を超える配列のサポートを提供する"ICorDebugValue"と"ICorDebugValue2"インターフェイスを拡張します。  
+ [インターフェイス](icordebugvalue3-interface.md)\
+ 2 GB を超える配列をサポートするために、"ICorDebugValue" インターフェイスと "ICorDebugValue2" インターフェイスを拡張します。  
   
- [ICorDebugValueBreakpoint](icordebugvaluebreakpoint-interface.md)\
+ [値ブレークポイントを指定します。](icordebugvaluebreakpoint-interface.md)\
  特定の値にアクセスできるように `ICorDebugBreakpoint` を拡張します。  
   
- [ICorDebugValueEnum](icordebugvalueenum-interface.md)\
+ [を返します。](icordebugvalueenum-interface.md)\
  `ICorDebugEnum` メソッドを実装し、`ICorDebugValue` 配列を列挙します。  
   
- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)\
- ローカル変数または関数の引数を表します。  
+ [インターフェイスを変更します。](icordebugvariablehome-interface.md)\
+ 関数のローカル変数または引数を表します。  
   
- [ICorDebugVariableHomeEnum インターフェイス](icordebugvariablehomeenum-interface.md)\
- ローカル変数と関数の引数、列挙子を提供します。  
+ [インターフェイスを変数として使用します。](icordebugvariablehomeenum-interface.md)\
+ 関数のローカル変数と引数に列挙子を提供します。  
   
- [ICorDebugVariableSymbol インターフェイス](icordebugvariablesymbol-interface.md)\
+ [インターフェイスを使用します。](icordebugvariablesymbol-interface.md)\
  変数のデバッグ シンボル情報を取得します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorDebugVirtualUnwinder インターフェイス](icordebugvirtualunwinder-interface.md)\
+ [インターフェイス](icordebugvirtualunwinder-interface.md)\
  スタック アンワインドを支援するメソッドを提供します。 **.NET ネイティブのみで使用できます。**  
   
- [ICorPublish インターフェイス](icorpublish-interface.md)\
+ [ICorパブリッシュインターフェイス](icorpublish-interface.md)\
  発行プロセスの汎用インターフェイスとして機能します。  
   
- [ICorPublishAppDomain インターフェイス](icorpublishappdomain-interface.md)\
+ [インターフェイス](icorpublishappdomain-interface.md)\
  アプリケーション ドメインの情報を表し、提供します。  
   
- [ICorPublishAppDomainEnum インターフェイス](icorpublishappdomainenum-interface.md)\
+ [インターフェイスを発行します。](icorpublishappdomainenum-interface.md)\
  現在プロセス内に存在する `ICorPublishAppDomain` オブジェクトのコレクションを走査するメソッドを提供します。  
   
- [ICorPublishEnum インターフェイス](icorpublishenum-interface.md)\
+ [インターフェイス](icorpublishenum-interface.md)\
  発行する列挙子の抽象ベースとして機能します。  
   
- [ICorPublishProcess インターフェイス](icorpublishprocess-interface.md)\
+ [インターフェイスを発行します。](icorpublishprocess-interface.md)\
  プロセスの情報にアクセスするメソッドを適用します。  
   
- [ICorPublishProcessEnum インターフェイス](icorpublishprocessenum-interface.md)\
+ [インターフェイスを発行します。](icorpublishprocessenum-interface.md)\
  `ICorPublishProcess` オブジェクトのコレクションを走査するメソッドを提供します。  
 
- [ISOSDacInterface インターフェイス](isosdacinterface-interface.md)\
- データにアクセスするヘルパー メソッドを提供します。`SOS`します。
+ [インターフェイス](isosdacinterface-interface.md)\
+ から`SOS`データにアクセスするためのヘルパー メソッドを提供します。
 
- [IXCLRDataMethodDefinition インターフェイス](ixclrdatamethoddefinition-interface.md)\
- メソッドの定義に関する情報を照会するためのメソッドを提供します。
- 
- [IXCLRDataMethodInstance インターフェイス](ixclrdatamethodinstance-interface.md)\
- メソッド インスタンスの情報を照会するためのメソッドを提供します。
- 
- [IXCLRDataModule インターフェイス](ixclrdatamodule-interface.md)\
+ [インターフェイスを定義します。](ixclrdatamethoddefinition-interface.md)\
+ メソッド定義に関する情報を照会するためのメソッドを提供します。
+
+ [インターフェイス](ixclrdatamethodinstance-interface.md)\
+ メソッド インスタンスに関する情報を照会するためのメソッドを提供します。
+
+ [インターフェイス](ixclrdatamodule-interface.md)\
  読み込まれたモジュールに関する情報を照会するためのメソッドを提供します。
- 
- [IXCLRDataProcess インターフェイス](ixclrdataprocess-interface.md)\
- プロセスの情報を照会するためのメソッドを提供します。
+
+ [インターフェイス](ixclrdataprocess-interface.md)\
+ プロセスに関する情報を照会するためのメソッドを提供します。
   
 ## <a name="related-sections"></a>関連項目  
- [デバッグ コクラス](debugging-coclasses.md)\
- [デバッグ グローバル静的関数](debugging-global-static-functions.md)\
+ [コクラスのデバッグ](debugging-coclasses.md)\
+ [グローバル静的関数のデバッグ](debugging-global-static-functions.md)\
  [列挙体のデバッグ](debugging-enumerations.md)\
- [デバッグ構造体](debugging-structures.md)\
+ [構造体のデバッグ](debugging-structures.md)\

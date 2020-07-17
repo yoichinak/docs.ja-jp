@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54abcd357c6f26f54432b39bfcb4a0d63afabfe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6c4d5f8cc911198add176cab9c4b9b89128068e
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738713"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860614"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize メソッド
-ターゲット プロセスを使用するポインター型のバイト単位のサイズを取得します。 このメソッドは、共通言語ランタイム データ アクセス サービスによって呼び出されます。  
+ターゲットプロセスが使用するポインター型のサイズ (バイト単位) を取得します。 このメソッドは、共通言語ランタイムのデータアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT GetPointerSize (
   
 ## <a name="parameters"></a>パラメーター  
  `pointerSize`  
- [out]ターゲット プロセスのポインターのバイト単位のサイズを指定する整数値へのポインター。  
+ 入出力ターゲットプロセスのポインターのサイズ (バイト単位) を指定する整数値へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

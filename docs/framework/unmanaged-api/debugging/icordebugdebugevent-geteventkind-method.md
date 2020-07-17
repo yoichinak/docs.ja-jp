@@ -2,14 +2,12 @@
 title: ICorDebugDebugEvent::GetEventKind メソッド
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdbc320e13e0cb140f5ef7aa63b878b43ca0189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e3ebdcb5b3e85f6f5a329ed249aa58be903e30f
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750055"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976396"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind メソッド
 この `ICorDebugDebugEvent` オブジェクトが表すイベントの種類を示します。  
@@ -24,24 +22,24 @@ HRESULT GetEventKind(
   
 ## <a name="parameters"></a>パラメーター  
  pDebugEventKind  
- ポインターを[CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)イベントの種類を示す列挙メンバー。  
+ イベントの種類を示す[Cordebugdebugeventkind](cordebugdebugeventkind-enumeration.md)列挙体メンバーへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
  `pDebugEventKind` の値に基づいて、`QueryInterface` を呼び出して、追加データを含むより正確なデバッグ イベント インターフェイスを取得できます。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDebugEvent インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDebugEvent インターフェイス](icordebugdebugevent-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

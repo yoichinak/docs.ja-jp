@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7700236efe7b031866867f5ed859ba71683a8a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782293"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490446"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps メソッド
-指定した MethodSpec によって参照されるメソッドのメタデータ署名のトークンを取得します。  
+指定した MethodSpec トークンによって参照されるメソッドのメタデータシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,34 +31,34 @@ ms.locfileid: "67782293"
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  
-   [out] PCCOR_SIGNATURE  *ppvSigBlob,   
+   [out] PCCOR_SIGNATURE  *ppvSigBlob,
    [out] ULONG            *pcbSigBlob  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `mi`  
- [in]メソッドのインスタンス化を表す MethodSpec トークンです。  
+ からメソッドのインスタンス化を表す MethodSpec トークン。  
   
  `tkParent`  
- [out]メソッド定義を表す MethodDef または新しいトークンへのポインター。  
+ 入出力メソッド定義を表す MethodDef または MethodRef トークンへのポインター。  
   
  `ppvSigBlob`  
- [out]メソッドのバイナリ メタデータ シグネチャへのポインター。  
+ 入出力メソッドのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out]サイズ (バイト単位) の`ppvSigBlob`します。  
+ 入出力のサイズ (バイト単位) `ppvSigBlob` 。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)

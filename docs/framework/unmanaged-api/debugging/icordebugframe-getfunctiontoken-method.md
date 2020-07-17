@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a46925b3-3bf8-404f-9f30-a86ae41032c1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50e5fcee3705e05aeed820cf736613c12b00e50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e214131aeb2d6d17ea4b0a730b5fc77428a7ca8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754874"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213687"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken メソッド
-このスタック フレームに関連付けられているコードを含む関数のメタデータ トークンを取得します。  
+このスタックフレームに関連付けられているコードを含む関数のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetFunctionToken (
   
 ## <a name="parameters"></a>パラメーター  
  `pToken`  
- [out]ポインター、`mdMethodDef`関数のメタデータを参照するトークン。  
+ 入出力`mdMethodDef`関数のメタデータを参照するトークンへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

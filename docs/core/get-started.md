@@ -1,29 +1,30 @@
 ---
 title: .NET Core の概要
 description: Windows、Linux、macOS で .NET Core アプリケーションをビルドする方法を学習するためのリソースを示します。
-author: thraka
+author: adegeo
 ms.author: adegeo
-ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.date: 12/03/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977170"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325011"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
 
-この記事では、.NET Core の概要について説明します。 .NET Core は、Windows、Linux、および macOS にインストールすることができます。 任意のテキスト エディターでコーディングし、クロスプラットフォーム ライブラリとアプリケーションを作成できます。 
+この記事では、.NET Core の概要について説明します。 .NET Core は、Windows、Linux、および macOS にインストールすることができます。 任意のテキスト エディターでコーディングし、クロスプラットフォーム ライブラリとアプリケーションを作成できます。
 
-.NET Core が何であるかや、他の .NET テクノロジとどのように関連しているのかがわからない場合は、まず、[.NET の概要](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet)を確認してください。 簡単に言うと、.NET Core は .NET のオープンソースのクロスプラットフォーム実装です。
+.NET Core が何であるかや、他の .NET テクノロジとどのように関連しているのかがわからない場合は、まず、[.NET の概要](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)を確認してください。 簡単に言うと、.NET Core は .NET のオープンソースのクロスプラットフォーム実装です。
 
 ## <a name="create-an-application"></a>アプリケーションの作成
 
-まず、ご利用のコンピューターで [NET Core SDK](https://www.microsoft.com/net/download/) をダウンロードしてインストールします。
+まず、ご利用のコンピューターで [NET Core SDK](https://dotnet.microsoft.com/download) をダウンロードしてインストールします。
 
 次に、**PowerShell**、**コマンド プロンプト**、**bash** などのターミナルを開きます。 次の `dotnet` コマンドを入力し、C# アプリケーションを作成して実行します。
 
-```console
+```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```
@@ -34,54 +35,52 @@ dotnet run --project sample1
 Hello World!
 ```
 
-おめでとうございます!  シンプルな .NET Core アプリケーションが作成されました。 [Visual Studio Code](tutorials/with-visual-studio-code.md)、[Visual Studio 2017](tutorials/with-visual-studio.md) (Windows のみ)、または [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (macOS のみ) を使用して、.NET Core アプリケーションを作成することもできます。
+おめでとうございます! シンプルな .NET Core アプリケーションが作成されました。 [Visual Studio Code](./tutorials/with-visual-studio-code.md)、[Visual Studio](./tutorials/with-visual-studio.md) (Windows のみ)、または [Visual Studio for Mac](./tutorials/using-on-mac-vs.md) (macOS のみ) を使用して、.NET Core アプリケーションを作成することもできます。
 
 ## <a name="tutorials"></a>チュートリアル
 
-次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始できます。
+次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+<!-- markdownlint-disable MD025 -->
 
-* [Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築。](./tutorials/with-visual-studio.md)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-* [Visual Studio 2017 の C# および .NET Core を使用したクラス ライブラリの構築。](./tutorials/library-with-visual-studio.md)
+- [Visual Studio 2019 で最初の .NET Core コンソール アプリケーションを作成する](./tutorials/with-visual-studio.md)
+- [Visual Studio で .NET Standard を使用してクラス ライブラリを構築する](./tutorials/library-with-visual-studio.md)
+- [.NET Core での .NET Core CLI の使用に関する概要](./tutorials/cli-create-console-app.md)
 
-* [Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築。](./tutorials/vb-with-visual-studio.md)
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](./media/video-icon.png "ビデオを見る") | Channel 9 で [Visual Studio Code と .NET Core をインストールして使用する方法](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)についてのビデオを見る。 |
+| ![ビデオのムービー カメラ アイコン](./media/video-icon.png "ビデオを見る") | YouTube で [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) に関するビデオを見る。 |
 
-* [Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築。](./tutorials/vb-library-with-visual-studio.md)  
+サポートされている Windows バージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-windows)に関する記事を参加してください。
 
-* [Visual Studio Code と .NET Core をインストールして使用する方法](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)に関するビデオを見る。
+# <a name="linux"></a>[Linux](#tab/linux)
 
-* [Visual Studio 2017 と .NET Core をインストールして使用する方法](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)に関するビデオを見る。
+次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 
-* [.NET Core でのコマンド ラインの使用に関する概要。](tutorials/using-with-xplat-cli.md)
+- [.NET Core でのコマンド ラインの使用に関する概要](./tutorials/cli-create-console-app.md)
 
-サポートされている Windows のバージョンの一覧については、[Windows 開発の前提条件](windows-prerequisites.md)に関する記事をご覧ください。
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](./media/video-icon.png "ビデオを見る") | [Ubuntu 上の Visual Studio Code での C# と .NET Core の使用に関する概要](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)のビデオを見る。 |
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+サポートされている Linux のディストリビューションとバージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-linux)に関する記事を参加してください。
 
-次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始できます。
+# <a name="macos"></a>[macOS](#tab/macos)
 
-* [.NET Core でのコマンド ラインの使用に関する概要。](tutorials/using-with-xplat-cli.md)
+次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 
-* [Ubuntu 上の Visual Studio Code での C# と .NET Core の使用に関する概要](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)のビデオを見る。
+- [macOS 上の .NET Core での Visual Studio Code の使用に関する概要](./tutorials/using-on-macos.md)
+- [.NET Core でのコマンド ラインの使用に関する概要](./tutorials/cli-create-console-app.md)
+- [Visual Studio for Mac を使用した macOS での .NET Core の概要](./tutorials/using-on-mac-vs.md)
+- [Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](./tutorials/using-on-mac-vs-full-solution.md)
 
-サポートされている Linux ディストリビューションおよびバージョンの一覧については、[Linux 開発における前提条件](linux-prerequisites.md)に関する記事をご覧ください。
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](media/video-icon.png "ビデオを見る") | [macOS 上の Visual Studio Code での C# と .NET Core の使用に関する概要](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)のビデオを見る。 |
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
-
-次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始できます。
-
-* [macOS 上の Visual Studio Code での C# と .NET Core の使用に関する概要](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)のビデオを見る。
-
-* [macOS 上の .NET Core での Visual Studio Code の使用に関する概要。](tutorials/using-on-macos.md)
-
-* [.NET Core でのコマンド ラインの使用に関する概要。](tutorials/using-with-xplat-cli.md)
-
-* [Visual Studio for Mac を使用した macOS での .NET Core の概要。](tutorials/using-on-mac-vs.md)
-
-* [Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築。](tutorials/using-on-mac-vs-full-solution.md)
-
-サポートされている OS X または macOS のバージョンの一覧については、「[macOS における .NET Core の前提条件](macos-prerequisites.md)」の記事を参照してください。
+サポートされている OS X / macOS バージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-macos)に関する記事を参加してください。
 
 ---

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: cb7043a21020193a4b2a2569ec610f311834a698
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766871"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283753"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox のスタイルとテンプレート
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.ListBox>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.ListBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  
   
 ## <a name="listbox-parts"></a>ListBox パーツ  
- <xref:System.Windows.Controls.ListBox>コントロールには、名前付きパーツはありません。  
+ <xref:System.Windows.Controls.ListBox> コントロールに名前付きパーツはありません。  
   
- 作成するときに、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ListBox>、テンプレートが含まれます、<xref:System.Windows.Controls.ItemsPresenter>内、 <xref:System.Windows.Controls.ScrollViewer>。 (、<xref:System.Windows.Controls.ItemsPresenter>内の各項目が表示されます、 <xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ScrollViewer>コントロール内でスクロールできます)。  場合、<xref:System.Windows.Controls.ItemsPresenter>の直接の子ではない、<xref:System.Windows.Controls.ScrollViewer>を付ける必要があります、<xref:System.Windows.Controls.ItemsPresenter>名、`ItemsPresenter`します。  
+ <xref:System.Windows.Controls.ListBox> の <xref:System.Windows.Controls.ControlTemplate> を作成する場合、テンプレートで、<xref:System.Windows.Controls.ScrollViewer> 内に <xref:System.Windows.Controls.ItemsPresenter> を含めることができます (<xref:System.Windows.Controls.ItemsPresenter> により、<xref:System.Windows.Controls.ListBox> の各項目が表示されます。<xref:System.Windows.Controls.ScrollViewer> で、コントロール内のスクロールを有効にします)。  <xref:System.Windows.Controls.ItemsPresenter> が <xref:System.Windows.Controls.ScrollViewer> の直接の子でない場合は、<xref:System.Windows.Controls.ItemsPresenter> に `ItemsPresenter` という名前を付ける必要があります。  
   
 ## <a name="listbox-states"></a>リスト ボックスの状態  
- 次の表のビジュアルの状態、<xref:System.Windows.Controls.ListBox>コントロール。  
+ 次の表は、<xref:System.Windows.Controls.ListBox> コントロールの表示状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -34,10 +34,10 @@ ms.locfileid: "61766871"
 |InvalidUnfocused|ValidationStates|コントロールが無効で、フォーカスがありません。|  
   
 ## <a name="listboxitem-parts"></a>ListBoxItem のパーツ  
- <xref:System.Windows.Controls.ListBoxItem>コントロールには、名前付きパーツはありません。  
+ <xref:System.Windows.Controls.ListBoxItem> コントロールに名前付きパーツはありません。  
   
 ## <a name="listboxitem-states"></a>ListBoxItem の状態  
- 次の表のビジュアルの状態、<xref:System.Windows.Controls.ListBox>コントロール。  
+ 次の表は、<xref:System.Windows.Controls.ListBox> コントロールの表示状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -49,12 +49,12 @@ ms.locfileid: "61766871"
 |未選択|SelectionStates|この項目は選択されていません。|  
 |選択済み|SelectionStates|この項目は、選択した currentlyplate です。|  
 |SelectedUnfocused|SelectionStates|この項目は選択されていますが、フォーカスがありません。|  
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
 ## <a name="listbox-controltemplate-example"></a>ListBox ControlTemplate の例  
- 次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListBoxItem>コントロール。  
+ 次の例は、<xref:System.Windows.Controls.ListBox> コントロールと <xref:System.Windows.Controls.ListBoxItem> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#ListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
@@ -70,5 +70,5 @@ ms.locfileid: "61766871"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

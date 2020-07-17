@@ -1,28 +1,29 @@
 - name: Windows Presentation Foundation
   href: index.md
+- name: WPF の概要
+  href: introduction-to-wpf.md
+- name: 作業開始
+  href: getting-started/
+- name: アプリケーション開発
+  href: app-development/
+- name: 詳細設定
+  href: advanced/
+- name: コントロール
+  href: controls/
+- name: データ
+  href: data/
+- name: グラフィックスとマルチメディア
+  href: graphics-multimedia/
+- name: セキュリティ
+  href: security-wpf.md
   items:
-    - name: 作業の開始
-      href: getting-started/
-    - name: アプリケーション開発
-      href: app-development/
-    - name: 詳細設定
-      href: advanced/
-    - name: コントロール
-      href: controls/
-    - name: データ
-      href: data/
-    - name: グラフィックスとマルチメディア
-      href: graphics-multimedia/
-    - name: セキュリティ
-      href: security-wpf.md
-      items:
-        - name: WPF 部分信頼セキュリティ
-          href: wpf-partial-trust-security.md
-        - name: WPF のセキュリティ方針 - プラットフォーム セキュリティ
-          href: wpf-security-strategy-platform-security.md
-        - name: WPF のセキュリティ方針 - セキュリティ エンジニアリング
-          href: wpf-security-strategy-security-engineering.md
-    - name: WPF のサンプル
-      href: wpf-samples.md
-    - name: クラス ライブラリ
-      href: class-library-wpf.md
+    - name: WPF 部分信頼セキュリティ
+      href: wpf-partial-trust-security.md
+    - name: プラットフォームのセキュリティ
+      href: wpf-security-strategy-platform-security.md
+    - name: セキュリティ エンジニアリング
+      href: wpf-security-strategy-security-engineering.md
+- name: WPF のサンプル
+  href: wpf-samples.md
+- name: クラス ライブラリ
+  href: class-library-wpf.md

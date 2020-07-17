@@ -1,13 +1,13 @@
 ---
-title: LINQ とファイル ディレクトリ (Visual Basic)
+title: LINQ とファイル ディレクトリ
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 9738dc2b07b33b2d96f8134e8418c54aae53e6a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663441"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397520"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ とファイル ディレクトリ (Visual Basic)
 多くのファイル システム操作は基本的にクエリであるため、LINQ での使用に最適です。  
@@ -16,25 +16,25 @@ ms.locfileid: "61663441"
   
  このセクションでは、以下のトピックについて説明します。  
   
- [方法: 指定した属性または名前 (Visual Basic) のファイルをクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [方法: 指定された属性または名前のファイルを照会する (Visual Basic)](how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  <xref:System.IO.FileInfo> オブジェクトで 1 つ以上のプロパティを調べ、ファイルを検索する方法を示します。  
   
- [方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)  
  ファイル名拡張子に基づいて、<xref:System.IO.FileInfo> オブジェクトのグループを返す方法を示します。  
   
- [方法: 一連のフォルダー (LINQ) (Visual Basic) のバイト数の合計数をクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ [方法: 一連のフォルダーの合計バイト数を照会する (LINQ) (Visual Basic)](how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
  指定したディレクトリ ツリー内のすべてのファイルの合計バイト数を返す方法を示します。  
   
- [方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
+ [方法: 2 つのフォルダーの内容を比較する (LINQ) (Visual Basic)](how-to-compare-the-contents-of-two-folders-linq.md)  
  指定した 2 つのフォルダーに存在するファイルをすべて返す方法と、一方のフォルダーにのみ存在し、もう一方には存在しないファイルをすべて返す方法を示します。  
   
- [方法: 最大ファイルまたはディレクトリ ツリー (LINQ) (Visual Basic) 内のファイルのクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ [方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (Visual Basic)](how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
  ディレクトリ ツリーで、最もサイズの大きいファイルまたは最もサイズの小さいファイル、あるいは指定した数のファイルを返す方法を示します。  
   
- [方法: クエリ (LINQ) (Visual Basic) ディレクトリ ツリーで重複するファイル](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [方法: ディレクトリツリーで重複するファイルを照会する (LINQ) (Visual Basic)](how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  指定したディレクトリ ツリーの複数の場所に出現するすべてのファイル名をグループ化する方法を示します。 また、カスタム比較演算子に基づいて、より複雑な比較を実行する方法も示します。  
   
- [方法: クエリ (LINQ) (Visual Basic)、フォルダー内のファイルの内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
+ [フォルダー内のファイルの内容を照会する方法 (LINQ) (Visual Basic)](how-to-query-the-contents-of-files-in-a-folder-linq.md)  
  ツリー内のフォルダーを反復処理し、各ファイルを開き、ファイルの内容を照会する方法を示します。  
   
 ## <a name="comments"></a>コメント  
@@ -42,4 +42,4 @@ ms.locfileid: "61663441"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

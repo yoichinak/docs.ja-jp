@@ -15,24 +15,22 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738670"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860553"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual メソッド
-指定されたバッファーに指定された仮想メモリ アドレスからのデータを読み取ります。  
+指定された仮想メモリアドレスから指定されたバッファーにデータを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [out, size_is(bytesRequested), length_is(*bytesRead)]   
+    [out, size_is(bytesRequested), length_is(*bytesRead)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesRead  
@@ -41,26 +39,26 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- [in]仮想メモリ アドレスを格納する CLRDATA_ADDRESS します。  
+ から仮想メモリアドレスを格納する CLRDATA_ADDRESS。  
   
  `buffer`  
- [out]データを受け取るバッファーへのポインター。  
+ 入出力データを受け取るバッファーへのポインター。  
   
  `bytesRequested`  
- [in]バッファーの長さ。  
+ からバッファーの長さ。  
   
  `bytesRead`  
- [out]返されるバイト数へのポインター。  
+ 入出力返されたバイト数へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

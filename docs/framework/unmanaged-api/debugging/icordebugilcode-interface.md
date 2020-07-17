@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 51c4de0c-3813-4142-be25-a85bb84efb90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 6d5d22ebb93a981efbc0c0183d45b684f93e8ed0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175722"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210372"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -28,18 +26,18 @@ ms.locfileid: "59175722"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetEHClauses メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|この IL のために定義された例外処理 (EH) 句のリストへのポインターを返します。|  
+|[GetEHClauses メソッド](icordebugilcode-getehclauses-method.md)|この IL のために定義された例外処理 (EH) 句のリストへのポインターを返します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

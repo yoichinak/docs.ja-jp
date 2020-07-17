@@ -1,5 +1,6 @@
 ---
 title: .NET Framework Client Profile
+description: .NET のバージョン 4 以前のエディションで提供されていた .NET のサブセットだった .NET Client Profile について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
@@ -9,14 +10,11 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: 9678e49cd5f3c37f59c1e5a0eda668e5602fbcb5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621744"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile は、.NET Framework のサブセットで、.NET Framework 4 以前のバージョンに含まれ、クライアント アプリケーション用に最適化されていました。 .NET Framework は、Windows、Windows Phone、および Microsoft Azure 用の開発プラットフォームであり、マネージド アプリの実行環境と .NET Framework クラス ライブラリを提供します。 .NET Framework 4 以前のバージョンでは、2 種類の配置オプション (完全な .NET Framework と Client Profile) が用意されていました。 完全な .NET Framework に比べて、Client Profile では、配置の迅速化とアプリ インストール パッケージの小型化が実現されました。  
@@ -25,11 +23,11 @@ ms.locfileid: "66457279"
   
  ただし、.NET Framework 4 または 3.5 を対象とする場合、Client Profile の概要と用途については、.NET Framework 4 ドキュメントの「[.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)」を参照してください。  
   
- .NET Framework 4.5 をインストールすると、.NET Framework 4 Client Profile は .NET Framework の完全バージョンに更新されます。 .NET Framework 4.5 のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。  
+ .NET Framework 4.5 をインストールすると、.NET Framework 4 Client Profile は .NET Framework の完全バージョンに更新されます。 .NET Framework 4.5 のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio のマルチ ターゲットの概要](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework を対象とするエラーのトラブルシューティング](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [方法: .NET Framework のバージョンをターゲットにする](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [方法: .NET Framework のバージョンをターゲットにする](/visualstudio/ide/visual-studio-multi-targeting-overview)

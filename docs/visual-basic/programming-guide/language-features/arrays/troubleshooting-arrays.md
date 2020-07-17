@@ -1,5 +1,5 @@
 ---
-title: 配列のトラブルシューティング (Visual Basic)
+title: 配列のトラブルシューティング
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting arrays
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
-ms.translationtype: MT
+ms.openlocfilehash: e633c5a00693f188270b1610abaf2decb656b00a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913462"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414596"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>配列のトラブルシューティング (Visual Basic)
-このページには、配列を使用する場合に発生する可能性がある一般的な問題が一覧表示されます。  
+ここでは、配列を使用しているときに発生する可能性のある一般的な問題について説明します。  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>コンパイル エラーを宣言して、配列の初期化  
- 宣言、作成、および配列の初期化の規則の誤解からコンパイル エラーが発生します。 エラーの最も一般的な原因は次のとおりです。  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>配列の宣言と初期化のコンパイル エラー  
+ コンパイル エラーは、配列の宣言、作成、および初期化に関する規則の解釈の誤りが原因で発生する可能性があります。 エラーの最も一般的な原因は次のとおりです。  
   
-- 指定する、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)配列変数の宣言に次元の長さを指定した後の句。 次のコード行では、この型の無効な宣言を表示します。  
+- 配列変数宣言で、次元の長さを指定した後に [new 演算子](../../../language-reference/operators/new-operator.md)句を指定した。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "64913462"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- ジャグ配列の最上位の配列の次元の長さを指定します。 次のコード行は、この型の無効な宣言を示しています。  
+- ジャグ配列の最上位の配列を超える次元の長さを指定した。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- 省略すると、`New`キーワード要素の値を指定する場合。 次のコード行は、この型の無効な宣言を示しています。  
+- 要素値を指定するときに `New` キーワードを省略した。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- 指定する、`New`中かっこのない句 (`{}`)。 次のコード行では、この型の無効な宣言を表示します。  
+- 中かっこ (`{}`) を使用せずに `New` 句を指定した。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -49,15 +49,15 @@ ms.locfileid: "64913462"
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
 ## <a name="accessing-an-array-out-of-bounds"></a>範囲外の配列へのアクセス  
- 配列の初期化中のプロセスは、各ディメンションを上限と下限の境界を割り当てます。 配列の要素へのすべてのアクセスには、有効なインデックス、またはすべてのディメンションの添字を指定します。 任意のインデックスが、上限の上または下の下限の境界の場合、<xref:System.IndexOutOfRangeException>例外が発生します。 コンパイラは、実行時にエラーが発生したため、このようなエラーを検出できません。  
+ 配列を初期化するプロセスでは、各次元に上限と下限が割り当てられます。 配列の要素にアクセスする場合は必ず、有効なインデックス (添字) を次元ごとに指定する必要があります。 インデックスのいずれかが下限を下回るか上限を超えていると、<xref:System.IndexOutOfRangeException> 例外が発生します。 このようなエラーはコンパイラでは検出できないため、実行時にエラーが発生します。  
   
-### <a name="determining-bounds"></a>範囲の確認  
- 場合は、コードに別のコンポーネントが配列を渡すと、たとえば、プロシージャの引数としてわからないその配列のサイズまたはその次元の長さ。 任意の要素にアクセスしようとする前に常に配列のすべての次元の上限の境界を決定する必要があります。 Visual Basic 以外の手段で配列が作成された場合`New`句では、下限の境界では、0 でない可能性がありもその下限の境界を決定するおくと安心になります。  
+### <a name="determining-bounds"></a>境界の特定  
+ 配列が別のコンポーネントによってコードに渡される場合、たとえばプロシージャの引数として渡される場合、その配列のサイズやその次元の長さはわかりません。 どの要素でも、要素へのアクセスを試みる場合は必ず、配列のすべての次元の上限を事前に決めておく必要があります。 配列が Visual Basic の `New` 句以外の方法で作成された場合、下限は 0 以外の値になる可能性があるため、最も確実なのは下限も決めておくことです。  
   
-### <a name="specifying-the-dimension"></a>ディメンションを指定します。  
- 多次元配列の境界を決定する際に注意して、ディメンションを指定する方法。 `dimension`のパラメーター、<xref:System.Array.GetLowerBound%2A>と<xref:System.Array.GetUpperBound%2A>メソッドは、中に、0 から始まる、 `Rank` Visual Basic のパラメーター<xref:Microsoft.VisualBasic.Information.LBound%2A>と<xref:Microsoft.VisualBasic.Information.UBound%2A>関数は、1 から始まります。  
+### <a name="specifying-the-dimension"></a>次元の指定  
+ 多次元配列の境界を決めるときは、次元を指定する方法に注意してください。 <xref:System.Array.GetLowerBound%2A> メソッドと <xref:System.Array.GetUpperBound%2A> メソッドの `dimension` パラメーターは 0 から始まりますが、Visual Basic の <xref:Microsoft.VisualBasic.Information.LBound%2A> 関数と <xref:Microsoft.VisualBasic.Information.UBound%2A> 関数の `Rank` パラメーターは 1 から始まります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [方法: Visual Basic で配列変数を初期化します。](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [配列](index.md)
+- [方法: Visual Basic で配列変数を初期化する](how-to-initialize-an-array-variable.md)

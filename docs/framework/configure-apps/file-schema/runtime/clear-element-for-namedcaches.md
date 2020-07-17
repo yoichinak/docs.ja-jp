@@ -5,20 +5,21 @@ helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: e563f8f27538e70ba90465fc28d300754509f7a4
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: bcc0e23f0c47ad3a98430e36da31d39612caa3c9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423321"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70252756"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<namedCaches> の \<clear> 要素
-すべてクリア`namedCache`内のエントリ、`namedCaches`メモリ キャッシュのコレクション。  
+`namedCache`メモリキャッシュのコレクション内のすべてのエントリをクリア `namedCaches` します。  
   
- \<system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
-\<add>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67423321"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>型  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -45,11 +46,11 @@ ms.locfileid: "67423321"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|名前付きの構成設定のコレクションを含む<xref:System.Runtime.Caching.MemoryCache>インスタンス。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|名前付きインスタンスの構成設定のコレクションを格納 <xref:System.Runtime.Caching.MemoryCache> します。|  
   
-## <a name="remarks"></a>Remarks  
- `clear`要素がすべてクリア`namedCache`メモリ キャッシュの名前付きキャッシュのコレクション内のエントリ。 使用することができます、`clear`要素を使用する前に、`add`が他にないを特定するためには新しい名前付きキャッシュ エントリを追加する要素がコレクション内のキャッシュをという名前です。  
+## <a name="remarks"></a>解説  
+ 要素は、 `clear` `namedCache` メモリキャッシュの名前付きキャッシュコレクション内のすべてのエントリをクリアします。 要素を使用して、 `clear` `add` コレクション内に他の名前付きキャッシュが存在しないことを特定するために、要素を使用して新しい名前付きキャッシュエントリを追加することができます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches>要素 (キャッシュ設定)](namedcaches-element-cache-settings.md)

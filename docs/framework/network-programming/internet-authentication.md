@@ -1,5 +1,6 @@
 ---
 title: インターネット認証
+description: .NET Framework でアプリケーションに対して System.Net クラスがサポートする、さまざまなクライアント認証メカニズムについて学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295459"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502380"
 ---
 # <a name="internet-authentication"></a>インターネット認証
 <xref:System.Net> クラスは、さまざまなクライアント認証メカニズムをサポートしています。これには、基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の標準のインターネット認証方法の他に、ユーザーが作成できるカスタム メソッドも含まれます。  
@@ -41,6 +42,6 @@ ms.locfileid: "59295459"
   
 ## <a name="see-also"></a>関連項目
 
-- [基本認証とダイジェスト認証](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [NTLM 認証および Kerberos 認証](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [基本認証とダイジェスト認証](basic-and-digest-authentication.md)
+- [NTLM 認証および Kerberos 認証](ntlm-and-kerberos-authentication.md)
+- [ネットワーク プログラミングにおけるセキュリティ](security-in-network-programming.md)

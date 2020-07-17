@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3ef4b284676608363281e04087f6435dcb1ef74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fa25dd33223ad2a9521aed0917ce35a2a33fa2f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759845"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213388"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError メソッド
-共通言語ランタイムが関数の just-in-time (JIT) コンパイル前に設定されたブレークポイントを正確にバインドできなかったことをデバッガーに通知します。  
+関数が just-in-time (JIT) コンパイルされる前に設定されたブレークポイントを共通言語ランタイムが正しくバインドできなかったことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +38,29 @@ HRESULT BreakpointSetError (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]バインドされていないブレークポイントを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からバインドされていないブレークポイントを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]バインドされていないブレークポイントを含むスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からバインドされていないブレークポイントを含むスレッドを表す、表示スレッドオブジェクトへのポインター。  
   
  `pBreakpoint`  
- [in]バインドされていない、ブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
+ からバインドされていないブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
   
  `dwError`  
- [in]エラーを示す整数。  
+ からエラーを示す整数。  
   
 ## <a name="remarks"></a>Remarks  
- 特定のブレークポイントに到達しません。 デバッガーは、非アクティブ化し、再バインドする必要があります。  
+ 指定されたブレークポイントはヒットしません。 デバッガーは、非アクティブ化して再バインドする必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

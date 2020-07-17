@@ -1,17 +1,17 @@
 ---
 title: let バインド
-description: 使用する方法について説明します、 F# 'let' バインドの値または関数の識別子を関連付けます。
+description: 識別子を値またはF#関数に関連付ける ' let ' バインドの使用方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: ac33ee761cd4881f3d82d6680a07f62a1d7e77e5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 654631c7d1c48d8737e6098c98efee54cfdd91be
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641889"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630641"
 ---
 # <a name="let-bindings"></a>let バインド
 
-A*バインド*を値または関数と識別子を関連付けます。 使用する、`let`値または関数に名前をバインドするキーワード。
+*バインド*は、識別子を値または関数に関連付けます。 キーワードを使用`let`して、名前を値または関数にバインドします。
 
 ## <a name="syntax"></a>構文
 
@@ -24,77 +24,77 @@ let identifier parameter-list [: return-type ] =expressionbody-expression
 
 ## <a name="remarks"></a>Remarks
 
-`let`キーワード値または関数名の値を 1 つまたは複数定義する式のバインドで使用されます。 最も単純な形式、`let`式の名前からの単純な値の次のようにバインドします。
+キーワード`let`は、1つまたは複数の名前の値または関数の値を定義するために、バインド式で使用されます。 `let`式の最も単純な形式は、次のように単純な値に名前をバインドします。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1101.fs)]
 
-新しい行を使用して、識別子から式を分離する場合は、次のコードのように、式の各行をインデントする必要があります。
+新しい行を使用して識別子から式を分離する場合は、次のコードのように、式の各行をインデントする必要があります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1102.fs)]
 
-名前だけではなく、名前を含むパターンを指定できますが、たとえば、タプル次のコードに示すようにします。
+次のコードに示すように、名前だけでなく、名前を含むパターンを指定することもできます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1103.fs)]
 
-*式の本体*名前が使用される式です。 式の本体が最初の文字と完全にする行にインデント、独自の行に表示されます、`let`キーワード。
+*本体式*は、名前が使用される式です。 本文の式は、 `let`キーワード内の最初の文字と正確に一致する行にインデントされています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1104.fs)]
 
-A`let`バインドに記述できるクラス型の定義で、またはローカルのスコープで、モジュール レベル関数の定義のようにします。 A`let`最上位レベルのモジュールまたはクラス型のバインドは、本文の式を指定する必要はありませんが、他のスコープ レベルでは、式の本体が必要です。 前に、任意の時点ではなくが、定義の時点より後バインド名は使用可能な`let`は次のコードに示すように、バインドが表示されます。
+バインディング`let`は、モジュールレベル、クラス型の定義、またはローカルスコープ (関数定義など) で表示できます。 モジュール内の最上位レベルまたはクラス型のバインディングは、本体式を持つ必要はありませんが、その他のスコープレベルでは、本体式が必要です。`let` バインドされた名前は、次のコードに示すように、定義の時点`let`より後で使用できますが、バインドが表示される前の時点では使用できません。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1105.fs)]
 
-## <a name="function-bindings"></a>関数のバインディング
+## <a name="function-bindings"></a>関数のバインド
 
-関数バインドは関数バインドでは関数名をパラメーターでは、次のコードに示すように準じた値のバインディングの規則に従います。
+関数のバインドは、次のコードに示すように、関数のバインドに関数名とパラメーターが含まれている点を除いて、値のバインドの規則に従います。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1106.fs)]
 
-一般に、パラメーターは、タプル パターンなどのパターンです。
+一般に、パラメーターはタプルパターンなどのパターンです。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1107.fs)]
 
-A`let`最後の式の値に評価される式をバインドします。 そのため、次のコード例の値で`result`から計算`100 * function3 (1, 2)`に評価されます`300`します。
+バインド`let`式は、最後の式の値に評価されます。 したがって、次のコード例では、の`result`値はに`100 * function3 (1, 2)` `300`評価されるから計算されます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1109.fs)]
 
 詳細については、「[関数](index.md)」を参照してください。
 
 ## <a name="type-annotations"></a>型の注釈
 
-後にかっこで囲まれているすべての型名、コロン (:) を含めることによって、型パラメーターを指定できます。 最後のパラメーターの後にコロンと型を追加して、戻り値の型を指定することもできます。 完全な型注釈には、`function1`パラメーターの型として整数であるようにします。
+パラメーターの型は、コロン (:) を含めることによって指定できます。の後に型名が続き、すべてがかっこで囲まれています。 戻り値の型を指定するには、最後のパラメーターの後にコロンと型を追加します。 パラメーターの型とし`function1`て整数を持つの完全な型の注釈は、次のようになります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1108.fs)]
 
-明示的な型のパラメーターがない場合は、関数のパラメーターの種類を決定する型の推定が使用されます。 これをジェネリック パラメーターの型を自動的に一般化を含めることができます。
+明示的な型パラメーターがない場合は、型の推定を使用して、関数のパラメーターの型を決定します。 これには、ジェネリックにするパラメーターの型を自動的に一般化することが含まれます。
 
-詳細については、次を参照してください。[自動ジェネリック化](../generics/automatic-generalization.md)と[型の推定](../type-inference.md)します。
+詳細については、「[自動汎](../generics/automatic-generalization.md)化と[型推論](../type-inference.md)」を参照してください。
 
 ## <a name="let-bindings-in-classes"></a>クラス内の let 束縛
 
-A`let`構造体またはレコードの種類ではなく、クラス型にバインドを表示できます。 Let クラス型でバインディングを使用するには、クラスは、プライマリ コンス トラクターをいる必要があります。 コンス トラクターのパラメーターは、クラス定義内の型名の後に表示する必要があります。 A`let`クラス型のバインディングは、プライベート フィールドとそのクラス型と、と共にメンバーを定義します。`do`バインドの種類では、型のプライマリ コンス トラクターのコードをフォーム。 次のコード例は、クラスを表示する`MyClass`プライベート フィールドを持つ`field1`と`field2`します。
+バインド`let`はクラス型では表示できますが、構造体またはレコード型では使用できません。 クラス型で let バインドを使用するには、クラスにプライマリコンストラクターが必要です。 コンストラクターのパラメーターは、クラス定義の型名の後に記述する必要があります。 クラス`let`型のバインディングは、そのクラス型のプライベートフィールドとメンバーを定義し、型`do`のバインディングと共に、型のプライマリコンストラクターのコードを形成します。 次のコード例は、プライベート`MyClass`フィールド`field1`と`field2`を持つクラスを示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1110.fs)]
 
-スコープ`field1`と`field2`は宣言されている型に制限されます。 詳細については、次を参照してください。 [ `let`クラス内のバインディング](../members/let-bindings-in-classes.md)と[クラス](../classes.md)します。
+`field1` と`field2`のスコープは、宣言されている型に制限されます。 詳細については、「クラスおよび[クラス](../classes.md) [ `let`のバインド](../members/let-bindings-in-classes.md)」を参照してください。
 
-## <a name="type-parameters-in-let-bindings"></a>型パラメーターの let 束縛
+## <a name="type-parameters-in-let-bindings"></a>Let バインドの型パラメーター
 
-A`let`型、またはコンピュテーション式で、モジュール レベルでバインドが明示的な型のパラメーターを持つことができます。 Let 関数の定義内など、式の中でバインディングには、型パラメーターを含めることはできません。 詳細については、「[ジェネリック](../generics/index.md)」を参照してください。
+モジュールレベル、型、またはコンピュテーション式内のバインディングは、明示的な型パラメーターを持つことができます。`let` 関数定義内などの式で let バインドを使用する場合、型パラメーターを指定することはできません。 詳細については、「[ジェネリック](../generics/index.md)」を参照してください。
 
-## <a name="attributes-on-let-bindings"></a>属性の let 束縛
+## <a name="attributes-on-let-bindings"></a>Let バインドの属性
 
-属性は、最上位レベルに適用できる`let`モジュールに、次のコードに示すようにバインドします。
+属性は、次のコードに示す`let`ように、モジュールの最上位のバインドに適用できます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1111.fs)]
 
-## <a name="scope-and-accessibility-of-let-bindings"></a>スコープとユーザー補助の Let バインド
+## <a name="scope-and-accessibility-of-let-bindings"></a>Let バインドのスコープとアクセシビリティ
 
-Let によるバインドで宣言されたエンティティのスコープを含むの部分に制限されていますが、バインドが表示された後のスコープを (関数、モジュール、ファイル クラスなど)。 そのため、そのことが言えます let によるバインドがスコープに名前を導入します。 モジュールに let バインドされた値または関数モジュールのクライアントにアクセスできる限りは、モジュール内の let バインドは、モジュールのパブリック関数にコンパイルされるため、モジュールがアクセス可能で。 これに対し、let バインド クラスでは、クラスにプライベートです。
+Let バインドを使用して宣言されたエンティティのスコープは、バインドが表示された後に、コンテナースコープ (関数、モジュール、ファイル、クラスなど) の部分に限定されます。 そのため、let バインドによって名前がスコープに導入されることがあります。 モジュールでは、モジュール内の let バインドがモジュールのパブリック関数にコンパイルされるので、モジュールがアクセス可能であればモジュールのクライアントが使用できるようになります。 これに対して、クラス内のバインディングはクラスに対してプライベートです。
 
-通常、モジュール内の関数は、クライアント コードで使用すると、モジュールの名前で修飾する必要があります。 たとえば、モジュール`Module1`関数があります`function1`、ユーザーは指定`Module1.function1`関数を参照します。
+通常、モジュール内の関数は、クライアントコードで使用するときに、モジュールの名前で修飾する必要があります。 たとえば、モジュール`Module1`に関数`function1`がある場合、ユーザーは関数を`Module1.function1`参照するように指定します。
 
-モジュールのユーザーは、インポート宣言を使用して、モジュール名によって修飾されることがなくそのモジュール内の関数を使用できるようにすることがあります。 先ほど説明した例では、モジュールのユーザー開くことができる場合、モジュールのインポート宣言のオープンを使用して`Module1`し、その後を参照してください`function1`直接します。
+モジュールのユーザーは、インポート宣言を使用して、モジュール名で修飾されていなくても、そのモジュール内の関数を使用できるようにすることができます。 前述の例では、モジュールのユーザーはインポート宣言`Module1`を使用してモジュールを開くことができ、その後は直接を`function1`参照します。
 
 ```fsharp
 module Module1 =
@@ -110,9 +110,9 @@ let function3 x =
     function1 x
 ```
 
-一部のモジュールは、属性を持つ[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)、つまり、モジュールの名前で公開されている関数を修飾する必要があります。 たとえば、F# List モジュールには、この属性があります。
+一部のモジュールには[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)属性があります。つまり、公開する関数がモジュールの名前で修飾されている必要があります。 たとえば、F# List モジュールには、この属性があります。
 
-モジュールとアクセス制御の詳細については、次を参照してください。[モジュール](../modules.md)と[アクセス制御](../access-control.md)します。
+モジュールとアクセス制御の詳細については、「[モジュール](../modules.md)と[Access Control](../access-control.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

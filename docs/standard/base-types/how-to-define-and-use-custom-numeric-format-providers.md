@@ -15,21 +15,19 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590474"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290514"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する
 .NET Framework では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
   
-- 標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)」を参照してください。  
+- 標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](standard-numeric-format-strings.md)」を参照してください。  
   
-- カスタム数値書式指定文字列: カスタム数値書式指定子を定義するために結合できる記号のセットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの任意の数値書式指定メソッドでも使用できます。 詳細については、「[カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)」を参照してください。  
+- カスタム数値書式指定文字列: カスタム数値書式指定子を定義するために結合できる記号のセットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの任意の数値書式指定メソッドでも使用できます。 詳細については、「[カスタム数値書式指定文字列](custom-numeric-format-strings.md)」を参照してください。  
   
 - カスタムの <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクト: 記号を定義し、数値の文字列形式を表示するために使用されるパターンの書式を設定します。 これらは、`provider` パラメーターを持つ <xref:System.Int32.ToString%2A> などの数値書式指定メソッドと共に使用できます。 通常、`provider` パラメーターは、カルチャに固有の書式を指定するために使用されます。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "65590474"
   
     1. 必要に応じて、`provider` パラメーターを調べることで、メソッドが書式指定サービスを提供する正当なものであることを確認します。 <xref:System.IFormatProvider> と <xref:System.ICustomFormatter> の両方を実装する書式設定オブジェクトの場合、現在の書式設定オブジェクトと等しいことを確認するため、`provider` パラメーターをテストする必要があります。  
   
-    2. 書式指定オブジェクトが、カスタム書式指定子をサポートするかどうかを決定します  (たとえば、"N" 書式指定子は、米国の電話番号を NANP 形式で出力することを示し、"I" はITU-T 推奨 E.123 形式での出力を示すことができます)。書式指定子を使用している場合、メソッドが特定の書式指定子を処理する必要があります。 これが `format` パラメーターのメソッドに渡されます。 指定子がない場合、`format` パラメーターの値は <xref:System.String.Empty?displayProperty=nameWithType> です。  
+    2. 書式指定オブジェクトが、カスタム書式指定子をサポートするかどうかを決定します (たとえば、"N" 書式指定子は、米国の電話番号を NANP 形式で出力することを示し、"I" はITU-T 推奨 E.123 形式での出力を示すことができます)。書式指定子を使用している場合、メソッドが特定の書式指定子を処理する必要があります。 これが `format` パラメーターのメソッドに渡されます。 指定子がない場合、`format` パラメーターの値は <xref:System.String.Empty?displayProperty=nameWithType> です。  
   
     3. `arg` パラメーターとしてメソッドに渡される数値を取得します。 文字列形式に変換するために必要な操作を実行します。  
   
@@ -86,8 +84,4 @@ ms.locfileid: "65590474"
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- この例の場合、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> を実装するメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドのコールバック メソッドを果たす目的があります。 そのため、`formatProvider` パラメーターを調べ、現在の `TelephoneFormatter` オブジェクトへの参照が含まれるかどうかを判断します。 ただし、メソッドはコードから直接呼び出すこともできます。 その場合は、`formatProvider` パラメーターを使用して、カルチャに固有の書式情報を提供する <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクトを提供することができます。  
-  
-## <a name="see-also"></a>関連項目
-
-- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
+ この例の場合、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> を実装するメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドのコールバック メソッドを果たす目的があります。 そのため、`formatProvider` パラメーターを調べ、現在の `TelephoneFormatter` オブジェクトへの参照が含まれるかどうかを判断します。 ただし、メソッドはコードから直接呼び出すこともできます。 その場合は、`formatProvider` パラメーターを使用して、カルチャに固有の書式情報を提供する <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクトを提供することができます。

@@ -39,3 +39,5 @@
       href: resolve-ambiguous-times.md
     - name: '方法: ユーザーがあいまいな時刻を解決できるようにする'
       href: let-users-resolve-ambiguous-times.md
+    - name: TimeOffset support in での DateTime と DateTimeOffset のサポート
+      href: system-text-json-support.md

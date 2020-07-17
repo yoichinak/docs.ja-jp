@@ -1,17 +1,20 @@
 ---
-title: ワークフローの <system.serviceModel>
+title: ワークフローの System.servicemodel> を <する
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422888"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79151950"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > のワークフロー
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>ワークフローの
 この構成セクションには、すべてのワークフロー構成要素が含まれます。  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -22,12 +25,12 @@ ms.locfileid: "67422888"
     <behavior name="String">  
       <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
-     <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
+     <sendMessageChannelCache allowUnsafeCaching="Boolean" >
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
         <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
      </sendMessageChannelCache>  
-      <sqlWorkflowInstanceStore   
-          connectionStringName="String"   
+      <sqlWorkflowInstanceStore
+          connectionStringName="String"
           hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
@@ -39,12 +42,12 @@ ms.locfileid: "67422888"
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
-     <participants>   
-      <add name="String"   
+  <tracking>
+     <participants>
+      <add name="String"
            profileName="String"  
-           type="String" />   
-     </participants>   
+           type="String" />
+     </participants>
     <trackingProfile name="String">  
       <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
@@ -85,7 +88,7 @@ ms.locfileid: "67422888"
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.ServiceModel>  
@@ -101,11 +104,11 @@ ms.locfileid: "67422888"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|このセクションで定義、 **serviceBehaviors**コレクション。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素が、一意で識別される**名前**属性。|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。|  
+|[\<behaviors>](behaviors-of-workflow.md)|このセクションでは、 **Servicebehaviors**コレクションを定義します。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、一意の**name**属性によって識別されます。|  
+|[\<tracking>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、「ワークフローの[追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「ワークフロー[の追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|\<configuration>|.NET 構成ファイルのすべての構成要素のルート要素。|
+|[\<configuration>](../configuration-element.md)|.NET 構成ファイルのすべての構成要素のルート要素。|

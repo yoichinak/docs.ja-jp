@@ -1,6 +1,5 @@
 ---
 title: orderby 句 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - orderby
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: b62634c0f61e17c046cd474670fddf437287ab7a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634104"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173576"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 句 (C# リファレンス)
 
@@ -22,7 +21,7 @@ ms.locfileid: "65634104"
 
 ## <a name="example"></a>例
 
-次の例では、最初のクエリが A から始まるアルファベット順で単語を並べ替え、2 番目のクエリが同じ単語を降順で並べ替えます  (`ascending` キーワードは、既定の並べ替え値で、省略可能です)。
+次の例では、最初のクエリが A から始まるアルファベット順で単語を並べ替え、2 番目のクエリが同じ単語を降順で並べ替えます (`ascending` キーワードは、既定の並べ替え値で、省略可能です)。
 
 [!code-csharp[cscsrefQueryKeywords#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#20)]
 
@@ -36,10 +35,10 @@ ms.locfileid: "65634104"
 
 コンパイル時に、`orderby` 句は <xref:System.Linq.Enumerable.OrderBy%2A> メソッドの呼び出しに変換されます。 `orderby` 句内の複数のキーは、<xref:System.Linq.Enumerable.ThenBy%2A> メソッドの呼び出しに変換されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [クエリ キーワード (LINQ)](query-keywords.md)
-- [統合言語クエリ (LINQ)](../../linq/index.md)
+- [C# での LINQ](../../linq/index.md)
 - [group 句](group-clause.md)
-- [C# の LINQ の概要](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [統合言語クエリ (LINQ)](../../programming-guide/concepts/linq/index.md)

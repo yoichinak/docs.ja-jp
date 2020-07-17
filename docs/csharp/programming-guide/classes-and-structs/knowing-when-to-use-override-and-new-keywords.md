@@ -1,24 +1,23 @@
 ---
 title: Override キーワードと New キーワードを使用する場合について - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398429"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170261"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
 
-C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../../csharp/language-reference/keywords/new-modifier.md) および [override](../../../csharp/language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスの `virtual`メソッドを "*拡張*" し、`new` 修飾子はアクセス可能な基底クラスのメソッドを "*非表示*" にします。 このトピックの例ではその違いを示します。  
+C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../language-reference/keywords/new-modifier.md) および [override](../../language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスの `virtual`メソッドを "*拡張*" し、`new` 修飾子はアクセス可能な基底クラスのメソッドを "*非表示*" にします。 このトピックの例ではその違いを示します。  
   
- コンソール アプリケーションで、次の 2 つのクラス `BaseClass` と `DerivedClass` を宣言します。 `DerivedClass` は `BaseClass`を継承します。  
+ コンソール アプリケーションで、次の 2 つのクラス `BaseClass` と `DerivedClass` を宣言します。 `DerivedClass` は `BaseClass` を継承します。  
   
 ```csharp  
 class BaseClass  
@@ -115,7 +114,7 @@ public new void Method2()
 }  
 ```  
   
- もう一度プログラムを実行し、出力が変わらないことを確認します。 また、警告が表示されなくなったことを確認します。 `new` を使うことにより、それによって修飾されるメンバーが基底クラスから継承されたメンバーを隠ぺいすることを了解していることを明示します。 継承による名前の非表示について詳しくは、「[new 修飾子](../../../csharp/language-reference/keywords/new-modifier.md)」をご覧ください。  
+ もう一度プログラムを実行し、出力が変わらないことを確認します。 また、警告が表示されなくなったことを確認します。 `new` を使うことにより、それによって修飾されるメンバーが基底クラスから継承されたメンバーを隠ぺいすることを了解していることを明示します。 継承による名前の非表示について詳しくは、「[new 修飾子](../../language-reference/keywords/new-modifier.md)」をご覧ください。  
   
  この動作を `override` を使ったときの効果と比較するため、次のメソッドを `DerivedClass` に追加します。 `override` 修飾子を追加する位置は、`public` の前でも後でもかまいません。  
   
@@ -181,7 +180,7 @@ namespace OverrideAndNew
             // Derived - Method1  
             // Derived - Method2  
   
-            // The following two calls produce different results, depending   
+            // The following two calls produce different results, depending
             // on whether override (Method1) or new (Method2) is used.  
             bcdc.Method1();  
             bcdc.Method2();  
@@ -277,7 +276,7 @@ public static void TestCars1()
   
     // Notice the output from this test case. The new modifier is  
     // used in the definition of ShowDetails in the ConvertibleCar  
-    // class.    
+    // class.
   
     ConvertibleCar car2 = new ConvertibleCar();  
     car2.DescribeCar();  
@@ -313,7 +312,7 @@ public static void TestCars2()
     System.Console.WriteLine("\nTestCars2");  
     System.Console.WriteLine("----------");  
   
-    var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+    var cars = new List<Car> { new Car(), new ConvertibleCar(),
         new Minivan() };  
   
     foreach (var car in cars)  
@@ -420,7 +419,7 @@ namespace OverrideAndNew2
   
             // Notice the output from this test case. The new modifier is  
             // used in the definition of ShowDetails in the ConvertibleCar  
-            // class.    
+            // class.
             ConvertibleCar car2 = new ConvertibleCar();  
             car2.DescribeCar();  
             System.Console.WriteLine("----------");  
@@ -447,7 +446,7 @@ namespace OverrideAndNew2
             System.Console.WriteLine("\nTestCars2");  
             System.Console.WriteLine("----------");  
   
-            var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+            var cars = new List<Car> { new Car(), new ConvertibleCar(),
                 new Minivan() };  
   
             foreach (var car in cars)  
@@ -543,10 +542,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [C# プログラミングガイド](../index.md)
+- [クラスと構造体](./index.md)
+- [Override キーワードと New キーワードによるバージョン管理](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

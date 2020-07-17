@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b5818cb8d7da7415feb61532799df5fa5a16fd3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2248f99b76aaabff4bd3dc78b6e777a95692bb9c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781211"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494524"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip メソッド
-指定した要素数がスキップされるように、現在の位置からこの列挙子のカーソルを進めます。  
+指定された数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]スキップする要素の数。  
+ からスキップする要素の数。  
   
-## <a name="remarks"></a>Remarks  
- この列挙子のカーソルの新しい位置は: (現在の位置) +`celt`します。  
+## <a name="remarks"></a>解説  
+ この列挙子のカーソルの新しい位置は、(現在位置) + `celt` です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum インターフェイス](icorprofilerobjectenum-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 84e4c70c973fb19be6800d2cbaf76ea137f58b28
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767961"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493501"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 関数
-アンマネージ ホストが共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込むことを有効にします。 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)と`CorBindToRuntimeEx`関数は、同じ操作を実行が、`CorBindToRuntimeEx`関数では、CLR の動作を指定するフラグを設定することができます。  
+アンマネージ ホストが共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込むことを有効にします。 [Corbindtoruntime](corbindtoruntime-function.md)と `CorBindToRuntimeEx` 関数は同じ操作を実行しますが、関数を使用すると、 `CorBindToRuntimeEx` CLR の動作を指定するフラグを設定できます。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
  この関数は、次の操作をホストに許可するパラメーターを受け取ります。  
   
@@ -38,21 +36,21 @@ ms.locfileid: "67767961"
 - 同時実行ガベージ コレクションを実行するか、または非同時実行ガベージ コレクションを実行するかを制御します。  
   
 > [!NOTE]
->  同時実行ガベージ コレクションは、Intel Itanium アーキテクチャ (以前の IA-64) を実装する 64 ビット システム上で WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされません。 64 ビット Windows システム上で WOW64 の使用に関する詳細については、次を参照してください。[を実行している 32 ビット アプリケーション](/windows/desktop/WinProg64/running-32-bit-applications)します。  
+> 同時実行ガベージ コレクションは、Intel Itanium アーキテクチャ (以前の IA-64) を実装する 64 ビット システム上で WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされません。 64ビット Windows システムでの WOW64 の使用の詳細については、「 [32 ビットアプリケーションの実行](/windows/desktop/WinProg64/running-32-bit-applications)」を参照してください。  
   
 - アセンブリをドメイン中立として読み込むかどうかを制御します。  
   
-- インターフェイス ポインターを取得、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)が開始する前に、CLR のインスタンスを構成するための追加のオプションを設定できます。  
+- CLR のインスタンスを開始する前に構成するための追加オプションを設定するために使用できる、 [ICorRuntimeHost](icorruntimehost-interface.md)へのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT CorBindToRuntimeEx (  
-    [in]  LPCWSTR      pwszVersion,   
-    [in]  LPCWSTR      pwszBuildFlavor,   
-    [in]  DWORD        startupFlags,   
-    [in]  REFCLSID     rclsid,   
-    [in]  REFIID       riid,   
+    [in]  LPCWSTR      pwszVersion,
+    [in]  LPCWSTR      pwszBuildFlavor,
+    [in]  DWORD        startupFlags,
+    [in]  REFCLSID     rclsid,
+    [in]  REFIID       riid,
     [out] LPVOID FAR  *ppv  
 );  
 ```  
@@ -61,19 +59,19 @@ HRESULT CorBindToRuntimeEx (
  `pwszVersion`  
  [入力] 読み込む CLR のバージョンを示す文字列。  
   
- .NET Framework のバージョン番号はピリオドで区切られた 4 つの部分で構成されます: *major.minor.build.revision*します。 `pwszVersion` として渡される文字列は、文字 "v" で始まり、バージョン番号の最初の 3 つの部分がその後に続く必要があります (たとえば "v1.0.1529")。  
+ .NET Framework のバージョン番号は、ピリオドで*区切られた*4 つの部分で構成されます。 `pwszVersion` として渡される文字列は、文字 "v" で始まり、バージョン番号の最初の 3 つの部分がその後に続く必要があります (たとえば "v1.0.1529")。  
   
  いくつかのバージョンの CLR は、以前のバージョンの CLR との互換性を指定するポリシー ステートメントと共にインストールされています。 既定では、スタートアップ shim により、ポリシー ステートメントに対して `pwszVersion` が評価され、要求されたバージョンと互換性がある最新バージョンのランタイムが読み込まれます。 ホストは shim に対し、次に示すように `pwszVersion` パラメーターで値 `STARTUP_LOADER_SAFEMODE` を渡すことにより、ポリシー評価を省略し、`startupFlags` で指定されたバージョンとまったく同じバージョンを読み込ませることができます。  
   
  呼び出し元が `pwszVersion` に null を指定した場合、`CorBindToRuntimeEx` はバージョン番号が .NET Framework 4 ランタイム未満のインストール済みランタイム セットを識別し、そのランタイム セットから最新バージョンのランタイムを読み込みます。 .NET Framework 4 以降は読み込まれず、それ以前のバージョンがインストールされていない場合は失敗します。 null を渡すと、ホストはどのバージョンのランタイムを読み込むかを制御できなくなることに注意してください。 状況によってはこのような方法が適切なこともありますが、読み込むバージョンを特定させておくことを強くお勧めします。  
   
  `pwszBuildFlavor`  
- [入力] CLR のサーバー ビルドまたはワークステーション ビルドのどちらを読み込むかを指定する文字列。 有効値は `svr` または `wks` です。 ワークステーション ビルドはシングルプロセッサ コンピューターでクライアント アプリケーションを実行するために最適化され、サーバー ビルドはガベージ コレクションでマルチ プロセッサを利用するために最適化されています。  
+ [入力] CLR のサーバー ビルドまたはワークステーション ビルドのどちらを読み込むかを指定する文字列。 有効な値は、`svr`、`wks` です。 ワークステーション ビルドはシングルプロセッサ コンピューターでクライアント アプリケーションを実行するために最適化され、サーバー ビルドはガベージ コレクションでマルチ プロセッサを利用するために最適化されています。  
   
- 場合`pwszBuildFlavor`に設定されている null の場合、ワークステーション ビルドが読み込まれます。 シングル プロセッサ コンピューターでを実行するときに常にワークステーション ビルドが読み込まれて、たとえ`pwszBuildFlavor`に設定されている`svr`します。 ただし場合、`pwszBuildFlavor`に設定されている`svr`と同時実行ガベージ コレクションの指定 (の説明を参照して、`startupFlags`パラメーター)、サーバー ビルドが読み込まれます。  
+ `pwszBuildFlavor`が null に設定されている場合、ワークステーションのビルドが読み込まれます。 をシングルプロセッサコンピューターで実行する場合、がに設定されていても、ワークステーションのビルドは常に読み込まれ `pwszBuildFlavor` `svr` ます。 ただし、 `pwszBuildFlavor` がに設定され、 `svr` 同時実行ガベージコレクションが指定されている場合 (パラメーターの説明を参照 `startupFlags` )、サーバービルドが読み込まれます。  
   
  `startupFlags`  
- [in]値の組み合わせ、 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列挙体。 これらのフラグは、同時実行ガベージ コレクション、ドメインに中立なコード、および `pwszVersion` パラメーターの動作を制御します。 どのフラグも設定されていない場合は、既定はシングル ドメインになります。 有効な値は、次のとおりです。  
+ から[STARTUP_FLAGS](startup-flags-enumeration.md)列挙型の値の組み合わせ。 これらのフラグは、同時実行ガベージ コレクション、ドメインに中立なコード、および `pwszVersion` パラメーターの動作を制御します。 どのフラグも設定されていない場合は、既定はシングル ドメインになります。 有効な値は、次のとおりです。  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -101,10 +99,10 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- これらのフラグの説明については、次を参照してください。、 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列挙体。  
+ これらのフラグの説明については、 [STARTUP_FLAGS](startup-flags-enumeration.md)列挙体を参照してください。  
   
  `rclsid`  
- [in]`CLSID`のいずれかを実装するコクラスの[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)または[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)インターフェイス。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
+ から`CLSID` [ICorRuntimeHost](icorruntimehost-interface.md)または[ICLRRuntimeHost](iclrruntimehost-interface.md)のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
   
  `riid`  
  [入力] 要求された `IID` のインターフェイスの `rclsid`。 サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。  
@@ -112,7 +110,7 @@ HRESULT CorBindToRuntimeEx (
  `ppv`  
  [出力] 返された `riid` へのインターフェイス ポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `pwszVersion` で指定したランタイムのバージョンが存在しない場合は、`CorBindToRuntimeEx` は CLR_E_SHIM_RUNTIMELOAD の HRESULT 値を返します。  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Windows ID の実行コンテキストとフロー  
@@ -124,26 +122,26 @@ HRESULT CorBindToRuntimeEx (
   
 2. 処理の既定のモードを、現在のスレッドの <xref:System.Security.Principal.WindowsIdentity> 設定がどの状態でも <xref:System.Threading.ExecutionContext> オブジェクトは非同期ポイント間をフローしない、バージョン 1 互換モードに変更します。 既定のモードを変更する方法は、CLR を読み込むときにマネージド実行可能ファイルを使用するか、アンマネージド ホスト インターフェイスを使用するかに応じて異なります。  
   
-    1. マネージ実行可能ファイル、設定する必要があります、`enabled`の属性、 [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)要素`true`します。  
+    1. マネージ実行可能ファイルの場合は、 `enabled` 要素の属性をに設定する必要があり [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) `true` ます。  
   
     2. アンマネージ ホスト インターフェイスを使用する場合は、`STARTUP_LEGACY_IMPERSONATION` 関数を呼び出すときの `startupFlags` パラメーターに `CorBindToRuntimeEx` フラグを設定します。  
   
      バージョン 1 互換モードは、その処理全体および処理のすべてのアプリケーション ドメインに適用されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [CorBindToCurrentRuntime 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeHost 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime 関数](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime 関数](corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg 関数](corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeHost 関数](corbindtoruntimehost-function.md)
+- [ICorRuntimeHost インターフェイス](icorruntimehost-interface.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

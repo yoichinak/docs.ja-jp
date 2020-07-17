@@ -5,26 +5,24 @@ helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592669"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79153907"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources> 要素
 サテライト アセンブリのプローブを最適化します。  
   
- \<configuration> 要素  
-\<runtime> 要素  
-\<relativeBindForResources> 要素  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml
-<relativeBindForResources    
+<relativeBindForResources
    enabled="true|false" />  
 ```  
   
@@ -35,44 +33,44 @@ ms.locfileid: "64592669"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> 共通言語ランタイムがサテライト アセンブリのプローブを最適化するかどうかを指定します。|  
+|`enabled`|必須の属性です。<br /><br /> 共通言語ランタイムがサテライトアセンブリのプローブを最適化するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|`false`|ランタイムでは、サテライト アセンブリのプローブは最適化されません。 これが既定値です。|  
-|`true`|ランタイムは、サテライト アセンブリのプローブを最適化します。|  
+|`false`|ランタイムは、サテライトアセンブリのプローブを最適化しません。 これが既定値です。|  
+|`true`|ランタイムは、サテライトアセンブリのプローブを最適化します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks  
- 記載されているのリソースについては、Resource Manager が一般に、プローブ、 [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)トピック。 つまり、リソース マネージャーは、リソースの特定のローカライズされたバージョンのプローブ、ときに、可能性があります、グローバル アセンブリ キャッシュ ファイルの場所、カルチャ固有のフォルダー、アプリケーションのコード ベース、クエリ Windows インストーラーでサテライト アセンブリでは、検索対象を発生させる、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。 `<relativeBindForResources>`要素は、Resource Manager がサテライト アセンブリをプローブする方法を最適化します。 次の条件下でリソースのプローブは、パフォーマンスを向上させることできます。  
+## <a name="remarks"></a>解説  
+ 一般に、リソースの[パッケージ化とデプロイ](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)に関するトピックで説明されているように、Resource Manager はリソースをプローブします。 これは、resource Manager が特定のローカライズされたバージョンのリソースをプローブするときに、グローバルアセンブリキャッシュを検索し、アプリケーションのコードベースでカルチャ固有のフォルダーを検索し、サテライトアセンブリの Windows インストーラーを照会して、イベントを発生させることができることを意味し <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> ます。 要素は、 `<relativeBindForResources>` リソースマネージャーがサテライトアセンブリをプローブする方法を最適化します。 次の条件下でリソースを調査するときにパフォーマンスを向上させることができます。  
   
-- ときに、サテライト アセンブリは、コード アセンブリと同じ場所にデプロイされます。 つまり、コード アセンブリがグローバル アセンブリ キャッシュにインストールする場合、サテライト アセンブリもインストールしなければなりませんがあります。 コード アセンブリは、アプリケーションのコード ベースでインストールする場合、コード ベースのカルチャ固有のフォルダーにもこのサテライト アセンブリをインストールする必要があります。  
+- サテライトアセンブリがコードアセンブリと同じ場所に配置されている場合。 つまり、コードアセンブリがグローバルアセンブリキャッシュにインストールされている場合は、サテライトアセンブリもインストールする必要があります。 コードアセンブリがアプリケーションのコードベースにインストールされている場合は、サテライトアセンブリをコードベースのカルチャ固有のフォルダーにもインストールする必要があります。  
   
-- Windows インストーラーが実行されていないまたはほとんど使用されないサテライト アセンブリのオンデマンドでインストールします。  
+- Windows インストーラーが使用されていない場合、またはサテライトアセンブリのオンデマンドインストールではあまり使用されない場合。  
   
-- アプリケーション コードが処理しない場合、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
+- アプリケーションコードがイベントを処理しない場合 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 。  
   
- 設定、`enabled`の属性、`<relativeBindForResources>`要素を`true`サテライト アセンブリの次のように Resource Manager のプローブを最適化します。  
+ `enabled`要素の属性 `<relativeBindForResources>` をに設定すると、次のように、 `true` サテライトアセンブリのリソースマネージャーのプローブが最適化されます。  
   
-- 親コード アセンブリの場所を使って、サテライト アセンブリをプローブします。  
+- 親コードアセンブリの場所を使用して、サテライトアセンブリをプローブします。  
   
-- Windows インストーラーをサテライト アセンブリに照会しません。  
+- サテライトアセンブリの Windows インストーラーに対してはクエリを実行しません。  
   
-- 発生させない、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
+- イベントは発生しません <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 。  
   
 ## <a name="see-also"></a>関連項目
 
-- [リソースのパッケージ化と配置](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [リソースのパッケージ化と配置](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

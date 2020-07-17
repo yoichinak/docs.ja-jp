@@ -1,49 +1,49 @@
 ---
-title: ADO.NET での side-by-side 実行
+title: side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: MT
+ms.openlocfilehash: a624aac2ed1f3ab124973c84bc74e39297600c8b
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877091"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980016"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
-.NET Framework でのサイド バイ サイドで実行、アプリケーションのコンパイル対象のバージョンを排他的に使用して、インストールされている .NET Framework の複数のバージョンをあるコンピューター上でアプリケーションを実行する機能があります。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
+.NET Framework の side-by-side 実行は、.NET Framework の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 side-by-side 実行について詳しくは、[side-by-side 実行](../../deployment/side-by-side-execution.md)に関する記事をご覧ください。  
   
- .NET Framework の 1 つのバージョンを使用してコンパイルされたアプリケーションは、.NET Framework の別のバージョンで実行できます。 ただし、バージョンの .NET Framework のインストールされている各バージョンのアプリケーションをコンパイルして、別々 に実行することお勧めします。 どちらのシナリオでは、ADO.NET の上位互換性またはアプリケーションの旧バージョンとの互換性に影響を与えるリリース間の変更注意する必要があります。  
+ あるバージョンの .NET Framework を使用してコンパイルされたアプリケーションを、別のバージョンの .NET Framework で実行することもできます。 ただし、インストールされている .NET Framework のバージョンごとにアプリケーションをコンパイルして、各バージョンを別々に実行することをお勧めします。 いずれの場合でも、ADO.NET の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>上位互換性と下位互換性  
- 上位互換性は、アプリケーションは、.NET Framework の以前のバージョンでコンパイルすることができますが、.NET Framework の以降のバージョンで正常に実行も意味します。 .NET Framework version 1.1 用に記述された ADO.NET コードでは、以降のバージョンとの上位互換性です。  
+ 上位互換性とは、.NET Framework の旧バージョンでコンパイルしたアプリケーションが、新しいバージョンの .NET Framework でも実行できることを意味します。 .NET Framework バージョン 1.1 用に書かれた ADO.NET のコードは、後のバージョンとの上位互換性があります。  
   
- 旧バージョンとの互換性は、アプリケーションは、.NET Framework の新しいバージョンがコンパイルされるが、機能を失うことがなく、.NET Framework の以前のバージョンで引き続き実行を意味します。 もちろん、この操作が、.NET Framework の新しいバージョンで導入された機能の場合です。  
+ 下位互換性とは、アプリケーションが新しいバージョンの .NET Framework 用にコンパイルされていても、機能を低下させずに、.NET Framework の以前のバージョンで引き続き実行できることを意味します。 当然のことながら、.NET Framework の新しいバージョンで導入された機能については、これは該当しません。  
   
 ## <a name="the-net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
- バージョン 1.1 では、.NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>) は、.NET Framework の一部として含まれます。 ODBC データ プロバイダーを利用できる .NET Framework バージョン 1.0 の開発者から Web ダウンロードとして、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。 ダウンロードした .NET Framework Data Provider for ODBC の名前空間は**Microsoft.Data.Odbc**します。  
+ バージョン 1.1 以降の .NET Framework には、.NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>) が含まれています。
   
- .NET Framework version 1.0、ODBC データ プロバイダーを使用して、データ ソースに接続するために開発されたアプリケーションがあり、.NET Framework version 1.1 またはそれ以降のバージョンでそのアプリケーションを実行する場合は、ODBC dat の名前空間を更新する必要があります。プロバイダーを**System.Data.Odbc**します。 する必要がありますを再コンパイルすること、.NET Framework の新しいバージョンの。  
+ ODBC データ プロバイダーを使用してデータ ソースに接続する、.NET Framework バージョン 1.0 用に開発されたアプリケーションを、.NET Framework バージョン 1.1 以降で実行する場合は、ODBC データ プロバイダーの名前空間を **System.Data.Odbc** に更新する必要があります。 その後で、.NET Framework の新しいバージョン用に再コンパイルする必要があります。  
   
- ODBC データ プロバイダーを使用して、データ ソースに接続する .NET Framework バージョン 2.0 以降用に開発されたアプリケーションがあり、.NET Framework version 1.0 でそのアプリケーションを実行する場合、ODBC データ プロバイダーをダウンロードしてインストールする必要があります.NET Framework version 1.0 システム。 必要があります変更する名前空間に ODBC データ プロバイダーの**Microsoft.Data.Odbc**、および .NET Framework version 1.0 用にアプリケーションを再コンパイルします。  
+ ODBC データ プロバイダーを使用してデータ ソースに接続する .NET Framework バージョン 2.0 以降用に開発されたアプリケーションを、.NET Framework バージョン 1.0 で実行する場合は、ODBC データ プロバイダーをダウンロードし、.NET Framework バージョン 1.0 システムにインストールする必要があります。 次に、ODBC データ プロバイダーの名前空間を **Microsoft.Data.Odbc** に変更し、アプリケーションを .NET Framework バージョン 1.0 用に再コンパイルする必要があります。  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
- バージョン 1.1 では、.NET Framework Data Provider for Oracle (<xref:System.Data.OracleClient>) は、.NET Framework の一部として含まれます。 データ プロバイダーを利用できる .NET Framework バージョン 1.0 の開発者から Web ダウンロードとして、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。  
+ バージョン 1.1 以降の .NET Framework には、.NET Framework Data Provider for Oracle (<xref:System.Data.OracleClient>) が含まれています。
   
- データ プロバイダーを使用して、データ ソースに接続する .NET Framework バージョン 2.0 以降用に開発されたアプリケーションがあり、.NET Framework version 1.0 でそのアプリケーションを実行する場合は、データ プロバイダーをダウンロードし、.NE にインストールする必要があります。T Framework version 1.0 システム。  
+ データ プロバイダーを使用してデータ ソースに接続する .NET Framework バージョン 2.0 以降用に開発されたアプリケーションを、.NET Framework バージョン 1.0 で実行する場合は、データ プロバイダーをダウンロードし、.NET Framework バージョン 1.0 システムにインストールする必要があります。  
   
 ## <a name="code-access-security"></a>コード アクセス セキュリティ  
- .NET Framework version 1.0 で .NET Framework データ プロバイダー (<xref:System.Data.SqlClient>、 <xref:System.Data.OleDb>) FullTrust アクセス許可を持つ実行に必要な。 FullTrust アクセス許可の原因がより少ないゾーンで、.NET Framework データ プロバイダーを .NET Framework version 1.0 を使用すると、<xref:System.Security.SecurityException>します。  
+ .NET Framework バージョン 1.0 の .NET Framework データ プロバイダー (<xref:System.Data.SqlClient>、<xref:System.Data.OleDb>) を実行するには、FullTrust アクセス許可が必要です。 アクセス許可レベルが FullTrust より低いゾーンで .NET Framework バージョン 1.0 の .NET Framework データ プロバイダーを使用しようとすると、<xref:System.Security.SecurityException> が発生します。  
   
- ただし、以降、.NET Framework version 2.0 では、.NET Framework データ プロバイダーをすべて使用できますで部分的に信頼されたゾーン。 さらに、新しいセキュリティ機能は、.NET Framework version 1.1 での .NET Framework データ プロバイダーに追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
+ ただし、.NET Framework バージョン 2.0 以降では、部分的に信頼されたゾーンですべての .NET Framework データ プロバイダーを使用できるようになりました。 さらに、.NET Framework バージョン 1.1 の .NET Framework データ プロバイダーには、新しいセキュリティ機能が追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [Code Access Security and ADO.NET](code-access-security.md)」を参照してください。  
   
- .NET Framework の各インストールには、個別の Security.config ファイルがあるために、セキュリティ設定と互換性の問題はありません。 ただし、アプリケーションは、ADO.NET .NET Framework version 1.1 に含まれるおよびそれ以降の追加のセキュリティ機能に依存する場合、version 1.0 システムに配布することはできません。  
+ .NET Framework のインストールごとに個別の Security.config ファイルがあるため、セキュリティ設定については、互換性の問題はありません。 ただし、アプリケーションが、.NET Framework バージョン 1.1 以降に含まれる ADO.NET の追加のセキュリティ機能に依存している場合は、アプリケーションをバージョン 1.0 のシステムに配布することはできません。  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand の実行  
- 方法は、.NET Framework version 1.1 以降を<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>コマンドを実行、データ ソースが変更されました。  
+ .NET Framework バージョン 1.1 以降では、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> によるデータ ソースでのコマンドの実行方法が変更されました。  
   
- .NET framework version 1.0、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のコンテキストですべてのコマンドを実行、 **sp_executesql**ストアド プロシージャ。 その結果、接続の状態に影響を与えるコマンド (たとえば、SET NOCOUNT ON) は、現在のコマンドの実行だけに適用されます。 接続が開かれている間に実行される後続のコマンドについては、接続の状態は変更されません。  
+ .NET Framework バージョン 1.0 の <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> では、すべてのコマンドが **sp_executesql** ストアド プロシージャのコンテキストで実行されました。 その結果、接続の状態に影響を与えるコマンド (たとえば、SET NOCOUNT ON) は、現在のコマンドの実行だけに適用されます。 接続が開かれている間に実行される後続のコマンドについては、接続の状態は変更されません。  
   
- .NET Framework version 1.1 以降で<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のみのコンテキストでコマンドを実行、 **sp_executesql**ストアド プロシージャの場合は、コマンドにパラメーター、これにより、パフォーマンスの向上。 その結果、接続の状態に影響を与えるコマンドが、非パラメーター化コマンドに含まれている場合、接続が開いている間に実行される後続のすべてのコマンドに対して、接続の状態を変更します。  
+ .NET Framework バージョン 1.1 以降の <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> では、コマンドにパラメーターが含まれている場合にのみ、コマンドは **sp_executesql** ストアド プロシージャのコンテキストで実行されます。これにより、パフォーマンスが向上します。 その結果、接続の状態に影響を与えるコマンドが、非パラメーター化コマンドに含まれている場合、接続が開いている間に実行される後続のすべてのコマンドに対して、接続の状態を変更します。  
   
  たとえば、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> への呼び出しで次のバッチ コマンドが実行されるとします。  
   
@@ -52,11 +52,11 @@ SET NOCOUNT ON;
 SELECT * FROM dbo.Customers;  
 ```  
   
- .NET framework version 1.1 以降では、NOCOUNT は、接続が開いている間に実行される後続のコマンドの ON はとどまります。 .NET Framework version 1.0 では、NOCOUNT は、コマンドの現在の実行に対してだけをします。  
+ .NET Framework バージョン 1.1 以降では、接続が開かれている間に実行される後続のすべてのコマンドに対して、NOCOUNT は ON のままになります。 .NET Framework バージョン 1.0 では、NOCOUNT は現在のコマンドの実行に対してだけ ON です。  
   
- この変更は、の動作に依存している場合、アプリケーションの上位および下位の互換性に影響は<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.NET Framework のいずれかのバージョン。  
+ アプリケーションが、いずれかのバージョンの .NET Framework の <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> の動作に依存している場合、この変更が上位互換性と下位互換性の両方に影響することがあります。  
   
- 前と後の両方のバージョンの .NET Framework 上で実行されるアプリケーションでは、動作が実行しているバージョンに関係なく同じであるかどうかを確認するコードを記述することができます。 変更された接続状態が後続のすべてのコマンドでも有効になるようにする場合は、<xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> を使用してコマンドを実行することをお勧めします。 変更された接続状態が後続のコマンドでは無効になるようにする場合は、接続状態をリセットするコマンドを含めるようにしてください。 例:  
+ アプリケーションが新旧両方のバージョンの .NET Framework で実行する場合は、どのバージョンで実行された場合にも動作が同じになるように、コードを記述できます。 変更された接続状態が後続のすべてのコマンドでも有効になるようにする場合は、<xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> を使用してコマンドを実行することをお勧めします。 変更された接続状態が後続のコマンドでは無効になるようにする場合は、接続状態をリセットするコマンドを含めるようにしてください。 次に例を示します。  
   
 ```sql
 SET NOCOUNT ON;  
@@ -66,6 +66,5 @@ SET NOCOUNT OFF;
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe94203d315c32b62a191adf294a9c1310fe28e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3630e25b6c24edaa366f1b0fae088e760e851fa4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738264"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895407"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess メソッド
-既存のプロセスにデバッガーをアタッチします。  
+デバッガーを既存のプロセスにアタッチします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT DebugActiveProcess (
   
 ## <a name="parameters"></a>パラメーター  
  `id`  
- [in]デバッガーのアタッチ先のプロセスの ID。  
+ からデバッガーがアタッチされるプロセスの ID。  
   
  `win32Attach`  
- [in]ブール値に設定されている`true`デバッガーで、Win32 のデバッガー プロセスとして動作する必要があります、アンマネージのコールバックのディスパッチ場合それ以外の場合、`false`します。  
+ からデバッガーがプロセスの Win32 デバッガー `true`として動作し、アンマネージコールバックをディスパッチする必要がある場合にに設定されるブール値。それ以外`false`の場合は。  
   
  `ppProcess`  
- [out]デバッガーのアタッチするプロセスを表す"ICorDebugProcess"オブジェクトのアドレスへのポインター。  
+ 入出力デバッガーがアタッチされているプロセスを表す "いいプロセス" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- IA 64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x と x86 以外のプラットフォームでは、相互運用機能デバッグはサポートされていません。  
+## <a name="remarks"></a>解説  
+ 相互運用デバッグは、IA-64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x および x86 以外のプラットフォームではサポートされていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)

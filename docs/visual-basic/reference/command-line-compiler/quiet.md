@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: a22773e2e37eb60ab6f1e88305266f41764311e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: f894ed6a778e026ffd3976a63fe3b677eb6a9557
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788846"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400527"
 ---
 # <a name="-quiet"></a>-quiet
 
@@ -22,15 +22,15 @@ ms.locfileid: "61788846"
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 -quiet
 ```
 
 ## <a name="remarks"></a>Remarks
 
-既定では、`-quiet` は無効です。 コンパイラは、構文に関連するエラーまたは警告を報告、ときにも、ソース コードから行を出力します。 コンパイラ出力を解析するアプリケーションでは、診断のテキストのみを出力するコンパイラのより便利な場合があります。
+既定では、`-quiet` は無効です。 コンパイラで構文に関連するエラーまたは警告が報告されるときに、ソース コードの行も出力されます。 コンパイラの出力を解析するアプリケーションでは、コンパイラで診断テキストのみが出力される方が便利な場合があります。
 
-次の例では、`Module1`出力なしでコンパイル時に、ソース コードを含むエラー`-quiet`します。
+次の例の `Module1` では、`-quiet` を使用せずにコンパイルされた場合に、ソース コードを含むエラーが出力されます。
 
 ```vb
 Module Module1
@@ -49,24 +49,24 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-コンパイルされた`-quiet`コンパイラは、次のオプションのみを出力します。
+`-quiet` を使用してコンパイルすると、コンパイラからは次のものだけが出力されます。
 
-```
+```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> `-quiet`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。
+> `-quiet` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。
 
 ## <a name="example"></a>例
 
-次のコードのコンパイル`T2.vb`構文に関連するコンパイラ診断のコードは表示されません。
+次のコードでは `T2.vb` がコンパイルされ、構文に関連するコンパイラ診断のコードが表示されません。
 
-```
+```console
 vbc -quiet t2.vb
 ```
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

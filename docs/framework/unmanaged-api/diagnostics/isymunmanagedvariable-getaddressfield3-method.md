@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 76199dd18799c9f51f37d5b92e589effd7f45a57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778300"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615268"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 メソッド
-この変数の 3 番目のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。  
+この変数の3番目のアドレスフィールドを取得します。 その意味は、アドレスの種類によって異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +34,17 @@ HRESULT GetAddressField3(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインターを`ULONG32`を受け取る 3 番目のアドレス フィールド。  
+ 入出力`ULONG32`3 番目のアドレスフィールドを受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedVariable インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetAddressField1 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
-- [GetAddressField2 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
-- [GetAddressKind メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+- [ISymUnmanagedVariable インターフェイス](isymunmanagedvariable-interface.md)
+- [GetAddressField1 メソッド](isymunmanagedvariable-getaddressfield1-method.md)
+- [GetAddressField2 メソッド](isymunmanagedvariable-getaddressfield2-method.md)
+- [GetAddressKind メソッド](isymunmanagedvariable-getaddresskind-method.md)

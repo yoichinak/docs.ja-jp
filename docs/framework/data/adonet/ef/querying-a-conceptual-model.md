@@ -2,12 +2,12 @@
 title: 概念モデルに対するクエリ
 ms.date: 03/30/2017
 ms.assetid: d59a4ae7-a651-403c-82e2-6d710645a867
-ms.openlocfilehash: 99e2fd262a5c63a06b0a2c57b0f5db31d973e375
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: MT
+ms.openlocfilehash: 377876f7ada933629394376192e3ac147f9bc65a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879791"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450402"
 ---
 # <a name="querying-a-conceptual-model"></a>概念モデルに対するクエリ
-ADO.NET[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]概念モデルのクエリを実行することができます。 Entity Framework の最新バージョンを使用して概念モデルを照会するを参照してください。[データのクエリ](https://go.microsoft.com/fwlink/?LinkId=235282)します。
+ADO.NET Entity Framework を使用すると概念モデルに対してクエリを実行できます。 Entity Framework の最新版を使用して概念モデルに対してクエリを実行するには、「[データのクエリ](/ef/ef6/querying/index)」を参照してください。

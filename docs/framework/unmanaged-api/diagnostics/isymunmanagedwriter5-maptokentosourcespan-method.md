@@ -2,19 +2,17 @@
 title: ISymUnmanagedWriter5::MapTokenToSourceSpan メソッド
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08c219dd033b39fc07159875b184cdf70e3aa3ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f00dd34ffbdd58a46260132d8d7ace74ec2f294
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937866"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501678"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan メソッド
-指定したソース ファイルで指定されたソース行に指定したメタデータ トークン span をマップします。  
+指定されたメタデータトークンを、指定されたソースファイル内の指定されたソース行スパンにマップします。  
   
- 呼び出しの間で呼び出す必要がある[OpenMapTokensToSourceSpans メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)と[CloseMapTokensToSourceSpans メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)します。  
+ [Openmaptokenstosourcespans メソッド](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)と[CloseMapTokensToSourceSpans メソッド](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)の呼び出しの間で、を呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,9 +34,9 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 ## <a name="return-value"></a>戻り値  
  `HRESULT` を返します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter5 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+- [ISymUnmanagedWriter5 インターフェイス](isymunmanagedwriter5-interface.md)

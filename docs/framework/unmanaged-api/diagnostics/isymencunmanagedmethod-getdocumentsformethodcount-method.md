@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc1a823a-3ff3-4a33-b641-96edc93d2b17
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf8cca7751dd9705fd3c4371e36e836ca19be5c9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d096101189d52401c407a4108c9c81e201d3f30d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736215"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441943"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethodCount メソッド
-このメソッドの行が含まれるドキュメントの数を取得します。  
+このメソッドに行があるドキュメントの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,14 +34,14 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`ULONG32`ドキュメントの格納に必要なバッファーのサイズを受け取る。  
+ 入出力`ULONG32`ドキュメントを格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod インターフェイス](isymencunmanagedmethod-interface.md)

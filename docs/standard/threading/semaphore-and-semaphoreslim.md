@@ -1,5 +1,6 @@
 ---
 title: Semaphore と SemaphoreSlim
+description: Semaphore と SemaphoreSlim について学習します。 クラス Semaphore は、Win32 セマフォ オブジェクトの Thin ラッパーです。 クラス SemaphoreSlim は、軽量で高速のセマフォです。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,14 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550488"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600452"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore と SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> クラスは、名前付きセマフォ (システム全体) またはローカル セマフォを表します。 これは、Win32 セマフォ オブジェクトの Thin ラッパーです。 Win32 セマフォは、リソースのプールへのアクセスの制御に使用できるカウント セマフォです。  
@@ -40,7 +39,7 @@ ms.locfileid: "54550488"
  名前を指定するコンストラクターのいずれかを使用して、名前付きシステム セマフォを表す <xref:System.Threading.Semaphore> オブジェクトを作成できます。  
   
 > [!NOTE]
->  名前付きセマフォはシステム全体でのセマフォであるため、同じ名前付きセマフォを表す複数の <xref:System.Threading.Semaphore> オブジェクトが存在する可能性があります。 コンストラクターまたは <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> メソッドを呼び出すたびに、新しい <xref:System.Threading.Semaphore> オブジェクトが作成されます。 同じ名前を繰り返し指定すると、同じ名前付きセマフォを表す複数のオブジェクトが作成されます。  
+> 名前付きセマフォはシステム全体でのセマフォであるため、同じ名前付きセマフォを表す複数の <xref:System.Threading.Semaphore> オブジェクトが存在する可能性があります。 コンストラクターまたは <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> メソッドを呼び出すたびに、新しい <xref:System.Threading.Semaphore> オブジェクトが作成されます。 同じ名前を繰り返し指定すると、同じ名前付きセマフォを表す複数のオブジェクトが作成されます。  
   
  名前付きセマフォを使用する際には注意する必要があります。 システム全体でのセマフォであるため、同じ名前を使用する別のプロセスが予期せずセマフォに入る可能性があります。 同じコンピューター上で実行される悪意のあるコードが、これをサービス拒否攻撃の土台として使用する可能性があります。  
   
@@ -50,4 +49,4 @@ ms.locfileid: "54550488"
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>
-- [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)
+- [スレッド処理オブジェクトと機能](threading-objects-and-features.md)

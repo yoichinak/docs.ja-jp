@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9269339e8e2ae8d00da701b015aa30cd51cbef3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762277"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213375"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData メソッド
 デバッガーが要求した操作を完了するために必要となるメタデータが含まれているモジュールの完全パスを返すように、デバッガーに求めます。  
@@ -43,10 +41,10 @@ HRESULT GetMetaData(
   
 ## <a name="parameters"></a>パラメーター  
  `wszImagePath`  
- [in] ファイルの完全パスを表す null で終わる文字列。 完全なパスが使用できない場合、名前とファイルの拡張子 (*filename*.*拡張機能*)。  
+ [in] ファイルの完全パスを表す null で終わる文字列。 完全なパスが使用できない場合は、ファイルの名前と拡張子 (ファイル*名*)。*拡張機能*)。  
   
  `dwImageTimeStamp`  
- [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボル サーバーの使用可能性があることができます ([SymSrv](/windows/desktop/debug/using-symsrv)) 参照。  
+ [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボルサーバー ([Symsrv](/windows/desktop/debug/using-symsrv)) の検索に使用される可能性があります。  
   
  `dwImageSize`  
  [in] PE ファイル ヘッダーのイメージ サイズ。 このパラメーターは、SymSrv の検索に使用される可能性があります。  
@@ -62,7 +60,7 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] 要求されたメタデータを格納するファイルの完全パスが、デバッガーによりコピーされるバッファーへのポインター。  
   
- `ofReadOnly`からフラグ、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体を使用して、このファイル内のメタデータへの読み取り専用アクセスを要求します。  
+ `ofReadOnly` [Coropenflags](../metadata/coropenflags-enumeration.md)列挙のフラグは、このファイル内のメタデータへの読み取り専用アクセスを要求するために使用されます。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。 これ以外のエラー HRESULT はすべて、ファイルを取得できないことを示します。  
@@ -76,16 +74,16 @@ HRESULT GetMetaData(
  `wszImagePath` にダンプのモジュールの完全パスが格納されている場合は、ダンプが収集されたコンピューターからのパスを示しています。 この場所にはファイルが存在しない、または同じ名前の正しくないファイルがパス上に格納されている可能性があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugThread4 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4 インターフェイス](icordebugthread4-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

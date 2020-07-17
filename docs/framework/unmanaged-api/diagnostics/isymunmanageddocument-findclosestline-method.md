@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e6134d39096c4ab157aa545646d83339f92a0b8
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776791"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441033"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine メソッド
-行を指定したシーケンス ポイントができない可能性がありますが、このドキュメントでは、シーケンス ポイントである最も近い行を返します。  
+このドキュメント内の行が指定されている場合は、シーケンスポイントで最も近い行を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +35,14 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>パラメーター  
  `line`  
- [in]このドキュメント内の行。  
+ からこのドキュメント内の行。  
   
  `pRetVal`  
- [out]行を受け取る変数へのポインター。  
+ 入出力行を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument インターフェイス](isymunmanageddocument-interface.md)

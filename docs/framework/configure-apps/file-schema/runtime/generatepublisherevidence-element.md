@@ -5,26 +5,24 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489441"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "81645355"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 要素
-ランタイムを作成するかどうかを指定します。<xref:System.Security.Policy.Publisher>コード アクセス セキュリティ (CAS) のための証拠。  
+# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 要素
+ランタイムが <xref:System.Security.Policy.Publisher> コードアクセスセキュリティ (CAS) の証拠を作成するかどうかを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<generatePublisherEvidence>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<generatePublisherEvidence>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<generatePublisherEvidence    
+<generatePublisherEvidence
    enabled="true|false"/>  
 ```  
   
@@ -35,40 +33,40 @@ ms.locfileid: "66489441"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> ランタイムを作成するかどうかを指定します。<xref:System.Security.Policy.Publisher>証拠。|  
+|`enabled`|必須の属性です。<br /><br /> ランタイムが証拠を作成するかどうかを指定し <xref:System.Security.Policy.Publisher> ます。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|`false`|作成されません<xref:System.Security.Policy.Publisher>証拠。|  
-|`true`|作成<xref:System.Security.Policy.Publisher>証拠。 既定値です。|  
+|`false`|は <xref:System.Security.Policy.Publisher> 証拠を作成しません。|  
+|`true`|<xref:System.Security.Policy.Publisher>証拠を作成します。 既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
->  .NET Framework 4 以降では、この要素はアセンブリの読み込み時間に影響を与えません。 詳細については、「セキュリティ ポリシーの簡略化」のセクションを参照してください。[セキュリティ変更](../../../../../docs/framework/security/security-changes.md)します。  
+> .NET Framework 4 以降では、この要素はアセンブリの読み込み時間に影響しません。 詳細については、「セキュリティの[変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」の「セキュリティポリシーの簡略化」を参照してください。  
   
- 共通言語ランタイム (CLR) を作成する読み込み時に Authenticode 署名を検証しようとする<xref:System.Security.Policy.Publisher>アセンブリの証拠。 ただし、既定では、ほとんどのアプリケーションは必要ありません<xref:System.Security.Policy.Publisher>証拠。 標準の CAS ポリシーに依存せず、<xref:System.Security.Policy.PublisherMembershipCondition>します。 アプリケーションがカスタムの CAS ポリシーを使用しているコンピューター上で実行しますかのニーズを満たすにしない限り、発行元の署名の検証に関連付けられている不要なスタートアップ コストを回避する必要があります<xref:System.Security.Permissions.PublisherIdentityPermission>部分信頼環境でします。 (Id アクセス許可の要求は常には、完全に信頼された環境で失敗した)。  
+ 共通言語ランタイム (CLR) は、読み込み時に Authenticode 署名を検証して、アセンブリの証拠を作成しようとし <xref:System.Security.Policy.Publisher> ます。 ただし、既定では、ほとんどのアプリケーションは証拠を必要としません <xref:System.Security.Policy.Publisher> 。 標準の CAS ポリシーは、に依存 <xref:System.Security.Policy.PublisherMembershipCondition> しません。 カスタム CAS ポリシーを使用しているコンピューターでアプリケーションを実行する場合や、部分信頼環境での要求を満たす場合を除き、発行元の署名の検証に関連する不要な起動コストを回避する必要があり <xref:System.Security.Permissions.PublisherIdentityPermission> ます。 (Id 権限の要求は、完全に信頼された環境では常に成功します)。  
   
 > [!NOTE]
->  使用するサービスをお勧め、`<generatePublisherEvidence>`起動時のパフォーマンスを向上させるために要素。  この要素を使用しても、タイムアウトと、サービスのスタートアップのキャンセルを引き起こす可能性のある遅延を避けるためとことができます。  
+> サービスでは、要素を使用して起動時のパフォーマンスを向上させることをお勧めし `<generatePublisherEvidence>` ます。  また、この要素を使用すると、タイムアウトを発生させたり、サービスの開始をキャンセルしたりする可能性がある遅延を回避することもできます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルでのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<generatePublisherEvidence>`チェック アプリケーションの CA の発行元ポリシーを無効にする要素。  
+ 次の例は、要素を使用して、 `<generatePublisherEvidence>` アプリケーションの CAS 発行者ポリシーのチェックを無効にする方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -80,5 +78,5 @@ ms.locfileid: "66489441"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba15440df79dded95a8afa9438657d064e167f36
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049480"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495971"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs メソッド
-JIT 再コンパイルのすべてのバージョン指定の関数も割り当てられているを識別する Id の配列を返します。 これには、後で元に戻されますが (たとえば、元に戻された関数を含むアプリケーション ドメインでは、使用中で) ときに解放されていない関数の JIT 再コンパイルのバージョンが含まれます。  
+割り当てられている指定された関数のすべての JIT 再コンパイルバージョンを識別する Id の配列を返します。 これには、後で元に戻されたがまだ解放されていない関数の JIT 再コンパイルバージョンが含まれます (たとえば、元に戻された関数を含むアプリケーションドメインがまだ使用されている場合など)。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,31 +37,31 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]`FunctionID`関数インスタンスのバージョンを列挙するのです。  
+ から`FunctionID`バージョンを列挙する対象の関数インスタンスの。  
   
  `cReJitIds`  
- [in]JIT 再コンパイルの Id の割り当ての数、`reJitIds`配列。  
+ から配列に割り当てられた JIT 再コンパイル済み Id の数 `reJitIds` 。  
   
  `pcReJitIds`  
- [out]実際に JIT 再コンパイルの Id の数。  
+ 入出力JIT 再コンパイルされた Id の実際の数。  
   
  `reJitIds`  
- [out]指定した関数の JIT 再コンパイルの Id を含む、呼び出し元が割り当てた配列。  
+ 入出力指定した関数の JIT 再コンパイルされた Id を格納する、呼び出し元が割り当てた配列。  
   
-## <a name="remarks"></a>Remarks  
- `GetReJITIDs` 指定された関数のインスタンスのアクティブな JIT 再コンパイルの Id を列挙します。 他の同時使用状況パターンに従って`ICorProfilerInfo`呼び出し元が割り当てたバッファーを受け取る関数をします。  
+## <a name="remarks"></a>解説  
+ `GetReJITIDs`指定された関数インスタンスのアクティブな JIT 再コンパイル済み Id を列挙します。 これは、 `ICorProfilerInfo` 呼び出し元が割り当てたバッファーを受け入れる他の関数と同じ使用パターンに従います。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 インターフェイス](icorprofilerinfo4-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

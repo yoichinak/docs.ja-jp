@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1fc128d15c56981f4bc6122e38e0514d006e29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23bc251053dd27a7c5accb48ab4759ecdb79fe09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134306"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual メソッド
-指定したかどうかを判断します[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクトがこれと等しい`IAssemblyName`を基に、指定した比較フラグ。  
+指定した比較フラグに基づいて、指定した[IAssemblyName](iassemblyname-interface.md)オブジェクトがこの `IAssemblyName`と等しいかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +36,19 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>パラメーター  
  `pName`  
- [in]`IAssemblyName`これと比較するオブジェクト`IAssemblyName`します。  
+ からこの `IAssemblyName`と比較する `IAssemblyName` オブジェクト。  
   
  `dwCmpFlags`  
- [in]ビットごとの組み合わせ[ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)比較に影響を与える値。  
+ から比較に影響を与える[ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md)値のビットごとの組み合わせ。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.Net Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [Fusion 列挙型](fusion-enumerations.md)

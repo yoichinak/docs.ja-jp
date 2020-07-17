@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d381ab1-7e7c-4281-af2b-e54d879b3ef8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ae3575b759d8b6191f0b5e5cd557a6f6e56323fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ec69aa06816b117fb05853001e59532629504c4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776738"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614605"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType メソッド
 このドキュメントのドキュメントの種類を取得します。  
@@ -36,11 +34,11 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ドキュメントの種類を受け取る変数へのポインター。  
+ 入出力ドキュメント型を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument インターフェイス](isymunmanageddocument-interface.md)

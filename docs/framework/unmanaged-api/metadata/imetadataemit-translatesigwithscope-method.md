@@ -15,83 +15,81 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782057"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003970"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope メソッド
-現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータ シグネチャを取得します。  
+現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in] \(署名が定義されている\) インポート アセンブリのインターフェイスです。  
+ からインポートアセンブリのインターフェイス (シグネチャが定義されている場合)。  
   
  `pbHashValue`  
- [in]アセンブリのハッシュ blob。  
+ からアセンブリのハッシュ blob。  
   
  `cbHashValue`  
- [in]内のバイト数`pbHashValue`します。  
+ からのバイト数 `pbHashValue` 。  
   
  `import`  
- [in]インポートのメタデータ スコープのインターフェイスです。  
+ からインポートメタデータスコープのインターフェイス。  
   
  `pbSigBlob`  
- [in]インポートする署名します。  
+ からインポートされる署名。  
   
  `cbSigBlob`  
- [in]サイズ (バイト単位) の`pbSigBlob`します。  
+ からのサイズ (バイト単位) `pbSigBlob` 。  
   
  `pAssemEmit`  
- [in]エクスポートのアセンブリのインターフェイスです。  
+ からエクスポートアセンブリのインターフェイス。  
   
  `emit`  
- [in]エクスポートのメタデータ スコープのインターフェイスです。  
+ からエクスポートメタデータスコープのインターフェイス。  
   
  `pvTranslatedSig`  
- [out]翻訳されたシグネチャ blob を保持するバッファー。  
+ 入出力変換された署名 blob を保持するバッファー。  
   
  `cbTranslatedSigMax`  
- [in] (バイト単位) の容量の`pvTranslatedSig`します。  
+ からの容量 (バイト単位) `pvTranslatedSig` 。  
   
  `pcbTranslatedSig`  
- [out]翻訳されたシグネチャでの実際のバイト数。  
+ 入出力変換されたシグネチャの実際のバイト数。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)

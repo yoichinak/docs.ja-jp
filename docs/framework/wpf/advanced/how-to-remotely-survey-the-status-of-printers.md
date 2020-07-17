@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4140152079b93e3c0a3d5fcda0e1b2c6f9fb89a4
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
-ms.translationtype: MT
+ms.openlocfilehash: 859ccb703c6c54c66d6ea7b433c67d156627e25b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859861"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187034"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>方法: プリンターのステータスをリモート操作で調査する
-中企業および大企業では、任意の時点において、紙詰まりや用紙切れなどの問題が発生したために動作していないプリンターが複数存在する場合があります。 豊富な一連の Api の Microsoft .NET Framework で公開されているプリンターのプロパティは、プリンターの状態を迅速に調査を実行するための手段を提供します。  
+中企業および大企業では、任意の時点において、紙詰まりや用紙切れなどの問題が発生したために動作していないプリンターが複数存在する場合があります。 Microsoft .NET Framework の API で公開されているさまざまなプリンター プロパティには、プリンターの状態を迅速に調査する手段が用意されています。  
   
 ## <a name="example"></a>例  
  このようなユーティリティを作成する主な手順は次のとおりです。  
@@ -30,20 +30,20 @@ ms.locfileid: "67859861"
   
 3. サーバー ループの各パス内で、すべてのサーバーのキューをループして、キューが現在動作していないことを示している各プロパティを読み取ります。  
   
- 以下のコードは、一連のスニペットを示しています。 この例では、説明を簡単にするために、CRLF で区切られたプリント サーバー リストがあることを想定しています。 変数`fileOfPrintServers`は、<xref:System.IO.StreamReader>このファイルのオブジェクト。 すべての呼び出しのため、各サーバー名は、独自の行では、<xref:System.IO.StreamReader.ReadLine%2A>次のサーバーの名前を取得し、移動、<xref:System.IO.StreamReader>の次の行の先頭にカーソル。  
+ 以下のコードは、一連のスニペットを示しています。 この例では、説明を簡単にするために、CRLF で区切られたプリント サーバー リストがあることを想定しています。 変数 `fileOfPrintServers` は、このファイル用の <xref:System.IO.StreamReader> オブジェクトです。 各サーバー名はそれぞれ独自の行に含まれているため、<xref:System.IO.StreamReader.ReadLine%2A> を呼び出すと、次のサーバーの名前が取得され、<xref:System.IO.StreamReader> のカーソルは次の行の先頭に移動ｓれます。  
   
- 外側のループ内でコードを作成、<xref:System.Printing.PrintServer>最新のプリント サーバーのオブジェクトし、アプリケーションがサーバーに管理権限を持っていることを指定します。  
+ 外側のループ内のコードでは、最新のプリント サーバーの <xref:System.Printing.PrintServer> オブジェクトを作成し、サーバーに対する管理権限をアプリケーションが持つように指定します。  
   
 > [!NOTE]
->  使用してパフォーマンスを向上させることができます、多数のサーバーがある場合、<xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29>のみ必要があるプロパティを初期化するコンス トラクター。  
+> サーバーが多数存在する場合は、必要になるプロパティのみを初期化する <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> コンストラクターを使用することで、パフォーマンスを向上させることができます。  
   
- 使用して<xref:System.Printing.PrintServer.GetPrintQueues%2A>のキューに配置してループを開始し、サーバーのすべてのコレクションを作成します。 この内側のループは分岐構造になっており、プリンターの状態を確認する 2 つの方法に対応しています。  
+ この例では、次に <xref:System.Printing.PrintServer.GetPrintQueues%2A> を使用して、サーバーのすべてのキューのコレクションを作成し、そのキューのループを開始します。 この内側のループは分岐構造になっており、プリンターの状態を確認する 2 つの方法に対応しています。  
   
-- フラグを読み取ることができます、<xref:System.Printing.PrintQueue.QueueStatus%2A>型のプロパティ<xref:System.Printing.PrintQueueStatus>します。  
+- <xref:System.Printing.PrintQueueStatus> 型の <xref:System.Printing.PrintQueue.QueueStatus%2A> プロパティのフラグを読み取ることができます。  
   
-- など、各関連プロパティを読み取ることができます<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>、および<xref:System.Printing.PrintQueue.IsPaperJammed%2A>します。  
+- <xref:System.Printing.PrintQueue.IsOutOfPaper%2A> や <xref:System.Printing.PrintQueue.IsPaperJammed%2A> など、関連する各プロパティを読み取ることができます。  
   
- この例では、両方の方法、ユーザーが以前に使用する方法に関して入力を求めし、求めのフラグを使用する場合は、"y"で応答したため、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティ。 2 つの方法の詳細については、以下を参照してください。  
+ この例では両方の方法が示されています。したがって、<xref:System.Printing.PrintQueue.QueueStatus%2A> プロパティのフラグを使用するユーザーは、以前に使用する方法に関する指定を求められたときに、"y" と応答しました。 2 つの方法の詳細については、以下を参照してください。  
   
  最後に、結果がユーザーに表示されます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67859861"
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- フラグを使用してプリンターの状態を確認する、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、次を参照してください。 <xref:System.Printing.PrintQueueStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)、および<xref:System.FlagsAttribute>します。  
+ <xref:System.Printing.PrintQueue.QueueStatus%2A> プロパティのフラグを使用して、プリンターの状態を確認するには、各関連フラグが設定されているかどうかを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、「<xref:System.Printing.PrintQueueStatus>」、「[& 演算子 (C# リファレンス)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)」、および「<xref:System.FlagsAttribute>」を参照してください。  
   
  次のコードでは、ビットが設定されている属性ごとに、ユーザーに表示される最終レポートに警告を追加します (コードの最後で呼び出している **ReportAvailabilityAtThisTime** メソッドについては以下で説明します)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67859861"
   
  **ReportAvailabilityAtThisTime** メソッドは、現在の時刻にキューが使用可能かどうかを確認する必要がある場合に備えて作成されたものです。  
   
- メソッドは何も場合、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>プリンターは常に使用できる、そうであるために、プロパティが等しい。 メソッドが、ため、合計分数に変換するには、現在の時刻を取得するが異なる場合、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>プロパティは、<xref:System.Int32>いない深夜後分を表す<xref:System.DateTime>オブジェクト。 最後に、このメソッドは、現在の時刻が、開始時刻と終了時刻の間にあるかどうかを確認します。  
+ <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> プロパティと <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> プロパティが等しい場合、プリンターは常に使用可能であるため、このメソッドでは何も行われません。 異なる場合は、このメソッドで現在の時刻が取得されます。この時刻は、後で、午前 0 時からの合計分数に変換する必要があります。これは、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A> プロパティと <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> プロパティが、<xref:System.DateTime> オブジェクトではなく、午前 0 時からの分数を表す <xref:System.Int32> であるためです。 最後に、このメソッドは、現在の時刻が、開始時刻と終了時刻の間にあるかどうかを確認します。  
   
  [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
  [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
@@ -85,6 +85,6 @@ ms.locfileid: "67859861"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [& 演算子 (C# リファレンス)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF のドキュメント](documents-in-wpf.md)
 - [印刷の概要](printing-overview.md)

@@ -1,15 +1,13 @@
 ---
 title: 型のマーシャリング - .NET
 description: .NET が型をネイティブ表現にマーシャリングする方法について説明します。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041788"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706267"
 ---
 # <a name="type-marshaling"></a>型のマーシャリング
 
@@ -133,7 +131,7 @@ typedef struct _SYSTEMTIME {
   WORD wMinute;
   WORD wSecond;
   WORD wMilliseconds;
-} SYSTEMTIME, *PSYSTEMTIME*;
+} SYSTEMTIME, *PSYSTEMTIME;
 ```
 
 構造体の既定のマーシャリングでは、必要な処理が実行されないことがあります。 「[構造体のマーシャリングのカスタマイズ](./customize-struct-marshaling.md)」の記事では、構造体のマーシャリング方法をカスタマイズする手順が説明されています。

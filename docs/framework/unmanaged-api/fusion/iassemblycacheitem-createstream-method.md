@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134469"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream メソッド
 
-指定した名前と形式を使用するストリームを作成します。
+指定された名前と形式を使用してストリームを作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,28 +42,28 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>パラメーター
 
 `dwFlags`\
-[in]ものがありますで定義されているフラグ。
+からFusion に定義されているフラグ。
 
 `pszStreamName`\
-[in]作成されるストリームの名前。
+から作成されるストリームの名前。
 
 `dwFormat`\
-[in]ストリーミングされるように、ファイルの形式です。
+からストリーム配信されるファイルの形式。
 
 `dwFormatFlags`\
-[in]形式固有のものがありますで定義されているフラグ。
+からFusion に定義されている形式固有のフラグ。
 
 `ppIStream`\
-[out]返されるのアドレスへのポインター [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インスタンス。
+入出力返された[IStream](/windows/desktop/api/objidl/nn-objidl-istream)インスタンスのアドレスへのポインター。
 
 `puliMaxSize`\
-[in、省略可能]によって参照されるストリームの最大サイズ`ppIStream`します。
+[in、optional]`ppIStream`によって参照されるストリームの最大サイズ。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
-**ヘッダー:** Fusion.h
+**ヘッダー:** Fusion. h
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

@@ -11,23 +11,21 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616095"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201862"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
 厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-mgmtclassgen   
-WMIClass [options]   
+```console  
+mgmtclassgen
+WMIClass [options]
 ```  
   
 |引数|説明|  
@@ -45,7 +43,7 @@ WMIClass [options]
 |**/u**  *user name*|**/m** オプションで指定したコンピューターにログオンするときに使用するユーザー名を指定します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Mgmtclassgen.exe は、<xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> メソッドを使用します。 したがって、任意のカスタム コード プロバイダーを使用して、C#、Visual Basic、および JScript 以外のマネージド言語でコードを生成できます。  
   
  生成されたクラスは、それらのクラスを生成する目的となったスキーマにバインドされます。 基になるスキーマが変更された場合に、その変更をこのスキーマに反映するには、クラスを生成し直す必要があります。  
@@ -83,7 +81,7 @@ WMIClass [options]
   
 - 数値プロパティを **Values** 修飾子および **ValueMaps** 修飾子によって修飾すると、このプロパティには、指定した許容値しか設定できないことを示すことができます。 列挙体は、このような **Values** および **ValueMaps** を使用して生成され、このプロパティは列挙体に割り当てられます。  
   
-- WMI では、インスタンスを 1 つだけを持つことのできるクラスを説明するために、シングルトンという用語を使用します。 シングルトン クラスの既定のコンストラクターは、クラスをそのクラスの唯一のインスタンスに初期化します。  
+- WMI では、インスタンスを 1 つだけを持つことのできるクラスを説明するために、シングルトンという用語を使用します。 したがって、シングルトン クラスのパラメーターなしのコンストラクターは、クラスをそのクラスの唯一のインスタンスに初期化します。  
   
 - WMI クラスは、オブジェクトであるプロパティを持つ場合があります。 そのような型の WMI クラスに対して、厳密に型指定されたクラスを生成する場合は、埋め込まれたオブジェクト プロパティの型それぞれに対して厳密に型指定されたクラスを生成することを検討してください。 これにより、厳密に型指定する方法で、埋め込まれたオブジェクトにアクセスできるようになります。 生成されたコードが、埋め込まれたオブジェクトの型を検出できない場合もあります。 このような場合は、生成されたコード内に、その旨をユーザーに通知するコメントが作成されます。 これに応じて、生成された他のクラスをプロパティの型として指定するように、生成したコードを変更できます。  
   
@@ -96,7 +94,7 @@ WMIClass [options]
 ## <a name="examples"></a>使用例  
  **Root\cimv2** 名前空間内の **Win32_LogicalDisk** WMI クラスに対してマネージド クラスを C# コードで生成するコマンドを次に示します。 このツールは、**ROOT.CIMV2.Win32** 名前空間内の c:\disk.cs にあるソース ファイルにマネージド クラスを書き込みます。  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
@@ -107,11 +105,11 @@ Imports System
 Imports System.Management  
 Imports ROOT.CIMV2.Win32  
   
-Public Class App     
-   Public Shared Sub Main()        
+Public Class App
+   Public Shared Sub Main()
       ' Enumerate instances of the Win32_process.  
       ' Print the Name property of the instance.  
-      Dim ps As Process     
+      Dim ps As Process
       For Each ps In  Process.GetInstances()  
          Console.WriteLine(ps.Name)  
       Next ps  
@@ -155,5 +153,5 @@ public class App
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
-- [ツール](../../../docs/framework/tools/index.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

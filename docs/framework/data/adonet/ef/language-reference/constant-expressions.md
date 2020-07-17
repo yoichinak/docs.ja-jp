@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9d98a7be-b110-4edb-8eba-bed10f250b6d
-ms.openlocfilehash: cc3a214a2faa06c79ee0794b0158381bff0c4b0b
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
-ms.translationtype: MT
+ms.openlocfilehash: b31cd881f1307ec734c026d3c873d7a650e19a20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539885"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251134"
 ---
 # <a name="constant-expressions"></a>定数式
 定数式は、定数値で構成されています。 定数値は、クライアント側で変換されることなく、コマンド ツリーの定数式に直接変換されます。 これには、定数値になる式が含まれます。 したがって、定数にかかわるすべての式でデータ ソースの動作が、予期したとおりになります。 これは CLR の動作とは異なる結果となります。  
@@ -24,4 +24,4 @@ ms.locfileid: "67539885"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities クエリ内の式](expressions-in-linq-to-entities-queries.md)

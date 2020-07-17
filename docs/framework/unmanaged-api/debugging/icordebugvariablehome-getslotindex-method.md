@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetSlotIndex メソッド
+title: 'いい変数 Home:: GetSlotIndex メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760348"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396551"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex メソッド
-ローカル変数のマネージ スロット インデックスを取得します。  
+# <a name="icordebugvariablehomegetslotindex-method"></a>いい変数 Home:: GetSlotIndex メソッド
+ローカル変数のマネージドスロットインデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,28 +35,28 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>パラメーター  
  `pSlotIndex`  
- [out]ローカル変数のスロット インデックスへのポインター。  
+ 入出力ローカル変数のスロットインデックスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
 |値|説明|  
 |-----------|-----------------|  
-|`S_OK`|メソッドの呼び出しでのスロット インデックス値が返されました`pSlotIndex`します。|  
-|`E_FAIL`|現在[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)インスタンスは、関数の引数を表します。|  
+|`S_OK`|メソッド呼び出しによって、でスロットインデックス値が返されました `pSlotIndex` 。|  
+|`E_FAIL`|現在のは、[関数の引数](icordebugvariablehome-interface.md)を表します。|  
   
-## <a name="remarks"></a>Remarks  
- スロット インデックスは、このローカル変数のメタデータの取得に使用できます。  
+## <a name="remarks"></a>解説  
+ このローカル変数のメタデータを取得するために、スロットインデックスを使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugVariableHome インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)

@@ -14,36 +14,34 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 86d59c86df88bc1c17e27ad020aa2db10d3fae67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56d5cfde2efb322521615977f72b0d308ad378f6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598715"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500542"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling インターフェイス
-提供、 [iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)メソッドで、実行中のプロセスにアタッチするプロファイラーを使用します。  
+[ICLRProfiling:: attachprofiler](iclrprofiling-attachprofiler-method.md)メソッドを提供します。これにより、実行中のプロセスにプロファイラーをアタッチできます。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[AttachProfiler メソッド](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|指定されたプロファイラーを、指定されたプロセスにアタッチします。|  
+|[AttachProfiler メソッド](iclrprofiling-attachprofiler-method.md)|指定されたプロファイラーを、指定されたプロセスにアタッチします。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: タブ ページを無効化する'
+title: '方法 : タブ ページを無効化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9074aedb81a485267dc4faff92e0fe8d0d3b467f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013453"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182174"
 ---
-# <a name="how-to-disable-tab-pages"></a>方法: タブ ページを無効化する
-状況によっては、Windows フォーム アプリケーション内で使用できるデータ アクセスを制限するされます。 タブ コントロールのタブ ページに表示されるデータがある場合をこの 1 つの例として使用することがあります。管理者には、ゲストまたは低いレベルのユーザーを制限するタブ ページの情報があります。  
+# <a name="how-to-disable-tab-pages"></a>方法 : タブ ページを無効化する
+Windows フォーム アプリケーション内で使用できるデータへのアクセスを制限する場合があります。 この例の 1 つとして、タブ コントロールのタブ ページにデータが表示されている場合があります。管理者は、ゲストレベルまたは下位レベルのユーザーから制限する必要がある情報をタブ ページに含める場合があります。  
   
-### <a name="to-disable-tab-pages-programmatically"></a>タブ ページをプログラムで無効にするには  
+### <a name="to-disable-tab-pages-programmatically"></a>プログラムでタブ ページを無効にするには  
   
-1. タブ コントロールを処理するコード<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>イベント。 これは、ユーザーが 1 つのタブ、[次へ] を切り替えるときに発生するイベントです。  
+1. タブ コントロールのイベントを処理するコード<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>を記述します。 これは、ユーザーがタブを切り替えたときに発生するイベントです。  
   
-2. 資格情報を確認します。 によって表示される情報は、タブを表示するユーザーを許可する前に、ユーザーがログインに使用するユーザー名またはその他の何らかの形式の資格情報を確認することがあります。  
+2. 資格情報を確認します。 表示される情報によっては、ユーザーがログインしたユーザー名や、ユーザーがタブを表示できるようにする前に、その他の形式の資格情報を確認する必要があります。  
   
-3. ユーザーに適切な資格情報がある場合は、クリックされたタブを表示します。 ユーザーは、適切な資格情報を持っていない場合メッセージ ボックスを表示またはのユーザー インターフェイスであることを示すがありません、アクセスして、最初のタブに戻ります。  
+3. ユーザーが適切な資格情報を持っている場合は、クリックされたタブを表示します。 ユーザーが適切な資格情報を持っていない場合は、アクセス権を持っていないというメッセージ ボックスまたはその他のユーザー インターフェイスを表示し、最初のタブに戻ります。  
   
     > [!NOTE]
-    >  フォームの中にこの資格情報のチェックを実行するには、実稼働アプリケーションでこの機能を実装するときに<xref:System.Windows.Forms.Form.Load>イベント。 これによって、プログラミングよりはるかにより明確な方法は、すべてのユーザー インターフェイスが表示される前に、タブを非表示にできます。 以下で使用する方法 (資格情報を確認し、中に、タブを無効にすると、<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>イベント) は、例示を目的として。  
+    > この機能を実稼働アプリケーションに実装する場合、フォームの<xref:System.Windows.Forms.Form.Load>イベント中にこの資格情報チェックを実行できます。 これにより、ユーザーインターフェイスが表示される前にタブを非表示にすることが可能になり、プログラミングに対するはるかにクリーンなアプローチです。 以下で使用する方法 (資格情報の確認、イベント中のタブの<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>無効化) は、説明の目的で使用されます。  
   
-4. 必要に応じて、3 つ以上のタブ ページがある場合は、元の別のタブ ページを表示します。  
+4. 必要に応じて、3 つ以上のタブ ページがある場合は、元のタブ ページとは異なるタブ ページを表示します。  
   
-     次の例で、<xref:System.Windows.Forms.CheckBox>コントロールはアプリケーションによって異なりますが、タブへのアクセスの条件として、資格情報を確認する代わりに使用されます。 ときに、<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>資格情報のチェックが true の場合、イベントが発生します (つまり、チェック ボックスをオン)、[選択] タブで、 `TabPage2` (この例では、機密情報をタブ)、し`TabPage2`が表示されます。 それ以外の場合、`TabPage3`表示をユーザーに適切なアクセス特権がないことを示すメッセージ ボックスが表示されます。 次のコードでフォームを前提としています、<xref:System.Windows.Forms.CheckBox>コントロール (`CredentialCheck`) と<xref:System.Windows.Forms.TabControl>3 つのタブ ページを持つコントロール。  
+     次の例では、タブ<xref:System.Windows.Forms.CheckBox>へのアクセス基準はアプリケーションによって異なるため、資格情報をチェックする代わりにコントロールが使用されます。 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged>イベントが発生した場合、資格情報チェックが true (つまり、チェック ボックスがチェックされている) で、選択された`TabPage2`タブ (この例では機密情報が含まれているタブ)`TabPage2`が表示されます。 それ以外`TabPage3`の場合は、適切なアクセス権を持っていなかったことを示すメッセージ ボックスが表示されます。 次のコードでは、<xref:System.Windows.Forms.CheckBox>コントロール ( )`CredentialCheck`と<xref:System.Windows.Forms.TabControl>3 つのタブ ページを持つコントロールを持つフォームを想定しています。  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
        ' Check Credentials Here  
   
-       If CredentialCheck.Checked = True And _   
+       If CredentialCheck.Checked = True And _
        TabControl1.SelectedTab Is TabPage2 Then  
           TabControl1.SelectedTab = TabPage2  
-       ElseIf CredentialCheck.Checked = False _   
+       ElseIf CredentialCheck.Checked = False _
        And TabControl1.SelectedTab Is TabPage2 Then  
-          MessageBox.Show _   
+          MessageBox.Show _
          ("Unable to load tab. You have insufficient access privileges.")  
           TabControl1.SelectedTab = TabPage3  
        End If  
@@ -55,7 +55,7 @@ ms.locfileid: "62013453"
     {  
         // Check Credentials Here  
   
-        if ((CredentialCheck.Checked == true) && (tabControl1.SelectedTab == tabPage2))   
+        if ((CredentialCheck.Checked == true) && (tabControl1.SelectedTab == tabPage2))
         {  
             tabControl1.SelectedTab = tabPage2;  
         }  
@@ -89,10 +89,10 @@ ms.locfileid: "62013453"
        }  
     ```  
   
-     (Visual C#、Visual C)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。  
+     (ビジュアル C#、ビジュアル C++)フォームのコンストラクターに次のコードを配置して、イベント ハンドラーを登録します。  
   
     ```csharp  
-    this.tabControl1.SelectedIndexChanged +=   
+    this.tabControl1.SelectedIndexChanged +=
        new System.EventHandler(this.tabControl1_SelectedIndexChanged);  
     ```  
   
@@ -104,6 +104,6 @@ ms.locfileid: "62013453"
 ## <a name="see-also"></a>関連項目
 
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
-- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [方法 : タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
+- [方法 : Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [方法 : Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

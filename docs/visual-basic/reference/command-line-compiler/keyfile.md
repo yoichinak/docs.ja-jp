@@ -6,54 +6,55 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793963"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408576"
 ---
 # <a name="-keyfile"></a>-keyfile
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-``` 
+```console
 -keyfile:file  
 ```  
   
 ## <a name="arguments"></a>引数  
  `file`  
- 必須。 キーを含むファイルです。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("")。  
+ 必須です。 キーが含まれるファイル。 ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
- コンパイラはアセンブリ マニフェストに公開キーを挿入し、秘密キーで最終アセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))。  
+ コンパイラでは、アセンブリ マニフェストに公開キーを挿入してから、秘密キーで最終的なアセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、「[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
- 使用してコンパイルする場合`-target:module`、キー ファイルの名前がモジュールに保持され、使用してアセンブリをコンパイルするときに作成されるアセンブリに組み込まれます[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)します。  
+ `-target:module` を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](addmodule.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。  
   
- また、暗号化情報を [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) でコンパイラに渡すことができます。 部分的に署名されたアセンブリを作成する場合は、[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) を使います。  
+ また、暗号化情報を [-keycontainer](keycontainer.md) でコンパイラに渡すことができます。 部分的に署名されたアセンブリを作成する場合は、[-delaysign](delaysign.md) を使います。  
   
- カスタム属性として、このオプションを指定することもできます (<xref:System.Reflection.AssemblyKeyFileAttribute>) 任意の Microsoft intermediate language モジュールのソース コードにします。  
+ このオプションは、任意の Microsoft Intermediate Language モジュールのソース コードで、カスタム属性 (<xref:System.Reflection.AssemblyKeyFileAttribute>) として指定することもできます。  
   
- 場合両方`-keyfile`と[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)がで指定された (コマンド ライン オプションまたはカスタム属性によって)、同じコンパイル時に、コンパイラが最初にキー コンテナーを試みます。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 指定したファイルがしようと、コンパイラがキー コンテナーを見つけられない場合`-keyfile`します。 これが成功すると、アセンブリは、キー ファイルの情報で署名およびキーの情報がキー コンテナーにインストールされている場合 (のような`sn -i`) 次のコンパイル時にキー コンテナーが有効になるようにします。  
+ 同じコンパイルで (コマンドライン オプションまたはカスタム属性によって) `-keyfile` と [-keycontainer](keycontainer.md) の両方が指定されている場合、コンパイラでは最初にキー コンテナーが試されます。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 コンパイラでは、キー コンテナーが見つからない場合、`-keyfile` で指定されたファイルが試されます。 これが成功すると、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (`sn -i` と同様)、次のコンパイル時にはキー コンテナーが有効になります。  
   
  キー ファイルには公開キーだけが含まれる場合があることに注意してください。  
   
- 参照してください[の作成と using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)アセンブリへの署名の詳細についてはします。  
+ アセンブリの署名の詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」を参照してください。  
   
 > [!NOTE]
->  `-keyfile`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
-  
-## <a name="example"></a>例  
- 次のコードは、ソース ファイルをコンパイル`Input.vb`キー ファイルを指定します。  
-  
-```console  
-vbc -keyfile:myfile.sn input.vb  
-```  
-  
+> `-keyfile` オプションは、Visual Studio 開発環境内からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。
+
+## <a name="example"></a>例
+
+次のコードでは、ソース ファイル `Input.vb` をコンパイルし、キー ファイルを指定します。
+
+```console
+vbc -keyfile:myfile.sn input.vb
+```
+
 ## <a name="see-also"></a>関連項目
 
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-reference (Visual Basic)](reference.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 751ed69f-b7ab-4e07-80de-e17ca9319b0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 026115adc01e7dcdac3012255f0378cff6348f89
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 866b34acae333f043d8e13f4d0ebd55f32046334
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140731"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile 関数
 指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::gethashfromassemblyfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +40,31 @@ HRESULT GetHashFromAssemblyFile (
   
 ## <a name="parameters"></a>パラメーター  
  `szFilePath`  
- [in]ハッシュされるファイルへのパス。  
+ からハッシュされるファイルへのパス。  
   
  `piHashAlg`  
- [入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のハッシュ アルゴリズムのゼロを使用します。  
+ [入力、出力]ハッシュアルゴリズムを指定する定数。 既定のハッシュアルゴリズムには0を使用します。  
   
  `pbHash`  
- [out]返されたハッシュ バッファー。  
+ 入出力返されたハッシュバッファー。  
   
  `cchHash`  
- [in]要求の最大サイズの`pbHash`します。  
+ から要求された `pbHash`の最大サイズ。  
   
  `pchHash`  
- [out]サイズ (バイト単位) が返されますの`pbHash`します。  
+ 入出力`pbHash`の返されたサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetHashFromAssemblyFile メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [GetHashFromAssemblyFileW メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromAssemblyFile メソッド](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [GetHashFromAssemblyFileW メソッド](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

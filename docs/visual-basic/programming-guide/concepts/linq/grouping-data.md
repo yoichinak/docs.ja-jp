@@ -1,13 +1,13 @@
 ---
-title: データのグループ化 (Visual Basic)
+title: データのグループ化
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 8996eee748489c596bc5adc32f53b6b39dbfc6ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754462"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398384"
 ---
 # <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
@@ -32,7 +32,7 @@ ms.locfileid: "64754462"
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
      New Integer() {35, 44, 200, 84, 3987, 4, 199, 329, 446, 208})  
   
-Dim query = From number In numbers   
+Dim query = From number In numbers
             Group By Remainder = (number Mod 2) Into Group  
   
 Dim sb As New System.Text.StringBuilder()  
@@ -66,7 +66,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Group By 句](../../../language-reference/queries/group-by-clause.md)
+- [方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)
+- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

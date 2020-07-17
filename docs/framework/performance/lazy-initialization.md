@@ -1,5 +1,6 @@
 ---
-title: 遅延初期化
+title: 限定的な初期化
+description: .NET でのレイジー初期化の詳細については、オブジェクトが最初に使用されるまでオブジェクトの作成が遅延されることを意味するパフォーマンスの向上について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 355fa326fc19e9a50a74e21ace0a6353f5c740c5
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616370"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904235"
 ---
-# <a name="lazy-initialization"></a>遅延初期化
-オブジェクトの*遅延初期化*とは、初めて使用されるまでオブジェクトの作成が延期されることを意味します。 (このトピックでは、*遅延初期化*と*遅延インスタンス化*を同じ意味の言葉として使っています。)遅延初期化は主に、パフォーマンスの改善、無駄な計算処理の回避、プログラムのメモリ要件の縮小を目的として利用されます。 最も一般的なシナリオ:  
+# <a name="lazy-initialization"></a>限定的な初期化
+オブジェクトの*遅延初期化*とは、初めて使用されるまでオブジェクトの作成が延期されることを意味します。 (このトピックでは、*レイジー初期化*と*レイジーインスタンス化*という用語は同義です)。遅延初期化は主に、パフォーマンスの向上、無駄な計算の回避、およびプログラムのメモリ要件の削減を目的として使用されます。 最も一般的なシナリオ:  
   
 - あるオブジェクトを作成するとコストが高いのに、プログラムでそのオブジェクトが使用されない可能性もある。 たとえば、メモリ内の `Customer` オブジェクトに `Orders` プロパティがあるとします。このプロパティには、`Order` オブジェクトの大きな配列が含まれていますが、これを初期化するにはデータベースに接続する必要があります。 ユーザーが Orders データを表示しないのであれば、あるいは Orders データを計算に使用しないのであれば、システム メモリや計算処理周期を利用してそのデータを作成する理由がありません。 遅延初期化では `Lazy<Orders>` を利用して `Orders` オブジェクトを宣言することで、オブジェクトが使用されない場合のシステム リソースの無駄使いを回避できます。  
   
@@ -27,14 +26,14 @@ ms.locfileid: "64616370"
   
  次の表は、.NET Framework バージョン 4 で提供される、さまざまなシナリオの遅延初期化を可能にする型の一覧です。  
   
-|型|説明|  
+|型|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|あらゆるクラス ライブラリやユーザー定義の型を対象に、遅延初期化セマンティクスを提供するラッパー クラス。|  
 |<xref:System.Threading.ThreadLocal%601>|<xref:System.Lazy%601> に似ていますが、スレッドローカル基準の遅延初期化セマンティクスを提供する点が異なります。 すべてのスレッドがその固有の値にアクセスできます。|  
 |<xref:System.Threading.LazyInitializer>|オブジェクトの遅延初期化のために高度な `static` メソッドを提供します (Visual Basic の場合は `Shared`)。クラスのオーバーヘッドがありません。|  
   
 ## <a name="basic-lazy-initialization"></a>基本的な遅延初期化  
- `MyType` のような、遅延初期化型を定義するには、次の例のように、`Lazy<MyType>` を使用します (Visual Basic の場合は `Lazy(Of MyType)`)。 <xref:System.Lazy%601> コンストラクターにデリゲートが渡されない場合、値プロパティの最初のアクセスで <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> を使用することで、ラップされた型が作成されます。 型に既定のコンストラクターがない場合、実行時例外が投げられます。  
+ `MyType` のような、遅延初期化型を定義するには、次の例のように、`Lazy<MyType>` を使用します (Visual Basic の場合は `Lazy(Of MyType)`)。 <xref:System.Lazy%601> コンストラクターにデリゲートが渡されない場合、値プロパティの最初のアクセスで <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> を使用することで、ラップされた型が作成されます。 型にパラメーターなしのコンストラクターがない場合は、実行時の例外がスローされます。  
   
  次の例では、`Orders` は、データベースから取得された `Order` オブジェクトの配列を含むクラスであると想定しています。 `Customer` オブジェクトには `Orders` のインスタンスが含まれていますが、ユーザーの操作によっては、`Orders` オブジェクトからのデータは必要ないことがあります。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "64616370"
  [!code-csharp[Lazy#3](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#3)]
  [!code-vb[Lazy#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#3)]  
   
- <xref:System.Lazy%601> オブジェクトは常に、初期化に利用されたものと同じオブジェクトまたは値を返します。 そのため、<xref:System.Lazy%601.Value%2A> プロパティは読み取り専用です。 <xref:System.Lazy%601.Value%2A> が参照型を保存する場合、それに新しいオブジェクトを割り当てることはできません。 (ただし、その設定可能なパブリックのフィールドとプロパティを変更できます。)<xref:System.Lazy%601.Value%2A> が値型を保存する場合、その値を変更することはできません。 それでも、変数コンストラクターを呼び出し、新しい変数を作成することはできます。新しい引数を利用します。  
+ <xref:System.Lazy%601> オブジェクトは常に、初期化に利用されたものと同じオブジェクトまたは値を返します。 そのため、<xref:System.Lazy%601.Value%2A> プロパティは読み取り専用です。 <xref:System.Lazy%601.Value%2A> が参照型を保存する場合、それに新しいオブジェクトを割り当てることはできません。 (ただし、設定可能なパブリックフィールドとプロパティの値は変更できます)。が <xref:System.Lazy%601.Value%2A> 値型を格納している場合、その値を変更することはできません。 それでも、変数コンストラクターを呼び出し、新しい変数を作成することはできます。新しい引数を利用します。  
   
  [!code-csharp[Lazy#4](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#4)]
  [!code-vb[Lazy#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#4)]  
@@ -62,7 +61,7 @@ ms.locfileid: "64616370"
  既定では、<xref:System.Lazy%601> オブジェクトはスレッド セーフです。 つまり、コンストラクターがスレッドセーフの種類を指定しない場合、スレッドセーフな <xref:System.Lazy%601> オブジェクトが作成されます。 マルチスレッド シナリオの場合、スレッドセーフな <xref:System.Lazy%601> オブジェクトの <xref:System.Lazy%601.Value%2A> プロパティにアクセスした最初のスレッドが、すべてのスレッドのすべての後続アクセスで、オブジェクトを初期化します。すべてのスレッドが同じデータを共有します。 そのため、どのスレッドがオブジェクトを初期化するかは問題ではありません。競合状態に害はありません。  
   
 > [!NOTE]
->  例外キャッシュを利用すれば、エラー状態にもこの一貫性が及びます。 詳細については、次のセクションの「[遅延オブジェクトの例外](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)」を参照してください。  
+> 例外キャッシュを利用すれば、エラー状態にもこの一貫性が及びます。 詳細については、次のセクションの「[遅延オブジェクトの例外](lazy-initialization.md#ExceptionsInLazyObjects)」を参照してください。  
   
  次の例では、同じ `Lazy<int>` インスタンスで、3 つの別個のスレッドに対して同じ値が与えられています。  
   
@@ -75,24 +74,24 @@ ms.locfileid: "64616370"
   
  <xref:System.Lazy%601> の一部のコンストラクターには、`mode` という名前の <xref:System.Threading.LazyThreadSafetyMode> パラメーターが含まれています。 このコンストラクターでは、スレッド セーフ モードが 1 つ増えます。 次の表は、スレッド セーフを指定するコンストラクター パラメーターの影響を <xref:System.Lazy%601> オブジェクトのスレッド セーフが受けるしくみをまとめたものです。 各コンストラクターに含まれるこのようなパラメーターは多くても 1 つです。  
   
-|オブジェクトのスレッド セーフ|`LazyThreadSafetyMode` `mode` パラメーター|ブール値 `isThreadSafe` パラメーター|スレッド セーフ パラメーターなし|  
+|オブジェクトのスレッド セーフ|`LazyThreadSafetyMode``mode`パラメーター|ブール値 `isThreadSafe` パラメーター|スレッド セーフ パラメーターなし|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |完全スレッドセーフ。一度に 1 つだけのスレッドが値の初期化を試行します。|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|はい。|  
-|スレッド セーフではない。|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|該当なし。|  
-|完全スレッドセーフ。値の初期化に際し、スレッドの競合が起こります。|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|該当なし。|該当なし。|  
+|スレッド セーフではない。|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|適用不可。|  
+|完全スレッドセーフ。値の初期化に際し、スレッドの競合が起こります。|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|適用不可。|適用不可。|  
   
  表に示されているように、`mode` パラメーターに <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> を指定することは、`isThreadSafe` パラメーターに `true` を指定することと同じであり、<xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> を指定することは `false` を指定することと同じです。  
   
  <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> を指定すると、<xref:System.Lazy%601> インスタンスの初期化を複数のスレッドが試行できます。 1 つだけのスレッドがこの競合を征します。他のスレッドはすべて、競合を征したスレッドにより初期化された値を受け取ります。 初期化中、あるスレッドで例外がスローされた場合、そのスレッドは、競合を征したスレッドが設定した値を受け取ることがありません。 例外はキャッシュされません。<xref:System.Lazy%601.Value%2A> プロパティへの後続のアクセス試行で初期化が行われます。 これは、他のモードでの例外の扱いとは異なります。それについては、次のセクションで説明します。 詳細については、<xref:System.Threading.LazyThreadSafetyMode> 列挙型のページをご覧ください。  
   
-<a name="ExceptionsInLazyObjects"></a>   
+<a name="ExceptionsInLazyObjects"></a>
 ## <a name="exceptions-in-lazy-objects"></a>遅延オブジェクトの例外  
- 前述のように、<xref:System.Lazy%601> オブジェクトは常に、初期化に使用されたものと同じオブジェクトまたは値を返します。そのため、<xref:System.Lazy%601.Value%2A> プロパティは読み取り専用です。 例外キャッシュを有効にすると、この不変性は例外動作にも及びます。 遅延初期化オブジェクトを例外キャッシュを有効にし、その初期化メソッドから例外をスローする場合と、<xref:System.Lazy%601.Value%2A>プロパティへのアクセスは、まずにアクセスするすべての後続の試行で同じ例外がスローされます、<xref:System.Lazy%601.Value%2A>プロパティ. 言い換えると、マルチスレッドのシナリオであっても、ラップされた型のコンストラクターが再び呼び出されることはありません。 そのため、<xref:System.Lazy%601> オブジェクトがあるアクセスで例外をスローし、後続のアクセスで値を返すということはありません。  
+ 前述のように、<xref:System.Lazy%601> オブジェクトは常に、初期化に使用されたものと同じオブジェクトまたは値を返します。そのため、<xref:System.Lazy%601.Value%2A> プロパティは読み取り専用です。 例外キャッシュを有効にすると、この不変性は例外動作にも及びます。 レイジー初期化オブジェクトで例外キャッシュが有効になっていて、プロパティに最初にアクセスしたときに初期化メソッドから例外がスローされた場合 <xref:System.Lazy%601.Value%2A> 、そのプロパティにアクセスするたびに同じ例外がスローされ <xref:System.Lazy%601.Value%2A> ます。 言い換えると、マルチスレッドのシナリオであっても、ラップされた型のコンストラクターが再び呼び出されることはありません。 そのため、<xref:System.Lazy%601> オブジェクトがあるアクセスで例外をスローし、後続のアクセスで値を返すということはありません。  
   
- 初期化メソッド (`valueFactory` パラメーター) を取る <xref:System.Lazy%601?displayProperty=nameWithType> コンストラクターを使用すると、例外キャッシュが有効になります。たとえば、`Lazy(T)(Func(T))` コンストラクターの使用時に有効になります。 そのコンストラクターは <xref:System.Threading.LazyThreadSafetyMode> 値 (`mode` パラメーター) も取る場合、<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> または <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> を指定します。 初期化メソッドを指定すると、この 2 つのモードで例外キャッシュが有効になります。 初期化メソッドは非常に単純にすることができます。 たとえば、`T` に既定のコンストラクターを呼び出すことができます。C# の場合は `new Lazy<Contents>(() => new Contents(), mode)`、Visual Basic の場合は `New Lazy(Of Contents)(Function() New Contents())` です。 初期化メソッドを指定しない <xref:System.Lazy%601?displayProperty=nameWithType> コンストラクターを使った場合、`T` について既定のコンストラクターからスローされる例外はキャッシュされません。 詳細については、<xref:System.Threading.LazyThreadSafetyMode> 列挙型のページをご覧ください。  
+ 初期化メソッド (`valueFactory` パラメーター) を取る <xref:System.Lazy%601?displayProperty=nameWithType> コンストラクターを使用すると、例外キャッシュが有効になります。たとえば、`Lazy(T)(Func(T))` コンストラクターの使用時に有効になります。 そのコンストラクターは <xref:System.Threading.LazyThreadSafetyMode> 値 (`mode` パラメーター) も取る場合、<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> または <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> を指定します。 初期化メソッドを指定すると、この 2 つのモードで例外キャッシュが有効になります。 初期化メソッドは非常に単純にすることができます。 たとえば、 `T` `new Lazy<Contents>(() => new Contents(), mode)` C# では、または Visual Basic でパラメーターなしのコンストラクターを呼び出すことができます `New Lazy(Of Contents)(Function() New Contents())` 。 初期化メソッドを指定しない <xref:System.Lazy%601?displayProperty=nameWithType> コンストラクターを使用する場合、`T` についてパラメーターなしのコンストラクターからスローされる例外はキャッシュされません。 詳細については、<xref:System.Threading.LazyThreadSafetyMode> 列挙型のページをご覧ください。  
   
 > [!NOTE]
->  `isThreadSafe` コンストラクター パラメーターを `false` に設定するか、`mode` コンストラクター パラメーターを <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> に設定して <xref:System.Lazy%601> オブジェクトを作成した場合、1 つのスレッドから <xref:System.Lazy%601> オブジェクトにアクセスするか、独自の同期を提供する必要があります。 これは、例外キャッシュを含む、オブジェクトのあらゆる側面に適用されます。  
+> `isThreadSafe` コンストラクター パラメーターを `false` に設定するか、`mode` コンストラクター パラメーターを <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> に設定して <xref:System.Lazy%601> オブジェクトを作成した場合、1 つのスレッドから <xref:System.Lazy%601> オブジェクトにアクセスするか、独自の同期を提供する必要があります。 これは、例外キャッシュを含む、オブジェクトのあらゆる側面に適用されます。  
   
  前のセクションで説明したように、<xref:System.Lazy%601> オブジェクトの作成に <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> を指定した場合、例外の処理が異なります。 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> の場合、<xref:System.Lazy%601> インスタンスの初期化にあたり、複数のスレッドが競合できます。 その場合、例外はキャッシュされません。<xref:System.Lazy%601.Value%2A> プロパティに対するアクセス試行は初期化完了まで続行されます。  
   
@@ -101,11 +100,11 @@ ms.locfileid: "64616370"
 |コンストラクター|スレッド セーフ モード|初期化メソッドを使用します|例外がキャッシュされます|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|いいえ|いいえ|  
-|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|[はい]|[はい]|  
+|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|はい|はい|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|いいえ|いいえ|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|[はい]|[はい]|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|はい|はい|  
 |Lazy(T)(LazyThreadSafetyMode)|ユーザー指定|いいえ|いいえ|  
-|Lazy(T)(Func(T), LazyThreadSafetyMode)|ユーザー指定|[はい]|ユーザーが <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> を指定する場合は、いいえ。指定しない場合は、はい。|  
+|Lazy(T)(Func(T), LazyThreadSafetyMode)|ユーザー指定|Yes|ユーザーが <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> を指定する場合は、いいえ。指定しない場合は、はい。|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>遅延初期化プロパティを実装する  
  遅延初期化を利用してパブリック プロパティを実装するには、プロパティのバッキング フィールドを <xref:System.Lazy%601> として定義し、プロパティの `get` アクセサーから <xref:System.Lazy%601.Value%2A> プロパティを返します。  
@@ -140,7 +139,7 @@ ms.locfileid: "64616370"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For と ForEach のスレッドローカル変数  
- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドを利用してデータ ソースを並列で繰り返すとき、スレッドローカル データのサポートが組み込まれたオーバーロードを利用できます。 そのようなメソッドでは、ローカル デリゲートを利用してデータの作成、アクセス、クリーンアップを行うことで、スレッドローカルになります。 詳細については、「[方法 :スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」および「[方法:パーティション ローカル変数を使用する Parallel.ForEach ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」をご覧ください。  
+ <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドを利用してデータ ソースを並列で繰り返すとき、スレッドローカル データのサポートが組み込まれたオーバーロードを利用できます。 そのようなメソッドでは、ローカル デリゲートを利用してデータの作成、アクセス、クリーンアップを行うことで、スレッドローカルになります。 詳細については、「[方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」と「[How to: Write a Parallel.ForEach Loop with Thread-Local Variables (方法: パーティション ローカル変数を使用する Parallel.ForEach ループを記述する)](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」を参照してください。  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>オーバーヘッドが低いシナリオで遅延初期化を使用する  
  大量のオブジェクトを遅延初期化しなければならないシナリオでは、<xref:System.Lazy%601> で各オブジェクトをラッピングするとき、あまりにも多くのメモリまたは計算処理リソースが必要になるのか判断することがあります。 あるいは、遅延初期化の公開方法について厳格な要件が与えられることがあります。 そのような場合、<xref:System.Threading.LazyInitializer?displayProperty=nameWithType> クラスの `static` (Visual Basic の場合、`Shared`) メソッドを利用し、<xref:System.Lazy%601> のインスタンスでラッピングせずに、各オブジェクトを遅延初期化できます。  
@@ -152,9 +151,9 @@ ms.locfileid: "64616370"
   
  この例では、ループの繰り返しの旅に初期化プロシージャが呼び出されていることに注意してください。 マルチスレッド シナリオでは、初期化プロシージャを呼び出した最初のスレッドの値をすべてのスレッドで確認できます。 後続のスレッドも初期化プロシージャを呼び出しますが、その結果は利用されません。 この種類の潜在的競合状態が許容できない場合、ブール値引数と同期オブジェクトを取る <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> のオーバーロードを使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-- [マネージ スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
-- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)
-- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [方法: オブジェクトの遅延初期化を実行します。](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [マネージド スレッド処理の基本](../../standard/threading/managed-threading-basics.md)
+- [スレッドおよびスレッド処理](../../standard/threading/threads-and-threading.md)
+- [タスク並列ライブラリ (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [方法: オブジェクトの遅延初期化を実行する](how-to-perform-lazy-initialization-of-objects.md)

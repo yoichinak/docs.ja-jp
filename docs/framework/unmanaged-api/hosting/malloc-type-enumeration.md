@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 630fe4e79b369bfdefc19be72780f1893090895e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779343"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008457"
 ---
-# <a name="malloctype-enumeration"></a>MALLOC_TYPE 列挙体
-割り当てられるメモリの特性を指定する値が含まれています。  
+# <a name="malloc_type-enumeration"></a>MALLOC_TYPE 列挙体
+割り当てられているメモリの特性を指定する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,18 +37,18 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MALLOC_EXECUTABLE`|割り当てられたメモリは、実行可能ファイルを含めることができます。|  
-|`MALLOC_THREADSAFE`|割り当てられたメモリは、スレッド セーフです。 つまり、メモリは、同期しなくても、複数のスレッドによってアクセスできます。<br /><br /> このフラグが設定されていない場合は、オブジェクトでの呼び出しをシリアル化する必要があります。|  
+|`MALLOC_EXECUTABLE`|割り当てられたメモリには、実行可能ファイルを含めることができます。|  
+|`MALLOC_THREADSAFE`|割り当てられたメモリはスレッドセーフです。 つまり、メモリには、同期を行わずに複数のスレッドからアクセスできます。<br /><br /> このフラグが設定されていない場合は、オブジェクトに対する呼び出しをシリアル化する必要があります。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

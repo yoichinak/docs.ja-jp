@@ -9,31 +9,31 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 52b9b99b0af38d797e4a3c98dc0979211c930c1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923378"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>方法: ビジュアル内のジオメトリのヒット テストを実行する
-この例は、1 つまたは複数で構成されるビジュアル オブジェクトに対してヒット テストを実行する方法を示しています。<xref:System.Windows.Media.Geometry>オブジェクト。  
+この例では、1 つ以上の <xref:System.Windows.Media.Geometry> オブジェクトで構成されるビジュアル オブジェクトに対してヒット テストを実行する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例は、取得する方法を示します、<xref:System.Windows.Media.DrawingGroup>を使用するビジュアル オブジェクトから、<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>メソッド。 各描画の描画されるコンテンツのヒット テストが実行、<xref:System.Windows.Media.DrawingGroup>をヒットしたジオメトリを判断します。  
+ 次の例では、<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> メソッドを使用するビジュアル オブジェクトから <xref:System.Windows.Media.DrawingGroup> を取得する方法を示しています。 次に、<xref:System.Windows.Media.DrawingGroup> の各描画のレンダリングされたコンテンツに対してヒット テストを実行し、ヒットしたジオメトリを確認します。  
   
 > [!NOTE]
->  ほとんどの場合、使用すると、<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>ポイントと交差するビジュアルの表示内容にするかどうかを判断するメソッド。  
+> 通常、ポイントがビジュアルの描画されたコンテンツと交差するかどうかを判定するには、<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> メソッドを使用します。  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- <xref:System.Windows.Media.Geometry.FillContains%2A>メソッドがオーバー ロードされたメソッドを使用すると、指定されたを使用してヒット テストを<xref:System.Windows.Point>または<xref:System.Windows.Media.Geometry>します。 ジオメトリに線が付いている場合は、塗りつぶしの境界の外側までストロークを拡張できます。 呼び出すしたい場合は、<xref:System.Windows.Media.Geometry.StrokeContains%2A>に加えて<xref:System.Windows.Media.Geometry.FillContains%2A>します。  
+ <xref:System.Windows.Media.Geometry.FillContains%2A> メソッドは、指定した <xref:System.Windows.Point> または <xref:System.Windows.Media.Geometry> を使用してヒット テストを実行できるようにする、オーバーロードされたメソッドです。 ジオメトリに線が付いている場合は、塗りつぶしの境界の外側までストロークを拡張できます。 この場合、<xref:System.Windows.Media.Geometry.FillContains%2A> に加えて <xref:System.Windows.Media.Geometry.StrokeContains%2A> を呼び出す必要があります。  
   
- 提供することも、<xref:System.Windows.Media.ToleranceType>ベジエ平坦化のために使用されます。  
+ また、ベジエ平坦化に使用する <xref:System.Windows.Media.ToleranceType> を指定することもできます。  
   
 > [!NOTE]
->  このサンプルでは、ジオメトリに適用される可能性のある変換やクリッピングは考慮していません。 また、スタイルが設定されたコントロールには直接関連付けられた描画がないので、このサンプルはスタイルが設定されたコントロールに対しては機能しません。  
+> このサンプルでは、ジオメトリに適用される可能性のある変換やクリッピングは考慮していません。 また、スタイルが設定されたコントロールには直接関連付けられた描画がないので、このサンプルはスタイルが設定されたコントロールに対しては機能しません。  
   
 ## <a name="see-also"></a>関連項目
 

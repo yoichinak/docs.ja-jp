@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 90ec7653f7de931bd8127263643b5467998325b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 3115bfb80d4e5e61ed49da11e36eaa37bc24334f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780303"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791536"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlCommand の実行と SqlNotificationRequest
 
@@ -18,16 +18,16 @@ ms.locfileid: "61780303"
 
 ## <a name="creating-the-notification-request"></a>通知要求の作成
 
-<xref:System.Data.Sql.SqlNotificationRequest> オブジェクトを使用して通知要求を作成し、それを `SqlCommand` オブジェクトにバインドできます。 いったん要求が作成されれば、`SqlNotificationRequest` オブジェクトは不要です。 通知がないかどうかをキューに照会し、適宜、それに応じた処理を行うことができます。 通知は、アプリケーションをシャットダウンしてから再起動した場合でも受けることができます。
+<xref:System.Data.Sql.SqlNotificationRequest> オブジェクトを使用して通知要求を作成し、それを `SqlCommand` オブジェクトにバインドできます。 要求を作成したら、`SqlNotificationRequest` オブジェクトは不要になります。 キューに対して任意の通知を照会し、適切に応答することができます。 通知は、アプリケーションがシャットダウンされ、その後再起動された場合でも発生する可能性があります。
 
 コマンドに通知を関連付けて実行した場合、元の結果セットになんらかの変更が生じると、通知要求で構成した SQL Server キューにメッセージが送信されます。
 
-SQL Server のキューをポーリングしメッセージを解釈する方法は、アプリケーションごとに固有なものになります。 メッセージの内容に基づくキューのポーリングや処理は、アプリケーションによって異なります。
+SQL Server のキューをポーリングしメッセージを解釈する方法は、アプリケーションごとに固有なものになります。 アプリケーションは、メッセージの内容に基づいてキューのポーリングと応答を行います。
 
 > [!NOTE]
-> <xref:System.Data.SqlClient.SqlDependency> によって SQL Server 通知要求を使用する場合は、既定のサービス名を使用せずにキュー名を独自に作成します。
+> <xref:System.Data.SqlClient.SqlDependency> と共に SQL Server 通知要求を使用する場合は、既定のサービス名を使用するのではなく、独自のキュー名を作成してください。
 
-<xref:System.Data.Sql.SqlNotificationRequest> についてクライアント側に新しいセキュリティ要素はありません。 これは主にサーバーの機能であり、サーバーでは通知を要求するために必要となるユーザーの特権を設定します。
+<xref:System.Data.Sql.SqlNotificationRequest> に対応する新しいクライアント側セキュリティ要素はありません。 これはそもそもサーバー機能であり、ユーザーが通知を要求するために保持する必要がある特権はサーバーによって作成されています。
 
 ### <a name="example"></a>例
 
@@ -75,5 +75,5 @@ command.ExecuteReader();
 
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server のクエリ通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server のクエリ通知](query-notifications-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

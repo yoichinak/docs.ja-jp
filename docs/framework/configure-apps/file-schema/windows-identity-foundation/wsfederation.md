@@ -3,19 +3,20 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 276f552767897729bf58c6a803669f39c96f09e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53f3943524c45a43ddb60553b8ff45f19df66b14
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790469"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79152464"
 ---
-# <a name="wsfederation"></a>\<wsFederation >
-構成を提供、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM)。  
+# \<wsFederation>
+<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfam) の構成を提供します。  
   
-\<system.identityModel.services>  
-\<federationConfiguration>  
-\<wsFederation >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsFederation>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,51 +51,51 @@ ms.locfileid: "61790469"
   
 |属性|説明|  
 |---------------|-----------------|  
-|authenticationType|認証の種類を指定する URI。 Ws-federation サインイン要求の wauth パラメーターを設定します。 省略可能です。 既定では、要求の wauth パラメーターが含まれていないことを指定します。 空の文字列です。|  
-|鮮度|必要な最大有効期間、認証要求の分単位で。 Ws-federation サインイン要求 wfresh パラメーターを設定します。 任意。 既定値は 0 です。 省略可能です。 **警告:**.NET Framework 4.5 では、次のリリースで、`freshness`属性の型がで`xs:string`その既定値になります`null`します。|  
-|homeRealm|Id プロバイダーの認証に使用するには、(IdP) のホーム領域。 Ws-federation サインイン要求 whr パラメーターを設定します。 省略可能です。 既定では空の文字列、whr パラメーターが要求に含まれていないことを指定します。|  
-|issuer|目的のトークン発行者の URI。 ベース URL の Ws-federation サインイン要求とサインアウト要求のために必要な設定します。|  
-|persistentCookiesOnPassiveRedirects|認証で永続的な cookie が発行されるかどうかを指定します。 省略可能です。 既定値は"false"は、クッキーは発行されません。|  
-|passiveRedirectEnabled|自動的に承認されていない要求を STS にリダイレクトするため、WSFAM が有効になっているかどうかを指定します。 任意。 既定値は"true"、未承認の要求が自動的にリダイレクトされます。|  
-|ポリシー|サインイン要求で使用する関連ポリシーの場所を指定する URL。 既定値は空の文字列です。 Ws-federation サインイン要求 wp パラメーターを設定します。 省略可能です。 既定では空の文字列、wp パラメーターが要求に含まれていないことを指定します。|  
-|realm|要求レルムの URI。 (を識別する URI、証明書利用者 (RP) セキュリティ トークン サービス (STS)。)要求 wtrealm Ws-federation サインイン要求のパラメーターを設定します。 必須。|  
-|応答|これで、証明書利用者 (RP) アプリケーションのセキュリティ トークン サービス (STS) からの応答を受信するようはアドレスを識別する URL。 Ws-federation サインイン要求で wreply パラメーターを設定します。 省略可能です。 既定では、要求で wreply パラメーターが含まれていないことを指定します。 空の文字列です。|  
-|要求|トークン発行要求。 Ws-federation サインイン要求 wreq パラメーターを設定します。 省略可能です。 既定では空の文字列、wreq パラメーターが要求に含まれていないことを指定します。 要求に含めない、wreq パラメーターまたは wreqptr パラメーターは、STS が発行するトークンの種類を知っていることを意味します。|  
-|requestPtr|トークン発行要求の場所を指定する URL。 要求 wreqptr パラメーターを設定します。 省略可能です。 既定では空の文字列、wreqptr パラメーターが要求に含まれていないことを指定します。 要求に含めない、wreq パラメーターまたは wreqptr パラメーターは、STS が発行するトークンの種類を知っていることを意味します。|  
-|requireHttps|セキュリティ トークン サービス (STS) との通信が HTTPS プロトコルを使用する必要があるかどうかを指定します。 省略可能です。 既定値が"true"には、HTTPS を使用する必要があります。|  
-|リソース|アクセスされるリソース (RP) 証明書利用者を識別する URI、セキュリティ トークン サービス (STS)。 任意。 Ws-federation サインイン要求 wres パラメーターを設定します。 任意。 既定では空の文字列、wres パラメーターが要求に含まれていないことを指定します。 **注:** wres はレガシ パラメーターです。 指定、 `realm` wtrealm パラメーターを代わりに使用する属性。|  
-|signInQueryString|Ws-federation サインイン要求 URL で定義されているアプリケーションのクエリ パラメーターを指定する機能拡張ポイントを提供します。 省略可能です。 既定では、要求に追加のパラメーターを含めるないかを指定します。 空の文字列です。 パラメーターは、次の形式を使用してクエリ文字列のフラグメントとして指定されます。 `"param1=value1&param2=value2&param3=value3"` 、という具合です。 **注:** 構成ファイルで、' (& a)"のエンティティ参照を使用してクエリ文字列内の文字を指定する必要があります`&`します。|  
-|signOutQueryString|Ws-federation サインイン要求 URL で定義されているアプリケーションのクエリ パラメーターを指定する機能拡張ポイントを提供します。 任意。 既定では、要求に追加のパラメーターを含めるないかを指定します。 空の文字列です。 パラメーターは、次の形式を使用してクエリ文字列のフラグメントとして指定されます。 `"param1=value1&param2=value2&param3=value3"` 、という具合です。 **注:** 構成ファイルで、' (& a)"のエンティティ参照を使用してクエリ文字列内の文字を指定する必要があります`&`します。|  
-|signOutReply|Ws-federation プロトコルによるパッシブ サインアウト時にセキュリティ トークン サービス (STS) によって、クライアントをリダイレクトする URL を指定します。 Ws-federation サインアウト要求で wreply パラメーターを設定します。 省略可能です。 既定では、要求に追加のパラメーターを含めるないかを指定します。 空の文字列です。|  
+|authenticationType|認証の種類を指定する URI。 WS-FEDERATION サインイン要求 wauth パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、wauth パラメーターが要求に含まれないことを指定します。|  
+|鮮度|分単位の、希望する認証要求の最大期間。 WS-Federation サインインの要求 wfresh パラメーターを設定します。 省略可能。 既定値は 0 です。 省略可能。 **警告:** .NET Framework 4.5 の次のリリースでは、 `freshness` 属性は型になり、 `xs:string` その既定値はになり `null` ます。|  
+|homeRealm|認証に使用する id プロバイダー (IdP) のホーム領域。 WS-Federation サインインの要求 whr パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、whr パラメーターが要求に含まれないことを指定します。|  
+|発行者|目的のトークン発行者の URI。 WS-FEDERATION サインイン要求とサインアウト要求のベース URL を設定します。|  
+|persistentCookiesOnPassiveRedirects|認証時に永続的な cookie を発行するかどうかを指定します。 省略可能。 既定値は "false" です。 cookie は発行されません。|  
+|無効化 Veredirectenabled|承認されていない要求を STS に自動的にリダイレクトするために WSFAM が有効かどうかを指定します。 省略可能。 既定値は "true" で、承認されていない要求は自動的にリダイレクトされます。|  
+|policy|サインイン要求で使用する関連ポリシーの場所を指定する URL。 既定値は空の文字列です。 WS-Federation サインインの要求 wp パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、wp パラメーターが要求に含まれないことを指定します。|  
+|realm|要求している領域の URI。 (STS (Security Token Service) に証明書利用者 (RP) を識別する URI。要求 wtrealm WS-FEDERATION サインイン要求パラメーターを設定します。 必須。|  
+|reply|証明書利用者 (RP) アプリケーションがセキュリティ トークン サービス (STS) から応答を受信することを希望しているアドレスを識別する URL。 WS-FEDERATION サインイン要求の wreply パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、wreply パラメーターが要求に含まれないことを指定します。|  
+|request|トークン発行要求。 WS-Federation サインインの要求 wreq パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、wreq パラメーターが要求に含まれないことを指定します。 要求に wreq または wreqptr パラメーターを含めないことは、発行するトークンの種類を STS が認識していることを意味します。|  
+|requestPtr|トークン発行要求の場所を指定する URL 要求の wreqptr パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、wreqptr パラメーターが要求に含まれないことを指定します。 要求に wreq または wreqptr パラメーターを含めないことは、発行するトークンの種類を STS が認識していることを意味します。|  
+|requireHttps|Security Token Service (STS) との通信で HTTPS プロトコルを使用する必要があるかどうかを指定します。 省略可能。 既定値は "true"、HTTPS を使用する必要があります。|  
+|resource|セキュリティ トークン サービスに対してアクセスされるリソース、証明書利用者 (RP) を識別する URI。 省略可能。 WS-FEDERATION サインイン要求 wres パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、wres パラメーターが要求に含まれないことを指定します。 **注:** wres は従来のパラメーターです。 `realm`代わりに、wtrealm パラメーターを使用する属性を指定してください。|  
+|signInQueryString|WS-FEDERATION サインイン要求 URL でアプリケーション定義のクエリパラメーターを指定する機能拡張ポイントを提供します。 省略可能。 既定値は空の文字列です。これは、要求に追加のパラメーターを含める必要がないことを指定します。 パラメーターは、次の形式を使用してクエリ文字列フラグメントとして指定され `"param1=value1&param2=value2&param3=value3"` ます。 **注:** 構成ファイルでは、クエリ文字列の ' & ' 文字をエンティティ参照を使用して指定する必要があり `&` ます。|  
+|signOutQueryString|WS-FEDERATION サインイン要求 URL でアプリケーション定義のクエリパラメーターを指定する機能拡張ポイントを提供します。 省略可能。 既定値は空の文字列です。これは、要求に追加のパラメーターを含める必要がないことを指定します。 パラメーターは、次の形式を使用してクエリ文字列フラグメントとして指定され `"param1=value1&param2=value2&param3=value3"` ます。 **注:** 構成ファイルでは、クエリ文字列の ' & ' 文字をエンティティ参照を使用して指定する必要があり `&` ます。|  
+|signOutReply|WS-FEDERATION プロトコルを使用したパッシブサインアウト中に、クライアントが Security Token Service (STS) によってリダイレクトされる URL を指定します。 WS-FEDERATION サインアウト要求で wreply パラメーターを設定します。 省略可能。 既定値は空の文字列です。これは、要求に追加のパラメーターを含める必要がないことを指定します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|構成設定が含まれています、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。|  
+|[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfam) と (SAM) を構成する設定が含まれてい <xref:System.IdentityModel.Services.SessionAuthenticationModule> ます。|  
   
-## <a name="remarks"></a>Remarks  
- 使用することができます、 `<wsFederation>` WSFAM の Ws-federation パラメーターの既定の設定と既定の動作を構成する要素。 下で定義された Ws-federation パラメーターの設定、`<wsFederation>`要素によって公開されている同等のプロパティの設定、<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>クラス。 これらのプロパティでは、WSFAM によって発行されたすべての要求に対して同じままです。 要求; WSFAM によって公開されるイベントのイベント ハンドラーを追加することで処理中に、Ws-federation パラメーターを動的に変更することができます。たとえば、<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>イベント。 詳細については、ドキュメントを参照して、<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>クラス。  
+## <a name="remarks"></a>解説  
+ 要素を使用して、 `<wsFederation>` WSFAM の既定の ws-federation パラメーター設定と既定の動作を構成できます。 要素の下で定義された WS-FEDERATION パラメーター設定 `<wsFederation>` 。クラスによって公開される同等のプロパティを設定 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> します。 これらのプロパティは、WSFAM によって発行されたすべての要求で同じままです。 WSFAM によって公開されるイベントのイベントハンドラーを追加することで、要求の処理中に WS-FEDERATION パラメーターを動的に変更できます。たとえば、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> イベントです。 詳細については、クラスのドキュメントを参照してください <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 。  
   
- `<wsFederation>`要素が表される、<xref:System.IdentityModel.Services.Configuration.WSFederationElement>クラス。 構成オブジェクト自体がによって表される、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>クラス。 1 つ<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>インスタンスが設定されて、<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>経由でアクセスするオブジェクト、<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>プロパティ WSFAM の構成を提供するとします。  
+ `<wsFederation>`要素は、クラスによって表され <xref:System.IdentityModel.Services.Configuration.WSFederationElement> ます。 構成オブジェクト自体は、クラスによって表され <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> ます。 プロパティを <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 通じてアクセスされるオブジェクトに対して1つのインスタンスが設定され、 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> wsfam の構成が提供されます。  
   
 ## <a name="example"></a>例  
- 次の XML に示す、`<wsFederation>`要素 WSFAM の設定を指定します。  
+ 次の XML は、 `<wsFederation>` WSFAM の設定を指定する要素を示しています。  
   
 > [!WARNING]
->  この例で、WSFAM は HTTPS を使用する必要はありません。 これは、ため、`requireHttps`属性を`<wsFederation>`要素が設定されて`false`します。 ほとんどの運用環境には、セキュリティ リスクがあると、この設定はお勧めできません。  
+> この例では、WSFAM は HTTPS を使用する必要はありません。 これは、 `requireHttps` 要素の属性 `<wsFederation>` が設定されているためです `false` 。 ほとんどの運用環境では、セキュリティ上のリスクが生じる可能性があるため、この設定は推奨されません。  
   
 ```xml
-<wsFederation passiveRedirectEnabled="true"   
-              issuer="http://localhost:15839/wsFederationSTS/Issue"   
-              realm="http://localhost:50969/"   
-              reply="http://localhost:50969/"   
-              requireHttps="false"   
-              signOutReply="http://localhost:50969/SignedOutPage.html"   
-              signOutQueryString="Param1=value2&Param2=value2"   
+<wsFederation passiveRedirectEnabled="true"
+              issuer="http://localhost:15839/wsFederationSTS/Issue"
+              realm="http://localhost:50969/"
+              reply="http://localhost:50969/"
+              requireHttps="false"
+              signOutReply="http://localhost:50969/SignedOutPage.html"
+              signOutQueryString="Param1=value2&Param2=value2"
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   

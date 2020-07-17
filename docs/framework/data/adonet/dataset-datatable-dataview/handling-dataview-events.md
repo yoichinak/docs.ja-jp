@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151105"
 ---
 # <a name="handling-dataview-events"></a>DataView イベントの処理
-<xref:System.Data.DataView.ListChanged> の <xref:System.Data.DataView> イベントを使用して、ビューが更新されているかどうかを確認できます。 基になるテーブルの行の追加、削除、または変更や、このスキーマの列の追加または削除、親子のリレーションシップの変更など、これらの更新を行うとこのイベントが発生します。 **ListChanged**イベントも通知を表示している行のリストが新しい並べ替え順序またはフィルターの適用により大幅に変更された場合。  
+<xref:System.Data.DataView.ListChanged> の <xref:System.Data.DataView> イベントを使用して、ビューが更新されているかどうかを確認できます。 基になるテーブルの行の追加、削除、または変更や、このスキーマの列の追加または削除、親子のリレーションシップの変更など、これらの更新を行うとこのイベントが発生します。 さらに、現在表示されている行のリストが新しい並べ替え順序またはフィルターの適用により大幅に変更された場合、**ListChanged** イベントではそのことも通知されます。  
   
- **ListChanged**イベントを実装して、 **ListChangedEventHandler**の委任、<xref:System.ComponentModel>入力の名前空間ととして受け取り、<xref:System.ComponentModel.ListChangedEventArgs>オブジェクト。 使用してどのような種類の変更が発生したかを判断できます、<xref:System.ComponentModel.ListChangedType>列挙値、 **ListChangedType**のプロパティ、 **ListChangedEventArgs**オブジェクト。 ための追加に関連する変更、削除、または行を移動の追加または削除された行の新しいインデックスと削除された行の前のインデックスにアクセスできますを使用して、 **NewIndex**のプロパティ、 **ListChangedEventArgs**オブジェクト。 移動された行の場合、移動された行の古いインデックス アクセスできるを使用して、 **OldIndex**のプロパティ、 **ListChangedEventArgs**オブジェクト。  
+ **ListChanged** イベントは、<xref:System.ComponentModel> 名前空間の **ListChangedEventHandler** デリゲートを実装し、<xref:System.ComponentModel.ListChangedEventArgs> オブジェクトを入力として受け取ります。 発生した変更の内容を確認するには、**ListChangedEventArgs** オブジェクトの **ListChangedType** プロパティの <xref:System.ComponentModel.ListChangedType> 列挙値を使用します。 行の追加、削除、または移動による変更の場合、追加された行または移動された行の新しいインデックスと削除された行の古いインデックスには、**ListChangedEventArgs** オブジェクトの **NewIndex** プロパティを使用してアクセスできます。 移動された行の場合、移動前の古いインデックスにアクセスするには **ListChangedEventArgs** オブジェクトの **OldIndex** プロパティを使用します。  
   
- **DataViewManager**も公開、 **ListChanged**テーブルが追加または削除された場合、またはに変更が行われている場合に通知するイベント、**リレーション**のコレクション、基になる**データセット**します。  
+ **DataViewManager** では、さらにテーブルが追加または削除された場合に、または基になる **DataSet** の **Relations** コレクションが変更された場合に、そのことを通知するために **ListChanged** イベントが公開されます。  
   
- 次のコード例は、追加する方法を示します、 **ListChanged**イベント ハンドラー。  
+ **ListChanged** イベント ハンドラーを追加する方法のコード例を次に示します。  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -38,10 +38,10 @@ End Sub
 ```  
   
 ```csharp  
-custView.ListChanged  += new   
+custView.ListChanged  += new
   System.ComponentModel.ListChangedEventHandler(OnListChanged);  
   
-protected static void OnListChanged(object sender,   
+protected static void OnListChanged(object sender,
   System.ComponentModel.ListChangedEventArgs args)  
 {  
   Console.WriteLine("ListChanged:");  
@@ -55,5 +55,5 @@ protected static void OnListChanged(object sender,
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET の概要](../ado-net-overview.md)

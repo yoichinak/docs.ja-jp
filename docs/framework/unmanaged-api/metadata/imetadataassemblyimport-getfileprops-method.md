@@ -15,63 +15,61 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760145"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007482"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps メソッド
-指定したメタデータ シグネチャを持つファイルのプロパティを取得します。  
+指定したメタデータシグネチャを持つファイルのプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetFileProps (  
-    [in]  mdFile      mdf,   
-    [out] LPWSTR      szName,   
-    [in]  ULONG       cchName,   
-    [out] ULONG       *pchName,   
-    [out] const void  **ppbHashValue,   
-    [out] ULONG       *pcbHashValue,   
+    [in]  mdFile      mdf,
+    [out] LPWSTR      szName,
+    [in]  ULONG       cchName,
+    [out] ULONG       *pchName,
+    [out] const void  **ppbHashValue,
+    [out] ULONG       *pcbHashValue,
     [out] DWORD       *pdwFileFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `mdf`  
- [in]`mdFile`プロパティを取得する対象のファイルを表すメタデータ トークン。  
+ から`mdFile`プロパティを取得する対象のファイルを表すメタデータトークン。  
   
  `szName`  
- [out]ファイルの簡易名。  
+ 入出力ファイルの簡易名。  
   
  `cchName`  
- [in]ワイド文字単位のサイズの`szName`します。  
+ からのサイズ (ワイド文字数) `szName` 。  
   
  `pchName`  
- [out]実際に返されるワイド文字数`szName`します。  
+ 入出力実際にで返されるワイド文字数 `szName` 。  
   
  `ppbHashValue`  
- [out]ハッシュ値へのポインター。 これは、ファイルの sha-1 アルゴリズムを使用して、ハッシュです。  
+ 入出力ハッシュ値へのポインター。 これは、ファイルの SHA-1 アルゴリズムを使用したハッシュです。  
   
  `pcbHashValue`  
- [out]返されたハッシュ値のワイド文字の数。  
+ 入出力返されたハッシュ値のワイド文字の数。  
   
  `pdwFileFlags`  
- [out]ファイルに適用されるメタデータを記述するフラグへのポインター。 フラグの値は、1 つ以上の組み合わせ[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値。  
+ 入出力ファイルに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の[Corfileflags](corfileflags-enumeration.md)値を組み合わせたものです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)

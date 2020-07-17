@@ -14,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7037065be138c369b847e7f86de7b46fc5ae601a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773885"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616880"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 構造体
-イベントに関連付けられている現在の例外のイベントと、パラメーターの型名を格納します。  
+イベントの型名と、イベントに関連付けられている現在の例外のパラメーターを格納します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef struct _BucketParameters {  
-    BOOL  fInited;                    
-    WCHAR pszEventTypeName[255];      
-    WCHAR pszParams[10][255];         
+    BOOL  fInited;
+    WCHAR pszEventTypeName[255];
+    WCHAR pszParams[10][255];
 } BucketParameters;  
 ```  
   
@@ -40,17 +38,17 @@ typedef struct _BucketParameters {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`fInited`|`true`、この構造体の残りの部分が有効な場合それ以外の場合、`false`します。|  
-|`pszEventTypeName`|イベントの種類の名前です。|  
-|`pszParams`|文字列の配列、各イベントに関連付けられている現在の例外のパラメーターを指定します。|  
+|`fInited`|`true`この構造体の残りの部分が有効な場合は。それ以外の場合は `false` 。|  
+|`pszEventTypeName`|イベントの種類の名前。|  
+|`pszParams`|文字列の配列。各文字列は、イベントに関連付けられている現在の例外のパラメーターを指定します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [ホスト構造体](hosting-structures.md)

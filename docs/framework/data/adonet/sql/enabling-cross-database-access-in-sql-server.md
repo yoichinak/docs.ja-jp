@@ -2,12 +2,12 @@
 title: SQL Server での複数データベースにまたがるアクセスの有効化
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: MT
+ms.openlocfilehash: bf46d43f5ac9b0a385e9bc6da1546af1d67a282d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490085"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040245"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server での複数データベースにまたがるアクセスの有効化
 複数データベースの組み合わせ所有権は、あるデータベースのプロシージャが、別のデータベースのオブジェクトに依存している場合に作用します。 複数データベースの組み合わせ所有権は、単一データベースの組み合わせ所有権とほぼ同じように機能しますが、所有権の連鎖性を保つために、すべてのオブジェクトの所有者が同じログイン アカウントにマップされていることが必要です。 ソース データベース内のソース オブジェクトおよびターゲット データベース内のターゲット オブジェクトが同じログイン アカウントによって所有されている場合、ターゲット オブジェクトに対する権限は SQL Server によってチェックされません。  
@@ -26,7 +26,7 @@ ms.locfileid: "66490085"
   
  次のサンプルでは、すべてのデータベースに対して複数データベースの組み合わせ所有権を有効にします。  
   
-```  
+```sql
 EXECUTE sp_configure 'show advanced', 1;  
 RECONFIGURE;  
 EXECUTE sp_configure 'cross db ownership chaining', 1;  
@@ -35,7 +35,7 @@ RECONFIGURE;
   
  次のサンプルでは、特定のデータベースに対して複数データベースの組み合わせ所有権を有効にします。  
   
-```  
+```sql
 ALTER DATABASE Database1 SET DB_CHAINING ON;  
 ALTER DATABASE Database2 SET DB_CHAINING ON;  
 ```  
@@ -48,13 +48,13 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[EXECUTE AS の使用によるデータベースの権限借用の拡張](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))と[Cross DB Ownership Chaining オプション](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)します。|記事では、複数データベースの SQL Server のインスタンスの組み合わせ所有権を構成する方法について説明します。|  
+|「[EXECUTE AS の使用によるデータベースの権限借用の拡張](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))」および「[cross db ownership chaining サーバー構成オプション](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)」。|SQL Server のインスタンスに対して、複数データベースの組み合わせ所有権を構成する方法が説明されています。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [SQL Server での安全な動的 SQL の作成](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server セキュリティの概要](overview-of-sql-server-security.md)
+- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server での安全な動的 SQL の作成](writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server でのストアド プロシージャの署名](signing-stored-procedures-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

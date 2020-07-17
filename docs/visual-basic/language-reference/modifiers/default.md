@@ -1,5 +1,5 @@
 ---
-title: Default (Visual Basic)
+title: Default
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0c2808795d6fcbad7892369fd7f460ebf0406093
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800933"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372973"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 クラス、構造体、またはインターフェイスの既定のプロパティとしてプロパティを識別します。  
   
 ## <a name="remarks"></a>Remarks  
- クラス、構造体、またはインターフェイスは多くて 1 つとしてのプロパティで指定できます、*プロパティの既定*、そのプロパティは、少なくとも 1 つのパラメーターを受け取ります。 コードでは、クラスまたは構造体への参照をメンバーを指定しなくても、Visual Basic は、既定のプロパティには、その参照を解決します。  
+ プロパティが少なくとも 1 つのパラメーターを受け取る場合、クラス、構造体、またはインターフェイスは、そのプロパティの 1 つだけを*既定のプロパティ*として指定できます。 コードがメンバーを指定せずにクラスまたは構造体を参照する場合、Visual Basic はその参照を既定のプロパティに解決します。  
   
- 既定のプロパティは、ソース コードの文字のわずかな低下につながるが行えるように、コードが読みにくくします。 クラスまたは構造体名への参照を行うときに、呼び出し元のコードがクラスまたは構造に習熟していない場合にすることはできません特定その参照が、クラスまたは構造体自体、または既定のプロパティにアクセスするかどうか。 これについては、コンパイラ エラーまたはランタイム ロジックの微妙なエラーにつながります。  
+ 既定のプロパティを使用すると、ソース コード文字が少し少なくなる可能性がありますが、コードが読みにくくなる可能性があります。 呼び出し元のコードがクラスまたは構造体をよく理解していない場合は、クラスまたは構造体の名前を参照するときに、その参照がクラスまたは構造体自体、または既定のプロパティにアクセスするかどうかがわかりません。 これにより、コンパイラ エラーや実行時の微妙なロジック エラーが発生する可能性があります。  
   
- 常を使用して既定のプロパティのエラーの可能性を低くことができますやや、 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)コンパイラ型チェックを設定する`On`します。  
+ 常に [Option Strict ステートメント](../statements/option-strict-statement.md)を使用してコンパイラの型チェックを `On` に設定することにより、既定のプロパティ エラーが発生する可能性を多少減らすことができます。  
   
- 使用して、定義済みのクラスまたは構造体コードで判断する必要があります、既定のプロパティがあるかどうかであればしようとしている場合、名前は。  
+ 定義済みのクラスまたは構造体をコード内で使用する予定の場合は、既定のプロパティがあるかどうかと、ある場合はその名前を確認する必要があります。  
   
- このような短所のためには、既定のプロパティを定義しないを検討してください。 コードを読みやすくは必要がありますも常に明示的に参照するすべてのプロパティを検討してくださいも既定のプロパティ。  
+ これらの欠点があるため、既定のプロパティを定義しないことを検討してください。 コードを読みやすくするためには、既定のプロパティを含め、常にすべてのプロパティを明示的に参照することも検討してください。  
   
- `Default`修飾子は、このコンテキストで使用できます。  
+ `Default` 修飾子は、次のコンテキストで使用できます。  
   
- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property ステートメント](../statements/property-statement.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [方法: 既定のプロパティを宣言して呼び出す (Visual Basic)](../../programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [キーワード](../keywords/index.md)

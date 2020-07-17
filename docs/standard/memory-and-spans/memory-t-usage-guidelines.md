@@ -1,21 +1,20 @@
 ---
 title: Memory<T> と Span<T> の使用ガイドライン
+description: この記事では、Memory<T> および Span<T> について説明します。これらは、.NET Core の構造化データのバッファーであり、パイプラインで使用できます。
 ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834042"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245597"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
-.NET Core には、任意の連続したメモリ領域を表す多くの型があります。 .NET Core 2.0 では <xref:System.Span%601> と <xref:System.ReadOnlySpan%601> が導入されました。これらはマネージド メモリまたはアンマネージド メモリでサポートできる軽量のメモリ バッファーです。 このような型はスタックに格納できるため、非同期メソッドの呼び出しを含む多くのシナリオには適していません。 .NET Core 2.1 では、<xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>、<xref:System.Buffers.MemoryPool%601> など、さらに多くの型が追加されています。 <xref:System.Span%601> と同様に、<xref:System.Memory%601> とそれに関連する型は、マネージド メモリとアンマネージド メモリの両方でサポートできます。 <xref:System.Span%601> とは異なり、<xref:System.Memory%601> はマネージド ヒープにのみ格納できます。
+.NET Core には、任意の連続したメモリ領域を表す多くの型があります。 .NET Core 2.0 では <xref:System.Span%601> と <xref:System.ReadOnlySpan%601> が導入されました。これらはマネージド メモリまたはアンマネージド メモリでサポートできる軽量のメモリ バッファーです。 このような型はスタック上にのみ格納できるため、非同期メソッドの呼び出しを含む多くのシナリオには適していません。 .NET Core 2.1 では、<xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>、<xref:System.Buffers.MemoryPool%601> など、さらに多くの型が追加されています。 <xref:System.Span%601> と同様に、<xref:System.Memory%601> とそれに関連する型は、マネージド メモリとアンマネージド メモリの両方でサポートできます。 <xref:System.Span%601> とは異なり、<xref:System.Memory%601> はマネージド ヒープ上に格納できます。
 
 <xref:System.Span%601> と <xref:System.Memory%601> は、どちらもパイプラインで使用できる構造化データのバッファーです。 つまり、データの一部または全部をパイプライン内のコンポーネントに効率的に渡すことができるように設計されています。そのため、データを処理し、必要に応じてバッファーを変更できます。 <xref:System.Memory%601> とその関連する型には、複数のコンポーネントまたは複数のスレッドからアクセスできるため、開発者が標準的な使用ガイドラインに従って堅牢なコードを作成することが重要です。
 
@@ -25,7 +24,7 @@ ms.locfileid: "66834042"
 
 - **所有権**。 バッファー インスタンスの所有者は、バッファーが使用されなくなったときにバッファーを破棄することを含め、有効期間の管理を担当します。 すべてのバッファーの所有者は 1 つです。 通常、所有者とは、バッファーを作成したコンポーネント、またはファクトリーからバッファーを受け取ったコンポーネントです。 所有権は譲渡することもできます。**コンポーネント A** はバッファーの制御を**コンポーネント B** に譲渡することができます。その時点で**コンポーネント A** はバッファーを使用できなくなり、**コンポーネント B** が、使用されなくなったバッファーの破棄を担当します。
 
-- **消費**。 バッファー インスタンスのコンシューマーは、読み取り、場合によっては書き込みでバッファー インスタンスを使用できます。 何らかの外部の同期メカニズムが提供されていない限り、バッファーは同時に持つことができるコンシューマーは 1 つです。 バッファーのアクティブなコンシューマーは必ずしもバッファーの所有者ではない点に注意してください。
+- **消費**。 バッファー インスタンスのコンシューマーは、読み取り、場合によっては書き込みでバッファー インスタンスを使用できます。 何らかの外部の同期メカニズムが提供されていない限り、バッファーは同時に持つことができるコンシューマーは 1 つです。 バッファーのアクティブなコンシューマーは必ずしもバッファーの所有者ではありません。
 
 - **リース**。 リースは、特定のコンポーネントがバッファーの消費者になることができる時間の長さです。
 
@@ -66,7 +65,7 @@ class Program
 
 メソッド呼び出しの開始からメソッドから返されるまでの間に、`WriteInt32ToBuffer` メソッドはバッファー上にリースを持ちます (消費することができます)。 同様に、`DisplayBufferToConsole` は実行中にバッファー上にリースを持ち、メソッドがアンワインドするとリースは解放されます (リース管理のための API はありません。"リース" は概念的なものです)。
 
-## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T> と所有者/コンシューマー モデル
+## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T> と所有者またはコンシューマー モデル
 
 「[所有者、コンシューマー、有効期間管理](#owners-consumers-and-lifetime-management)」セクションで説明したように、バッファーには常に所有者がいます。 .NET Core は 2 つの所有権モデルをサポートしています。
 
@@ -78,7 +77,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-この例を [`using`](~/docs/csharp/language-reference/keywords/using-statement.md) と記述することもできます。
+この例を [`using`](../../csharp/language-reference/keywords/using-statement.md) と記述することもできます。
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -90,7 +89,7 @@ class Program
 
 `WriteInt32ToBuffer` メソッドはバッファーに値を書き込むことが意図されていますが、`DisplayBufferToConsole` メソッドではそうではありません。 これを反映するために、型 <xref:System.ReadOnlyMemory%601> の引数を受け入れておくことができます。 <xref:System.ReadOnlyMemory%601> の詳細については、「[規則 2:バッファーを読み取り専用にする場合は ReadOnlySpan\<T> または ReadOnlyMemory\<T> を使用する](#rule-2)」を参照してください。
 
-### <a name="ownerless-memoryt-instances"></a>"所有者なしの" Memory\<T> インスタンス
+### <a name="ownerless-memoryt-instances"></a>"所有者なし" の Memory\<T> インスタンス
 
 <xref:System.Buffers.IMemoryOwner%601> を使用せずに <xref:System.Memory%601> インスタンスを作成できます。 この場合、バッファーの所有権は明示的ではなく暗黙的であり、単一の所有者モデルのみがサポートされます。 これは次の方法で実行できます。
 
@@ -122,7 +121,7 @@ class Program
 
 完全に同期していても、<xref:System.Span%601> パラメーターではなく <xref:System.Memory%601> パラメーターの使用が必要な場合があります。 おそらく、利用している API は <xref:System.Memory%601> 引数のみを受け入れます。 これは問題ありませんが、<xref:System.Memory%601> を同期的に使用するときに伴うトレードオフに注意してください。
 
-<a name="rule-2" />
+<a name="rule-2"></a>
 
 **規則 2:バッファーを読み取り専用にする場合は ReadOnlySpan\<T> または ReadOnlyMemory\<T> を使用する。**
 
@@ -138,7 +137,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` メソッドは、考えられるほぼすべてのバッファー型 (`T[]`、[stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) で割り当てられたストレージなど) で動作します。 <xref:System.String> を直接渡すこともできます。
+`DisplayBufferToConsole` メソッドは、考えられるほぼすべてのバッファー型 (`T[]`、[stackalloc](../../csharp/language-reference/operators/stackalloc.md) で割り当てられたストレージなど) で動作します。 <xref:System.String> を直接渡すこともできます。
 
 **規則 3:メソッドが Memory\<T> を受け入れて `void` を返した場合、メソッドが返した後に Memory\<T> インスタンスを使用してはならない。**
 
@@ -246,7 +245,7 @@ class Person
 
 **規則 9:同期的 p/invoke メソッドをラップしている場合、API は Span\<T> をパラメーターとして受け入れる必要がある。**
 
-規則 1 に従うと、<xref:System.Span%601> は一般に同期的 API に使用するために適した型です。 次の例のように、[`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) キーワードを介して <xref:System.Span%601> インスタンスを固定できます。
+規則 1 に従うと、<xref:System.Span%601> は一般に同期的 API に使用するために適した型です。 次の例のように、[`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) キーワードを介して <xref:System.Span%601> インスタンスを固定できます。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +285,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **規則 10:同期的 p/invoke メソッドをラップしている場合、API は Memory\<T> をパラメーターとして受け入れる必要がある。**
 
-非同期操作で [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) キーワードは使用できないので、インスタンスが表す連続するメモリの種類に関係なく、<xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Memory%601> インスタンスを固定します。 次の例は、この API を使用して非同期の p/invoke 呼び出しを実行する方法を示しています。
+非同期操作で [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) キーワードは使用できないので、インスタンスが表す連続するメモリの種類に関係なく、<xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Memory%601> インスタンスを固定します。 次の例は、この API を使用して非同期の p/invoke 呼び出しを実行する方法を示しています。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -338,7 +337,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

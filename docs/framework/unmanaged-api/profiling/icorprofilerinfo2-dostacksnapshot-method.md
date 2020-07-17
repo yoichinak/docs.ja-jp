@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 102349461456f971a2fdeaf2783630c1b88dbd6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9a7142de01d818390b740a795f70a4606952780
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778629"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497375"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot メソッド
-指定されたスレッドのスタックでマネージド フレームをについて説明し、コールバックを通じてプロファイラーに情報を送信します。  
+指定したスレッドのスタック上のマネージフレームをウォークし、コールバックを介してプロファイラーに情報を送信します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,74 +39,74 @@ HRESULT DoStackSnapshot(
   
 ## <a name="parameters"></a>パラメーター  
  `thread`  
- [in]対象のスレッドの ID。  
+ からターゲットスレッドの ID。  
   
- Null を渡す`thread`現在のスレッドのスナップショットが生成されます。 場合、`ThreadID`の別のスレッドが渡される、共通言語ランタイム (CLR) スレッドを中断します、スナップショットの実行が再開されます。  
+ に null を渡すと `thread` 、現在のスレッドのスナップショットが生成されます。 `ThreadID`別のスレッドのが渡された場合、共通言語ランタイム (CLR) はそのスレッドを中断し、スナップショットを実行して、再開します。  
   
  `callback`  
- [in]実装へのポインター、 [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)メソッドで、各マネージ フレームとフレームの非管理対象の各実行に関する情報をプロファイラーを提供する、CLR によって呼び出されます。  
+ から[Stacksnapshotcallback](stacksnapshotcallback-function.md)メソッドの実装へのポインター。プロファイラーは、各マネージフレームと、アンマネージフレームの各実行に関する情報を提供するために、CLR によって呼び出されます。  
   
- `StackSnapshotCallback`メソッド プロファイラー ライターによって実装されます。  
+ メソッドは、 `StackSnapshotCallback` プロファイラーライターによって実装されます。  
   
  `infoFlags`  
- [in]値、 [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md)によって各フレームを渡されるデータの量を指定する列挙体`StackSnapshotCallback`します。  
+ からによって各フレームに返されるデータ量を指定する[COR_PRF_SNAPSHOT_INFO](cor-prf-snapshot-info-enumeration.md)列挙体の値 `StackSnapshotCallback` 。  
   
  `clientData`  
- [in]直接渡されるクライアントのデータへのポインター、`StackSnapshotCallback`コールバック関数。  
+ からクライアントデータへのポインター。これは、コールバック関数に直接渡され `StackSnapshotCallback` ます。  
   
  `context`  
- [in]Win32 へのポインター`CONTEXT`構造体は、スタック ウォークをシードするために使用します。 Win32`CONTEXT`構造は、CPU レジスタの値が含まれています、特定の時点で、CPU の状態を表します。  
+ からスタックウォークをシード処理するために使用される Win32 構造体へのポインター `CONTEXT` 。 Win32 構造体には、 `CONTEXT` cpu レジスタの値が含まれており、特定の時点における cpu の状態を表します。  
   
- シードにより、CLR がスタックの先頭がアンマネージ ヘルパー コードの場合、スタック ウォークを開始する場所を決定します。それ以外の場合、シードは無視されます。 非同期のウォークのシードを指定する必要があります。 同期のウォークを実行している場合、シードの必要はありません。  
+ スタックの最上位がアンマネージヘルパーコードの場合、このシードを使用すると、CLR はスタックウォークの開始位置を決定できます。それ以外の場合、シードは無視されます。 非同期ウォークにはシードを指定する必要があります。 同期ウォークを実行する場合、シードは必要ありません。  
   
- `context`パラメーターは COR_PRF_SNAPSHOT_CONTEXT フラグが渡された場合にのみ有効ですが、`infoFlags`パラメーター。  
+ パラメーターは、 `context` パラメーターで COR_PRF_SNAPSHOT_CONTEXT フラグが渡された場合にのみ有効です `infoFlags` 。  
   
  `contextSize`  
- [in]サイズ、`CONTEXT`によって参照されている構造体、`context`パラメーター。  
+ から`CONTEXT`パラメーターによって参照される構造体のサイズ `context` 。  
   
-## <a name="remarks"></a>Remarks  
- Null を渡す`thread`現在のスレッドのスナップショットが生成されます。 時に対象のスレッドが中断されている場合にのみ、他のスレッドのスナップショットを作成できます。  
+## <a name="remarks"></a>解説  
+ に null を渡す `thread` と、現在のスレッドのスナップショットが生成されます。 スナップショットは、その時点でターゲットスレッドが中断されている場合にのみ、他のスレッドで取得できます。  
   
- プロファイラーは、スタック ウォークが、ときに呼び出す`DoStackSnapshot`します。 CLR がその呼び出しから戻る前に呼び出し、`StackSnapshotCallback`を複数回 1 回ごとに管理されているフレーム (または非管理対象のフレームの実行)、スタックにします。 非管理対象のフレームが発生したときを自分でに説明する必要があります。  
+ プロファイラーがスタックをウォークする場合は、を呼び出し `DoStackSnapshot` ます。 その呼び出しから CLR が戻る前に、 `StackSnapshotCallback` スタック上のマネージフレーム (またはアンマネージフレームの実行) ごとに、を複数回呼び出します。 アンマネージフレームが検出されたら、それらを自分で調べる必要があります。  
   
- スタックが走査され、順序が逆の方法、フレームがスタックにプッシュされた: 最後 (最後にプッシュされた) 最初に、メイン (最初にプッシュされた) フレームをリーフします。  
+ スタックがウォークされる順序は、フレームがスタックにプッシュされた方法と逆になります。リーフ (最後にプッシュされた) フレームは、最初にメイン (最初にプッシュされた) フレームに最後に配置されます。  
   
- プロファイラーでマネージ スタックをプログラムする方法の詳細については、次を参照してください。 [、.NET Framework 2.0 における Profiler スタック ウォーク。基本、そしてその向こう](https://go.microsoft.com/fwlink/?LinkId=73638)します。  
+ プロファイラーをプログラミングしてマネージスタックをウォークする方法の詳細については、「 [.NET Framework 2.0: 基本およびそれ以降のプロファイラースタックウォーク](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))」を参照してください。  
   
- スタック ウォークには、次のセクションで説明するよう同期または非同期でを指定できます。  
+ 次のセクションで説明するように、スタックウォークは同期または非同期にすることができます。  
   
-## <a name="synchronous-stack-walk"></a>同期スタック ウォーク  
- 同期スタック ウォークは、コールバックへの応答で、現在のスレッドのスタックをウォークします。 シード処理または中断は必要ありません。  
+## <a name="synchronous-stack-walk"></a>同期スタックウォーク  
+ 同期スタックウォークでは、コールバックへの応答として現在のスレッドのスタックを調べる必要があります。 シード処理や中断を必要としません。  
   
- 同期を行うときに、プロファイラーのいずれかを呼び出して、CLR への応答を呼び出す[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (または[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) メソッドを呼び出す`DoStackSnapshot`のスタック ウォーク、現在のスレッド。 これは、スタックがどのように通知でなどを表示する場合に便利です[icorprofilercallback::objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)します。 呼び出すだけで`DoStackSnapshot`内から、`ICorProfilerCallback`で null を渡す場合、メソッド、`context`と`thread`パラメーター。  
+ プロファイラーの[ICorProfilerCallback](icorprofilercallback-interface.md) (または[ICorProfilerCallback2](icorprofilercallback2-interface.md)) メソッドのいずれかを呼び出す CLR に応答してを呼び出す場合は、を呼び出して、 `DoStackSnapshot` 現在のスレッドのスタックをウォークします。 これは、 [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)などの通知でスタックがどのように見えるかを確認する場合に便利です。 メソッド内からを呼び出すだけで `DoStackSnapshot` `ICorProfilerCallback` 、パラメーターとパラメーターで null を渡すことができ `context` `thread` ます。  
   
-## <a name="asynchronous-stack-walk"></a>非同期のスタック ウォーク  
- 別のスレッドのスタックや、応答が現在のスレッドの命令ポインターをハイジャックして、コールバックではなく、現在のスレッドのスタックをウォーク、非同期のスタック ウォークする必要があります。 非同期のチュートリアルでは、アンマネージ コード、プラットフォームの一部でない場合は、スタックの一番上のシードの呼び出し (PInvoke) が必要です、COM の呼び出しでも CLR 自体でヘルパー コード。 たとえば、ジャストイン タイム (JIT) コンパイルやガベージ コレクションを実行するコードは、ヘルパー コードです。  
+## <a name="asynchronous-stack-walk"></a>非同期スタックウォーク  
+ 非同期スタックウォークでは、別のスレッドのスタックを調べたり、コールバックに応答せずに現在のスレッドの命令ポインターをハイジャックしたりして、現在のスレッドのスタックを調べます。 スタックの最上位が、プラットフォーム呼び出し (PInvoke) または COM 呼び出しの一部ではなく、CLR 自体のヘルパーコードであるアンマネージコードである場合、非同期ウォークにはシードが必要です。 たとえば、ジャストインタイム (JIT) コンパイルまたはガベージコレクションを実行するコードは、ヘルパーコードです。  
   
- 直接対象のスレッドを中断することによって、シードを取得し、自分で、最上位に表示されるまでにマネージ フレーム スタックを走査します。 対象のスレッドが中断された後は、対象のスレッドの現在のレジスタのコンテキストを取得します。 次に、呼び出すことでレジスタのコンテキストがアンマネージ コードを指すかどうかを決定[icorprofilerinfo::getfunctionfromip](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) -返された場合、 `FunctionID` 0 に等しい、フレームがアンマネージ コード。 最初のマネージ フレームに到達し、そのフレームのレジスタのコンテキストに基づき、シードのコンテキストを計算するまで、スタックについて説明します。  
+ 最上位のマネージフレームが見つかるまで、ターゲットスレッドを直接中断し、自分でスタックを調査することで、シードを取得します。 ターゲットスレッドが中断された後、ターゲットスレッドの現在のレジスタコンテキストを取得します。 次に、 [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md)を呼び出すことによって、登録コンテキストがアンマネージコードを指しているかどうかを確認します。0と等しいを返す場合 `FunctionID` 、フレームはアンマネージコードです。 次に、最初のマネージフレームに達するまでスタックをウォークし、そのフレームのレジスタコンテキストに基づいてシードコンテキストを計算します。  
   
- 呼び出す`DoStackSnapshot`非同期スタック ウォークを開始する、シードのコンテキストを使用します。 シードを指定しない場合`DoStackSnapshot`スタックの上部にあるマネージ フレームをスキップする場合があり、その結果は、スタック ウォークが不完全です。 シードを指定した場合は、JIT コンパイルまたはネイティブ イメージ ジェネレーター (Ngen.exe) を指している必要があります-生成されたコードです。それ以外の場合、 `DoStackSnapshot` CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX エラー コードを返します。  
+ `DoStackSnapshot`シードコンテキストでを呼び出して、非同期スタックウォークを開始します。 シードを指定しないと、では `DoStackSnapshot` スタックの一番上にあるマネージフレームがスキップされ、その結果、不完全なスタックウォークが発生します。 シードを指定する場合は、JIT コンパイルまたはネイティブイメージジェネレーター (Ngen.exe) で生成されたコードをポイントする必要があります。それ以外の場合は、 `DoStackSnapshot` エラーコード CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX を返します。  
   
- 非同期のスタック ウォークを簡単にデッドロックが発生するか、アクセス違反が次のガイドラインに従わない場合、します。  
+ 非同期スタックウォークは、次のガイドラインに従っている場合を除き、デッドロックまたはアクセス違反を簡単に引き起こすことができます。  
   
-- 直接のスレッドを中断する場合は、マネージ コードを実行しないが、スレッドが別のスレッドを中断できますを注意してください。  
+- スレッドを直接中断する場合は、マネージコードを実行していないスレッドだけが別のスレッドを中断できることに注意してください。  
   
-- 常にブロック、 [icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)スレッドのスタック ウォークが完了するまでのコールバック。  
+- [ICorProfilerCallback:: ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md)コールバックは、そのスレッドのスタックウォークが完了するまで常にブロックします。  
   
-- プロファイラーがガベージ コレクションをトリガーできる CLR 関数を呼び出すときに、ロックを保持しないでください。 つまり、所有元のスレッドがガベージ コレクションをトリガーする呼び出しを行う場合、ロックを保持しないでください。  
+- プロファイラーがガベージコレクションをトリガーできる CLR 関数を呼び出している間は、ロックを保持しないでください。 つまり、所有スレッドがガベージコレクションをトリガーする呼び出しを行う場合は、ロックを保持しません。  
   
- またがデッドロックの危険性を呼び出す場合`DoStackSnapshot`プロファイラーが別のターゲット スレッドのスタックを学ぶことができるように作成したスレッドから。 最初に作成したスレッドが特定`ICorProfilerInfo*`メソッド (含む`DoStackSnapshot`)、CLR はスレッドごと、そのスレッドで CLR 固有の初期化を実行します。 プロファイラーには、スタック ウォーク、しようとして対象のスレッドが中断されている場合、およびその対象スレッドは、このスレッドごとの初期化を実行するために必要なロックを所有するが発生した場合は、デッドロックが発生します。 このデッドロックを回避することを最初の呼び出しに`DoStackSnapshot`からプロファイラーが作成したスレッドについて説明しますが、別が対象に、スレッドは、まず対象のスレッドを中断しないようにします。 この最初の呼び出しにより、スレッドごとの初期化がデッドロックなしで完了できます。 場合`DoStackSnapshot`が成功し、少なくとも 1 つのフレームを報告その後、対象のスレッドと呼び出しを中断するプロファイラーが作成したスレッドの安全ななります`DoStackSnapshot`ターゲット スレッドのスタック ウォークします。  
+ また、 `DoStackSnapshot` プロファイラーによって作成されたスレッドからを呼び出した場合に、別のターゲットスレッドのスタックを調べることができるように、デッドロックのリスクもあります。 最初に作成したスレッドが特定の `ICorProfilerInfo*` メソッド (を含む) を入力すると、clr はスレッド `DoStackSnapshot` ごとに clr 固有の初期化を実行します。 プロファイラーが、ウォークしようとしているスタックを持つターゲットスレッドを中断し、そのターゲットスレッドがこのスレッドごとの初期化を実行するために必要なロックを所有していた場合、デッドロックが発生します。 このデッドロックを回避するには、プロファイラーによっ `DoStackSnapshot` て作成されたスレッドからへの最初の呼び出しを行い、個別のターゲットスレッドをウォークしますが、先にターゲットスレッドを中断しないようにします。 この最初の呼び出しにより、スレッドごとの初期化がデッドロックなしで完了することが保証されます。 が `DoStackSnapshot` 成功し、少なくとも1つのフレームを報告した場合は、その時点以降に、プロファイラーによって作成されたスレッドは、任意のターゲットスレッドを中断し、を呼び出して `DoStackSnapshot` ターゲットスレッドのスタックをたどることができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](icorprofilerinfo2-interface.md)

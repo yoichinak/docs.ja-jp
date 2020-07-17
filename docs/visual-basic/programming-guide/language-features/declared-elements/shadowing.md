@@ -1,5 +1,5 @@
 ---
-title: Visual Basic におけるシャドウ
+title: シャドウ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -18,48 +18,48 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 7d76e2e7398c2f954ff4274f77ffa350efbd3617
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917908"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410748"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic におけるシャドウ
-2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 このような場合は、シャドウされた要素は参照できません。代わりに、コードでは、要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。  
+2 つのプログラミング要素が同じ名前を共有している場合、それらのうちの 1 つで他方を非表示にしたり、*シャドウ*したりすることができます。 このような状況では、シャドウされた要素を参照することはできません。代わりに、コードで要素名を使用すると、Visual Basic コンパイラによって、それがシャドウする要素に解決されます。  
   
 ## <a name="purpose"></a>目的  
- シャドウの主な目的、クラスのメンバーの定義を保護することです。 基底クラスには、既に定義されている 1 つとして同じ名前の要素を作成する変更を行うこともできます。 このような場合、`Shadows`するメンバーに解決するのには、クラスを通じて参照修飾子強制的に基本クラスの新しい要素の代わりに定義されました。  
+ シャドウの主な目的は、クラス メンバーの定義を保護することです。 基底クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、クラスによる参照が、新しい基底クラス要素ではなく定義したメンバーに強制的に解決されるようにします。  
   
 ## <a name="types-of-shadowing"></a>シャドウの種類  
- 要素は、2 つの方法で別の要素をシャドウすることができます。 要素はシャドウ ケースが実現されます、シャドウされた要素を含んでいるリージョンのサブ領域内で宣言できます*スコープによる*します。 派生クラスは、シャドウ ケースは、基底クラスのメンバーを再定義できますまたは*継承によって*します。  
+ 要素では、2 つの異なる方法で別の要素をシャドウできます。 シャドウする要素は、シャドウされる要素を含む領域のサブ領域内で宣言できます。この場合、シャドウは*スコープによって*実現されます。 または、派生クラスで、基底クラスのメンバーを再定義できます。この場合、シャドウは*継承によって*行われます。  
   
 ### <a name="shadowing-through-scope"></a>スコープによるシャドウ  
- プログラミング要素は、モジュール、クラスまたは構造体が同じ名前でスコープが異なることができます。 狭いスコープを持つ要素が他の要素をシャドウするこの方法で 2 つの要素が宣言されているし、コードが共有されている名前を指す、(ブロック スコープでは、最も狭い)。  
+ 同じモジュール、クラス、または構造体内のプログラミング要素で、同じ名前で、異なるスコープを持つことができます。 2 つの要素がこのように宣言されていて、コードでそれらが共有する名前を参照する場合、スコープが狭い方の要素によって、他方の要素がシャドウされます (ブロック スコープが最も狭い)。  
   
- たとえば、モジュールを定義できますを`Public`という名前の変数`temp`、モジュール内のプロシージャもという名前のローカル変数を宣言および`temp`。 参照`temp`プロシージャ内からへの参照中に、ローカル変数にアクセス`temp`から外部プロシージャへのアクセス、`Public`変数。 この場合、プロシージャの変数`temp`モジュール変数のシャドウ`temp`します。  
+ たとえば、モジュールで `temp` という名前の `Public` 変数を定義でき、モジュール内のプロシージャでも、`temp` という名前のローカル変数を宣言できます。 プロシージャ内から `temp` への参照ではローカル変数にアクセスしますが、プロシージャの外部から `temp` への参照では `Public` 変数にアクセスします。 この場合、プロシージャ変数 `temp` によって、モジュール変数 `temp` がシャドウされます。  
   
- 次の図は、2 つの変数、という名前の両方に`temp`します。 ローカル変数`temp`メンバー変数のシャドウ`temp`独自のプロシージャ内からアクセスするときに`p`します。 ただし、`MyClass`キーワードは、シャドウをバイパスし、メンバー変数にアクセスします。  
+ 次の図は、どちらも `temp` という名前の 2 つの変数を示します。 ローカル変数 `temp` は、それ自身のプロシージャ `p` 内からアクセスされるときに、メンバー変数 `temp` をシャドウします。 ただし、`MyClass` キーワードによって、シャドウをバイパスし、メンバー変数にアクセスできます。  
   
- ![スコープによるシャドウを示しています。 グラフィック。](./media/shadowing/shadow-scope-diagram.gif)
+ ![スコープによるシャドウを示すグラフィック。](./media/shadowing/shadow-scope-diagram.gif)
   
- スコープによるシャドウの例は、次を参照してください。[方法。変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)します。  
+ スコープによるシャドウの例については、「[方法:自分で宣言した変数と同じ名前の変数を隠す](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)」を参照してください。  
   
 ### <a name="shadowing-through-inheritance"></a>継承によるシャドウ  
- 派生クラスでは、基本クラスから継承されたプログラミング要素を再定義を再定義する要素は、元の要素をシャドウします。 その他の種類では、任意の種類の宣言された要素は、または一連のオーバー ロードされた要素をシャドウできます。 たとえば、`Integer`シャドウする変数を`Function`プロシージャ。 別のプロシージャでプロシージャをシャドウする場合は、別のパラメーター リストと異なる戻り値の型を使用できます。  
+ 派生クラスで、基底クラスから継承されたプログラミング要素を再定義する場合、再定義する要素によって、元の要素がシャドウされます。 任意の型の宣言された要素、またはオーバーロードされた要素のセットを、他の型でシャドウできます。 たとえば、`Integer` 変数によって、`Function` プロシージャをシャドウできます。 別のプロシージャでプロシージャをシャドウする場合、別のパラメーター リストと別の戻り値の型を使用できます。  
   
- 次の図は、基本クラス`b`と派生クラス`d`から継承する`b`します。 基本クラスという名前のプロシージャを定義する`proc`と派生クラスは、同じ名前の別のプロシージャでシャドウします。 最初の`Call`シャドウ ステートメントにアクセスする`proc`派生クラスでします。 ただし、`MyBase`キーワードは、シャドウをバイパスし、基本クラスのシャドウされたプロシージャにアクセスします。  
+ 次の図は、基底クラス `b` と、`b` から継承する派生クラス `d` を示しています。 基底クラスで `proc` という名前のプロシージャを定義しており、派生クラスでは、同じ名前の別のプロシージャでそれをシャドウします。 最初の `Call` ステートメントで、派生クラスのシャドウする `proc` にアクセスしています。 ただし、`MyBase` キーワードによって、シャドウをバイパスし、基底クラスのシャドウされたプロシージャにアクセスしています。  
   
  ![継承によるシャドウのグラフィック ダイアグラム](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- 継承によるシャドウの例は、次を参照してください。[方法。変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)と[方法。継承された変数を非表示に](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)します。  
+ 継承によるシャドウの例については、「[方法:自分で宣言した変数と同じ名前の変数を隠す](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)」と「[方法:継承された変数を隠す](how-to-hide-an-inherited-variable.md)」を参照してください。  
   
 #### <a name="shadowing-and-access-level"></a>シャドウとアクセス レベル  
- シャドウの要素は常に、派生クラスを使用してコードからアクセス可能ではありません。 たとえば、宣言することがあります`Private`します。 このような場合は、シャドウ敗北は、コンパイラが同じ要素への参照を解決する場合がありますは行われません。 この要素は、最小の継承はステップ後方シャドウするクラスからアクセス可能な要素です。 シャドウされた要素が、プロシージャの場合は、解像度は同じ名前のパラメーターの一覧で最も近い利用可能なバージョンを型を返します。  
+ シャドウする要素には、常に派生クラスを使用して、コードからアクセスできるとは限りません。 たとえば、それが `Private` として宣言されているとします。 そのような場合、シャドウが無効化され、コンパイラによって、同じ要素への参照が、シャドウがなかった場合のように解決されます。 この要素は、シャドウするクラスからさかのぼって最も少ない派生ステップでアクセス可能な要素です。 シャドウされた要素がプロシージャの場合は、同じ名前、パラメーター リスト、および戻り値の型を持つ、最も近いアクセス可能なバージョンに解決されます。  
   
- 次の例では、3 つのクラスの継承階層を示します。 各クラスを定義、`Sub`プロシージャ`display`、し、各派生クラスの影、`display`基底クラスのプロシージャです。  
+ 次の例に、3 つのクラスの継承階層を示します。 各クラスで `Sub` プロシージャ`display` を定義し、各派生クラスで、その基底クラスの `display` プロシージャをシャドウしています。  
   
-```  
+```vb  
 Public Class firstClass  
     Public Sub display()  
         MsgBox("This is firstClass")  
@@ -92,25 +92,25 @@ Module callDisplay
 End Module  
 ```  
   
- 前の例では、派生クラスで`secondClass`shadows`display`で、`Private`プロシージャ。 ときにモジュール`callDisplay`呼び出し`display`で`secondClass`、呼び出し元のコードが範囲外です`secondClass`ため秘密にアクセスできない`display`プロシージャ。 シャドウは行われず、およびコンパイラが基底クラスへの参照を解決`display`プロシージャ。  
+ 前の例では、派生クラス `secondClass` で、`Private` プロシージャによって `display` をシャドウしています。 モジュール `callDisplay` で `secondClass` の `display` が呼び出されたときに、呼び出し元のコードは `secondClass` の外部にあるため、プライベートの `display` プロシージャにアクセスできません。 シャドウが無効化され、コンパイラによって、参照が基底クラスの `display` プロシージャに解決されます。  
   
- ただし、さらに、派生クラス`thirdClass`宣言`display`として`Public`ため、コードでは、`callDisplay`アクセスできます。  
+ ただし、さらに派生したクラス `thirdClass` では `display` を `Public` として宣言しているため、`callDisplay` のコードからアクセスできます。  
   
 ## <a name="shadowing-and-overriding"></a>シャドウとオーバーライド  
- シャドウとオーバーライドを混同しないでください。 どちらも、派生クラスは基底クラスから継承し、1 つの宣言された要素と他の再定義に使用されます。 2 つの重要な違いがあります。 比較については、次を参照してください。[の相違点の間でシャドウとオーバーライド](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)します。  
+ シャドウとオーバーライドを混同しないでください。 どちらも派生クラスが基底クラスから継承されるときに使用し、どちらも一方の宣言された要素を他方の要素で再定義します。 しかし、この 2 つには、大きな違いがあります。 比較については、「[シャドウとオーバーライドの違い](differences-between-shadowing-and-overriding.md)」を参照してください。  
   
-## <a name="shadowing-and-overloading"></a>シャドウとオーバー ロード  
- 派生クラスで 1 つ以上の要素と同じ基本クラスの要素をシャドウする場合は、その要素のオーバー ロードされたバージョンがシャドウする要素になります。 詳細については、「 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  
+## <a name="shadowing-and-overloading"></a>シャドウとオーバーロード  
+ 派生クラス内で、複数の要素で同じ基底クラス要素をシャドウする場合、シャドウする要素は、その要素のオーバーロードされたバージョンになります。 詳細については、「 [Procedure Overloading](../procedures/procedure-overloading.md)」を参照してください。  
   
 ## <a name="accessing-a-shadowed-element"></a>シャドウされた要素へのアクセス  
- 派生クラスから、要素にアクセスするときに通常の方法、派生クラスの現在のインスタンスを通じて、要素名で修飾して、`Me`キーワード。 修飾基本クラスの要素をアクセスするには、派生クラスが基底クラス内の要素をシャドウする場合、`MyBase`キーワード。  
+ 派生クラスから要素にアクセスする場合、通常、その派生クラスの現在のインスタンスから行いますが、要素名を `Me` キーワードで修飾します。 派生クラスで基底クラスの要素をシャドウする場合は、`MyBase` キーワードで修飾することで、基底クラスの要素にアクセスできます。  
   
- シャドウされた要素へのアクセスの例は、次を参照してください。[方法。変数にアクセスする派生クラスによって非表示に](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)します。  
+ シャドウされた要素にアクセスする例については、「[方法:派生クラスによって非表示になっている変数にアクセスする](how-to-access-a-variable-hidden-by-a-derived-class.md)」を参照してください。  
   
 ### <a name="declaration-of-the-object-variable"></a>オブジェクト変数の宣言  
- オブジェクト変数を作成する方法は、派生クラスは、シャドウ要素またはシャドウされた要素にアクセスするかどうかも影響します。 次の例では、派生クラスでは、2 つのオブジェクトを作成しますが、として基本クラスと派生クラスとしてもう 1 つのオブジェクトが宣言されています。  
+ オブジェクト変数を作成する方法は、派生クラスがシャドウする要素またはシャドウされた要素にアクセスするかどうかにも影響する場合があります。 次の例では、派生クラスから 2 つのオブジェクトを作成していますが、一方のオブジェクトは基底クラスとして、他方を派生クラスとして宣言しています。  
   
-```  
+```vb  
 Public Class baseCls  
     ' The following statement declares the element that is to be shadowed.  
     Public z As Integer = 100  
@@ -126,7 +126,7 @@ Public Class useClasses
     ' Note that dervCls widens to its base class baseCls.  
     ' The following statement creates the object declared as the derived class.  
     Dim derObj As dervCls = New dervCls()  
-    Public Sub showZ()   
+    Public Sub showZ()
     ' The following statement outputs 100 (the shadowed element).  
         MsgBox("Accessed through base class: " & basObj.z)  
     ' The following statement outputs "*" (the shadowing element).  
@@ -135,14 +135,14 @@ Public Class useClasses
 End Class  
 ```  
   
- 前の例では、変数`basObj`基底クラスとして宣言されます。 割り当てを`dervCls`オブジェクトをそれには、拡大変換であるためです。 基底クラスが、変数のシャドウのバージョンにアクセスできませんただし、 `z` 、派生クラスでは、そのため、コンパイラは`basObj.z`元の基本クラスの値にします。  
+ 前の例では、変数 `basObj` が基底クラスとして宣言されています。 `dervCls` オブジェクトをそれに割り当てることは、拡大変換になるため、有効です。 ただし、基底クラスでは派生クラス内の変数 `z` のシャドウするバージョンにアクセスできないため、コンパイラによって `basObj.z` が元の基底クラスの値に解決されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [宣言された要素の参照](references-to-declared-elements.md)
+- [Visual Basic におけるスコープ](scope.md)
+- [拡大変換と縮小変換](../data-types/widening-and-narrowing-conversions.md)
+- [Shadows](../../../language-reference/modifiers/shadows.md)
+- [Overrides](../../../language-reference/modifiers/overrides.md)
+- [Me、My、MyBase、および MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [継承の基本](../objects-and-classes/inheritance-basics.md)

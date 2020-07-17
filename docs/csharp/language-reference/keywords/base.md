@@ -1,6 +1,5 @@
 ---
 title: base キーワード - C# リファレンス
-ms.custom: seodec18
 description: C# で派生クラス内から基底クラスのメンバーにアクセスするために使用する base キーワードについて説明します。
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 2ef0d07aed595fa630459171482e0b0849aed877
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401594"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75713768"
 ---
 # <a name="base-c-reference"></a>base (C# リファレンス)
 
@@ -49,9 +48,9 @@ ms.locfileid: "67401594"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [this](./this.md)

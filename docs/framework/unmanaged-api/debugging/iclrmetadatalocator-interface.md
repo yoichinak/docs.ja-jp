@@ -14,36 +14,34 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 734f8eaa7c520bbf1ad1208ece42751e967a208a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697850"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859722"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator インターフェイス
-データ アクセス サービス層でターゲット プロセス内でアセンブリのメタデータを検索するために使用します。  
+ターゲットプロセス内のアセンブリのメタデータを検索するために、データアクセスサービス層によって使用されます。  
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド|説明|  
+|Method|説明|  
 |------------|-----------------|  
-|[GetMetadata メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|ターゲット プロセスからのイメージのメタデータを取得します。|  
+|[GetMetadata メソッド](iclrmetadatalocator-getmetadata-method.md)|ターゲットプロセスからイメージのメタデータを取得します。|  
   
-## <a name="remarks"></a>Remarks  
- API クライアント (つまりデバッガー) は、特定のターゲット プロセスに応じてこのインターフェイスを実装する必要があります。 たとえば、ライブ プロセスの実装はメモリ ダンプの異なるになります。  
+## <a name="remarks"></a>解説  
+ API クライアント (つまりデバッガー) は、特定のターゲット プロセスに応じてこのインターフェイスを実装する必要があります。 たとえば、ライブプロセスの実装は、メモリダンプの実装とは異なります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

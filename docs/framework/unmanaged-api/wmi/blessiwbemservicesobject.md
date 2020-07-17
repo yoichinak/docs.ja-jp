@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServicesObject 関数 (アンマネージ API リファレンス)
-description: BlessIWbemServicesObject 関数では、ユーザーの資格情報が [iwbemservices] オブジェクトへのアクセスを許可するかどうかを示します
+title: 関数 (アンマネージ API リファレンス)
+description: 関数は、ユーザー資格情報が IWbemServices オブジェクトへのアクセスを許可するかどうかを示します。
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -14,17 +14,15 @@ helpviewer_keywords:
 - BlessIWbemServicesObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd822f78d29ad3a75fb5e57dd7c23b7049d445b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761715"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175032"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 関数
-ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクト。 
+指定された[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトへのアクセスをユーザー資格情報で許可するかどうかを示します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -33,10 +31,10 @@ ms.locfileid: "67761715"
 ```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
-   [in] BSTR strUser, 
-   [in] BSTR strPassword, 
-   [in] BSTR strAuthority, 
-   [in] DWORD impLevel, 
+   [in] BSTR strUser,
+   [in] BSTR strPassword,
+   [in] BSTR strAuthority,
+   [in] DWORD impLevel,
    [in] DWORD authnLevel
 );
 ```
@@ -50,32 +48,32 @@ HRESULT BlessIWbemServicesObject (
 [in]ユーザー名。
 
 `strPassword`\
-[in]関連付けられているパスワード`strUser`します。
+[in]に関連付けられている`strUser`パスワード。
 
 `strAuthority`\
-[in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+[in]ユーザーのドメイン名。 詳細については、[関数](connectserverwmi.md)を参照してください。
 
 `impLevel`\
 [in]偽装レベル。
 
 `authnLevel`\
-[in]承認レベル。
+[in]権限レベル。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WinError.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は *、WinError.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
 
-|定数  |値  |説明  |
+|常時  |Value  |説明  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | 1 つまたは複数の引数が無効です。 |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` は `null` です。 | 
-| `E_FAIL` | 0x80000008 | 不明なエラーが発生しました。 |
-| `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のためでは、操作を実行します。 | 
-| `S_OK` | 0 | 関数呼び出しに成功しました。 | 
+| `E_INVALIDARG` | 0x80070057 | 1 つ以上の引数が無効です。 |
+| `E_POINTER` | 0x80004003 | `pIWbemServices` は `null` です。 |
+| `E_FAIL` | 0x80000008 | 特定できないエラーが発生しました。 |
+| `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のため、操作を実行できません。 |
+| `S_OK` | 0 | 関数呼び出しが正常に行われました。 |
 
 ## <a name="requirements"></a>必要条件
 
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
  **ヘッダー:** WMINet_Utils.idl
 
@@ -83,4 +81,4 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

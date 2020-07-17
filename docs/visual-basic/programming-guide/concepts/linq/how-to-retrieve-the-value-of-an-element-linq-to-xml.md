@@ -1,15 +1,15 @@
 ---
-title: '方法: 要素 (LINQ to XML) の値を取得 (Visual Basic)'
+title: '方法: 要素の値を取得する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: a52ebf437b8c1254b3a8c30558e14a254bb1fe5d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: b8ff44416f0fbb590119af7e11714e449185d977
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592488"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397792"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>方法: 要素 (LINQ to XML) の値を取得 (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>方法: 要素の値を取得する (LINQ to XML) (Visual Basic)
 このトピックでは、要素の値を取得する方法について説明します。 これには主に 2 つの方法があります。 1 つは <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> を目的の型にキャストする方法です。 その後、明示的な変換演算子によって、要素または属性のコンテンツが指定した型に変換され、変数に代入されます。 もう 1 つは、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> プロパティを使用する方法です。  
   
  Visual Basic では、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティを使用する方法が最適です。  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>例  
- 存在しているかどうかが明確でない要素の値の取得を試行する場合があります。 この場合、null 許容型をキャストされた要素を代入すると (いずれか`string`または .NET Framework の null 許容型のいずれか)、要素に割り当てられているが存在しない場合、変数に設定されます`Nothing`します。 要素が存在するかどうかわからないときは、<xref:System.Xml.Linq.XElement.Value%2A> プロパティよりもキャストを使用した方が簡単であることを、次のコードは示しています。  
+ 存在しているかどうかが明確でない要素の値の取得を試行する場合があります。 この場合、NULL 値が許容される型 (`string` または .NET Framework での NULL 値が許容される型のいずれか) に、キャストされた要素を代入すると、要素が存在しない場合に、代入された変数が `Nothing` に設定されます。 要素が存在するかどうかわからないときは、<xref:System.Xml.Linq.XElement.Value%2A> プロパティよりもキャストを使用した方が簡単であることを、次のコードは示しています。  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -135,7 +135,7 @@ Console.WriteLine("v4:{0}", IIf(Not (v4.HasValue), "element does not exist", v4)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  
@@ -151,4 +151,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (Visual Basic)](linq-to-xml-axes.md)

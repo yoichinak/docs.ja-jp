@@ -1,34 +1,34 @@
 ---
-title: Option<keyword>ステートメント (Visual Basic)
+title: Option <keyword> ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: f843955cc637ccdae091e207ed5d0aad24867e61
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784021"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404331"
 ---
-# <a name="option-keyword-statement"></a>Option\<keyword> ステートメント
-ソース ファイル全体に適用されるコンパイラ オプションを指定するステートメントについて説明します。  
+# <a name="option-keyword-statement"></a>Option \<keyword> ステートメント
+ソース ファイル全体に適用されるコンパイラ オプションを指定するステートメントについて紹介します。  
   
 ## <a name="remarks"></a>Remarks  
- コンパイラ オプションには、すべての変数を明示的に宣言する必要があるかどうか、型の縮小変換する必要がありますがかどうか、明示的なであるかテキストまたはバイナリ値の文字列の比較かどうかを制御できます。  
+ このコンパイラ オプションによって、すべての変数を明示的に宣言する必要があるかどうか、縮小型変換を明示的に行う必要があるかどうか、または文字列をテキストとして比較するか、バイナリ数量として比較するかを制御できます。  
   
  キーワード `Option` は次のコンテキストで使用できます。  
   
- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Compare ステートメント](option-compare-statement.md)  
   
- [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Explicit ステートメント](option-explicit-statement.md)  
   
- [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Infer ステートメント](option-infer-statement.md)  
   
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict ステートメント](option-strict-statement.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [キーワード](../keywords/index.md)

@@ -2,40 +2,38 @@
 title: ICorDebugAssembly3 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eecb135e034c3565e805ea776115579488b2a4d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67707092c80b0e07aa284336c426aba09ff991af
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645462"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894826"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3 インターフェイス
-コンテナー アセンブリとその格納されているアセンブリのサポートを提供する ICorDebugAssembly インターフェイスを論理的に拡張します。  
+コンテナーのアセンブリとそれらに含まれるアセンブリのサポートを提供するために、ICorDebugAssembly インターフェイスを論理的に拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumerateContainedAssemblies メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-enumeratecontainedassemblies-method.md)|このアセンブリに含まれているアセンブリの列挙子を取得します。|  
-|[GetContainerAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-getcontainerassembly-method.md)|この `ICorDebugAssembly3` オブジェクトのコンテナー アセンブリを返します。|  
+|[EnumerateContainedAssemblies メソッド](icordebugassembly3-enumeratecontainedassemblies-method.md)|このアセンブリに含まれているアセンブリの列挙子を取得します。|  
+|[GetContainerAssembly メソッド](icordebugassembly3-getcontainerassembly-method.md)|この `ICorDebugAssembly3` オブジェクトのコンテナー アセンブリを返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
->  このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  
+> このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6382bdf6-d488-4952-b653-cb09b6e1c6c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 05ae2791ee7f8bd31be38ec4d2117ddc3c2ea2bc
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770591"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377944"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState メソッド
-この ICorDebugThread のデバッグ状態を記述するフラグを設定します。  
+このスレッドのデバッグ状態を記述するフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>パラメーター  
  `state`  
- [in]このスレッドのデバッグ状態を指定する CorDebugThreadState 列挙値のビットごとの組み合わせ。  
+ からこのスレッドのデバッグ状態を指定する CorDebugThreadState 列挙値のビットごとの組み合わせ。  
   
 ## <a name="remarks"></a>Remarks  
- `SetDebugState` スレッドの現在のデバッグ状態を設定します。 (「現在のデバッグ状態」状態を表しますデバッグ プロセスに続く、実際の現状ではない場合。)通常この値は、THREAD_RUNNING です。 デバッガーのみ、スレッドのデバッグ状態に影響を与えることができます。 デバッグ状態は最終間で継続されるため、複数経由で THREAD_SUSPENDed 継続スレッドを保持する場合は、一度の設定し、その後、それについて心配する必要ありません。 スレッドの中断とプロセスを再開する可能性があります、デッドロックは通常はほとんどありません。 スレッドおよびプロセスの組み込みの品質は、この設計では、します。 デバッガーは、非同期的に中断し、デッドロックを中断するスレッドを再開できます。 スレッドのユーザーの状態には、USER_UNSAFE_POINT が含まれている場合、スレッドがガベージ コレクション (GC) をブロックします。 つまり、中断されたスレッドがする可能性が高いデッドロックが発生します。 これはデバッグ イベントが既にキューに登録には影響可能性があります。 したがって、デバッガーが全体のイベント キューをドレインする必要があります (呼び出して[icordebugcontroller::hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) を中断またはスレッドを再開する前にします。 それ以外の場合は既に中断されていると確信するスレッドでイベントを取得、可能性があります。  
+ `SetDebugState`スレッドの現在のデバッグ状態を設定します。 ("現在のデバッグ状態" は、プロセスが継続されていて、実際の現在の状態ではない場合は、デバッグ状態を表します)。この場合の通常の値は THREAD_RUN です。 デバッガーだけが、スレッドのデバッグ状態に影響を与える可能性があります。 デバッグ状態は最後まで継続して実行されるので、スレッド THREAD_SUSPENDed を複数回継続したままにする場合は、1回設定するだけで、それ以降は心配する必要はありません。 スレッドを中断してプロセスを再開するとデッドロックが発生する可能性がありますが、通常はそうではありません。 これは、スレッドとプロセスの組み込みの品質であり、設計によるものです。 デバッガーは、非同期的にスレッドを中断して再開し、デッドロックを解除することができます。 スレッドのユーザー状態に USER_UNSAFE_POINT が含まれている場合、スレッドはガベージコレクション (GC) をブロックする可能性があります。 これは、中断されたスレッドがデッドロックの原因となる可能性が非常に高いことを意味します。 これは、既にキューに登録されているデバッグイベントには影響しません。 したがって、デバッガーは、スレッドを中断または再開する前に、イベントキュー全体 ( [HasQueuedCallbacks::](icordebugcontroller-hasqueuedcallbacks-method.md)を呼び出すことによって) をドレインする必要があります。 それ以外の場合は、既に中断されていると思われるスレッドでイベントを取得することがあります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

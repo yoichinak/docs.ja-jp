@@ -1,5 +1,5 @@
 ---
-title: My.Application.Log による情報の書き込み先の確認 (Visual Basic)
+title: My.Application.Log による情報の書き込み先の確認
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object, output location
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591217"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398280"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の確認 (Visual Basic)
 
 `My.Application.Log` オブジェクトは、複数のログ リスナーに情報を書き込むことができます。 ログ リスナーは、コンピューターの構成ファイルで設定し、アプリケーションの構成ファイルでオーバーライドできます。 このトピックでは、既定の設定について、およびアプリケーションの設定を確認する方法について説明します。
 
-既定の出力場所について詳しくは、「[アプリケーション ログの使用](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)」をご覧ください。
+既定の出力場所について詳しくは、「[アプリケーション ログの使用](working-with-application-logs.md)」をご覧ください。
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My.Application.Log のリスナーを確認するには
 
 1. アセンブリの構成ファイルを見つけます。 アセンブリを開発中の段階では、**ソリューション エクスプローラー**から Visual Studio の app.config にアクセスできます。 開発が終了すると、構成ファイルはアセンブリの名前に ".config" を付け加えたファイル名で、アセンブリと同じディレクトリに配置されています。
 
     > [!NOTE]
-    >  アセンブリによっては、構成ファイルがない場合もあります。
+    > アセンブリによっては、構成ファイルがない場合もあります。
 
     構成ファイルは XML ファイルです。
 
@@ -55,15 +55,15 @@ ms.locfileid: "65591217"
 
     - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> リスナーは、導入部で説明したように、ファイル ログに書き込みます。
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> リスナーは、`initializeData` パラメーターで指定された、コンピューターのイベント ログに情報を書き込みます。 イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)」を参照してください。
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> リスナーは、 `initializeData` パラメーターで指定された、コンピューターのイベント ログに情報を書き込みます。 イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [.NET Framework の ETW イベント](../../../../framework/performance/etw-events.md)」を参照してください。
 
-    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> リスナーおよび <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> リスナーは、`initializeData` パラメーターで指定されたファイルに書き込みます。
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> リスナーおよび <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> リスナーは、 `initializeData` パラメーターで指定されたファイルに書き込みます。
 
     - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> リスナーは、コマンド ライン コンソールに書き込みます。
 
     - 他の型のログ リスナーが情報を書き込む先については、その型のドキュメントを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -72,9 +72,9 @@ ms.locfileid: "65591217"
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
-- [アプリケーション ログの使用](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [方法: 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [方法: ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [チュートリアル: My.Application.Log による情報の書き込み先の変更](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [アプリケーション ログの使用](working-with-application-logs.md)
+- [方法 : 例外をログに記録する](how-to-log-exceptions.md)
+- [方法: ログ メッセージを書き込む](how-to-write-log-messages.md)
+- [チュートリアル : My.Application.Log による情報の書き込み先の変更](walkthrough-changing-where-my-application-log-writes-information.md)
 - [.NET Framework の ETW イベント](../../../../framework/performance/etw-events.md)
-- [トラブルシューティング : ログ リスナー](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [トラブルシューティング : ログ リスナー](troubleshooting-log-listeners.md)

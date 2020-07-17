@@ -1,5 +1,6 @@
 ---
 title: '方法: 単純な Parallel.For ループを記述する'
+description: ループをキャンセルしたり、ループのイテレーションを中断したり、スレッドローカルの状態を維持したりする必要のない、.NET の Parallel.For ループの記述を学びます。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,21 +11,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8307f2205653fbd213d824acffc405ee97580166
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574925"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662694"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>方法: 単純な Parallel.For ループを記述する
 
 このトピックでは、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドを示す 2 つの例を示しています。 最初の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> メソッドのオーバー ロードを使用し、2 番目の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> のオーバー ロードを使用しています。これらは <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドの 2 つの最も単純なオーバーロードです。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドのこれらの 2 つのオーバー ロードは、ループをキャンセルする必要がない場合、ループのイテレーションから抜ける場合、またはいずれかのスレッドローカル状態を維持する場合に使用します。
 
 > [!NOTE]
-> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[Lambda Expressions in PLINQ and TPL (PLINQ および TPL のラムダ式)](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
+> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[Lambda Expressions in PLINQ and TPL (PLINQ および TPL のラムダ式)](lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
 
 最初の例では、1 つのディレクトリ内のファイルのサイズを計算します。 2 つ目の例では、2 つの行列の積を計算します。
 
@@ -46,7 +45,7 @@ ms.locfileid: "54574925"
 
 ## <a name="the-delegate"></a>デリゲート
 
-この <xref:System.Threading.Tasks.Parallel.For%2A> のオーバーロードの 3 番目のパラメーターは、`Action<int>` 型 (C#) または`Action(Of Integer)` 型 (Visual Basic) のデリゲートです。 `Action` デリゲートは、0 種類、1 種類、または 16 種類のパラメーターのいずれがあっても常に void を返します。 Visual Basic では、`Action` の動作は `Sub` で定義されます。 例では、ラムダ式を使用してデリゲートを作成していますが、他の方法でも同様にデリゲートを作成することができます。 詳細については、「[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
+この <xref:System.Threading.Tasks.Parallel.For%2A> のオーバーロードの 3 番目のパラメーターは、`Action<int>` 型 (C#) または`Action(Of Integer)` 型 (Visual Basic) のデリゲートです。 `Action` デリゲートは、0、1、または 16 の型パラメーターのいずれがあっても常に void を返します。 Visual Basic では、`Action` の動作は `Sub` で定義されます。 例では、ラムダ式を使用してデリゲートを作成していますが、他の方法でも同様にデリゲートを作成することができます。 詳細については、「[PLINQ および TPL のラムダ式](lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
 
 ## <a name="the-iteration-value"></a>イテレーション値
 
@@ -74,5 +73,5 @@ ms.locfileid: "54574925"
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+- [データの並列化](data-parallelism-task-parallel-library.md)
+- [並列プログラミング](index.md)

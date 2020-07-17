@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663875"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797226"
 ---
 # <a name="custom-bindings"></a>カスタム バインディング
 
-システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインディングは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実施例については、次を参照してください。[カスタム バインドのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))します。 詳細については、次を参照してください。 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。
+システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインディングは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実際の例については、「[カスタムバインディングのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))」を参照してください。 詳細については、「 [ \<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)」を参照してください。
 
 ## <a name="construction-of-a-custom-binding"></a>カスタム バインドの構築
 
@@ -44,7 +44,7 @@ ms.locfileid: "67663875"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-最下位には、必須のトランスポート要素があります。 独自のトランスポートまたは Windows Communication Foundation (WCF) は、次のトランスポート バインド要素の 1 つを使用することができます。
+最下位には、必須のトランスポート要素があります。 独自のトランスポートまたは次のトランスポートバインド要素のいずれかを使用することができ Windows Communication Foundation (WCF) が提供します。
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -76,9 +76,9 @@ ms.locfileid: "67663875"
 
 ## <a name="see-also"></a>関連項目
 
-- [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [システム指定のバインディングをカスタマイズします。](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [カスタム バインド](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [エンドポイントの作成の概要](../endpoint-creation-overview.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../using-bindings-to-configure-services-and-clients.md)
+- [システム標準のバインディング](../system-provided-bindings.md)
+- [システム指定のバインディングをカスタマイズする](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
+- [カスタム バインド](../samples/custom-binding.md)

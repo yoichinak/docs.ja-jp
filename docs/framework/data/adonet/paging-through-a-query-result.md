@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 2e7fb97e5c0cb42deff43c411f47e8d30e2257ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878385"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149389"
 ---
 # <a name="paging-through-a-query-result"></a>クエリ結果のページング
 クエリ結果のページングとは、クエリ結果をデータの小さなサブセット、つまりページに分けて返すプロセスです。 クエリ結果のページングは、結果を管理しやすい小さな単位でユーザーに表示するために行われる一般的な処理です。  
   
- **DataAdapter**のオーバー ロードによって、データのページのみを返す機能が提供、**入力**メソッド。 ただし、このできない可能性がありますので、大規模なクエリ結果のページングの最適な選択肢ですが、 **DataAdapter**ターゲットを塗りつぶします<xref:System.Data.DataTable>または<xref:System.Data.DataSet>のみ、要求されたレコードを返すリソースで、クエリ全体は引き続き使用されます。 クエリ全体を返す必要があるリソースを使用せずにデータ ソースから 1 ページ分のデータを返すには、必要な行だけ返すように限定する抽出条件をクエリに追加します。  
+ **DataAdapter** には、**Fill** メソッドのオーバーロードを通じて、1 ページ分のデータだけを返す機能が用意されています。 しかしこれは大きなクエリ結果のページングには適していません。**DataAdapter** が目的の <xref:System.Data.DataTable> または <xref:System.Data.DataSet> に、要求されたレコードだけを格納する一方で、クエリ全体を返すためのリソースが使用されるためです。 クエリ全体を返す必要があるリソースを使用せずにデータ ソースから 1 ページ分のデータを返すには、必要な行だけ返すように限定する抽出条件をクエリに追加します。  
   
- 使用する、**入力**、データのページを返す方法を指定する、 **startRecord**パラメーター、データのページの最初のレコードと**maxRecords**パラメーターの数データのページのレコード。  
+ **Fill** メソッドを使用して 1 ページ分のデータを返すには、データ ページの先頭レコードを指定する **startRecord** パラメーターおよびデータ ページのレコード数を指定する **maxRecords** パラメーターを指定します。  
   
- 次のコード例を使用する方法を示しています、**入力**ページ サイズが 5 つのレコードをクエリ結果の最初のページを返します。  
+ **Fill** メソッドを使用してクエリ結果の最初のページ (ページ サイズは 5 レコード) を返す方法のコード例を次に示します。  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 前の例では、**データセット**だけが 5 つのレコードが全体に格納されます**注文**テーブルが返されます。 入力する、**データセット**それら同じ 5 つのレコードが、5 つのレコードだけを返すと、TOP を使用して、次のコード例のように、SQL ステートメントの WHERE 句。  
+ 上の例では、**DataSet** に 5 つのレコードだけが格納されますが、**Orders** テーブル全体が返されます。 **DataSet** にこれと同じ 5 つのレコードを格納し、5 つのレコードだけを返すには、次のコード サンプルに示すように SQL ステートメントで TOP 句と WHERE 句を使用します。  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -57,13 +57,13 @@ Dim adapter As SqlDataAdapter = _
   New SqlDataAdapter(orderSQL, connection)  
   
 Dim dataSet As DataSet = New DataSet()  
-adapter.Fill(dataSet, "Orders")   
+adapter.Fill(dataSet, "Orders")
 ```  
   
 ```csharp  
 int pageSize = 5;  
   
-string orderSQL = "SELECT TOP " + pageSize +   
+string orderSQL = "SELECT TOP " + pageSize +
   " * FROM Orders ORDER BY OrderID";  
 SqlDataAdapter adapter = new SqlDataAdapter(orderSQL, connection);  
   
@@ -79,11 +79,11 @@ Dim lastRecord As String = _
 ```  
   
 ```csharp  
-string lastRecord =   
+string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- オーバー ロードを使用してレコードの次のページを返す、**入力**を受け取るメソッド、 **startRecord**と**maxRecords**パラメーターによって、現在のレコード インデックスをインクリメントします。ページ サイズと塗りつぶしテーブル。 レコードの 1 つだけのページが追加された場合でも、データベース サーバーで全体のクエリ結果を返すことに注意してください、**データセット**します。 次のデータ ページを格納する前にテーブル行をクリアするコード サンプルを次に示します。 データベース サーバーとのやり取りを減らすために、ローカルのキャッシュに、返された一定数の行を保存することもできます。  
+ **startRecord** パラメーターと **maxRecords** パラメーターを受け取る **Fill** メソッドのオーバーロードを使用して次のレコード ページを返すには、現在のレコード インデックスをページ サイズの分だけインクリメントし、テーブルにレコード ページを格納します。 **DataSet** に 1 ページ分のレコードだけを追加する場合でも、データベース サーバーはクエリ結果全体を返すことに注意してください。 次のデータ ページを格納する前にテーブル行をクリアするコード サンプルを次に示します。 データベース サーバーとのやり取りを減らすために、ローカルのキャッシュに、返された一定数の行を保存することもできます。  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -114,7 +114,7 @@ adapter.Fill(dataSet, "Orders")
 ```  
   
 ```csharp  
-orderSQL = "SELECT TOP " + pageSize +   
+orderSQL = "SELECT TOP " + pageSize +
   " * FROM Orders WHERE OrderID > " + lastRecord + " ORDER BY OrderID";  
 adapter.SelectCommand.CommandText = orderSQL;  
   
@@ -125,5 +125,5 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET の概要](ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: On Error ステートメント (Visual Basic)
+title: On Error ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OnError
@@ -22,110 +22,108 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 0a5a5261e6b71178adce02a5635c1f91a1469f3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0297f7af29faf5a08472fd1d18ca52e9b2fda1af
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784073"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404409"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error ステートメント (Visual Basic)
-エラー処理ルーチンを有効にして、プロシージャ内のルーチンの場所を指定しますエラー処理ルーチンを無効にも使用できます。  
+エラー処理ルーチンを有効にし、プロシージャ内のルーチンの場所を指定します。エラー処理ルーチンを無効にするためにも使用できます。 `On Error` ステートメントは、非構造化エラー処理で使用し、構造化例外処理の代わりに使用できます。 [構造化例外処理](../../../standard/exceptions/index.md)は .NET に組み込まれており、一般に効率的であるため、アプリケーションで実行時エラーを処理する場合に推奨されます。
+
+ エラー処理または例外処理を使用しない場合、発生したすべての実行時エラーが致命的になります。エラーメッセージが表示され、実行が停止します。
+
+> [!NOTE]
+> `Error` キーワードは、下位互換性のためにサポートされている [Error ステートメント](error-statement.md)でも使用します。
+
+## <a name="syntax"></a>構文
+
+```vb
+On Error { GoTo [ line | 0 | -1 ] | Resume Next }
+```
+
+## <a name="parts"></a>指定項目
+
+|用語|定義|
+|---|---|
+|`GoTo` *line*|必須の *line* 引数に指定された行から始まるエラー処理ルーチンを有効にします。 *line* 引数は、任意の行ラベルまたは行番号です。 実行時エラーが発生した場合、制御が指定された行に分岐し、エラー ハンドラーがアクティブになります。 指定した行は、`On Error` ステートメントと同じプロシージャ内に存在する必要があります。さもないと、コンパイル時エラーが発生します。|
+|`GoTo 0`|現在のプロシージャで有効になっているエラー ハンドラーを無効にし、`Nothing` にリセットします。|
+|`GoTo -1`|現在のプロシージャで有効になっている例外を無効にし、`Nothing` にリセットします。|
+|`Resume Next`|実行時エラーが発生したときに、エラーが発生したステートメントの直後のステートメントに制御を移動し、そのポイントから実行を続行することを指定します。 オブジェクトにアクセスする場合は、`On Error GoTo` ではなく、この形式を使用します。|
+
+## <a name="remarks"></a>Remarks
+
+> [!NOTE]
+> コードでは、非構造化例外処理と `On Error` ステートメントを使用するのではなく、可能な限り、構造化例外処理を使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](try-catch-finally-statement.md)」をご覧ください。
+
+ "有効な" エラー ハンドラーは、`On Error` ステートメントによって有効にされるものです。 "アクティブな" エラー ハンドラーは、エラーの処理中に有効にされているハンドラーです。
+
+ エラー ハンドラーがアクティブになっている間 (エラーの発生と、`Resume`、`Exit Sub`、`Exit Function`、または `Exit Property` ステートメントの間) にエラーが発生した場合、現在のプロシージャのエラー ハンドラーではエラーを処理できません。 呼び出し元のプロシージャに制御が戻ります。
   
- 実行時に発生するエラーは致命的なエラー処理がない: エラー メッセージが表示され、実行が停止します。  
+ 呼び出し元のプロシージャに有効なエラー ハンドラーがある場合、エラーを処理するために、それがアクティブ化されます。 呼び出し元のプロシージャのエラー ハンドラーもアクティブな場合は、有効だが非アクティブなエラー ハンドラーが見つかるまで、前の呼び出し元プロシージャをさかのぼって、制御が戻されます。 そのようなエラー ハンドラーが見つからない場合、エラーは実際に発生した時点で致命的になります。
   
- 非構造化例外処理を使用するのではなく、コードで、処理、構造化例外の使用をお勧め可能であれば、および`On Error`ステートメント。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
+ エラー ハンドラーによって呼び出し元のプロシージャに制御が戻されるたびに、そのプロシージャが現在のプロシージャになります。 いずれかのプロシージャのエラーハンドラーによってエラーが処理されると、`Resume` ステートメントで指定されたポイントにある現在のプロシージャで、実行が再開されます。
   
 > [!NOTE]
->  `Error`キーワードでも使用、 [Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)、旧バージョンとの互換性のためサポートされています。  
+> エラー処理ルーチンは、`Sub` プロシージャや `Function` プロシージャではありません。 それは、行ラベルまたは行番号でマークされたコードのセクションです。
   
-## <a name="syntax"></a>構文  
-  
-```  
-On Error { GoTo [ line | 0 | -1 ] | Resume Next }  
-```  
-  
-## <a name="parts"></a>指定項目  
-  
-|用語|定義|  
-|---|---|  
-|`GoTo` `line`|により、エラー処理ルーチンで必要な指定した行から始まる`line`引数。 `line`引数が任意の行のラベルまたは行番号。 実行時エラーが発生した場合は、エラー ハンドラーをアクティブにする際、指定した行に分岐を制御します。 指定した行と同じ手順である必要があります、`On Error`ステートメント、または、コンパイル時エラーが発生します。|  
-|`GoTo` 0|現在のプロシージャで有効になっているエラー ハンドラーを無効にし、リセット`Nothing`します。|  
-|`GoTo` -1|現在のプロシージャで有効になっている例外を無効にし、リセット`Nothing`します。|  
-|`Resume Next`|実行時エラーが発生したときに、エラーが発生したし、そのポイントから実行が継続のステートメントの直後のステートメントにコントロールが移動を指定します。 このフォームを使用してなく`On Error GoTo`オブジェクトにアクセスするときにします。|  
-  
-## <a name="remarks"></a>Remarks  
-  
-> [!NOTE]
->  非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`ステートメント。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
-  
- "Enabled"のエラー ハンドラーは、いずれかで有効になっている、`On Error`ステートメント。 「アクティブ」のエラー ハンドラーは、エラーを処理するプロセスでは有効なハンドラーです。  
-  
- エラー ハンドラーがアクティブな間にエラーが発生したかどうか (エラーの発生間と`Resume`、 `Exit Sub`、 `Exit Function`、または`Exit Property`ステートメント)、現在のプロシージャのエラー ハンドラーは、エラーを処理できません。 呼び出し元のプロシージャに制御が戻ります。  
-  
- 呼び出し元のプロシージャに有効になっているエラー ハンドラーがある場合は、エラーを処理するためにアクティブ化します。 呼び出し元のプロシージャのエラー ハンドラーもアクティブな場合は、コントロールは、有効であっても、非アクティブなエラー ハンドラーが見つかるまで呼び出し元の前の手順を遡ってに渡します。 このようなエラー ハンドラーが見つからない場合は、エラーが、実際に発生した時点で致命的です。  
-  
- エラー ハンドラーは、呼び出し元のプロシージャにコントロールを通過するたびにそのプロシージャには、現在のプロシージャになります。 指定された位置から現在のプロシージャの実行が再開されているいずれかのプロシージャのエラー ハンドラーによってエラーが処理されたら、`Resume`ステートメント。  
-  
-> [!NOTE]
->  エラー処理ルーチンは、`Sub`プロシージャまたは`Function`プロシージャ。 これは、行ラベルまたは行番号でマークされたコードのセクションです。  
-  
-## <a name="number-property"></a>Number プロパティ  
- エラー処理ルーチンで値を使用して、`Number`のプロパティ、`Err`エラーの原因を特定するオブジェクト。 ルーチンのテストまたはで関連するプロパティの値を保存する必要があります、`Err`前に、その他のエラーが発生する可能性がまたは可能性がある手順の前にエラーが呼び出されます。 プロパティの値で、`Err`オブジェクトは、最新のエラーのみを反映します。 エラー メッセージに関連付けられている`Err.Number`に含まれている`Err.Description`します。  
+## <a name="number-property"></a>Number プロパティ
+ エラー処理ルーチンでは、エラーの原因を特定するために、`Err` オブジェクトの `Number` プロパティの値に依存しています。 ルーチンでは、他のエラーが発生する可能性がある前、またはエラーが発生する可能性のあるプロシージャが呼び出される前に、`Err` オブジェクトの関連するプロパティ値をテストまたは保存する必要があります。 `Err` オブジェクトのプロパティ値は、最新のエラーだけを反映しています。 `Err.Number` に関連付けられたエラー メッセージは `Err.Description` に含まれています。  
   
 ## <a name="throw-statement"></a>Throw ステートメント  
- エラーが発生しますが、`Err.Raise`メソッドのセット、`Exception`プロパティの新しく作成されたインスタンスを<xref:System.Exception>クラス。 派生した例外の種類の例外の発生をサポートするために、`Throw`言語でステートメントがサポートされています。 これがスローされる例外のインスタンスでは 1 つのパラメーターを取ります。 次の例では、これらの機能を使用して、既存の例外処理のサポートを使用する方法を示しています。  
-  
+ `Err.Raise` メソッドで発生したエラーによって、`Exception` プロパティが <xref:System.Exception> クラスの新しく作成されたインスタンスに設定されます。 派生した例外の種類の例外の発生をサポートするために、その言語で `Throw` ステートメントがサポートされています。 これは、スローされる例外インスタンスである 1 つのパラメーターを受け取ります。 次の例に、これらの機能を既存の例外処理サポートと共に使用する方法を示しています。
+
  [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
- なお、`On Error GoTo`ステートメントは、例外クラスに関係なく、すべてのエラーをトラップします。  
+ `On Error GoTo` ステートメントでは、例外クラスに関係なく、すべてのエラーがトラップされることに注意してください。
   
-## <a name="on-error-resume-next"></a>次に on Error Resume  
- `On Error Resume Next` 実行、実行時エラーの原因となったステートメントの直後のステートメントを続行または最新の直後に続くステートメントを使用して、プロシージャを含む外呼び出しを`On Error Resume Next`ステートメント。 このステートメントでは、実行、実行時エラーに関係なく続行をできるようにします。 プロシージャ内の別の場所に制御を転送するのではなく、エラーが発生するか、エラー処理ルーチンを配置することができます。 `On Error Resume Next`ステートメントになり、使用頻度の低い別のプロシージャが呼び出されたときに実行する必要があります、`On Error Resume Next`インライン エラーのルーチン内で処理する場合、各ステートメントがルーチンを呼び出すとします。  
+## <a name="on-error-resume-next"></a>On Error Resume Next
+ `On Error Resume Next` によって、実行時エラーが発生したステートメントの直後のステートメント、または `On Error Resume Next` ステートメントを含むプロシージャからの最新の呼び出しの直後のステートメントから、実行が続行されます。 このステートメントを使用すると、実行時エラーが発生しても実行を続行できます。 プロシージャ内の別の場所に制御を移すのではなく、エラーが発生しそうな場所に、エラー処理ルーチンを配置できます。 別のプロシージャが呼び出されると、`On Error Resume Next` ステートメントは非アクティブになります。そのため、ルーチン内にエラー処理を埋め込む場合に、呼び出される各ルーチンで `On Error Resume Next` ステートメントを実行する必要があります。
   
 > [!NOTE]
->  `On Error Resume Next`コンストラクトことをお勧めする`On Error GoTo`他のオブジェクトへのアクセス中にエラーを処理するときにします。 チェック`Err`オブジェクトと対話は、コードによってアクセスされたオブジェクトがあいまいさを削除します。 確認するオブジェクトのエラー コードを配置する`Err.Number`、どのオブジェクトが最初に、エラーを生成および (で指定されたオブジェクト`Err.Source`)。  
-  
-## <a name="on-error-goto-0"></a>Error GoTo 0  
- `On Error GoTo 0` 現在のプロシージャでのエラー処理を無効にします。 0 行目の手順には、番号 0 の行が含まれている場合でも、エラー処理コードの先頭として指定しません。 なし、`On Error GoTo 0`プロシージャが終了すると、ステートメントでは、エラー ハンドラーが自動的に無効にします。  
-  
-## <a name="on-error-goto--1"></a>Error GoTo-1 で  
- `On Error GoTo -1` 現在のプロシージャで例外を無効にします。 指定しません行-1、エラー処理コードの先頭としてプロシージャには、-1 を番号の行が含まれている場合でもです。 なし、`On Error GoTo -1`プロシージャが終了すると、ステートメントでは、例外が自動的に無効にします。  
-  
- エラー処理コードが、エラーが発生していないときに実行しないように、配置、 `Exit Sub`、 `Exit Function`、または`Exit Property`次のフラグメントのように、エラー処理ルーチンの直前のステートメント。  
-  
- [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
-  
- エラー処理コードを次に示します、`Exit Sub`ステートメントの前と、`End Sub`ステートメント、プロシージャのフローから分離することです。 プロシージャでエラー処理コードをどこでも配置できます。  
-  
-## <a name="untrapped-errors"></a>エラーをトラップしません。  
- オブジェクトでエラーをトラップしないは、オブジェクトが実行可能ファイルとして実行されているときに、制御のアプリケーションに返されます。 開発環境内でエラーをトラップしないが、適切なオプションが設定されている場合にのみ制御するアプリケーションに返されます。 デバッグ中に設定、これらを設定する方法、およびホストがクラスを作成するかどうかをオプションにする説明については、ホスト アプリケーションのマニュアルを参照してください。  
-  
- その他のオブジェクトにアクセスするオブジェクトを作成する場合戻す未処理のエラーを処理しようとする必要があります。 場合のエラー コードをマップすることはできません、`Err.Number`独自のエラーと、パスのいずれかには、オブジェクトの呼び出し元に戻します。 エラー コードを追加して、エラーを指定する必要があります、`VbObjectError`定数。 たとえば、エラー コードが 1052 の場合は、そのよう割り当てます。  
-  
- [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
-  
+> 他のオブジェクトへのアクセス中に生成されたエラーを処理する場合は、`On Error Resume Next` コンストラクトの方が、`On Error GoTo` より推奨されます。 オブジェクトの操作のたびに `Err` をチェックすることで、コードによってアクセスされたオブジェクトについてのあいまいさがなくなります。 `Err.Number` にエラーコードを配置したオブジェクトのほか、最初にエラーを生成したオブジェクト (`Err.Source` に指定されたオブジェクト) を確認できます。
+
+## <a name="on-error-goto-0"></a>On Error GoTo 0
+ `On Error GoTo 0` によって、現在のプロシージャのエラー処理が無効になります。 プロシージャに 0 番の行が含まれている場合でも、エラー処理コードの開始として行 0 は指定されません。 `On Error GoTo 0` ステートメントを使用しない場合、プロシージャが終了すると、エラー ハンドラーが自動的に無効になります。
+
+## <a name="on-error-goto--1"></a>On Error GoTo -1
+ `On Error GoTo -1` によって、現在のプロシージャの例外が無効になります。 プロシージャに -1 番の行が含まれている場合でも、エラー処理コードの開始として行 -1 は指定されません。 `On Error GoTo -1` ステートメントを使用しない場合、プロシージャが終了すると、例外が自動的に無効になります。
+
+ エラーが発生しなかったときに、エラー処理コードが実行されないようにするには、次のフラグメントのように、エラー処理ルーチンの直前に、`Exit Sub`、`Exit Function`、または `Exit Property` ステートメントを配置します。
+
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]
+
+ ここで、エラー処理コードは、`Exit Sub` ステートメントの後、`End Sub` ステートメントの前に置いて、プロシージャ フローから分離します。 エラー処理コードは、プロシージャ内の任意の場所に配置できます。
+
+## <a name="untrapped-errors"></a>トラップされないエラー
+ オブジェクトが実行可能ファイルとして実行されている場合に、オブジェクトのトラップされないエラーが制御元のアプリケーションに返されます。 開発環境では、適切なオプションが設定されている場合にのみ、トラップされないエラーが制御元のアプリケーションに返されます。 デバッグ時に設定すべきオプション、それらの設定方法、およびホストでクラスを作成できるかどうかの説明については、ホスト アプリケーションのドキュメントを参照してください。
+
+ 他のオブジェクトにアクセスするオブジェクトを作成する場合は、返されたハンドルされないエラーの処理を試みる必要があります。 できない場合、`Err.Number` のエラー コードを独自のエラーのいずれかにマップし、次にそれらをオブジェクトの呼び出し元に渡します。 独自のエラーを指定するには、エラー コードを `VbObjectError` 定数に追加します。 たとえば、エラー コードが 1052 の場合は、それを次のように割り当てます。
+
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
+
 > [!CAUTION]
->  Windows ダイナミック リンク ライブラリ (Dll) への呼び出し中にシステム エラーは、例外は発生せず、Visual Basic エラー トラッピングをトラップすることはできません。 各戻り値の成功または失敗 (に従って、API の仕様を確認する必要があります DLL 関数を呼び出すときに、障害が発生した場合値を確認し、`Err`オブジェクトの`LastDLLError`プロパティ。  
-  
-## <a name="example"></a>例  
- この例を使用して、`On Error GoTo`ステートメント、プロシージャ内のエラー処理ルーチンの場所を指定します。 例では、0 で除算しようとするは、エラー数 6 を生成します。 エラーは、エラー処理ルーチンで処理され、コントロールは、エラーの原因となったステートメントに返されます。 `On Error GoTo 0`ステートメントがエラー トラッピングをオフにします。 次に、`On Error Resume Next`ステートメントを使用して、次のステートメントによって生成されたエラーのコンテキストが特定の認識されるようにエラーをトラップするを延期します。 なお`Err.Clear`をオフにするために使用、`Err`エラーを処理した後、オブジェクトのプロパティ。  
-  
- [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
-  
-## <a name="requirements"></a>必要条件  
- **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
-  
+> Windows ダイナミックリンク ライブラリ (DLL) の呼び出し時のシステム エラーでは、例外が発生せず、Visual Basic エラー トラップでトラップできません。 DLL 関数を呼び出すときは、API 仕様に従って、各戻り値の成功または失敗を確認し、失敗の場合は `Err` オブジェクトの `LastDLLError` プロパティの値を確認する必要があります。
+
+## <a name="example"></a>例
+ この例では、最初に `On Error GoTo` ステートメントを使用して、プロシージャ内のエラー処理ルーチンの場所を指定しています。 例では、0 で除算しようとしてエラー番号 6 が生成されます。 エラー処理ルーチンでエラーが処理され、エラーが発生したステートメントに制御が返されます。 `On Error GoTo 0` ステートメントによって、エラー トラップがオフになります。 さらに、次のステートメントによって生成されるエラーのコンテキストを確実に認識できるように、`On Error Resume Next` ステートメントを使用して、エラー トラップを遅延します。 `Err.Clear` を使用して、エラーが処理された後に `Err` オブジェクトのプロパティがクリアされていることに注目してください。
+
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]
+
+## <a name="requirements"></a>必要条件
+ **名前空間:** [Microsoft.VisualBasic](../runtime-library-members.md)
+
+ **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Number%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Description%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
-- [End ステートメント](../../../visual-basic/language-reference/statements/end-statement.md)
-- [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)
-- [Resume ステートメント](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [エラー メッセージ](../../../visual-basic/language-reference/error-messages/index.md)
-- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [End ステートメント](end-statement.md)
+- [Exit ステートメント](exit-statement.md)
+- [Resume ステートメント](resume-statement.md)
+- [エラー メッセージ](../error-messages/index.md)
+- [Try...Catch...Finally ステートメント](try-catch-finally-statement.md)

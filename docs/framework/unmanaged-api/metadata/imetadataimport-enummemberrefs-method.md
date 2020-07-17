@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780453"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503758"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs メソッド
 指定した型のメンバーを表す MemberRef トークンを列挙します。  
@@ -31,10 +29,10 @@ ms.locfileid: "67780453"
   
 ```cpp  
 HRESULT EnumMemberRefs (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]   mdToken        tkParent,   
-   [out]  mdMemberRef    rMemberRefs[],   
-   [in]   ULONG          cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]   mdToken        tkParent,
+   [out]  mdMemberRef    rMemberRefs[],
+   [in]   ULONG          cMax,
    [out]  ULONG          *pcTokens  
 );  
 ```  
@@ -44,34 +42,34 @@ HRESULT EnumMemberRefs (
  [入力、出力]列挙子へのポインター。  
   
  `tkParent`  
- [in]そのメンバーが列挙型の TypeDef、TypeRef、MethodDef、または ModuleRef トークンです。  
+ からメンバーを列挙する型の TypeDef、TypeRef、MethodDef、または ModuleRef トークン。  
   
  `rMemberRefs`  
- [out]MemberRef トークンを格納するために使用する配列。  
+ 入出力MemberRef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rMemberRefs` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]実際に返される MemberRef トークン数`rMemberRefs`します。  
+ 入出力で返された MemberRef トークンの実際の数 `rMemberRefs` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` 正常に返されます。|  
-|`S_FALSE`|MemberRef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 にします。|  
+|`S_OK`|`EnumMemberRefs`正常に返されました。|  
+|`S_FALSE`|列挙する MemberRef トークンがありません。 この場合、 `pcTokens` はゼロになります。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

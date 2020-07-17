@@ -15,25 +15,23 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780459"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492205"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls メソッド
-指定したによって実装されるすべてのインターフェイスを列挙`TypeDef`します。 
+指定したによって実装されているすべてのインターフェイスを列挙 `TypeDef` します。
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
-   [in, out]  HCORENUM       *phEnum,   
+   [in, out]  HCORENUM       *phEnum,
    [in]   mdTypeDef          td,  
-   [out]  mdInterfaceImpl    rImpls[],   
+   [out]  mdInterfaceImpl    rImpls[],
    [in]   ULONG              cMax,  
    [out]  ULONG*             pcImpls  
 );  
@@ -44,38 +42,38 @@ HRESULT EnumInterfaceImpls (
  [入力、出力]列挙子へのポインター。  
   
  `td`  
- [in]インターフェイスの実装を表す MethodDef トークンを持つが列挙 TypeDef のトークンです。  
+ からインターフェイスの実装を表す MethodDef トークンを列挙する TypeDef のトークン。  
   
  `rImpls`  
- [out]MethodDef トークンを格納するために使用する配列。  
+ 入出力MethodDef トークンを格納するために使用される配列。  
   
  `cMax`  
- [in] `rImpls` 配列の最大サイズ。  
+ から配列の最大長 `rImpls` 。  
   
  `pcImpls`  
- [out]実際のトークンで返される数`rImpls`します。  
+ 入出力で返されたトークンの実際の数 `rImpls` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` 正常に返されます。|  
-|`S_FALSE`|MethodDef トークンを列挙することはありません。 その場合は、 `pcImpls` 0 に設定されます。|  
+|`S_OK`|`EnumInterfaceImpls`正常に返されました。|  
+|`S_FALSE`|列挙する MethodDef トークンがありません。 この場合、 `pcImpls` は0に設定されます。|  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-列挙体のコレクションを返します`mdInterfaceImpl`各インターフェイスを指定した実装のためのトークン`TypeDef`します。 インターフェイスのトークンは、インターフェイスが指定された順序で返されます (を通じて`DefineTypeDef`または`SetTypeDefProps`)。 プロパティは、返された`mdInterfaceImpl`を使用してトークンを照会できます[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)します。
+列挙体は `mdInterfaceImpl` 、指定したによって実装された各インターフェイスのトークンのコレクションを返し `TypeDef` ます。 インターフェイストークンは、インターフェイスが指定された順序で返され `DefineTypeDef` ます (またはを使用 `SetTypeDefProps` )。 返されたトークンのプロパティは、 `mdInterfaceImpl` [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)を使用して照会できます。
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

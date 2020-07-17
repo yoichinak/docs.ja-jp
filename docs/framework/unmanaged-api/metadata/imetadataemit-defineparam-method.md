@@ -15,71 +15,69 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777551"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004358"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
-指定したトークンによって参照されるメソッドの指定したシグネチャを持つパラメーターの定義を作成し、そのパラメーターの定義のトークンを取得します。  
+指定したトークンによって参照されるメソッドに対して、指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT DefineParam (  
-    [in]  mdMethodDef md,   
-    [in]  ULONG       ulParamSeq,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
+    [in]  mdMethodDef md,
+    [in]  ULONG       ulParamSeq,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
     [in]  void const  *pValue,  
-    [in]  ULONG       cchValue,   
-    [out] mdParamDef  *ppd   
+    [in]  ULONG       cchValue,
+    [out] mdParamDef  *ppd
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- [in]パラメーターが定義されているメソッドのトークン。  
+ からパラメーターが定義されているメソッドのトークン。  
   
  `ulParamSeq`  
- [in]パラメーターのシーケンス番号。  
+ からパラメーターのシーケンス番号。  
   
  `szName`  
- [in]Unicode でパラメーターの名前。  
+ からUnicode でのパラメーターの名前。  
   
  `dwParamFlags`  
- [in]パラメーターのフラグ。 これは、ビットマスクの`CorParamAttr`値。  
+ からパラメーターのフラグ。 これは、値のビットマスクです `CorParamAttr` 。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 定数の値。  
+ [入力] `ELEMENT_TYPE_` *\** 定数値の。  
   
  `pValue`  
- [in]パラメーターの定数値。  
+ からパラメーターの定数値。  
   
  `cchValue`  
- [in]Unicode 文字で、サイズの`pValue`します。  
+ からのサイズ (Unicode 文字) `pValue` 。  
   
  `ppd`  
- [out]`mdParamDef`に割り当てられたトークン。  
+ 入出力`mdParamDef`割り当てられたトークン。  
   
-## <a name="remarks"></a>Remarks  
- シーケンスの値で`ulParamSeq`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。  
+## <a name="remarks"></a>コメント  
+ パラメーターの場合、のシーケンス値は `ulParamSeq` 1 から始まります。 戻り値のシーケンス番号は0です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

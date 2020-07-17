@@ -1,13 +1,13 @@
 ---
-title: 集計操作 (Visual Basic)
+title: 集計操作
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 8e2c9698de67dc4def348a03c9d69713a6130f31
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669024"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383794"
 ---
 # <a name="aggregation-operations-visual-basic"></a>集計操作 (Visual Basic)
 集計の操作では、値の集合体から単一の値が計算されます。 たとえば、1 か月分の毎日の気温値から 1 日あたりの平均の気温値を計算することが集計操作です。  
@@ -33,42 +33,42 @@ ms.locfileid: "61669024"
 ## <a name="query-expression-syntax-examples"></a>クエリ式の構文例  
   
 ### <a name="average"></a>平均  
- 次のコード例では、`Aggregate Into Average`温度を表す数値の配列の平均温度を計算する Visual Basic での句。  
+ 次のコード例では、Visual Basic の `Aggregate Into Average` 句を使用して、温度を表す数値配列の平均温度を計算します。  
   
  [!code-vb[CsLINQAggregating#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#1)]  
   
 ### <a name="count"></a>カウント  
- 次のコード例では、 `Aggregate Into Count` 80 以上である、配列の値の数をカウントする Visual Basic での句。  
+ 次のコード例は、Visual Basic の `Aggregate Into Count` 句を使用して、80 以上の値が配列に何個含まれるかをカウントします。  
   
  [!code-vb[CsLINQAggregating#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#2)]  
   
 ### <a name="longcount"></a>LongCount  
- 次のコード例では、`Aggregate Into LongCount`句は、配列の値の数をカウントします。  
+ 次のコード例は、`Aggregate Into LongCount` 句を使用して、配列に含まれる値の数をカウントします。  
   
  [!code-vb[CsLINQAggregating#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#3)]  
   
 ### <a name="max"></a>最大  
- 次のコード例では、`Aggregate Into Max`温度を表す数値の配列の最大の温度を計算する句。  
+ 次のコード例では、`Aggregate Into Max` 句を使用して、温度を表す数値配列の最高温度を計算します。  
   
  [!code-vb[CsLINQAggregating#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#4)]  
   
 ### <a name="min"></a>最小  
- 次のコード例では、`Aggregate Into Min`温度を表す数値の配列の最小の温度を計算する句。  
+ 次のコード例では、`Aggregate Into Min` 句を使用して、温度を表す数値配列の最低温度を計算します。  
   
  [!code-vb[CsLINQAggregating#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#5)]  
   
 ### <a name="sum"></a>Sum  
- 次のコード例では、`Aggregate Into Sum`経費を表す値の配列から経費合計金額を計算する句。  
+ 次のコード例では、`Aggregate Into Sum` 句を使用して、経費を表す値の配列から経費の総額を計算します。  
   
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [方法: CSV テキスト ファイル (LINQ) (Visual Basic) で列の値を計算します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
-- [方法: 数、合計、または平均データ](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
-- [方法: クエリ結果内の最小値と最大値を検索します。](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
-- [方法: 最大ファイルまたはディレクトリ ツリー (LINQ) (Visual Basic) 内のファイルのクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
-- [方法: 一連のフォルダー (LINQ) (Visual Basic) のバイト数の合計数をクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Aggregate 句](../../../language-reference/queries/aggregate-clause.md)
+- [方法: CSV テキスト ファイルの列値を計算する (LINQ) (Visual Basic)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [方法: データの数、合計、または平均の算出](../../language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
+- [方法: クエリ結果内の最小値と最大値の検索](../../language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
+- [方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (Visual Basic)](how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [方法: 一連のフォルダーの合計バイト数を照会する (LINQ) (Visual Basic)](how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753594"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976097"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject メソッド
-新しいパラメーター化された型のオブジェクトをインスタンス化して、オブジェクトのコンス トラクター メソッドを呼び出します。  
+新しいパラメーター化された型オブジェクトをインスタンス化し、オブジェクトのコンストラクターメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,28 +39,28 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>パラメーター  
  `pConstructor`  
- [in]ICorDebugFunction を表すオブジェクトをインスタンス化されるオブジェクトのコンス トラクターへのポインター。  
+ からインスタンス化するオブジェクトのコンストラクターを表す、のオブジェクトへのポインター。  
   
  `nTypeArgs`  
- [in]型引数の数が渡されます。  
+ から渡された型引数の数。  
   
  `ppTypeArgs`  
- [in]ICorDebugType を表すオブジェクトをインスタンス化されているオブジェクトの型引数が指す各ポインターの配列。  
+ からポインターの配列。各ポインターは、インスタンス化されているオブジェクトの型引数を表す、テキスト型のオブジェクトを指します。  
   
  `nArgs`  
- [in]コンス トラクターに渡された引数の数。  
+ からコンストラクターに渡された引数の数。  
   
  `ppArgs`  
- [in]コンス トラクターに渡される引数の値を表す ICorDebugValue オブジェクトを指す各ポインターの配列。  
+ からポインターの配列。各ポインターは、コンストラクターに渡される引数値を表す ICorDebugValue オブジェクトを指します。  
   
 ## <a name="remarks"></a>Remarks  
- オブジェクトのコンス トラクターがかかる場合があります<xref:System.Type>パラメーター。  
+ オブジェクトのコンストラクターは、パラメーター <xref:System.Type>を受け取ることができます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

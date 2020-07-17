@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e925d88a-67a5-4f76-88b8-09cedeed0232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 53b892cddbf716afbd137ead36a69aa42f22d331
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64d9db09b3e604247ab6a26cdca9eca22adbaace
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752230"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976305"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip メソッド
-指定数の項目では、列挙体にカーソルを移動します。  
+指定した数の項目だけ、列挙内でカーソルを前方に移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +35,17 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]カーソルを前方に移動する項目の数。  
+ からカーソルを前方に移動する項目の数。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [ICorDebugEnum インターフェイス](icordebugenum-interface1.md)

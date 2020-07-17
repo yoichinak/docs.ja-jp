@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e31f0a649fd1ca80d6557a0a7176549c67bf203
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501925"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection メソッド
 新しい接続が作成されたことをデバッガーに通知します。  
@@ -39,31 +37,31 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>パラメーター  
  `pProcess`  
- [in]接続が作成されたプロセスを表す"ICorDebugProcess"オブジェクトへのポインター  
+ から接続が作成されたプロセスを表す "いいプロセス" オブジェクトへのポインター  
   
  `dwConnectionId`  
- [in]新しい接続の ID。  
+ から新しい接続の ID。  
   
  `pConnName`  
- [in]新しい接続の名前へのポインター。  
+ から新しい接続の名前へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- A`CreateConnection`コールバックは、次の場合のいずれかで発生します。  
+## <a name="remarks"></a>解説  
+ `CreateConnection`コールバックは、次のいずれかの場合に発生します。  
   
-- ときに、デバッガーは、接続を含むプロセスにアタッチされます。 ランタイムの生成し、ディスパッチここを`CreateConnection`イベントと[icordebugmanagedcallback 2::changeconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md)プロセス内の各接続のイベント。  
+- デバッガーが接続を含むプロセスにアタッチする場合。 この場合、ランタイムは、 `CreateConnection` プロセス内の各接続に対して、イベントと、 [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md)イベントを生成してディスパッチします。  
   
-- ホストが呼び出したときに[iclrdebugmanager::beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)で、[ホスト API](../../../../docs/framework/unmanaged-api/hosting/index.md)します。  
+- ホストが[ホスティング API](../hosting/index.md)で[ICLRDebugManager:: beginconnection](../hosting/iclrdebugmanager-beginconnection-method.md)を呼び出すとき。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 インターフェイス](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

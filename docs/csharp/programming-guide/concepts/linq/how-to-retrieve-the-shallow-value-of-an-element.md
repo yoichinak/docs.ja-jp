@@ -1,15 +1,15 @@
 ---
-title: '方法: 要素の浅い値を取得する (C#)'
+title: 要素の浅い値を取得する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 570f9837d04352fb291f0b79f85fb9d7f68ff09d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485037"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75347445"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>方法: 要素の浅い値を取得する (C#)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>要素の浅い値を取得する方法 (C#)
 このトピックでは、要素の浅い値を取得する方法について説明します。 浅い値は、特定の要素のみの値のことです。これに対し、深い値とは、すべての子孫要素の値が単一の文字列として連結された値をいいます。  
   
  キャストまたは <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティによって要素値を取得する場合は、深い値を取得することになります。 浅い値を取得するには、次の例のように `ShallowValue` 拡張メソッドを使用します。 浅い値を取得することは、要素をその内容に基づいて選択する必要がある場合に役立ちます。  
@@ -72,13 +72,13 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
 Column  Name="Name"         =Customer.Name.Heading  
 Column  Name="CustomerId"   =Customer.CustomerId  
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

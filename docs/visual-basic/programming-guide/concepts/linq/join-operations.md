@@ -1,13 +1,13 @@
 ---
-title: 結合操作 (Visual Basic)
+title: 結合演算
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 2e299b407712148db92c1c19a32fa318737ccf76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834377"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397546"
 ---
 # <a name="join-operations-visual-basic"></a>結合操作 (Visual Basic)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -24,15 +24,15 @@ ms.locfileid: "61834377"
   
 |メソッド名|説明|Visual Basic のクエリ式の構文|説明|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Join|キー セレクター関数に基づいて 2 つのシーケンスを結合し、値のペアを抽出します。|`From x In …, y In … Where x.a = y.a`<br /><br /> - または -<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|Join|キー セレクター関数に基づいて 2 つのシーケンスを結合し、値のペアを抽出します。|`From x In …, y In … Where x.a = y.a`<br /><br /> \- または -<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|キー セレクター関数に基づいて 2 つのシーケンスを結合し、各要素について結果として得られる一致をグループ化します。|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [匿名型](../../language-features/objects-and-classes/anonymous-types.md)
 - [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
-- [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
-- [方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションを設定します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Join 句](../../../language-reference/queries/join-clause.md)
+- [方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)
+- [方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)

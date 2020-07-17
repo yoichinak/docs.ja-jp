@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 70b40095ffcfea37414b7de2a678ad8555423b12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778548"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176605"
 ---
-# <a name="asmdisplayflags-enumeration"></a>ASM_DISPLAY_FLAGS 列挙型
-バージョン、ビルド、カルチャ、署名、および表示名を持つはによって取得するアセンブリのことを示します、 [iassemblyname::getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)メソッド。  
+# <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 列挙型
+[表示名が取得](iassemblyname-getdisplayname-method.md)されるアセンブリのバージョン、ビルド、カルチャ、シグネチャなどを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,29 +39,29 @@ typedef enum {
     ASM_DISPLAYF_RETARGET                = 0x80,  
     ASM_DISPLAYF_CONFIG_MASK             = 0x100,  
     ASM_DISPLAYF_MVID                    = 0x200,  
-    ASM_DISPLAYF_FULL                    =   
-                      ASM_DISPLAYF_VERSION           |   
-                      ASM_DISPLAYF_CULTURE           |   
-                      ASM_DISPLAYF_PUBLIC_KEY_TOKEN  |   
-                      ASM_DISPLAYF_RETARGET          |   
+    ASM_DISPLAYF_FULL                    =
+                      ASM_DISPLAYF_VERSION           |
+                      ASM_DISPLAYF_CULTURE           |
+                      ASM_DISPLAYF_PUBLIC_KEY_TOKEN  |
+                      ASM_DISPLAYF_RETARGET          |
                       ASM_DISPLAYF_PROCESSORARCHITECTURE  
   
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a>Remarks  
- `ASM_DISPLAYF_FULL` バージョンに加えられた変更の反映、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。 返された値が変更可能なことを前提としてはいません。  
+## <a name="remarks"></a>解説  
+ `ASM_DISPLAYF_FULL`[は、IAssemblyName](iassemblyname-interface.md)オブジェクトのバージョンに対して行われた変更を反映します。 戻り値が変更不可であると仮定しないでください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** フュージョン.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [fusion 列挙体](fusion-enumerations.md)

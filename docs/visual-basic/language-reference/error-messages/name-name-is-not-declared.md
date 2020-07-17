@@ -7,43 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6fa4639b97e4314d8752ae520e94a58a189b7cbb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651026"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397169"
 ---
-# <a name="name-name-is-not-declared"></a>名前 '\<名 >' が宣言されていません
-ステートメントがプログラミング要素の場合を参照しますが、コンパイラは、正確な名前を持つ要素を見つけることができません。  
+# <a name="name-name-is-not-declared"></a>名前 '\<name>' は宣言されていません。
+ステートメントでプログラミング要素を参照していますが、名前が完全に一致する要素をコンパイラが見つけることができません。  
   
  **エラー ID:** BC30451  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. 参照元のステートメントで名前のスペルを確認します。 Visual Basic では、大文字と小文字が、スペルにその他の違いは完全に別の名前と見なされます。 アンダースコア (`_`) も名前の一部であり、スペルに含まれます。  
+1. 参照元のステートメントで名前のスペルを確認します。 Visual Basic では、大文字と小文字が区別されませんが、スペルに他の何らかの違いがあった場合は完全に異なる名前と見なされます。 アンダースコア (`_`) も名前の一部であり、スペルに含まれます。  
   
-2. メンバー アクセス演算子があることを確認 (`.`) オブジェクトとメンバーの間。 たとえば、 <xref:System.Windows.Forms.TextBox> という名前の `TextBox1`コントロールがある場合、このコントロールの <xref:System.Windows.Forms.TextBoxBase.Text%2A> プロパティにアクセスするには、「 `TextBox1.Text`」と入力する必要があります。 代わりに「 `TextBox1Text`」と入力した場合、別の名前と見なされます。  
+2. オブジェクトとそのメンバーの間にメンバー アクセス演算子 (`.`) を指定していることを確認します。 たとえば、 <xref:System.Windows.Forms.TextBox> という名前の `TextBox1`コントロールがある場合、このコントロールの <xref:System.Windows.Forms.TextBoxBase.Text%2A> プロパティにアクセスするには、「 `TextBox1.Text`」と入力する必要があります。 代わりに「 `TextBox1Text`」と入力した場合、別の名前と見なされます。  
   
-3. スペルが正しいことと、オブジェクト メンバー アクセスの構文が正しくの場合は、要素が宣言されていることを確認します。 詳細については、次を参照してください。 [Declared Elements](../../programming-guide/language-features/declared-elements/index.md)します。  
+3. スペルが正しく、オブジェクト メンバー アクセスの構文が正しい場合は、要素が宣言されていることを確認します。 詳細については、[宣言された要素](../../programming-guide/language-features/declared-elements/index.md)に関するページを参照してください。  
   
-4. プログラミング要素が宣言されている場合は、スコープ内にあることを確認します。 参照元のステートメントがプログラミング要素が宣言領域の外側にある場合は、要素名を修飾する必要があります。 詳細については、「 [Scope in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
+4. プログラミング要素が宣言されている場合、それがスコープ内にあることを確認します。 参照元のステートメントがプログラミング要素を宣言している領域の外部にある場合は、要素名を修飾する必要がある場合があります。 詳細については、「 [Scope in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
 
-5. 完全修飾型または型およびメンバーの名前を使用しない場合 (たとえば、コードがプロパティとして`MethodInfo.Name`の代わりに`System.Reflection.MethodInfo.Name`)、追加、 [Imports ステートメント](../statements/imports-statement-net-namespace-and-type.md)します。
+5. 完全修飾型または型とメンバー名を使用していない (たとえば、コードで `System.Reflection.MethodInfo.Name` ではなく `MethodInfo.Name` としてプロパティを参照している) 場合は、[Imports ステートメント](../statements/imports-statement-net-namespace-and-type.md)を追加します。
 
-6. SDK スタイル プロジェクトをコンパイルしようとしているかどうか (のプロジェクトを\*.vbproj ファイル、行で始まる`<Project Sdk="Microsoft.NET.Sdk">`)、およびエラー メッセージが参照型または Microsoft.VisualBasic.dll アセンブリ内のメンバーに、アプリケーションへの構成Visual Basic ランタイム ライブラリへの参照を使用してコンパイルします。 既定では、ライブラリのサブセットは SDK スタイル プロジェクトでアセンブリに埋め込まれます。
+6. SDK スタイルのプロジェクト (`<Project Sdk="Microsoft.NET.Sdk">` 行で始まる \*.vbproj ファイルによるプロジェクト) をコンパイルしようとし、エラーメッセージで、Microsoft.VisualBasic.dll アセンブリの型またはメンバーが参照されている場合は、Visual Basic ランタイム ライブラリへの参照を使用してコンパイルするようにアプリケーションを構成します。 既定で、ライブラリのサブセットは、SDK スタイルのプロジェクトのアセンブリに埋め込まれます。
 
-   たとえば、次の例のため、コンパイルが失敗した、<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A?displayProperty=fullName>メソッドが見つかりません。 アプリケーションに含まれている Visual Basic ランタイムのサブセットでは埋め込まれません。  
+   たとえば、次の例では、<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType%2A?displayProperty=fullName> メソッドが見つからないため、コンパイルに失敗します。 アプリケーションに含まれている Visual Basic ランタイムのサブセットに埋め込まれていません。  
 
-   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/program1.vb)]
+   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/program1.vb?highlight=7)]
 
-   このエラーに対処するための追加、`<VBRuntime>Default</VBRuntime>`要素をプロジェクトに`<PropertyGroup>`セクションを次の Visual Basic プロジェクト ファイルに示します。
+   このエラーに対処するには、次の Visual Basic プロジェクト ファイルに示すように、プロジェクトの `<PropertyGroup>` セクションに `<VBRuntime>Default</VBRuntime>` 要素を追加します。
 
-   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
+   [!code-xml[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
 
 ## <a name="see-also"></a>関連項目
 
-- [宣言と定数の概要](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)
-- [Visual Basic の名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [宣言と定数の概要](../keywords/declarations-and-constants-summary.md)
+- [Visual Basic の名前付け規則](../../programming-guide/program-structure/naming-conventions.md)
+- [宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

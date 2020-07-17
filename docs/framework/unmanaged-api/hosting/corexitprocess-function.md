@@ -18,46 +18,44 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a60805e1fd78cb14835957a7afc14fe279cb20fb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758516"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616568"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 関数
 現在のアンマネージ プロセスを終了します。  
   
- この関数は、.NET Framework 4 では廃止されました。 使用して、 [iclrmetahost::exitprocess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)メソッド代わりにします。  
+ この関数は .NET Framework 4 で非推奨とされました。 代わりに[ICLRMetaHost:: ExitProcess](iclrmetahost-exitprocess-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-void STDMETHODCALLTYPE CorExitProcess (   
+void STDMETHODCALLTYPE CorExitProcess (
   int  exitCode  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `exitCode`  
- プロセス終了コードを指定する整数。  
+ プロセス終了コードを指定する整数です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
->  以降、.NET Framework 4 で`CorExitProcess`従来の Api がバインドされているランタイムだけでなく、プロセスの開始ごとランタイムが終了します。  
+> .NET Framework 4 以降では、 `CorExitProcess` レガシ api がバインドされているランタイムだけでなく、プロセスで開始されたすべてのランタイムを終了します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

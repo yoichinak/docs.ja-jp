@@ -1,20 +1,20 @@
 ---
-title: Visual Basic2 で XML リテラルの概要
+title: Visual Basic の XML リテラルの概要 2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 8b92d22727c50274d57a5e407a0ca42807de3a94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834276"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397585"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic の XML リテラルの概要
-このセクションでは、Visual Basic で XML ツリーの作成に関する情報を提供します。  
+ここでは、Visual Basic での XML ツリーの作成について説明します。  
   
- LINQ クエリの結果をコンテンツとして XML ツリーの使用方法の詳細については、次を参照してください。[関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)します。  
+ LINQ クエリの結果を XML ツリーの内容として使用する方法については、「[関数型構築 (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md)」を参照してください。  
   
- Visual Basic で XML リテラルの詳細については、次を参照してください。[概要の LINQ to Visual Basic における XML](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)します。  
+ Visual Basic における XML リテラルの詳細については、「[Visual Basic における LINQ to XML の概要](../../language-features/xml/overview-of-linq-to-xml.md)」を参照してください。  
   
 ## <a name="creating-xml-trees"></a>XML ツリーの作成  
  <xref:System.Xml.Linq.XElement> (この場合は `contacts`) を作成する方法を次の例に示します。  
@@ -40,7 +40,7 @@ Dim contacts As XElement = _
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
-Console.WriteLine(n)   
+Console.WriteLine(n)
 ```  
   
  この例を実行すると、次の出力が生成されます。  
@@ -190,11 +190,11 @@ Console.WriteLine("Child2 was {0}", _
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成 (Visual Basic)](creating-xml-trees.md)

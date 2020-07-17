@@ -1,54 +1,54 @@
 ---
-title: '方法: (Visual Basic) 列挙型を宣言します。'
+title: '方法: 列挙型を宣言する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c74b75adf0f56dd198375cb1ff24656d39ec074c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610578"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414454"
 ---
-# <a name="how-to-declare-enumerations-visual-basic"></a>方法: (Visual Basic) 列挙型を宣言します。
-持つ列挙体を作成する、`Enum`クラスまたはモジュールの宣言セクション内のステートメント。 メソッド内で列挙型を宣言することはできません。 適切なアクセス レベルを指定するには、使用`Private`、 `Protected`、 `Friend`、または`Public`します。  
+# <a name="how-to-declare-enumerations-visual-basic"></a>方法: 列挙型を宣言する (Visual Basic)
+列挙型は、クラスまたはモジュールの宣言セクションで `Enum` ステートメントを使用して作成します。 メソッド内で列挙型を宣言することはできません。 `Private`、`Protected`、`Friend`、`Public` のいずれかを使用して、適切なアクセス レベルを指定します。  
   
- `Enum`型の名前、基になる型とに一連のフィールドでは、それぞれの定数を表します。 名前は、有効な Visual Basic .NET 修飾子にする必要があります。 基になる型が整数型のいずれかを指定する必要があります:`Byte`、 `Short`、`Long`または`Integer`します。 `Integer` が既定値です。 列挙型では、常に厳密に型指定し、整数の数値型で置き換えることはできません。  
+ `Enum` 型には、名前、基になる型、フィールド一式を、それぞれ定数で指定します。 名前は、有効な Visual Basic .NET 修飾子である必要があります。 基になる型は、いずれかの整数型 (`Byte`、`Short`、`Long` または `Integer`) である必要があります。 `Integer` が既定値です。 列挙型の型指定は常に厳密であり、整数型との互換性はありません。  
   
- 列挙体は、浮動小数点値を持つことはできません。 列挙には、浮動小数点値が割り当てられている場合`Option Strict On`、コンパイラ エラーが発生します。 場合`Option Strict`は`Off`に、値が自動的に変換、`Enum`型。  
+ 列挙型に浮動小数点値を指定することはできません。 `Option Strict On` を指定して列挙型に浮動小数点値を割り当てた場合、コンパイラ エラーが発生します。 `Option Strict` に `Off` を指定した場合は、値は自動的に `Enum` 型に変換されます。  
   
- 使用する方法と、名について、`Imports`ステートメント、不要な名前の修飾を参照してください[列挙型と名前修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)します。  
+ 名前、および `Imports` ステートメントにより名前の修飾を不要にする方法については、[列挙型と名前の修飾](enumerations-and-name-qualification.md)に関するページを参照してください。  
   
 ### <a name="to-declare-an-enumeration"></a>列挙型を宣言するには  
   
-1. コードのアクセス レベルを含む宣言を記述、`Enum`キーワード、および有効な名前を次の例のようにそれぞれの宣言を異なる`Enum`します。  
+1. 次の例に示すように、コード アクセス レベル、`Enum` キーワード、有効な名前を含む宣言を記述し、それぞれで異なる `Enum` を宣言します。  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. 列挙体の定数を定義します。 既定では、最初の定数、列挙型でに初期化`0`、され、それに続く定数よりも前の定数のいずれかの値に初期化します。 たとえば、次の列挙`Days`、という名前の定数が含まれています`Sunday`値を持つ`0`、という名前の定数`Monday`値を持つ`1`、という名前の定数`Tuesday`の値を持つ`2`など。  
+2. 列挙型の定数を定義します。 既定では、列挙型の最初の定数は `0` に初期化され、以降の定数は前の定数より 1 大きい値に初期化されます。 たとえば、次の列挙型 `Days` では、`Sunday` という定数の値は `0`、`Monday` という定数の値は `1`、`Tuesday` という定数の値は `2` のようになります。  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. 代入ステートメントを使用して、列挙型の定数に値を明示的に割り当てることができます。 負の数値を含む、任意の整数値を割り当てることができます。 たとえば、エラー条件を表す 0 より小さい値を持つ定数たい場合があります。 次の列挙型定数`Invalid`値を明示的に割り当てられて`–1`と定数`Sunday`値が割り当てられている`0`します。 最初の定数、列挙型である`Saturday`値にも初期化`0`します。 値`Monday`は`1`(いずれかの値よりも詳細`Sunday`); の値`Tuesday`は`2`など。  
+3. 代入ステートメントを使用することで、列挙型の定数に値を明示的に割り当てることができます。 負の数値を含む任意の整数値を割り当てられます。 たとえば、エラー状態を示す 0 未満の値を定数に設定できます。 次の列挙型では、定数 `Invalid` に値 `–1` を、定数 `Sunday` に値 `0` を明示的に割り当てています。 `Saturday` は列挙型の最初の定数であるため、これも値 `0` に初期化されます。 `Monday` の値は (`Sunday` の値より 1 大きい) `1`、`Tuesday` の値は `2` のようになります。  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>明示的な型として列挙型を宣言するには  
   
-- 使用して、列挙型の種類を指定、`As`句では、次の例に示すようにします。  
+- 列挙型の型は、次の例に示すように `As` 句を使用して指定します。  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [方法: 列挙体のメンバーを参照してください。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [方法: Visual Basic で列挙型を反復処理します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [方法: 列挙値に関連付けられている文字列を確認します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
-- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [列挙型と名前の修飾](enumerations-and-name-qualification.md)
+- [方法: 列挙型のメンバーを参照する](how-to-refer-to-an-enumeration-member.md)
+- [方法: Visual Basic で列挙型を反復処理する](how-to-iterate-through-an-enumeration.md)
+- [方法: 列挙値に関連付けられている文字列を確認する](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [列挙型を使用する状況](when-to-use-an-enumeration.md)
+- [定数の概要](constants-overview.md)
+- [定数とリテラルのデータ型](constant-and-literal-data-types.md)
+- [定数と列挙体](../../../language-reference/constants-and-enumerations.md)

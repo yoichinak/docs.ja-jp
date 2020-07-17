@@ -15,33 +15,31 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503641"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
-名前、バイナリ シグネチャ、および相対仮想アドレスを含む、指定したメンバーの定義のメタデータに格納されている情報の取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。 これは単純なヘルパー メソッド: 場合*mb*は、MethodDef **GetMethodProps**が呼び出されます場合*mb*は、の FieldDef **GetFieldProps** 。呼び出されます。 他の方法の詳細を参照してください。 
+指定された <xref:System.Type> メタデータトークンによって参照されるメンバーの、名前、バイナリ署名、相対仮想アドレスなど、指定されたメンバー定義のメタデータに格納されている情報を取得します。 これは単純なヘルパーメソッドです。 *mb*が MethodDef の場合は、 **getmethodprops**が呼び出されます。*mb*が FieldDef の場合は、 **getfieldprops**が呼び出されます。 詳細については、これらの他の方法を参照してください。
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetMemberProps (  
-   [in]  mdToken           mb,   
+   [in]  mdToken           mb,
    [out] mdTypeDef         *pClass,  
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
    [out] DWORD             *pdwAttr,  
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] ULONG             *pulCodeRVA,   
-   [out] DWORD             *pdwImplFlags,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] ULONG             *pulCodeRVA,
+   [out] DWORD             *pdwImplFlags,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -49,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in]関連付けられているメタデータを取得するメンバーを参照するトークンです。  
+ から関連付けられているメタデータを取得するメンバーを参照するトークン。  
   
  `pClass`  
- [out]メンバーのクラスを表すメタデータ トークンへのポインター。  
+ 入出力メンバーのクラスを表すメタデータトークンへのポインター。  
   
  `szMember`  
- [out]メンバーの名前。  
+ 入出力メンバーの名前。  
   
  `cchMember`  
- [in]ワイド文字のサイズ、`szMember`バッファー。  
+ からバッファーのサイズ (ワイド文字単位) `szMember` 。  
   
  `pchMember`  
- [out]返される名前のワイド文字単位のサイズ。  
+ 入出力返される名前のワイド文字単位のサイズ。  
   
  `pdwAttr`  
- [out]いずれかのフラグ値がメンバーに適用します。  
+ 入出力メンバーに適用されるフラグ値。  
   
  `ppvSigBlob`  
- [out]メンバーのバイナリ メタデータ シグネチャへのポインター。  
+ 入出力メンバーのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out]バイト サイズ`ppvSigBlob`します。  
+ 入出力のサイズ (バイト単位) `ppvSigBlob` 。  
   
  `pulCodeRVA`  
- [out]メンバーの相対仮想アドレスへのポインター。  
+ 入出力メンバーの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [out]メンバーに関連付けられているすべてメソッド実装フラグ。  
+ 入出力メンバーに関連付けられているメソッド実装フラグ。  
   
  `pdwCPlusTypeFlag`  
- [out]マークするフラグを<xref:System.ValueType>します。 1 つは、`ELEMENT_TYPE_*`値。
+ 入出力をマークするフラグ <xref:System.ValueType> 。 値の1つです `ELEMENT_TYPE_*` 。
   
  `ppValue`  
- [out]このメンバーが返される定数文字列値。  
+ 入出力このメンバーによって返される定数文字列値。  
   
  `pcchValue`  
- [out]サイズの文字で`ppValue`、または場合は 0`ppValue`文字列を保持しません。  
+ 入出力の文字数のサイズ `ppValue` `ppValue` 。が文字列を保持しない場合は0。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

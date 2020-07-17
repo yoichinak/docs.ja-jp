@@ -2,24 +2,24 @@
 title: OLE DB スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645896"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783450"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB スキーマ コレクション
 ここでは、Microsoft SQL Server、Oracle、および Microsoft Jet 用の各 OLE DB プロバイダーでのスキーマ コレクションのサポートについて説明します。  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB Provider  
- Microsoft SQL Server OLE DB Driver は、共通のスキーマ コレクションに加えて次の特定のスキーマ コレクションをサポートしています。  
+ Microsoft SQL Server OLE DB Driver では、共通のスキーマ コレクションに加えて、次の特定のスキーマ コレクションがサポートされています。  
   
 - [テーブル]  
   
 - 列  
   
-- 手順  
+- プロシージャ  
   
 - ProcedureParameters  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64645896"
 |COLUMN_TDSCOLLATION|Byte[]|  
 |IS_COMPUTED|ブール型|  
   
-### <a name="procedures"></a>手順  
+### <a name="procedures"></a>プロシージャ  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -158,7 +158,7 @@ ms.locfileid: "64645896"
   
 - 列  
   
-- 手順  
+- プロシージャ  
   
 - ProcedureColumns  
   
@@ -215,7 +215,7 @@ ms.locfileid: "64645896"
 |DOMAIN_NAME|String|  
 |DESCRIPTION|String|  
   
-### <a name="procedures"></a>手順  
+### <a name="procedures"></a>プロシージャ  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -301,7 +301,7 @@ ms.locfileid: "64645896"
   
 - 列  
   
-- 手順  
+- プロシージャ  
   
 - Views  
   
@@ -354,7 +354,7 @@ ms.locfileid: "64645896"
 |DOMAIN_NAME|String|  
 |DESCRIPTION|String|  
   
-### <a name="procedures"></a>手順  
+### <a name="procedures"></a>プロシージャ  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -413,4 +413,4 @@ ms.locfileid: "64645896"
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

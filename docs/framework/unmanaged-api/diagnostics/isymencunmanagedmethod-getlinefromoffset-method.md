@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776888"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441917"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset メソッド
-オフセットに関連付けられている行の情報を取得します。 場合オフセット パラメーター (`dwOffset`) がシーケンス ポイントでは、このメソッドは、前のオフセットに関連付けられている行の情報を取得します。  
+オフセットに関連付けられている行情報を取得します。 オフセットパラメーター ( `dwOffset` ) がシーケンスポイントでない場合、このメソッドは、前のオフセットに関連付けられている行情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,29 +39,29 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `dwOffset`  
- [in]A`ULONG32`オフセットを格納しています。  
+ から`ULONG32`オフセットを格納している。  
   
  `pline`  
- [out]ポインターを`ULONG32`行を受け取る。  
+ 入出力行を受け取るへのポインター `ULONG32` 。  
   
  `pcolumn`  
- [out]ポインター、`ULONG32`列を受け取る。  
+ 入出力列を受け取るへのポインター `ULONG32` 。  
   
  `pendLine`  
- [out]ポインター、`ULONG32`最終行を受け取る。  
+ 入出力終了行を受け取るへのポインター `ULONG32` 。  
   
  `pendColumn`  
- [out]ポインター、`ULONG32`終了列を受け取る。  
+ 入出力終了列を受け取るへのポインター `ULONG32` 。  
   
  `pdwStartOffset`  
- [out]ポインター、`ULONG32`関連付けられているシーケンス ポイントを受け取る。  
+ 入出力`ULONG32`関連付けられたシーケンスポイントを受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod インターフェイス](isymencunmanagedmethod-interface.md)

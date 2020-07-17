@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751594"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176553"
 ---
-# <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
-アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
+# <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
+アセンブリ内の 1 つの属性に関する情報を格納`DWORD`し、3 つの s で構成されます。 各`DWORD`インターフェイスは`CurrentIntoBuffer`[、IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)インターフェイスのメソッドによって生成される文字バッファーへのオフセットです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +40,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ofsNamespace`|最初の文字バッファーにオフセットします。 属性の名前空間ではなく、一連の null 文字は、このオフセットは追跡されません。 そのためは使用されません。|  
-|`ofsName`|文字バッファーへの 2 つ目のオフセット。 この場所は、属性の名前の先頭をマークします。|  
-|`ofsValue`|文字バッファーに 3 つ目のオフセット。 この場所は、属性の値の開始をマークします。|  
+|`ofsNamespace`|文字バッファーへの最初のオフセット。 このオフセットの後には、属性の名前空間ではなく、一連の NULL 文字が続きます。 したがって、使用されません。|  
+|`ofsName`|文字バッファーへの 2 番目のオフセット。 この場所は、属性の名前の先頭を示します。|  
+|`ofsValue`|文字バッファーへの 3 番目のオフセット。 この位置は、属性の値の開始位置を示します。|  
   
 ## <a name="sample"></a>サンプル  
- 次の例は、最終的に設定されているいくつかの基本的な手順を示しています。`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+ 次の例は、いくつかの`IDENTITY_ATTRIBUTE_BLOB`基本的な手順を示しています。  
   
-1. 取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。  
+1. アセンブリの[IReferenceId](ireferenceidentity-interface.md)を取得します。  
   
-2. 呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。  
+2. メソッドを`IReferenceIdentity::EnumAttributes`呼び出し[、IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)を取得します。  
   
-3. 文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+3. 文字バッファーを作成し、構造体としてキャストします`IDENTITY_ATTRIBUTE_BLOB`。  
   
-4. 呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。 このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+4. インターフェイスの`CurrentIntoBuffer`メソッドを`IEnumIDENTITY_ATTRIBUTE`呼び出します。 このメソッドは、属性`Namespace` `Name`、、`Value`および を文字バッファーにコピーします。 これらの文字列への 3 つのオフセットは、`IDENTITY_ATTRIBUTE_BLOB`構造体で使用できるようになります。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -99,7 +97,7 @@ bool Init()
                                 (VOID **)&g_pfnGetIdentityAuthority);  
     }  
   
-    if (!g_pfnGetAssemblyIdentityFromFile ||   
+    if (!g_pfnGetAssemblyIdentityFromFile ||
         !g_pfnGetIdentityAuthority)  
     {  
         printf("Error: Cannot get required APIs from fusion.dll!\n");  
@@ -122,7 +120,7 @@ void Shutdown()
   
 void Usage()  
 {  
-    printf("EnumAssemblyAttributes: A tool to enumerate the identity   
+    printf("EnumAssemblyAttributes: A tool to enumerate the identity
             attributes of a given assembly.\n\n");  
     printf("Usage: EnumAssemblyAttributes AssemblyFilePath\n");  
     printf("\n");  
@@ -133,7 +131,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
     int     iResult = 1;  
     IUnknown                    *pUnk  = NULL;  
     IReferenceIdentity          *pRef  = NULL;  
-    HRESULT                     hr     = S_OK;     
+    HRESULT                     hr     = S_OK;
     IEnumIDENTITY_ATTRIBUTE     *pEnum = NULL;  
     BYTE                        abData[1024];  
     DWORD                       cbAvailable;  
@@ -150,16 +148,16 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         goto Exit;  
     }  
   
-    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],   
+    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],
                             __uuidof(IReferenceIdentity), &pUnk);  
   
     if (FAILED(hr)) {  
-        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",   
+        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",
                 hr);  
         goto Exit;  
     }  
   
-    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),   
+    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),
                               (void**)&pRef);  
     if (FAILED(hr)) {  
         goto Exit;  
@@ -167,7 +165,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
     hr = pRef->EnumAttributes(&pEnum);  
     if (FAILED(hr)) {  
-        printf("IReferenceIdentity::EnumAttributes failed with hr =   
+        printf("IReferenceIdentity::EnumAttributes failed with hr =
                 0x%x", hr);  
         goto Exit;  
     }  
@@ -177,7 +175,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         cbAvailable = sizeof(abData);  
         hr = pEnum->CurrentIntoBuffer(cbAvailable, abData, &cbUsed);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed   
+            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed
                     with hr = 0x%x", hr);  
             goto Exit;  
         }  
@@ -193,7 +191,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
         hr = pEnum->Skip(1);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =   
+            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =
                     0x%x", hr);  
             goto Exit;  
         }  
@@ -222,29 +220,29 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>サンプルを実行するには  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\>列挙アセンブリ属性.exe C:\WINDOWS\NET\フレームワーク\v2.0.50727\システム.dll  
   
-### <a name="sample-output"></a>出力例  
- Culture = neutral  
+### <a name="sample-output"></a>サンプル出力  
+ カルチャ = ニュートラル  
   
  名前 = システム  
   
- processorArchitecture = MSIL  
+ プロセッサアーキテクチャ = MSIL  
   
- PublicKeyToken = b77a5c561934e089  
+ 公開キートークン = b77a5c561934e089  
   
- バージョン 2.0.0.0 を =  
+ バージョン = 2.0.0.0  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** アイソレーション.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IReferenceIdentity インターフェイス](ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE インターフェイス](ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE 構造体](identity-attribute-structure.md)
+- [Fusion 構造体](fusion-structures.md)

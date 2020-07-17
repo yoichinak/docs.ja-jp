@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d0461709accf1a9300c072b62bd58734cb33fb8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759625"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209813"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception メソッド
-マネージ コードから例外がスローされたことをデバッガーに通知します。  
+マネージコードから例外がスローされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]例外がスローされたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から例外がスローされたアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]例外がスローされたスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ から例外がスローされたスレッドを表す、スレッドオブジェクトへのポインター。  
   
  `unhandled`  
- [in]この値が場合`false`例外が、まだそれ以外のアプリケーションによって処理されると、例外が処理されないとプロセスが終了します。  
+ からこの値がの場合、 `false` アプリケーションによって例外がまだ処理されていません。それ以外の場合、例外はハンドルされず、プロセスを終了します。  
   
 ## <a name="remarks"></a>Remarks  
- 特定の例外は、スレッド オブジェクトから取得できます。  
+ スレッドオブジェクトから特定の例外を取得できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

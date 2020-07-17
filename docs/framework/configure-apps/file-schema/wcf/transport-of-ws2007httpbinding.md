@@ -2,22 +2,23 @@
 title: <transport> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788298"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73732766"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<トランスポート > の\<ws2007HttpBinding >
+# <a name="transport-of-ws2007httpbinding"></a>\<transport> の \<ws2007HttpBinding>
 HTTP トランスポートの認証設定を定義します。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding >  
-\<binding>  
-\<セキュリティ >  
-\<transport>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<ws2007HttpBinding>**](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,7 +28,7 @@ HTTP トランスポートの認証設定を定義します。
            realm="string" />
 ```  
   
-## <a name="type"></a>型  
+## <a name="type"></a>Type  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -43,34 +44,34 @@ HTTP トランスポートの認証設定を定義します。
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
-|Digest|ダイジェスト認証を使用します。|  
+|ダイジェスト|ダイジェスト認証を使用します。|  
 |Ntlm|Windows ドメインのフォールバックとして NTLM 認証を使用します。|  
 |Windows|統合 Windows 認証を使用します。|  
-|証明書|X.509 証明書を使用して、クライアントを認証します。|  
+|Certificate|X.509 証明書を使用して、クライアントを認証します。|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
-|Digest|ダイジェスト認証を使用します。|  
+|ダイジェスト|ダイジェスト認証を使用します。|  
 |Ntlm|Windows ドメインのフォールバックとして NTLM を使用します。|  
 |Windows|統合 Windows 認証を使用します。|  
-|証明書|X.509 証明書を使用して、クライアントを認証します。|  
+|Certificate|X.509 証明書を使用して、クライアントを認証します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|セキュリティ機能を表す、 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)要素。|  
+|[\<security>](security-of-ws2007httpbinding.md)|要素のセキュリティ機能を表し [\<ws2007HttpBinding>](ws2007httpbinding.md) ます。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -78,8 +79,8 @@ HTTP トランスポートの認証設定を定義します。
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインド](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](bindings.md)

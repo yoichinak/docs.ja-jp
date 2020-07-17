@@ -1,47 +1,47 @@
 ---
-title: パスワードの複雑さ (Visual Basic) を検証しています
+title: パスワードの複雑さの検証
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 7b2d6a81f5dc88688a469b96d56a098a2b45c59f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663624"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363686"
 ---
-# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑な検証 (Visual Basic)
-このメソッドは、いくつかの強力なパスワードの特性を確認し、失敗、パスワードをチェックに関する情報を含む文字列パラメーターを更新します。  
+# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑さの検証 (Visual Basic)
+このメソッドでは、強力なパスワードの特性をチェックし、不合格になったチェックに関する情報で文字列パラメーターを更新します。  
   
- パスワードは、ユーザーを承認するために、セキュリティで保護されたシステムで使用できます。 ただし、パスワードは、承認されていないユーザーを推測するが困難である必要があります。 攻撃者が使用できる、*辞書攻撃*プログラムでは、ディクショナリ (または別の言語で複数の辞書) 内の単語のすべてを反復処理し、ユーザーのパスワードとして機能、単語のいずれかであるかどうかをテストします。 「ヤンキース」または「マスタング」などの脆弱なパスワードを簡単に推測できることができます。 強力なパスワードは、たとえば"でしょうか。'L1N3vaFiNdMeyeP@sSWerd!"が大幅に低下を推測できる可能性があります。 パスワードで保護されたシステムでは、ユーザーが強力なパスワードを選択することを確認してください。  
+ セキュリティで保護されたシステムでは、パスワードを使用してユーザーを承認できます。 ただし、パスワードは、承認されていないユーザーが推測するのは難しいものである必要があります。 攻撃者は、辞書 (またはさまざまな言語の複数の辞書) のすべての単語を反復処理する "*辞書攻撃*" プログラムを使用し、単語のいずれかがユーザーのパスワードとして機能するかどうかをテストする可能性があります。 "Yankees" や "Mustang" のような脆弱なパスワードはすぐに推測できます。 "?You'L1N3vaFiNdMeyeP@sSWerd!" のような強力なパスワードは、推測される可能性がはるかに低くなります。 パスワードで保護されたシステムでは、ユーザーが強力なパスワードを選択できるようにする必要があります。  
   
- 強力なパスワードは、(大文字、小文字、数字、および特殊文字の組み合わせを含む) 複合語ではないです。 この例では、複雑さを検証する方法を示します。  
+ 強力なパスワードは複雑であり (大文字、小文字、数字、特殊文字が混在)、単語ではありません。 次の例は、複雑さを検証する方法を示しています。  
   
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
- パスワードを格納する文字列を渡すことによって、このメソッドを呼び出します。  
+## <a name="compile-the-code"></a>コードのコンパイル  
+ 対象のパスワードを含む文字列を渡して、このメソッドを呼び出します。  
   
  この例で必要な要素は次のとおりです。  
   
-- <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
+- <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
- パスワードをネットワーク経由で移動する場合は、データを転送するためのセキュリティで保護されたメソッドを使用する必要があります。 詳細については、次を参照してください。 [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))します。
+ ネットワーク経由でパスワードを移動する場合は、セキュリティで保護された方法でデータを転送する必要があります。 詳細については、「[ASP.NET Web Application Security (ASP.NET Web アプリケーションのセキュリティ)](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))」をご覧ください。
   
- 精度を向上させることができます、`ValidatePassword`の他の複雑性チェックを追加することで機能します。  
+ 複雑さのチェックをさらに追加することで、`ValidatePassword` 関数の精度を高めることができます。  
   
-- パスワードとユーザーの名前、ユーザー識別子、およびアプリケーション定義の辞書からその部分文字列を比較します。 さらに、比較を実行するときに、視覚的に類似する文字と同等として扱われます。 たとえば、「1」と「3」の数字と同等として文字"l"と"e"を扱います。  
+- パスワードとその部分文字列を、ユーザーの名前、ユーザー識別子、アプリケーション定義の辞書と比較します。 さらに、比較を行うときに、見た目が似ている文字は同等に扱います。 たとえば、文字 "l"、"e" は数字 "1"、"3" と同等に扱います。  
   
-- 1 つだけに大文字がある場合、パスワードの最初の文字ではないことを確認します。  
+- 大文字が 1 つしかない場合は、パスワードの最初の文字ではないことを確認します。  
   
-- パスワードの最後の 2 つの文字がアルファベットの文字であることを確認してください。  
+- パスワードの最後の 2 文字が文字であることを確認します。  
   
-- キーボードの一番上の行からのすべてのシンボルが入力されるパスワードは許可されません。  
+- すべての記号がキーボードの上部の行から入力されているパスワードは許可しないでください。  
   
 ## <a name="see-also"></a>関連項目
 

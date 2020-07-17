@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c194cea21901015153626dc5aead49ed1b2c3df7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70ee853ff657a75dcc4df1454c4354f9d3f8202f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755116"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614722"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>ISymUnmanagedWriter2::DefineConstant2 メソッド
 定数値の名前を定義します。  
@@ -38,21 +36,21 @@ HRESULT DefineConstant2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in]定数の名前。  
+ から定数名。  
   
  `value`  
- [in]定数の値。  
+ から定数の値。  
   
  `sigToken`  
- [in]定数のメタデータ トークンです。  
+ から定数のメタデータトークン。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [DefineConstant メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+- [ISymUnmanagedWriter2 インターフェイス](isymunmanagedwriter2-interface.md)
+- [DefineConstant メソッド](isymunmanagedwriter-defineconstant-method.md)

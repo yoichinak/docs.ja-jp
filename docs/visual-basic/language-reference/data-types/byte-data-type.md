@@ -1,5 +1,5 @@
 ---
-title: バイト型 (Byte) (Visual Basic)
+title: バイト型 (Byte)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Byte
@@ -7,38 +7,39 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: e1725b709c03b0d77cf7e28761396236b5ef1a00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 97acd1bc2ff29bac6588216b9ee4a4f187078815
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622428"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374318"
 ---
-# <a name="byte-data-type-visual-basic"></a>Byte データ型 (Visual Basic)
-0 から 255 までの範囲の符号なし 8 ビット (1 バイト) 整数を保持します。
+# <a name="byte-data-type-visual-basic"></a>バイト (Byte) データ型 (Visual Basic)
+
+0 から 255 までの値の範囲の符号なし 8 ビット (1 バイト) の整数を保持します。
 
 ## <a name="remarks"></a>Remarks
 
-使用して、`Byte`バイナリ データを格納するデータ型。  
+バイナリ データを格納するには、`Byte` データ型を使用します。  
   
 `Byte` の既定値は 0 です。
 
-## <a name="literal-assignments"></a>リテラルの割り当て
+## <a name="literal-assignments"></a>リテラルの代入
 
-宣言し、初期化を`Byte`10 進リテラル、16 進リテラル、8 進数のリテラルを割り当てることや (Visual Basic 2017 以降) バイナリ リテラルでは、変数。 整数リテラルの範囲外の場合、 `Byte` (である場合より小さい<xref:System.Byte.MinValue?displayProperty=nameWithType>以上<xref:System.Byte.MaxValue?displayProperty=nameWithType>)、コンパイル エラーが発生します。
+`Byte` 変数を宣言し、10 進リテラル、16 進リテラル、8 進リテラル、または (Visual Basic 2017 以降) バイナリ リテラルを代入することによって初期化できます。 整数リテラルが `Byte` の範囲外にある場合 (つまり、<xref:System.Byte.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.Byte.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
 
-次の例では、整数が 16 進数、10 進数として表される 201 に等しくなりからのバイナリ リテラルを暗黙的に変換されます[整数](integer-data-type.md)に`byte`値。
+次の例では、整数 201 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、[Integer](integer-data-type.md) から `byte` 値に暗黙的に変換されています。
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
 
 > [!NOTE]
-> プレフィックスを使用する`&h`または`&H`を 16 進リテラル、プレフィックスを示すために`&b`または`&B`、バイナリ リテラル、およびプレフィックスを示すために`&o`または`&O`を 8 進数のリテラルを示すためにします。 10 進リテラルには、プレフィックスはありません。
+> 16 進リテラルを表すにはプレフィックス `&h` または `&H` を使い、バイナリ リテラルを表すにはプレフィックス `&b` または `&B` を使い、8 進リテラルを表すにはプレフィックス `&o` または `&O` を使います。 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 から始めて、使用することできますも、アンダー スコア文字`_`、読みやすさを強化するために、桁区切り記号として次の例として示します。
+Visual Basic 2017 以降では、次の例に示すように、アンダースコア文字 `_` を桁区切り記号として使って読みやすくすることもできます。
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
+Visual Basic 15.5 以降では、プレフィックスと 16 進数、2 進数、または 8 進数の間に先頭の区切り記号としてアンダースコア文字 (`_`) を使用することもできます。 次に例を示します。
 
 ```vb
 Dim number As Byte = &H_6A
@@ -48,26 +49,26 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **負の数。** `Byte`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`Byte`、Visual Basic の式を変換する`Short`最初。
+- **負の数値。** `Byte` は符号なしの型であるため、負の数を表すことはできません。 `Byte` 型に評価される式で、単項マイナス (`-`) 演算子を使用すると、Visual Basic で式が最初に `Short` に変換されます。
   
-- **形式の変換。** Visual Basic の読み取りまたはファイルの書き込み時に、または Dll、メソッド、およびプロパティを呼び出すときは、データ形式間で自動的に変換できます。 格納されているバイナリ データ`Byte`変数および配列はこのような形式の変換中に保持されます。 使用しないようにする、 `String` ANSI および Unicode 形式の間で変換中にその内容が破損することがあるため、バイナリ データ変数。
+- **形式変換。** Visual Basic でファイルの読み取りまたは書き込みを行うとき、または DLL、メソッド、およびプロパティを呼び出すときに、データ形式を自動的に変換させることができます。 `Byte` 変数および配列に格納されているバイナリ データは、そのような形式の変換時に保持されます。 バイナリ データには `String` 変数を使用しないでください。ANSI 形式と Unicode 形式間の変換時に、その内容が破損する可能性があります。
 
-- **拡大します。** `Byte`拡大変換後のデータ型`Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`、 `Decimal`、 `Single`、または`Double`します。 つまり、変換できる`Byte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
+- **拡大変換。** `Byte` データ型は、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、または `Double` に拡大変換されます。 これは、<xref:System.OverflowException?displayProperty=nameWithType> エラーを発生させることなく、これらの型のいずれかに `Byte` を変換できることを意味します。
   
-- **型宣言文字。** `Byte` リテラルの型文字または識別子の型文字がありません。
+- **型文字。** `Byte` には、リテラルの型文字も識別子の型文字も含まれません。
 
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
+- **Framework の型。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
 
 ## <a name="example"></a>例
 
- 次の例では、`b`は、`Byte`変数。 ステートメントは、変数の範囲とビット シフト演算子のアプリケーションを示します。
+ 次の例では、`b` は `Byte` 変数です。 このステートメントでは、変数の範囲と、それに対するビットシフト演算子の適用を示しています。
 
  [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Byte?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

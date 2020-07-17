@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e834042c5e00709fcb2198c1496a8a630841d069
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca9566168b8aae361af8d61539066624697a2d04
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779537"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805157"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx メソッド
-ジェネレーション 0 のセグメントのサイズと最大サイズを設定します。  
+ジェネレーション0のセグメントサイズと最大サイズを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +36,23 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>パラメーター  
  `SegmentSize`  
- [in]ガベージ コレクション システムによって使用されるセグメントのサイズ。  
+ からガベージコレクションシステムによって使用されるセグメントのサイズ。  
   
  `MaxGen0Size`  
- [in]ジェネレーション 0 の最大サイズ。  
+ からジェネレーション0の最大サイズ。  
   
-## <a name="remarks"></a>Remarks  
- 値を`SetGCStartupLimitsEx`ホストを開始する前に、セットを指定することができます。 これらの値は、後で変更することはできません。  
+## <a name="remarks"></a>解説  
+ を設定する値は、 `SetGCStartupLimitsEx` ホストを開始する前にのみ指定できます。 これらの値は後で変更することはできません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** GCHost.idl、GCHost.h  
+ **ヘッダー:** GCHost、GCHost  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IGCHost2 インターフェイス](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+- [IGCHost2 インターフェイス](igchost2-interface.md)

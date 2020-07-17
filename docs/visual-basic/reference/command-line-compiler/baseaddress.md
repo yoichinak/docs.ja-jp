@@ -9,19 +9,19 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: e8dfe95ef3385635f5839ecc96047911544a256e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: d241584195da7d6f74b45b191c4f63204c200d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591452"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357181"
 ---
 # <a name="-baseaddress"></a>-baseaddress
-DLL を作成するときに、既定のベース アドレスを指定します。  
+DLL を作成するときの既定のベース アドレスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -baseaddress:address  
 ```  
   
@@ -29,24 +29,24 @@ DLL を作成するときに、既定のベース アドレスを指定します
   
 |用語|定義|  
 |---|---|  
-|`address`|必須。 DLL のベース アドレス。 このアドレスは、16 進数として指定する必要があります。|  
+|`address`|必須です。 DLL のベース アドレス。 このアドレスは 16 進数として指定する必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
- DLL の既定のベース アドレスは、.NET Framework によって設定されます。  
+ DLL の既定のベース アドレスは、.NET Framework により設定されます。  
   
- このアドレスの下位ワードは丸められますことに注意します。 たとえば、0x11110001 とを指定する場合は丸められて 0x11110000 に丸められます。  
+ このアドレスの下位ワードは丸められることにご注意ください。 たとえば、0x11110001 と指定すると、丸められて 0x11110000 になります。  
   
- DLL の署名プロセスを完了するには使用、`–R`厳密名ツール (Sn.exe) のオプション。  
+ DLL の署名プロセスを完了するには、厳密名ツール (Sn.exe) の `–R` オプションを使用します。  
   
- このオプションには、ターゲットが DLL ではない場合は無視されます。  
+ ターゲットが DLL でない場合、このオプションは無視されます。  
   
-|Visual Studio IDE で-baseaddress を設定するには|  
+|Visual Studio IDE で -baseaddress を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.**[詳細設定]** をクリックします。<br />4.値を変更、 **DLL ベース アドレス:** ボックス。 **注:**    **DLL ベース アドレス:** ターゲットが DLL でない限り、ボックスは読み取り専用です。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4. **[DLL ベース アドレス]** ボックスの値を変更します。 **注:**    **[DLL ベース アドレス]** ボックスは、ターゲットが DLL の場合を除き、読み取り専用です。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-target (Visual Basic)](target.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)

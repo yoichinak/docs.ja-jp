@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f182dad17e28cc5d19393bb4e13d747e34249fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5485f43afe08fafa559d0418327a8f4f186860e7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782476"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491512"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName メソッド
-トークンの TypeDef メタデータへのポインターを取得、<xref:System.Type>指定した名前。  
+指定した名前を持つの TypeDef メタデータトークンへのポインターを取得し <xref:System.Type> ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,24 +37,24 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- [in]TypeDef トークンを取得する対象の型の名前。  
+ からTypeDef トークンを取得する型の名前。  
   
  `tkEnclosingClass`  
- [in]外側のクラスを表す TypeDef または TypeRef トークンです。 検索する型が入れ子になったクラスでない場合は、この値を NULL に設定します。  
+ から外側のクラスを表す TypeDef または TypeRef トークン。 検索する型が入れ子になったクラスでない場合は、この値を NULL に設定します。  
   
  `ptd`  
- [out]一致する TypeDef トークンへのポインター。  
+ 入出力一致する TypeDef トークンへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7f941cd-e25b-4b85-b1ce-5f77c9208fa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b631b16334b7e5019376fbb9a3f65d7fc2ced7dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76435be591d9f73d5975c5315f6e744f8972fc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776761"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614618"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId メソッド
-チェックサム アルゴリズム識別子を取得またはチェックサムがない場合は、すべてゼロの GUID を返します。  
+チェックサムアルゴリズム識別子を取得します。チェックサムがない場合は、すべての0の GUID を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,11 +34,11 @@ HRESULT GetCheckSumAlgorithmId(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]チェックサム アルゴリズム識別子を受け取る変数へのポインター。  
+ 入出力チェックサムアルゴリズム識別子を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument インターフェイス](isymunmanageddocument-interface.md)

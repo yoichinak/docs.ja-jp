@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fbed34f53ff43ca7887a58b3c879eaa74703da3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef11aa48f679592126f736c2877c697f02cb5e62
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744750"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379239"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote インターフェイス
 リモート ターゲット プロセスに対してマネージド デバッガーを起動または接続する機能を提供します。  
@@ -62,24 +60,24 @@ interface ICorDebugRemote : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|マネージ デバッグのために、リモート コンピューターでプロセスを作成します。|  
-|[ICorDebugRemote::DebugActiveProcessEx メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|デバッガーでのリモート コンピューター上のプロセスを起動します。|  
+|[ICorDebugRemote::CreateProcessEx メソッド](icordebugremote-createprocessex-method.md)|マネージデバッグ用にリモートコンピューター上にプロセスを作成します。|  
+|[ICorDebugRemote::DebugActiveProcessEx メソッド](icordebugremote-debugactiveprocessex-method.md)|デバッガーでリモートコンピューター上のプロセスを起動します。|  
   
 ## <a name="remarks"></a>Remarks  
- 現時点では、Macintosh コンピューターをリモートで実行されている Silverlight ベースのアプリケーションのターゲットのデバッグにのみ、この機能がサポートされています。  
+ 現在、この機能は、リモートの Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションターゲットをデバッグする場合にのみサポートされます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 4.5、4、3.5 SP1  
+ **.NET Framework のバージョン:** 4.5、4、3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget インターフェイス](icordebugremotetarget-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

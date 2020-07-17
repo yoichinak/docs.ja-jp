@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b40ed8e107d30c22b4ade25d29376b1b74583d1
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749106"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842414"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity メソッド
-この管理対象のオブジェクトの id を取得します。  
+このマネージオブジェクトの id を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT GetObjectIdentity (
   
 ## <a name="parameters"></a>パラメーター  
  `pBSTRGUID`  
- [out]オブジェクトが存在するプロセスの GUID へのポインター。  
+ 入出力オブジェクトが存在するプロセスの GUID へのポインター。  
   
  `AppDomainID`  
- [out]オブジェクトのアプリケーション ドメインの ID へのポインター。  
+ 入出力オブジェクトのアプリケーションドメインの ID へのポインター。  
   
  `pCCW`  
- [out]V-table という COM クラシックでのオブジェクトのインデックスへのポインター。  
+ 入出力COM クラシック v テーブル内のオブジェクトのインデックスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- マネージ オブジェクトの id には、v-table という COM クラシックでのプロセス GUID、アプリケーション ドメイン ID、およびオブジェクトのインデックスが含まれています。  
+## <a name="remarks"></a>コメント  
+ マネージオブジェクトの id には、プロセス GUID、アプリケーションドメイン ID、および COM クラシック v テーブルのオブジェクトのインデックスが含まれます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IManagedObject インターフェイス](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+- [IManagedObject インターフェイス](imanagedobject-interface.md)

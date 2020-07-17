@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9466df3f6413f86eb8558f0037b96c254b2a2e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777343"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614826"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable メソッド
-現在の構文のスコープの変数を 1 つ定義します。 このメソッドをスコープ全体で複数のホームのある同じ名前の変数を複数回呼び出すことができます。 この場合、ただしの値、`startOffset`と`endOffset`パラメーターが重複しない必要があります。  
+現在の構文のスコープの変数を 1 つ定義します。 このメソッドは、スコープ全体で複数のホームを持つ同じ名前の変数に対して複数回呼び出すことができます。 ただし、この場合は、 `startOffset` パラメーターとパラメーターの値 `endOffset` が重複していてはなりません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,43 +43,43 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in]ポインター、`WCHAR`ローカル変数の名前を定義します。  
+ から`WCHAR`ローカル変数名を定義するへのポインター。  
   
  `attributes`  
- [in]ローカル変数の属性。  
+ からローカル変数の属性。  
   
  `cSig`  
- [in]A`ULONG32`のサイズ (バイト単位) を示す、`signature`バッファー。  
+ から`ULONG32`バッファーのサイズ (バイト単位) を示す `signature` 。  
   
  `signature`  
- [in]ローカル変数シグネチャ。  
+ からローカル変数シグネチャ。  
   
  `addrKind`  
- [in]アドレスの種類。  
+ からアドレスの種類。  
   
  `addr1`  
- [in]パラメーター指定の最初のアドレス。  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in]パラメーター指定の 2 番目のアドレス。  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in]パラメーター指定の 3 番目のアドレス。  
+ からパラメーター指定の3番目のアドレス。  
   
  `startOffset`  
- [in]変数の開始オフセット。 このパラメーターは省略できます。 0 の場合は、このパラメーターは無視され、スコープ全体で変数が定義されています。 0 以外の値の場合は、現在のスコープのオフセット内、変数となります。  
+ から変数の開始オフセット。 このパラメーターは省略可能です。 0の場合、このパラメーターは無視され、スコープ全体にわたって変数が定義されます。 0以外の値の場合、変数は現在のスコープのオフセット内になります。  
   
  `endOffset`  
- [in]変数の終了オフセット。 このパラメーターは省略できます。 0 の場合は、このパラメーターは無視され、スコープ全体で変数が定義されています。 0 以外の値の場合は、現在のスコープのオフセット内、変数となります。  
+ から変数の終了オフセット。 このパラメーターは省略可能です。 0の場合、このパラメーターは無視され、スコープ全体にわたって変数が定義されます。 0以外の値の場合、変数は現在のスコープのオフセット内になります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineGlobalVariable メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [DefineLocalVariable2 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [ISymUnmanagedWriter インターフェイス](isymunmanagedwriter-interface.md)
+- [DefineGlobalVariable メソッド](isymunmanagedwriter-defineglobalvariable-method.md)
+- [DefineLocalVariable2 メソッド](isymunmanagedwriter2-definelocalvariable2-method.md)

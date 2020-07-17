@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 8157d296636d0f8661a35af35de561f5cc49c30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034517"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784811"
 ---
 # <a name="adding-datarelations"></a>DataRelation の追加
 複数の <xref:System.Data.DataSet> オブジェクトを含む <xref:System.Data.DataTable> では、<xref:System.Data.DataRelation> オブジェクトを使用して 1 つのテーブルを別のテーブルに関連付けたり、テーブル間を移動したり、関連付けたテーブルから子または親の行を戻したりできます。  
   
- 作成に必要な引数を**DataRelation**の名前は、 **DataRelation**作成されると、1 つまたは複数の配列<xref:System.Data.DataColumn>親と子として機能する列への参照リレーションシップ内の列。 作成した後、 **DataRelation**テーブル間を移動して、値を取得するに使用することができます。  
+ **DataRelation** の作成に必要な引数は、作成する **DataRelation** の名前、およびそのリレーションシップで親子の列となる列への 1 つ以上の <xref:System.Data.DataColumn> 参照の配列です。 **DataRelation** を作成した後は、それを使用して、テーブル間の移動や値の取得を行うことができます。  
   
- 追加する、 **DataRelation**を<xref:System.Data.DataSet>追加すると、既定では、<xref:System.Data.UniqueConstraint>親テーブルに、<xref:System.Data.ForeignKeyConstraint>子テーブルにします。 これらの既定の制約の詳細については、次を参照してください。 [DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  
+ <xref:System.Data.DataSet> に **DataRelation** を追加すると、既定では、<xref:System.Data.UniqueConstraint> が親テーブルに、<xref:System.Data.ForeignKeyConstraint> が子テーブルに追加されます。 これらの既定の制約について詳しくは、「[DataTable の制約](datatable-constraints.md)」をご覧ください。  
   
- 次のコード例を作成、 **DataRelation**を使用して 2 つ<xref:System.Data.DataTable>内のオブジェクト、<xref:System.Data.DataSet>します。 各<xref:System.Data.DataTable>という名前の列を含む**CustID**、2 つの間のリンクとして機能する<xref:System.Data.DataTable>オブジェクト。 例では、1 つを追加します。 **DataRelation**を、**リレーション**のコレクション、<xref:System.Data.DataSet>します。 例では、最初の引数の名前を指定する、 **DataRelation**作成中です。 2 番目の引数は、親を設定します。 **DataColumn** 3 番目の引数、子の設定と**DataColumn**します。  
+ 次のコード例では、<xref:System.Data.DataSet> の 2 つの <xref:System.Data.DataTable> オブジェクトを使用して、**DataRelation** を作成します。 各 <xref:System.Data.DataTable> にある **CustID** という名前の列は、2 つの <xref:System.Data.DataTable> オブジェクト間のリンクとして機能します。 例では、単一の **DataRelation** が <xref:System.Data.DataSet> の **Relations** コレクションに追加されます。 例の最初の引数では、作成する **DataRelation** の名前が指定されています。 2 番目の引数では親の **DataColumn** が設定され、3 番目の引数では子の **DataColumn** が設定されます。  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -33,9 +33,9 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- A **DataRelation**もが、**入れ子になった**プロパティに設定すると**true**、親テーブルから、関連する行の入れ子にする子テーブルから行が、使用して XML 要素として書き込まれるときに<xref:System.Data.DataSet.WriteXml%2A>します。 詳しくは、「[DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
+ **DataRelation** には、**Nested** プロパティもあります。それを **true** に設定すると、<xref:System.Data.DataSet.WriteXml%2A> を使用して XML 要素として書き込んだときに、子テーブルの行が、親テーブルの関連付けられた行の中に入れ子になります。 詳しくは、「[DataSet での XML の使用](using-xml-in-a-dataset.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet、DataTable、および DataView](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

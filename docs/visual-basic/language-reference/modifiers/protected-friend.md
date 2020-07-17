@@ -1,35 +1,35 @@
 ---
-title: Protected Friend (Visual Basic)
+title: Protected Friend
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 202d4f4a3a05a64ab1d74621268f28f6b55e8952
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053887"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404837"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
-キーワード組み合わせ `Protected Friend` はメンバー アクセス修飾子です。 両方を設定する[フレンド](friend.md)アクセスと[Protected](protected.md)および派生クラス独自のクラスからは、同じアセンブリ内の任意の場所からアクセスできるように、宣言された要素へのアクセス。 指定できます`Protected Friend`クラスのメンバーにのみ適用することはできません`Protected Friend`構造体のメンバーに構造体は継承できないためです。
+キーワード組み合わせ `Protected Friend` はメンバー アクセス修飾子です。 宣言された要素に対して、[Friend](friend.md) アクセスと [Protected](protected.md) アクセスの両方が許可されるため、同じアセンブリ内の任意の場所から、それらの独自のクラスから、および派生クラスから、それらにアクセスできます。 `Protected Friend` は、クラスのメンバーに対してのみ指定できます。構造体は継承できないため、構造体のメンバーに `Protected Friend` を適用することはできません。
 
 > [!NOTE]
-> Visual Studio での F1 ヘルプを選択する`protected friend`のいずれかのヘルプを提供します。[保護](protected.md)または[フレンド](friend.md)します。 IDE では、複合語ではなく、カーソルの下の 1 つのトークンを取得します。
+> Visual Studio で、`protected friend` に対して F1 ヘルプを選択すると、[protected](protected.md) または [friend](friend.md) のヘルプが表示されます。 IDE では、複合語ではなくカーソルの下にある 1 つのトークンが選択されます。
 
 ## <a name="rules"></a>ルール
 
-- **宣言コンテキスト。** 使用することができます`Protected Friend`クラス レベルでのみです。 これは、意味の宣言のコンテキストを`Protected`要素は、クラスでなければなりませんし、ソース ファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。 
+**宣言コンテキスト。** `Protected Friend` は、クラス レベルでのみ使用できます。 つまり、`Protected` 要素の宣言コンテキストはクラスにする必要があり、ソース ファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
 
 ## <a name="see-also"></a>関連項目
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Public](public.md)
+- [Protected](protected.md)
 - [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](private.md)
 - [Private Protected](./private-protected.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../programming-guide/language-features/procedures/index.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)

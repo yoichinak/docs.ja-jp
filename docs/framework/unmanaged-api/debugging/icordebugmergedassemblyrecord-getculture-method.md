@@ -1,25 +1,23 @@
 ---
-title: Icordebugmergedassemblyrecord::getculture メソッド
+title: ICorDebugMergedAssemblyRecord::GetCulture メソッド
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0472a52d0893bfd487cd6daa6548ec1ce0c44a9b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f73aac169cc048a87aca3bfc325cf8c6243012e9
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762211"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207864"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Icordebugmergedassemblyrecord::getculture メソッド
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::GetCulture メソッド
 アセンブリのカルチャ名文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetCulture(  
-   [in] ULONG32 cchCulture,   
-   [out] ULONG32 *pcchCulture,   
+   [in] ULONG32 cchCulture,
+   [out] ULONG32 *pcchCulture,
    [out, size_is(cchCulture), length_is(*pcchCulture)] WCHAR szCulture[]  
 );  
 ```  
@@ -38,18 +36,18 @@ HRESULT GetCulture(
  カルチャ名は、"en-US" (英語 (米国) カルチャ)、"neutral" (ニュートラル カルチャ) など、カルチャを識別する一意の文字列です。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugMergedAssemblyRecord インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord インターフェイス](icordebugmergedassemblyrecord-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

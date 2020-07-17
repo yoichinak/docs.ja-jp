@@ -1,6 +1,6 @@
 ---
-title: .NET Standard のオブジェクトがシリアル化可能なかどうかを判断する方法
-description: 実行時に .NET Standard の型をシリアル化できるかどうかを確認する方法を示します。
+title: .NET Standard オブジェクトがシリアル化可能かどうかを判断する方法
+description: .NET Standard 型をシリアル化できるかどうかを実行時に判断する方法について説明します。
 ms.date: 10/20/2017
 dev_langs:
 - csharp
@@ -8,27 +8,25 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b6791ae0666aeb0ac02d8a38ca419d7de2b263cf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018760"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289604"
 ---
-# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>.NET Standard のオブジェクトがシリアル化可能なかどうかを判断する方法
+# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>.NET Standard オブジェクトがシリアル化可能かどうかを判断する方法
 
-.NET Standard は、型とそのバージョンの標準に準拠している特定の .NET 実装に存在する必要があるメンバーを定義する仕様です。 ただし、.NET Standard 定義しません、型をシリアル化するかどうか。 .NET 標準ライブラリで定義された型がでマークされていない、<xref:System.SerializableAttribute>属性。 代わりに、.NET Framework、.NET Core などの特定の .NET 実装が自由に、特定の型がシリアル化できるかどうかを決定します。 
+.NET Standard とは、そのバージョンの標準に準拠する特定の .NET 実装に存在する必要がある型とメンバーを定義する仕様です。 ただし、.NET Standard では、型がシリアル化可能かどうかは定義されていません。 .NET Standard ライブラリに定義されている型は、<xref:System.SerializableAttribute> 属性でマークされていません。 代わりに、特定の型がシリアル化可能かどうかは、.NET Framework や .NET Core などの特定の .NET 実装で自由に決定できます。
 
-対象とする .NET Standard のライブラリを開発した場合は、.NET Standard をサポートする任意の .NET 実装によって、ライブラリを使用できます。 つまり、ことはできませんがわかっている事前に特定の型がシリアル化できるかどうかのみ、実行時にシリアル化可能なことがあるかどうかを確認できます。
+.NET Standard をターゲットとするライブラリを開発した場合、そのライブラリは、.NET Standard をサポートするすべての .NET 実装で使用できます。 つまり、特定の型がシリアル化可能かどうかを事前に知ることはできません。シリアル化可能かどうかは、実行時にのみ判断できます。
 
-値を取得することによって、オブジェクトが実行時にシリアル化可能かどうかを判断できます、<xref:System.Type.IsSerializable>のプロパティを<xref:System.Type>そのオブジェクトの型を表すオブジェクト。 次の例では、1 つの実装を提供します。 定義、`IsSerializable(Object)`拡張メソッドを示すかどうか、<xref:System.Object>インスタンスをシリアル化することができます。
+オブジェクトが実行時にシリアル化可能かどうかを判断するには、オブジェクトの型を表す <xref:System.Type> オブジェクトの <xref:System.Type.IsSerializable> プロパティの値を取得します。 次の例で 1 つの実装を示します。 これは、<xref:System.Object> インスタンスをシリアル化できるかどうかを示す `IsSerializable(Object)` 拡張メソッドを定義します。
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]
 
-任意のオブジェクトにするかどうかをシリアル化でき、次の例として、現在の .NET 実装に逆シリアル化を判断するメソッドを渡します。
+次の例に示すように、任意のオブジェクトをメソッドに渡して、それを現在の .NET 実装でシリアル化および逆シリアル化できるかどうかを判断できます。
 
 [!code-csharp[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#1)]
 [!code-vb[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/program.vb#1)]

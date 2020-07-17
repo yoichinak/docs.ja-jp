@@ -1,5 +1,5 @@
 ---
-title: '方法: StatusBar コントロールにパネルを追加する'
+title: '方法 : StatusBar コントロールにパネルを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 386c8cae425c458ddf4c446a454ae4213761e651
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011074"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142200"
 ---
-# <a name="how-to-add-panels-to-a-statusbar-control"></a>方法: StatusBar コントロールにパネルを追加する
+# <a name="how-to-add-panels-to-a-statusbar-control"></a>方法 : StatusBar コントロールにパネルを追加する
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
+> コントロール<xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールは、 コントロールと<xref:System.Windows.Forms.StatusBar><xref:System.Windows.Forms.StatusBarPanel>コントロールに機能を置き換え、追加します。ただし、下位<xref:System.Windows.Forms.StatusBar>互換性<xref:System.Windows.Forms.StatusBarPanel>と将来の使用の両方を目的として、コントロールと コントロールは保持されます。  
   
- 内のプログラミング可能な領域を[StatusBar コントロール](statusbar-control-windows-forms.md)コントロールのインスタンスから成る、<xref:System.Windows.Forms.StatusBarPanel>クラス。 追加機能を追加するには、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>クラス。  
+ [StatusBar コントロール](statusbar-control-windows-forms.md)内のプログラム可能な領域は、クラスのインスタンスで<xref:System.Windows.Forms.StatusBarPanel>構成されます。 これらは、クラスに追加して追加されます<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。  
   
-### <a name="to-add-panels-to-a-status-bar"></a>ステータス バー パネルを追加するには  
+### <a name="to-add-panels-to-a-status-bar"></a>ステータス バーにパネルを追加するには  
   
-1. プロシージャでは、ステータス バー パネルを追加することによって作成、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>します。 を介して渡されたインデックスを使用して個別のパネルにプロパティの設定を指定、<xref:System.Windows.Forms.StatusBar.Panels%2A>プロパティ。  
+1. プロシージャで、ステータス バー パネルを に追加して作成します<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 プロパティを通過するインデックスを使用して、個々のパネルのプロパティ<xref:System.Windows.Forms.StatusBar.Panels%2A>設定を指定します。  
   
-     アイコンの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例では、使用して、フォームが必要です、<xref:System.Windows.Forms.StatusBar>コントロールが既に追加されています。  
+     次のコード例では、アイコンの場所に設定されているパスは**マイ ドキュメント**フォルダーです。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピュータにこのフォルダが含まれると仮定できるため、使用されます。 この場所を選択すると、最小限のシステム アクセス レベルを持つユーザーがアプリケーションを安全に実行できるようになります。 次の例では、コントロールが既<xref:System.Windows.Forms.StatusBar>に追加されているフォームが必要です。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>は、0 から始まるコレクションので、コードがそれに応じて続行する必要があります。  
+    > <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>は 0 から始まるコレクションなので、コードはこれに従って進む必要があります。  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -49,7 +49,7 @@ ms.locfileid: "62011074"
        StatusBar1.Panels(2).BorderStyle = StatusBarPanelBorderStyle.Raised  
     ' Set Icon property of third panel. You should replace the bolded  
     ' icon in the sample below with an icon of your own choosing.  
-       StatusBar1.Panels(2).Icon = New _   
+       StatusBar1.Panels(2).Icon = New _
        System.Drawing.Icon(System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\Icon.ico")  
@@ -77,7 +77,7 @@ ms.locfileid: "62011074"
        // Set Icon property of third panel. You should replace the bolded  
        // icon in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
-       statusBar1.Panels[2].Icon =   
+       statusBar1.Panels[2].Icon =
           new System.Drawing.Icon (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Icon.ico");  
@@ -109,7 +109,7 @@ ms.locfileid: "62011074"
           statusBar1->Panels[2]->BorderStyle =  
              StatusBarPanelBorderStyle::Raised;  
           // Set Icon property of third panel.  
-          // You should replace the bolded image   
+          // You should replace the bolded image
           // in the sample below with an icon of your own choosing.  
           statusBar1->Panels[2]->Icon =  
              gcnew System::Drawing::Icon(String::Concat(  
@@ -124,8 +124,8 @@ ms.locfileid: "62011074"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [コレクション エディター ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [方法: ステータス バー パネルのサイズを設定します。](how-to-set-the-size-of-status-bar-panels.md)
-- [チュートリアル: 実行時にステータス バー情報の更新](walkthrough-updating-status-bar-information-at-run-time.md)
-- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [[コレクション エディター] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [方法 : ステータス バー パネルのサイズを設定する](how-to-set-the-size-of-status-bar-panels.md)
+- [チュートリアル : ステータス バー情報の実行時更新](walkthrough-updating-status-bar-information-at-run-time.md)
+- [方法 : Windows フォームの StatusBar コントロールでクリックされたパネルを確認する](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

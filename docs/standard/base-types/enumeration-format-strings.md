@@ -1,5 +1,6 @@
 ---
-title: 列挙型書式指定文字列 - .NET
+title: 列挙型形式文字列
+description: .NET で Enum.ToString メソッドを使用して、列挙型形式文字列を作成します。 列挙型メンバーの数値、16 進数、または文字列値の書式を設定します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +11,14 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 825357cf4a56132dae0870972d316eff89b0c94f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583428"
 ---
-# <a name="enumeration-format-strings"></a>列挙型書式指定文字列
+# <a name="enumeration-format-strings"></a>列挙型形式文字列
 
 <xref:System.Enum.ToString%2A?displayProperty=nameWithType> メソッドを使用すると、列挙型メンバーの数値、16 進数、または文字列値を表す新しい文字列オブジェクトを作成できます。 このメソッドは、列挙型書式指定文字列のいずれかを使って、返される値を指定します。
 
@@ -50,7 +49,7 @@ ms.locfileid: "66052849"
 
 列挙エントリを 16 進値として表示します。 列挙型の[基になる数値型](xref:System.Enum.GetUnderlyingType%2A)で結果文字列にバイトあたり文字が 2 つ与えられるように、必要に応じてこの値の先頭にゼロが付きます。 次の例は、X 書式指定子を示しています。 例では、<xref:System.ConsoleColor> と <xref:System.IO.FileAttributes> は両方、基になる型が <xref:System.Int32> か 32 ビット (4 バイト) の整数になり、8 文字からなる結果文字列が生成されます。
 
-[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>例

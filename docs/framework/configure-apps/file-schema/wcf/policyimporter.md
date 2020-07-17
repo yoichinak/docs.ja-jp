@@ -2,21 +2,22 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ef5890d52c3f2af42322f023b9a2a23cb583035
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783185"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70855054"
 ---
-# <a name="policyimporter"></a>\<policyImporter>
+# \<policyImporter>
 バインディングに関するカスタム ポリシー アサーションのインポートを制御するポリシー インポーターを指定します。  
   
- \<system.ServiceModel >  
-\<client>  
-\<matadata>  
-\<policyImporters>  
-\<policyImporter>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<metadata>**](metadata.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<policyImporters>**](policyimporters.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<policyImporter>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,11 +43,11 @@ ms.locfileid: "61783185"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<policyImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|バインディングに関するカスタム ポリシー アサーションのインポートを制御するすべてのポリシー インポーターを指定します。|  
+|[\<policyImporters>](policyimporters.md)|バインディングに関するカスタム ポリシー アサーションのインポートを制御するすべてのポリシー インポーターを指定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ポリシー インポーターは、バインディング機能についてのカスタム ポリシー アサーションの検索、およびアサーションで必要となる機能を実装するカスタム バインド要素の結び付けに使用されます。  
   
 ## <a name="see-also"></a>関連項目
@@ -55,5 +56,5 @@ ms.locfileid: "61783185"
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [クライアント](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF クライアントの構成](../../../wcf/feature-details/client-configuration.md)
+- [クライアント](../../../wcf/feature-details/clients.md)

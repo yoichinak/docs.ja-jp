@@ -1,5 +1,6 @@
 ---
 title: pInvokeLog MDA
+description: .NET での実行中に使用される一意のプラットフォーム呼び出しシグネチャごとにアクティブ化される pInvokeLog マネージデバッグアシスタント (MDA) について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -9,14 +10,12 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7fe0b33bbd77143da6d2f4a26b170e4d7afe1fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05af4e17a91f7c0d8f3576a86d3d784ef6666aed
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803691"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
 `pInvokeLog` マネージド デバッグ アシスタント (MDA) は、実行中に使用される一意のプラットフォーム呼び出しシグネチャごとにアクティブになります。  
@@ -45,5 +44,5 @@ ms.locfileid: "61874108"
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [アンマネージ DLL 関数の処理](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [アンマネージ DLL 関数の処理](../interop/consuming-unmanaged-dll-functions.md)

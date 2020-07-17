@@ -1,5 +1,5 @@
 ---
-title: 代入演算子 (Visual Basic)
+title: 代入演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - assignment operators [Visual Basic], Visual Basic
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 881295f511600cd02e9bf9c9846cf876793a0d8b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778607"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371844"
 ---
 # <a name="assignment-operators-visual-basic"></a>代入演算子 (Visual Basic)
-Visual Basic で定義されている代入演算子を次に示します。  
+次に示すのは、Visual Basic で定義されている代入演算子です。  
   
- [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [= 演算子](assignment-operator.md)  
   
- [^= 演算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [^= 演算子](exponentiation-assignment-operator.md)  
   
- [*= 演算子](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [*= 演算子](multiplication-assignment-operator.md)  
   
- [/= 演算子](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [/= 演算子](floating-point-division-assignment-operator.md)  
   
- [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= 演算子](integer-division-assignment-operator.md)  
   
- [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [+= 演算子](addition-assignment-operator.md)  
   
- [-= 演算子](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
+ [-= 演算子](subtraction-assignment-operator.md)  
   
- [<\<= 演算子](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= 演算子](left-shift-assignment-operator.md)  
   
- [>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [>>= 演算子](right-shift-assignment-operator.md)  
   
- [& = 演算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [& = 演算子](and-assignment-operator.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [ステートメント](../../../visual-basic/language-reference/statements/index.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [ステートメント](../statements/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Set ステートメント (Visual Basic)
+title: Set ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Set
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: fb51dfbae4d9c4ef205e67ac15c5027e62a9a938
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 49d4c36805b64d7232a94e818256723a0437b6ef
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663196"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404188"
 ---
 # <a name="set-statement-visual-basic"></a>Set ステートメント (Visual Basic)
-宣言を`Set`プロパティ プロシージャのプロパティに値を代入するために使用します。  
+値をプロパティに割り当てるのに使用する `Set` プロパティ プロシージャを宣言します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
     [ statements ]  
 End Set  
@@ -30,66 +30,66 @@ End Set
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 省略可能です。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+ 任意。 「[属性リスト](attribute-list.md)」を参照してください。  
   
  `accessmodifier`  
- 1 つだけでは省略可能、`Get`と`Set`このプロパティ内のステートメント。 次のいずれかの値を指定します。  
+ このプロパティの `Get` および `Set` ステートメントのいずれかで、省略可能です。 次のいずれかの値を指定します。  
   
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../modifiers/protected.md)  
   
-- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../modifiers/friend.md)  
   
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../modifiers/private.md)  
   
 - `Protected Friend`  
   
- 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ 「 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `value`  
- 必須。 プロパティの新しい値を含むパラメーターです。  
+ 必須です。 プロパティの新しい値を含むパラメーターです。  
   
  `datatype`  
- 場合に、必ず`Option Strict`は`On`します。 データ型、`value`パラメーター。 指定されたデータ型は、プロパティのデータ型と同じである必要があります、これ`Set`ステートメントが宣言されます。  
+ `Option Strict` が `On` の場合は必ず指定します。 `value` パラメーターのデータ型。 指定するデータ型は、この `Set` ステートメントが宣言されているプロパティのデータ型と同じである必要があります。  
   
  `statements`  
- 省略可能です。 場合に実行する 1 つまたは複数のステートメント、`Set`プロパティ プロシージャが呼び出されます。  
+ 任意。 `Set` プロパティ プロシージャが呼び出されたときに実行される 1 つ以上のステートメント。  
   
  `End Set`  
- 必須。 定義を終了、`Set`プロパティ プロシージャ。  
+ 必須です。 `Set` プロパティ プロシージャの定義を終了します。  
   
 ## <a name="remarks"></a>Remarks  
- すべてのプロパティがあります、`Set`プロパティ プロシージャ、プロパティが指定されていない限り`ReadOnly`します。 `Set`プロパティの値を設定する手順を使用します。  
+ プロパティが `ReadOnly` とマークされている場合を除き、すべてのプロパティには `Set` プロパティ プロシージャが必要です。 `Set` プロシージャは、プロパティの値を設定するために使用します。  
   
- Visual Basic がプロパティを自動的に呼び出します`Set`手順、代入ステートメントは、プロパティに格納される値を提供する場合。  
+ Visual Basic は、プロパティに格納される値が代入ステートメントによって提供されるときに、プロパティの `Set` プロシージャを自動的に呼び出します。  
   
- Visual Basic のパラメーターを渡す、`Set`プロパティ割り当て中にプロシージャ。 パラメーターを指定しない場合`Set`、統合開発環境 (IDE) という名前の暗黙のパラメーターを使用して`value`します。 パラメーターは、プロパティに割り当てられる値を保持します。 通常プライベート ローカル変数にこの値を格納して返すたびに、`Get`プロシージャが呼び出されます。  
+ Visual Basic は、プロパティの割り当て時に `Set` プロシージャにパラメーターを渡します。 `Set` のパラメーターを指定しない場合、統合開発環境 (IDE) では `value` という名前の暗黙的なパラメーターが使用されます。 このパラメーターは、プロパティに割り当てられる値を保持します。 通常はこの値をプライベート ローカル変数に格納し、これは `Get` プロシージャが呼び出されるたびに返されます。  
   
- プロパティ宣言の本体でのみ、プロパティを含めることができます`Get`と`Set`間で、プロシージャ、 [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)と`End Property`ステートメント。 これらのプロシージャ以外のものを格納できません。 具体的には、プロパティの現在の値を格納できません。 に、プロパティ プロシージャのいずれかの内部で保存する場合、その他のプロパティ プロシージャ アクセスできないために、プロパティの外部には、この値を格納する必要があります。 値を格納する通常の方法も、[プライベート](../../../visual-basic/language-reference/modifiers/private.md)プロパティと同じレベルで宣言された変数。 定義する必要があります、`Set`適用されるプロパティ内のプロシージャです。  
+ プロパティ宣言の本体には、[Property ステートメント](property-statement.md)と `End Property` ステートメントの間に、プロパティの `Get` と `Set` のプロシージャのみを含めることができます。 これらのプロシージャ以外のものを格納することはできません。 特に、プロパティの現在の値を格納することはできません。 この値は、プロパティの外部に格納する必要があります。それをいずれかのプロパティ プロシージャの内部に格納した場合、他のプロパティ プロシージャからアクセスできなくなるためです。 通常の方法は、プロパティと同じレベルで宣言された [Private](../modifiers/private.md) 変数に値を格納することです。 `Set` プロシージャは、適用先のプロパティの内部で定義する必要があります。  
   
- `Set`プロシージャの既定値はその包含するプロパティのアクセス レベルを使用しない限り`accessmodifier`で、`Set`ステートメント。  
+ `Set` ステートメントで `accessmodifier` を使用しない限り、`Set` プロシージャは既定で、それを含んでいるプロパティのアクセス レベルに設定されます。  
   
 ## <a name="rules"></a>ルール  
   
-- **混合アクセス レベル。** 必要に応じていずれかの異なるアクセス レベルを指定することができます、読み取り/書き込みプロパティを定義する場合、`Get`または`Set`両方ではなく、プロシージャ。 これを行うと、プロシージャのアクセス レベル、プロパティのアクセス レベルよりもより制限の厳しい場合があります。 例では、プロパティが宣言されている場合、 `Friend`、宣言することができます、`Set`プロシージャ`Private`、なく`Public`します。  
+- **混合アクセス レベル。** 読み取り/書き込みプロパティを定義する場合は、必要に応じて、`Get` または `Set` のいずれかのプロシージャに対して異なるアクセス レベルを指定できますが、両方に対して指定することはできません。 この場合、プロシージャのアクセス レベルは、プロパティのアクセス レベルよりも制限されている必要があります。 たとえば、プロパティが `Friend` として宣言されている場合は、`Set` プロシージャを、`Public` ではなく `Private` として宣言できます。  
   
-     定義する場合、`WriteOnly`プロパティ、`Set`プロシージャは、全体のプロパティを表します。 レベル別のアクセスを宣言することはできません`Set`プロパティの 2 つのアクセス レベルを設定することがあるため、します。  
+     `WriteOnly` プロパティを定義する場合、`Set` プロシージャはプロパティ全体を表します。 `Set` に対して異なるアクセス レベルを宣言することはできません。それによって、プロパティに 2 つのアクセス レベルが設定されるためです。  
   
 ## <a name="behavior"></a>動作  
   
-- **プロパティ プロシージャから取得します。** ときに、`Set`実行はプロシージャは、呼び出し元のコードに返す、次の格納される値を提供するステートメントが続行されます。  
+- **プロパティ プロシージャからの復帰。** `Set` プロシージャから呼び出し元のコードに返されると、実行は、格納される値を指定したステートメントの後のステートメントから続行されます。  
   
-     `Set` プロパティ プロシージャは、いずれかを使用して返すことができます、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)または[Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)します。  
+     `Set` プロパティ プロシージャは、[Return ステートメント](return-statement.md)または [Exit ステートメント](exit-statement.md)のいずれかを使用して返すことができます。  
   
-     `Exit Property`と`Return`ステートメントでは、プロパティ プロシージャからすぐに終了します。 任意の数の`Exit Property`と`Return`ステートメントは、手順では、どこでも表示でき、組み合わせることができます`Exit Property`と`Return`ステートメント。  
+     `Exit Property` および `Return` ステートメントでは、プロパティ プロシージャがすぐに終了します。 任意の数の `Exit Property` および `Return` ステートメントをプロシージャ内の任意の場所に記述でき、`Exit Property` ステートメントと `Return` ステートメントを混在させることができます。  
   
 ## <a name="example"></a>例  
- 次の例では、`Set`プロパティの値を設定するステートメント。  
+ 次の例では、`Set` ステートメントを使用してプロパティの値を設定します。  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Property プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Get ステートメント](get-statement.md)
+- [Property ステートメント](property-statement.md)
+- [Sub ステートメント](sub-statement.md)
+- [Property プロシージャ](../../programming-guide/language-features/procedures/property-procedures.md)

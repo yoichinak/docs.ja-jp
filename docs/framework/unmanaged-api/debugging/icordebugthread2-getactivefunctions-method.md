@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e064a7db131a671adc4d0b6df522f3456e3a31d5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769035"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377152"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions メソッド
-このスレッドのフレームのそれぞれに、アクティブな関数についての情報を取得します。  
+このスレッドの各フレームのアクティブな関数に関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,23 +41,23 @@ HRESULT GetActiveFunctions (
  [in] `pFunctions` 配列のサイズ。  
   
  `pcFunctions`  
- [out]返されるオブジェクトの数へのポインター、`pFunctions`配列。 返されるオブジェクトの数は、スタック上のマネージ フレームの数と等しくなります。  
+ 入出力配列で返されたオブジェクトの数へのポインター `pFunctions` 。 返されるオブジェクトの数は、スタック上のマネージフレームの数と同じになります。  
   
  `pFunctions`  
- [入力、出力]このスレッドのフレームでアクティブな関数についての情報を含む、COR_ACTIVE_FUNCTION オブジェクトの配列。  
+ [入力、出力]COR_ACTIVE_FUNCTION オブジェクトの配列。各オブジェクトには、このスレッドのフレーム内のアクティブな関数に関する情報が含まれています。  
   
- 最初の要素は、リーフ フレームとスタックのルートに戻る ために使用されます。  
+ 最初の要素はリーフフレームに使用され、その後スタックのルートに戻ります。  
   
 ## <a name="remarks"></a>Remarks  
- 場合`pFunctions`が null の入力で`GetActiveFunctions`スタック上にある関数の数のみを返します。 つまり場合、`pFunctions`が入力で null`GetActiveFunctions`値を返しますでのみ`pcFunctions`します。  
+ `pFunctions`入力時にが null の場合、 `GetActiveFunctions` スタック上の関数の数だけを返します。 つまり、 `pFunctions` 入力時にが null の場合、は `GetActiveFunctions` でのみ値を返し `pcFunctions` ます。  
   
- `GetActiveFunctions`メソッドは、最適化として、スタック トレース内のフレームから同じ情報の取得をありありました ICorDebugILFrame オブジェクトに完全なスタック トレース フレームのみが含まれています。  
+ この `GetActiveFunctions` メソッドは、スタックトレース内のフレームから同じ情報を取得することを目的とした最適化として使用されます。また、完全なスタックトレースでは、このメソッドに対しては、表示されないフレームオブジェクトを持つフレームだけを含みます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

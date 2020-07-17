@@ -2,19 +2,19 @@
 title: スタンドアロン診断フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0402805b7eb5b0b224db32eb07780743e5f32fb3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600920"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>スタンドアロン診断フィードのサンプル
-このサンプルでは、RSS および Atom フィードを Windows Communication Foundation (WCF) を使用して配信用に作成する方法を示します。 オブジェクト モデルの基本と Windows Communication Foundation (WCF) サービスを設定する方法を示す基本的な"Hello World"プログラムです。  
+このサンプルでは、Windows Communication Foundation (WCF) を使用して配信するために RSS/Atom フィードを作成する方法を示します。 これは基本的な "Hello World" プログラムであり、オブジェクトモデルの基本と、Windows Communication Foundation (WCF) サービスでの設定方法を示しています。  
   
- WCF は、特別なデータ型を返すサービス操作として配信フィードをモデル化<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>します。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> のインスタンスは、フィードを RSS 2.0 形式および Atom 1.0 形式の両方にシリアル化できます。 使用するコントラクトを次のサンプル コードに示します。  
+ WCF は、特別なデータ型を返すサービス操作として配信フィードをモデル化し <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ます。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> のインスタンスは、フィードを RSS 2.0 形式および Atom 1.0 形式の両方にシリアル化できます。 使用するコントラクトを次のサンプル コードに示します。  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "")]  
     interface IDiagnosticsService  
     {  
@@ -24,7 +24,7 @@ ms.locfileid: "62007821"
         //(the part of the request URI after the endpoint address)  
         //using the HTTP GET method. The UriTemplate specifies a relative  
         //path of 'feed', and specifies that the format is  
-        //supplied using a query string.   
+        //supplied using a query string.
         [WebGet(UriTemplate="feed?format={format}")]  
         [ServiceKnownType(typeof(Atom10FeedFormatter))]  
         [ServiceKnownType(typeof(Rss20FeedFormatter))]  
@@ -32,11 +32,11 @@ ms.locfileid: "62007821"
     }  
 ```  
   
- `GetProcesses`操作は、注釈が付けられた、 <xref:System.ServiceModel.Web.WebGetAttribute> WCF が HTTP GET がディスパッチする方法を制御することができる属性をサービス操作と送信されるメッセージの形式を指定する要求。  
+ この `GetProcesses` 操作には、 <xref:System.ServiceModel.Web.WebGetAttribute> WCF が HTTP GET 要求をサービス操作にディスパッチする方法を制御し、送信されるメッセージの形式を指定できるようにする属性で注釈が付けられています。  
   
- すべての WCF サービスのような配信フィードは自己ホスト型の任意のマネージ アプリケーションを指定できます。 配信サービスが適切に機能するには、特定のバインディング (<xref:System.ServiceModel.WebHttpBinding>) と、特定のエンドポイント動作 (<xref:System.ServiceModel.Description.WebHttpBehavior>) が必要です。 新しい <xref:System.ServiceModel.Web.WebServiceHost> クラスには、特定の構成を使用せずにこのようなエンドポイントを作成する際に便利な API が用意されています。  
+ 任意の WCF サービスと同様に、配信フィードは任意のマネージアプリケーションで自己ホストすることができます。 配信サービスが適切に機能するには、特定のバインディング (<xref:System.ServiceModel.WebHttpBinding>) と、特定のエンドポイント動作 (<xref:System.ServiceModel.Description.WebHttpBehavior>) が必要です。 新しい <xref:System.ServiceModel.Web.WebServiceHost> クラスには、特定の構成を使用せずにこのようなエンドポイントを作成する際に便利な API が用意されています。  
   
-```  
+```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
   
             //The WebServiceHost will automatically provide a default endpoint at the base address  
@@ -45,55 +45,55 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
   
  または、IIS でホストされる .svc ファイルから <xref:System.ServiceModel.Activation.WebServiceHostFactory> を使用して、同等の機能を用意することもできます (この手法は、このサンプル コードでは示されません)。  
   
-```  
-<%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
-```  
+```xml
+<% @ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
+```
   
- このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、このサービスの出力を表示に移動して`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーでします。
+ このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、 `http://localhost:8000/diagnostics/feed/?format=atom` RSS 対応のブラウザーでまたはに移動して、このサービスの出力を表示でき `http://localhost:8000/diagnostics/feed/?format=rss` ます。
   
- 使用することも、[方法、WCF 配信オブジェクト モデルのマップを Atom や RSS に](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)シンジケート データを読み取り、命令型コードを使用してそれを処理します。  
+ また、 [WCF 配信オブジェクトモデルが Atom および RSS にマップ](../feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)され、命令型コードを使用してシンジケートデータを読み取り、処理する方法を使用することもできます。  
   
-```  
-XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
-new XmlReaderSettings()  
-{  
-//MaxCharactersInDocument can be used to control the maximum amount of data   
-//read from the reader and helps prevent OutOfMemoryException  
-MaxCharactersInDocument = 1024 * 64  
-} );  
+```csharp
+XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
+    new XmlReaderSettings()
+    {
+        //MaxCharactersInDocument can be used to control the maximum amount of data
+        //read from the reader and helps prevent OutOfMemoryException
+        MaxCharactersInDocument = 1024 * 64
+    } );
+
+SyndicationFeed feed = SyndicationFeed.Load(reader);
+
+foreach (SyndicationItem i in feed.Items)
+{
+    XmlSyndicationContent content = i.Content as XmlSyndicationContent;
+    ProcessData pd = content.ReadContent<ProcessData>();
+
+    Console.WriteLine(i.Title.Text);
+    Console.WriteLine(pd.ToString());
+}
+```
   
-SyndicationFeed feed = SyndicationFeed.Load( reader );  
+## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する
   
-foreach (SyndicationItem i in feed.Items)  
-{  
-        XmlSyndicationContent content = i.Content as XmlSyndicationContent;  
-        ProcessData pd = content.ReadContent<ProcessData>();  
-  
-        Console.WriteLine(i.Title.Text);  
-        Console.WriteLine(pd.ToString());  
-}  
-```  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
-  
-1. セットアップの手順で説明したように、コンピューター上の HTTP および HTTPS の正しいアドレス登録アクセス許可があることを確認します。 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
-  
-2. ソリューションをビルドします。  
-  
-3. コンソール アプリケーションを実行します。  
-  
-4. 移動し、コンソール アプリケーションの実行中に`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーを使用します。  
-  
+1. Windows Communication Foundation のサンプルについては、「 [1 回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)」で説明されているように、コンピューター上で HTTP および HTTPS に対する適切なアドレス登録アクセス許可を持っていることを確認します。
+
+2. ソリューションをビルドします。
+
+3. コンソール アプリケーションを実行します。
+
+4. コンソールアプリケーションの実行中に、RSS 対応のブラウザーに移動するか、を `http://localhost:8000/diagnostics/feed/?format=atom` `http://localhost:8000/diagnostics/feed/?format=rss` 使用します。
+
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
-  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
+
 ## <a name="see-also"></a>関連項目
 
-- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [WCF 配信](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [WCF Web HTTP プログラミング モデル](../feature-details/wcf-web-http-programming-model.md)
+- [WCF 配信](../feature-details/wcf-syndication.md)

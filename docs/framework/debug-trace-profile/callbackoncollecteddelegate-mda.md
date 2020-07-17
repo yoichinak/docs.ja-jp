@@ -1,5 +1,6 @@
 ---
 title: callbackOnCollectedDelegate MDA
+description: .NET の callbackOnCollectedDelegate マネージデバッグアシスタント (MDA) を確認します。これは、デリゲートがガベージコレクトされた後にコールバックが発生した場合に呼び出されます。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,19 +15,17 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32f02a4e65455f11f3bfa9260caae8b4e48f494e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875070"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416032"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 `callbackOnCollectedDelegate` マネージド デバッグ アシスタント (MDA) は、デリゲートがマネージド コードからアンマネージド コードに関数ポインターとしてマーシャリングされ、デリゲートがガベージ コレクトされた後にその関数ポインター上にコールバックが配置された場合にアクティブ化されます。  
   
-## <a name="symptoms"></a>症状  
+## <a name="symptoms"></a>現象  
  マネージド デリゲートから取得した関数ポインターを通じてマネージド コードへの呼び出しをしようとすると、アクセス違反が発生します。 このエラーは、共通言語ランタイム (CLR) コード内でアクセス違反が発生するため、CLR のバグのように見えますが、実際には違います。  
   
  このエラーには一貫性がなく、関数ポインターでの呼び出しが成功することもあれば、失敗することもあります。 高負荷のときのみエラーが発生することがあり、ランダムな試行回数ごとに発生することもあります。  
@@ -38,7 +37,7 @@ ms.locfileid: "61875070"
   
  エラーの発生確率は、デリゲートのマーシャリングから関数ポインターの呼び出しまでの時間と、ガベージ コレクションの頻度に応じて変わります。 デリゲートのマーシャリングから次のコールバックまでの時間が短い場合、エラーは散発的です。 これは、関数ポインターを受け取るアンマネージ メソッドが後で使用するために関数ポインターを保存することはせず、代わりに関数ポインターをすぐにコールバックし、返る前に操作が完了する場合に当てはまります。 同様に、システムの負荷が高いと頻繁にガベージ コレクションが発生するため、コールバックの前にガベージ コレクションが発生する可能性が高くなります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  デリゲートがアンマネージ関数ポインターとしてマーシャリングされた後、ガベージ コレクターはその有効期間を追跡できません。 代わりに、アンマネージ関数ポインターの有効期間にわたってデリゲートへの参照をコードで保持する必要があります。 しかし、それを行うには、まずどのデリゲートがガベージ コレクトされたかを識別する必要があります。 MDA がアクティブになると、デリゲートの型名が提供されます。 この名前を使用してコードを検索し、アンマネージ コードにデリゲートを渡すプラットフォーム呼び出しまたは COM シグネチャを見つけます。 問題が発生したデリゲートは、これらの呼び出しサイトのいずれかを通じて渡されます。 また、`gcUnmanagedToManaged` MDA を有効にして、ランタイムへのコールバックの前にガベージ コレクションを強制することもできます。 これにより、コールバックが行われる前に必ずガベージ コレクションが行われるため、ガベージ コレクションによって持ち込まれる不確実性が排除されます。 ガベージ コレクトされたデリゲートがわかったら、マーシャリングしたアンマネージド 関数ポインターの有効期間にわたってデリゲートへの参照をマネージド側に保持するようにコードを変更します。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -98,7 +97,7 @@ public class Entry
     }  
   
     public static void Target()  
-    {          
+    {
     }  
   
     [DllImport("Library", CallingConvention = CallingConvention.StdCall)]  
@@ -114,6 +113,6 @@ public class Entry
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

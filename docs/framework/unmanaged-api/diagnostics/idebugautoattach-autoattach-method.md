@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e04a447c8562ff797ac98885bded150a3a167136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775796"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442125"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach メソッド
-サーバー起動デバッガーの自動実行をアタッチします。  
+サーバーによって呼び出されたデバッガーの自動アタッチを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>パラメーター  
  `guidPort`  
- [in]常に設定`GUID_NULL`します。  
+ から常にに設定 `GUID_NULL` します。  
   
  `dwPid`  
- [in]プロセス ID で通常取得、`GetCurrentProcessId`関数。  
+ からプロセス ID。通常は関数を使用して取得さ `GetCurrentProcessId` れます。  
   
  `dwProgramType`  
- [in]プログラムの種類: `AUTOATTACH_PROGRAM_WIN32`、 `AUTOATTACH_PROGRAM_COMPLUS`、または`AUTOATTACH_PROGRAM_UNKNOWN`します。  
+ からプログラムの種類: `AUTOATTACH_PROGRAM_WIN32` 、 `AUTOATTACH_PROGRAM_COMPLUS` 、または `AUTOATTACH_PROGRAM_UNKNOWN` 。  
   
  `dwProgramId`  
- [in]プログラム id。  
+ からプログラム ID。  
   
  `pszSessionId`  
- [in]Debug 動詞によって渡された文字列。  
+ からデバッグ動詞によって渡された文字列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** DbgAutoAttach.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** DbgAutoAttach .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [IDebugAutoAttach インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [IDebugAutoAttach インターフェイス](idebugautoattach-interface.md)

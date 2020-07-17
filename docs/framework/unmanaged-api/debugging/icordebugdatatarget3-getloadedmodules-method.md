@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules メソッド
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc62618c5872a2c3e3740be4c60ae02e386c1868
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750031"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976422"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules メソッド
 これまでに読み込まれたモジュールの一覧を取得します。  
@@ -32,23 +30,23 @@ HRESULT GetLoadedModules(
  [out] 情報が返された対象モジュールの数へのポインター。  
   
  `pLoadedModules`  
- [out]配列へのポインター [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)に関する情報を提供するオブジェクトにモジュールが読み込まれます。  
+ 入出力読み込まれたモジュールに関する情報を提供する[ICorDebugLoadedModule](icordebugloadedmodule-interface.md)オブジェクトの配列へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDataTarget3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget3 インターフェイス](icordebugdatatarget3-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

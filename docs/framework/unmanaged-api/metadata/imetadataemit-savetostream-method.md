@@ -15,22 +15,20 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 96b3b270fb12aa451d9026435dd3d2c4c196b09c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87e00a69643b6bc403188fb0fdb6f9e3f3d82115
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782025"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003881"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream メソッド
-指定した現在のスコープ内のすべてのメタデータの保存`IStream`します。  
+現在のスコープ内のすべてのメタデータを、指定したに保存し `IStream` ます。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SaveToStream (   
+HRESULT SaveToStream (
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  
 );  
@@ -38,21 +36,21 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>パラメーター  
  `pIStream`  
- [in]保存する書き込み可能なストリーム。  
+ から保存先の書き込み可能なストリーム。  
   
  `dwSaveFlags`  
  [in] 予約されています。 ゼロを指定してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

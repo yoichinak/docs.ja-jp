@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607900"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150832"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet に対する XPath クエリの実行
-同期済みの間のリレーションシップ<xref:System.Data.DataSet>と<xref:System.Xml.XmlDataDocument>XML を使用するのには、アクセス、XML Path Language (XPath) クエリなどのサービス、 **XmlDataDocument**特定の機能を実行できます簡単にアクセスするよりも、**データセット**直接します。 使用してではなく、たとえば、**選択**のメソッド、<xref:System.Data.DataTable>内の他のテーブルにリレーションシップをナビゲートする、**データセット**で XPath クエリを実行することができます、 **XmlDataDocument**と同期される、**データセット**の形式で XML 要素の一覧を取得する、<xref:System.Xml.XmlNodeList>します。 内のノード、 **XmlNodeList**としてキャスト<xref:System.Xml.XmlElement>ノードに渡すことができます、 **GetRowFromElement**のメソッド、 **XmlDataDocument**を一致を返す<xref:System.Data.DataRow>は同期済みテーブルの行への参照**データセット**します。  
+同期された <xref:System.Data.DataSet> と <xref:System.Xml.XmlDataDocument> との間のリレーションシップによって、XPath (XML Path Language) クエリなどの XML サービスが使用できます。XML サービスは **XmlDataDocument** にアクセスし、**DataSet** に直接アクセスするよりも、特定の機能を効率的に実行できます。 たとえば、<xref:System.Data.DataTable> の **Select** メソッドを使用して **DataSet** の他のテーブルとのリレーションシップをナビゲートする代わりに、**DataSet** と同期化された **XmlDataDocument** に対して XPath クエリを実行すると、<xref:System.Xml.XmlNodeList> 形式で XML 要素のリストを取得できます。 <xref:System.Xml.XmlElement> ノードとしてキャストされた **XmlNodeList** のノードを **XmlDataDocument** の **GetRowFromElement** メソッドに渡すと、同期化された **DataSet** のテーブルの行に一致する <xref:System.Data.DataRow> 参照が返されます。  
   
- たとえば、次に示すコード サンプルでは孫 XPath クエリが実行されます。 **データセット**は 3 つのテーブルで塗りつぶされます。**顧客**、**注文**、および**OrderDetails**します。 サンプルでは、親子関係が最初に作成の間、**顧客**と**注文**テーブル、および、**注文**と**OrderDetails**テーブル。 返す XPath クエリが実行を**XmlNodeList**の**顧客**ノードが、孫**OrderDetails**ノードには、 **ProductID**43 の値を持つノード。 基本的には、サンプルを使用して、XPath クエリを持つ製品を注文した顧客を特定、 **ProductID** 43 の。  
+ たとえば、次に示すコード サンプルでは孫 XPath クエリが実行されます。 **DataSet** には、次の 3 つのテーブルが格納されます: **Customers**、**Orders**、**OrderDetails**。 このサンプルでは、**Customers** テーブルと **Orders** テーブルの間に親子のリレーションが作成され、次に **Orders** テーブルと **OrderDetails** テーブルの間に親子のリレーションが作成されます。 XPath クエリが実行され、値 43 の **ProductID** ノードを持つ孫 **OrderDetails** ノードのある **Customers** ノードの **XmlNodeList** リストが返されます。 つまり、このサンプルでは、XPath クエリを使用して **ProductID** が 43 の製品を注文した顧客を確認します。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  
@@ -103,5 +103,5 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet と XmlDataDocument の同期](dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET の概要](../ado-net-overview.md)

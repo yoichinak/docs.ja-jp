@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ede8fb5-f655-4088-8e19-9c53812588a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c41c05d40187aaed8a4f3cce181c84460503d1f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ffba23e3821c48c9b0708e4b6b617db4ddc5959
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751276"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83611264"
 ---
 # <a name="isymunmanagedscopegetlocalcount-method"></a>ISymUnmanagedScope::GetLocalCount メソッド
 このスコープ内で定義されているローカル変数の数を取得します。  
@@ -36,14 +34,14 @@ HRESULT GetLocalCount(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`ULONG32`ローカル変数の数を受け取る。  
+ 入出力`ULONG32`ローカル変数の数を受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [ISymUnmanagedScope インターフェイス](isymunmanagedscope-interface.md)

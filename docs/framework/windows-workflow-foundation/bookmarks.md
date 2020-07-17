@@ -1,13 +1,13 @@
 ---
-title: Bookmarks1
+title: ブックマーク - WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5bd8130ee623599e80014777baf92986c3b6969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774140"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183011"
 ---
 # <a name="bookmarks"></a>ブックマーク
 ブックマークは、ワークフローのスレッド上に保持することなく、アクティビティが受動的に入力を待機できるようにする機構です。 アクティビティが働きかけを待機していることを示すときは、ブックマークを作成できます。 これは、現在実行中の (<xref:System.Activities.Bookmark> を作成した) メソッドから返された場合でも、アクティビティの実行が完了していると見なさないことをランタイムに対して示します。  
@@ -30,12 +30,12 @@ public sealed class ReadLine : NativeActivity<string>
     protected override void Execute(NativeActivityContext context)  
     {  
         // Create a Bookmark and wait for it to be resumed.  
-        context.CreateBookmark(BookmarkName.Get(context),   
+        context.CreateBookmark(BookmarkName.Get(context),
             new BookmarkCallback(OnResumeBookmark));  
     }  
   
-    // NativeActivity derived activities that do asynchronous operations by calling   
-    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext   
+    // NativeActivity derived activities that do asynchronous operations by calling
+    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext
     // must override the CanInduceIdle property and return true.  
     protected override bool CanInduceIdle  
     {  

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetCode メソッド
+title: 'いい変数 Home:: GetCode メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetCode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef002890-4a7b-4a5d-abbf-16c60083f794
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c0cae29cceb3f23c7d09cf096937c99641d5a87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87d611a7b6e12a9238b00131326e8205778769e6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773591"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396588"
 ---
-# <a name="icordebugvariablehomegetcode-method"></a>ICorDebugVariableHome::GetCode メソッド
-これを含む"ICorDebugCode"インスタンスを取得します。 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)オブジェクト。  
+# <a name="icordebugvariablehomegetcode-method"></a>いい変数 Home:: GetCode メソッド
+このこのコード例の[ホーム](icordebugvariablehome-interface.md)オブジェクトを含む "コード" インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +35,17 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>パラメーター  
  `ppCode`  
- [out]これを含む"ICorDebugCode"インスタンスのアドレスへのポインター [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)オブジェクト。  
+ 入出力この表示[変数ホーム](icordebugvariablehome-interface.md)オブジェクトを含む "コード" インスタンスのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugVariableHome インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)

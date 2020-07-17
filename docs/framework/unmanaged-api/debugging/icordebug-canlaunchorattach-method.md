@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 354df02b27e87550ba602fe102352455c227441b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738318"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859680"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach メソッド
-現在コンピューターとランタイムの構成のコンテキスト内で、新しいプロセスの起動または指定した既存のプロセスにアタッチを実行するかどうかを示す HRESULT を返します。  
+現在のコンピューターおよびランタイム構成のコンテキスト内で、新しいプロセスを起動するか、指定した既存のプロセスにアタッチするかを示す HRESULT を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +36,13 @@ HRESULT CanLaunchOrAttach (
   
 ## <a name="parameters"></a>パラメーター  
  `dwProcessId`  
- [in]既存のプロセスの ID。  
+ から既存のプロセスの ID。  
   
  `win32DebuggingEnabled`  
- [in]渡す`true`Win32 デバッグを有効にすると、起動する予定するかどうか、または Win32 デバッグを有効になっている。 それ以外でアタッチするには、渡す`false`します。  
+ からWin32 デバッグ`true`を有効にして起動する場合、または win32 デバッグを有効にしてアタッチする場合は、を渡します。それ以外の`false`場合は、を渡します。  
   
 ## <a name="return-value"></a>戻り値  
- デバッグ サービスを確認する新しいプロセスの起動または特定のプロセスにアタッチする場合は S_OK が、現在のコンピューターとランタイムの構成に関する情報を指定できます。 HRESULT 値があります。  
+ 現在のコンピューターと実行時の構成に関する情報を指定して、デバッグサービスによって新しいプロセスの起動または特定のプロセスへのアタッチが可能かどうかを判断する場合は S_OK します。 使用できる HRESULT 値は次のとおりです。  
   
 - S_OK  
   
@@ -54,20 +52,20 @@ HRESULT CanLaunchOrAttach (
   
 - CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、純粋な情報です。 インターフェイスは停止されませんを起動またはによって返される値に関係なく、プロセスにアタッチ`CanLaunchOrAttach`します。  
+## <a name="remarks"></a>解説  
+ このメソッドは純粋な情報です。 インターフェイスは、によって`CanLaunchOrAttach`返される値に関係なく、プロセスの起動やアタッチを停止することはありません。  
   
- デバッグを有効に Win32 を使用して起動する Win32 デバッグを有効にアタッチまたは渡す場合`true`の`win32DebuggingEnabled`します。 によって返される HRESULT`CanLaunchOrAttach`このオプションを使用する場合に異なる場合があります。  
+ Win32 デバッグが有効になっている状態で起動する場合、または Win32 `true`デバッグ`win32DebuggingEnabled`を有効にしてアタッチする場合は、にを渡します。 このオプションを使用`CanLaunchOrAttach`すると、によって返される HRESULT が異なる場合があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)

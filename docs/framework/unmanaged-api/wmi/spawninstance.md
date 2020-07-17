@@ -1,6 +1,6 @@
 ---
-title: SpawnInstance 関数 (アンマネージ API リファレンス)
-description: SpawnInstance 関数は、クラスの新しいインスタンスを作成します。
+title: 関数 (アンマネージ API リファレンス)
+description: 関数は、クラスの新しいインスタンスを作成します。
 ms.date: 11/06/2017
 api_name:
 - SpawnInstance
@@ -14,17 +14,15 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a15eb8123c1ee807444bdb4c6fe71cdccc08f434
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783072"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176722"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 関数
-クラスの新しいインスタンスが作成されます。    
+クラスの新しいインスタンスが作成されます。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -32,10 +30,10 @@ ms.locfileid: "67783072"
   
 ```cpp  
 HRESULT SpawnInstance (
-   [in] int                  vFunc, 
-   [in] IWbemClassObject*    ptr, 
+   [in] int                  vFunc,
+   [in] IWbemClassObject*    ptr,
    [in] LONG                 lFlags,
-   [out] IWbemClassObject**  ppNewInstance); 
+   [out] IWbemClassObject**  ppNewInstance);
 ```  
 
 ## <a name="parameters"></a>パラメーター
@@ -44,35 +42,35 @@ HRESULT SpawnInstance (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
 
 `lFlags`  
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは 0 でなければなりません。
 
 `ppNewInstance`  
-[out]クラスの新しいインスタンスへのポインターを受け取ります。 新しいオブジェクトでないエラーが発生する場合、返されると`ppNewInstance`は左未変更の状態します。
+[アウト]クラスの新しいインスタンスへのポインターを受け取ります。 エラーが発生した場合、新しいオブジェクトは返されず、`ppNewInstance`変更されません。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
 
-|定数  |Value  |説明  |
+|常時  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 有効なクラス定義ではないと、新しいインスタンスを生成することはできません。 完了しないか、それが登録されていない Windows の管理を呼び出すことによって[PutClassWmi](putclasswmi.md)します。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`は有効なクラス定義ではないため、新しいインスタンスを生成できません。 不完全であるか、[または PutClassWmi](putclasswmi.md)を呼び出して Windows 管理に登録されていません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | メモリ不足のため、操作を完了できません。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null` です。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数の呼び出しをラップする、 [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)メソッド。
+この関数は、メソッドの呼び出し[を](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)ラップします。
 
-`ptr` 取得する必要があるクラス定義から Windows の管理。 (インスタンスからインスタンスの生成がサポートされていることに注意してください。 ただし、返されたインスタンスが空)。このクラスの定義を使用するには、新しいインスタンスを作成します。 呼び出し、 [PutInstanceWmi](putinstancewmi.md) Windows 管理インスタンスを作成する場合は、関数が必要です。
+`ptr`は、Windows 管理から取得したクラス定義である必要があります。 (インスタンスからのインスタンスの生成はサポートされていますが、返されるインスタンスは空です)。次に、このクラス定義を使用して新しいインスタンスを作成します。 インスタンスを Windows 管理に書き込む場合は[、PutInstanceWmi](putinstancewmi.md)関数の呼び出しが必要です。
 
-返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
+返される新しいオブジェクト`ppNewClass`は、自動的に現在のオブジェクトのサブクラスになります。 この動作はオーバーライドできません。 サブクラス (派生クラス) を作成できるメソッドは他にありません。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
@@ -80,4 +78,4 @@ HRESULT SpawnInstance (
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

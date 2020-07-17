@@ -10,17 +10,15 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4f8a213c0df3ef3c633106b7249a4947fe77c0d2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324774"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280024"
 ---
 # <a name="how-to-implement-a-provider"></a>方法: プロバイダーを実装する
-オブザーバー デザイン パターンでは、データを監視して通知を送信するプロバイダーと、プロバイダーから通知 (コールバック) を受信する 1 つまたは複数のオブザーバーを分ける必要があります。 このトピックでは、プロバイダーを作成する方法について説明します。 関連トピックの「[方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)」でオブザーバーの作成方法について説明します。  
+オブザーバー デザイン パターンでは、データを監視して通知を送信するプロバイダーと、プロバイダーから通知 (コールバック) を受信する 1 つまたは複数のオブザーバーを分ける必要があります。 このトピックでは、プロバイダーを作成する方法について説明します。 関連トピックの「[方法: オブザーバーを実装する](how-to-implement-an-observer.md)」でオブザーバーの作成方法について説明します。  
   
 ### <a name="to-create-a-provider"></a>プロバイダーを作成するには  
   
@@ -60,9 +58,9 @@ ms.locfileid: "59324774"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.IObservable%601>
-- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)
-- [方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [オブサーバー デザイン パターン](observer-design-pattern.md)
+- [方法: オブザーバーを実装する](how-to-implement-an-observer.md)
+- [オブザーバー デザイン パターンのベスト プラクティス](observer-design-pattern-best-practices.md)

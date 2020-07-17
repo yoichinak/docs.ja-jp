@@ -1,5 +1,5 @@
 ---
-title: クリップボードのデータの格納と読み取り (Visual Basic)
+title: クリップボードのデータの格納と読み取り
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -9,32 +9,35 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 19d0fcafb76c40a00939de59968dfaf2e6bd683c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 243fb237f3f9ba53f8b29079df08531c102c78dd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816884"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "74349734"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>クリップボードのデータの格納と読み取り (Visual Basic)
+
 クリップボードは、テキスト、イメージなどのデータの格納に使用できます。 アクティブなプロセスすべてがこのクリップボードを共有しているため、クリップボードを使ってデータをプロセス間で転送することができます。 `My.Computer.Clipboard` オブジェクトを使用すると、クリップボードに簡単にアクセスして、読み込みや書き込みを実行できます。  
   
 ## <a name="reading-from-the-clipboard"></a>クリップボードからの読み取り  
+
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> メソッドを使用すると、クリップボードからテキストを読み取ることができます。 次のコードはテキストを読み取って、メッセージ ボックスに表示します。 この例を正しく動作させるには、クリップボードにテキストが格納されている必要があります。  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、**[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
+ このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、 **[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> メソッドを使用すると、クリップボードからイメージを取得できます。 この例では、イメージを取得して `PictureBox1` に割り当てる前に、そのイメージがクリップボードにあるかどうかを確認します。  
   
  [!code-vb[VbResourceTasks#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#16)]  
   
- このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、**[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。詳細については、「[コード スニペット](/visualstudio/ide/code-snippets)」を参照してください。  
+ このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、 **[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。詳細については、「[コード スニペット](/visualstudio/ide/code-snippets)」を参照してください。  
   
  クリップボード内のアイテムは、アプリケーションの終了後も保持されます。  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>クリップボードに格納されているファイルの種類の確認  
+
  クリップボードには、テキスト、オーディオ ファイル、イメージなど、さまざまな形式のデータを格納できます。 クリップボード内のファイルの種類を確認するには、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> などのメソッドを使用します。 確認対象にカスタム形式が含まれる場合は、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> メソッドを使用できます。  
   
  `ContainsImage` 関数を使用すると、クリップボードに含まれるデータがイメージかどうかを確認できます。 次のコードでは、データがイメージかどうかを確認し、それに応じて報告します。  
@@ -42,6 +45,7 @@ ms.locfileid: "58816884"
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
 ## <a name="clearing-the-clipboard"></a>クリップボードのクリア  
+
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> メソッドはクリップボードをクリアします。 クリップボードは他のプロセスによって共有されているため、クリップボードをクリアすると、こうしたプロセスに影響することがあります。  
   
  `Clear` メソッドの使用例を次のコードに示します。  
@@ -49,6 +53,7 @@ ms.locfileid: "58816884"
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
 ## <a name="writing-to-the-clipboard"></a>クリップボードへの書き込み  
+
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> メソッドを使用して、クリップボードにテキストを書き込みます。 次のコードでは、"This is a test string" という文字列をクリップボードに書き込みます。  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
@@ -66,7 +71,7 @@ ms.locfileid: "58816884"
  [!code-vb[VbResourceTasks#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#5)]  
   
 > [!IMPORTANT]
->  クリップボードには他のユーザーもアクセスできるため、パスワード、機密データなどの機密情報は格納しないでください。  
+> クリップボードには他のユーザーもアクセスできるため、パスワード、機密データなどの機密情報は格納しないでください。  
   
 ## <a name="see-also"></a>関連項目
 

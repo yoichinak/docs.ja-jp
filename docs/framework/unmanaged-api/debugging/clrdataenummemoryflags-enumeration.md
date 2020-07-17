@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e249f9fc-e24a-4506-903c-92781f6eab7c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 769e63ac6e23ae0264b79a1cd8d6e3cc1ac5a744
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132404"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags 列挙型
-メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。  
+[ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)メソッドへの呼び出しに含まれるメモリ領域を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,13 +38,13 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|ミニダンプの場合、スパースのメモリ ダンプは、します。|  
-|`CLRDATA_ENUM_MEM_HEAP`|完全なヒープ ダンプします。|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|ミニダンプ (スパースメモリダンプ)。|  
+|`CLRDATA_ENUM_MEM_HEAP`|完全なヒープダンプ。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -54,4 +52,4 @@ typedef enum CLRDataEnumMemoryFlags {
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

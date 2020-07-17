@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 193f5ffe96e89a00bed8a3c88ee346ba3ea9f2b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740018"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795866"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes 列挙型
 マネージド ヒープ上のメモリ領域の生成を指定します。  
@@ -42,21 +40,21 @@ typedef enum CorDebugGenerationTypes {
 |メンバー名|説明|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|ジェネレーション 0。|  
-|`CorDebug_Gen1`|ジェネレーション 1。|  
+|`CorDebug_Gen1`|第 1 世代。|  
 |`CorDebug_Gen2`|ジェネレーション 2。|  
-|`CorDebug_LOH`|大きなオブジェクト ヒープ。|  
+|`CorDebug_LOH`|大きなオブジェクトヒープ。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)

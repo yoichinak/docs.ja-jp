@@ -1,5 +1,6 @@
 ---
 title: .NET Framework の概要
+description: Windows アプリと Web サービスの構築と実行をサポートするテクノロジである .NET の概要について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application development [.NET Framework]
@@ -7,20 +8,17 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 6beedb8e3fd03049cd58ce1d2dac78d1adb820ef
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618754"
 ---
-# <a name="overview-of-the-net-framework"></a>.NET Framework の概要
+# <a name="overview-of-net-framework"></a>.NET Framework の概要
 
-.NET Framework は、次世代アプリケーションや XML Web サービスのビルドと実行をサポートするテクノロジです。 .NET Framework は、次の目的を実現するためにデザインされています。
+.NET Framework は、Windows アプリと Web サービスの構築と実行をサポートするテクノロジです。 .NET Framework は、次の目的を実現するためにデザインされています。
 
-- オブジェクト コードがローカルに保存され実行されるか、インターネットに分散されローカルに実行されるか、リモートで実行されるかにかかわらず、一貫したオブジェクト指向プログラミング環境を提供すること。
+- オブジェクト コードがローカルに保存され実行されるか、Web に分散されローカルに実行されるか、リモートで実行されるかにかかわらず、一貫したオブジェクト指向プログラミング環境を提供すること。
 
 - ソフトウェア配置やバージョン管理の競合を最小化するコード実行環境を提供すること。
 
@@ -33,13 +31,13 @@ ms.locfileid: "65878026"
 - .NET Framework に基づいたコードを他の任意のコードと統合できるように、すべての通信を業界標準に準拠して構築すること。
 
 > [!NOTE]
-> ユーザーと開発者のための .NET Framework の概要については、「[.NET Framework の概要](../../../docs/framework/get-started/index.md)」を参照してください。
+> ユーザーと開発者に向けた .NET Framework の概要については、[使用の開始](index.md)に関する記事を参照してください。
 
 .NET Framework は、共通言語ランタイム (CLR) と .NET Framework クラス ライブラリから構成されます。 共通言語ランタイムは、.NET Framework の基礎となるコンポーネントです。 このランタイムは、実行時のコード管理を行うエージェントのようなものであり、メモリ管理、スレッド管理、リモート処理などの重要なサービスを提供したり、セキュリティや保全性を促進するために厳密なタイプ セーフやその他のコード整合性を強制的に適用したりします。 実際、コード管理の概念はこのランタイムの基本原理です。 このランタイムを使用して実行するように作成されたコードはマネージド コードと呼ばれ、そうでないコードはアンマネージド コードと呼ばれます。 クラス ライブラリは、従来のコマンド ラインやグラフィカル ユーザー インターフェイス (GUI) を使用したアプリケーションから、ASP.NET がもたらした最新の機構に基づく Web フォームや XML Web サービスなどのアプリケーションに至るまでのアプリケーション開発に使用できる、再利用可能な型の包括的なオブジェクト指向コレクションです。
 
 .NET Framework は、アンマネージド コンポーネントでホストすることもできます。アンマネージド コンポーネントは、共通言語ランタイムをプロセスに読み込み、マネージド コードの実行を開始することで、マネージド機能とアンマネージド機能の両方を利用できるソフトウェア環境を構築できます。 .NET Framework には、いくつかのランタイム ホストが用意されているだけでなく、サードパーティ製ランタイム ホストの開発もサポートします。
 
-たとえば、ASP.NET は、このランタイムをホストして、マネージド コードのためのスケーラブルなサーバー側環境を提供します。 ASP.NET はこのランタイムを直接利用して、ASP.NET アプリケーションや XML Web サービスを有効にします。Web フォーム アプリケーションと XML Web サービスについては、このトピックで後に説明します。
+たとえば、ASP.NET は、このランタイムをホストして、マネージド コードのためのスケーラブルなサーバー側環境を提供します。 ASP.NET はこのランタイムを直接利用して、ASP.NET アプリケーションや XML Web サービスを有効にします。Web フォーム アプリケーションと XML Web サービスについては、この記事で後に説明します。
 
 共通言語ランタイムを MIME 型拡張機能としてホストするアンマネージ アプリケーションの例として、Internet Explorer があります。 Internet Explorer を使用してこのランタイムをホストすることにより、マネージド コンポーネントや Windows フォーム コントロールを HTML ドキュメントに埋め込むことができます。 このランタイムをこの方法でホストすると、マネージド モバイル コードを実現できるだけでなく、それと同時に、中程度に信頼されたコードの実行や、分離ファイル ストレージなどのマネージド コードだけが提供できる重要な拡張機能も利用できます。
 
@@ -73,19 +71,19 @@ ms.locfileid: "65878026"
 
 たとえば、.NET Framework のコレクション クラスは、独自のコレクション クラスの開発に使用する一連のインターフェイスを実装しています。 作成したコレクション クラスは、.NET Framework のクラスとシームレスに統合して使用できます。
 
-他のオブジェクト指向クラス ライブラリの場合と同様に、.NET Framework の型を使用することで、文字列の管理、データ コレクション、データベース接続、ファイル アクセスなどを含む、共通性のあるさまざまなプログラミング作業を行うことができます。 これらの共通の作業の他に、クラス ライブラリにはさまざまな特別の開発シナリオをサポートする型も含まれています。 次のような種類のアプリケーションやサービスを開発する場合に .NET Framework を使用してください。
+他のオブジェクト指向クラス ライブラリの場合と同様に、.NET Framework の型を使用することで、文字列の管理、データ コレクション、データベース接続、ファイル アクセスなど、幅広い一般的なプログラミング作業を行うことができます。 これらの共通の作業の他に、クラス ライブラリにはさまざまな特別の開発シナリオをサポートする型も含まれています。 .NET Framework を使用して、次のような種類のアプリやサービスを開発できます。
 
-- コンソール アプリ。 「[コンソール アプリケーションの構築](../../../docs/standard/building-console-apps.md)」を参照してください。
+- コンソール アプリ。 「[コンソール アプリケーションの構築](../../standard/building-console-apps.md)」を参照してください。
 
-- Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](../../../docs/framework/winforms/index.md)」を参照してください。
+- Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](../winforms/index.md)」を参照してください。
 
-- Windows Presentation Foundation (WPF) アプリケーション。 「[Windows Presentation Foundation](../../../docs/framework/wpf/index.md)」を参照してください。
+- Windows Presentation Foundation (WPF) アプリケーション。 「[Windows Presentation Foundation](../wpf/index.md)」を参照してください。
 
-- ASP.NET アプリケーション。 「[ASP.NET を使用した Web アプリケーション](../../../docs/framework/develop-web-apps-with-aspnet.md)」を参照してください。
+- ASP.NET アプリケーション。 「[ASP.NET を使用した Web アプリケーション](../develop-web-apps-with-aspnet.md)」を参照してください。
 
-- Windows サービス 「[Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)」を参照してください。
+- Windows サービス 「[Windows サービス アプリケーションの概要](../windows-services/introduction-to-windows-service-applications.md)」を参照してください。
 
-- Windows Communication Foundation (WCF) を使用するサービス指向アプリケーション。 「[WCF を使用したサービス指向アプリケーション](../../../docs/framework/wcf/index.md)」を参照してください。
+- Windows Communication Foundation (WCF) を使用するサービス指向アプリケーション。 「[WCF を使用したサービス指向アプリケーション](../wcf/index.md)」を参照してください。
 
 - Windows Workflow Foundation (WF) を使用するワークフロー対応アプリケーション。 「[Windows Workflow Foundation](../windows-workflow-foundation/index.md)」を参照してください。
 
@@ -93,9 +91,9 @@ Windows フォーム クラスは、Windows GUI の開発を非常に簡単に�
 
 ## <a name="see-also"></a>関連項目
 
-- [システム要件](../../../docs/framework/get-started/system-requirements.md)
-- [インストール ガイド](../../../docs/framework/install/index.md)
-- [開発ガイド](../../../docs/framework/development-guide.md)
-- [ツール](../../../docs/framework/tools/index.md)
+- [システム要件](system-requirements.md)
+- [インストール ガイド](../install/index.md)
+- [開発ガイド](../development-guide.md)
+- [ツール](../tools/index.md)
 - [.NET サンプルおよびチュートリアル](../../samples-and-tutorials/index.md)
-- [.NET Framework クラス ライブラリ](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [.NET API ブラウザー](../../../api/index.md)

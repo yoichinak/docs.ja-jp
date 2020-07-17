@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446898"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -53,7 +51,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 
 - IronPython。 [GitHub](https://github.com/IronLanguages/ironpython2) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
 
-- IronRuby。 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
+- IronRuby。 [IronRuby](http://ironruby.net/) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
 
 ## <a name="primary-dlr-advantages"></a>DLR の主な利点
  DLR には、次の利点があります。
@@ -76,7 +74,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 ## <a name="dlr-architecture"></a>DLR のアーキテクチャ
  動的言語ランタイムのアーキテクチャを次の図に示します。
 
- ![動的言語ランタイム アーキテクチャの概要](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
+ ![動的言語ランタイム アーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 
@@ -95,7 +93,7 @@ DLR では、呼び出しサイトのバインダーを使用して、.NET Frame
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [共通言語ランタイム](../../../docs/standard/clr.md)
+- [共通言語ランタイム](../../standard/clr.md)
 - [式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [チュートリアル: 動的オブジェクトの作成と使用](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [チュートリアル: 動的オブジェクトの作成と使用](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

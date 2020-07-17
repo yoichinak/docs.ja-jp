@@ -1,13 +1,13 @@
 ---
-title: サンプル XML ファイル:顧客と注文 Namespace1 内
+title: サンプル XML ファイル:名前空間内の顧客と注文
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c10c321d96306d45dc8634d1b62771bce65b973c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787083"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413337"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>サンプル XML ファイル:名前空間内の顧客と注文
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには顧客と注文が含まれています。 XML は名前空間に含まれています。  
@@ -432,4 +432,4 @@ ms.locfileid: "61787083"
   
 ## <a name="see-also"></a>関連項目
 
-- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [サンプル XML ドキュメント (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

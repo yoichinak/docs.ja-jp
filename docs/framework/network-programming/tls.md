@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724714"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134384"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -29,7 +29,6 @@ ms.locfileid: "57724714"
 
 - <xref:System.Net> API (<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> や <xref:System.Net.Security.SslStream?displayProperty=nameWithType> など) を直接使用する。
 - <xref:System.ServiceModel?displayProperty=nameWithType> 名前空を使って WCF クライアントおよびサービスを直接使用する。
-- [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) の Web ロールおよび worker ロールを使ってアプリケーションをホストおよび実行する。 「[Azure Cloud Services](#azure-cloud-services)」のセクションをご覧ください。
 
 次のようにすることをお勧めします。
 
@@ -56,7 +55,7 @@ WCF は、.NET Framework 4.7 での既定値として TLS 1.0、1.1、1.2 をサ
 
 ASP.NET アプリケーションの場合、意図したバージョンの .NET Framework を使っていることを確認するには、_web.config_ の `<system.web><httpRuntime targetFramework>` 要素を調べます。
 
-Windows フォームやその他のアプリケーションの場合は、「[方法:.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
+Windows フォームやその他のアプリケーションの場合は、「[方法:.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/visual-studio-multi-targeting-overview)」を参照してください。
 
 以下のセクションで説明するようにして、特定のバージョンの TLS や SSL を使っていないことを確認します。
 
@@ -66,7 +65,9 @@ Windows フォームやその他のアプリケーションの場合は、「[�
 
 ### <a name="for-http-networking"></a>HTTP ネットワークの場合
 
-.NET Framework 4.7 以降のバージョンを使う <xref:System.Net.ServicePointManager> の既定の設定は、OS による最適なセキュリティ プロトコルとバージョンの選択です。 OS による既定の最適な選択を使用することが可能な場合は、<xref:System.Net.ServicePointManager.SecurityProtocol> プロパティの値を設定しないでください。 それ以外の場合は <xref:System.Net.SecurityProtocolType.SystemDefault> に設定します。
+<xref:System.Net.ServicePointManager> で .NET Framework 4.7 以降のバージョンを使用すると、OS で構成されている既定のセキュリティ プロトコルが使用されます。 OS による既定の選択を使用することが可能な場合は、<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> プロパティの値を設定しないでください。これで既定の <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> になります。
+
+<xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> 設定により <xref:System.Net.ServicePointManager> でオペレーティング システムによって構成された既定のセキュリティ プロトコルが使用されるため、アプリケーションが実行されている OS に基づいて異なる方法で実行される可能性があります。 たとえば、Windows 7 SP1 では TLS 1.0 が使用される一方で、Windows 8 と Windows 10 では TLS 1.2 が使用されます。
 
 HTTP ネットワークで、.NET Framework 4.7 以降のバージョンが対象の場合は、この記事の残りの部分は関係ありません。
 
@@ -86,7 +87,7 @@ TCP ソケット ネットワークで、.NET Framework 4.7 以降のバージ�
 
 WCF は、.NET Framework の他の部分と同じネットワーク スタックを使います。
 
-4.7.1 が対象で、次の方法により明示的に構成されていない場合、WCF は既定で OS が最適なセキュリティ プロトコルを選択できるように構成されます。
+4\.7.1 が対象で、次の方法により明示的に構成されていない場合、WCF は既定で OS が最適なセキュリティ プロトコルを選択できるように構成されます。
 
 - アプリケーション構成ファイル。
 - **または**、アプリケーションのソース コード。
@@ -120,7 +121,7 @@ OS の最新の修正プログラムをインストールする必要があり�
 
 ### <a name="for-net-framework-35---452-and-not-wcf"></a>.NET Framework 3.5 から 4.5.2 で、WCF を使用していない場合
 
-お使いのアプリを .NET Framework 4.7 以降のバージョンにアップグレードすることをお勧めします。 アップグレードできない場合は、以下の手順を実行します。 将来的には、.NET Framework 4.7 以降のバージョンにアップグレードするまで、お使いのアプリケーションが動作しなくなる可能性があります。
+お使いのアプリを .NET Framework 4.7 以降のバージョンにアップグレードすることをお勧めします。 アップグレードできない場合は、以下の手順を実行します。
 
 [SchUseStrongCrypto](#schusestrongcrypto) および [SystemDefaultTlsVersions](#systemdefaulttlsversions) レジストリ キーを 1 に設定します。 「[Windows レジストリによるセキュリティの構成](#configuring-security-via-the-windows-registry)」をご覧ください。 .NET Framework バージョン 3.5 は、明示的な TLS の値が渡された場合にのみ、`SchUseStrongCrypto` フラグをサポートします。
 
@@ -138,7 +139,7 @@ OS の最新の修正プログラムをインストールする必要があり�
 
 ## <a name="if-your-app-targets-net-framework-35"></a>アプリの対象が .NET Framework 3.5 の場合
 
-.NET Framework または OS にセキュリティ プロトコルを選択させるのではなく、明示的にセキュリティ プロトコルを設定する必要がある場合は、`SecurityProtocolTypeExtensions` および `SslProtocolsExtension` 列挙型をコードに追加します。 `SecurityProtocolTypeExtensions` および `SslProtocolsExtension` には、`Tls12`、`Tls11`、`SystemDefault` に対する値が含まれます。 「[Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)」(Windows 8.1 および Windows Server 2012 R2 の .NET Framework 3.5 に含まれる TLS システムの既定バージョンのサポート) をご覧ください。
+.NET または OS にセキュリティ プロトコルを選択させるのではなく、明示的にセキュリティ プロトコルを設定する必要がある場合は、`SecurityProtocolTypeExtensions` および `SslProtocolsExtension` 列挙型をコードに追加します。 `SecurityProtocolTypeExtensions` および `SslProtocolsExtension` には、`Tls12`、`Tls11`、`SystemDefault` に対する値が含まれます。 詳細については、「[Windows 8.1 と Windows Server 2012 R2 上の .NET Framework 3.5 に含まれる TLS システムの既定のバージョンのサポート](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)」を参照してください。
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -193,7 +194,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` レジストリ キーの値は DWORD 型です。 値を 1 に設定すると、アプリは強力な暗号を使うようになります。 強力な暗号では、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 値 0 は、強力な暗号を無効にします。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-sch_use_strong_crypto-flag)」をご覧ください。
 
-アプリの対象が .NET Framework 4.6 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.6 であっても、対象が以前のバージョンの場合は、このキーの既定値は 0 です。 その場合は、値を 1 に明示的に設定する必要があります。
+アプリの対象が .NET Framework 4.6 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの対象が .NET Framework 4.5.2 以前のバージョンの場合、このキーの既定値は 0 です。 その場合は、値を 1 に明示的に設定する必要があります。
 
 強力な暗号化をサポートしておらず、アップグレードできない、レガシ サービスに接続する必要がある場合は、このキーの値を常に 0 にする必要があります。
 
@@ -203,15 +204,15 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 `<VERSION>` は、v4.0.30319 (.NET Framework 4 以降の場合) または v2.0.50727 (.NET Framework 3.5 の場合) にする必要があります。
 
-アプリの対象が .NET Framework 4.7 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.7 以降のバージョンであっても、以前のバージョンが対象になっている場合は、このキーの既定値は 0 になります。 その場合は、値を 1 に明示的に設定する必要があります。
+アプリの対象が .NET Framework 4.7 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの対象が .NET Framework 4.6.1 以前のバージョンの場合、このキーの既定値は 0 です。 その場合は、値を 1 に明示的に設定する必要があります。
 
 詳細については、「[Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)」をご覧ください。
 
-.NET Framework 3.5.1 の場合について詳しくは、「[Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)」(Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート) をご覧ください。
+.NET Framework 3.5.1 の場合について詳しくは、「[Windows 7 SP1 と Server 2008 R2 SP1 上の .NET Framework 3.5.1 に含まれている TLS システムの既定のバージョンのサポート](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)」を参照してください。
 
 次の _.REG_ ファイルは、レジストリ キーとそのバリエーションを最も安全な値に設定します。
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]
@@ -237,12 +238,12 @@ Windows Registry Editor Version 5.00
 
 最上位は `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` レジストリ キーです。 そのキーの下に、`SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1`、`TLS 1.2` のセットで任意のサブキーを作成できます。 これらの各サブキーの下に、サブキー `Client` と `Server` の一方または両方を作成できます。 `Client` および `Server` の下には、DWORD 値 `DisabledByDefault` (0 または 1) および `Enabled` (0 または 0xFFFFFFFF) を作成できます。
 
-## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO フラグ
+## <a name="the-sch_use_strong_crypto-flag"></a><a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO フラグ
 
 有効になっている場合 (既定では、`AppContext` スイッチまたは Windows レジストリにより)、アプリが TLS セキュリティ プロトコルを要求すると、.NET Framework は `SCH_USE_STRONG_CRYPTO` フラグを使います。 `SCH_USE_STRONG_CRYPTO` フラグは、`AppContext` スイッチまたはレジストリを使って、既定で有効にすることができます。 OS は `Schannel` にフラグを渡して、既知の脆弱な暗号アルゴリズム、暗号スイート、および相互運用性向上のために他で有効になっている可能性のある TLS/SSL プロトコルのバージョンを無効にするよう指示します。 詳細については次を参照してください:
 
 - [セキュリティで保護されたチャネル](/windows/desktop/SecAuthN/secure-channel)
-- [SCHANNEL_CRED 構造体](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
+- [SCHANNEL_CRED 構造体](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 `SCH_USE_STRONG_CRYPTO` フラグは、ユーザーが <xref:System.Net.SecurityProtocolType> または <xref:System.Security.Authentication.SslProtocols> の `Tls` (TLS 1.0)、`Tls11`、または `Tls12` 列挙値を明示的に使ったときも、`Schannel` に渡されます。
 
@@ -291,19 +292,3 @@ Windows の各バージョンにおいて既定で有効にされる TLS/SSL プ
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Windows Vista SP2 および Server 2008 SP2 の .NET Framework 2.0 SP2 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | サポートなし |
-
-## <a name="azure-cloud-services"></a>Azure Cloud Services
-
-[Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) の Web ロールと worker ロールを使ってアプリケーションをホストおよび実行している場合、TLS 1.2 をサポートするには、検討する必要のある考慮事項がいくつかあります。
-
-### <a name="net-framework-47-is-not-installed-on-azure-guest-os-by-default"></a>.NET Framework 4.7 は、既定では Azure ゲスト OS にインストールされません
-
-最新の Azure ゲスト OS ファミリ 5 リリース (Windows Server 2016) にインストールされる最新バージョンは、4.6.2 です。 各 Azure ゲスト OS にインストールされる .NET Framework のバージョンについては、「[Azure ゲスト OS リリースと SDK の互換性対応表](https://docs.microsoft.com/azure/cloud-services/cloud-services-guestos-update-matrix)」をご覧ください。
-
-お使いのアプリの対象が、Azure ゲスト OS のバージョンで利用できない .NET Framework のバージョンである場合は、自分でインストールする必要があります。 「[Azure Cloud Services のロールに .NET をインストールする](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-install-dotnet)」をご覧ください。 Framework のインストールで再起動が必要な場合、準備完了状態になる前に、サービス ロールも再起動することがあります。
-
-### <a name="azure-guest-os-registry-settings"></a>Azure ゲスト OS のレジストリ設定
-
-[Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) 用の Azure ゲスト OS Family 5 イメージでは既に、`SchUseStrongCrypto` レジストリ キーの値が 1 に設定されています。 詳しくは、「[SchUseStrongCrypto](#schusestrongcrypto)」をご覧ください。
-
-[SystemDefaultTlsVersions](#systemdefaulttlsversions) レジストリ キーを 1 に設定します。 「[Windows レジストリによるセキュリティの構成](#configuring-security-via-the-windows-registry)」をご覧ください。

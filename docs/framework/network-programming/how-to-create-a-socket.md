@@ -1,5 +1,6 @@
 ---
 title: '方法: ソケットを作成する'
+description: ソケットを初期化してリモート デバイスと通信する方法について学習します。 Socket クラスを使用して、アドレス ファミリ、ソケットの種類、プロトコルの種類を指定します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101121"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502549"
 ---
 # <a name="how-to-create-a-socket"></a>方法: ソケットを作成する
 ソケットを使用してリモート デバイスと通信するには、ソケットをプロトコルとネットワーク アドレスの情報を使用して事前に初期化する必要があります。 <xref:System.Net.Sockets.Socket> クラスのコンストラクターには、アドレス ファミリ、ソケットの種類、およびソケットが接続を行うために使用するプロトコルの種類を指定するパラメーターがあります。  
@@ -31,7 +32,7 @@ ms.locfileid: "59101121"
  次の例では、インターネットなどの TCP/IP ベースのネットワーク上で通信するために使用できるソケットを作成します。  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Stream, ProtocolType.Tcp);  
 ```  
   
@@ -43,7 +44,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  TCP ではなく UDP を使用するには、次の例のように、プロトコルの種類を変更します。  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Dgram, ProtocolType.Udp);  
 ```  
   
@@ -62,5 +63,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
 ## <a name="see-also"></a>関連項目
 
-- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)
-- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [クライアント ソケットの使用](using-client-sockets.md)
+- [リッスン (ソケットで)](listening-with-sockets.md)

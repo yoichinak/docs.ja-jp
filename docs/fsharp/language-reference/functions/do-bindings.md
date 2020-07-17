@@ -1,17 +1,17 @@
 ---
 title: do バインド
-description: 学習方法、F#関数または値を定義することがなくコードを実行するために使用は、'do' のバインドします。
+description: 関数またはF#値を定義せずに ' do ' バインディングを使用してコードを実行する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0755e36912fc4e5a645e55eb4bee5c730a56cadf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f98f523296bfaceeda35d4861eafbfeaa5a60c32
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641910"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630530"
 ---
 # <a name="do-bindings"></a>do バインド
 
-A`do`関数または値を定義することがなくコードを実行するバインディングを使用します。 またはバインドできるクラスを使用してを参照してください[`do`クラス内のバインディング](../members/do-bindings-in-classes.md)します。
+バインディング`do`は、関数または値を定義せずにコードを実行するために使用されます。 また、バインディングはクラスで使用できます。「 [ `do`クラスのバインディング](../members/do-bindings-in-classes.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -22,11 +22,11 @@ A`do`関数または値を定義することがなくコードを実行するバ
 
 ## <a name="remarks"></a>Remarks
 
-使用して、`do`関数または値の定義とは別にコードを実行するときにバインディングします。 内の式を`do`バインディングを返す必要があります`unit`します。 最上位のコード`do`モジュールの初期化時にバインディングを実行します。 キーワード`do`は省略可能です。
+関数また`do`は値の定義とは別にコードを実行する場合は、バインディングを使用します。 `do`バインディング内の式はを返す`unit`必要があります。 最上位レベル`do`のバインド内のコードは、モジュールが初期化されるときに実行されます。 キーワード`do`は省略可能です。
 
-属性は、最上位レベルに適用できる`do`バインドします。 たとえば、プログラムでは、COM 相互運用機能を使用する場合があります適用する、`STAThread`属性をプログラムします。 属性を使用してこれを行う、`do`バインド、次のコードに示すようにします。
+最上位レベル`do`のバインドに属性を適用できます。 たとえば、プログラムが COM 相互運用機能を使用している場合は、 `STAThread`プログラムに属性を適用できます。 これを行うには、次のコードに`do`示すように、バインディングの属性を使用します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
 ## <a name="see-also"></a>関連項目
 

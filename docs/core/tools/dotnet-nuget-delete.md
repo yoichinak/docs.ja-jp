@@ -3,16 +3,16 @@ title: dotnet nuget delete コマンド
 description: dotnet-nuget-delete コマンドは、サーバーからパッケージを削除または一覧から削除します。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0b2ba64b70bae5e06f213457e30fedeca26a9819
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 4fa4f24adba251d7872986de4a8b1a63203c36c3
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539254"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463583"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -24,13 +24,15 @@ ms.locfileid: "67539254"
 
 ## <a name="synopsis"></a>構文
 
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
-    [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
+```dotnetcli
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output]
+    [--interactive] [-k|--api-key <API_KEY>] [--no-service-endpoint]
+    [--non-interactive] [-s|--source <SOURCE>]
+
+dotnet nuget delete -h|--help
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet nuget delete` コマンドは、サーバーからパッケージを削除または一覧から削除します。 [nuget.org](https://www.nuget.org/) の場合、この操作ではパッケージを一覧から削除します。
 
@@ -74,16 +76,16 @@ dotnet nuget delete [-h|--help]
 
   サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 * `Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
 * ユーザーに資格情報やその他の入力を求めずに、`Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
   ```

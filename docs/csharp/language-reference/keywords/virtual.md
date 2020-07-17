@@ -1,6 +1,5 @@
 ---
 title: virtual - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -8,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 2568eed5a889f6c03e237875194b8adcb9334ef7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401809"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173459"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# リファレンス)
 
 `virtual` キーワードは、メソッド、プロパティ、インデクサー、またはイベント宣言を変更し、それを派生クラスでオーバーライドできるようにするために使用されます。 たとえば、次のメソッドはそれを継承する任意のクラスでオーバーライドできます。
 
 ```csharp
-public virtual double Area() 
+public virtual double Area()
 {
     return x * y;
 }
@@ -38,7 +37,7 @@ public virtual double Area()
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-仮想プロパティは、宣言と呼び出しの構文の違いを除けば、抽象メソッドと似た働きを持ちます。
+仮想プロパティは、宣言と呼び出しの構文の違いを除けば、仮想メソッドと似た働きを持ちます。
 
 - `virtual` 修飾子を静的プロパティに対して使うのは誤りです。
 
@@ -62,12 +61,8 @@ public Cylinder(double r, double h): base(r, h) {}
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [修飾子](modifiers.md)
-- [C# のキーワード](index.md)
 - [ポリモーフィズム](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)

@@ -1,21 +1,25 @@
 ---
-title: <certificate> の <identity>
+title: <identity> の <certificate>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cfd207afc72cc71359d9d262e30b0696ba63d2b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673356"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70850021"
 ---
-# <a name="certificate-for-identity"></a>\<証明書 > の\<identity >
+# <a name="certificate-for-identity"></a>\<identity> の \<certificate>
 クライアントに対するサービスの検証に使用される X.509 証明書を指定します。  
   
- 要素の値を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+要素の値の設定の詳細については、「[サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
- \<identity>  
-\<証明書>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificate>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,9 +41,9 @@ ms.locfileid: "61673356"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|クライアントで認証するサービスの ID を指定します。|  
+|[\<identity>](identity.md)|クライアントで認証するサービスの ID を指定します。|  
   
 ## <a name="example"></a>例  
  次のコードは、クライアントに対するサーバーの検証に使用される証明書のエンコードされた表現を指定します。  
@@ -56,5 +60,5 @@ ms.locfileid: "61673356"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [サービス ID と認証](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

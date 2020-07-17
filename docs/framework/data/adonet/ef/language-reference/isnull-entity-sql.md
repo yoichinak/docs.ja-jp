@@ -2,19 +2,19 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780407"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150201"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 クエリ式が NULL かどうかを調べます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
@@ -31,16 +31,16 @@ expression IS [ NOT ] NULL
 ## <a name="remarks"></a>Remarks  
  外部結合の要素が NULL かどうかを確認するには、`IS NULL` を使用します。  
   
-```  
-select c   
-      from LOB.Customers as c left outer join LOB.Orders as o   
-                              on c.ID = o.CustomerID    
+```sql  
+select c
+      from LOB.Customers as c left outer join LOB.Orders as o
+                              on c.ID = o.CustomerID
       where o is not null and o.OrderQuantity = @x  
 ```  
   
  メンバーに実際の値が含まれているかどうかを確認するには、`IS NULL` を使用します。  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
@@ -57,14 +57,14 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|エラーをスローします。|  
   
 ## <a name="example"></a>例  
- 次[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリでは、IS NOT NULL 演算子を使用して、クエリ式が null でないかどうかを判断します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
+ 次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、IS NOT NULL 演算子を使用して、クエリ式が NULL でないかどうかを確認します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

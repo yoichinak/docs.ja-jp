@@ -4,54 +4,54 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: d1778e2bb58d32e976f10b3fba1637918278d36e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750683"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409284"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>オブジェクト変数または With ブロック変数が設定されていません。
 無効なオブジェクト変数が参照されています。   このエラーが発生する原因は複数あります。
 
-- 変数は、型を指定せずに宣言されました。 型を指定せずに宣言された変数は場合、既定値は入力`Object`します。
+- 型を指定せずに変数が宣言されました。 型を指定せずに変数が宣言されている場合、既定で `Object` 型になります。
 
-    たとえば、変数を使用して宣言`Dim x`型になります`Object;`で宣言された変数`Dim x As String`型になります`String`します。
+    たとえば、`Dim x` で宣言された変数は、`Object;` 型になり、`Dim x As String` で宣言された変数は、`String` 型になります。
 
     > [!TIP]
-    >  `Option Strict`ステートメントは、暗黙の型の指定を許可しません、`Object`型。 型を省略すると、コンパイル時エラーが発生します。 参照してください[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。
+    > `Option Strict` ステートメントでは、結果が `Object` 型となる暗黙の型指定が許可されません。 型を省略すると、コンパイル時エラーが発生します。 「[Option Strict ステートメント](../statements/option-strict-statement.md)」を参照してください。
 
-- 設定されているオブジェクトを参照しようとして`Nothing`します。
+- `Nothing` に設定されているオブジェクトを参照しようとしています。
 
-- 適切に宣言されていない配列変数の要素にアクセスしようとしました。
+- 正しく宣言されていない配列変数の要素にアクセスしようとしています。
 
-    たとえば、配列として宣言されている`products() As String`配列の要素を参照しようとする場合、エラーをトリガーする`products(3) = "Widget"`。 配列は要素が存在しないと、オブジェクトとして扱われます。
+    たとえば、`products() As String` として宣言された配列では、配列 `products(3) = "Widget"` の要素を参照しようとした場合に、エラーがトリガーされます。 配列には要素がなく、オブジェクトとして扱われます。
 
-- アクセス コード内にしようとしています、`With...End With`ブロックが初期化されている前にブロックします。   A`With...End With`ブロックを実行することによって初期化する必要があります、`With`ステートメントのエントリ ポイント。
+- ブロックが初期化される前に、`With...End With` ブロック内のコードにアクセスしようとしています。   `With` ステートメントのエントリ ポイントを実行して、`With...End With` ブロックを初期化する必要があります。
 
 > [!NOTE]
-> 以前のバージョンの Visual Basic または VBA でこのエラーを使用せず、変数に値を割り当てることによってもにトリガーされる、`Set`キーワード (`x = "name"`の代わりに`Set x = "name"`)。 `Set`キーワードは Visual Basic .Net で無効になりました。
+> Visual Basic または VBA の以前のバージョンでは、このエラーは、`Set` キーワードを使用せずに変数に値を代入する (`Set x = "name"` ではなく `x = "name"`) ことによってもトリガーされていました。 `Set` キーワードは、Visual Basic .Net では無効になりました。
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. 設定`Option Strict`に`On`ファイルの先頭に次のコードを追加することで。
+1. ファイルの先頭に次のコードを追加して、`Option Strict` を `On` に設定します。
 
     ```vb
     Option Strict On
     ```
 
-    プロジェクトを実行すると、コンパイラ エラーに表示されます、**エラー一覧**せず、型が指定されているすべての変数にします。
+    プロジェクトを実行すると、**エラー一覧**に、型を使用せずに指定された任意の変数についてのコンパイラ エラーが表示されます。
 
-2. 有効にしたくない場合`Option Strict`、せず、型指定されている変数がある場合、コードを検索 (`Dim x`の代わりに`Dim x As String`) し、目的の型を宣言に追加します。
+2. `Option Strict` を有効にしない場合、コードで、型を使用せずに指定されたすべての変数 (`Dim x As String` ではなく `Dim x`) を検索し、目的の型を宣言に追加します。
 
-3. 設定されているオブジェクト変数を参照していないことを確認`Nothing`します。  コード内のキーワードの`Nothing`、オブジェクトに設定されていないように、コードの修正と`Nothing`を参照した後になるまでです。
+3. `Nothing` に設定されているオブジェクト変数を参照していないことを確認してください。  コードでキーワード `Nothing` を検索し、オブジェクトを参照した後までオブジェクトが `Nothing` に設定されないように、コードを修正します。
 
-4. アクセスする前に、配列変数の寸法はことを確認します。 最初に、配列を作成するときに、ディメンションを割り当てることができますか (`Dim x(5) As String`の代わりに`Dim x() As String`)、またはを使用して、`ReDim`キーワードを最初にアクセスする前に、配列の次元を設定します。
+4. 配列変数にアクセスする前に、それらの次元が設定されていることを確認してください。 最初に配列を作成するときに次元を割り当てる (`Dim x() As String` ではなく `Dim x(5) As String`) か、または配列に最初にアクセスする前に、`ReDim` キーワードを使用して、その次元を設定できます。
 
-5. 必ず、`With`ブロックが実行することによって初期化されて、`With`ステートメントのエントリ ポイント。
+5. `With` ステートメントのエントリ ポイントを実行して、`With` ブロックが初期化されていることを確認します。
 
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト変数の宣言](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [With...End With ステートメント](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [オブジェクト変数の宣言](../../programming-guide/language-features/variables/object-variable-declaration.md)
+- [ReDim ステートメント](../statements/redim-statement.md)
+- [With...End With ステートメント](../statements/with-end-with-statement.md)

@@ -1,23 +1,22 @@
 ---
 title: クラス - C# プログラミング ガイド
-ms.custom: seodec18
 description: クラスの型と、クラスの型を作成する方法について説明します
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398587"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102048"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
 ## <a name="reference-types"></a>参照型  
-[class](../../../csharp/language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../../csharp/language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../../csharp/language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
+[class](../../language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -27,11 +26,11 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-オブジェクトが作成されると、その特定のオブジェクトに対してマネージド ヒープ上で十分なメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージド ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理とガベージ コレクション](../../../standard/garbage-collection/gc.md)」を参照してください。  
+オブジェクトが作成されると、その特定のオブジェクトに対してマネージド ヒープ上で十分なメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージド ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理とガベージ コレクション](../../../standard/garbage-collection/fundamentals.md)」を参照してください。  
   
 ## <a name="declaring-classes"></a>クラスの宣言
 
- クラスは、次の例に示すように、[class](../../../csharp/language-reference/keywords/class.md) キーワードと、その後に続ける一意の識別子を使用して宣言します。
+ クラスは、次の例に示すように、[class](../../language-reference/keywords/class.md) キーワードと、その後に続ける一意の識別子を使用して宣言します。
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -54,11 +53,11 @@ MyClass mc2 = mc;
  ```
 
  クラスのインスタンスを作成すると、そのオブジェクトへの参照が返されます。 前の例の `object1` は、`Customer` に基づくオブジェクトへの参照です。 この参照は、新しいオブジェクトを参照しますが、オブジェクト データ自体を含みません。 実際、オブジェクト参照は、オブジェクトを作成しなくても作成できます。  
- 
+
 ```csharp
  Customer object2;
 ```
- 
+
  上のような、オブジェクトを参照しないオブジェクト参照を作成するのはお勧めしません。実行時にこのような参照を通じてオブジェクトへのアクセスを試みると失敗するからです。 ただし、新しいオブジェクトを作成するか、既存のオブジェクトに割り当てると、このような参照でオブジェクトを参照できるようになります。次に例を示します。  
 
  ```csharp
@@ -70,7 +69,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>クラスの継承  
 
-クラスは、オブジェクト指向プログラミングの基本的な特性である "*継承*" を完全にサポートします。 クラスを作成するときは、[sealed](../../../csharp/language-reference/keywords/sealed.md) として定義されているものを除く、他のすべてのインターフェイスまたはクラスから継承できます。また、作成したクラスから他のクラスを継承し、クラスの仮想メソッドをオーバーライドすることもできます。
+クラスは、オブジェクト指向プログラミングの基本的な特性である "*継承*" を完全にサポートします。 クラスを作成するときは、[sealed](../../language-reference/keywords/sealed.md) として定義されているものを除く、他のすべてのインターフェイスまたはクラスから継承できます。また、作成したクラスから他のクラスを継承し、クラスの仮想メソッドをオーバーライドすることもできます。
 
 継承は、*派生*を使用して行われます。派生とは、データの動作の継承元である*基底クラス*を使用してクラスを宣言することを意味します。 基底クラスは、派生クラス名の後に、コロンと基底クラス名を追加して指定します。次に例を示します。  
 
@@ -94,7 +93,7 @@ C++ と異なり、C# のクラスは 1 つの基底クラスから直接継承�
 
 次の例では、[自動実装プロパティ](auto-implemented-properties.md)、メソッド、およびコンストラクターという特殊なメソッドをそれぞれ 1 つずつ含むパブリック クラスを定義しています。 詳しくは、[プロパティ](properties.md)、[メソッド](methods.md)、および[コンス トラクター](constructors.md)に関するトピックを参照してください。 このクラスのインスタンスは、`new` キーワードによってインスタンス化されます。  
   
-[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
+[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)]
   
 ## <a name="c-language-specification"></a>C# 言語仕様
 

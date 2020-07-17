@@ -1,35 +1,35 @@
 ---
-title: モジュール (Visual Basic)
+title: モジュール
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 0bb33b102358fd2d0290fd413b09448255522856
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778652"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386596"
 ---
 # <a name="modules-visual-basic"></a>モジュール (Visual Basic)
-Visual Basic では、システム情報の取得、ファイルとディレクトリの操作を実行する、数学的計算を実行する文字列の操作など、コードの一般的なタスクを簡略化を有効にして、いくつかのモジュールが提供されます。 次の表には、Visual Basic で提供されるモジュールが一覧表示します。  
+
+Visual Basic には、文字列の操作、算術計算の実行、システム情報の取得、ファイルとディレクトリの操作の実行など、コード内の一般的なタスクを簡略化できるモジュールがいくつか用意されています。 次の表に、Visual Basic が提供しているモジュールの一覧を示します。  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|その他の定数が含まれています。 これらの定数は、コード内の任意の場所で使用できます。|  
-|<xref:Microsoft.VisualBasic.ControlChars>|印刷およびテキストを表示するための定数の制御文字が含まれています。|  
-|<xref:Microsoft.VisualBasic.Conversion>|別の数値文字列、数値、文字列および 1 つのデータを入力、他の底を 10 進数に変換するメンバーが含まれています。|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|現在の日付または時刻の取得、日付計算の実行、日付または時刻を返す、日付や時刻などを設定またはプロセスの時間メンバーが含まれます。|  
-|<xref:Microsoft.VisualBasic.ErrObject>|実行時エラーとエラーをクリアしたりする方法について説明します。|  
-|<xref:Microsoft.VisualBasic.FileSystem>|ファイル、ディレクトリまたはフォルダー、およびシステムの操作を実行するメンバーが含まれています。|  
-|<xref:Microsoft.VisualBasic.Financial>|財務計算の実行に使用されるプロシージャが含まれています。|  
-|<xref:Microsoft.VisualBasic.Globals>|現在のスクリプト エンジンのバージョンについてを説明します。|  
-|<xref:Microsoft.VisualBasic.Information>|返すか、テスト、配列のサイズや型名などの情報を確認するメンバーが含まれています。|  
-|<xref:Microsoft.VisualBasic.Interaction>|含むメンバーは、オブジェクト、アプリケーション、およびシステムと対話します。|  
-|<xref:Microsoft.VisualBasic.Strings>|文字列の場合、文字列の長さの取得、文字列の検索を再フォーマットなどの文字列操作を実行するメンバーが含まれています。|  
-|<xref:Microsoft.VisualBasic.VBMath>|含むメンバーは、算術演算を実行します。|  
+|<xref:Microsoft.VisualBasic.Constants>|各種の定数を格納します。 これらの定数は、コード内の任意の場所で使用できます。|  
+|<xref:Microsoft.VisualBasic.ControlChars>|テキストを印刷および表示するための定数制御文字を格納します。|  
+|<xref:Microsoft.VisualBasic.Conversion>|10 進数を他の基数に変換するメンバー、数値を文字列に変換するメンバー、文字列を数値に変換するメンバー、およびあるデータ型を別のデータ型に変換するメンバーを格納します。|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|現在の日付または時刻を取得するメンバー、日付の計算を実行するメンバー、日付または時刻を返すメンバー、日付または時刻を設定するメンバー、あるいはプロセスの継続時間を測定するメンバーを格納します。|  
+|<xref:Microsoft.VisualBasic.ErrObject>|ランタイム エラーと、エラーを発生させる方法またはクリアする方法に関する情報を格納します。|  
+|<xref:Microsoft.VisualBasic.FileSystem>|ファイル、ディレクトリ、またはフォルダー、およびシステムの操作を実行するメンバーを格納します。|  
+|<xref:Microsoft.VisualBasic.Financial>|財務計算の実行に使用されるプロシージャを格納します。|  
+|<xref:Microsoft.VisualBasic.Globals>|現在のスクリプト エンジンのバージョンに関する情報を格納します。|  
+|<xref:Microsoft.VisualBasic.Information>|配列のサイズ、型名などの情報を返す、テストする、または検証するメンバーを格納します。|  
+|<xref:Microsoft.VisualBasic.Interaction>|オブジェクト、アプリケーション、およびシステムと対話するメンバーを格納します。|  
+|<xref:Microsoft.VisualBasic.Strings>|文字列の再フォーマット、文字列の検索、文字列の長さの取得など、文字列操作を実行するメンバーを格納します。|  
+|<xref:Microsoft.VisualBasic.VBMath>|算術演算を実行するメンバーを格納します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)
+- [Visual Basic の言語リファレンス](index.md)

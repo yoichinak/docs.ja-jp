@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615375"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290228"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>スキーマをコンパイルするための XmlSchemaSet
 XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキャッシュである <xref:System.Xml.Schema.XmlSchemaSet> について説明します。  
@@ -133,12 +131,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  <xref:System.Xml.Schema.XmlSchemaSet> 内のスキーマは、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドによって、1 つの論理スキーマにコンパイルされます。  
   
 > [!NOTE]
->  廃止された <xref:System.Xml.Schema.XmlSchemaCollection> クラスとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> メソッドの呼び出し時にはコンパイルされません。  
+> 廃止された <xref:System.Xml.Schema.XmlSchemaCollection> クラスとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> メソッドの呼び出し時にはコンパイルされません。  
   
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドの実行が成功した場合、<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> の <xref:System.Xml.Schema.XmlSchemaSet> プロパティは `true` に設定されます。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、スキーマが <xref:System.Xml.Schema.XmlSchemaSet> 内にあるときに編集されても、影響を受けません。 <xref:System.Xml.Schema.XmlSchemaSet> 内の個別のスキーマの更新は追跡されません。 その結果、<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、`true` のスキーマが追加または削除されない限り、<xref:System.Xml.Schema.XmlSchemaSet> に含まれるスキーマの 1 つが変更されていても、<xref:System.Xml.Schema.XmlSchemaSet> になる可能性があります。  
+> <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、スキーマが <xref:System.Xml.Schema.XmlSchemaSet> 内にあるときに編集されても、影響を受けません。 <xref:System.Xml.Schema.XmlSchemaSet> 内の個別のスキーマの更新は追跡されません。 その結果、<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、`true` のスキーマが追加または削除されない限り、<xref:System.Xml.Schema.XmlSchemaSet> に含まれるスキーマの 1 つが変更されていても、<xref:System.Xml.Schema.XmlSchemaSet> になる可能性があります。  
   
  次の例では、`books.xsd` ファイルを <xref:System.Xml.Schema.XmlSchemaSet> に追加した後、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを呼び出します。  
   
@@ -249,7 +247,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="validating-xml-documents"></a>XML ドキュメントの検証  
  XML ドキュメントは、<xref:System.Xml.Schema.XmlSchemaSet> 内のスキーマに対して検証できます。 スキーマを <xref:System.Xml.XmlReaderSettings> オブジェクトの <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> プロパティに追加するか、<xref:System.Xml.Schema.XmlSchemaSet> を <xref:System.Xml.XmlReaderSettings> オブジェクトの <xref:System.Xml.XmlReaderSettings.Schemas%2A> プロパティに追加することによって、XML ドキュメントを検証します。 次に、<xref:System.Xml.XmlReaderSettings> オブジェクトを作成して、XML ドキュメントを検証するために、<xref:System.Xml.XmlReader.Create%2A> オブジェクトが <xref:System.Xml.XmlReader> クラスの <xref:System.Xml.XmlReader> メソッドによって使用されます。  
   
- <xref:System.Xml.Schema.XmlSchemaSet> を利用して XML 文書を検証する方法については、「[XmlSchemaSet による XML スキーマ (XSD) 検証](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)」を参照してください。  
+ <xref:System.Xml.Schema.XmlSchemaSet> を利用して XML 文書を検証する方法については、「[XmlSchemaSet による XML スキーマ (XSD) 検証](xml-schema-xsd-validation-with-xmlschemaset.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -260,5 +258,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 - <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
-- [スキーマ キャッシュとしての XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [XmlSchemaSet による XML スキーマ (XSD) 検証](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+- [スキーマ キャッシュとしての XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [XmlSchemaSet による XML スキーマ (XSD) 検証](xml-schema-xsd-validation-with-xmlschemaset.md)

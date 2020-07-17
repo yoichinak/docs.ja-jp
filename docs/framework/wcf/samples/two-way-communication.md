@@ -2,20 +2,20 @@
 title: 双方向通信
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 6ce0d15bca15fff52ea6c4ab210dd08664e19824
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 291380d656b0e22c7fdf1cb291c45d05359a95c8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007683"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591268"
 ---
 # <a name="two-way-communication"></a>双方向通信
 このサンプルでは、双方向のトランザクション化キューを MSMQ を介して実行する方法を示します。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 このサンプルのサービスは自己ホスト型コンソール アプリケーションであるので、サンプルを実行すると、キューに置かれたメッセージをサービスが受信するようすを観察できます。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- このサンプルがに基づいて、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)します。  
+ このサンプルは、トランザクション処理された[MSMQ バインディング](transacted-msmq-binding.md)に基づいています。  
   
  キュー通信では、クライアントはサービスとの通信にキューを使用します。 クライアントはメッセージをキューに送信し、サービスはメッセージをキューから受信します。 したがって、キューを使用する通信では、サービスとクライアントが同時に実行されていなくてもかまいません。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "62007683"
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
-    void SubmitPurchaseOrder(PurchaseOrder po, string   
+    void SubmitPurchaseOrder(PurchaseOrder po, string
                                   reportOrderStatusTo);  
 }
 ```
@@ -73,9 +73,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  MSMQ キュー名は、構成ファイルの appSettings セクションで指定されます。 サービスのエンドポイントは、構成ファイルの System.ServiceModel セクションで定義されます。  
   
 > [!NOTE]
->  MSMQ のキュー名とエンドポイント アドレスでは、若干異なるアドレス表記が使用されています。 MSMQ のキュー名では、ドット (.) を使用してローカル コンピューターを表し、バックスラッシュを使用してパスを区切ります。 Windows Communication Foundation (WCF) エンドポイントのアドレス指定、net.msmq: スキーム、"localhost"を使用して、ローカル コンピューターおよびそのパスにスラッシュを使用します。 リモート コンピューターでホストされているキューからの読み出しを行うには、"." や "localhost" をリモート コンピューター名に置き換えます。  
+> MSMQ のキュー名とエンドポイント アドレスでは、若干異なるアドレス表記が使用されています。 MSMQ のキュー名では、ドット (.) を使用してローカル コンピューターを表し、バックスラッシュを使用してパスを区切ります。 Windows Communication Foundation (WCF) エンドポイントアドレスは、net.tcp: scheme を指定し、ローカルコンピューターに "localhost" を使用して、パスにスラッシュを使用します。 リモート コンピューターでホストされているキューからの読み出しを行うには、"." や "localhost" をリモート コンピューター名に置き換えます。  
   
- サービスは自己ホスト型です。 MSMQ トランスポートを使用する場合、使用するキューをあらかじめ作成しておく必要があります。 手動で作成することもコードで作成することもできます。 このサンプルでは、サービスがキューの存在を確認し、必要な場合はキューを作成します。 キュー名は構成ファイルから読み込まれます。 ベース アドレスを使って、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービスにプロキシを生成します。  
+ サービスは自己ホスト型です。 MSMQ トランスポートを使用する場合、使用するキューをあらかじめ作成しておく必要があります。 手動で作成することもコードで作成することもできます。 このサンプルでは、サービスがキューの存在を確認し、必要な場合はキューを作成します。 キュー名は構成ファイルから読み込まれます。 このベースアドレスは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって、サービスへのプロキシを生成するために使用されます。  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -149,11 +149,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
-    [OperationBehavior(TransactionAutoComplete = true,   
+    [OperationBehavior(TransactionAutoComplete = true,
                         TransactionScopeRequired = true)]  
     public void OrderStatus(string poNumber, string status)  
     {  
-        Console.WriteLine("Status of order {0}:{1} ", poNumber ,   
+        Console.WriteLine("Status of order {0}:{1} ", poNumber ,
                                                            status);  
     }  
 }  
@@ -170,7 +170,7 @@ public class OrderStatusService : IOrderStatus
 <system.serviceModel>  
   
   <services>  
-    <service   
+    <service
        name="Microsoft.ServiceModel.Samples.OrderStatusService">  
       <!-- Define NetMsmqEndpoint -->  
       <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderStatus"  
@@ -182,8 +182,8 @@ public class OrderStatusService : IOrderStatus
   <client>  
     <!-- Define NetMsmqEndpoint -->  
     <endpoint name="OrderProcessorEndpoint"  
-              address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"   
-              binding="netMsmqBinding"   
+              address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"
+              binding="netMsmqBinding"
               contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
   </client>  
   
@@ -194,7 +194,7 @@ public class OrderStatusService : IOrderStatus
   
  サービスによって発注書の情報が表示され、注文ステータスがサービスから注文ステータス キューに返信されることも表示されます。  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -211,23 +211,23 @@ Sending back order status information
   
  クライアントには、サービスから送信された注文ステータス情報が表示されます。  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending  
 ```  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
-3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
     > [!NOTE]
-    >  Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。  
+    > Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。  
   
- <xref:System.ServiceModel.NetMsmqBinding> を使用する場合の既定では、トランスポート セキュリティが有効です。 MSMQ トランスポート セキュリティでは、2 つの関連するプロパティがある<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>と<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`既定では、認証モードが設定されて`Windows`保護レベルに設定し、`Sign`します。 MSMQ の認証機能と署名機能を利用するには、ドメインに MSMQ があることと、MSMQ に関する Active Directory の統合オプションがインストールされていることが必要です。 この条件を満たしていないコンピューターでこのサンプルを実行すると、エラーになります。  
+ <xref:System.ServiceModel.NetMsmqBinding> を使用する場合の既定では、トランスポート セキュリティが有効です。 MSMQ トランスポートセキュリティには、2つの関連するプロパティがあり <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` ます。既定では、認証モードがに設定され、 `Windows` 保護レベルがに設定されてい `Sign` ます。 MSMQ の認証機能と署名機能を利用するには、ドメインに MSMQ があることと、MSMQ に関する Active Directory の統合オプションがインストールされていることが必要です。 この条件を満たしていないコンピューターでこのサンプルを実行すると、エラーになります。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>ワークグループに属しているコンピューターまたは Active Directory 統合のないコンピューターでこのサンプルを実行するには  
   
@@ -243,12 +243,12 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
       <system.serviceModel>  
         <services>  
-          <service   
+          <service
               name="Microsoft.ServiceModel.Samples.OrderProcessorService">  
             <!-- Define NetMsmqEndpoint -->  
             <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"  
                       binding="netMsmqBinding"  
-                      bindingConfiguration="TransactedBinding"   
+                      bindingConfiguration="TransactedBinding"
                       contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
           </service>  
         </services>  
@@ -279,7 +279,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
       <system.serviceModel>  
   
         <services>  
-          <service   
+          <service
              name="Microsoft.ServiceModel.Samples.OrderStatusService">  
             <!-- Define NetMsmqEndpoint -->  
             <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderStatus"  
@@ -291,8 +291,8 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
         <client>  
           <!-- Define NetMsmqEndpoint -->  
           <endpoint name="OrderProcessorEndpoint"  
-                    address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"   
-                    binding="netMsmqBinding"   
+                    address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"
+                    binding="netMsmqBinding"
                     bindingConfiguration="TransactedBinding"  
                     contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
         </client>  
@@ -320,13 +320,13 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 4. サーバーとクライアントの両方の構成を変更したことを確認してから、サンプルを実行します。  
   
     > [!NOTE]
-    >  `security mode` を `None` に設定することは、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>、または `Message` のセキュリティを `None` に設定することに相当します。  
+    > `security mode` を `None` に設定することは、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>、または `Message` のセキュリティを `None` に設定することに相当します。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+>
+> `<InstallDrive>:\WF_WCF_Samples`  
+>
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

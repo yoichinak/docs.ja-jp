@@ -1,29 +1,29 @@
 ---
-title: Visual Basic の文字列の概要
+title: 文字列の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
-ms.openlocfilehash: 4da64b1cb25fe1a681e5790aad6abc3a478b229a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 487a678e3053723709a53f383c8ec5b37d854e77
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938295"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360645"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Visual Basic の文字列の概要
-このセクションでは、Visual Basic で文字列を使用して基本的な概念について説明します。  
+このセクションは、Visual Basic で文字列を使用する場合の基本的な考え方について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [文字列の基本](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- 文字列および文字列の変数を使用して基本的な概念が導入されています。  
+ [文字列の基本](string-basics.md)  
+ 文字列と文字列変数の使用の背景にある基本的な概念について説明します。  
   
- [Visual Basic で文字列操作メソッドの種類](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- 分析し、文字列を操作するいくつかの方法について説明します。  
+ [Visual Basic における文字列操作メソッドの種類](types-of-string-manipulation-methods.md)  
+ 文字列を分析および操作するさまざまな方法について説明します。  
   
- [カルチャが Visual Basic における文字列に与える影響](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
+ [Visual Basic においてカルチャが文字列に与える影響](how-culture-affects-strings.md)  
+ Visual Basic でカルチャ情報を使用して文字列変換と比較を実行する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [文字列](index.md)

@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b8f0c7c4584505d382e78aca68e2e99c9fa7748f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877106"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834624"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 
@@ -43,7 +46,7 @@ ms.locfileid: "65877106"
 
 #### <a name="to-begin-making-the-application"></a>アプリケーションの作成を開始するには
 
-- Visual Basic または Visual で新しい Windows アプリケーションを作成C#します。 プロジェクトに **PizzaOrder** という名前を付けます。 (詳細については、「[ソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照。)
+- Visual Basic またはビジュアルC#で新しい Windows アプリケーションを作成します。 プロジェクトに **PizzaOrder** という名前を付けます。 詳細については、「[新しいソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照してください。
 
 ## <a name="adding-the-controls-to-the-form"></a>フォームへのコントロールの追加
 
@@ -58,9 +61,9 @@ ms.locfileid: "65877106"
 
 - TextBox コントロールを説明するラベル コントロールが、タブ オーダーで TextBox コントロールのすぐ前になるようにします。
 
-- "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーが に移動する先のコントロールのプロパティ。
+- "&" 文字を使用するアクセスキーを、ユーザーが移動<xref:System.Windows.Forms.Control.Text%2A>するコントロールのプロパティに追加します。
 
-- "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーに移動する必要があるコントロールの前にあるラベルのプロパティ。 ラベルの <xref:System.Windows.Forms.Label.UseMnemonic%2A> プロパティを `true` に設定し、ユーザーがアクセス キーを押したときに、フォーカスがタブ オーダーで次のコントロールに設定されるようにします。
+- "&" 文字を使用するアクセスキーを、ユーザーが移動<xref:System.Windows.Forms.Control.Text%2A>するコントロールの前にあるラベルのプロパティに追加します。 ラベルの <xref:System.Windows.Forms.Label.UseMnemonic%2A> プロパティを `true` に設定し、ユーザーがアクセス キーを押したときに、フォーカスがタブ オーダーで次のコントロールに設定されるようにします。
 
 - アクセス キーをすべてのメニュー項目に追加します。
 
@@ -68,7 +71,7 @@ ms.locfileid: "65877106"
 
 - フォームにコントロールを追加し、以下に示すように、プロパティを設定します。 フォームにコントロールを配置する方法のモデルについては、表の最後の画像を参照してください。
 
-   |Object|プロパティ|値|
+   |オブジェクト|プロパティ|値|
    |------------|--------------|-----------|
    |Form1|AccessibleDescription|オーダー フォーム|
    ||AccessibleName|オーダー フォーム|
@@ -78,7 +81,7 @@ ms.locfileid: "65877106"
    ||AccessibleDescription|ピザのスライス|
    ||AccessibleName|会社のロゴ|
    ||イメージ|任意のアイコンまたはビットマップ|
-   |group1|名前|companyLabel|
+   |Label|名前|companyLabel|
    ||テキスト|おいしいピザ|
    ||TabIndex|1|
    ||AccessibleDescription|会社名|
@@ -86,7 +89,7 @@ ms.locfileid: "65877106"
    ||背景色|青|
    ||前景色|黄|
    ||Font Size|18|
-   |group1|名前|customerLabel|
+   |Label|名前|customerLabel|
    ||テキスト|名前(&N)|
    ||TabIndex|2|
    ||AccessibleDescription|顧客名のラベル|
@@ -113,7 +116,7 @@ ms.locfileid: "65877106"
    ||TabIndex|1|
    ||AccessibleDescription|ラージ サイズのピザ|
    ||AccessibleName|ラージ サイズのピザ|
-   |group1|名前|toppingsLabel|
+   |Label|名前|toppingsLabel|
    ||テキスト|トッピング(&T) (1 つ $0.75)|
    ||TabIndex|5|
    ||AccessibleDescription|トッピング ラベル|
@@ -140,13 +143,13 @@ ms.locfileid: "65877106"
    |MenuItem|名前|exitApp|
    ||テキスト|終了(&X)|
 
-   フォームは、次の図のようになります。
+   フォームは次の図のようになります。
 
-   ![名前テキスト ボックスに、およびサイズとトッピングの選択のピザ オーダー フォーム。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![[名前] テキストボックスと [サイズ] と [トッピング] を選択したピザの注文フォーム。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>ハイ コントラスト モードのサポート
 
-ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>ハイ コントラスト モードが設定されているかどうかを決定するプロパティを指定します。
+ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>プロパティは、ハイコントラストモードが設定されているかどうかを判断するために用意されています。
 
 SystemInformation.HighContrast が `true` の場合、アプリケーションは次のようになります
 
@@ -158,103 +161,95 @@ SystemInformation.HighContrast が `true` の場合、アプリケーション�
 
 アプリケーションが開始し、システム イベント <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> に応答する際、アプリケーションで <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の設定を確認する必要があります。 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントは、<xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の値が変更されるたびに発生します。
 
-この例のアプリケーションでは、色のシステム設定を使用していない唯一の要素は `lblCompanyName` です。 <xref:System.Drawing.SystemColors>クラス ラベルの色の設定をユーザーが選択したシステム カラーに変更に使用されます。
+この例のアプリケーションでは、色のシステム設定を使用していない唯一の要素は `lblCompanyName` です。 <xref:System.Drawing.SystemColors>クラスは、ラベルの色の設定をユーザーが選択したシステムの色に変更するために使用されます。
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>効果的な方法でハイ コントラスト モードを有効にするには
 
 1. ラベルの色をシステム カラーを設定するメソッドを作成します。
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. フォームのコンストラクターで `SetColorScheme` プロシージャを呼び出します (Visual Basic では `Public Sub New()`、Visual C# では `public class Form1`)。 Visual Basic でコンストラクターにアクセスするには、**Windows フォーム デザイナーで生成されたコード**というラベルが付いた領域を展開する必要があります。
+2. フォームのコンストラクターで `SetColorScheme` プロシージャを呼び出します (Visual Basic では `Public Sub New()`、Visual C# では `public Form1()`)。 Visual Basic でコンストラクターにアクセスするには、**Windows フォーム デザイナーで生成されたコード**というラベルが付いた領域を展開する必要があります。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. 適切なシグネチャを持つイベント プロシージャを作成して、<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントに対応します。
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. `InitializeComponents` への呼び出しの後でコードをフォームのコンストラクターに追加して、イベント プロシージャをシステム イベントにフックします。 このメソッドは `SetColorScheme` プロシージャを呼び出します。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ SystemInformation.HighContrast が `true` の場合、アプリケーション�
     > システム イベントのコードが、メイン アプリケーションとは別のスレッドを実行します。 イベントを解放しないと、プログラムが終了した後でも、イベントにフックするコードが実行されます。
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 
@@ -303,7 +291,7 @@ SystemInformation.HighContrast が `true` の場合、アプリケーション�
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>サウンド以外の方法で情報を提供するには
 
-1. Windows API 関数 FlashWindow を使用して、タイトル バーをフラッシュさせます。 Windows API 関数を呼び出す方法の例は、次を参照してください。[チュートリアル。Windows API の呼び出し](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。
+1. Windows API 関数 FlashWindow を使用して、タイトル バーをフラッシュさせます。 Windows API 関数を呼び出す方法の例については[、「チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。
 
     > [!NOTE]
     > ユーザーが Windows SoundSentry サービスを有効にして、コンピューターの内蔵スピーカーを通じてシステム サウンドが再生されるときにウィンドウをフラッシュさせていることがあります。
@@ -329,6 +317,6 @@ SystemInformation.HighContrast が `true` の場合、アプリケーション�
 
 3. その他のツールは、アプリケーションのユーザー補助機能をテストするためにすぐに使用できます。
 
-4. キーボード フォーカスを公開することをテストするには、拡大鏡を実行します。 (拡大鏡を開くには、**[スタート]** メニューをクリックし、**[すべてのプログラム]**、**[アクセサリ]**、**[アクセシビリティ]** の順でポイントして、**[拡大鏡]** をクリックします)。 キーボードの [Tab] キーとマウスの両方を使用して、ユーザー インターフェイスを移動します。 すべての操作が**拡大鏡**で正常に追跡されることを確認します。
+4. キーボード フォーカスを公開することをテストするには、拡大鏡を実行します。 (拡大鏡を開くには、 **[スタート]** メニューをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** 、 **[アクセシビリティ]** の順でポイントして、 **[拡大鏡]** をクリックします)。 キーボードの [Tab] キーとマウスの両方を使用して、ユーザー インターフェイスを移動します。 すべての操作が**拡大鏡**で正常に追跡されることを確認します。
 
 5. 画面要素の公開をテストするには、検査を実行し、マウスと TAB キーの両方を使用して、各要素に到達します。 [検査] ウィンドウの名前、状態、ロール、場所、および値のフィールドに表示される情報が UI 内の各オブジェクトについて、ユーザーにとって意味があることを確認します。

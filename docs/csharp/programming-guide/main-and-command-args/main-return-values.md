@@ -1,16 +1,15 @@
 ---
 title: Main() の戻り値 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878926"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805929"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65878926"
 
 ## <a name="example"></a>例
 
-この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/using-with-xplat-cli.md)を参照してください。
+この例では、[.NET Core](../../../core/index.yml) コマンドライン ツールを使用します。 .NET Core コマンドライン ツールに慣れていない場合は、この[概要の記事](../../../core/tutorials/cli-create-console-app.md)を参照してください。
 
 *program.cs* の `Main` メソッドを次のように変更します。
 
@@ -40,8 +39,11 @@ ms.locfileid: "65878926"
 
 コードがゼロを返すため、バッチ ファイルで成功が報告されます。 ただし、MainReturnValTest.cs が 0 以外の値を返すように変更して、プログラムを再コンパイルする場合、PowerShell スクリプトの後続の実行では失敗が報告されます。
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -81,7 +83,7 @@ private static async Task<int> AsyncConsoleWork()
 
 新しい構文を使用すると、コンパイラから常に正しいコードが生成されるという利点があります。
 
-## <a name="compiler-generated-code"></a>コンパイラから生成されるコード
+## <a name="compiler-generated-code"></a>コンパイラで生成されたコード
 
 アプリケーションのエントリ ポイントから `Task` または `Task<int>` が返されると、コンパイラによって、アプリケーション コードで宣言されたエントリ ポイント メソッドを呼び出す新しいエントリ ポイントが生成されます。 このエントリ ポイント名が `$GeneratedMain` だとすると、これらのエントリ ポイントについて次のコードが生成されます。
 
@@ -95,7 +97,7 @@ private static async Task<int> AsyncConsoleWork()
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
-- [方法: コマンド ライン引数を表示する](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [コマンド ライン引数を表示する方法](./how-to-display-command-line-arguments.md)

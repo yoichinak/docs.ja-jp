@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704d19f1-bdef-4745-af8c-6476eb246fb3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7dd59c1e0e8b28c557910da3fd9c6489370cc62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 82cf5e14520f0e677c2d274cf013d8a0020e8fa2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778954"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503537"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps メソッド
-親の TypeDef トークンを取得<xref:System.Type>入れ子にされた型を指定します。  
+<xref:System.Type>指定した入れ子にされた型の親の TypeDef トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +36,21 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tdNestedClass`  
- [in]TypeDef トークンを表す、<xref:System.Type>親クラスを返すためにトークン。  
+ から親クラストークンを返すを表す TypeDef トークン <xref:System.Type> 。  
   
  `ptdEnclosingClass`  
- [out]TypeDef トークンへのポインター、<xref:System.Type>を`tdNestedClass`で入れ子になっています。  
+ 入出力で入れ子になっているの TypeDef トークンへのポインター <xref:System.Type> `tdNestedClass` 。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

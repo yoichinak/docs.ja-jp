@@ -1,15 +1,16 @@
 ---
-title: プロパティ
+title: Properties
 description: C# のプロパティについて説明します。C# のプロパティには、検証、計算値、遅延評価、プロパティ変更通知の機能があります。
+ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878273"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398689"
 ---
-# <a name="properties"></a>プロパティ
+# <a name="properties"></a>Properties
 
 C# のプロパティは、非常に優れた機能です。 開発者は C# で定義されている構文を使用して、設計の意図を正確に表すコードを記述できます。
 
@@ -104,7 +105,7 @@ public class Measurements
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-上の例では、"[文字列補間](../csharp/language-reference/tokens/interpolated.md)" 機能を使用して、フルネームを表す書式設定された文字列を作成しています。
+上の例では、"[文字列補間](./language-reference/tokens/interpolated.md)" 機能を使用して、フルネームを表す書式設定された文字列を作成しています。
 
 *式形式のメンバー*を使用することもできます。式形式のメンバーを使用すると、計算された `FullName` プロパティを簡潔な方法で作成できます。
 
@@ -140,7 +141,7 @@ C# 7.3 以降、自動実装プロパティのコンパイラの生成したバ�
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` は "*null 条件演算子*" と呼ばれる演算子です。 演算子の右側を評価する前に、null 参照がないかをチェックします。 チェックの結果、`PropertyChanged` イベントに対するサブスクライバーがない場合は、イベントを発生させるコードは実行されません。 その場合、評価は行われず `NullReferenceException` がスローされます。 詳細については、「[`events`](events-overview.md)」を参照してください。 上記の例では、新たに `nameof` という演算子を使用して、記号としてのプロパティ名を文字列に変換しています。
+`?.` は "*null 条件演算子*" と呼ばれる演算子です。 演算子の右側を評価する前に、null 参照がないかをチェックします。 チェックの結果、`PropertyChanged` イベントに対するサブスクライバーがない場合は、イベントを発生させるコードは実行されません。 その場合、評価は行われず `NullReferenceException` がスローされます。 詳細については、[`events`](events-overview.md) を参照してください。 上記の例では、新たに `nameof` という演算子を使用して、記号としてのプロパティ名を文字列に変換しています。
 `nameof` を使用すると、プロパティ名にタイプミスが含まれるというエラーを減らすことができます。
 
 <xref:System.ComponentModel.INotifyPropertyChanged> の実装も、アクセサーでコードを記述することで目的のシナリオをサポートできるケースの一例です。

@@ -1,5 +1,6 @@
 ---
-title: '方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する'
+title: タイマーコンポーネントを設定した間隔でプロシージャを実行する
+description: Windows フォームの Timer コンポーネントを使用して、設定した間隔で、または設定した時間間隔でプロシージャを実行する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: ac2f89619c3e87ebfe5e568bbf27274834b0866d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6847819fcec98d01d38b8e44604a259f06be7c02
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012452"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325772"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する
 ループが完了するまで特定の間隔で実行するプロシージャや、設定した間隔が経過した時点で実行するプロシージャを作成することがあるかもしれません。 <xref:System.Windows.Forms.Timer> コンポーネントにより、このようなプロシージャが可能になります。  
@@ -26,25 +27,25 @@ ms.locfileid: "62012452"
  このコンポーネントは、Windows フォームの環境用に設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、次を参照してください。 [、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](limitations-of-the-timer-component-interval-property.md)します。  
+> <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、「 [Windows フォーム Timer コンポーネントの Interval プロパティの制限事項](limitations-of-the-timer-component-interval-property.md)」を参照してください。  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer コンポーネントで設定された間隔でプロシージャを実行するには  
   
-1. <xref:System.Windows.Forms.Timer> をフォームに追加します。 プログラムでこれを実行する方法については、次の例のセクションを参照してください。 Visual Studio では、コンポーネントをフォームに追加することもあります。 参照してください[方法。Windows フォームにユーザー インターフェイスを持たないコントロールを追加](how-to-add-controls-without-a-user-interface-to-windows-forms.md)します。  
+1. <xref:System.Windows.Forms.Timer> をフォームに追加します。 プログラムでこれを実行する方法については、次の例のセクションを参照してください。 Visual Studio では、フォームへのコンポーネントの追加もサポートされています。 「[方法: ユーザーインターフェイスを持たないコントロールを Windows フォームに追加](how-to-add-controls-without-a-user-interface-to-windows-forms.md)する」も参照してください。  
   
 2. タイマーの <xref:System.Windows.Forms.Timer.Interval%2A> プロパティ (ミリ秒) を設定します。 このプロパティは、プロシージャを再度実行する前に、経過する時間の長さを決定します。  
   
     > [!NOTE]
-    >  タイマー イベントの発生頻度が高いと、イベントに対応するときに使用されるプロセッサ時間も長くなります。 これにより、全体的なパフォーマンスが低下します。 必要な間隔よりも小さな値を設定しないでください。  
+    > タイマー イベントの発生頻度が高いと、イベントに対応するときに使用されるプロセッサ時間も長くなります。 これにより、全体的なパフォーマンスが低下します。 必要な間隔よりも小さな値を設定しないでください。  
   
 3. <xref:System.Windows.Forms.Timer.Tick> イベント ハンドラーで適切なコードを作成します。 このイベントで記述したコードは、<xref:System.Windows.Forms.Timer.Interval%2A> プロパティで指定した間隔で実行されます。  
   
 4. <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `true` に設定して、タイマーを開始します。 <xref:System.Windows.Forms.Timer.Tick> イベントの発生が開始され、プロシージャが指定された間隔で実行されます。  
   
-5. 適切なタイミングで <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `false` に設定し、プロシージャがもう一度実行されることがないようにします。 間隔を設定`0`タイマーを停止するには発生しません。  
+5. 適切なタイミングで <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `false` に設定し、プロシージャがもう一度実行されることがないようにします。 間隔をに設定する `0` と、タイマーは停止しません。  
   
 ## <a name="example"></a>例  
- この最初のコード例は、1 秒単位で 1 日の時間を追跡します。 フォーム上で <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label>、および <xref:System.Windows.Forms.Timer> コンポーネントを使用します。 <xref:System.Windows.Forms.Timer.Interval%2A> プロパティが 1000 (1 秒に等しい) に設定されます。 <xref:System.Windows.Forms.Timer.Tick> イベントで、ラベルのキャプションが現在の時刻に設定されます。 ボタンをクリックしたときに、<xref:System.Windows.Forms.Timer.Enabled%2A> プロパティが `false` に設定されると、タイマーがラベルのキャプションを更新しなくなります。 次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`、<xref:System.Windows.Forms.Timer>という名前のコントロール`Timer1`、および<xref:System.Windows.Forms.Label>という名前のコントロール`Label1`します。  
+ この最初のコード例は、1 秒単位で 1 日の時間を追跡します。 フォーム上で <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label>、および <xref:System.Windows.Forms.Timer> コンポーネントを使用します。 <xref:System.Windows.Forms.Timer.Interval%2A> プロパティが 1000 (1 秒に等しい) に設定されます。 <xref:System.Windows.Forms.Timer.Tick> イベントで、ラベルのキャプションが現在の時刻に設定されます。 ボタンをクリックしたときに、<xref:System.Windows.Forms.Timer.Enabled%2A> プロパティが `false` に設定されると、タイマーがラベルのキャプションを更新しなくなります。 次のコード例では、という名前のコントロール、という名前のコントロール、 <xref:System.Windows.Forms.Button> `Button1` およびと <xref:System.Windows.Forms.Timer> `Timer1` <xref:System.Windows.Forms.Label> いう名前のコントロール `Label1` を持つフォームが必要です。  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -87,7 +88,7 @@ private void InitializeTimer()
     Button1.Click += new EventHandler(Button1_Click);  
 }  
   
-private void Timer1_Tick(object Sender, EventArgs e)     
+private void Timer1_Tick(object Sender, EventArgs e)
 {  
    // Set the caption to the current time.  
    Label1.Text = DateTime.Now.ToString();  
@@ -117,11 +118,11 @@ private:
       timer1->Interval = 1000;  
       // Enable timer.  
       timer1->Enabled = true;  
-      this->timer1->Tick += gcnew System::EventHandler(this,    
+      this->timer1->Tick += gcnew System::EventHandler(this,
                                &Form1::timer1_Tick);  
   
       button1->Text = S"Stop";  
-      this->button1->Click += gcnew System::EventHandler(this,   
+      this->button1->Click += gcnew System::EventHandler(this,
                                &Form1::button1_Click);  
    }  
   
@@ -149,7 +150,7 @@ private:
 ```  
   
 ## <a name="example"></a>例  
- この 2 つ目のコード例は、ループが終了するまでにプロシージャを 600 ミリ秒ごとに実行します。 次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`、<xref:System.Windows.Forms.Timer>という名前のコントロール`Timer1`、および<xref:System.Windows.Forms.Label>という名前のコントロール`Label1`します。  
+ この 2 つ目のコード例は、ループが終了するまでにプロシージャを 600 ミリ秒ごとに実行します。 次のコード例では、という名前のコントロール、という名前のコントロール、 <xref:System.Windows.Forms.Button> `Button1` およびと <xref:System.Windows.Forms.Timer> `Timer1` <xref:System.Windows.Forms.Label> いう名前のコントロール `Label1` を持つフォームが必要です。  
   
 ```vb  
 ' This variable will be the loop counter.  
@@ -190,9 +191,9 @@ private void InitializeTimer()
    this.timer1.Tick += new System.EventHandler(this.timer1_Tick);  
 }  
   
-private void timer1_Tick(object sender, System.EventArgs e)     
+private void timer1_Tick(object sender, System.EventArgs e)
 {  
-   if (counter >= 10)   
+   if (counter >= 10)
    {  
       // Exit loop code.  
       timer1.Enabled = false;  
@@ -225,7 +226,7 @@ private:
    void timer1_Tick(System::Object ^ sender,  
       System::EventArgs ^ e)  
    {  
-      if (counter >= 10)   
+      if (counter >= 10)
       {  
          // Exit loop code.  
          timer1->Enabled = false;  

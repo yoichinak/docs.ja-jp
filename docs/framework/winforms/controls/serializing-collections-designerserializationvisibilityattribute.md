@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化'
+title: 'チュートリアル : DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,92 +11,93 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: jillre
+ms.author: jillfra
+manager: jillfra
+ms.openlocfilehash: 297a7080b0c34fa10f976cbbbfb48d8c35786aca
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882354"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458080"
 ---
-# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化
+# <a name="walkthrough-serialize-collections-of-standard-types"></a>チュートリアル: 標準型のコレクションのシリアル化
 
-カスタム コントロールでは、プロパティとしてコレクションを公開が場合があります。 このチュートリアルを使用する方法について説明、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>デザイン時にコレクションをシリアル化する方法を制御するクラス。 適用、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値をコレクション プロパティにより、プロパティをシリアル化されます。
+カスタムコントロールによって、コレクションがプロパティとして公開されることがあります。 このチュートリアルでは、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> クラスを使用して、デザイン時にコレクションをシリアル化する方法を制御する方法について説明します。 コレクションプロパティに <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 値を適用すると、プロパティが確実にシリアル化されます。
 
-このトピックのコードを単一のリストとしてコピーするには、「[方法:Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))します。
+このトピックのコードを単一のリストとしてコピーする方法については、「[方法: DesignerSerializationVisibilityAttribute を使用して標準型のコレクションをシリアル化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))する」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-a-control-with-a-serializable-collection"></a>シリアル化可能なコレクションを使用してコントロールを作成します。
+## <a name="create-a-control-with-a-serializable-collection"></a>シリアル化可能なコレクションを持つコントロールを作成する
 
-最初の手順では、プロパティとしてシリアル化可能なコレクションを持つコントロールを作成します。 使用してこのコレクションの内容を編集することができます、**コレクション エディター**からアクセスできますが、**プロパティ**ウィンドウ。
+最初の手順では、シリアル化可能なコレクションをプロパティとして持つコントロールを作成します。 このコレクションの内容は、 **[プロパティ]** ウィンドウからアクセスできる**コレクションエディター**を使用して編集できます。
 
-1. Visual Studio で、という名前の Windows コントロール ライブラリ プロジェクトを作成`SerializationDemoControlLib`です。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。
+1. Visual Studio で、Windows コントロールライブラリプロジェクトを作成し、「 **Serializationdemocontrollib**」という名前を指定します。
 
-2. 名前を変更`UserControl1`に`SerializationDemoControl`します。 詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。
+2. `UserControl1` 名を `SerializationDemoControl`に変更します。 詳細については、「[コードシンボルの名前変更のリファクタリング](/visualstudio/ide/reference/rename)」を参照してください。
 
-3. **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>プロパティを`10`します。
+3. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>] プロパティの値を**10**に設定します。
 
-4. 場所、<xref:System.Windows.Forms.TextBox>を制御、`SerializationDemoControl`します。
+4. `SerializationDemoControl`に <xref:System.Windows.Forms.TextBox> コントロールを配置します。
 
-5. <xref:System.Windows.Forms.TextBox> コントロールを選択します。 **プロパティ**ウィンドウで、次のプロパティを設定します。
+5. <xref:System.Windows.Forms.TextBox> コントロールを選択します。 **[プロパティ]** ウィンドウで、次のプロパティを設定します。
 
-    |プロパティ|変更後の値|
+    |property|変更後の値|
     |--------------|---------------|
     |**Multiline**|`true`|
-    |**ドッキング ステーション**|<xref:System.Windows.Forms.DockStyle.Fill>|
+    |**装着**|<xref:System.Windows.Forms.DockStyle.Fill>|
     |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|
     |**ReadOnly**|`true`|
 
-6. **コード エディター**、という名前の文字列配列フィールドを宣言`stringsValue`で`SerializationDemoControl`します。
+6. **コードエディター**で、`SerializationDemoControl`内の `stringsValue` という名前の文字列配列フィールドを宣言します。
 
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]
 
-7. 定義、`Strings`プロパティを`SerializationDemoControl`します。
+7. `SerializationDemoControl`で `Strings` プロパティを定義します。
 
    > [!NOTE]
-   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値を使用して、コレクションのシリアル化を有効にします。
+   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 値は、コレクションのシリアル化を有効にするために使用されます。
 
    [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
    [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
    [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
 
-8. キーを押して**F5**プロジェクトをビルドしでコントロールを実行する、 **UserControl Test Container**します。
+8. **F5**キーを押してプロジェクトをビルドし、 **UserControl テストコンテナー**でコントロールを実行します。
 
-9. 検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックして (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) ボタンをクリックする、**文字列コレクション エディター**します。
+9. **UserControl テストコンテナー**の <xref:System.Windows.Forms.PropertyGrid> で、 **Strings**プロパティを見つけます。 **[文字列]** プロパティを選択し、省略記号![(省略記号ボタン ([...]) を選択して [Visual Studio のプロパティウィンドウ](./media/visual-studio-ellipsis-button.png))] ボタンをクリックし、**文字列コレクションエディター**を開きます。
 
-10. 内のいくつかの文字列を入力、**文字列コレクション エディター**します。 キーを押して区切ります、 **Enter**各文字列の末尾にあるキー。 クリックして**OK**文字列の入力が完了したら。
+10. **文字列コレクションエディター**でいくつかの文字列を入力します。 各文字列の末尾にある**enter**キーを押して区切ります。 文字列の入力が完了したら、 **[OK]** をクリックします。
 
    > [!NOTE]
-   > 入力した文字列に表示されます、<xref:System.Windows.Forms.TextBox>の`SerializationDemoControl`します。
+   > 入力した文字列は、`SerializationDemoControl`の <xref:System.Windows.Forms.TextBox> に表示されます。
 
-## <a name="serializing-a-collection-property"></a>コレクション プロパティをシリアル化します。
+## <a name="serialize-a-collection-property"></a>コレクションプロパティをシリアル化する
 
-コントロールのシリアル化動作をテストするをフォームに配置を使用して、コレクションの内容を変更するが、**コレクション エディター**します。 特殊なデザイナー ファイルを調べることで、シリアル化されたコレクションの状態を確認できます、 **Windows フォーム デザイナー**はコードを出力します。
+コントロールのシリアル化動作をテストするには、コントロールをフォームに配置し、コレクション**エディター**を使用してコレクションの内容を変更します。 シリアル化されたコレクションの状態を確認するには、 **Windows フォームデザイナー**がコードを出力する特別なデザイナーファイルを調べます。
 
-### <a name="to-serialize-a-collection"></a>コレクションをシリアル化するには
+1. Windows アプリケーションプロジェクトをソリューションに追加します。 プロジェクトに `SerializationDemoControlTest` という名前を付けます。
 
-1. Windows アプリケーション プロジェクトをソリューションに追加します。 プロジェクトに `SerializationDemoControlTest` という名前を付けます。
+2. **[ツールボックス]** で、 **[Serializationdemocontrollib Components]** という名前のタブを探します。 このタブには、`SerializationDemoControl`が表示されます。 詳細については、「[チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)」を参照してください。
 
-2. **ツールボックス**、という名前のタブを見つける**SerializationDemoControlLib コンポーネント**します。 このタブでは紹介、`SerializationDemoControl`します。 詳細については、「[チュートリアル:カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)します。
+3. フォームに `SerializationDemoControl` を配置します。
 
-3. 場所、`SerializationDemoControl`フォームにします。
+4. **[プロパティ]** ウィンドウで、[`Strings`] プロパティを見つけます。 [`Strings`] プロパティをクリックし、省略記号 (![の省略記号ボタン ([...] プロパティウィンドウ) をクリックして、[](./media/visual-studio-ellipsis-button.png))] ボタンをクリックし、**文字列コレクションエディター**を開きます。
 
-4. 検索、`Strings`プロパティ、**プロパティ**ウィンドウ。 をクリックして、`Strings`プロパティ、省略記号をクリックして (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) ボタンをクリックする、**文字列コレクション エディター**します。
+5. **文字列コレクションエディター**でいくつかの文字列を入力します。 各文字列の末尾で**enter**キーを押して区切ります。 文字列の入力が完了したら、 **[OK]** をクリックします。
 
-5. 内のいくつかの文字列を入力、**文字列コレクション エディター**します。 各文字列の最後に ENTER キーを押すで区切ります。 クリックして**OK**文字列の入力が完了したら。
+    > [!NOTE]
+    > 入力した文字列は、`SerializationDemoControl`の <xref:System.Windows.Forms.TextBox> に表示されます。
 
-> [!NOTE]
-> 入力した文字列に表示されます、<xref:System.Windows.Forms.TextBox>の`SerializationDemoControl`します。
+6. **ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** ボタンをクリックします。
 
-1. **ソリューション エクスプローラー**で、**[すべてのファイルを表示]** ボタンをクリックします。
+7. **Form1**ノードを開きます。 その下には、 **Form1.Designer.cs**または**form1.vb**という名前のファイルがあります。 これは、フォームとその子コントロールのデザイン時の状態を表すコードを**Windows フォームデザイナー**が出力するファイルです。 このファイルを**コード エディター**で開きます。
 
-2. 開く、 **Form1**ノード。 という名前のファイルは、その下に**Form1.Designer.cs**または**Form1.Designer.vb**します。 これは、ファイルに、 **Windows フォーム デザイナー**フォームとその子コントロールのデザイン時の状態を表すコードを出力します。 このファイルを**コード エディター**で開きます。
-
-3. 呼ばれる領域を開く**Windows フォーム デザイナーで生成されたコード**というラベルの付いたセクションを見つけて**serializationDemoControl1**します。 このラベルの下には、コントロールのシリアル化された状態を表すコードです。 代入に表示される手順 5. で入力した文字列、`Strings`プロパティ。 C# および Visual Basic では、次のコード例は、表示される内容の文字列"red"、「オレンジ」および「黄色」を入力したかどうかのようなコードを示します。
+8. **Windows フォームデザイナーで生成されたコード**という名前の領域を開き、 **serializationDemoControl1**というラベルが付いたセクションを検索します。 このラベルの下には、コントロールのシリアル化された状態を表すコードがあります。 手順 5. で入力した文字列は、`Strings` プロパティへの割り当てに表示されます。 C#と Visual Basic の次のコード例では、文字列 "red"、"オレンジ"、および "黄" を入力した場合と同様のコードが表示されます。
 
     ```csharp
     this.serializationDemoControl1.Strings = new string[] {
@@ -109,7 +110,7 @@ ms.locfileid: "65882354"
     Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}
     ```
 
-4. **コード エディター**の値を変更、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>上、`Strings`プロパティを<xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>します。
+9. **コードエディター**で、`Strings` プロパティの <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> の値を <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>に変更します。
 
     ```csharp
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -119,14 +120,14 @@ ms.locfileid: "65882354"
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _
     ```
 
-5. ソリューションを再構築、手順 3. および 4. を繰り返します。
+10. ソリューションをリビルドし、手順3と4を繰り返します。
 
 > [!NOTE]
-> ここで、 **Windows フォーム デザイナー**への割り当ては出力されません、`Strings`プロパティ。
+> この場合、 **Windows フォームデザイナー**は `Strings` プロパティに割り当てを出力しません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-基本データ型のコレクションをシリアル化する方法を理解、デザイン時環境に、カスタム コントロールをより深く統合を検討してください。 次のトピックでは、カスタム コントロールのデザイン時の統合を強化する方法について説明します。
+標準型のコレクションをシリアル化する方法を理解したら、カスタムコントロールをデザイン時環境により深く統合することを検討してください。 次のトピックでは、カスタムコントロールのデザイン時統合を強化する方法について説明します。
 
 - [デザイン時アーキテクチャ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
@@ -139,6 +140,4 @@ ms.locfileid: "65882354"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [デザイナーのシリアル化の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
-- [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

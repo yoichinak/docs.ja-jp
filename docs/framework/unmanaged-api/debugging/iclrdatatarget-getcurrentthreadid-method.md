@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9a0a6c-d592-4fb7-86ed-62684da3b0e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a409bda8861701e68d3ea1a956a4c35ce88ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c75c55b64ff20728bc5695d0ddfe1b4f6deda4a6
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738783"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860643"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID メソッド
-現在のスレッドのオペレーティング システムの識別子を取得します。  
+現在のスレッドのオペレーティングシステム id を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT GetCurrentThreadID (
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- [out]ターゲット プロセスの現在のスレッドのオペレーティング システムの識別子へのポインター。  
+ 入出力ターゲットプロセスの現在のスレッドのオペレーティングシステム識別子へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- ターゲット プロセスでは、現在のスレッドが存在しない場合、`GetCurrentThreadID`メソッドが失敗する可能性があります。  
+## <a name="remarks"></a>解説  
+ ターゲットプロセスの現在のスレッドが存在しない場合、 `GetCurrentThreadID`メソッドは失敗する可能性があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

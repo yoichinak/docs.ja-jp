@@ -8,24 +8,24 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674715"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79154973"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 要素 (ネットワーク設定)
-ネットワーク要求の認証に使用されるモジュールを指定します。  
-  
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-  
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules> 要素 (ネットワーク設定)
+ネットワーク要求を認証するために使用するモジュールを指定します。  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<authenticationModules>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<authenticationModules>   
+<authenticationModules>
 </authenticationModules>  
 ```  
   
@@ -39,24 +39,24 @@ ms.locfileid: "61674715"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|アプリケーションに認証モジュールを追加します。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|アプリケーションからのすべての認証モジュールを削除します。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|アプリケーションから認証モジュールを削除します。|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|アプリケーションに認証モジュールを追加します。|  
+|[オフ](clear-element-for-authenticationmodules-network-settings.md)|アプリケーションからすべての認証モジュールを削除します。|  
+|[remove](remove-element-for-authenticationmodules-network-settings.md)|アプリケーションから認証モジュールを削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- `authenticationModule`要素は、サーバーと認証プロセスを実行する認証モジュールを指定します。 認証モジュールを実装する必要があります、<xref:System.Net.IAuthenticationModule>インターフェイス。  
+## <a name="remarks"></a>解説  
+ 要素は、 `authenticationModule` サーバーとの認証プロセスを実行する認証モジュールを指定します。 認証モジュールは、インターフェイスを実装する必要があり <xref:System.Net.IAuthenticationModule> ます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、認証モジュールを有効します。 指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。  
+ 次の例では、認証モジュールを有効にします。 Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "61674715"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

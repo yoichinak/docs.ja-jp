@@ -16,92 +16,92 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 24da407de24a924a68466e4301cc3f4a74cb2e94
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505635"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044252"
 ---
 # <a name="matrix-representation-of-transformations"></a>変換の行列表現
-M × n マトリックスは、一連の数値の m 行と n 個の列に配置します。 次の図は、いくつかの行列を示します。  
+M × n マトリックスは、m 行と n 列に配置された一連の数値です。 次の図は、いくつかのマトリックスを示しています。  
   
- ![Transformations](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
+ ![変換](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
- 同じサイズの 2 つの行列を追加するには、個々 の要素を追加します。 次の図は、マトリックスの追加の 2 つの例を示します。  
+ 個々の要素を追加することにより、同じサイズの2つのマトリックスを追加できます。 次の図は、マトリックスの加算の2つの例を示しています。  
   
- ![Transformations](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
+ ![変換](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
- N × p マトリックスで m × n 行列を乗算でき、m × p 行列になります。 最初のマトリックスの列の数は、2 番目の行列内の行の数と同じである必要があります。 たとえば、4 × 2 マトリックスは、4 × 3 マトリックスを生成するために 2 × 3 行列を掛けることができます。  
+ M × n 行列は n × p 行列で乗算でき、結果は m × p 行列になります。 最初の行列の列数は、2番目の行列の行の数と同じである必要があります。 たとえば、4×2行列を2×3行列で乗算すると、4×3行列が生成されます。  
   
- 平面と行と列の行列内のポイントは、ベクトルとして考えることができます。 たとえば、(2, 5) は、2 つのコンポーネントを持つベクトルと (3, 7, 1) は 3 つのコンポーネントを持つベクター。 2 つのベクトルのドット積の定義は次のとおりです。  
+ 平面内の点とマトリックスの行と列は、ベクターと考えることができます。 たとえば、(2, 5) は2つのコンポーネントを持つベクターで、(3, 7, 1) は3つのコンポーネントを持つベクターです。 2つのベクトルのドット積は、次のように定義されています。  
   
- (a、b) • (c、d) = ac + bd  
+ (a, b) • (c, d) = ac + bd  
   
- (a、b、c) • (d、e、f) = ad + する + cf  
+ (a, b, c) • (d, e, f) = ad + be + cf  
   
- たとえば、ドット積 (2, 3) と (5, 4) は (2)(5) + (3)(4) = 22。 (2, 5, 1) のドット積と (4, 3, 1) は (2)(4) + (5)(3) + (1)(1) = 24。 2 つのベクトルのドット積が数、別のベクトルであることに注意してください。 ドット積を計算できるは、2 つのベクトルのコンポーネントの数が同じ場合のみにも注意してください。  
+ たとえば、(2, 3) と (5, 4) のドット積は (2) (5) + (3) (4) = 22 です。 (2, 5, 1) と (4, 3, 1) のドット積は、(2) (4) + (5) (3) + (1) (1) = 24 です。 2つのベクトルのドット積は、別のベクトルではなく、数値であることに注意してください。 また、2つのベクトルのコンポーネント数が同じ場合にのみ、ドット積を計算することができます。  
   
- ように A(i, j) には、i 番目の行と、j 番目の列の行列 A のエントリがあります。 たとえば、A (3, 2) は行列 A の 3 行目、2 番目の列内のエントリです。 A、B、および C、マトリックス、および AB と C. を =C のエントリは、次のように計算されます。  
+ I、j) を i 行目と jth 列のマトリックス A のエントリにします。 たとえば、A (3, 2) は、第3行のマトリックス A と2番目の列のエントリです。 A、B、および C がマトリックスで、AB = C であるとします。C のエントリは次のように計算されます。  
   
  C (i, j) = (A の行 i) • (B の列 j)  
   
- 次の図は、行列乗算のいくつかの例を示します。  
+ 次の図は、マトリックス乗算のいくつかの例を示しています。  
   
- ![Transformations](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
+ ![変換](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
- 1 × 2 マトリックス平面上のポイントの場合は、そのポイントを 2 × 2 の行列を乗算することによって変換できます。 次の図は、点 (2, 1) に適用されるいくつかの変換を示します。  
+ 平面内のポイントが1×2行列であると考えられる場合は、2×2行列を乗算することによってその点を変換できます。 次の図は、点 (2, 1) に適用されるいくつかの変換を示しています。  
   
- ![Transformations](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
+ ![変換](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
- 上記の図に示すように変換のすべてが、線形変換します。 変換など、他の特定の変換は線形的ではなくで 2 × 2 の行列の乗算では表現できません。 たいとします最初に、点 (2, 1)、90 ° 回転して、3 ユニット x 方向に変換するためおよび y 方向の 4 つの単位に変換するためです。 マトリックスの追加後に、行列の乗算を使用して、これを行うことができます。  
+ 前の図に示されているすべての変換は、線形変換です。 平行移動などの特定の変換は線形的ではなく、2×2行列で乗算として表すことはできません。 たとえば、ポイント (2, 1) で開始し、90°回転し、x 方向に3単位を平行移動し、y 方向に4単位を平行移動するとします。 これを行うには、マトリックス乗算を使用し、その後にマトリックスを追加します。  
   
- ![Transformations](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
+ ![変換](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
- 翻訳 (1 × 2 マトリックスの追加) 後に線形変換 (2 × 2 行列乗算) は、アフィン変換と呼ばれます。 マトリックス (線形の 1 つ)、および翻訳用に 1 つのペアでアフィン変換を格納する代わりにでは、3 × 3 行列で変換全体を格納します。 この作業を行うには、ダミーの 3 番目の座標で、1 × 3 マトリックスで平面のポイントを格納する必要があります。 通常の手法は、すべての 3 番目の座標を 1 に等しいようにすることです。 たとえば、行列 [2 1 1] を使用して、ポイント (2, 1) が表されます。 次の図は、アフィン変換 (90 度回転、平行移動 3 ユニット x 方向に、y 方向の 4 つの単位) で 1 つの 3 つ × 3 行列の乗算で表されます。  
+ 線形変換 (2 ×2行列による乗算) の後に平行移動 (1 ×2行列の追加) は、アフィン変換と呼ばれます。 1組の行列 (線形部用および平行移動用) にアフィン変換を格納する代わりに、3×3行列に変換全体を格納します。 この作業を行うには、プレーンのポイントをダミーの3番目の座標で1×3の行列に格納する必要があります。 通常の方法では、すべての3番目の座標を1に設定します。 たとえば、ポイント (2, 1) は、マトリックス [2 1 1] によって表されます。 次の図は、1つの3×3行列で乗算として表現されたアフィン変換 (90 °回転、x 方向の3単位、y 方向の4単位) を示しています。  
   
- ![Transformations](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
+ ![変換](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
- 前の例では、点 (2, 1) は、ポイント (2, 6) にマップされます。 数値 0、0、1 を 3 つ × 3 行列の 3 番目の列が含まれているに注意してください。 アフィン変換の 3 つ × 3 マトリックスの場合と常になります。 重要な数値は、列 1 と 2 列に 6 桁の数字です。 マトリックスの左上の 2 × 2 部分は、変換の線形の一部を表し、3 番目の行の最初の 2 つのエントリが、翻訳を表します。  
+ 前の例では、点 (2, 1) がポイント (2, 6) にマップされています。 3×3マトリックスの3番目の列には、0、0、1の数値が含まれていることに注意してください。 これは、アフィン変換の3×3行列の場合に常に当てはまります。 重要な数値は、列1および2の6つの数値です。 マトリックスの左上の2×2部分は、変換の線形部分を表し、3番目の行の最初の2つのエントリは変換を表します。  
   
- ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
+ ![変換](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- GDI + でのアフィン変換を格納することができます、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。 アフィン変換を表す行列の 3 番目の列は常にあるため (0, 0, 1) を構築するとき、最初の 2 つの列に 6 桁の数字のみを指定する、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。 ステートメント`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`上記の図に示すように、マトリックスを作成します。  
+ Gdi + では、 <xref:System.Drawing.Drawing2D.Matrix>オブジェクトにアフィン変換を格納できます。 アフィン変換を表す行列の3番目の列は常に (0, 0, 1) であるため、オブジェクトを<xref:System.Drawing.Drawing2D.Matrix>構築するときに、最初の2つの列のうち6つの数値のみを指定します。 ステートメント`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`は、前の図に示されているマトリックスを構築します。  
   
 ## <a name="composite-transformations"></a>複合変換  
- 複合変換とは、変換後にもう 1 つのシーケンスです。 マトリックスと、次の一覧で変換を考慮してください。  
+ 複合変換は、変換のシーケンスであり、その後にもう1つ続きます。 次の一覧にあるマトリックスと変換について考えてみましょう。  
   
 |||  
 |-|-|  
-|行列 A|90 度回転します。|  
-|行列 B|X 方向に 2 倍でスケーリングします。|  
-|マトリックス C|Y 方向のユニット 3 つを変換します。|  
+|マトリックス A|90°回転|  
+|マトリックス B|X 方向に2の係数でスケールする|  
+|マトリックス C|Y 方向に3単位を平行移動する|  
   
- ポイント (2, 1) でまず — マトリックス [2 1 1] によって表される、C、点 (2, 1) が行われる順序で 3 つの変換し、A、B、乗算。  
+ マトリックス [2 1 1] で表される point (2, 1) を使用して開始し、A に乗算した場合、B、C のように、ポイント (2, 1) は、上記の順序で3つの変換を実行します。  
   
  [2 1 1]ABC = [-2 5 1]  
   
- はなく 3 つの独立した行列に複合変換の 3 つの部分を格納するよりは、A を乗算できます複合変換全体を格納する 1 つの 3 つ × 3 行列を取得するには、まとめて、B、および C。 たとえば、ABC D. を =D を掛けたポイントが A、B、C の乗算ポイントと同じ結果を提供し、  
+ 複合変換の3つの部分を3つの独立した行列に格納するのではなく、A、B、および C を組み合わせて、複合変換全体を格納する1つの3×3行列を取得することができます。 ABC = D とします。次に、D を乗算したポイントは、A、B、C の順に乗算した結果を示します。  
   
  [2 1 1]D = [-2 5 1]  
   
- 次の図は、A、B、C および D のマトリックス  
+ 次の図は、A、B、C、D というマトリックスを示しています。  
   
- ![Transformations](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
+ ![変換](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
- 複合変換の行列は、個々 の変換行列を掛け合わせることで形成できますファクトは 1 つの任意のアフィン変換のシーケンスを格納できることを意味<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。  
+ 複合変換の行列は、個々の変換行列を乗算することで形成できます。つまり、アフィン変換の任意のシーケンスを1つ<xref:System.Drawing.Drawing2D.Matrix>のオブジェクトに格納できます。  
   
 > [!CAUTION]
->  複合変換の順序が重要です。 一般に、回転、拡大縮小、変換が同じではありません、スケーリング、回転、順に変換します。 同様に、行列乗算の順序が重要です。 一般に、ABC はバックアップと同じです。  
+> 複合変換の順序は重要です。 一般に、回転、スケーリング、および平行移動はスケールと同じではなく、回転してから平行移動します。 同様に、行列乗算の順序も重要です。 一般に、ABC は... と同じではありません。  
   
- <xref:System.Drawing.Drawing2D.Matrix>クラスが複合変換を構築するためのいくつかのメソッドを提供します。 <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>、 <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>、 <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>、 <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>、 <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>、および<xref:System.Drawing.Drawing2D.Matrix.Translate%2A>します。 次の例では、30 ° 度回転し、y 方向の 2 倍で拡大または縮小し、x 方向に 5 つのユニットを変換する複合変換の行列を作成します。  
+ クラス<xref:System.Drawing.Drawing2D.Matrix>には、 <xref:System.Drawing.Drawing2D.Matrix.Scale%2A> <xref:System.Drawing.Drawing2D.Matrix.Shear%2A> <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A> <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>複合変換<xref:System.Drawing.Drawing2D.Matrix.Translate%2A>を構築するためのメソッドがいくつか用意されています。、、 、、、およびです。<xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A> 次の例では、最初に30°を回転させてから y 方向の係数2でスケールし、x 方向に5つの単位を平行移動する複合変換の行列を作成します。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
- 次の図は、マトリックスを示します。  
+ 次の図は、マトリックスを示しています。  
   
- ![Transformations](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
+ ![変換](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>関連項目
 

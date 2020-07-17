@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034464"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151495"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet への XSLT 変換の適用
-**WriteXml**のメソッド、<xref:System.Data.DataSet>の内容を記述することができます、**データセット**XML データとして。 一般的なタスクは、XSLT (XSL Transformation) を使用してこの XML を別の形式へ変換する操作です。 ただし、同期、**データセット**で、<xref:System.Xml.XmlDataDocument>の内容に XSLT スタイル シートを適用することができます、**データセット**最初の内容を記述することがなく、 **データセット**を使用して XML データとして**WriteXml**します。  
+
+<xref:System.Data.DataSet> の **WriteXml** メソッドを使用すると、**DataSet** の内容を XML データとして書き込むことができます。 一般的な作業は、XSLT (XSL Transformation) を使用してこの XML を別の形式へ変換する操作です。 ただし **DataSet** を <xref:System.Xml.XmlDataDocument> と同期することで、最初に **WriteXml** を使用して **DataSet** の内容を XML データとして書き込む操作を実行せずに、**DataSet** の内容に XSLT スタイルシートを適用できます。  
   
- 次の例を**データセット**テーブルとリレーションシップでは、同期、**データセット**で、 **XmlDataDocument**、し、の一部を書き込みます**データセット**XSLT スタイル シートを使用してファイルを HTML として。 次のコードは、XSLT スタイルシートの内容です。  
+ **DataSet** にテーブルとリレーションシップを格納し、**DataSet** を **XmlDataDocument** と同期し、XSLT スタイルシートを使用して **DataSet** の一部を HTML ファイルとして書き込む例を次に示します。 次に示すのは、XSLT スタイルシートの内容です。
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +57,10 @@ ms.locfileid: "62034464"
 </xsl:stylesheet>  
 ```  
   
- 次のコードの塗りつぶし、**データセット**し、XSLT スタイル シートを適用します。  
+ 次のコードは、**DataSet** にデータを格納し、XSLT スタイル シートを適用します。  
   
 > [!NOTE]
->  XSLT スタイル シートを適用する場合、**データセット**リレーションを格納している、設定した場合に最適なパフォーマンスを実現する、**入れ子になった**のプロパティ、<xref:System.Data.DataRelation>に**true**ごとにリレーションシップを入れ子になった。 これにより、階層を自然な順番で上から下へと進みながらデータを変換する XSLT スタイル シートを利用できるようになります。パフォーマンスに大きく影響する XPath ロケーション軸 (たとえば、スタイル シートのノード テスト式での preceding-sibling や following-sibling) を使用して階層をたどる必要はなくなります。 入れ子になったリレーションの詳細については、次を参照してください。 [Datarelation の入れ子](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)します。  
+> リレーションシップが含まれている **DataSet** に XSLT スタイル シートを適用する場合は、入れ子になっているリレーションシップごとに <xref:System.Data.DataRelation> の **Nested** プロパティを **true** に設定すると、パフォーマンスが最大になります。 これにより、階層を自然な順番で上から下へと進みながらデータを変換する XSLT スタイル シートを利用できるようになります。パフォーマンスに大きく影響する XPath ロケーション軸 (たとえば、スタイル シートのノード テスト式での preceding-sibling や following-sibling) を使用して階層をたどる必要はなくなります。 入れ子になったリレーションの詳細については、「[DataRelation の入れ子化](nesting-datarelations.md)」を参照してください。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -79,7 +80,7 @@ dataSet.Relations.Add("CustOrders", _
 dataSet.Tables("Customers").Columns("CustomerID"), _  
 dataSet.Tables("Orders").Columns("CustomerID")).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim xslTran As XslTransform = New XslTransform  
 xslTran.Load("transform.xsl")  
@@ -111,12 +112,12 @@ custDS.Relations.Add("CustOrders",
   custDS.Tables["Customers"].Columns["CustomerID"],  
                      custDS.Tables["Orders"].Columns["CustomerID"]).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(custDS);   
+XmlDataDocument xmlDoc = new XmlDataDocument(custDS);
   
 XslTransform xslTran = new XslTransform();  
 xslTran.Load("transform.xsl");  
   
-XmlTextWriter writer = new XmlTextWriter("xslt_output.html",   
+XmlTextWriter writer = new XmlTextWriter("xslt_output.html",
   System.Text.Encoding.UTF8);  
   
 xslTran.Transform(xmlDoc, null, writer);  
@@ -125,5 +126,5 @@ writer.Close();
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet と XmlDataDocument の同期](dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET の概要](../ado-net-overview.md)

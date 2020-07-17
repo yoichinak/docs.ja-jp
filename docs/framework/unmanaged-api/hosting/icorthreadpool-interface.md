@@ -14,46 +14,44 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a30f10e322961d52c1fa726d5fd81e4c710a5835
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699631"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805353"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool インターフェイス
-スレッド プールにアクセスするためのメソッドを提供します。  
+スレッドプールにアクセスするためのメソッドを提供します。  
   
 > [!NOTE]
->  このインターフェイスは、内部使用専用に予約されています。  
+> このインターフェイスは、内部使用専用に予約されています。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CorRegisterWaitForSingleObject メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|内部使用専用に予約されています。|  
-|[CorUnregisterWait メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|内部使用専用に予約されています。|  
-|[CorQueueUserWorkItem メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|内部使用専用に予約されています。|  
-|[CorCreateTimer メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|内部使用専用に予約されています。|  
-|[CorChangeTimer メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|内部使用専用に予約されています。|  
-|[CorDeleteTimer メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|内部使用専用に予約されています。|  
-|[CorBindIoCompletionCallback メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|内部使用専用に予約されています。|  
-|[CorCallOrQueueUserWorkItem メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|内部使用専用に予約されています。|  
-|[CorSetMaxThreads メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|内部使用専用に予約されています。|  
-|[CorGetMaxThreads メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|内部使用専用に予約されています。|  
-|[CorGetAvailableThreads メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|内部使用専用に予約されています。|  
+|[CorRegisterWaitForSingleObject メソッド](icorthreadpool-corregisterwaitforsingleobject-method.md)|内部使用専用に予約されています。|  
+|[CorUnregisterWait メソッド](icorthreadpool-corunregisterwait-method.md)|内部使用専用に予約されています。|  
+|[CorQueueUserWorkItem メソッド](icorthreadpool-corqueueuserworkitem-method.md)|内部使用専用に予約されています。|  
+|[CorCreateTimer メソッド](icorthreadpool-corcreatetimer-method.md)|内部使用専用に予約されています。|  
+|[CorChangeTimer メソッド](icorthreadpool-corchangetimer-method.md)|内部使用専用に予約されています。|  
+|[CorDeleteTimer メソッド](icorthreadpool-cordeletetimer-method.md)|内部使用専用に予約されています。|  
+|[CorBindIoCompletionCallback メソッド](icorthreadpool-corbindiocompletioncallback-method.md)|内部使用専用に予約されています。|  
+|[CorCallOrQueueUserWorkItem メソッド](icorthreadpool-corcallorqueueuserworkitem-method.md)|内部使用専用に予約されています。|  
+|[CorSetMaxThreads メソッド](icorthreadpool-corsetmaxthreads-method.md)|内部使用専用に予約されています。|  
+|[CorGetMaxThreads メソッド](icorthreadpool-corgetmaxthreads-method.md)|内部使用専用に予約されています。|  
+|[CorGetAvailableThreads メソッド](icorthreadpool-corgetavailablethreads-method.md)|内部使用専用に予約されています。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ホスト インターフェイス](hosting-interfaces.md)

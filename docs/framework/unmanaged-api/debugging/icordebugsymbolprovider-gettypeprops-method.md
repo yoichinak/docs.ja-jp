@@ -1,17 +1,15 @@
 ---
-title: Icordebugsymbolprovider::gettypeprops メソッド
+title: ICorDebugSymbolProvider::GetTypeProps メソッド
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 435a814d20e039c794f4f9eeb024d5afbfcd6dbd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e116716284bb2081edb669e7fc9083cde10f6457
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771188"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379359"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>Icordebugsymbolprovider::gettypeprops メソッド
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps メソッド
 Vtable の指定の相対仮想アドレス (RVA) における、ジェネリック パラメーターのシグネチャの数などの型のプロパティに関する情報を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,22 +37,22 @@ HRESULT GetTypeProps(
  [out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。  
   
 ## <a name="remarks"></a>Remarks  
- 必要な型のサイズを取得する`signature`配列は、設定、`cbSignature`引数を 0 にし、`signature`に**null**。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
+ 型の配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を**null**に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetMethodProps メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodProps メソッド](icordebugsymbolprovider-getmethodprops-method.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

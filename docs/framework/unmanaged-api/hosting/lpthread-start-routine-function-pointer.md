@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84cdb42b11ad70f54f21ae36ca2734dc794d06d7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768350"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008470"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE 関数ポインター
+# <a name="lpthread_start_routine-function-pointer"></a>LPTHREAD_START_ROUTINE 関数ポインター
 スレッドの実行を開始したことをホストに通知する関数を指します。  
   
- この関数ポインターは、.NET Framework 4 では廃止されました。  
+ この関数ポインターは .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +36,20 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
 ## <a name="parameters"></a>パラメーター  
  `lpThreadParameter`  
- [in]実行を開始するコードへのポインター。  
+ から実行を開始したコードへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- 関数`LPTHREAD_START_ROUTINE`ポイントはコールバック関数であり、ホスト アプリケーションの作成者によって実装する必要があります。  
+## <a name="remarks"></a>コメント  
+ `LPTHREAD_START_ROUTINE`ポイントがコールバック関数であり、ホストアプリケーションのライターによって実装されている必要がある関数。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorWks.dll  
+ **ライブラリ:** Mscorwks.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

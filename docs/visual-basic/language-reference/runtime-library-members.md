@@ -1,5 +1,5 @@
 ---
-title: Visual Basic ランタイム ライブラリのメンバー
+title: ランタイム ライブラリのメンバー
 ms.date: 07/20/2015
 f1_keywords:
 - VisualBasic
@@ -9,15 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945185"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359491"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic ランタイム ライブラリのメンバー
-`Microsoft.VisualBasic`名前空間には、クラス、モジュール、定数、および Visual Basic ランタイム ライブラリを構成する列挙体が含まれています。 これらのライブラリ メンバーは、プロシージャ、プロパティ、およびコードで使用できる定数値を提供します。 各モジュールとクラスは、特定のカテゴリの機能を表します。  
+
+`Microsoft.VisualBasic` 名前空間には、Visual Basic ランタイム ライブラリを構成するクラス、モジュール、定数、列挙型が含まれています。 これらのライブラリ メンバーは、コードで使用できるプロシージャ、プロパティ、定数値を提供します。 各モジュールおよびクラスは、特定のカテゴリの機能を表します。  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection クラス  
   
@@ -26,7 +27,7 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.Collection.Add%2A>|<xref:Microsoft.VisualBasic.Collection.Clear%2A>|<xref:Microsoft.VisualBasic.Collection.Contains%2A>|<xref:Microsoft.VisualBasic.Collection.Count%2A>|  
 |<xref:Microsoft.VisualBasic.Collection.GetEnumerator%2A>|<xref:Microsoft.VisualBasic.Collection.Item%2A>|<xref:Microsoft.VisualBasic.Collection.Remove%2A>||  
   
-## <a name="microsoftvisualbasiccomclassattribute-class"></a>'Microsoft.visualbasic.comclassattribute' クラス  
+## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute クラス  
   
 |||||  
 |---|---|---|---|  
@@ -191,9 +192,10 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 定数と列挙型  
- `Microsoft.VisualBasic`名前空間が、Visual Basic ランタイム ライブラリの一部として定数と列挙型を提供します。 コードでは、これらの定数値を使用できます。 各列挙体は、特定のカテゴリの機能を表します。 詳細については、次を参照してください。[定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)します。  
+
+ `Microsoft.VisualBasic` 名前空間は、Visual Basic ランタイム ライブラリの一部として定数と列挙型を提供します。 これらの定数値はコード内で使用できます。 各列挙型は特定のカテゴリの機能を表します。 詳細については、[定数と列挙型](constants-and-enumerations.md)に関するページを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [キーワード](../../visual-basic/language-reference/keywords/index.md)
+- [定数と列挙体](constants-and-enumerations.md)
+- [キーワード](keywords/index.md)

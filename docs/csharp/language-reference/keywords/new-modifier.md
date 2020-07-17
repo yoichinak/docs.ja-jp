@@ -1,24 +1,23 @@
 ---
 title: new 修飾子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 529d77b0a66a8a3cedfe7a400af0fb34dd653322
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401786"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795171"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾子 (C# リファレンス)
 
 `new` キーワードを宣言の修飾子として使用すると、基底クラスから継承されたメンバーを明示的に隠ぺいできます。 継承されたメンバーを隠ぺいすると、派生バージョンのメンバーで基底クラスのバージョンが置き換えられます。 `new` 修飾子を使わずにメンバーを隠ぺいすることもできますが、コンパイラ警告が表示されます。 メンバーを明示的に隠ぺいするために `new` を使用する場合は、この警告が抑制されます。
 
-`new` キーワードは、[型のインスタンスの作成](../operators/new-operator.md)に使用することも、または[ジェネリック型制約](../keywords/new-constraint.md)として使用することもできます。
+`new` キーワードは、[型のインスタンスの作成](../operators/new-operator.md)に使用することも、または[ジェネリック型制約](./new-constraint.md)として使用することもできます。
 
-継承されたメンバーを隠ぺいするには、派生クラスで同じメンバー名を使用してメンバーを宣言し、`new` キーワードで修飾します。 例:
+継承されたメンバーを隠ぺいするには、派生クラスで同じメンバー名を使用してメンバーを宣言し、`new` キーワードで修飾します。 次に例を示します。
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
@@ -60,9 +59,9 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
+- [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Override キーワードと New キーワードを使用する場合について](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

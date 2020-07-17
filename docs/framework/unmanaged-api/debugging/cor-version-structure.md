@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 5efaee1c-a001-4c73-9525-4160f4c71567
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc9a67e16635209c3bf303e97dc3e5938943a653
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740570"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099088"
 ---
-# <a name="corversion-structure"></a>COR_VERSION 構造体
+# <a name="cor_version-structure"></a>COR_VERSION 構造体
 共通言語ランタイムの標準の 4 つの部分のバージョン番号を保存します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,15 +42,15 @@ typedef struct _COR_VERSION {
 |`dwMajor`|メジャー バージョン番号。|  
 |`dwMinor`|マイナー バージョン番号。|  
 |`dwBuild`|ビルド番号。|  
-|`dwSubBuild`|サブ ビルド番号。|  
+|`dwSubBuild`|サブビルド番号。|  
   
 ## <a name="remarks"></a>Remarks  
- 1\.0.3705.288 をバージョン番号には、1 はメジャー バージョン番号、マイナー バージョン番号が 0 には 3705 はビルド番号、および 288 はサブ ビルド番号。  
+ バージョン番号が1.0.3705.288 の場合、1はメジャーバージョン番号、0はマイナーバージョン番号、3705はビルド番号、288はサブビルド番号です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -60,5 +58,5 @@ typedef struct _COR_VERSION {
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

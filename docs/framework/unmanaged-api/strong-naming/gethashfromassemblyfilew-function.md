@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d034f15db8f3d452a055c127bb7095667c089ffe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772052"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140701"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW 関数
-指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 アセンブリ ファイルへのパスは、Unicode 文字列として指定する必要があります。  
+指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 アセンブリファイルへのパスは、Unicode 文字列として指定する必要があります。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +40,31 @@ HRESULT GetHashFromAssemblyFileW (
   
 ## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]ハッシュされるファイルへのパス。 このパラメーターは、Unicode 文字列である必要があります。  
+ からハッシュされるファイルへのパス。 このパラメーターは Unicode 文字列である必要があります。  
   
  `piHashAlg`  
- [入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のハッシュ アルゴリズムのゼロを使用します。  
+ [入力、出力]ハッシュアルゴリズムを指定する定数。 既定のハッシュアルゴリズムには0を使用します。  
   
  `pbHash`  
- [out]返されたハッシュ バッファー。  
+ 入出力返されたハッシュバッファー。  
   
  `cchHash`  
- [in]要求の最大サイズの`pbHash`します。  
+ から要求された `pbHash`の最大サイズ。  
   
  `pchHash`  
- [out]サイズ (バイト単位) が返されますの`pbHash`します。  
+ 入出力`pbHash`の返されたサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetHashFromAssemblyFileW メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [GetHashFromAssemblyFile メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromAssemblyFileW メソッド](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [GetHashFromAssemblyFile メソッド](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

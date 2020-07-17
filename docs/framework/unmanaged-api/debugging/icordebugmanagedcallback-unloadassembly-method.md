@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 07996a78d7f559de587c8a3eb2babfc06675169d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761300"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212647"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly メソッド
-共通言語ランタイム アセンブリがアンロードされたことをデバッガーに通知します。  
+共通言語ランタイムアセンブリがアンロードされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +36,24 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]アセンブリに含まれるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からアセンブリが格納されているアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pAssembly`  
- [in]アセンブリを表す ICorDebugAssembly オブジェクトへのポインター。  
+ からアセンブリを表す、オブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- このコールバックの後、アセンブリを使用しない必要があります。  
+ このコールバックの後にアセンブリを使用することはできません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [LoadAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [LoadAssembly メソッド](icordebugmanagedcallback-loadassembly-method.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

@@ -8,83 +8,83 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7fbda381b6c60398ef89e11416cafedcf19eec65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605666"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991809"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化
 
-このチュートリアルでのドラッグ アンド ドロップのデータ転送に含めることができるカスタム ユーザー コントロールを作成する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。
+このチュートリアルでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でドラッグ アンド ドロップのデータ転送 (受信) に参加できるカスタム ユーザー コントロールを作成する方法について説明します。
 
-このチュートリアルでは、カスタムの WPF を作成します<xref:System.Windows.Controls.UserControl>を表す円を選択します。 ドラッグ アンド ドロップを介したデータ転送を有効にするコントロールの機能を実装します。 たとえば、別に 1 つの円コントロールからドラッグすると、塗りつぶしの色のデータはターゲットにでコピーに円のソースから。 円のコントロールからドラッグした場合、 <xref:System.Windows.Controls.TextBox>、塗りつぶしの色の文字列形式にコピー、<xref:System.Windows.Controls.TextBox>します。 2 つのパネル コントロールを含む小さなアプリケーションを作成することも、および<xref:System.Windows.Controls.TextBox>ドラッグ アンド ドロップ機能をテストします。 パネルは、円を 1 つのパネルの子のコレクションから、もう一方にコピーまたは移動することが可能にする、ドロップされた円のデータを処理できるようにするコードを記述します。
+このチュートリアルでは、円の図形を表すカスタムの WPF <xref:System.Windows.Controls.UserControl> を作成します。 また、ドラッグ アンド ドロップによるデータ転送を有効にする機能をコントロールに実装します。 たとえば、ある円コントロールから別の円コントロールにドラッグすると、塗りつぶし色のデータがソースの円からターゲットの円にコピーされます。 円コントロールから <xref:System.Windows.Controls.TextBox> にドラッグすると、塗りつぶし色の文字列表現が <xref:System.Windows.Controls.TextBox> にコピーされます。 さらに、2 つのパネル コントロールと <xref:System.Windows.Controls.TextBox> を含む小さなアプリケーションを作成して、ドラッグ アンド ドロップ機能をテストします。 ドロップされた円データをパネルで処理できるようにするコードを作成します。これにより、ユーザーはあるパネルの子コレクションから別のパネルに円を移動またはコピーできるようになります。
 
 このチュートリアルでは、次の作業について説明します。
 
-- カスタム ユーザー コントロールを作成します。
+- カスタム ユーザー コントロールを作成する。
 
-- ドラッグ元にユーザー コントロールを有効にします。
+- ユーザー コントロールをドラッグ ソースとして有効にする。
 
-- ドロップ ターゲットにするユーザー コントロールを有効にします。
+- ユーザー コントロールをドラッグ ターゲットとして有効にする。
 
-- ユーザー コントロールから削除されるデータを受信するパネルを有効にします。
+- ユーザー コントロールからドロップされたデータをパネルで受信できるようにする。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成します。
- このセクションでは、2 つのパネルでのメイン ページを含むアプリケーション インフラストラクチャを作成します、<xref:System.Windows.Controls.TextBox>します。
+## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成する
+ このセクションでは、2 つのパネルと <xref:System.Windows.Controls.TextBox> で構成されるメイン ページを含むアプリケーション インフラストラクチャを作成します。
 
-1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`DragDropExample`します。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
+1. Visual Basic または Visual C# で、`DragDropExample` という名前の WPF アプリケーション プロジェクトを作成します。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)」を参照してください。
 
 2. MainWindow.xaml を開きます。
 
-3. 開始タグと終了の間で、次のマークアップを追加<xref:System.Windows.Controls.Grid>タグ。
+3. <xref:System.Windows.Controls.Grid> の開始タグと終了タグの間に次のマークアップを追加します。
 
      このマークアップは、テスト アプリケーションのユーザー インターフェイスを作成します。
 
      [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
 
-## <a name="add-a-new-user-control-to-the-project"></a>プロジェクトに新しいユーザー コントロールを追加します。
- このセクションでは、プロジェクトに新しいユーザー コントロールを追加します。
+## <a name="add-a-new-user-control-to-the-project"></a>新しいユーザー コントロールをプロジェクトに追加する
+ このセクションでは、新しいユーザー コントロールをプロジェクトに追加します。
 
-1. [プロジェクト] メニューで、次のように選択します。**ユーザー コントロールの追加**します。
+1. [プロジェクト] メニューで、 **[ユーザー コントロールの追加]** を選択します。
 
-2. **新しい項目の追加** ダイアログ ボックスで、名を変更して`Circle.xaml`、 をクリック**追加**します。
+2. **[新しい項目の追加]** ダイアログ ボックスで、名前を `Circle.xaml` に変更し、 **[追加]** をクリックします。
 
-     Circle.xaml とその分離コードは、プロジェクトに追加されます。
+     Circle.xaml とその分離コードがプロジェクトに追加されます。
 
 3. Circle.xaml を開きます。
 
-     このファイルは、ユーザー コントロールのユーザー インターフェイス要素が格納されます。
+     このファイルには、ユーザー コントロールのユーザー インターフェイス要素が含まれています。
 
-4. ルートに次のマークアップを追加<xref:System.Windows.Controls.Grid>シンプルなユーザー コントロールがその UI として、青色の円を作成します。
+4. 次のマークアップをルート <xref:System.Windows.Controls.Grid> に追加し、UI として青色の円を含む単純なユーザー コントロールを作成します。
 
      [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
 5. Circle.xaml.cs または Circle.xaml.vb を開きます。
 
-6. C# では、コピー コンス トラクターを作成する既定のコンス トラクターの後に次のコードを追加します。 Visual basic では、既定のコンス トラクターとコピー コンス トラクターの両方を作成するには、次のコードを追加します。
+6. C# で、パラメーターなしのコンストラクターの後に次のコードを追加して、コピー コンストラクターを作成します。 Visual Basic で、次のコードを追加して、パラメーターなしのコンストラクターとコピー コンストラクターの両方を作成します。
 
-     コピーするユーザー コントロールを許可するためには、分離コード ファイルのコピー コンス トラクター メソッドを追加します。 簡略化された円ユーザー コントロールではのみをコピーする、塗りつぶしとのサイズ、ユーザー コントロールの。
+     ユーザー コントロールをコピーできるようにするために、分離コード ファイルにコピー コンストラクター メソッドを追加します。 単純な円形のユーザー コントロールの場合、ユーザー コントロールの塗りつぶしとサイズのみをコピーします。
 
      [!code-csharp[DragDropWalkthrough#CopyCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
      [!code-vb[DragDropWalkthrough#CopyCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
 
-## <a name="add-the-user-control-to-the-main-window"></a>メイン ウィンドウに、ユーザー コントロールを追加します。
+## <a name="add-the-user-control-to-the-main-window"></a>ユーザー コントロールをメイン ウィンドウに追加する
 
 1. MainWindow.xaml を開きます。
 
-2. 開始する次の XAML を追加<xref:System.Windows.Window>タグが現在のアプリケーションに XML 名前空間参照を作成します。
+2. <xref:System.Windows.Window> の開始タグで、次の XAML を追加して、現在のアプリケーションへの XML 名前空間参照を作成します。
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
-3. 最初の<xref:System.Windows.Controls.StackPanel>、最初のパネルで、円のユーザー コントロールの 2 つのインスタンスを作成する次の XAML を追加します。
+3. 最初の <xref:System.Windows.Controls.StackPanel>で、次の XAML を追加して、最初のパネルの円ユーザー コントロールの 2 つのインスタンスを作成します。
 
      [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
@@ -92,244 +92,244 @@ ms.locfileid: "64605666"
 
      [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
 
-## <a name="implement-drag-source-events-in-the-user-control"></a>ユーザー コントロールでドラッグ ソースのイベントを実装します。
- このセクションでをオーバーライドして、<xref:System.Windows.UIElement.OnMouseMove%2A>メソッドと、ドラッグ アンド ドロップ操作を開始します。
+## <a name="implement-drag-source-events-in-the-user-control"></a>ユーザー コントロールでドラッグ ソース イベントを実装する
+ このセクションでは、<xref:System.Windows.UIElement.OnMouseMove%2A> メソッドをオーバーライドして、ドラッグ アンド ドロップ操作を開始します。
 
- ドラッグを開始する場合 (マウス ボタンが押され、マウスを移動) に転送されるデータをパッケージ化は、<xref:System.Windows.DataObject>します。 ここでは、円コントロールが; 3 つのデータ項目をパッケージします。塗りつぶしの色、高さの二重表現自体のコピーの文字列表現。
+ ドラッグが開始されたら (マウス ボタンが押されて、マウスが移動されたら)、<xref:System.Windows.DataObject>に転送されるデータをパッケージ化します。 この場合、円コントロールは、3 つのデータ項目 (塗りつぶし色の文字列表現、高さの double 表現、それ自体のコピー) をパッケージ化します。
 
-### <a name="to-initiate-a-drag-and-drop-operation"></a>ドラッグ アンド ドロップ操作を開始するには
+### <a name="to-initiate-a-drag-and-drop-operation"></a>ドラッグ アンド ドロップ操作を開始する手順
 
 1. Circle.xaml.cs または Circle.xaml.vb を開きます。
 
-2. 次の追加<xref:System.Windows.UIElement.OnMouseMove%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.MouseMove>イベント。
+2. 次の <xref:System.Windows.UIElement.OnMouseMove%2A> オーバーライドを追加して、<xref:System.Windows.UIElement.MouseMove> イベントのクラス処理を提供します。
 
      [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
      [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
 
-     これは、<xref:System.Windows.UIElement.OnMouseMove%2A>オーバーライドは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.OnMouseMove%2A> オーバーライドは、次のタスクを実行します。
 
-    - マウスが移動中に、マウスの左ボタンが押されたかどうかを確認します。
+    - マウスの移動中にマウスの左ボタンが押されたかどうかを確認します。
 
-    - パッケージにデータを円、<xref:System.Windows.DataObject>します。 この場合、円コントロール パッケージを 3 つのデータ項目。塗りつぶしの色、高さの二重表現自体のコピーの文字列表現。
+    - 円データを <xref:System.Windows.DataObject> にパッケージ化します。 この場合、円コントロールは、3 つのデータ項目 (塗りつぶし色の文字列表現、高さの double 表現、それ自体のコピー) をパッケージ化します。
 
-    - 静的な呼び出し<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>ドラッグ アンド ドロップ操作を開始するメソッド。 次の 3 つのパラメーターを渡す、<xref:System.Windows.DragDrop.DoDragDrop%2A>メソッド。
+    - 静的 <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> メソッドを呼び出して、ドラッグ アンド ドロップ操作を開始します。 次の 3 つのパラメーターを <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドに渡します。
 
-        - `dragSource` – このコントロールへの参照。
+        - `dragSource` - このコントロールへの参照。
 
-        - `data` –<xref:System.Windows.DataObject>前のコードで作成します。
+        - `data` - 前のコードで作成された <xref:System.Windows.DataObject>。
 
-        - `allowedEffects` – の許可されているドラッグ アンド ドロップ操作<xref:System.Windows.DragDropEffects.Copy>または<xref:System.Windows.DragDropEffects.Move>します。
+        - `allowedEffects` - 許可されたドラッグ アンド ドロップ操作。これは、<xref:System.Windows.DragDropEffects.Copy> または <xref:System.Windows.DragDropEffects.Move> です。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-4. 円のコントロールのいずれかをクリックし、パネル、他の円をドラッグし、<xref:System.Windows.Controls.TextBox>します。 ドラッグしたとき、<xref:System.Windows.Controls.TextBox>カーソルが移動を示すために変わります。
+4. いずれかの円コントロールをクリックしてパネル、もう一方の円、<xref:System.Windows.Controls.TextBox> にドラッグします。 <xref:System.Windows.Controls.TextBox>にドラッグすると、カーソルが変化して移動を示すようになります。
 
-5. 経由で円をドラッグするときに、 <xref:System.Windows.Controls.TextBox>、キーを押して、 **Ctrl**キー。 コピーを示すために、カーソルの変更に注意してください。
+5. 円を <xref:System.Windows.Controls.TextBox>にドラッグしながら、**Ctrl** キーを押します。 カーソルが変化してコピーを示すようになる方法にご注意ください。
 
-6. ドラッグ アンド ドロップ上の円、<xref:System.Windows.Controls.TextBox>します。 円の塗りつぶしの色の文字列表現を追加、<xref:System.Windows.Controls.TextBox>します。
+6. 円を <xref:System.Windows.Controls.TextBox> にドラッグ アンド ドロップします。 円の塗りつぶし色の文字列表現が <xref:System.Windows.Controls.TextBox> に追加されます。
 
-     ![円の塗りつぶしの色の文字列表現](./media/dragdrop-colorstring.png "DragDrop_ColorString")
+     ![円の塗りつぶし色の文字列表現](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
-既定では、カーソルは、どのようなデータを削除する効果を持つが示すにドラッグ アンド ドロップ操作中に変更されます。 処理することにより、ユーザーにフィードバックをカスタマイズすることができます、<xref:System.Windows.UIElement.GiveFeedback>イベントと異なるカーソルを設定します。
+既定では、カーソルは、ドラッグ アンド ドロップ操作中に変化して、データのドロップによる効果を示します。 <xref:System.Windows.UIElement.GiveFeedback> イベントを処理して、別のカーソルを設定することによって、ユーザーに表示するフィードバックをカスタマイズできます。
 
-## <a name="give-feedback-to-the-user"></a>ユーザーにフィードバックします。
+## <a name="give-feedback-to-the-user"></a>ユーザーにフィードバックを表示する
 
 1. Circle.xaml.cs または Circle.xaml.vb を開きます。
 
-2. 次の追加<xref:System.Windows.UIElement.OnGiveFeedback%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.GiveFeedback>イベント。
+2. 次の <xref:System.Windows.UIElement.OnGiveFeedback%2A> オーバーライドを追加して、<xref:System.Windows.UIElement.GiveFeedback> イベントのクラス処理を提供します。
 
      [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
      [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
 
-     これは、<xref:System.Windows.UIElement.OnGiveFeedback%2A>オーバーライドは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.OnGiveFeedback%2A> オーバーライドは、次のタスクを実行します。
 
-    - チェック、<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>でドロップ先の設定されている値<xref:System.Windows.UIElement.DragOver>イベント ハンドラー。
+    - ドロップ ターゲットの <xref:System.Windows.UIElement.DragOver> イベント ハンドラーで設定されている <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> 値を確認します。
 
-    - 基づくカスタム カーソル設定、<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>値。 カーソルは、どのようなデータを削除する効果は必要があります。 詳細については、ユーザーに視覚的なフィードバックを提供するものです。
+    - <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> 値に基づいてカスタム カーソルを設定します。 カーソルは、データのドロップによる効果について視覚的フィードバックをユーザーに表示することを目的としています。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-4. 円の 1 つを管理パネル、他の円の上をドラッグし、<xref:System.Windows.Controls.TextBox>します。 カーソルがで指定したカスタム カーソル、<xref:System.Windows.UIElement.OnGiveFeedback%2A>をオーバーライドします。
+4. いずれかの円コントロールをパネル、もう一方の円、<xref:System.Windows.Controls.TextBox> にドラッグします。 今度は、カーソルが、<xref:System.Windows.UIElement.OnGiveFeedback%2A> で指定したカスタム カーソルになることにご注意ください。
 
      ![カスタム カーソルによるドラッグ アンド ドロップ](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
-5. テキスト選択`green`から、<xref:System.Windows.Controls.TextBox>します。
+5. <xref:System.Windows.Controls.TextBox> からテキスト `green` を選択します。
 
-6. ドラッグ、`green`円コントロールにテキスト。 ドラッグ アンド ドロップ操作の効果を示すために既定のカーソルが表示されることに注意してください。 フィードバックのカーソルは、ドラッグ ソースが常に設定されます。
+6. テキスト `green` を円コントロールにドラッグします。 既定のカーソルは、ドラッグ アンド ドロップ操作の効果を示すために表示されていることにご注意ください。 フィードバック カーソルは、常にドラッグ ソースによって設定されます。
 
-## <a name="implement-drop-target-events-in-the-user-control"></a>ユーザー コントロールのドロップ先のイベントを実装します。
- このセクションでは、ユーザー コントロールがドロップ ターゲットでは、上書き、ユーザーを有効にするメソッドは、ドロップ先を制御し、その上にドロップしたデータを処理であるかを指定します。
+## <a name="implement-drop-target-events-in-the-user-control"></a>ユーザー コントロールにドロップ ターゲット イベントを実装する
+ このセクションでは、ユーザー コントロールがドロップ ターゲットであり、ユーザー コントロールをドロップ ターゲットとして有効にするメソッドをオーバーライドし、ドロップされたデータを処理することを指定します。
 
-### <a name="to-enable-the-user-control-to-be-a-drop-target"></a>ドロップ ターゲットにするユーザー コントロールを有効にするには
+### <a name="to-enable-the-user-control-to-be-a-drop-target"></a>ユーザー コントロールをドロップ ターゲットとして有効にする手順
 
 1. Circle.xaml を開きます。
 
-2. オープンで<xref:System.Windows.Controls.UserControl>タグを追加、<xref:System.Windows.UIElement.AllowDrop%2A>プロパティに設定し、`true`します。
+2. <xref:System.Windows.Controls.UserControl> の開始タグで、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを追加し、それを `true` に設定します。
 
      [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
-<xref:System.Windows.UIElement.OnDrop%2A>メソッドが呼び出されます、<xref:System.Windows.UIElement.AllowDrop%2A>プロパティに設定されて`true`円ユーザー コントロールでドラッグ ソースからデータが削除されるとします。 このメソッドでは、ドロップされたデータを処理し、データを円に適用します。
+<xref:System.Windows.UIElement.AllowDrop%2A> が `true` に設定され、ドラッグ ソースのデータが円ユーザー コントロールにドロップされると、<xref:System.Windows.UIElement.OnDrop%2A> メソッドが呼び出されます。 このメソッドでは、ドロップされたデータを処理し、データを円に適用します。
 
-### <a name="to-process-the-dropped-data"></a>削除されたデータを処理する
+### <a name="to-process-the-dropped-data"></a>ドロップされたデータを処理する手順
 
 1. Circle.xaml.cs または Circle.xaml.vb を開きます。
 
-2. 次の追加<xref:System.Windows.UIElement.OnDrop%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.Drop>イベント。
+2. 次の <xref:System.Windows.UIElement.OnDrop%2A> オーバーライドを追加して、<xref:System.Windows.UIElement.Drop> イベントのクラス処理を提供します。
 
      [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
      [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
 
-     これは、<xref:System.Windows.UIElement.OnDrop%2A>オーバーライドは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.OnDrop%2A> オーバーライドは、次のタスクを実行します。
 
-    - 使用して、<xref:System.Windows.DataObject.GetDataPresent%2A>ドラッグ中のデータに文字列オブジェクトが含まれているかどうかをチェックするメソッド。
+    - <xref:System.Windows.DataObject.GetDataPresent%2A> メソッドを使用して、ドラッグされたデータに文字列オブジェクトが含まれているかどうかを確認します。
 
-    - 使用して、<xref:System.Windows.DataObject.GetData%2A>メソッドが存在する場合は、文字列データを抽出します。
+    - 文字列データがある場合、<xref:System.Windows.DataObject.GetData%2A> メソッドを使用して、それを抽出します。
 
-    - 使用して、<xref:System.Windows.Media.BrushConverter>を文字列に変換しようとする、<xref:System.Windows.Media.Brush>します。
+    - <xref:System.Windows.Media.BrushConverter> を使用して、文字列の <xref:System.Windows.Media.Brush> への変換を試みます。
 
-    - 変換が成功した場合は、適用するブラシ、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>円コントロールの UI を提供します。
+    - 変換が成功した場合、円コントロールの UI を表示する <xref:System.Windows.Shapes.Ellipse> の <xref:System.Windows.Shapes.Shape.Fill%2A> にブラシを適用します。
 
-    - マーク、<xref:System.Windows.UIElement.Drop>イベントを処理します。 このイベントを受信する他の要素が円のユーザー コントロールに処理を認識できるように処理済みとしてドロップ イベントをマークする必要があります。
+    - <xref:System.Windows.UIElement.Drop> イベントを処理済みとしてマークします。 このイベントを受信する他の要素に、イベントが円ユーザー コントロールで処理されたことを認識させるために、ドロップ イベントを処理済みとしてマークする必要があります。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-4. テキスト選択`green`で、<xref:System.Windows.Controls.TextBox>します。
+4. <xref:System.Windows.Controls.TextBox> で、テキスト `green` を選択します。
 
-5. 円のコントロールにテキストをドラッグし、ドロップします。 円は、青から緑に変更します。
+5. そのテキストを円コントロールにドラッグしてドロップします。 円が青色から緑色に変化します。
 
-     ![文字列、ブラシを変換](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
+     ![文字列をブラシに変換する](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
-6. テキスト入力`green`で、<xref:System.Windows.Controls.TextBox>します。
+6. <xref:System.Windows.Controls.TextBox> にテキスト `green` を入力します。
 
-7. テキスト選択`gre`で、<xref:System.Windows.Controls.TextBox>します。
+7. <xref:System.Windows.Controls.TextBox>で、テキスト `gre` を選択します。
 
-8. 円のコントロールにドラッグし、ドロップします。 カーソルの変化を示すために、円の色が変更されませんが、ドロップは許可されて`gre`は有効な色ではありません。
+8. それを円コントロールにドラッグしてドロップします。 カーソルが変化して、ドロップが許可されていることを示しますが、円の色は変化していないことに注目してください。これは、`gre` が有効な色ではないためです。
 
-9. 緑色の円のコントロールをドラッグし、青い円コントロールにドロップします。 円は、青から緑に変更します。 カーソルが表示されるかどうかによって異なりますが、<xref:System.Windows.Controls.TextBox>円はドラッグ元であるか。
+9. 緑色の円コントロールをドラッグして青色の円コントロールにドロップします。 円が青色から緑色に変化します。 表示されるカーソルが、<xref:System.Windows.Controls.TextBox> または円のどちらがドラッグ ソースであるかによって異なることにご注意ください。
 
-設定、<xref:System.Windows.UIElement.AllowDrop%2A>プロパティを`true`要素になるドロップ ターゲットを有効にするために必要なは、ドロップしたデータを処理します。 ただし、優れたユーザー エクスペリエンスを提供する必要がありますも処理する、 <xref:System.Windows.UIElement.DragEnter>、 <xref:System.Windows.UIElement.DragLeave>、および<xref:System.Windows.UIElement.DragOver>イベント。 これらのイベントでは、チェックを実行し、データが削除される前に、追加のフィードバックをユーザーに提供できます。
+要素をドロップ ターゲットとして有効にするために必要な手順は、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを `true` に設定して、ドロップされたデータを処理することだけです。 しかし、より優れたユーザー エクスペリエンスを提供するには、<xref:System.Windows.UIElement.DragEnter>、<xref:System.Windows.UIElement.DragLeave>、<xref:System.Windows.UIElement.DragOver> の各イベントも処理する必要があります。 これらのイベントでは、データがドロップされる前に、チェックを実行して、ユーザーに追加のフィードバックを表示することができます。
 
-データが円のユーザー コントロールの上にドラッグされるときに、コントロールはドラッグされているデータを処理するかどうか、ドラッグ元で通知する必要があります。 コントロールにデータを処理する方法を把握していない場合、削除を拒否する必要があります。 処理するのには、<xref:System.Windows.UIElement.DragOver>イベントとセット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティ。
+データが円ユーザー コントロールにドラッグされると、コントロールは、ドラッグされているデータを処理できるかどうかをドラッグ ソースに通知する必要があります。 コントロールがデータの処理方法を認識していない場合、ドロップを拒否する必要があります。 このためには、<xref:System.Windows.UIElement.DragOver> イベントを処理して、<xref:System.Windows.DragEventArgs.Effects%2A> プロパティを設定します。
 
-### <a name="to-verify-that-the-data-drop-is-allowed"></a>データの削除が許可されていることを確認するには
+### <a name="to-verify-that-the-data-drop-is-allowed"></a>データのドロップが許可されていることを確認する手順
 
 1. Circle.xaml.cs または Circle.xaml.vb を開きます。
 
-2. 次の追加<xref:System.Windows.UIElement.OnDragOver%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.DragOver>イベント。
+2. 次の <xref:System.Windows.UIElement.OnDragOver%2A> オーバーライドを追加して、<xref:System.Windows.UIElement.DragOver> イベントのクラス処理を提供します。
 
      [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
      [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
 
-     これは、<xref:System.Windows.UIElement.OnDragOver%2A>オーバーライドは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.OnDragOver%2A> オーバーライドは、次のタスクを実行します。
 
     - <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
 
-    - 実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>円ユーザー コントロールがドラッグしたデータを処理できるかどうかを判断するメソッド。
+    - <xref:System.Windows.UIElement.OnDrop%2A> メソッドで実行したチェックと同じチェックを実行して、円ユーザー コントロールがドラッグされたデータを処理できるかどうかを判断します。
 
-    - ユーザー コントロールには、データを処理できますが、設定、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Copy>または<xref:System.Windows.DragDropEffects.Move>します。
+    - ユーザー コントロールがデータを処理できる場合、<xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.Copy> または <xref:System.Windows.DragDropEffects.Move> に設定します。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-4. テキスト選択`gre`で、<xref:System.Windows.Controls.TextBox>します。
+4. <xref:System.Windows.Controls.TextBox>で、テキスト `gre` を選択します。
 
-5. 円のコントロールにテキストをドラッグします。 カーソルが今すぐに変化を示すため、ドロップは許可されません`gre`は有効な色ではありません。
+5. テキストを円コントロールにドラッグします。 今度は、カーソルがドロップを許可しないことを示すように変化することに注目してください。これは、`gre` が有効な色ではないためです。
 
- ドロップ操作のプレビューを適用することで、ユーザー エクスペリエンスをさらに強化できます。 オーバーライド円ユーザー コントロールの場合、<xref:System.Windows.UIElement.OnDragEnter%2A>と<xref:System.Windows.UIElement.OnDragLeave%2A>メソッド。 データが、コントロールの現在の背景上にドラッグされるときに<xref:System.Windows.Shapes.Shape.Fill%2A>プレース ホルダー変数に保存されます。 文字列は、ブラシに変換されに適用される、<xref:System.Windows.Shapes.Ellipse>円を提供する UI。 データが元、ドロップされることがなく円からドラッグした場合<xref:System.Windows.Shapes.Shape.Fill%2A>値は円に再適用されます。
+ さらに、ドロップ操作のプレビューを適用して、ユーザー エクスペリエンスを向上させることができます。 この円ユーザー コントロールの場合、<xref:System.Windows.UIElement.OnDragEnter%2A> メソッドと <xref:System.Windows.UIElement.OnDragLeave%2A> メソッドをオーバーライドします。 データがコントロールにドラッグされると、現在の背景 <xref:System.Windows.Shapes.Shape.Fill%2A> はプレースホルダー変数に保存されます。 次に、文字列がブラシに変換されて、円の UI を表示する <xref:System.Windows.Shapes.Ellipse> に適用されます。 データがドロップされずに円からドラッグされると、元の <xref:System.Windows.Shapes.Shape.Fill%2A> 値が円に再度適用されます。
 
-### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>ドラッグ アンド ドロップ操作の効果をプレビューするには
+### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>ドラッグ アンド ドロップ操作の効果をプレビューする手順
 
 1. Circle.xaml.cs または Circle.xaml.vb を開きます。
 
-2. 円クラスで宣言プライベート<xref:System.Windows.Media.Brush>という名前の変数`_previousFill`し初期化`null`します。
+2. Circle クラスで、`_previousFill` という名前の <xref:System.Windows.Media.Brush> プライベート変数を宣言し、それを `null` に初期化します。
 
      [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
-3. 次の追加<xref:System.Windows.UIElement.OnDragEnter%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.DragEnter>イベント。
+3. 次の <xref:System.Windows.UIElement.OnDragEnter%2A> オーバーライドを追加して、<xref:System.Windows.UIElement.DragEnter> イベントのクラス処理を提供します。
 
      [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
      [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
 
-     これは、<xref:System.Windows.UIElement.OnDragEnter%2A>オーバーライドは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.OnDragEnter%2A> オーバーライドは、次のタスクを実行します。
 
-    - 保存、<xref:System.Windows.Shapes.Shape.Fill%2A>のプロパティ、<xref:System.Windows.Shapes.Ellipse>で、`_previousFill`変数。
+    - <xref:System.Windows.Shapes.Ellipse> の <xref:System.Windows.Shapes.Shape.Fill%2A> プロパティを `_previousFill` 変数に保存します。
 
-    - 実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>にデータを変換できるかどうかを判断するメソッド、<xref:System.Windows.Media.Brush>します。
+    - <xref:System.Windows.UIElement.OnDrop%2A> メソッドで実行したチェックと同じチェックを実行して、データを <xref:System.Windows.Media.Brush> に変換できるかどうかを判断します。
 
-    - 有効なデータが変換される場合<xref:System.Windows.Media.Brush>、それを適用、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>します。
+    - データが有効な <xref:System.Windows.Media.Brush>に変換されると、それを<xref:System.Windows.Shapes.Ellipse>の <xref:System.Windows.Shapes.Shape.Fill%2A> に適用します。
 
-4. 次の追加<xref:System.Windows.UIElement.OnDragLeave%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.DragLeave>イベント。
+4. 次の <xref:System.Windows.UIElement.OnDragLeave%2A> オーバーライドを追加して、<xref:System.Windows.UIElement.DragLeave> イベントのクラス処理を提供します。
 
      [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
      [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
 
-     これは、<xref:System.Windows.UIElement.OnDragLeave%2A>オーバーライドは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.OnDragLeave%2A> オーバーライドは、次のタスクを実行します。
 
-    - 適用される、<xref:System.Windows.Media.Brush>に保存されている、`_previousFill`変数を<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>円ユーザー コントロールの UI を提供します。
+    - `_previousFill` 変数に保存された <xref:System.Windows.Media.Brush> を、円ユーザー コントロールの UI を表示する <xref:System.Windows.Shapes.Ellipse> の <xref:System.Windows.Shapes.Shape.Fill%2A> に適用します。
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-6. テキスト選択`green`で、<xref:System.Windows.Controls.TextBox>します。
+6. <xref:System.Windows.Controls.TextBox> で、テキスト `green` を選択します。
 
-7. 円のコントロールを削除しないテキストをドラッグします。 円は、青から緑に変更します。
+7. テキストを円コントロールにドラッグします。ドロップはしません。 円が青色から緑色に変化します。
 
-     ![ドラッグの効果のプレビュー&#45;と&#45;ドロップ操作](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
+     ![ドラッグの効果をプレビューする&#45;and&#45;drop operation](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
-8. 円コントロールからテキストをドラッグします。 円を青に緑色のバックアップから変更します。
+8. テキストを円コントロールからドラッグします。 円が緑色から青色に戻ります。
 
-## <a name="enable-a-panel-to-receive-dropped-data"></a>ドロップしたデータを受信するパネルを有効にします。
+## <a name="enable-a-panel-to-receive-dropped-data"></a>ドロップされたデータをパネルで受信できるようにする
 
-このセクションでは、円のドラッグしたデータのドロップ ターゲットとして機能する円のユーザー コントロールをホストするパネルを有効にします。 円を別の 1 つのパネルに移動するかを押しながら Circle コントロールのコピーを作成することができるコードを実装する、 **Ctrl**ドラッグ アンド ドロップ、円の中にキー。
+このセクションでは、円ユーザー コントロールをホストするパネルが、ドラッグされた円データのドラッグ ターゲットとして機能できるようにします。 円を一方のパネルからもう一方のパネルに移動できるようにする、または**Ctrl** キーを押したまま円をドラッグ アンド ドロップして円コントロールのコピーを作成できるようにするコードを実装します。
 
 1. MainWindow.xaml を開きます。
 
-2. それぞれで、次の XAML に示すように、<xref:System.Windows.Controls.StackPanel>のハンドラーの追加、コントロール、<xref:System.Windows.UIElement.DragOver>と<xref:System.Windows.UIElement.Drop>イベント。 名前、<xref:System.Windows.UIElement.DragOver>イベント ハンドラー、 `panel_DragOver`、し、名前、<xref:System.Windows.UIElement.Drop>イベント ハンドラー、`panel_Drop`します。
+2. 次の XAML に示すように、各 <xref:System.Windows.Controls.StackPanel> で、<xref:System.Windows.UIElement.DragOver> イベントと <xref:System.Windows.UIElement.Drop> イベントのハンドラーを追加します。 <xref:System.Windows.UIElement.DragOver> イベント ハンドラーに `panel_DragOver` という名前を指定し、<xref:System.Windows.UIElement.Drop> イベント ハンドラーには `panel_Drop` という名前を指定します。
 
      [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
 3. MainWindows.xaml.cs または MainWindow.xaml.vb を開きます。
 
-4. 次のコードを追加、<xref:System.Windows.UIElement.DragOver>イベント ハンドラー。
+4. <xref:System.Windows.UIElement.DragOver> イベント ハンドラーに次のコードを追加します。
 
      [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
      [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
 
-     これは、<xref:System.Windows.UIElement.DragOver>イベント ハンドラーは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.DragOver> イベント ハンドラーは、次のタスクを実行します。
 
-    - パッケージ化された「オブジェクト」のデータにはドラッグしたデータが含まれているを確認します、<xref:System.Windows.DataObject>円のユーザー コントロールへの呼び出しで渡されると<xref:System.Windows.DragDrop.DoDragDrop%2A>します。
+    - ドラッグされたデータに、円ユーザー コントロールによって <xref:System.Windows.DataObject> にパッケージ化され、<xref:System.Windows.DragDrop.DoDragDrop%2A>の呼び出しで渡された "Object" データが含まれていることを確認します。
 
-    - 「オブジェクト」のデータが存在する場合、チェックするかどうか、 **Ctrl**キーが押されました。
+    - "Object" データがある場合、**Ctrl** キーが押されたかどうかを確認します。
 
-    - 場合、 **Ctrl**キーを押す、セット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Copy>します。 それ以外の場合、設定、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Move>します。
+    - **Ctrl** キーが押されていた場合、<xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.Copy> に設定します。 それ以外の場合は、<xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.Move> に設定します。
 
-5. 次のコードを追加、<xref:System.Windows.UIElement.Drop>イベント ハンドラー。
+5. <xref:System.Windows.UIElement.Drop> イベント ハンドラーに次のコードを追加します。
 
      [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
      [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
 
-     これは、<xref:System.Windows.UIElement.Drop>イベント ハンドラーは、次のタスクを実行します。
+     この <xref:System.Windows.UIElement.Drop> イベント ハンドラーは、次のタスクを実行します。
 
-    - チェックするかどうか、<xref:System.Windows.UIElement.Drop>イベントが既に処理されました。 別の円が削除された場合 Circle をたとえば、ハンドル、<xref:System.Windows.UIElement.Drop>イベント、たくも処理する円形を格納しているパネル。
+    - <xref:System.Windows.UIElement.Drop> イベントが既に処理されたかどうかを確認します。 たとえば、円が別の円にドロップされ、その円で <xref:System.Windows.UIElement.Drop> イベントが処理される場合、円を含むパネルにそれを処理させる必要はありません。
 
-    - 場合、<xref:System.Windows.UIElement.Drop>イベントが処理されない、チェックするかどうか、 **Ctrl**キーが押されました。
+    - <xref:System.Windows.UIElement.Drop> イベントが処理されていない場合、**Ctrl** キーが押されたかどうかを確認します。
 
-    - 場合、 **Ctrl**キーが押されたときに、<xref:System.Windows.UIElement.Drop>が発生し、制御が円のコピーに追加、<xref:System.Windows.Controls.Panel.Children%2A>のコレクション、<xref:System.Windows.Controls.StackPanel>します。
+    - <xref:System.Windows.UIElement.Drop> が発生したときに **Ctrl** キーが押されていた場合、円コントロールのコピーを作成し、それを <xref:System.Windows.Controls.StackPanel> の <xref:System.Windows.Controls.Panel.Children%2A> コレクションに追加します。
 
-    - 場合、 **Ctrl**から円を移動キーが押されていない、<xref:System.Windows.Controls.Panel.Children%2A>をその親パネルのコレクション、<xref:System.Windows.Controls.Panel.Children%2A>上にドロップされたパネルのコレクション。
+    - **Ctrl** キーが押されていない場合、円をその親パネルの <xref:System.Windows.Controls.Panel.Children%2A> コレクションから、ドロップされたパネルの <xref:System.Windows.Controls.Panel.Children%2A> コレクションに移動します。
 
-    - セット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティに通知する、<xref:System.Windows.DragDrop.DoDragDrop%2A>メソッドを移動またはコピー操作が実行されたかどうか。
+    - 移動操作またはコピー操作のどちらが実行されたかを <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドに通知するように <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを設定します。
 
 6. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-7. テキスト選択`green`から、<xref:System.Windows.Controls.TextBox>します。
+7. <xref:System.Windows.Controls.TextBox> からテキスト `green` を選択します。
 
-8. 円のコントロールの上のテキストをドラッグし、ドロップします。
+8. そのテキストを円コントロールにドラッグしてドロップします。
 
-9. 右側のパネルの左側のパネルから円コントロールをドラッグし、ドロップします。 円はから削除、<xref:System.Windows.Controls.Panel.Children%2A>左側のパネルのコレクションと、右側のパネルの子のコレクションに追加します。
+9. 円コントロールを左側のパネルから右側のパネルにドラッグしてドロップします。 円は、左側のパネルの <xref:System.Windows.Controls.Panel.Children%2A> コレクションから削除され、右側のパネルの Children コレクションに追加されます。
 
-10. その他のパネル内にあるパネルから円コントロールをドラッグし、キーを押しながらドロップ、 **Ctrl**キー。 円がコピーされ、コピーに追加されます、<xref:System.Windows.Controls.Panel.Children%2A>受信側のパネルのコレクション。
+10. **Ctrl** キーを押したまま、円コントロールを、現在表示されているパネルからもう一方のパネルにドラッグしてドロップします。 円がコピーされ、そのコピーが、受け取り側のパネルの <xref:System.Windows.Controls.Panel.Children%2A> コレクションに追加されます。
 
-     ![CTRL キーを押しながら Circle をドラッグ](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
+     ![CTRL キーを押したまま円をドラッグする](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
 ## <a name="see-also"></a>関連項目
 

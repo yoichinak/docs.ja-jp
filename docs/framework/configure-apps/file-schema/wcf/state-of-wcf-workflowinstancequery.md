@@ -1,28 +1,29 @@
 ---
-title: <state> WCF の <workflowInstanceQuery>
+title: <state>WCF の<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757964"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70854954"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<状態 > WCF の\<workflowInstanceQuery >
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state>WCF の\<workflowInstanceQuery>
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
-\<system.serviceModel>  
-\<追跡 >  
-\<プロファイル >  
-\<trackingProfile>  
-\<ワークフロー >  
-\<workflowInstanceQueries>  
-\<workflowInstanceQuery>  
-\<states>  
-\<state>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQueries>**](workflowinstancequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<states>**](states-of-wcf-workflowinstancequery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<state>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +51,7 @@ ms.locfileid: "61757964"
   
 ### <a name="attributes"></a>属性
 
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`name`|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態を指定する文字列。|  
   
@@ -60,25 +61,25 @@ ms.locfileid: "61757964"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 返されたレコードは、このコレクションの状態でフィルター処理されます。  
   
-可能な状態の値は、次の表で説明します。
+次の表で、使用可能な状態の値について説明します。
   
-|状態|説明|  
+|州|Description|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
 |完了|ワークフロー インスタンスは完了しました。|  
-|Deleted|ワークフロー インスタンスは削除されました。|  
-|Idle|ワークフロー インスタンスはアイドル状態です。|  
+|削除済み|ワークフロー インスタンスは削除されました。|  
+|アイドル|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
-|開始|ワークフロー インスタンスが開始されました。|  
+|Started|ワークフロー インスタンスが開始されました。|  
 |UnhandledException|ワークフロー インスタンスで未処理の例外が発生しました。|  
 |アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
@@ -105,5 +106,5 @@ ms.locfileid: "61757964"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [ワークフロー追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)

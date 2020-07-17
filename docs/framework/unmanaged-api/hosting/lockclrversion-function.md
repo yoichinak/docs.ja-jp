@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768410"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008496"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 関数
-により、ホストがプロセス内で、CLR を明示的に初期化する前に使用する共通言語ランタイム (CLR) のバージョンを決定します。  
+CLR を明示的に初期化する前に、プロセス内で使用される共通言語ランタイム (CLR) のバージョンをホストが判断できるようにします。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,58 +39,58 @@ HRESULT LockClrVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `hostCallback`  
- [in]初期化時に CLR によって呼び出される関数。  
+ から初期化時に CLR によって呼び出される関数。  
   
  `pBeginHostSetup`  
- [in]初期化の CLR に通知するためにホストによって呼び出される関数を開始しています。  
+ から初期化を開始することを CLR に通知するために、ホストによって呼び出される関数。  
   
  `pEndHostSetup`  
- [in]初期化の CLR に通知するためにホストによって呼び出される関数が完了しました。  
+ から初期化が完了したことを CLR に通知するために、ホストによって呼び出される関数。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値だけでなく、WinError.h で定義されている標準の COM エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h で定義されている標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|1 つ以上の引数が null です。|  
+|E_INVALIDARG|1つ以上の引数が null です。|  
   
-## <a name="remarks"></a>Remarks  
- ホスト呼び出し`LockClrVersion`CLR を初期化する前にします。 `LockClrVersion` すべてがコールバック型の 3 つのパラメーターを受け取る[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)します。 この種類の定義は次のとおりです。  
+## <a name="remarks"></a>コメント  
+ CLR を初期化する前に、ホストがを呼び出し `LockClrVersion` ます。 `LockClrVersion`は、3つのパラメーターを受け取ります。これらはすべて[Flockclrversioncallback](flockclrversioncallback-function-pointer.md)型のコールバックです。 この型は次のように定義されています。  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- 次の手順は、ランタイムの初期化時に発生します。  
+ ランタイムの初期化時には、次の手順が実行されます。  
   
-1. ホスト呼び出し[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)またはその他のランタイム初期化関数の 1 つ。 または、ホストは、COM オブジェクトのアクティベーションを使用してランタイムを初期化する可能性があります。  
+1. ホストは[Corbindtoruntimeex](corbindtoruntimeex-function.md)またはその他のランタイム初期化関数のいずれかを呼び出します。 また、ホストは COM オブジェクトアクティベーションを使用してランタイムを初期化することもできます。  
   
-2. ランタイムがで指定された関数を呼び出す、`hostCallback`パラメーター。  
+2. ランタイムは、パラメーターによって指定された関数を呼び出し `hostCallback` ます。  
   
-3. 指定された関数`hostCallback`続いて、次の一連の呼び出し。  
+3. によって指定された関数は、 `hostCallback` 次の一連の呼び出しを行います。  
   
-    - 指定された関数、`pBeginHostSetup`パラメーター。  
+    - パラメーターによって指定された関数 `pBeginHostSetup` 。  
   
-    - `CorBindToRuntimeEx` (または別のランタイム初期化関数)。  
+    - `CorBindToRuntimeEx`(または別のランタイム初期化関数)。  
   
-    - [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)します。  
+    - [ICLRRuntimeHost:: SetHostControl](iclrruntimehost-sethostcontrol-method.md)。  
   
-    - [Iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)します。  
+    - [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md)。  
   
-    - 指定された関数、`pEndHostSetup`パラメーター。  
+    - パラメーターによって指定された関数 `pEndHostSetup` 。  
   
- すべての呼び出し`pBeginHostSetup`に`pEndHostSetup`1 つのスレッドまたはファイバーは、同じ論理スタックで発生する必要があります。 このスレッドは、対象スレッドと異なる場合が`hostCallback`が呼び出されます。  
+ からへのすべての呼び出しは、 `pBeginHostSetup` `pEndHostSetup` 同じ論理スタックを持つ1つのスレッドまたはファイバーに対して行われる必要があります。 このスレッドは、が呼び出されたときのスレッドとは異なる場合があり `hostCallback` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

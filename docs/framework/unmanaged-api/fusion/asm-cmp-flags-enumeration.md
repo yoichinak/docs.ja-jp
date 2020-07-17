@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778568"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178332"
 ---
-# <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS 列挙型
-バージョン、ビルド、カルチャ、署名、および比較する 2 つのアセンブリのことを示します、 [iassemblyname::isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)メソッド。  
+# <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS 列挙型
+[IAssemblyName::IsEqual](iassemblyname-isequal-method.md)メソッドによって比較される 2 つのアセンブリのバージョン、ビルド、カルチャ、シグネチャなどを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +35,10 @@ typedef enum {
     ASM_CMPF_BUILD_NUMBER           = 0x8,  
     ASM_CMPF_REVISION_NUMBER        = 0x10,  
   
-    ASM_CMPF_VERSION                =   
-                 ASM_CMPF_MAJOR_VERSION |   
-                 ASM_CMPF_MINOR_VERSION |   
-                 ASM_CMPF_BUILD_NUMBER  |   
+    ASM_CMPF_VERSION                =
+                 ASM_CMPF_MAJOR_VERSION |
+                 ASM_CMPF_MINOR_VERSION |
+                 ASM_CMPF_BUILD_NUMBER  |
                  ASM_CMPF_REVISION_NUMBER,  
   
     ASM_CMPF_PUBLIC_KEY_TOKEN       = 0x20,  
@@ -53,30 +51,30 @@ typedef enum {
     ASM_CMPF_MVID                   = 0x1000,  
     ASM_CMPF_SIGNATURE              = 0x2000,  
   
-    ASM_CMPF_IL_ALL                 =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_VERSION          |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_ALL                 =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_VERSION          |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE,  
   
-    ASM_CMPF_IL_NO_VERSION          =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_NO_VERSION          =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE  
   
 } ASM_CMP_FLAGS;  
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** フュージョン.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [fusion 列挙体](fusion-enumerations.md)

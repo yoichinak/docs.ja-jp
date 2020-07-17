@@ -5,16 +5,16 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: 7a18285e6eec8f4e71c1b0e8cb3a0ebdc4203939
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635256"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "69589254"
 ---
 # <a name="inside-a-c-program"></a>インサイド C# プログラム
 
-このセクションでは C# プログラムの一般的な構造について説明し、標準的な "Hello, World!" の 例を示します。
+このセクションでは C# プログラムの一般的な構造について説明し、標準的な "Hello, World!" の の例です。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -30,7 +30,7 @@ ms.locfileid: "65635256"
 
 - [C# の概要](../../getting-started/index.md)
 
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../index.md)
 
 - [C# リファレンス](../../language-reference/index.md)
 
@@ -40,6 +40,6 @@ ms.locfileid: "65635256"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../index.md)

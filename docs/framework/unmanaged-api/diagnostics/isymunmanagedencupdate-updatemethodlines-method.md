@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54789003f7454a65449e55ea4d990edd672d9c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a490299c24f44b59da682f714f4b696fde3cba5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774686"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614514"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines メソッド
-再コンパイルされていない、その行が個別に移動されたメソッドの行情報の更新を許可します。 各ステートメントのデルタが許可されます。  
+再コンパイルされていないが、行が個別に移動したメソッドの行情報を更新できるようにします。 各ステートメントのデルタが許可されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +36,20 @@ HRESULT UpdateMethodLines(
   
 ## <a name="parameters"></a>パラメーター  
  `mdMethodToken`  
- [in]メソッドのトークンのメタデータ。  
+ からメソッドトークンのメタデータ。  
   
  `pDeltas`  
- [in]配列の`INT32`メソッドでは、各シーケンス ポイントのデルタを示す値。  
+ から`INT32`メソッド内の各シーケンスポイントのデルタを示す値の配列。  
   
  `cDeltas`  
- [in]A`ULONG`のサイズを含む、`pDeltas`パラメーター。  
+ から`ULONG`パラメーターのサイズを格納している `pDeltas` 。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate インターフェイス](isymunmanagedencupdate-interface.md)

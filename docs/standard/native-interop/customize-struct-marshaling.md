@@ -1,18 +1,16 @@
 ---
 title: 構造体のマーシャリングのカスタマイズ - .NET
 description: .NET で構造体をネイティブ表現にマーシャリングする方法をカスタマイズする手順について説明します。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065985"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003894"
 ---
 # <a name="customizing-structure-marshaling"></a>構造体のマーシャリングのカスタマイズ
 
@@ -22,11 +20,11 @@ ms.locfileid: "65065985"
 
 .NET には <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 属性と <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 列挙型が用意されており、フィールドをメモリに配置する方法をカスタマイズできます。 次のガイダンスを使用すると、一般的な問題を回避できます。
 
-**✔️ 推奨**: 可能な限り `LayoutKind.Sequential` を使用するようにします。
+✔️ 推奨: 可能な限り `LayoutKind.Sequential` を使用するようにします。
 
-**✔️ 実行**: ネイティブ構造体に共用体などの明示的なレイアウトもある場合は、マーシャリング時に `LayoutKind.Explicit` のみを使用します。
+✔️ 実行: ネイティブ構造体に共用体などの明示的なレイアウトもある場合にのみ、マーシャリングで `LayoutKind.Explicit` を使用します。
 
-**❌ 回避**: Windows 以外のプラットフォームで構造体をマーシャリングするときに、`LayoutKind.Explicit` を使用しないようにします。 .NET Core ランタイムは、Intel または AMD 64 ビットの Windows 以外のシステム上でネイティブ関数への値による明示的な構造体の受け渡しをサポートしていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
+❌ 回避: .NET Core 3.0 より前のランタイムをターゲットにする必要がある場合、Windows 以外のプラットフォームで構造体をマーシャリングするときは `LayoutKind.Explicit` を使用しないでください。 3\.0 より前の .NET Core ランタイムは、Intel または AMD 64 ビットの Windows 以外のシステム上でネイティブ関数への値による明示的な構造体の受け渡しをサポートしていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
 
 ## <a name="customizing-boolean-field-marshaling"></a>ブール値フィールドのマーシャリングのカスタマイズ
 
@@ -319,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10 進数フィールドのマーシャリングのカスタマイズ
 
-Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
+Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
 
 ```csharp
 public struct Currency
@@ -339,7 +337,8 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>`System.Object` のマーシャリング
 
 Windows では、`object` 型のフィールドをネイティブ コードにマーシャリングできます。 このようなフィールドは、次の 3 つの型のいずれかにマーシャリングできます。
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

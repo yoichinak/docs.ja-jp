@@ -1,12 +1,12 @@
 ---
 title: 属性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668615"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241579"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "61668615"
 
 この例では、<xref:System.SerializableAttribute> 属性を使用してクラスに特性を適用します。
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 属性 <xref:System.Runtime.InteropServices.DllImportAttribute> を持つメソッドは次の例のように宣言されます。
 
@@ -33,15 +33,15 @@ ms.locfileid: "61668615"
 
 次の例のように、宣言には、複数の属性を配置できます。
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 特定のエンティティで複数回指定できる属性もあります。 このような複数回指定できる属性の例として <xref:System.Diagnostics.ConditionalAttribute> があります。
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> 慣例により、属性名はすべて "Attribute" という単語で終わります。これは、.NET ライブラリの他の項目と区別するためです。 ただし、コード内で属性を使用する場合は、attribute サフィックスを指定する必要はありません。 たとえば、`[DllImport]` は `[DllImportAttribute]` と同等ですが、.NET Framework クラス ライブラリでは `DllImportAttribute` は属性の実際の名前を表します。
+> 慣例により、属性名はすべて "Attribute" という単語で終わります。これは、.NET ライブラリの他の項目と区別するためです。 ただし、コード内で属性を使用する場合は、attribute サフィックスを指定する必要はありません。 たとえば、`[DllImport]` は `[DllImportAttribute]` と同等ですが、.NET クラス ライブラリでは `DllImportAttribute` は属性の実際の名前を表します。
 
 ### <a name="attribute-parameters"></a>属性のパラメーター
 
@@ -57,7 +57,7 @@ ms.locfileid: "61668615"
 
 ### <a name="attribute-targets"></a>属性の対象
 
-属性の*対象*は、属性が適用されるエンティティです。 たとえば、属性は、クラス、特定のメソッド、またはアセンブリ全体に適用できます。 既定では、属性は後に続く要素に適用されます。 ただし、明示的に指定すれば、メソッド、属性のパラメーター、属性の戻り値などにも適用できます。
+属性の*対象*は、属性が適用されるエンティティです。 たとえば、属性は、クラス、特定のメソッド、またはアセンブリ全体に適用できます。 既定では、属性はその後に続く要素に適用されます。 ただし、明示的に指定すれば、メソッド、属性のパラメーター、属性の戻り値などにも適用できます。
 
 属性の対象を明示的に識別するには、次の構文を使用します。
 
@@ -81,7 +81,7 @@ ms.locfileid: "61668615"
 
 対象の値 `field` を指定して、[auto-implemented プロパティ](../../../properties.md)に作成されたバッキング フィールドに属性を適用します。
 
-次の例では、アセンブリとモジュールに属性を適用する方法を示します。 詳細については、「[共通の属性 (C#)](common-attributes.md)」を参照してください。
+次の例では、アセンブリとモジュールに属性を適用する方法を示します。 詳細については、「[共通の属性 (C#)](../../../language-reference/attributes/global.md)」を参照してください。
 
 ```csharp
 using System;
@@ -95,7 +95,7 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> `ValidatedContract` が有効になるように定義されるターゲットが何であっても、`return` は指定する必要があります。これは、`ValidatedContract` が戻り値にのみ適用されるように定義されている場合でも必要です。 つまり、コンパイラは `AttributeUsage` 情報を使用して、あいまいな属性ターゲットを解決しません。 詳細については、「[AttributeUsage (C#)](attributeusage.md)」を参照してください。
+> `ValidatedContract` が有効になるように定義されるターゲットが何であっても、`return` は指定する必要があります。これは、`ValidatedContract` が戻り値にのみ適用されるように定義されている場合でも必要です。 つまり、コンパイラは `AttributeUsage` 情報を使用して、あいまいな属性ターゲットを解決しません。 詳細については、「[AttributeUsage (C#)](../../../language-reference/attributes/general.md)」を参照してください。
 
 ## <a name="common-uses-for-attributes"></a>属性の一般的な使用法
 
@@ -119,9 +119,9 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 
 - [カスタム属性の作成 (C#)](creating-custom-attributes.md)  
 - [リフレクションを使用した属性へのアクセス (C#)](accessing-attributes-by-using-reflection.md)  
-- [方法: 属性を使用して C/C++ の共用体を作成する (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [共通属性 (C#)](common-attributes.md)  
-- [呼び出し元情報 (C#)](../caller-information.md)  
+- [属性を使用して C/C++ の共用体を作成する方法 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [共通属性 (C#)](../../../language-reference/attributes/global.md)  
+- [呼び出し元情報 (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>関連項目
 

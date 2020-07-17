@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e7e060d2f72609b470dbd5060746a1458f5eed9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503505"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken メソッド
 指定したトークンが表すタイプ仕様のバイナリ メタデータ シグネチャを取得します。  
@@ -30,36 +28,36 @@ ms.locfileid: "67782308"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetTypeSpecFromToken (   
-   [in]  mdTypeSpec            typespec,   
-   [out] PCCOR_SIGNATURE       *ppvSig,   
+HRESULT GetTypeSpecFromToken (
+   [in]  mdTypeSpec            typespec,
+   [out] PCCOR_SIGNATURE       *ppvSig,
    [out] ULONG                 *pcbSig  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `typespec`  
- [in]要求されたメタデータ署名に関連付けられている TypeSpec トークンです。  
+ から要求されたメタデータ署名に関連付けられている TypeSpec トークン。  
   
  `ppvSig`  
- [out]バイナリ メタデータ シグネチャへのポインター。  
+ 入出力バイナリメタデータシグネチャへのポインター。  
   
  `pcbSig`  
- [out]メタデータのシグネチャのバイト単位のサイズ。  
+ 入出力メタデータシグネチャのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- 成功または失敗を示す HRESULT。 FAILED マクロでは、エラーをテストできます。  
+ 成功または失敗を示す HRESULT。 失敗したマクロを使用してエラーをテストできます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

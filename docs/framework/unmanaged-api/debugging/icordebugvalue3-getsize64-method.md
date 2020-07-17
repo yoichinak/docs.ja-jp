@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fee56a29-3154-4192-958d-71da2ced3740
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96e63d121bb64fd1aa6433881f7806b5c4058115
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6eb26de83a6cdce47477e6cb3dffd6a94d889975
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774005"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397025"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>ICorDebugValue3::GetSize64 メソッド
-これのバイト単位のサイズを取得します。 [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)オブジェクト。  
+この[ICorDebugValue3](icordebugvalue3-interface.md)オブジェクトのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +35,23 @@ HRESULT GetSize64(
   
 ## <a name="parameters"></a>パラメーター  
  pSize  
- [out]このオブジェクトのバイト単位のサイズへのポインター。  
+ 入出力このオブジェクトのサイズ (バイト単位) へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- この値の型が参照型の場合は、このメソッドは、オブジェクトのサイズではなく、ポインターのサイズを返します。  
+## <a name="remarks"></a>解説  
+ この値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   
- `ICorDebugValue3::GetSize`メソッドとは異なります、 [icordebugvalue::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)出力パラメーターの型のメソッド。 [Icordebugvalue::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)、出力パラメーターが、 `ULONG32`;`ICorDebugValue3::GetSize`は、`ULONG64`です。 これにより、 [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) 2 GB を超える配列のサイズを報告するインターフェイス。  
+ メソッドは、 `ICorDebugValue3::GetSize` その出力パラメーターの型の[ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md)メソッドとは異なります。 [ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md)では、出力パラメーターはです。では、は `ULONG32` `ICorDebugValue3::GetSize` `ULONG64` です。 これにより、 [ICorDebugValue3](icordebugvalue3-interface.md)インターフェイスは、2gb を超える配列のサイズを報告できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugValue3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugValue3 インターフェイス](icordebugvalue3-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

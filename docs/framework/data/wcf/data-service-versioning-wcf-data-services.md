@@ -6,15 +6,15 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: MT
+ms.openlocfilehash: f82ab4c98e724bbed658a6c77de9c5a5d5c3390f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959493"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121535"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>データ サービスのバージョン管理 (WCF Data Services)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]クライアントは、Uri を使用してデータ モデルに基づくリソースとしてデータをアクセスできるように、データ サービスを作成することができます。 OData では、サービス操作の定義もサポートしています。 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、これらのデータ サービスを変更することが必要になる場合があります。 既存のデータ サービスに変更を加える場合は、新しいバージョンのデータ サービスを定義する必要性や、既存のクライアント アプリケーションへの影響を最小限に抑える最善の方法を検討する必要があります。 ここでは、新しいバージョンのデータ サービスをいつどのように作成するかに関するガイダンスを示します。 また、WCF Data Services がクライアントと、OData プロトコルの異なるバージョンをサポートするデータ サービスの間の交換を処理する方法についても説明します。
+Open Data Protocol (OData) では、データ サービスを作成できます。これにより、クライアントは、データ モデルに基づく URI を使用してリソースとしてのデータにアクセスできます。 OData では、サービス操作の定義もサポートされます。 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、これらのデータ サービスを変更することが必要になる場合があります。 既存のデータ サービスに変更を加える場合は、新しいバージョンのデータ サービスを定義する必要性や、既存のクライアント アプリケーションへの影響を最小限に抑える最善の方法を検討する必要があります。 ここでは、新しいバージョンのデータ サービスをいつどのように作成するかに関するガイダンスを示します。 さらに、WCF Data Services によって OData プロトコルの異なるバージョンをサポートするクライアントとデータ サービスの間の交換をどのように処理するかについても説明します。
 
 ## <a name="versioning-a-wcf-data-service"></a>WCF Data Service のバージョン管理
  データ サービスが配置され、データが使用されている状況では、データ サービスに変更を加えることで、既存のクライアント アプリケーションとの間に互換性の問題が発生する可能性があります。 ただし、サービスの全体的なビジネス ニーズを受けて変更が求められることも多いため、クライアント アプリケーションへの影響を最小限に抑えながらデータ サービスの新しいバージョンをいつどのように作成するかを検討する必要があります。
@@ -30,16 +30,16 @@ ms.locfileid: "65959493"
 
 |変更の種類|新しいバージョンが必要|新しいバージョンは不要|
 |--------------------|----------------------------|----------------------------|
-|サービス操作|-新しいパラメーターを追加します。<br />戻り値の型の変更<br />-サービスの操作を削除します。|-既存のパラメーターを削除します。<br />-新しいサービス操作を追加します。|
-|サービスの動作|-カウント要求を無効にします。<br />-投影のサポートを無効にします。<br />-必要なデータ サービスのバージョンを増やす|-カウント要求を有効にします。<br />-投影のサポートを有効にします。<br />-必要なデータ サービスのバージョンを小さきます。|
-|エンティティ セットのアクセス許可|-エンティティ セットのアクセス許可を制限します。<br />-応答コードを変更する (新しい最初の桁の値) <sup>1</sup>|-エンティティ セットのアクセス許可を緩和します。<br />-応答コードを変更する (同じ最初の桁の値)|
-|エンティティのプロパティ|-既存のプロパティまたはリレーションシップを削除します。<br />-Null 非許容のプロパティを追加します。<br />-既存のプロパティを変更します。|-Null 許容のプロパティを追加する<sup>2</sup>|
-|エンティティ セット|-エンティティ セットを削除します。|派生型を追加します。<br />-基本型を変更します。<br />エンティティ セットを追加します。|
-|フィードのカスタマイズ|-エンティティ プロパティのマッピングを変更します。||
+|サービス操作|-   新しいパラメーターを追加する<br />-   戻り値の型を変更する<br />-   サービス操作を削除する|-   既存のパラメーターを削除する<br />-   新しいサービス操作を追加する|
+|サービスの動作|-   カウント要求を無効にする<br />-   投影のサポートを無効にする<br />-   必要なデータ サービスのバージョンを引き上げる|-   カウント要求を有効にする<br />-   投影のサポートを有効にする<br />-   必要なデータ サービスのバージョンを引き下げる|
+|エンティティ セットのアクセス許可|-   エンティティ セットのアクセス許可を制限する<br />-   応答コードを変更する (新しい最初の桁の値) <sup>1</sup>|-   エンティティ セットのアクセス許可の制限を解除する<br />-   応答コードを変更する (同じ最初の桁の値)|
+|エンティティのプロパティ|-   既存のプロパティまたはリレーションシップを削除する<br />-   null 非許容のプロパティを追加する<br />-   既存のプロパティを変更する|-   null 許容のプロパティを追加する<sup>2</sup>|
+|エンティティ セット|-   エンティティ セットを削除する|-   派生型を追加する<br />-   基本データ型を変更する<br />-   エンティティ セットを追加する|
+|フィードのカスタマイズ|-   エンティティ プロパティのマッピングを変更する||
 
- <sup>1</sup>よって固有のエラー コードを受信するクライアント アプリケーションがどの程度厳密に依存します。
+ <sup>1</sup> 特定のエラー コードを受信することにクライアント アプリケーションがどの程度厳密に依存しているかによって異なります。
 
- <sup>2</sup>を設定することができます、<xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>プロパティを`true`クライアントがクライアントで定義されていないデータ サービスによって送信された新しいプロパティを無視します。 ただし、挿入の場合、クライアントによって POST 要求に含められていないプロパティは既定値に設定されます。 更新の場合、クライアントが識別できないプロパティ内の既存のデータは、既定値で上書きされます。 この場合は、更新を MERGE 要求として送信する必要があります (これは既定の動作です)。 詳細については、次を参照してください。[データ サービス コンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)します。
+ <sup>2</sup> <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> プロパティを `true` に設定すると、クライアントでは、データ サービスによって送信された、クライアント上で定義されていない新しいプロパティが無視されます。 ただし、挿入の場合、クライアントによって POST 要求に含められていないプロパティは既定値に設定されます。 更新の場合、クライアントが識別できないプロパティ内の既存のデータは、既定値で上書きされます。 この場合は、更新を MERGE 要求として送信する必要があります (これは既定の動作です)。 詳細については、「[データ サービス コンテキストの管理](managing-the-data-service-context-wcf-data-services.md)」を参照してください。
 
 ### <a name="how-to-version-a-data-service"></a>データ サービスのバージョンの管理
  必要に応じて、サービス コントラクトまたはデータ モデルが更新されたサービスの新しいインスタンスを作成して、データ サービスの新しいバージョンを定義します。 次に、この新しいサービスを、以前のバージョンと区別する新しい URI エンドポイントを使用して公開します。 次に例を示します。
@@ -51,29 +51,28 @@ ms.locfileid: "65959493"
  データ サービスをアップグレードした場合、新しいルート URI を使用するには、新しいデータ サービス メタデータに基づいてクライアントも更新する必要があります。 可能な場合は、新しいバージョンを使用するためのアップグレードが行われていないクライアントをサポートするために、データ サービスの以前のバージョンを保持してください。 データ サービスの古いバージョンは、必要でなくなった時点で削除できます。 データ サービスのエンドポイント URI を外部の構成ファイルに保持することを検討する必要があります。
 
 ## <a name="odata-protocol-versions"></a>OData プロトコルのバージョン
- OData の新しいバージョンがリリースされるは、クライアント アプリケーションが同じバージョンのデータ サービスによってサポートされている OData プロトコルを使用していない可能性があります。 以前のバージョンのクライアント アプリケーションは、OData の新しいバージョンをサポートするデータ サービスにアクセスできます。 クライアント アプリケーションは、新しいバージョンにアクセスしているデータ サービスよりも新しいバージョンの OData をサポートする WCF Data Services クライアント ライブラリの使用可能性があります。
+ OData の新しいバージョンがリリースされると、データ サービスでサポートされている OData プロトコルの同バージョンがクライアント アプリケーションで使用されていない可能性がでてきます。 OData の新しいバージョンをサポートするデータ サービスにアクセスできる古いクライアント アプリケーションもあります。 また、アクセス先のデータ サービスよりも新しいバージョンの OData をサポートする、新しいバージョンの WCF Data Services クライアント ライブラリを使用しているクライアント アプリケーションもあります。
 
- WCF Data Services では、このようなバージョン管理シナリオを処理する OData で提供されるサポートを利用します。 生成と、クライアントが OData のデータとは異なるバージョンを使用する場合、クライアント データ サービス クラスを作成するデータ モデルのメタデータの使用はサポートされてもサービスが使用されます。 詳細については、次を参照してください[OData:。プロトコルのバージョン管理](https://go.microsoft.com/fwlink/?LinkId=186071)します。
+ WCF Data Services では、これらのバージョン管理シナリオを処理するために OData で提供されるサポートを利用しています。 さらに、データ サービスで使用される OData のバージョンとは異なるバージョンがクライアントで指定されている場合に、データ モデル メタデータを生成および使用してクライアント データ サービス クラスを作成するためのサポートも備えられています。 詳細については、[OData: 概要](https://www.odata.org/documentation/odata-version-2-0/overview/)に関する記事のプロトコルのバージョン管理のセクションを参照してください。
 
 ### <a name="version-negotiation"></a>バージョンのネゴシエーション
- クライアントによって要求されたバージョンに関係なく、サービスによって使用される OData プロトコルの最高バージョンを定義するデータ サービスを構成できます。 指定することでこれを行う、<xref:System.Data.Services.Common.DataServiceProtocolVersion>値、<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>のプロパティ、<xref:System.Data.Services.DataServiceBehavior>データ サービスで使用します。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。
+ クライアントによって要求されるバージョンにかかわらず、サービスによって使用される OData プロトコルの最高バージョンを定義するようにデータ サービスを構成できます。 そのためには、データ サービスで使用される <xref:System.Data.Services.DataServiceBehavior> の <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> プロパティに <xref:System.Data.Services.Common.DataServiceProtocolVersion> の値を指定します。 詳細については、「[データ サービスの構成](configuring-the-data-service-wcf-data-services.md)」を参照してください。
 
- アプリケーションでは、データ サービスにアクセスする、WCF Data Services クライアント ライブラリを使用するときに、ライブラリはこれらのヘッダーを自動的に OData と、アプリケーションで使用されている機能のバージョンに応じて、適切な値に設定します。 既定では、WCF Data Services は、要求された操作をサポートする最も低いプロトコル バーションを使用します。
+ アプリケーションで WCF Data Services クライアント ライブラリを使用してデータ サービスにアクセスする場合、アプリケーション内で使用している OData のバージョンと機能により、ライブラリではこれらのヘッダーに正しい値が自動的に指定されます。 既定では、WCF Data Services では要求された操作をサポートする最も低いプロトコル バーションが使用されます。
 
- 次の表 OData プロトコルの特定のバージョンの WCF Data Services を含むバージョンの .NET Framework と Silverlight をサポートします。
+ 次の表に、OData プロトコルの特定のバージョンに対する WCF Data Services のサポートが用意されている .NET Framework および Silverlight のバージョンの詳細を示します。
 
 |OData プロトコルのバージョン|サポートが用意されているバージョン|
 |-----------------------------------------------------------------------------------|----------------------------|
-|バージョン 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />Silverlight バージョン 3|
-|バージョン 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-更新プログラムを[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]SP1。 ダウンロードしてから、更新プログラムをインストールすることができます、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=158125)します。<br />Silverlight version 4|
-|バージョン 3|-ダウンロードしてから OData バージョン 3 をサポートするプレリリース バージョンをインストール、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=203885)します。|
+|バージョン 1|- .NET Framework 3.5 Service Pack 1 (SP1)<br />- Silverlight バージョン 3|
+|バージョン 2|- .NET Framework 4<br />- Silverlight バージョン 4|
 
 ### <a name="metadata-versions"></a>メタデータのバージョン
- 既定では、WCF Data Services は、CSDL のバージョン 1.1 を使用して、データ モデルを表します。 リフレクション プロバイダーまたはカスタム データ サービス プロバイダーに基づくデータ モデルの場合は、常にこの CSDL バージョンが使用されます。 ただし、[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] を使用してデータ モデルを定義している場合は、返される CSDL のバージョンは [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] で使用されるバージョンと同じになります。 CSDL のバージョンの名前空間が続く、 [Schema 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)します。
+ 既定では、WCF Data Services ではデータ モデルを表すために CSDL のバージョン 1.1 が使用されます。 リフレクション プロバイダーまたはカスタム データ サービス プロバイダーに基づくデータ モデルの場合は、常にこの CSDL バージョンが使用されます。 ただし、Entity Framework を使用してデータ モデルを定義している場合は、返される CSDL のバージョンは Entity Framework で使用されるバージョンと同じになります。 CSDL のバージョンは、[スキーマ要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl) の名前空間によって決定されます。
 
- 返されたメタデータの `DataServices` 要素には `DataServiceVersion` 属性も含まれます。この属性は、応答メッセージの `DataServiceVersion` ヘッダーの値と同じです。 クライアント アプリケーションなど、**サービス参照の追加** ダイアログ ボックス Visual Studio は、この情報を使用してデータ サービスをホストする WCF Data Services のバージョンと正しく連動するクライアント データ サービス クラスを生成します。 詳細については、次を参照してください[OData:。プロトコルのバージョン管理](https://go.microsoft.com/fwlink/?LinkId=186071)します。
+ 返されたメタデータの `DataServices` 要素には `DataServiceVersion` 属性も含まれます。この属性は、応答メッセージの `DataServiceVersion` ヘッダーの値と同じです。 Visual Studio の **[サービス参照の追加]** ダイアログ ボックスなどのクライアント アプリケーションでは、この情報を使用して、データ サービスをホストする WCF Data Services のバージョンと正しく連動するクライアント データ サービス クラスが生成されます。 詳細については、[OData: 概要](https://www.odata.org/documentation/odata-version-2-0/overview/)に関する記事のプロトコルのバージョン管理のセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [Data Services プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Data Services プロバイダー](data-services-providers-wcf-data-services.md)
+- [WCF Data Services の定義](defining-wcf-data-services.md)

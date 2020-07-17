@@ -1,6 +1,5 @@
 ---
 title: is - C# リファレンス
-ms.custom: seodec18
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306592"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398305"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
-`is` 演算子では、式の結果と指定された型との間に互換性があるかどうかが確認されるか、または (C# 7.0 以降では) パターンに対して式がテストされます。 型テストの `is` 演算子については、「[型テストおよび変換演算子](../operators/type-testing-and-conversion-operators.md)」記事の「[is 演算子](../operators/type-testing-and-conversion-operators.md#is-operator)」セクションをご覧ください。
+`is` 演算子では、式の結果と指定された型との間に互換性があるかどうかが確認されるか、または (C# 7.0 以降では) パターンに対して式がテストされます。 型テストの `is` 演算子について詳しくは、[型テストとキャスト演算子](../operators/type-testing-and-cast.md)に関する記事の「[is 演算子](../operators/type-testing-and-cast.md#is-operator)」セクションをご覧ください。
 
 ## <a name="pattern-matching-with-is"></a>`is` を使用したパターン マッチング
 
@@ -37,7 +36,7 @@ C# 7.0 以降では、`is` および [switch](switch.md) ステートメント�
    expr is type varname
 ```
 
-ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。 
+ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。
 
 *expr* が `null` ではなく、以下のいずれかの条件が true である場合に `is` 式は `true` となります。
 
@@ -107,15 +106,21 @@ C#7.1 以降、*expr* はジェネリック型パラメーターとその制約�
 
 ### <a name="var-pattern"></a>var パターン
 
-`var` パターンは、すべての型または値に対応します。 *expr* の値は、常に *expr* のコンパイル時の型と同じ型のローカル変数に割り当てられます。 `is` 式の結果は常に `true` です。 構文は次のとおりです。
+`var` パターンによるパターン マッチは常に成功します。 構文は次のとおりです。
 
 ```csharp
    expr is var varname
 ```
 
-次の例では、var パターンを使用して式を `obj` という変数に代入しています。 その後、`obj` の値と型が表示されます。
+ここで *expr* の値は常に *varname* というローカル変数に代入されます。 *varname* は、*expr* のコンパイル時の型と同じ型の変数です。
+
+*expr* が `null` に評価された場合、`is` 式の結果 `true`が生成され、`null` が *varname* に割り当てられます。 var パターンは、`null` 値に対して `true` が生成される `is` の数少ない使用法の 1 つです。
+
+次の例に示すように、`var` パターンを使用してブール式内に一時変数を作成できます。
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+前の例では、コストが高い操作の結果を格納するために一時変数を使用しています。 変数は、複数回使用できます。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
   
@@ -128,4 +133,4 @@ C#7.1 以降、*expr* はジェネリック型パラメーターとその制約�
 
 - [C# リファレンス](../index.md)
 - [C# キーワード](index.md)
-- [型テストおよび変換演算子](../operators/type-testing-and-conversion-operators.md)
+- [型テストとキャスト演算子](../operators/type-testing-and-cast.md)

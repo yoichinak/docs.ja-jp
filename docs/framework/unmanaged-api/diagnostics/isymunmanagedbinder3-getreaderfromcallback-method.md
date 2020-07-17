@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ed0097e072b34dd43876ddf23abbc1f513670ff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776822"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441657"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback メソッド
-実装またはコールバックを使用していずれかを指定できます、`IID_IDiaReadExeAtRVACallback`または`IID_IDiaReadExeAtOffsetCallback`をメモリからデバッグ ディレクトリ情報を取得します。  
+`IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` メモリからデバッグディレクトリ情報を取得するために、ユーザーがまたはのいずれかを使用してを実装または提供できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,29 +39,29 @@ HRESULT GetReaderFromCallback(
   
 ## <a name="parameters"></a>パラメーター  
  `importer`  
- [in]メタデータ インポート インターフェイスへのポインター。  
+ からメタデータインポートインターフェイスへのポインター。  
   
  `fileName`  
- [in]ファイル名へのポインター。  
+ からファイル名へのポインター。  
   
  `searchPath`  
- [in]検索パスへのポインター。  
+ から検索パスへのポインター。  
   
  `searchPolicy`  
- [in]値、 [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)シンボル リーダーの検索を行うときに使用されるポリシーを指定する列挙体。  
+ からシンボルリーダーの検索を実行するときに使用するポリシーを指定する[Corsymsearchpolicyattributes](corsymsearchpolicyattributes-enumeration.md)列挙体の値。  
   
  `callback`  
- [in]コールバック関数へのポインター。  
+ からコールバック関数へのポインター。  
   
  `pRetVal`  
- [out]設定されているポインターに返された[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)インターフェイス。  
+ 入出力返された[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスに設定されたポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedBinder3 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [ISymUnmanagedBinder3 インターフェイス](isymunmanagedbinder3-interface.md)

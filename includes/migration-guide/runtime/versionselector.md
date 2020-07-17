@@ -1,12 +1,13 @@
 ---
-ms.openlocfilehash: ae81904cb5def0932c00a15505f8c43f8a97783d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 45107e0754d6b13c92146201a97b2dd08d840df7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65199202"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "70927119"
 ---
-> [!div class="op_multi_selector" title1="From .NET Framework Version" title2="To .NET Framework Version"]
+> [!div class="op_multi_selector" title1=".NET Framework のバージョン下限" title2=".NET Framework のバージョン上限"]
+>
 > - [(4.0 | 4.5)](~/docs/framework/migration-guide/runtime/4.0-4.5.md)
 > - [(4.0 | 4.5.1)](~/docs/framework/migration-guide/runtime/4.0-4.5.1.md)
 > - [(4.0 | 4.5.2)](~/docs/framework/migration-guide/runtime/4.0-4.5.2.md)

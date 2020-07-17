@@ -7,32 +7,32 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b06df97dc57c58a01f30be2d70bfeebf104521ad
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008786"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451786"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>方法: "From"、"To"、および "By" を使用してアニメーションを制御する
-"から/に/By"または「基本アニメーション」が 2 つのターゲット値の間の遷移を作成します (を参照してください[アニメーションの概要](animation-overview.md)さまざまな種類のアニメーションの概要について)。 基本的なアニメーションのターゲット値を設定する次のように使用します。 その<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。  次の表にまとめたものですが、どのように<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティを同時に使用することや、個別に、アニメーションのターゲットを決定する値します。  
+"From/To/By" または "基本アニメーション" では、2 つのターゲット値の間の遷移が作成されます (さまざまな種類のアニメーションの概要については、「[アニメーションの概要](animation-overview.md)」をご覧ください)。 基本アニメーションのターゲット値を設定するには、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> の各プロパティを使用します。  次の表は、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> の各プロパティを組み合わせて使用するか、個別に使用して、アニメーションのターゲット値を決定する方法をまとめたものです。  
   
 |指定するプロパティ|結果として生じる動作|  
 |--------------------------|------------------------|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティをアニメーション化されているプロパティの基本値または前のアニメーションの前のアニメーションの構成方法に応じて、値を出力します。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> および <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティによって指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> および <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティの合計によって指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|アニメーションがアニメーション化されたプロパティの基本値から、または前のアニメーションの出力値を指定する値を<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|出力値で指定された値の合計に値をアニメーション化されているプロパティの基準値からアニメーション、または前のアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|アニメーションは、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> プロパティで指定した値から、アニメーション化対象のプロパティの基本値または前のアニメーションの出力値 (前のアニメーションの構成によります) まで進行します。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> および <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|アニメーションは、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> プロパティで指定した値から <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> プロパティで指定した値まで進行します。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> および <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|アニメーションは、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> プロパティで指定した値から、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> プロパティと <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> プロパティの合計で指定した値まで進行します。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|アニメーションは、アニメーション化対象のプロパティの基本値または前のアニメーションの出力値から、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> プロパティで指定した値まで進行します。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|アニメーションは、アニメーション化対象のプロパティの基本値または前のアニメーションの出力値から、その値と <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> プロパティで指定した値の合計まで進行します。|  
   
 > [!NOTE]
->  両方を設定しないでください、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティおよび<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>同じアニメーションのプロパティ。  
+> 同じアニメーションで <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> プロパティと <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> プロパティの両方を設定しないでください。  
   
- 他の補間方式を使用したり、3 つ以上のターゲット値の間でアニメーション化したりするには、キー フレーム アニメーションを使用します。 参照してください[キー フレーム アニメーションの概要](key-frame-animations-overview.md)詳細についてはします。  
+ 他の補間方式を使用したり、3 つ以上のターゲット値の間でアニメーション化したりするには、キー フレーム アニメーションを使用します。 詳細については、「[キー フレーム アニメーションの概要](key-frame-animations-overview.md)」をご覧ください。  
   
- 1 つのプロパティに複数のアニメーションを適用する方法の詳細については、次を参照してください。[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。  
+ 複数のアニメーションを 1 つのプロパティに適用する方法については、「[キー フレーム アニメーションの概要](key-frame-animations-overview.md)」をご覧ください。  
   
- 次の例は、さまざまな設定の効果を示しています。 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>アニメーションのプロパティ。  
+ 次の例は、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> の各プロパティを設定したときのアニメーションへのさまざまな効果を示しています。  
   
 ## <a name="example"></a>例  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
@@ -41,4 +41,4 @@ ms.locfileid: "62008786"
 
 - [アニメーションの概要](animation-overview.md)
 - [キー フレーム アニメーションの概要](key-frame-animations-overview.md)
-- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)

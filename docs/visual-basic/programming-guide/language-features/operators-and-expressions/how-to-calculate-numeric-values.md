@@ -1,5 +1,5 @@
 ---
-title: '方法: 数値 (Visual Basic) を計算します。'
+title: '方法: 数値を計算する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 3e367a10a3e703241c7417d3ea17068018becb5a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649728"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403460"
 ---
-# <a name="how-to-calculate-numeric-values-visual-basic"></a>方法: 数値 (Visual Basic) を計算します。
-数値式を使用して数値を計算することができます。 A*数値式*リテラル、定数、および数値の値を表す変数を含む式とそれらの値に対して作用する演算子です。  
+# <a name="how-to-calculate-numeric-values-visual-basic"></a>方法: 数値を計算する (Visual Basic)
+数式を使用して数値を計算できます。 *数式*は、数値を表すリテラル、定数、変数、およびそれらの値に対して作用する演算子を含む式です。  
   
 ## <a name="calculating-numeric-values"></a>数値の計算  
   
-#### <a name="to-calculate-a-numeric-value"></a>数値の値を計算するには  
+#### <a name="to-calculate-a-numeric-value"></a>数値を計算するには  
   
-- 数値式に 1 つまたは複数の数値リテラル、定数、および変数を結合します。 次の例は、いくつかの有効な数値式です。  
+- 1 つ以上の数値リテラル、定数、および変数を数式に組み合わせます。 次の例に、有効な数式をいくつか示します。  
   
      `93.217`  
   
@@ -35,38 +35,38 @@ ms.locfileid: "64649728"
   
      `4 * (67 + i)`  
   
-     最初の 3 つの行では、リテラル、定数、および変数を示します。 各 1 つは、単独で有効な数値式を形成します。 最後の行は、2 つのリテラルと変数の組み合わせを示しています。  
+     最初の 3 行は、リテラル、定数、および変数を示しています。 それぞれがそれだけで有効な数式を形成しています。 最後の行は、2 つのリテラルを含む変数の組み合わせを示しています。  
   
-     数値式を単独で、完全な Visual Basic ステートメントが形成されていませんことに注意してください。 式は、完全なステートメントの一部として使用する必要があります。  
+     数式では、それだけで完全な Visual Basic ステートメントを形成するわけではないことに注意してください。 式は、完全なステートメントの一部として使用する必要があります。  
   
-#### <a name="to-store-a-numeric-value"></a>数値の値を格納するには  
+#### <a name="to-store-a-numeric-value"></a>数値を格納するには  
   
-- 代入ステートメントを使用して、次の例に示すように、変数に数値式で表される値を割り当てることができます。  
+- 次の例に示すように、代入ステートメントを使用して、数式で表される値を変数に代入することができます。  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     前の例では、等値演算子の右側にある式の値 (`=`) 変数に割り当てられている`j`、演算子の左側にあるため、 `j` 276 に評価されます。  
+     前の例では、等号演算子 (`=`) の右側にある式の値が、演算子の左側にある変数 `j` に代入されているため、`j` は 276 に評価されます。  
   
-     詳細については、「[ステートメント](../../../../visual-basic/language-reference/statements/index.md)」を参照してください。  
+     詳細については、「[ステートメント](../../../language-reference/statements/index.md)」を参照してください。  
   
 ## <a name="multiple-operators"></a>複数の演算子  
- 数値式には、複数の演算子が含まれている場合、演算子の優先順位のルールで評価される順序が決まります。 演算子の優先順位のルールを無効にするには、; 上記の例のように、かっこで囲まれた式を囲みます。囲まれた式は、最初に評価されます。  
+ 数式に複数の演算子が含まれている場合、それらが評価される順序は、演算子の優先順位のルールによって決まります。 演算子の優先順位のルールをオーバーライドするには、上の例のように、式をかっこで囲みます。囲まれた式は、最初に評価されます。  
   
-#### <a name="to-override-normal-operator-precedence"></a>標準の演算子の優先順位をオーバーライドするには  
+#### <a name="to-override-normal-operator-precedence"></a>通常の演算子の優先順位をオーバーライドするには  
   
-- かっこを使用して、先に実行する操作を囲みます。 次の例では、オペランドと演算子が同じで、2 つの異なる結果を示します。  
+- かっこを使用して、最初に実行させる演算を囲みます。 次の例は、同じオペランドと演算子による 2 つの異なる結果を示しています。  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     前の例では、計算で`j`加算演算子を実行します (`+`) 最初ので、かっこで囲んで`(67 + i)`通常の優先順位とに割り当てられた値をオーバーライド`j`276 (4 回 69) は、します。 計算`k`、通常の優先順位の演算子を実行します (`*`する前に`+`) とに割り当てられた値`k`270 (268 および 2)。  
+     前の例では、`j` の計算で加算演算子 (`+`) が最初に実行されます。これは、`(67 + i)` を囲むかっこによって、通常の優先順位がオーバーライドされるためであり、`j` に代入される値は 276 (69 の 4 倍) になります。 `k` の計算では、通常の優先順位 (`+` の前に `*`) で演算子が実行されるので、`k` に代入される値は 270 (268 + 2) になります。  
   
-     詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
+     詳細については、「[Visual Basic における演算子の優先順位](../../../language-reference/operators/operator-precedence.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [演算子および式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [ステートメント](../../../../visual-basic/language-reference/statements/index.md)
-- [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [算術演算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [演算子の効率のよい組み合わせ](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [演算子および式](index.md)
+- [値の比較](value-comparisons.md)
+- [ステートメント](../../../language-reference/statements/index.md)
+- [Visual Basic における演算子の優先順位](../../../language-reference/operators/operator-precedence.md)
+- [算術演算子](../../../language-reference/operators/arithmetic-operators.md)
+- [演算子の効率のよい組み合わせ](efficient-combination-of-operators.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c7211fc2523b70313a1e4d4d9d2da0dcecd1d32
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776376"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009432"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 構造体
-そのバージョンとそのロケール、プロセッサ、およびオペレーティング システムのサポートのレベルを含む、参照先アセンブリに関する情報が含まれています。  
+バージョン、ロケール、プロセッサ、オペレーティングシステムのサポートレベルなど、参照されるアセンブリに関する情報を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,28 +45,28 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`usMajorVersion`|参照アセンブリのメジャー バージョン番号。 この値は、0 にすることはできません。 場合のすべてのビット`usMajorVersion`メジャー バージョンが指定されていない、設定されます。|  
-|`usMinorVersion`|参照アセンブリのマイナー バージョン番号。 この値は、0 にすることはできません。 場合のすべてのビット`usMinorVersion`マイナー バージョンが指定されていない、設定されます。|  
-|`usBuildNumber`|参照アセンブリのビルド番号。 この値は、0 にすることはできません。 場合のすべてのビット`usBuildNumber`は設定されて、ビルド番号が指定されていません。|  
-|`usRevisionNumber`|参照アセンブリのリビジョン番号。 この値は、0 にすることはできません。 場合のすべてのビット`usRevisionNumber`は設定されて、リビジョン番号が指定されていません。|  
-|`szLocale`|参照先アセンブリによってサポートされるロケールを指定する、セミコロンで区切られた、RFC1766 仕様に準拠しているロケール名の一覧。 Null 値には、ロケールに依存しないことを示します。 **注:** .NET framework バージョン 1.0 は、複数のロケールを指定することはできません。|  
-|`cbLocale`|ワイド文字単位サイズ`szLocale`します。|  
-|`rdwProcessor`|参照アセンブリでサポートされているプロセッサの種類について、Winnt.h で定義されている、識別子の配列。 NULL 値では、プロセッサの独立性を示します。|  
-|`ulProcessor`|長さ、`rdwProcessor`配列。|  
-|`rOS`|配列の[OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)参照アセンブリでサポートされているオペレーティング システムを指定するインスタンス。 NULL 値には、オペレーティング システムに依存しないことを示します。|  
-|`ulOS`|長さ、`rOS`配列。|  
+|`usMajorVersion`|参照アセンブリのメジャーバージョン番号。 この値を0にすることはできません。 のすべてのビットが設定されている場合は、 `usMajorVersion` メジャーバージョンが指定されていません。|  
+|`usMinorVersion`|参照アセンブリのマイナーバージョン番号。 この値を0にすることはできません。 のすべてのビットが設定されている場合は、 `usMinorVersion` マイナーバージョンが指定されていません。|  
+|`usBuildNumber`|参照アセンブリのビルド番号。 この値を0にすることはできません。 のすべてのビットが設定されている場合は、 `usBuildNumber` ビルド番号が指定されていません。|  
+|`usRevisionNumber`|参照アセンブリのリビジョン番号。 この値を0にすることはできません。 のすべてのビットが設定されている場合は、 `usRevisionNumber` リビジョン番号が指定されていません。|  
+|`szLocale`|RFC1766 仕様に準拠しているロケール名のリスト。セミコロンで区切られ、参照アセンブリによってサポートされるロケールを指定します。 Null 値は、ロケールに依存しないことを示します。 **注:** .NET Framework バージョン1.0 では、複数のロケールを指定することはできません。|  
+|`cbLocale`|のワイド文字のサイズ `szLocale` 。|  
+|`rdwProcessor`|参照アセンブリでサポートされているプロセッサの種類について、Winnt.h で定義されている識別子の配列。 NULL 値は、プロセッサに依存しないことを示します。|  
+|`ulProcessor`|`rdwProcessor` 配列の長さ。|  
+|`rOS`|参照アセンブリによってサポートされているオペレーティングシステムを指定する[Osinfo](osinfo-structure.md)インスタンスの配列。 NULL 値は、オペレーティングシステムに依存しないことを示します。|  
+|`ulOS`|`rOS` 配列の長さ。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [OSINFO 構造体](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+- [メタデータ構造体](metadata-structures.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)
+- [OSINFO 構造体](osinfo-structure.md)

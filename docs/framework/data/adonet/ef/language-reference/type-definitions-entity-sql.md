@@ -2,18 +2,18 @@
 title: 型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641393"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319250"
 ---
 # <a name="type-definitions-entity-sql"></a>型定義 (Entity SQL)
 型定義は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline 関数の宣言ステートメントで使用されます。  
   
 ## <a name="remarks"></a>Remarks  
- インライン関数の宣言ステートメントから成る、[関数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)キーワードの後に (かっこで囲まれたパラメーター定義リストが続く関数名 (例:"MyAvg") を表す識別子例:"dues します。  
+ インライン関数の宣言ステートメントは、[FUNCTION](function-entity-sql.md) キーワード、関数名を表す識別子 (例: "MyAvg")、かっこで囲まれたパラメーター定義リスト (例: "dues Collection(Decimal)") で構成されます。  
   
  パラメーター定義リストは、0 個以上のパラメーター定義で構成されます。 各パラメーター定義は、識別子 (関数のパラメーターの名前。例 : "dues") とそれに続く型定義 (例 : "Collection(Decimal)") で構成されます。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64641393"
   
 - キーワード `COLLECTION` とそれに続くかっこに囲まれた別の型定義 (例 : "Collection(AdventureWorks.Order)")。  
   
-- キーワード ROW とそれに続くかっこに囲まれたプロパティ定義リスト (例 : "Row(x AdventureWorks.Order)")。 プロパティの定義などの形式である"`identifier type_definition`、 `identifier type_definition`,..."です。  
+- キーワード ROW とそれに続くかっこに囲まれたプロパティ定義リスト (例 : "Row(x AdventureWorks.Order)")。 プロパティ定義の形式は、"`identifier type_definition`, `identifier type_definition`, ..." のようになります。  
   
 - キーワード REF とそれに続くかっこに囲まれた識別子の型 (例 : "Ref(AdventureWorks.Order)")。 REF 型定義演算子は、引数としてエンティティ型を必要とします。 引数としてプリミティブ型を指定することはできません。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64641393"
   
  型定義のオプションは、次のとおりです。  
   
-- `IdentifierName supported_type`、または  
+- `IdentifierName supported_type`、または   
   
 - `IdentifierName` COLLECTION(`type_definition`)、または  
   
@@ -48,7 +48,7 @@ ms.locfileid: "64641393"
 ## <a name="examples"></a>使用例  
  簡単な型定義の例を次に示します。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  COLLECTION 型定義の例を次に示します。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  ROW 型定義の例を次に示します。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  REF 型定義の例を次に示します。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL の概要](entity-sql-overview.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

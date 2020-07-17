@@ -1,13 +1,13 @@
 ---
-title: 要素操作 (Visual Basic)
+title: 要素操作
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 73d8b5b308b4d1cb8863f38592647a71e62dd15a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977575"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375292"
 ---
 # <a name="element-operations-visual-basic"></a>要素操作 (Visual Basic)
 要素操作では、シーケンスから単一の特定の要素が返されます。  
@@ -30,5 +30,5 @@ ms.locfileid: "61977575"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [方法: 最大ファイルまたはディレクトリ ツリー (LINQ) (Visual Basic) 内のファイルのクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (Visual Basic)](how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

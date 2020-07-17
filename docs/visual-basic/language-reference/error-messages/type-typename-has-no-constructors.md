@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031149"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408511"
 ---
-# <a name="type-typename-has-no-constructors"></a>型 '\<typename >' のコンス トラクターがありません
+# <a name="type-typename-has-no-constructors"></a>型 '\<typename>' にはコンストラクターがありません。
 型が `Sub New()` の呼び出しをサポートしません。 コンパイラまたはバイナリ ファイルが破損していることが原因の 1 つとして考えられます。  
   
  **エラー ID:** BC30251  
@@ -25,11 +25,11 @@ ms.locfileid: "62031149"
   
 2. 型が同じプロジェクト内にある場合は、型を含むアセンブリを再コンパイルします。  
   
-3. エラーが再発する場合は、Visual Basic コンパイラを再インストールします。  
+3. エラーがまだ発生する場合は、Visual Basic コンパイラを再インストールします。  
   
 4. エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [ご意見](/visualstudio/ide/talk-to-us)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)
+- [ご意見](/visualstudio/ide/feedback-options)

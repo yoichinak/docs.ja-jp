@@ -9,65 +9,65 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 8f29039185e7171d799543fb1d43e2fa460a97e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912360"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960378"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox のスタイルとテンプレート
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.ComboBox>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、[コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)に関する記事をご覧ください。  
   
-## <a name="combobox-parts"></a>ComboBox パーツ  
- 次の表に、名前付きパーツ、<xref:System.Windows.Controls.ComboBox>コントロール。  
+## <a name="combobox-parts"></a>ComboBox のパーツ  
+ 次の表は、<xref:System.Windows.Controls.ComboBox> コントロールの名前付きパーツの一覧を示します。  
   
-|パーツ|型|説明|  
+|パーツ|種類|説明|  
 |-|-|-|  
-|PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|テキストを含む、<xref:System.Windows.Controls.ComboBox>します。|  
-|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|コンボ ボックス内の項目を含むドロップダウン リスト。|  
+|PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.ComboBox> のテキストを含みます。|  
+|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|コンボ ボックス内の項目を含むドロップダウン。|  
   
- 作成するときに、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ComboBox>、テンプレートが含まれます、<xref:System.Windows.Controls.ItemsPresenter>内、 <xref:System.Windows.Controls.ScrollViewer>。 (、<xref:System.Windows.Controls.ItemsPresenter>内の各項目が表示されます、 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ScrollViewer>コントロール内でスクロールできます)。  場合、<xref:System.Windows.Controls.ItemsPresenter>の直接の子ではない、<xref:System.Windows.Controls.ScrollViewer>を付ける必要があります、<xref:System.Windows.Controls.ItemsPresenter>名、`ItemsPresenter`します。  
+ <xref:System.Windows.Controls.ComboBox> の <xref:System.Windows.Controls.ControlTemplate> を作成する場合、テンプレートで、<xref:System.Windows.Controls.ScrollViewer> 内に <xref:System.Windows.Controls.ItemsPresenter> を含めることができます (<xref:System.Windows.Controls.ItemsPresenter> により、<xref:System.Windows.Controls.ComboBox> の各項目が表示されます。<xref:System.Windows.Controls.ScrollViewer> で、コントロール内のスクロールを有効にします)。  <xref:System.Windows.Controls.ItemsPresenter> が <xref:System.Windows.Controls.ScrollViewer> の直接の子でない場合は、<xref:System.Windows.Controls.ItemsPresenter> に `ItemsPresenter` という名前を付ける必要があります。  
   
-## <a name="combobox-states"></a>コンボ ボックスの状態  
- 次の表に、状態、<xref:System.Windows.Controls.ComboBox>コントロール。  
+## <a name="combobox-states"></a>ComboBox の状態  
+ 次の表は、<xref:System.Windows.Controls.ComboBox> コントロールの状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |無効|CommonStates|コントロールが無効になっています。|  
-|MouseOver|CommonStates|マウス ポインターが上、<xref:System.Windows.Controls.ComboBox>コントロール。|  
+|MouseOver|CommonStates|マウス ポインターが <xref:System.Windows.Controls.ComboBox> コントロールの上にあります。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|FocusedDropDown|FocusStates|ドロップダウン リスト、<xref:System.Windows.Controls.ComboBox>にフォーカスがあります。|  
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
-|編集可能です|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> プロパティが `true` です。|  
-|編集不可|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> プロパティが `false` です。|  
+|FocusedDropDown|FocusStates|<xref:System.Windows.Controls.ComboBox> のドロップダウンにフォーカスがあります。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `true` で、コントロールにフォーカスがあります。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `true` で、コントロールにフォーカスがありません。|  
+|Editable|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> プロパティが `true` です。|  
+|Uneditable|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> プロパティが `false` です。|  
   
-## <a name="comboboxitem-parts"></a>や ComboBoxItem パーツ  
- <xref:System.Windows.Controls.ComboBoxItem>コントロールには、名前付きパーツはありません。  
+## <a name="comboboxitem-parts"></a>ComboBoxItem のパーツ  
+ <xref:System.Windows.Controls.ComboBoxItem> コントロールに名前付きパーツはありません。  
   
-## <a name="comboboxitem-states"></a>や ComboBoxItem 状態  
- 次の表に、状態、<xref:System.Windows.Controls.ComboBoxItem>コントロール。  
+## <a name="comboboxitem-states"></a>ComboBoxItem の状態  
+ 次の表は、<xref:System.Windows.Controls.ComboBoxItem> コントロールの状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |無効|CommonStates|コントロールが無効になっています。|  
-|MouseOver|CommonStates|マウス ポインターが上、<xref:System.Windows.Controls.ComboBox>コントロール。|  
+|MouseOver|CommonStates|マウス ポインターが <xref:System.Windows.Controls.ComboBoxItem> コントロールの上にあります。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|選択済み|SelectionStates|項目が現在選択されています。|  
+|選択済み|SelectionStates|項目は現在選択されています。|  
 |未選択|SelectionStates|この項目は選択されていません。|  
 |SelectedUnfocused|SelectionStates|この項目は選択されていますが、フォーカスがありません。|  
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `true` で、コントロールにフォーカスがあります。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `true` で、コントロールにフォーカスがありません。|  
   
-## <a name="combobox-controltemplate-example"></a>コンボ ボックス ControlTemplate の例  
- 次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ComboBox>コントロールと関連する型。  
+## <a name="combobox-controltemplate-example"></a>ComboBox ControlTemplate の例  
+ 次の例は、<xref:System.Windows.Controls.ComboBox> コントロールとそれに関連付けられる型のために <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示します。  
   
  [!code-xaml[ControlTemplateExamples#ComboBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
@@ -83,5 +83,5 @@ ms.locfileid: "61912360"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

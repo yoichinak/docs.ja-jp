@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 167eb9ae550454afee05cf1e724ba4afa4f95430
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 084f3ae12d906f5e80fdb86e65b09d2371fd246b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776724"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614592"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage メソッド
 このドキュメントの言語識別子を取得します。  
@@ -36,11 +34,11 @@ HRESULT GetLanguage(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]言語識別子を受け取る変数へのポインター。  
+ 入出力言語識別子を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument インターフェイス](isymunmanageddocument-interface.md)

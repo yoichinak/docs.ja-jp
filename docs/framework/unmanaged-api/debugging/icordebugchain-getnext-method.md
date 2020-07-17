@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 47a90ed63ae217cb150f392ad9196f8d0d5764e3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745696"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894641"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext メソッド
-スレッドの次のフレーム チェーンを取得します。  
+スレッドの次のフレームのチェーンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>パラメーター  
  `ppChain`  
- [out]次のスレッドのフレーム チェーンを表す ICorDebugChain オブジェクトのアドレスへのポインター。 このチェーンの最後のチェーン場合`ppChain`が null です。  
+ 入出力スレッドの次のフレームのチェーンを表す、テキストチェーンオブジェクトのアドレスへのポインター。 このチェーンが最後のチェーンの場合`ppChain` 、は null です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Order By 句 (Visual Basic)
+title: Order By 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryOrderBy
@@ -10,49 +10,49 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 63f454064e88bc18f252940f3abd8e59b8900e5b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712566"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359749"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 句 (Visual Basic)
 クエリ結果の並べ替え順序を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `orderExp1`  
- 必須。 1 つまたは複数のフィールド現在のクエリ結果からの返された値を並べ替える方法を識別します。 フィールド名は、コンマ (,) で区切る必要があります。 昇順または降順を使用して、ソート済みとしては、各フィールドを識別できます、`Ascending`または`Descending`キーワード。 ない場合は`Ascending`または`Descending`キーワードを指定すると、既定の並べ替え順序は昇順です。 並べ替え順序のフィールドには、左から右への優先順位が与えられます。  
+ 必須です。 返される値の順序付け方法を示す、現在のクエリ結果の 1 つまたは複数のフィールド。 フィールド名は、コンマ (,) で区切る必要があります。 `Ascending` または `Descending` キーワードを使用して、昇順または降順で並べ替えて各フィールドを識別できます。 `Ascending` または `Descending` キーワードが指定されていない場合、既定の並べ替え順序は昇順です。 並べ替え順序のフィールドは、左から右に優先されます。  
   
 ## <a name="remarks"></a>Remarks  
- 使用することができます、`Order By`句、クエリの結果を並べ替えます。 `Order By`句では、現在のスコープの範囲変数に基づく結果を並べ替えることができますのみです。 たとえば、`Select`句にそのスコープの新しい反復変数をクエリ式での新しいスコープが導入されています。 範囲変数を定義する前に、`Select`クエリ句は使用後に、`Select`句。 そのため、記載されていないフィールドで、結果の順序をする場合、`Select`句に配置する必要がある、`Order By`句の前に、`Select`句。 1 つのときにこれを行う必要があるには例が、結果の一部として返されないフィールドで、クエリの並べ替えを行うときにします。  
+ `Order By` 句を使用して、クエリの結果を並べ替えることができます。 `Order By` 句では、現在のスコープの範囲変数に基づいてのみ結果を並べ替えることができます。 たとえば、`Select` 句では、クエリ式に新しいスコープを導入し、そのスコープの新しい繰り返し変数を指定します。 クエリ内の `Select` 句の前に定義された範囲変数は、`Select` 句の後では使用できません。 そのため、`Select` 句で使用できないフィールドで結果を並べ替える場合は、`Order By` 句を `Select` 句の前に配置する必要があります。 これを行う必要がある場合の 1 つの例は、結果の一部として返されないフィールドによってクエリを並べ替える場合です。  
   
- 昇順と降順の実装によって、フィールドが特定の順序、<xref:System.IComparable>フィールドのデータ型のインターフェイス。 データ型が実装していない場合、<xref:System.IComparable>インターフェイス、並べ替え順序は無視されます。  
+ フィールドの昇順と降順の順序は、フィールドのデータ型の <xref:System.IComparable> インターフェイスの実装によって決まります。 データ型で <xref:System.IComparable> インターフェイスを実装していない場合、並べ替え順序は無視されます。  
   
 ## <a name="example"></a>例  
- 次のクエリ式は、`From`範囲変数を宣言する句`book`の`books`コレクション。 `Order By`句で昇順に並べ替えます (既定値) の価格をクエリの結果を並べ替えます。 同じ価格ブックは、タイトルの昇順で並べ替えられます。 `Select`句を選択、`Title`と`Price`プロパティとして、クエリによって返される値。  
+ 次のクエリ式では、`From` 句を使用して、`books` コレクションに対して `book` 範囲変数を宣言しています。 `Order By` 句によって、クエリの結果を価格の昇順で並べ替えます (既定値)。 同じ価格の書籍は、タイトルの昇順で並べ替えます。 `Select` 句によって、クエリで返される値として `Title` および `Price` プロパティを選択します。  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>例  
- 次のクエリ式は、`Order By`降順で価格をクエリ結果を並べ替えるための句。 同じ価格ブックは、タイトルの昇順で並べ替えられます。  
+ 次のクエリ式では、`Order By` 句を使用して、クエリ結果を価格の降順で並べ替えています。 同じ価格の書籍は、タイトルの昇順で並べ替えます。  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>例  
- 次のクエリ式は、`Select`句を書籍のタイトルを選択し、価格、発行日、作成します。 設定し、 `Title`、 `Price`、`PublishDate`と`Author`新しいスコープの範囲変数のフィールド。 `Order By`句の作成者の名前、書籍のタイトル、および価格によって新しい範囲変数の順序。 各列は、既定の順序 (昇順) で並べ替えられます。  
+ 次のクエリ式では、`Select` 句を使用して、書籍のタイトル、価格、発行日、および作者を選択しています。 次に、新しいスコープの範囲変数の `Title`、`Price`、`PublishDate`、および `Author` の各フィールドを設定します。 `Order By` 句によって、作成者名、書籍のタイトル、さらに価格で新しい範囲変数を並べ替えます。 各列を、既定の順序 (昇順) で並べ替えます。  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)

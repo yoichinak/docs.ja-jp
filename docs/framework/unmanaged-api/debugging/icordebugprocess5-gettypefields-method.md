@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767635"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212790"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields メソッド
-型に属するフィールドについてを説明します。  
+型に属しているフィールドに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,37 +31,37 @@ ms.locfileid: "67767635"
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
-    [out] COR_FIELD fields[],   
+    [out] COR_FIELD fields[],
     [out] ULONG32 *pceltNeeded  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `id`  
- [in]フィールド情報を取得する型の識別子です。  
+ からフィールド情報を取得する型の識別子。  
   
  `celt`  
- [in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)フィールド情報を取得するオブジェクト。  
+ からフィールド情報を取得する[COR_FIELD](cor-field-structure.md)オブジェクトの数。  
   
  `fields`  
- [out]配列の[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)型に属するフィールドに関する情報を提供するオブジェクト。  
+ 入出力型に属するフィールドに関する情報を提供する[COR_FIELD](cor-field-structure.md)オブジェクトの配列。  
   
  `pceltNeeded`  
- [out]数へのポインター [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)に含まれるオブジェクト`fields`します。  
+ 入出力に含まれている[COR_FIELD](cor-field-structure.md)オブジェクトの数へのポインター `fields` 。  
   
 ## <a name="remarks"></a>Remarks  
- `celt`フィールドがフィールドの情報を設定するメソッドを使用して数を指定するパラメーター`fields`の値に対応する必要があります、`COR_TYPE_LAYOUT::numFields`フィールド。  
+ パラメーターは、 `celt` メソッドがデータを設定するために使用するフィールドの数を指定し `fields` ます。フィールドの値に対応する必要があり `COR_TYPE_LAYOUT::numFields` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

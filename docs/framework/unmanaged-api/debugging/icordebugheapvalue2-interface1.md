@@ -14,39 +14,37 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870de1d3db1e415792437e9763dc13bf8066913f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf9b0b7a9bcd09d6e4b3a2cecac1f1b1e711b6bb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700918"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213778"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 インターフェイス
 
-拡張機能を処理する共通言語ランタイム (CLR) のサポートを提供します。  
+共通言語ランタイム (CLR) ハンドルのサポートを提供する、コンポーネントの拡張機能。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CreateHandle メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|これは、指定した型のハンドルを作成`ICorDebugHeapValue2`オブジェクト。|  
+|[CreateHandle メソッド](icordebugheapvalue2-createhandle-method.md)|このオブジェクトに対して指定された型のハンドルを作成し `ICorDebugHeapValue2` ます。|  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

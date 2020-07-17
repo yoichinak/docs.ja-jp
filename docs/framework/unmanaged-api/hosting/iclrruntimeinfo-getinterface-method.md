@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9cf9d48bf50ffc1fc56270c13215acfef6d9c3af
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504057"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface メソッド
-現在のプロセスに CLR をロードし、ランタイム、インターフェイス ポインターをなど返します[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、および[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)します。  
+現在のプロセスに CLR を読み込み、 [ICLRRuntimeHost](iclrruntimehost-interface.md)、 [ICLRStrongName](iclrstrongname-interface.md)、 [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md)などのランタイムインターフェイスポインターを返します。  
   
- このメソッドはすべて、 `CorBindTo`* 関数の[CLR ホスト関数の非推奨とされます](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)セクション。  
+ このメソッドは、 `CorBindTo` 「[非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)」セクションのすべての * 関数を置き換えます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,13 +38,13 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]コクラスの CLSID のインターフェイスです。  
+ からコクラスの CLSID インターフェイス。  
   
  `riid`  
- [in]要求された IID`rclsid`インターフェイス。  
+ から要求されたインターフェイスの IID `rclsid` 。  
   
  `ppUnk`  
- [out]照会されたインターフェイスへのポインター。  
+ 入出力クエリされたインターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -55,18 +53,18 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`ppUnk` が null です。|  
-|E_OUTOFMEMORY|メモリが不足は、要求を処理するために使用できます。|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|別のランタイムは、従来の CLR バージョン 2 のアクティブ化ポリシーに既にバインドされています。|  
+|E_OUTOFMEMORY|要求を処理するのに十分なメモリがありません。|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|以前の CLR バージョン2のアクティブ化ポリシーに、別のランタイムが既にバインドされています。|  
   
-## <a name="remarks"></a>Remarks  
- このメソッドにより、CLR が読み込まれますが、初期化されていません。  
+## <a name="remarks"></a>解説  
+ このメソッドを使用すると、CLR が読み込まれますが、初期化されません。  
   
- 次の表は、サポートされている組み合わせ`rclsid`と`riid`します。  
+ 次の表は、とでサポートされている組み合わせを示して `rclsid` `riid` います。  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
-|CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
-|CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
+|CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser、IID_IMetaDataDispenserEx|  
+|CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser、IID_IMetaDataDispenserEx|  
 |CLSID_CorRuntimeHost|IID_ICorRuntimeHost|  
 |CLSID_CLRRuntimeHost|IID_ICLRRuntimeHost|  
 |CLSID_TypeNameFactory|IID_ITypeNameFactory|  
@@ -74,17 +72,17 @@ HRESULT GetInterface(
 |||  
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo インターフェイス](iclrruntimeinfo-interface.md)
+- [ホスト インターフェイス](hosting-interfaces.md)
+- [ホスティング](index.md)

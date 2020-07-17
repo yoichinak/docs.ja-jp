@@ -1,6 +1,7 @@
 ---
 title: '正規表現の例: HREF のスキャン'
-ms.date: 03/30/2017
+description: .NET での正規表現の例を確認します。 この例では、入力文字列を検索して、すべての href 属性値とその場所を表示します。
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802854"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正規表現の例: HREF のスキャン
 次の例では、入力文字列を検索して、文字列中のすべての href="…" 値とその場所を表示します。  
-  
-## <a name="the-regex-object"></a>Regex オブジェクト  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>Regex オブジェクト
  `DumpHRefs` メソッドは、ユーザー コードから複数回呼び出される可能性があるため、`static` (Visual Basic の場合は `Shared`) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> メソッドを使用します。 これにより、正規表現エンジンが正規表現をキャッシュできるようになり、メソッドを呼び出すたびに新しい <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化するオーバーヘッドを回避できます。 <xref:System.Text.RegularExpressions.Match> オブジェクトは、文字列内のすべての一致を反復処理するために使用されます。  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -44,7 +45,7 @@ ms.locfileid: "56975967"
 |`\s*`|0 個以上の空白文字と一致します。|  
 |`=`|等号と一致します。|  
 |`\s*`|0 個以上の空白文字と一致します。|  
-|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|次のいずれかと一致し、キャプチャ グループに結果を代入しません。<br /> <ul><li><p>- 引用符またはアポストロフィ、引用符またはアポストロフィ以外の任意の文字の 0 回以上の繰り返し、引用符またはアポストロフィの順に続く文字列。 このパターンには `1` という名前のグループが含まれています。</p></li><li><p>- 1 個以上の空白以外の文字。 このパターンには `1` という名前のグループが含まれています。</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|次のいずれかと一致し、キャプチャ グループに結果を代入しません。<br /> <ul><li><p>\- 引用符またはアポストロフィ、引用符またはアポストロフィ以外の任意の文字の 0 回以上の繰り返し、引用符またはアポストロフィの順に続く文字列。 このパターンには `1` という名前のグループが含まれています。</p></li><li><p>\- 1 個以上の空白以外の文字。 このパターンには `1` という名前のグループが含まれています。</p></li></ul>|  
 |`(?<1>[^"']*)`|引用符またはアポストロフィ以外の任意の文字の 0 回以上の繰り返しを `1` という名前のキャプチャ グループに代入します。|  
 |`(?<1>\S+)`|1 個以上の空白以外の文字を `1` という名前のキャプチャ グループに代入します。|  
   
@@ -58,4 +59,4 @@ ms.locfileid: "56975967"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)

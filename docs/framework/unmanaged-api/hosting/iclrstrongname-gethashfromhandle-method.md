@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8f6878d714704370c3f43451c9995a7c5adb5d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2d71f7c61b02273bdcaf182f6f79ca3c2a2c75f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748138"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762082"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle メソッド
-指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルのコンテンツのハッシュを生成します。  
+指定したハッシュアルゴリズムを使用して、指定したファイルハンドルを持つファイルの内容に対してハッシュを生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,32 +40,32 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>パラメーター  
  `hFile`  
- [in]ハッシュされるファイルのハンドル。  
+ からハッシュされるファイルのハンドル。  
   
  `piHashAlg`  
- [入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のアルゴリズムに 0 を使用します。  
+ [入力、出力]ハッシュアルゴリズムを指定する定数。 既定のアルゴリズムには0を使用します。  
   
  `pbHash`  
- [out]返されたハッシュ バッファー。  
+ 入出力返されたハッシュバッファー。  
   
  `cchHash`  
- [in]要求の最大サイズの`pbHash`します。  
+ から要求された最大サイズ `pbHash` 。  
   
  `pchHash`  
- [out]サイズ (バイト単位)、返された`pbHash`します。  
+ 入出力返されたのサイズ (バイト単位) `pbHash` 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
+ `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [ICLRStrongName インターフェイス](iclrstrongname-interface.md)

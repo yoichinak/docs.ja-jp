@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767966"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504434"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 関数
-XML ファイルから読み取られるバージョン情報を使用して、共通言語ランタイム (CLR) をプロセスに読み込みます。  
+XML ファイルから読み取られたバージョン情報を使用して、共通言語ランタイム (CLR) をプロセスに読み込みます。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,47 +34,47 @@ HRESULT CorBindToRuntimeByCfg (
     [in]  DWORD        reserved,  
     [in]  DWORD        startupFlags,  
     [in]  REFCLSID     rclsid,  
-    [in]  REFIID       riid,   
+    [in]  REFIID       riid,
     [out] LPVOID FAR*  ppv  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pCfgStream`  
- [in]ポインター、`IStream`を XML ファイルを読み込むオブジェクト。  
+ から`IStream`XML ファイルを読み取るオブジェクトへのポインター。  
   
  `reserved`  
- [in]将来使用するために予約されています。 値として 0 (ゼロ) を使用します。  
+ から将来使用するために予約されています。 0 (ゼロ) を値として使用します。  
   
  `startupFlags`  
- [in]値、 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) CLR のスタートアップ動作を指定する列挙体。  
+ からCLR の起動動作を指定する[STARTUP_FLAGS](startup-flags-enumeration.md)列挙体の値。  
   
  `rclsid`  
- [in]`CLSID`のいずれかを実装するコクラスの[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)または[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)インターフェイス。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
+ から`CLSID` [ICorRuntimeHost](icorruntimehost-interface.md)または[ICLRRuntimeHost](iclrruntimehost-interface.md)のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
   
  `riid`  
- [in]`IID`のいずれか、`ICorRuntimeHost`または`ICLRRuntimeHost`インターフェイス。 サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。  
+ から`IID` `ICorRuntimeHost` インターフェイスまたは `ICLRRuntimeHost` インターフェイスの。 サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。  
   
  `ppv`  
- [out]返されるインターフェイスのアドレスへのポインター。  
+ 入出力返されたインターフェイスのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- XML ファイルの形式は、標準的なアプリケーションの構成ファイルの後にモデル化されます。 XML ファイルの詳細については、次を参照してください。[構成ファイル スキーマ](../../../../docs/framework/configure-apps/file-schema/index.md)します。  
+## <a name="remarks"></a>解説  
+ XML ファイルの形式は、標準のアプリケーション構成ファイルの後にモデル化されています。 XML ファイルの詳細については、「[構成ファイルのスキーマ](../../configure-apps/file-schema/index.md)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [CorBindToCurrentRuntime 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeEx 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [CorBindToRuntimeHost 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime 関数](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime 関数](corbindtoruntime-function.md)
+- [CorBindToRuntimeEx 関数](corbindtoruntimeex-function.md)
+- [CorBindToRuntimeHost 関数](corbindtoruntimehost-function.md)
+- [ICorRuntimeHost インターフェイス](icorruntimehost-interface.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

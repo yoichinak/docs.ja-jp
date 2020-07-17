@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777277"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610068"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 メソッド
-このライターが関連付けられるメタデータ エミッタ インターフェイスを設定し、デバッグ シンボルが書き込まれる出力ファイル名を設定します。 このメソッドを使用して、プログラム データベース (PDB) ファイルの最後の位置を設定することもできます。  
+このライターが関連付けられるメタデータエミッタインターフェイスを設定し、デバッグシンボルの書き込み先となる出力ファイル名を設定します。 この方法では、プログラムデータベース (PDB) ファイルの最終的な場所を設定することもできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,27 +38,27 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>パラメーター  
  `emitter`  
- [in]メタデータ エミッタ インターフェイスへのポインター。  
+ からメタデータエミッタインターフェイスへのポインター。  
   
  `tempfilename`  
- [in]ポインターを`WCHAR`デバッグ シンボルが書き込まれるファイル名を格納しています。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
+ から`WCHAR`デバッグシンボルが書き込まれるファイル名を格納しているへのポインター。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
   
  `pIStream`  
- [in]シンボルのライターにシンボルを出力、指定されている場合、指定された<xref:System.Runtime.InteropServices.ComTypes.IStream>で指定されたファイルではなく、`filename`パラメーター。 `pIStream` パラメーターは省略可能です。  
+ から指定されている場合、シンボルライターは、 <xref:System.Runtime.InteropServices.ComTypes.IStream> パラメーターで指定されたファイルではなく、指定されたにシンボルを出力し `filename` ます。 `pIStream` パラメーターは省略可能です。  
   
  `fFullBuild`  
- [in]`true`場合、これは、完全な再構築します。`false`インクリメンタル コンパイルの場合。  
+ [入力] `true`完全な再構築の場合は、`false`インクリメンタルコンパイルの場合は。  
   
  `finalfilename`  
- [in]ポインターを`WCHAR`は PDB ファイルの最終的な場所にパス文字列。  
+ から`WCHAR`PDB ファイルの最終的な場所へのパス文字列であるへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Initialize メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+- [ISymUnmanagedWriter インターフェイス](isymunmanagedwriter-interface.md)
+- [Initialize メソッド](isymunmanagedwriter-initialize-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e97b2d4ad1fec4675d1484959b115a4d4b87e90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755342"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490615"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps メソッド
-指定したトークンによって表されるジェネリック パラメーターに関連付けられているメタデータを取得します。  
+指定したトークンによって表されるジェネリックパラメーターに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,39 +42,39 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `gp`  
- [in]メタデータを返す対象のジェネリック パラメーターを表すトークン。  
+ からメタデータを返す対象のジェネリックパラメーターを表すトークン。  
   
  `pulParamSeq`  
- [out]位置を表す序数、`Type`親コンス トラクターまたはメソッド パラメーター。  
+ 入出力`Type`親コンストラクターまたはメソッド内のパラメーターの序数位置。  
   
  `pdwParamFlags`  
- [out]値、 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)を表す列挙体、`Type`のジェネリック パラメーター。  
+ 入出力ジェネリックパラメーターのを記述する[Corgenericparamattr](corgenericparamattr-enumeration.md)列挙体の値 `Type` 。  
   
  `ptOwner`  
- [out]パラメーターの所有者を表す TypeDef または MethodDef トークンです。  
+ 入出力パラメーターの所有者を表す TypeDef または MethodDef トークン。  
   
  `reserved`  
- [out]将来の機能拡張予約されています。  
+ 入出力将来の拡張のために予約されています。  
   
  `wzName`  
- [out]ジェネリック パラメーターの名前。  
+ 入出力ジェネリックパラメーターの名前。  
   
  `cchName`  
- [in]サイズ、`wzName`バッファー。  
+ からバッファーのサイズ `wzName` 。  
   
  `pchName`  
- [out]ワイド文字で、名前の返されたサイズ。  
+ 入出力名前の返されたサイズ (ワイド文字単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)

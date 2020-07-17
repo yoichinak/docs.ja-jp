@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99dbe5c5da5b8c169e34aa29afca507cc6624f0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89ea9f221ad55063e4186cc27cc8038334d800d4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748794"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892876"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning メソッド
-プロセスのスレッドが自由に実行して現在かどうかを示す値を取得します。  
+プロセス内のスレッドが現在実行中であるかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT IsRunning (
   
 ## <a name="parameters"></a>パラメーター  
  `pbRunning`  
- [out]ある値へのポインター`true`自由に。 そうしないと、プロセスのスレッドを実行している場合`false`します。  
+ 入出力プロセス内のスレッドが自由に`true`実行されている場合は、値へのポインター。それ以外`false`の場合は。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目

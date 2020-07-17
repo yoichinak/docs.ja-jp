@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611797"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374513"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,37 +21,70 @@ ms.locfileid: "59611797"
 
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」をご覧ください
+Visual Basic 16.0 / Visual Studio 2019 バージョン 16.0\
+新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
 
-Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5 新機能については、「[Visual Basic 15.5](#visual-basic-155)」をご覧ください
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8\
+新機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
 
-Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3 新機能については、「[Visual Basic 15.3](#visual-basic-153)」をご覧ください
+Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5\
+新機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
 
-Visual Basic 2017 / Visual Studio 2017 新機能については、「[Visual Basic 2017](#visual-basic-2017)」をご覧ください
+Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3\
+新機能については、「[Visual Basic 15.3](#visual-basic-153)」を参照してください。
 
-Visual Basic / Visual Studio 2015 新機能については、「[Visual Basic 14](#visual-basic-14)」をご覧ください
+Visual Basic 2017 / Visual Studio 2017\
+新機能については、「[Visual Basic 2017](#visual-basic-2017)」を参照してください。
 
-Visual Basic / Visual Studio 2013 .NET Compiler Platform ("Roslyn") のテクノロジのプレビュー
+Visual Basic / Visual Studio 2015\
+新機能については、「[Visual Basic 14](#visual-basic-14)」を参照してください。
 
-Visual Basic / Visual Studio 2012 `Async` と `await` のキーワード、反復子、呼び出し元情報属性
+Visual Basic / Visual Studio 2013\
+.NET コンパイラ プラットフォーム ("Roslyn") のテクノロジのプレビュー
 
-Visual Basic, Visual Studio 2010 自動実装プロパティ、コレクション初期化子、暗黙的な行の連結、動的、ジェネリック co/負の分散、グローバル名前空間のアクセス
+Visual Basic / Visual Studio 2012\
+`Async` と `await` のキーワード、反復子、呼び出し元情報属性
 
-Visual Basic / Visual Studio 2008 統合言語クエリ (LINQ)、XML リテラル、ローカル型推論、オブジェクト初期化子、匿名型、拡張メソッド、ローカル `var` 型推論、ラムダ式、`if` 演算子、部分メソッド、null 許容値型
+Visual Basic、Visual Studio 2010\
+自動実装プロパティ、コレクション初期化子、暗黙的な行の連結、動的、ジェネリック co/負の分散、グローバル名前空間のアクセス
 
-Visual Basic / Visual Studio 2005 `My` 型とヘルパーの種類 (アプリ、コンピューター、ファイル システム、ネットワークへのアクセス)
+Visual Basic / Visual Studio 2008\
+統合言語クエリ (LINQ)、XML リテラル、ローカル型の推定、オブジェクト初期化子、匿名型、拡張メソッド、ローカル `var` 型推論、ラムダ式、 `if` 演算子、部分メソッド、null 許容値型
 
-Visual Basic / Visual Studio .NET 2003 ビット シフト演算子、ループ変数宣言
+Visual Basic / Visual Studio 2005\
+`My` 型とヘルパーの種類 (アプリ、コンピューター、ファイル システム、ネットワークへのアクセス)
 
-Visual Basic / Visual Studio .NET 2002 Visual Basic .NET の最初のリリース
+Visual Basic / Visual Studio .NET 2003\
+ビット シフト演算子、ループ変数宣言
+
+Visual Basic / Visual Studio .NET 2002\
+Visual Basic .NET の最初のリリース
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+
+Visual Basic 16.0 は、Visual Basic ランタイム (microsoft.visualbasic.dll) より多くの機能を .NET Core に多く提供することに重点を置いており、.NET Core に重点を置いた Visual Basic の最初のバージョンです。 Visual Basic ランタイムの多くの部分は WinForms に依存しており、これらは Visual Basic の今後のバージョンで追加される予定です。
+
+**ステートメント内のより多くの場所で許可されているコメント**
+
+Visual Basic 15.8 以前のバージョンでは、空白行、ステートメントの最後、または暗黙的な行の継続が許可されるステートメント内の特定の場所でのみ、コメントが許可されます。 Visual Basic 16.0 以降では、コメントは、明示的な行継続の後と、スペースとその後にアンダースコアで始まる行のステートメント内でも使用できます。
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 
 **浮動小数点から整数への変換の最適化**
 
-以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
+以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](../language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
@@ -75,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 これは、浮動小数点の値を四捨五入するのではなく、切り詰められることに注意してください。
@@ -122,7 +154,7 @@ Dim number As Integer = &H_C305_F860
 
 **追加のコンパイラ スイッチ**
 
-Visual Basic コマンド ライン コンパイラで、参照アセンブリの出力を制御する [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) と [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) のコンパイラ オプションがサポートされるようになりました。 **-refout** は、参照アセンブリの出力ディレクトリを定義し、**-refonly** はコンパイルで参照アセンブリだけが出力されるように指定します。
+Visual Basic コマンド ライン コンパイラで、参照アセンブリの出力を制御する [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) と [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) のコンパイラ オプションがサポートされるようになりました。 **-refout** は、参照アセンブリの出力ディレクトリを定義し、 **-refonly** はコンパイルで参照アセンブリだけが出力されるように指定します。
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -154,7 +186,7 @@ Visual Basic はタプルに対応しているため、簡単にタプルを定�
 
 C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、メソッドを呼び出して、参照により返された値を受け取るとき、参照の値が変わることがあります。 Visual Basic の場合、参照戻り値でメソッドを作成することはできませんが、参照戻り値を利用したり、変更したりすることはできます。
 
-たとえば、C# で記述された次の `Sentence` クラスには、指定された部分文字列で始まる文の次の単語を探す `FindNext` メソッドが含まれています。 文字列は参照戻り値として返され、参照によりメソッドに渡される `Boolean` 変数は検索が成功したかどうかを示します。 つまり、呼び出すことで戻り値を読めるだけでなく、変更することもできます。その変更は `Sentence` クラスで反映されます。
+たとえば、C# で記述された次の `Sentence` クラスには、指定された部分文字列で始まる文の次の単語を探す `FindNext` メソッドが含まれています。 文字列は参照戻り値として返され、参照によりメソッドに渡される `Boolean` 変数は検索が成功したかどうかを示します。 これは、返された値を読み取ることに加えて、呼び出し元がそれを変更することもでき、その変更が `Sentence` クラスに反映されることを意味します。
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -174,19 +206,19 @@ C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、�
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[nameof](../../csharp/language-reference/keywords/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 文字列をハードコーディングせずにエラー メッセージで使用するための型またはメンバーの非修飾文字列名を取得できます。  これにより、リファクタリングするときにコードは正しい状態を保てます。  この機能は、またモデル-ビュー-コントローラーの MVC のリンクをフックし、プロパティ変更イベントを発生させるためにも役立ちます。
 
-[文字列補間](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+[文字列補間](../programming-guide/language-features/strings/interpolated-strings.md)
 
-文字列補間式を使用して、文字列を構築することができます。  補間文字列式は、式が含まれているテンプレート文字列のように見えます。  引数に関しては、補間文字列は[複合書式指定](../../standard/base-types/composite-format.md)より理解しやすくなっています。
+文字列補間式を使用して、文字列を構築することができます。  補間文字列式は、式が含まれているテンプレート文字列のように見えます。  引数に関しては、補間文字列は[複合書式指定](../../standard/base-types/composite-formatting.md)より理解しやすくなっています。
 
 [Null 条件メンバー アクセスとインデックス作成](../language-reference/operators/null-conditional-operators.md)
 
 メンバー アクセス (`?.`) またはインデックス (`?[]`) 操作を実行する前に、構文的に非常に簡単な方法で null をテストできます。  これらの演算子を使用すると、null チェックの処理のために記述するコードを少なくすることができます (特に、データ構造を下っていく場合)。  左のオペランドまたはオブジェクト参照が null の場合、操作は null を返します。
 
-[複数行の文字列リテラル](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+[複数行の文字列リテラル](../programming-guide/language-features/strings/string-basics.md)
 
 文字列リテラルには、改行文字のシーケンスを含めることができます。  `<xml><![CDATA[...text with newlines...]]></xml>.Value` の使用に関する以前の次善策は不要になりました
 
@@ -204,13 +236,13 @@ C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、�
 
 **ReadOnly インターフェイスのプロパティ**
 
-readwrite プロパティを使用して readonly インターフェイスのプロパティを実装できます。  このインターフェイスでは、最小限の機能が保証されています。これによって、実装するクラスでプロパティーが設定できなくなるということはありません。
+readwrite プロパティを使用して readonly インターフェイスのプロパティを実装できます。 このインターフェイスでは、最小限の機能が保証されています。これによって、実装するクラスでプロパティーが設定できなくなるということはありません。
 
-[TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 コードを見やすくするために、`TypeOf` を `IsNot` とともに使用できるようになりました。
 
-[#Disable Warning \<ID> と #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)
+[#Disable Warning \<ID> と #Enable Warning \<ID>](../language-reference/directives/index.md)
 
 ソース ファイル内の領域の特定の警告を無効化および有効化することができます。
 
@@ -218,15 +250,15 @@ readwrite プロパティを使用して readonly インターフェイスのプ
 
 ドキュメント コメントを記述する際、スマート エディターを取得し、パラメーター名の検証、`crefs` の適切な処理 (ジェネリック、演算子など)、色分け、リファクタリングのためのサポートを構築します。
 
-[部分モジュールとインターフェイスの定義](../../visual-basic/language-reference/modifiers/partial.md)
+[部分モジュールとインターフェイスの定義](../language-reference/modifiers/partial.md)
 
 クラスと構造体に加えて、部分モジュールとインターフェイスを宣言できます。
 
-[メソッド本体内の #Region ディレクティブ](../../visual-basic/language-reference/directives/region-directive.md)
+[メソッド本体内の #Region ディレクティブ](../language-reference/directives/region-directive.md)
 
 #Region…#End Region 区切り記号をファイルの任意の場所に挿入できます。関数内に装入することも、複数の関数本体に渡って挿入することもできます。
 
-[オーバーライドの定義は暗黙的オーバーロードです](../../visual-basic/language-reference/modifiers/overrides.md)
+[オーバーライドの定義は暗黙的オーバーロードです](../language-reference/modifiers/overrides.md)
 
 `Overrides` 修飾子を定義に追加する場合には、コンパイラが `Overloads`  を暗黙的に追加し、共通のケースで入力するコードを少なくできるようにします。
 
@@ -259,4 +291,5 @@ End Interface
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-in-visual-studio)
+- [Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)

@@ -1,18 +1,19 @@
 ---
-title: 厳密に型指定された拡張のサンプル
+title: 厳密に型指定された拡張機能のサンプル
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: eeef3fd05c66031fb2be573b1c1f56a35a3301ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c3bf202a1fb76d383f0a3fe15084d19a1d51fb
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007787"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600881"
 ---
-# <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張のサンプル
+# <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張機能のサンプル
+
 このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。 ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。  
   
- 配信オブジェクト モデル (<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、および関連クラス) は、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> プロパティおよび <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> プロパティを使用することにより、拡張データへの弱い型定義によるアクセスをサポートします。 このサンプルでは、特定のアプリケーション固有の拡張を厳密に型指定されたプロパティとして使用できるようにする <xref:System.ServiceModel.Syndication.SyndicationFeed> および <xref:System.ServiceModel.Syndication.SyndicationItem> のカスタム派生クラスを実装することにより、拡張データへの厳密に型指定されたアクセスを提供する方法を示します。  
+ 配信オブジェクト モデル (<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、および関連クラス) は、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> プロパティおよび <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> プロパティを使用することにより、拡張データへの弱い型定義によるアクセスをサポートします。 このサンプルでは <xref:System.ServiceModel.Syndication.SyndicationFeed> 、 <xref:System.ServiceModel.Syndication.SyndicationItem> 特定のアプリケーション固有の拡張機能を厳密に型指定されたプロパティとして使用できる、およびのカスタム派生クラスを実装することで、拡張データへの厳密に型指定されたアクセスを提供する方法を示します。  
   
  例として、このサンプルでは Atom Threading Extensions の RFC 案で定義された拡張要素を実装する方法を示しています。 このサンプルは、使い方を示すために用意されたものであり、仕様案を完全に実装するためのものではありません。  
   
@@ -27,10 +28,10 @@ ms.locfileid: "62007787"
          This is a response to the original entry</summary>  
     <updated>2006-03-01T12:12:13Z</updated>  
     <link href="http://www.example.org/entries/1/2" />  
-    <in-reply-to p3:ref="tag:example.org,2005:1"   
-                 p3:href="http://www.example.org/entries/1"   
-                 p3:type="application/xhtml+xml"   
-                 xmlns:p3="http://contoso.org/syndication/thread/1.0"   
+    <in-reply-to p3:ref="tag:example.org,2005:1"
+                 p3:href="http://www.example.org/entries/1"
+                 p3:type="application/xhtml+xml"
+                 xmlns:p3="http://contoso.org/syndication/thread/1.0"
                  xmlns="http://contoso.org/syndication/thread/1.0">  
       <anotherElement xmlns="http://www.w3.org/2005/Atom">  
                      Some more data</anotherElement>  
@@ -40,17 +41,17 @@ ms.locfileid: "62007787"
 </entry>  
 ```  
   
- `<in-reply-to>`要素が必要な 3 つの属性を指定します (`ref`、`type`と`href`) 追加の拡張属性と拡張機能の要素が存在することもできます。  
+ `<in-reply-to>`要素は、3つの必須の属性 (、および) を指定しますが、 `ref` 追加の `type` `href` 拡張属性と拡張要素も存在できるようにします。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 要素のモデル化  
- このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 さらに、次のサンプル コードに示すように、要素のデータにアクセスするメソッドおよびプロパティも実装しています。  
+ このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 また、次のサンプルコードに示すように、要素のデータにアクセスするためのメソッドとプロパティも実装しています。  
   
-```  
+```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
 public class InReplyToElement : IXmlSerializable  
 {  
     internal const string ElementName = "in-reply-to";  
-    internal const string NsUri =   
+    internal const string NsUri =
                   "http://contoso.org/syndication/thread/1.0";  
     private Dictionary<XmlQualifiedName, string> extensionAttributes;  
     private Collection<XElement> extensionElements;  
@@ -58,7 +59,7 @@ public class InReplyToElement : IXmlSerializable
     public InReplyToElement()  
     {  
         this.extensionElements = new Collection<XElement>();  
-        this.extensionAttributes = new Dictionary<XmlQualifiedName,   
+        this.extensionAttributes = new Dictionary<XmlQualifiedName,
                                                           string>();  
     }  
   
@@ -90,7 +91,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` クラスは、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装します。このインターフェイスは、オブジェクト インスタンスを XML から読み取る、または書き込む方法の直接制御を可能にします。 `ReadXml` メソッドは、渡された `Ref` から `HRef`、`Source`、`MediaType`、および <xref:System.Xml.XmlReader> の各プロパティを最初に読み取ります。 不明な属性は<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに格納されます。 すべての属性が読み取られると、<xref:System.Xml.XmlReader.ReadStartElement> が呼び出されて、リーダーが次の要素に進みます。 次のコードに示すように、このクラスによりモデル化された要素には必須の子がないので、子要素は `XElement` インスタンスにバッファされ、<xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> コレクションに格納されます。  
   
-```  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -121,9 +122,9 @@ public void ReadXml(System.Xml.XmlReader reader)
                 }  
                 else  
                 {  
-                    this.AttributeExtensions.Add(new   
-                                 XmlQualifiedName(reader.LocalName,   
-                                 reader.NamespaceURI),   
+                    this.AttributeExtensions.Add(new
+                                 XmlQualifiedName(reader.LocalName,
+                                 reader.NamespaceURI),
                                  reader.Value);  
                 }  
             }  
@@ -146,34 +147,34 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  `WriteXml` では、`InReplyToElement` メソッドは最初に `Ref`、`HRef`、`Source`、および `MediaType` の各プロパティの値を XML 属性として書き込みます (`WriteXml` は、実際の外側の要素自体は書き込みません。`WriteXml` により行われるためです)。 また、次のコードに示すように、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> および <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> の内容をライタに書き込みます。  
   
-```  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
     {  
-        writer.WriteAttributeString("ref", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("ref", InReplyToElement.NsUri,
                                             this.Ref);  
     }  
     if (this.Href != null)  
     {  
-        writer.WriteAttributeString("href", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("href", InReplyToElement.NsUri,
                                                 this.Href.ToString());  
     }  
     if (this.Source != null)  
     {  
-        writer.WriteAttributeString("source", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("source", InReplyToElement.NsUri,
                                               this.Source.ToString());  
     }  
     if (this.MediaType != null)  
     {  
-        writer.WriteAttributeString("type", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("type", InReplyToElement.NsUri,
                                                     this.MediaType);  
     }  
   
-    foreach (KeyValuePair<XmlQualifiedName, string> kvp in   
+    foreach (KeyValuePair<XmlQualifiedName, string> kvp in
                                              this.AttributeExtensions)  
     {  
-        writer.WriteAttributeString(kvp.Key.Name, kvp.Key.Namespace,   
+        writer.WriteAttributeString(kvp.Key.Name, kvp.Key.Namespace,
                                                    kvp.Value);  
     }  
   
@@ -189,7 +190,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` クラスは、`SyndicationFeed` から継承され、`OnCreateItem` をオーバーライドして `ThreadedItem` を返します。 また、次のコードに示すように、`Items` コレクションにアクセスするメソッドを `ThreadedItems` として実装します。  
   
-```  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -211,9 +212,9 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- `ThreadedItem` クラスは `SyndicationItem` から継承され、`InReplyToElement` を厳密に型指定されたプロパティとします。 これにより、`InReplyTo` 拡張データにプログラムによって簡単にアクセスできます。 また、次のコードに示すように、その拡張データの読み取り/書き込みを行う `TryParseElement` および `WriteElementExtensions` も実装します。  
+ クラスは、 `ThreadedItem` を継承 `SyndicationItem` し、 `InReplyToElement` 厳密に型指定されたプロパティとしてを作成します。 これにより、`InReplyTo` 拡張データにプログラムによって簡単にアクセスできます。 また、次のコードに示すように、その拡張データの読み取り/書き込みを行う `TryParseElement` および `WriteElementExtensions` も実装します。  
   
-```  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  
@@ -234,7 +235,7 @@ public class ThreadedItem : SyndicationItem
     }  
   
     protected override bool TryParseElement(  
-                        System.Xml.XmlReader reader,   
+                        System.Xml.XmlReader reader,
                         string version)  
     {  
         if (version == SyndicationVersions.Atom10 &&  
@@ -253,13 +254,13 @@ public class ThreadedItem : SyndicationItem
         }  
     }  
   
-    protected override void WriteElementExtensions(XmlWriter writer,   
+    protected override void WriteElementExtensions(XmlWriter writer,
                                                  string version)  
     {  
-        if (this.InReplyTo != null &&   
+        if (this.InReplyTo != null &&
                      version == SyndicationVersions.Atom10)  
         {  
-            writer.WriteStartElement(InReplyToElement.ElementName,   
+            writer.WriteStartElement(InReplyToElement.ElementName,
                                            InReplyToElement.NsUri);  
             this.InReplyTo.WriteXml(writer);  
             writer.WriteEndElement();  
@@ -272,17 +273,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
-3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+>
+> `<InstallDrive>:\WF_WCF_Samples`  
+>
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879841"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151261"
 ---
 # <a name="datatable-edits"></a>DataTable の編集
-<xref:System.Data.DataRow> 内の列値を変更すると、その変更はすぐに行の現在の状態に反映されます。 <xref:System.Data.DataRowState>に設定されている、 **Modified**、され、変更が受け入れられますまたは拒否を使用して、<xref:System.Data.DataRow.AcceptChanges%2A>または<xref:System.Data.DataRow.RejectChanges%2A>のメソッド、 **DataRow**します。 **DataRow**を編集しているときに、行の状態を中断するのに使用できる 3 つのメソッドも提供されます。 これらのメソッドとは、<xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> および <xref:System.Data.DataRow.CancelEdit%2A> です。  
+<xref:System.Data.DataRow> 内の列値を変更すると、その変更はすぐに行の現在の状態に反映されます。 次に、<xref:System.Data.DataRowState> は **Modified** に設定され、**DataRow** の <xref:System.Data.DataRow.AcceptChanges%2A> または <xref:System.Data.DataRow.RejectChanges%2A> メソッドを使用して、変更が承認または拒否されます。 **DataRow** では、行の編集中に、その行の状態を保留にしておくために使用できる 3 つのメソッドも提供されます。 これらのメソッドとは、<xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> および <xref:System.Data.DataRow.CancelEdit%2A> です。  
   
- 列の値を変更する場合、 **DataRow**を直接、 **DataRow**を使用して列の値を管理、**現在**、**既定**と**元**行のバージョン。 これらの行のバージョンだけでなく、 **BeginEdit**、 **EndEdit**、および**CancelEdit**メソッドを使用して、4 番目の行のバージョン。**提案された**します。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+ **DataRow** の列値が直接変更されると、**DataRow** によって、**Current**、**Default**、**Original** の各行バージョンを使用して列値が管理されます。 **BeginEdit**、**EndEdit**、**CancelEdit** の各メソッドでは、これらの行バージョンに加えて、4 番目の行バージョンが使用されます: **Proposed**。 行バージョンについて詳しくは、「[行の状態とバージョン](row-states-and-row-versions.md)」をご覧ください。  
   
- **提案済み**呼び出しによって開始編集操作中に行バージョンが存在する**BeginEdit**を使用するか終了して**EndEdit**または**CancelEdit**または呼び出すことによって**AcceptChanges**または**RejectChanges**します。  
+ **Proposed** 行バージョンは、編集操作中に存在するバージョンです。編集操作は、**BeginEdit** への呼び出しによって開始し、**EndEdit** または **CancelEdit** の使用あるいは **AcceptChanges** または **RejectChanges** の呼び出しによって終了します。  
   
- 編集操作中に適用できます検証ロジックの個々 の列を評価することによって、 **ProposedValue**で、 **ColumnChanged**のイベント、 **DataTable**します。 **ColumnChanged**イベントを保持**DataColumnChangeEventArgs**変更されている列をする参照を保持する、 **ProposedValue**します。 提示された値を評価した後で、値を変更するか、または編集をキャンセルできます。 うち、行が移動、編集が終了したとき、**提案済み**状態。  
+ 編集操作中に、**DataTable** の **ColumnChanged** イベントで **ProposedValue** を評価することにより、個々の列に検証ロジックを適用できます。 **ColumnChanged** イベントは、変更されている列への参照および **ProposedValue** への参照を維持する **DataColumnChangeEventArgs** を保持します。 提示された値を評価した後で、値を変更するか、または編集をキャンセルできます。 編集が終了すると、行は **Proposed** 状態ではなくなります。  
   
- 編集内容を確認するには呼び出すことによって**EndEdit**、呼び出すことによって、それらをキャンセルできます**CancelEdit**します。 注意してください**EndEdit**が編集内容を確認して、**データセット**まで変更を実際には受け入れません**AcceptChanges**が呼び出されます。 なおを呼び出す場合**AcceptChanges**で編集を終了する前に**EndEdit**または**CancelEdit**、編集を終了し、 **提案済み**両方の行の値を受け入れる、**現在**と**元**行のバージョン。 同様に、呼び出す**RejectChanges**編集を終了し、破棄、**現在**と**提案済み**行のバージョン。 呼び出す**EndEdit**または**CancelEdit**呼び出した後**AcceptChanges**または**RejectChanges**編集が既にあるため、影響を与えません終了しました。  
+ **EndEdit** を呼び出すと編集内容を確定でき、**CancelEdit** を呼び出すと編集内容をキャンセルできます。 **EndEdit** は編集内容を確定しますが、**DataSet** は **AcceptChanges** が呼び出されるまでは実際には変更を受け入れません。 また、**EndEdit** または **CancelEdit** を使用して編集を終了する前に **AcceptChanges** を呼び出した場合は、編集が終了し、**Proposed** 行値が **Current** 行バージョンと **Original** 行バージョンの両方に受け入れられます。 同様に、**RejectChanges** を呼び出した場合も編集が終了し、**Current** 行バージョンと **Proposed** 行バージョンの両方が破棄されます。 **AcceptChanges** または **RejectChanges** を呼び出した後で **EndEdit** または **CancelEdit** を呼び出しても、編集が既に終了しているため、その呼び出しは無効になります。  
   
- 次の例を使用する方法を示します**BeginEdit**で**EndEdit**と**CancelEdit**します。 例もチェック、 **ProposedValue**で、 **ColumnChanged**イベントされ、編集をキャンセルするかどうかを決定します。  
+ **BeginEdit**、**EndEdit**、および **CancelEdit** を使用する方法を次の例に示します。 この例では、**ColumnChanged** イベントで **ProposedValue** をチェックして、編集をキャンセルするかどうかを決定しています。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -38,7 +38,7 @@ workTable.Rows.Add(workRow)
   
 workRow.BeginEdit()  
 ' Causes the ColumnChanged event to write a message and cancel the edit.  
-workRow(0) = ""       
+workRow(0) = ""
 workRow.EndEdit()  
   
 ' Displays "Smith, New".  
@@ -59,7 +59,7 @@ End Sub
 DataTable workTable  = new DataTable();  
 workTable.Columns.Add("LastName", typeof(String));  
   
-workTable.ColumnChanged +=   
+workTable.ColumnChanged +=
   new DataColumnChangeEventHandler(OnColumnChanged);  
   
 DataRow workRow = workTable.NewRow();  
@@ -68,11 +68,11 @@ workTable.Rows.Add(workRow);
   
 workRow.BeginEdit();  
 // Causes the ColumnChanged event to write a message and cancel the edit.  
-workRow[0] = "";       
+workRow[0] = "";
 workRow.EndEdit();  
   
 // Displays "Smith, New".  
-Console.WriteLine("{0}, {1}", workRow[0], workRow.RowState);    
+Console.WriteLine("{0}, {1}", workRow[0], workRow.RowState);
   
 protected static void OnColumnChanged(  
   Object sender, DataColumnChangeEventArgs args)  
@@ -91,6 +91,6 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
+- [DataTable イベントの処理](handling-datatable-events.md)
+- [ADO.NET の概要](../ado-net-overview.md)

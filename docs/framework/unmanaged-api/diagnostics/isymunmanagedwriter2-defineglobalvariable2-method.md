@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed3c841c34b71b30f740117899353aa289e478d5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650701"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614709"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 メソッド
-1 つのグローバル変数を定義します。  
+グローバル変数を 1 つ定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,33 +40,33 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in]グローバル変数の名前。  
+ からグローバル変数名。  
   
  `attributes`  
- [in]グローバル変数の属性。  
+ からグローバル変数属性。  
   
  `sigToken`  
- [in]シグネチャのメタデータ トークンです。  
+ から署名のメタデータトークン。  
   
  `addrKind`  
- [in]アドレスの種類。  
+ からアドレスの種類。  
   
  `addr1`  
- [in]パラメーター指定の最初のアドレス。  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in]パラメーター指定の 2 番目のアドレス。  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in]パラメーター指定の 3 番目のアドレス。  
+ からパラメーター指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [DefineGlobalVariable メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [ISymUnmanagedWriter2 インターフェイス](isymunmanagedwriter2-interface.md)
+- [DefineGlobalVariable メソッド](isymunmanagedwriter-defineglobalvariable-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic での継承されたイベント ハンドラーのトラブルシューティング
+title: 継承されたイベント ハンドラーのトラブルシューティング
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting events [Visual Basic]
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: f2ddef64ca02ca7c96c6c906f5ee79e3cf99dece
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 4e7bedd1de5197fcf8b69091f4cc878f41b01cd5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604060"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405107"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic での継承されたイベント ハンドラーのトラブルシューティング
-このトピックでは、継承されたコンポーネントのイベント ハンドラーで発生する一般的な問題を一覧表示します。  
+このトピックでは、継承されたコンポーネントのイベント ハンドラーで生じる一般的な問題を示します。  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>イベント ハンドラーのコードは呼び出しごとに 2 回実行します  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>呼び出しのたびにイベント ハンドラーのコードが 2 回実行される  
   
-- 継承されたイベント ハンドラーが含めることはできません、[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)句。 基本クラスのメソッドは既に、イベントに関連付けられたが発生します。 削除、`Handles`句継承されたメソッドから。  
+- 継承イベント ハンドラーには、[Handles](../../../language-reference/statements/handles-clause.md) 句を含めないでください。 基底クラスのメソッドは既にイベントに関連付けられており、適切に実行されます。 継承メソッドの `Handles` 句を削除してください。  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- 継承されたメソッドがあるない場合、`Handles`キーワード、コードに追加が含まれていないことを確認します[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)または他のメソッドを同じイベントを処理します。  
+- 継承メソッドに `Handles` キーワードを含めていない場合は、余計な [AddHandler ステートメント](../../../language-reference/statements/addhandler-statement.md)、または同じイベントを処理する別のメソッドが含まれていないことを確認してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [イベント](index.md)

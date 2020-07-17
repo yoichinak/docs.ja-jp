@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3d77e30cd48310c392d38dc29f62fab565c8b42
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749162"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842466"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem メソッド
-キューに入れ、実行するための関数をその関数によって使用されるデータを格納しているオブジェクトを指定します。 スレッドが利用可能になったら、関数を実行します。  
+実行する関数をキューに配置し、その関数によって使用されるデータを格納しているオブジェクトを指定します。 関数は、スレッドが使用可能になったときに実行されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,39 +37,39 @@ HRESULT QueueUserWorkItem (
   
 ## <a name="parameters"></a>パラメーター  
  `Function`  
- [in]実行する関数を表す関数ポインター。  
+ から実行する関数を表す関数ポインター。  
   
  `Context`  
- [in]使用されるデータを格納しているオブジェクト`Function`します。  
+ からによって使用されるデータを格納しているオブジェクト `Function` 。  
   
  `Flags`  
- [in]Win32 定義されている、フラグのいずれかの値`QueueUserWorkItem`メソッドは、実行を制御します。  
+ からWin32 メソッドに対して定義されている、実行を制御するフラグ値の1つ `QueueUserWorkItem` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`QueueUserWorkItem`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>Remarks  
- `QueueUserWorkItem` スレッド プールのワーカー スレッドに作業項目をキューに入れます。 その署名とパラメーターの型は、同じ名前を持つ、対応する Win32 関数のと同じです。 詳細については、Windows プラットフォームのドキュメントを参照してください。  
+## <a name="remarks"></a>コメント  
+ `QueueUserWorkItem`スレッドプール内のワーカースレッドに作業項目をキューします。 そのシグネチャとパラメーターの型は、同じ名前を持つ対応する Win32 関数と同じです。 詳細については、Windows プラットフォームのドキュメントを参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>
-- [IHostThreadPoolManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [IHostThreadPoolManager インターフェイス](ihostthreadpoolmanager-interface.md)

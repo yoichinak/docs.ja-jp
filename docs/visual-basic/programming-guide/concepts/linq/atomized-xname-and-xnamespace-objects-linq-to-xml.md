@@ -1,13 +1,13 @@
 ---
-title: アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)
+title: アトミック化された XName および XNamespace オブジェクト (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: fe0c4429c89e0028b3b012c87684bd14048de27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6a94bc0f2fd8013997e233b300fa19c12671bf29
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951932"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383690"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)
 
@@ -46,7 +46,7 @@ End If
 
 この例を実行すると、次の出力が生成されます。
 
-```
+```console
 r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.
 ```
@@ -74,4 +74,4 @@ Next
 
 ## <a name="see-also"></a>関連項目
 
-- [パフォーマンス (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [パフォーマンス (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)

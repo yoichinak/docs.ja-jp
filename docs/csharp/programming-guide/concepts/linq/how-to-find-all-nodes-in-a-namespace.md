@@ -1,15 +1,15 @@
 ---
-title: '方法: 名前空間内のすべてのノードを検索する (C#)'
+title: 名前空間内のすべてのノードを検索する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: d94a6c517a76e8ed91f20a17e798ad3806a34a70
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486822"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "74141189"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>方法: 名前空間内のすべてのノードを検索する (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>名前空間内のすべてのノードを検索する方法 (C#)
 各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。  
   
 ## <a name="example"></a>例  
@@ -37,7 +37,7 @@ foreach (XElement el in awElements)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>例  
  次のクエリでアクセスする XML ファイルには、2 つの異なる名前空間内にある購買発注書が含まれています。 このクエリは、いずれかの名前空間内にある要素だけを含む新しいツリーを作成します。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 統合購買発注書](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)」。  
+ この例では、「[サンプル XML ファイル : 統合購買発注書](./sample-xml-file-consolidated-purchase-orders.md)」の XML ドキュメントを使用します。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

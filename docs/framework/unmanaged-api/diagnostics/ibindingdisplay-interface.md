@@ -14,34 +14,32 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: af0b38e955ac10592dc5cd0d0e18b0cff08834af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599534"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442138"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay インターフェイス
-実行中のアプリケーションの現在のバインド情報を表示するメソッドを提供します。  
+実行中のアプリケーションに関する現在のバインド情報を表示するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetCurrentDisplay メソッド](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|現在のバインディングの表示情報を返します。|  
-|[InitializeForProcess メソッド](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|`IBindingDisplay` オブジェクトを初期化します。|  
+|[GetCurrentDisplay メソッド](ibindingdisplay-getcurrentdisplay-method.md)|現在のバインディング表示情報を返します。|  
+|[InitializeForProcess メソッド](ibindingdisplay-initializeforprocess-method.md)|`IBindingDisplay` オブジェクトを初期化します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** BindingDisplay.h  
+ **ヘッダー:** BindingDisplay. h  
   
- **ライブラリ:** BindingDisplay.idl  
+ **ライブラリ:** BindingDisplay .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [シンボル ストア診断インターフェイス](diagnostics-symbol-store-interfaces.md)

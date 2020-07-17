@@ -1,22 +1,22 @@
 ---
 title: .NET Core SDK の概要
 description: .NET Core プロジェクトの作成に使用するライブラリとツールのセットである .NET Core SDK について説明します。
-ms.date: 05/13/2019
+ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 7eb06e4fd94ed2a73af2741e98e21e02728c27e4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959236"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595742"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK の概要
 
-.NET Core ソフトウェア開発キット (SDK) は一連のライブラリとツールであり、開発者はこれを利用して .NET Core のアプリケーションやライブラリを作成できます。 それには、アプリケーションのビルドと実行に使用される次のコンポーネントが含まれています。
+.NET Core SDK は一連のライブラリとツールであり、開発者はこれを利用して .NET Core のアプリケーションやライブラリを作成できます。 それには、アプリケーションのビルドと実行に使用される次のコンポーネントが含まれています。
 
-- .NET Core CLI ツール。
+- .NET Core CLI。
 - .NET Core ライブラリとランタイム。
-- `dotnet` [ドライバー](/tools/index.md#driver)。
+- `dotnet` [ドライバー](tools/index.md#driver)。
 
 ## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK を入手する
 
@@ -29,11 +29,11 @@ ms.locfileid: "65959236"
 
 一方、インストール スクリプトでは、管理者特権は必要ありません。 ただし、いかなる前提条件もコンピューターにインストールされません。前提条件はすべてユーザーが手動でインストールする必要があります。 スクリプトは、通常、管理者特権なしでツールをインストールするとき、ビルド サーバーを設定するために利用されます (上の前提条件警告に注意してください)。 詳しくは、[インストール スクリプト リファレンス](tools/dotnet-install-script.md)に関する記事をご覧ください。 お使いの CI ビルド サーバーで SDK を設定する方法について関心がある場合は、「[継続的インテグレーション (CI) で .NET Core SDK とツールを使用する](tools/using-ci-with-cli.md)」をご覧ください。
 
-既定では、SDK のインストールは "side-by-side" (SxS) 方式で行われるため、複数のバージョンの CLI ツールが 1 台のコンピューターにいつでも共存できます。 CLI コマンドを実行したときにバージョンが選択される方法について詳しくは、「[使用する .NET Core のバージョンを選択する](/versions/selection.md)」記事をご覧ください。
+既定では、SDK は "side-by-side" (SxS) 方式でインストールされます。つまり、複数のバージョンを 1 台のコンピューター上にいつでも共存させることができます。 CLI コマンドを実行したときにバージョンが選択される方法について詳しくは、「[使用する .NET Core のバージョンを選択する](versions/selection.md)」記事をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core CLI](tools/index.md)
-- [.NET Core のバージョン管理の概要](/versions/index.md)
-- [.NET Core ランタイムと SDK を削除する方法](versions/remove-runtime-sdk-versions.md)
-- [使用する .NET Core のバージョンを選択する](/versions/selection.md)
+- [.NET Core CLI の概要](tools/index.md)
+- [.NET Core のバージョン管理の概要](versions/index.md)
+- [.NET Core ランタイムと SDK を削除する方法](install/remove-runtime-sdk-versions.md)
+- [使用する .NET Core のバージョンを選択する](versions/selection.md)

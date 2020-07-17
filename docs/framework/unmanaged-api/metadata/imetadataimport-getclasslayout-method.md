@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36c0ffef2d984604be4ae19899e8f3f912cee123
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491473"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout メソッド
 指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。  
@@ -30,8 +28,8 @@ ms.locfileid: "67782456"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetClassLayout  (   
-   [in]  mdTypeDef          td,   
+HRESULT GetClassLayout  (
+   [in]  mdTypeDef          td,
    [out] DWORD              *pdwPackSize,  
    [out] COR_FIELD_OFFSET   rFieldOffset[],  
    [in]  ULONG              cMax,  
@@ -42,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]返されるレイアウトを使用して、クラスの TypeDef トークンです。  
+ から返されるレイアウトを持つクラスの TypeDef トークン。  
   
  `pdwPackSize`  
- [out]1、2、4、8、または 16 では、クラスのパック サイズを表す値の 1 つ。  
+ 入出力クラスのパックサイズを表す1、2、4、8、または16のいずれかの値。  
   
  `rFieldOffset`  
- [out]配列の[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)値。  
+ 入出力[COR_FIELD_OFFSET](cor-field-offset-structure.md)値の配列。  
   
  `cMax`  
  [in] `rFieldOffset` 配列の最大サイズ。  
   
  `pcFieldOffset`  
- [out]返される要素の数`rFieldOffset`します。  
+ 入出力で返される要素の数 `rFieldOffset` 。  
   
  `pulClassSize`  
- [out]によって表されるクラスのバイト サイズ`td`します。  
+ 入出力によって表されるクラスのサイズ (バイト単位) `td` 。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

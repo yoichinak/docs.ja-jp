@@ -1,5 +1,5 @@
 ---
-title: Let 句 (Visual Basic)
+title: Let 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryLet
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4bf832651d9753c41ee5a02defec4adc55af1ff1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054199"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359762"
 ---
 # <a name="let-clause-visual-basic"></a>Let 句 (Visual Basic)
-値を計算し、クエリ内で新しい変数に代入します。  
+値を計算し、その値をクエリ内の新しい変数に代入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Let variable = expression [, ...]  
 ```  
   
@@ -28,23 +28,23 @@ Let variable = expression [, ...]
   
 |用語|定義|  
 |---|---|  
-|`variable`|必須。 指定された式の結果を参照に使用できるエイリアスです。|  
-|`expression`|必須。 評価し、指定された変数に代入する式。|  
+|`variable`|必須です。 指定された式の結果を参照するために使用できる別名。|  
+|`expression`|必須です。 評価され、指定された変数に割り当てられる式。|  
   
 ## <a name="remarks"></a>Remarks  
- `Let`句では、コンピューティングの各値がクエリの結果と、エイリアスを使用してそれらを参照することができます。 別名をなど、他の句で使用することができます、`Where`句。 `Let`句では、クエリに含まれる式の句の別名を指定でき、式の句が使用されるたびに、エイリアスを置き換えるため、読みやすくクエリ ステートメントを作成することができます。  
+ `Let` 句を使用すると、各クエリ結果の値を計算し、別名を使用してその値を参照できます。 別名は、`Where` 句などの他の句で使用できます。 `Let` 句を使用すると、クエリに含まれる式の句の別名を指定し、その式の句が使用されるたびに別名を置き換えることができるため、読みやすいクエリ ステートメントを作成できます。  
   
- 任意の数を含めることができます`variable`と`expression`で割り当て、`Let`句。 各割り当てをコンマ (,) で区切ります。  
+ `Let` 句には、任意の数の `variable` と `expression` の代入を含めることができます。 各代入はコンマ (,) で区切ります。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Let`製品の 10% の割引を計算する句。  
+ 次のコード例では、`Let` 句を使用して、製品に対して 10% の割引を計算します。  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)
+- [WHERE 句](where-clause.md)

@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 593644802fa490c80b361bfdad3473abe4e82922
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e59d02093b9c2e2bda72c45de25975cbbdb7a29
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796016"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose 列挙体
 エクスポートされた関数がマネージド コードを呼び出す理由を示します。  
@@ -28,7 +26,7 @@ ms.locfileid: "67740282"
 typedef enum CorDebugCodeInvokePurpose  
 {  
     CODE_INVOKE_PURPOSE_NONE,  
-    CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION,    
+    CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION,
     CODE_INVOKE_PURPOSE_CLASS_INIT,  
     CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH,  
 } CorDebugCodeInvokePurpose;  
@@ -44,21 +42,21 @@ typedef enum CorDebugCodeInvokePurpose
 |`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|マネージド コードは、呼び出されたいくつかのインターフェイス メソッドの実装を実行します。|  
   
 ## <a name="remarks"></a>Remarks  
- この列挙体を使って、 [icordebugprocess 6::getexportstepinfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)マネージ コードをステップ実行に関する情報を提供するメソッド。  
+ この列挙体は、マネージコードのステップ実行に関する情報を提供するために、 [ICorDebugProcess6:: GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md)メソッドによって使用されます。  
   
 > [!NOTE]
->  この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
+> この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [列挙体のデバッグ](debugging-enumerations.md)
+- [デバッグ](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 型リスト (Visual Basic)
+title: 型リスト
 ms.date: 07/20/2015
 f1_keywords:
 - StructureConstraint
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: aae9135207bbd3f9d0cc7c072e423a50902c372a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 7e22ad6e32ec13f081391e1d47a80df8b1e65063
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751504"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412989"
 ---
 # <a name="type-list-visual-basic"></a>型リスト (Visual Basic)
 
-指定します、*パラメーター入力*の*ジェネリック*プログラミング要素です。 複数のパラメーターは、コンマで区切られます。 1 つの型パラメーターの構文を次に示します。
+*ジェネリック* プログラミング要素の*型パラメーター*を指定します。 複数のパラメーターはコンマで区切ります。 次に、1 つの型パラメーターの構文を示します。
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 [genericmodifier] typename [ As constraintlist ]
 ```
 
@@ -45,68 +45,68 @@ ms.locfileid: "64751504"
 
 |用語|定義|
 |---|---|
-|`genericmodifier`|省略可能です。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[in](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|
-|`typename`|必須。 型パラメーターの名前です。 これは、対応する型引数によって提供される定義済みの型によって置き換えられるプレース ホルダーです。|
-|`constraintlist`|省略可能です。 指定できるデータ型を制約する要件の一覧`typename`します。 複数の制約があれば、中かっこで囲みます (`{ }`) をコンマで区切ります。 使用して、制約リストを導入する必要があります、[として](../../../visual-basic/language-reference/statements/as-clause.md)キーワード。 使用する`As`リストの先頭に一度だけです。|
+|`genericmodifier`|任意。 ジェネリック インターフェイスとデリゲートのみで使用できます。 [Out](../modifiers/out-generic-modifier.md) キーワードを使用して共変として、または [In](../modifiers/in-generic-modifier.md) キーワードを使用して反変として、型を宣言できます。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|
+|`typename`|必須です。 型パラメーターの名前。 これは、対応する型引数で提供された、定義済みの型に置換されるプレースホルダーです。|
+|`constraintlist`|任意。 `typename` に指定できるデータ型を制約する要件の一覧。 複数の制約がある場合は、それらを中かっこ (`{ }`) で囲み、コンマで区切ります。 [As](as-clause.md) キーワードを使用して、制約リストを取り込む必要があります。 `As` は、リストの開始で 1 回だけ使用します。|
 
 ## <a name="remarks"></a>Remarks
 
-すべて汎用のプログラミング要素には、少なくとも 1 つの型パラメーターを実行する必要があります。 型パラメーターは、特定の種類のプレース ホルダー (、*構築される要素*) クライアント コードは、ジェネリック型のインスタンスを作成するタイミングを指定します。 ジェネリック クラスを定義、構造体、インターフェイス、プロシージャを委任したりできます。
+すべてのジェネリック プログラミング要素で、少なくとも 1 つの型パラメーターを受け取る必要があります。 型パラメーターは、クライアント コードでジェネリック型のインスタンスを作成するときに指定する特定の型 (*構築された要素*) のプレースホルダーです。 ジェネリック クラス、構造体、インターフェイス、プロシージャ、またはデリゲートを定義できます。
 
-ジェネリック型を定義する場合の詳細については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。 型パラメーター名の詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。
+ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../programming-guide/language-features/data-types/generic-types.md)」を参照してください。 型パラメーター名の詳細については、「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
-- **かっこです。** 型パラメーターのリストを指定する場合は、かっこで囲む必要がありますでリストを導入する必要があります、[の](../../../visual-basic/language-reference/statements/of-clause.md)キーワード。 使用する`Of`リストの先頭に一度だけです。
+- **かっこ。** 型パラメーター リストを指定する場合は、かっこで囲む必要があります。また、[Of](of-clause.md) キーワードでリストを取り込む必要があります。 `Of` は、リストの開始で 1 回だけ使用します。
 
-- **制約。** 一連の*制約*型のパラメーターは、任意の組み合わせで、次のものを含めることができます。
+- **制約。** 型パラメーターへの*制約*の一覧には、次の項目を任意の組み合わせで含めることができます。
 
-  - インターフェイスの任意の数。 指定された型は、この一覧にすべてのインターフェイスを実装する必要があります。
+  - 任意の数のインターフェイス。 指定された型では、この一覧のすべてのインターフェイスを実装する必要があります。
 
-  - 1 つのクラス。 指定された型は、そのクラスから継承する必要があります。
+  - 最大 1 つのクラス。 指定した型は、そのクラスから継承する必要があります。
 
-  - `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンス トラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンス トラクターを公開し、コンス トラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。
+  - `New` キーワード。 指定した型では、ジェネリック型でアクセスできるパラメーターなしのコンストラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスによって型パラメーターを制約する場合に便利です。 インターフェイスを実装する型では、必ずしもコンストラクターが公開されているとは限らず、コンストラクターのアクセス レベルによっては、ジェネリック型内のコードでそれにアクセスできない場合があります。
 
-  - いずれか、`Class`キーワードまたは`Structure`キーワード。 `Class`キーワードは、すべての型引数が渡された文字列、配列、またはデリゲートでは、たとえば、参照型であること、またはクラスからオブジェクトが作成されたことを必要とするジェネリック型パラメーターを制約します。 `Structure`キーワードで制約などの構造体、列挙型、または基本データ型をジェネリック型パラメーターに渡されるすべての型引数の値の型である必要があります。 両方を含めることはできません`Class`と`Structure`同じ`constraintlist`します。
+  - `Class` キーワードまたは `Structure` キーワード。 `Class` キーワードでは、ジェネリック型パラメーターを制約して、すべての型引数が参照型 (文字列、配列、デリゲート、またはクラスから作成されたオブジェクトなど) として渡されることを必要とします。 `Structure` キーワードでは、ジェネリック型パラメーターを制約して、すべての型引数が値型 (構造体、列挙型、基本データ型など) として渡されることを必要とします。 `Class` と `Structure` を同じ `constraintlist` に含めることはできません。
 
-  指定された型に含まれるすべての要件を満たす必要があります`constraintlist`します。
+  指定した型は、`constraintlist` に含まれるすべての要件を満たしている必要があります。
 
-  それぞれの型パラメーターの制約は、その他の型パラメーターの制約の依存しません。
+  各型パラメーターに対する制約は、他の型パラメーターに対する制約と関係がありません。
 
 ## <a name="behavior"></a>動作
 
-- **コンパイル時の代入。** 汎用のプログラミング要素から構築された型を作成するときに型パラメーターごとに定義された型を指定します。 Visual Basic コンパイラがその指定された型ごとに出現する位置を置換`typename`ジェネリック要素内で。
+- **コンパイル時置換。** ジェネリック プログラミング要素から構築された型を作成する場合は、各型パラメーターに定義済みの型を指定します。 Visual Basic コンパイラによって、ジェネリック要素内の `typename` のすべての存在について、指定した型が使われます。
 
-- **制約が存在しない場合。** コードがオペレーション コンソールとでサポートされているメンバーに制限されていますが、型パラメーターに対する制約を指定しない場合、 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)その型パラメーター。
+- **制約なし。** 型パラメーターに対して制約を指定しない場合、コードは、その型パラメーターの[オブジェクト データ型](../data-types/object-data-type.md)でサポートされる操作とメンバーに制限されます。
 
 ## <a name="example"></a>例
 
-次の例では、ディクショナリに新しいエントリを追加する関数の骨組みをなど、汎用の dictionary クラスのスケルトン定義を示します。
+次の例に、ジェネリック ディクショナリ クラスのスケルトン定義を示しています。これには、新しいエントリをディクショナリに追加するスケルトン関数も含まれます。
 
 [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]
 
 ## <a name="example"></a>例
 
-`dictionary`は汎用的で、それを使用するコードから作成できますのさまざまなオブジェクト、同じ機能を持つが、別のデータ型で動作している各します。 次の例は、行のコードを作成する、`dictionary`オブジェクト`String`エントリと`Integer`キー。
+`dictionary` はジェネリックであるため、それを使用するコードでは、それぞれが同じ機能を持ちながらも、異なるデータ型に対して動作する、さまざまなオブジェクトを作成できます。 次の例に、`String` エントリと `Integer` キーを含む `dictionary` オブジェクトを作成するコード行を示しています。
 
 [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]
 
 ## <a name="example"></a>例
 
-次の例では、前の例によって生成された同等のスケルトン定義を示します。
+次の例は、前の例で生成された同等のスケルトン定義を示しています。
 
 [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]
 
 ## <a name="see-also"></a>関連項目
 
-- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
-- [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Object 型](../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [方法: ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Of](of-clause.md)
+- [New 演算子](../operators/new-operator.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [Object 型](../data-types/object-data-type.md)
+- [Function ステートメント](function-statement.md)
+- [Structure ステートメント](structure-statement.md)
+- [Sub ステートメント](sub-statement.md)
+- [方法: ジェネリック クラスを使用する](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [In](../modifiers/in-generic-modifier.md)
+- [Out](../modifiers/out-generic-modifier.md)

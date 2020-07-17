@@ -1,15 +1,15 @@
 ---
-title: (Visual Basic) の実行方法による標準クエリ演算子の分類
+title: 実行方法による標準クエリ演算子の分類
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: e1ba5d8bdc2b7a521a11ca5c055323fde4bcb9d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021766"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410904"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>(Visual Basic) の実行方法による標準クエリ演算子の分類
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>実行方法による標準クエリ演算子の分類 (Visual Basic)
 標準クエリ演算子メソッドの LINQ to Objects 実装は、主に 2 とおりの方法 (即時と遅延) で実行されます。 遅延実行を使用するクエリ演算子は、さらに 2 つのカテゴリ (ストリーミングと非ストリーミング) に分けることができます。 それぞれのクエリ演算子がどのように動作するかを把握しておくと、指定したクエリの結果を理解するうえで役立ちます。 これは、データ ソースが変更される場合や、別のクエリに基づいてさらにクエリを作成する場合に特に便利です。 このトピックでは、標準クエリ演算子を、その実行方法に基づいて分類します。  
   
 ## <a name="manners-of-execution"></a>実行方法  
@@ -32,7 +32,7 @@ ms.locfileid: "62021766"
  次の表では、各標準クエリ演算子メソッドを、その実行方法に基づいて分類しています。  
   
 > [!NOTE]
->  2 つの列にマークが付けられている演算子では、2 つの入力シーケンスが演算に使用され、各シーケンスの評価は異なります。 この場合、遅延実行のストリーミングで評価されるのは、常にパラメーター リストの最初のシーケンスになります。  
+> 2 つの列にマークが付けられている演算子では、2 つの入力シーケンスが演算に使用され、各シーケンスの評価は異なります。 この場合、遅延実行のストリーミングで評価されるのは、常にパラメーター リストの最初のシーケンスになります。  
   
 |標準クエリ演算子|戻り値の型|即時実行|遅延実行 (ストリーミング)|遅延実行 (非ストリーミング)|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -90,6 +90,6 @@ ms.locfileid: "62021766"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [標準クエリ演算子 (Visual Basic) のクエリ式構文](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [標準クエリ演算子のクエリ式構文 (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

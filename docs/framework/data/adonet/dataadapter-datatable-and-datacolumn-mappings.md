@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6380dd0512bd7834f50b87f90f445cb01b7a8b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032696"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151560"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable と DataColumn のマップ
-A **DataAdapter** 0 個以上のコレクションを含む<xref:System.Data.Common.DataTableMapping>オブジェクトでその**TableMappings**プロパティ。 A **DataTableMapping** 、データ ソースに対するクエリから返されるデータ間のマスター マップを提供し、<xref:System.Data.DataTable>します。 **DataTableMapping**の代わりに名前を渡すことができます、 **DataTable**名、**入力**のメソッド、 **DataAdapter**します。 次の例では、作成、 **DataTableMapping**という**AuthorsMapping**の**作成者**テーブル。  
+**DataAdapter** の **TableMappings** プロパティには、0 個以上の <xref:System.Data.Common.DataTableMapping> オブジェクトのコレクションが含まれます。 **DataTableMapping** では、データ ソースに対するクエリで返されたデータと <xref:System.Data.DataTable> の間のマスター マッピングが提供されます。 **DataTableMapping** 名は、**DataAdapter** の **Fill** メソッドに **DataTable** 名の代わりとして渡すことができます。 **Authors** テーブルに対して **AuthorsMapping** という名前の **DataTableMapping** を作成する例を次に示します。  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -23,11 +23,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- A **DataTableMapping**で列名を使用することができます、 **DataTable**データベースと異なります。 **DataAdapter**テーブルが更新されたときに、列を一致するように、マップを使用します。  
+ **DataTableMapping** を使用すると、**DataTable** 内でデータベースの列名とは異なる列名を使用できます。 **DataAdapter** では、テーブルの更新時にこのマップを使用して列が照合されます。  
   
- 指定しない場合、 **TableName**または**DataTableMapping**名前を呼び出すときに、**入力**または**Update**のメソッド、 **DataAdapter**、 **DataAdapter**探し、 **DataTableMapping** "Table"という名前です。 その場合**DataTableMapping**が存在しない、 **TableName**の**DataTable** 「テーブル」です。 既定値を指定する**DataTableMapping**を作成して、 **DataTableMapping** "Table"の名前に置き換えます。  
+ **DataAdapter** の **Fill** メソッドまたは **Update** メソッドを呼び出すときに **TableName** または **DataTableMapping** 名を指定しなかった場合、**DataAdapter** では "Table" という名前の **DataTableMapping** が検索されます。 その **DataTableMapping** が存在しない場合は、**DataTable** の **TableName** が "Table" になります。 "Table" という名前の **DataTableMapping** を作成することで既定の **DataTableMapping** を指定できます。  
   
- 次のコード例を作成、 **DataTableMapping** (から、<xref:System.Data.Common>名前空間) になり、指定された既定のマッピング**DataAdapter** "Table"名前を付けて、します。 例では、クエリ結果の最初のテーブルから列をマップし、(、**顧客**のテーブル、 **Northwind**データベース) でよりわかりやすい名前のセットに、 **Northwind の Customers**テーブルに、<xref:System.Data.DataSet>します。 割り当てられない列には、データ ソースの列名が使用されます。  
+ 次に示すのは、<xref:System.Data.Common> 名前空間から **DataTableMapping** を作成し、それに "Table" という名前を付けて、指定した **DataAdapter** の既定のマップとして設定するコード サンプルです。 この例では、その後、クエリ結果の最初のテーブル (**Northwind** データベースの **Customers** テーブル) の列を <xref:System.Data.DataSet> の **Northwind Customers** テーブルにある、よりわかりやすい名前のセットに割り当てます。 割り当てられない列には、データ ソースの列名が使用されます。  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -40,7 +40,7 @@ adapter.Fill(custDS)
 ```  
   
 ```csharp  
-DataTableMapping mapping =   
+DataTableMapping mapping =
   adapter.TableMappings.Add("Table", "NorthwindCustomers");  
 mapping.ColumnMappings.Add("CompanyName", "Company");  
 mapping.ColumnMappings.Add("ContactName", "Contact");  
@@ -49,11 +49,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- 高度な状況は、同じすることを決めることがあります**DataAdapter**異なるマッピングに別のテーブルの読み込みをサポートするためにします。 これを行うには、追加**DataTableMapping**オブジェクト。  
+ より高度な条件下では、同じ **DataAdapter** を使用して複数の割り当てが設定された複数テーブルの読み込みのサポートが必要な場合があります。 この場合、**DataTableMapping** オブジェクトを追加します。  
   
- ときに、**入力**メソッドのインスタンスに渡されます、**データセット**と**DataTableMapping**名、その名前の割り当てが存在する場合はそれ以外を **。DataTable**名を使用するとします。  
+ **Fill** メソッドに **DataSet** のインスタンスと **DataTableMapping** 名が渡されたとき、その名前の割り当てが存在する場合はその名前が使用され、存在しない場合はその名前の **DataTable** が使用されます。  
   
- 次の例では、作成、 **DataTableMapping**という名前の**顧客**と**DataTable**の名前**BizTalkSchema**します。 例では、SELECT ステートメントによって返される行をマップし、 **BizTalkSchema** **DataTable**します。  
+ 次に示すのは、**Customers** という名前と **BizTalkSchema** という **DataTable** 名を持つ **DataTableMapping** を作成する例です。 この例では、その後で、SELECT ステートメントで返された行を **BizTalkSchema** **DataTable** に割り当てています。  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -67,7 +67,7 @@ adapter.Fill(custDS, "Customers")
 ```  
   
 ```csharp  
-ITableMapping mapping =   
+ITableMapping mapping =
   adapter.TableMappings.Add("Customers", "BizTalkSchema");  
 mapping.ColumnMappings.Add("CustomerID", "ClientID");  
 mapping.ColumnMappings.Add("CompanyName", "ClientName");  
@@ -78,27 +78,36 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  列マップにソースの列名を指定しなかった場合、またはテーブル マップにソース テーブル名を指定しなかった場合は、自動的に既定の名前が生成されます。 列マッピングの基になる列が指定されていない場合、列マッピングが指定されたインクリメンタル既定名**SourceColumn** *N、* 以降**SourceColumn1**します。 テーブル マップにソース テーブル名が指定されていない場合、テーブル マッピングが指定されたインクリメンタル既定名**SourceTable** *N*以降の**SourceTable1**します。  
+> 列マップにソースの列名を指定しなかった場合、またはテーブル マップにソース テーブル名を指定しなかった場合は、自動的に既定の名前が生成されます。 列マップにソース列を指定しなかった場合は、列マップに **SourceColumn1** から始まるインクリメンタル既定名 **SourceColumn***N* が割り当てられます。 テーブル マップにソース テーブル名を指定しなかった場合は、テーブル マップに **SourceTable1** から始まるインクリメンタル既定名 **SourceTable***N* が割り当てられます。  
   
 > [!NOTE]
->  名前付け規則を回避することをお勧めします**SourceColumn** *N*列マッピング、または**SourceTable** *N*テーブル。マッピングを指定した名前の既存の既定の列マッピング名と競合する可能性があるため、 **ColumnMappingCollection**またはテーブル マッピング名、 **DataTableMappingCollection**. 指定した名前が既に存在する場合は、例外がスローされます。  
+> 列マップには、**SourceColumn***N* の命名規則を使用しないこと、また、テーブルの割り当てには **SourceTable***N* を使用しないことをお勧めします。これは、指定した名前が **ColumnMappingCollection** 内の既存する既定の列マップ名または **DataTableMappingCollection** 内のテーブル マップ名と競合しないようにするためです。 指定した名前が既に存在する場合は、例外がスローされます。  
   
 ## <a name="handling-multiple-result-sets"></a>複数の結果セットの処理  
- 場合、 **SelectCommand**複数のテーブルを返します**入力**内のテーブルの増分値を持つテーブル名を自動的に生成、**データセット**以降のテーブルの名前と続行の形式で指定**TableName** *N*以降の**TableName1**します。 内のテーブルに指定名前に自動的に生成されたテーブル名をマップするテーブルのマッピングを使用することができます、**データセット**します。 たとえば、 **SelectCommand** 2 つのテーブルを返す**顧客**と**注文**、に対する次の呼び出しを発行**入力**します。  
+ **SelectCommand** で複数のテーブルが返される場合、**Fill** では **DataSet** 内のテーブルに対する、インクリメント値を含むテーブル名が自動的に生成されます。これは、指定したテーブル名で開始し、**TableName***N* の形式で **TableName1** から数値を加算していく名前になります。 自動的に生成されたテーブル名は、テーブルの割り当てを使用して **DataSet** 内でテーブルに指定する名前に変換できます。 たとえば、**Customers** および **Orders** という 2 つのテーブルを返す **SelectCommand** に対して、次の **Fill** 呼び出しを実行します。  
   
-```  
+```vb  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
-  
- 2 つのテーブルに作成されます、**データセット**:**顧客**と**Customers1**します。 テーブル マッピングを使用するには 2 つ目のテーブルの名前がいることを確認する**注文**の代わりに**Customers1**します。 これを行うには、マップのソース テーブル**Customers1**を**データセット**テーブル**注文**次の例のようにします。  
-  
+
+```csharp  
+adapter.Fill(customersDataSet, "Customers");  
 ```  
+
+ **DataSet** には、次の 2 つのテーブルが作成されます: **Customers** と **Customers1**。 テーブル マップを使用して、2 つ目のテーブルに **Customers1** という名前の代わりに **Orders** という名前を付けることができます。 それには、次の例に示すように、ソース テーブル **Customers1** を **DataSet** テーブルの **Orders** に割り当てます。  
+  
+```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
+
+```csharp  
+adapter.TableMappings.Add("Customers1", "Orders");  
+adapter.Fill(customersDataSet, "Customers");  
+```
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)
+- [ADO.NET の概要](ado-net-overview.md)

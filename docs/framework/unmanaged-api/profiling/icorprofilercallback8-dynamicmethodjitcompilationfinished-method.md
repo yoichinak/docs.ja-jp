@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8::DynamicMethodJITCompilationFinished メソッド
+title: ICorProfilerCallback8::D ynamicMethodJITCompilationFinished メソッド
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationFinished
@@ -8,55 +8,52 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 554cc93de934061e87322c7557e05545e5e7bc62
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757993"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499078"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationFinished メソッド
-[.NET Framework 4.7 以降のバージョンでサポートされます]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished メソッド
+[.NET Framework 4.7 以降のバージョンでサポートされています]  
   
-動的メソッドの JIT コンパイルが完了したときに、プロファイラーに通知します。  
+動的メソッドの JIT コンパイルが完了するたびにプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT DynamicMethodJITCompilationFinished(  
-     [in]  FunctionID  functionId,   
-     [in]  BOOL        hrStatus,   
-     [in]  BOOL        fIsSafeToBlock   
+     [in]  FunctionID  functionId,
+     [in]  BOOL        hrStatus,
+     [in]  BOOL        fIsSafeToBlock
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
 [入力] `functionId`  
-どの JIT コンパイルが開始されてメモリ内の関数の識別子です。   
+JIT コンパイルが開始されるメモリ内関数の識別子。
 
-[in] `hrStatus`   
-JIT コンパイルが成功したかどうかを示す値。
+[入力] `hrStatus`JIT コンパイルが成功したかどうかを示す値。
 
-[in] `fIsSafeToBlock`   
-`true` ブロックしていることにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機するかを示す`false`をブロックしてに影響しないこと、実行時の操作を示します。  
+[入力] `fIsSafeToBlock` 
+ `true`ブロックが原因で、ランタイムが呼び出し元のスレッドがこのコールバックから戻るのを待機する場合があることを示します。`false`ブロックがランタイムの動作に影響を与えないことを示す場合。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
-動的メソッドの JIT コンパイルが完了するたびに、このコールバックがトリガーされます。 これには、さまざまな IL スタブと LCG メソッドが含まれます。 その目的はプロファイラー ライターをユーザーにコンパイルされたメソッドを識別するために十分な情報を提供します。
+このコールバックは、動的メソッドの JIT コンパイルが完了するたびにトリガーされます。 これには、さまざまな IL スタブおよび LCG メソッドが含まれます。 その目的は、コンパイルされたメソッドをユーザーに識別するのに十分な情報をプロファイラーライターに提供することです。
 
 > [!NOTE]
-> `functionId` 値は、動的メソッドのメタデータがないため、メタデータ トークンを解決するのには使用できません。
+> `functionId`動的メソッドにはメタデータがないため、値を使用してメタデータトークンを解決することはできません。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

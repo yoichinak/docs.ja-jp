@@ -1,5 +1,5 @@
 ---
-title: プロシージャのパラメーターと引数 (Visual Basic)
+title: プロシージャのパラメーターと引数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -18,55 +18,55 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 08bb05f681d5f795bc448ddc62976d7675696023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 178206ca2ee103bbdb5a4ac03bca0df903c8c5d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638834"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406717"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
-ほとんどの場合、プロシージャには、呼び出されたときの状況に関する情報が必要があります。 繰り返される、または共有のタスクを実行する手順では、呼び出しごとに異なる情報を使用します。 この情報は、変数、定数、および呼び出しでは、プロシージャに渡す式で構成されます。  
+ほとんどの場合、プロシージャには呼び出された状況に関する情報が必要です。 反復的なタスクや共有タスクを実行するプロシージャでは、呼び出しごとに異なる情報を使用します。 この情報は、呼び出し時にプロシージャに渡す変数、定数、式で構成されます。  
   
- A*パラメーター*プロシージャには、このメソッドを呼び出すときに指定することが期待される値を表します。 プロシージャの宣言では、そのパラメーターを定義します。  
+ "*パラメーター*" は、プロシージャを呼び出すときに指定する必要がある値を表します。 プロシージャの宣言でパラメーターを定義します。  
   
- パラメーターなし、1 つのパラメーター、または 1 つ以上のプロシージャを定義できます。 パラメーターを指定するプロシージャの定義の一部と呼ばれる、*パラメーター リスト*します。  
+ パラメーターなし、1 つのパラメーター、または複数のパラメーターでプロシージャを定義できます。 プロシージャ定義の、パラメーターを指定する部分は、"*パラメーター リスト*" と呼ばれます。  
   
- *引数*プロシージャを呼び出すときにプロシージャのパラメーターに指定した値を表します。 プロシージャを呼び出すときに、呼び出し元のコードは、引数を提供します。 引数を指定するプロシージャの呼び出しの一部と呼ばれる、*引数リスト*します。  
+ "*引数*" は、プロシージャを呼び出すときにプロシージャ パラメーターに指定する値を表します。 呼び出し元のコードは、プロシージャを呼び出すときに引数を指定します。 プロシージャ呼び出しの、引数を指定する部分は、"*引数リスト*" と呼ばれます。  
   
- 次の図は、プロシージャを呼び出すコード`safeSquareRoot`2 つの異なる場所からします。 最初の呼び出しは、変数の値を渡します`x`(4.0) パラメーターに`number`とで戻り値`root`(2.0)、変数に割り当てられている`y`します。 2 番目の呼び出しにリテラル値 9.0 を通過する`number`、戻り値 (3.0) を変数に代入と`z`します。  
+ 次の図は、2 つの異なる場所から `safeSquareRoot` プロシージャを呼び出すコードを示しています。 最初の呼び出しでは、変数 `x` の値 (4.0) を `number` パラメーターに渡し、`root` の戻り値 (2.0) が変数 `y` に割り当てられます。 2 番目の呼び出しでは、リテラル値 9.0 を `number` に渡し、戻り値 (3.0) を変数 `z` に割り当てます。  
   
- ![パラメーターに引数を渡すことを示す図](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
+ ![パラメーターへの引数の引渡しを示す図](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- 詳細については、次を参照してください。[の相違点の間でパラメーターと引数](./differences-between-parameters-and-arguments.md)します。  
+ 詳細については、「[Differences Between Parameters and Arguments (パラメーターと引数の違い)](./differences-between-parameters-and-arguments.md)」をご覧ください。  
   
 ## <a name="parameter-data-type"></a>パラメーターのデータ型  
- 使用して、パラメーターのデータ型を定義する、`As`宣言内の句。 たとえば、次の関数は、文字列と整数を受け取ります。  
+ パラメーターのデータ型を定義するには、宣言で `As` 句を使用します。 たとえば、次の関数は文字列と整数を受け入れます。  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
- 型チェック スイッチの場合 ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`Off,`、`As`する点を除いて、すべてのパラメーターがそれを使用する必要があります、1 つのパラメーターで使用する場合、句は省略可能でします。 型チェックが場合`On`、`As`句がすべてのプロシージャのパラメーターが必要です。  
+ 型チェック スイッチ ([Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)) が `Off,` の場合、`As` 句は省略可能です。ただし、いずれか 1 つのパラメーターで使用する場合は、すべてのパラメーターで使用する必要があります。 型チェックが `On` の場合は、すべてのプロシージャ パラメーターで `As` 句が必須となります。  
   
- 呼び出し元のコードがなど、対応するパラメーターの異なるデータ型の引数を指定するかどうかは`Byte`を`String`パラメーターを次のいずれかの操作にする必要があります。  
+ 呼び出し元のコードが、対応するパラメーターのデータ型とは異なるデータ型の引数 (`String` パラメーターに対する `Byte` など) を指定することを要求している場合、次のいずれかを実行する必要があります。  
   
-- パラメーターのデータ型に拡大変換するデータ型の引数だけを渡す  
+- パラメーターのデータ型に拡大変換するデータ型の引数のみを指定する。  
   
-- 設定`Option Strict Off`暗黙的な縮小変換を許可するか、  
+- `Option Strict Off` を設定して、暗黙的な縮小変換を許可する。または、  
   
-- 変換キーワードを使用して、データ型を明示的に変換します。  
+- 変換キーワードを使用して、データ型を明示的に変換する。  
   
 ### <a name="type-parameters"></a>型パラメーター  
- A*ジェネリック プロシージャ*も 1 つまたは複数定義します*パラメーター入力*だけでなく、通常のパラメーター。 ジェネリック プロシージャでは、個々 の呼び出しの要件をデータ型を調整できるように、プロシージャを呼び出すたびに異なるデータ型を渡すコードの呼び出しを許可します。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ "*ジェネリック プロシージャ*" では、通常のパラメーターに加え、1 つ以上の "*型パラメーター*" も定義します。 ジェネリック プロシージャを使用すると、呼び出し元のコードは、プロシージャを呼び出すたびに異なるデータ型を渡すことができるため、個々の呼び出しの要件に合わせてデータ型を調整できます。 「 [Generic Procedures in Visual Basic](../data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: プロシージャのパラメーターを定義します。](./how-to-define-a-parameter-for-a-procedure.md)
+- [方法: プロシージャのパラメーターを定義する](./how-to-define-a-parameter-for-a-procedure.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [プロシージャのオーバーロード](./procedure-overloading.md)
-- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../data-types/type-conversions.md)

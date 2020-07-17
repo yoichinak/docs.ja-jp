@@ -1,25 +1,23 @@
 ---
 title: CLR のアクティブ化に関する問題をデバッグする方法
+description: .NET で共通言語ランタイム (CLR) のアクティブ化に関する問題をデバッグする方法を説明します。 CLR アクティベーション ログを表示してデバッグします。これは、根本原因の特定に役立つ場合があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
-ms.translationtype: HT
+ms.openlocfilehash: 5215e82aebf93fa8d6d1937563ab348126a01d97
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622615"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR のアクティブ化に関する問題をデバッグする方法
 
-正しいバージョンの共通言語ランタイム (CLR) でアプリケーションを実行して問題が発生した場合、CLR アクティベーション ログを表示し、デバッグできます。 アプリケーションで予想とは異なる CLR バージョンが読み込まれるときでも、CLR がまったく読み込まれないときでも、アクティベーション問題の根本原因を突き止めるときにこのログが大変役立ちます。 [.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)では、アプリケーションに対して CLR が見つからない場合について説明されています。
+正しいバージョンの共通言語ランタイム (CLR) でアプリケーションを実行して問題が発生した場合、CLR アクティベーション ログを表示し、デバッグできます。 アプリケーションで予想とは異なる CLR バージョンが読み込まれるときでも、CLR がまったく読み込まれないときでも、アクティベーション問題の根本原因を突き止めるときにこのログが大変役立ちます。 [.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](initialization-errors-managing-the-user-experience.md)では、アプリケーションに対して CLR が見つからない場合について説明されています。
 
 HKEY_LOCAL_MACHINE レジストリ キーまたはシステム環境変数を利用すれば、CLR アクティベーション ログをシステム全体で有効にできます。 このログは、レジストリ キーまたは環境変数が削除されるまで生成されます。 あるいは、ユーザーまたはプロセスのローカル環境変数を利用し、別の範囲や期間でログを有効にできます。
 
-CLR アクティベーション ログと[アセンブリ バインド ログ](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)は完全に異なりますので混同しないでください。
+CLR アクティベーション ログと[アセンブリ バインド ログ](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)は完全に異なりますので混同しないでください。
 
 ## <a name="to-enable-clr-activation-logging"></a>CLR アクティベーション ログを有効にするには
 
@@ -35,19 +33,19 @@ CLR アクティベーション ログと[アセンブリ バインド ログ](.
 
 - CLR アクティベーション ログを保存する既存ディレクトリの完全パスを表す文字列に `COMPLUS_CLRLoadLogDir` 環境変数を設定します。
 
-     環境変数の設定方法でその範囲が決まります。
+    環境変数の設定方法でその範囲が決まります。
 
-    - システム レベルで設定した場合、環境変数が削除されるまで、そのコンピューターのすべての .NET Framework アプリケーションに対してアクティベーション ログが有効になります。
+  - システム レベルで設定した場合、環境変数が削除されるまで、そのコンピューターのすべての .NET Framework アプリケーションに対してアクティベーション ログが有効になります。
 
-    - ユーザー レベルで設定した場合、現在のユーザー アカウントに対してのみ、アクティベーション ログが有効になります。 環境変数が削除されるまでログが記録されます。
+  - ユーザー レベルで設定した場合、現在のユーザー アカウントに対してのみ、アクティベーション ログが有効になります。 環境変数が削除されるまでログが記録されます。
 
-    - CLR を読み込む前にプロセス内から設定した場合、プロセスが終了するまでアクティベーション ログが有効になります。
+  - CLR を読み込む前にプロセス内から設定した場合、プロセスが終了するまでアクティベーション ログが有効になります。
 
-    - アプリケーションを実行する前にコマンド プロンプトで設定した場合、そのコマンド プロンプトから実行されたあらゆるアプリケーションに対してアクティベーション ログが有効になります。
+  - アプリケーションを実行する前にコマンド プロンプトで設定した場合、そのコマンド プロンプトから実行されたあらゆるアプリケーションに対してアクティベーション ログが有効になります。
 
-     たとえば、プロセスレベルの範囲で c:\clrloadlogs ディレクトリにアクティベーション ログを保存するには、アプリケーションを実行する前にコマンド プロンプト ウィンドウを開き、次を入力します。
+    たとえば、プロセスレベルの範囲で c:\clrloadlogs ディレクトリにアクティベーション ログを保存するには、アプリケーションを実行する前にコマンド プロンプト ウィンドウを開き、次を入力します。
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
@@ -65,60 +63,60 @@ CLR アクティベーション ログは、CLR アクティベーションと A
 
 次のアクティベーション ログ例では、最も役に立つ情報が強調表示されており、ログの後に説明が付いています。
 
-```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+```output
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
 - **CLR Loading log** には、マネージド コードを読み込んだプロセスを開始した実行可能ファイルのパスがあります。 ネイティブ ホストの可能性があることに注意してください。
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
 - **Installed Runtime** は、コンピューターにインストールされている CLR の一連のバージョンであり、アクティベーション要求の候補となります。
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **built with version** は、[ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) のようなメソッドに提供されたバイナリの構築に利用された CLR のバージョンです。
+- **built with version** は、[ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) のようなメソッドに提供されたバイナリの構築に利用された CLR のバージョンです。
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **feature-on-demand installation** は Windows 8 で .NET Framework 3.5 を有効にすることを指します。 このシナリオの詳細については、「[.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)」を参照してください。
+- **feature-on-demand installation** は Windows 8 で .NET Framework 3.5 を有効にすることを指します。 このシナリオの詳細については、「[.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](initialization-errors-managing-the-user-experience.md)」を参照してください。
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
 ## <a name="see-also"></a>関連項目
 
-- [配置](../../../docs/framework/deployment/index.md)
-- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [配置](index.md)
+- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

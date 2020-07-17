@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 77c88786befb92960f4cfa4a960cbfc624318b26
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c154d4ad561e0bd9d82adaca77d2e30f11a5237
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771595"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379664"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString メソッド
-この ICorDebugStringValue によって参照される文字列を取得します。  
+このによって参照される文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,7 +31,7 @@ ms.locfileid: "67771595"
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
@@ -43,16 +41,16 @@ HRESULT GetString (
  [in] `szString` 配列のサイズ。  
   
  `pcchString`  
- [out]返される文字数へのポインター、`szString`配列。  
+ 入出力配列で返された文字数へのポインター `szString` 。  
   
  `szString`  
- [out]取得した文字列を格納する配列。  
+ 入出力取得した文字列を格納する配列。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

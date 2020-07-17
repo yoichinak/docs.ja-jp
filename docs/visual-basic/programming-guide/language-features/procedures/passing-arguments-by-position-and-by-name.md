@@ -1,5 +1,5 @@
 ---
-title: 位置と名前による引数渡し (Visual Basic)
+title: 位置と名前による引数渡し
 ms.date: 02/01/2018
 helpviewer_keywords:
 - arguments [Visual Basic], passing by name
@@ -22,63 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 686b64977f086c8128e56298a0ed8c5aa0c51efa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791886"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364033"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>位置と名前による引数渡し (Visual Basic)
-呼び出すと、`Sub`または`Function`プロシージャの引数を渡すことができます*位置によって*: プロシージャの定義で出現する順序で-渡すことができますか*名前で*、なし配置を考慮します。  
-  
- 引数には、名の後にコロンと等号 (=) が宣言されているのかを指定する引数を名前で渡す場合 (`:=`)、その後に、引数の値。 任意の順序で名前付き引数を指定することができます。  
-  
- たとえば、次`Sub`手順は次の 3 つの引数を受け取ります。  
-  
- [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
-  
- このプロシージャを呼び出すときに、位置、名前、またはその両方の組み合わせを使用して引数を指定することができます。  
-  
-## <a name="passing-arguments-by-position"></a>位置による引数渡し  
- 呼び出すことができます、`Display`メソッドとその引数が位置によって渡され、次の例に示すように、コンマで区切られます。  
-  
-[!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
-  
- 位置指定引数リストで省略可能な引数を省略した場合、コンマでは、その場所を保持する必要があります。 次の例では、`Display`メソッドなし、`age`引数。  
-  
-[!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)] 
-  
-## <a name="passing-arguments-by-name"></a>名前による引数渡し  
- 代わりに、呼び出すことができます`Display`名前によって渡される引数にもコンマで区切られた、次の例に示すようにします。  
-  
-[!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
 
- この方法で名前による引数渡しは、1 つ以上の省略可能な引数を持つプロシージャを呼び出す場合に特に便利です。 引数を名前で指定する場合は、引数の位置を示すために連続するコンマを使用する必要ありません。 名前による引数渡しやすく引数を渡し、省略しているものを追跡します。  
-  
-## <a name="mixing-arguments-by-position-and-by-name"></a>位置と名前による引数の混在  
+`Sub` または `Function` プロシージャを呼び出すときに、引数を "*位置*" (プロシージャの定義に表示されている順序) で渡すことができます。また、位置に関係なく、"*名前*" で渡すこともできます。
 
-次の例に示すように、両方の位置と、1 つのプロシージャ呼び出しで名前による引数を指定できます。  
-  
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
-  
- 前の例では、余分なコンマは省略された場所を保持するために必要な`age`引数のため`birth`は名前によって渡されます。  
-  
-15.5 前に、のバージョンの Visual Basic での位置と名前、位置指定引数の組み合わせで引数を指定するときにすべてあります最初。 名前で引数を指定すると、残りの引数する必要がありますすべてが名前によって渡されます。  たとえば、次の呼び出し、`Display`メソッドには、コンパイラ エラーが表示されます[BC30241:。名前付き引数が想定](../../../misc/bc30241.md)します。
+引数を名前で渡す場合は、引数の宣言名の後にコロンと等号 (`:=`) を入力し、その後に引数の値を指定します。 名前付き引数は任意の順序で指定できます。
 
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
+たとえば、次の `Sub` プロシージャは 3 つの引数を受け取ります。
 
-Visual Basic 15.5 以降では、位置指定引数は、名前付き引数終了位置指定引数が正しい位置にある場合。 Visual Basic 15.5 では、以前の呼び出しでコンパイルされた場合、`Display`メソッドが正常にコンパイルし、コンパイラ エラーを生成しなく[BC30241](../../../misc/bc30241.md)します。  
+[!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-混在させるし、任意の順序で名前付きの位置指定引数と一致するこの機能は、コードを読みやすくする名前付き引数を使用する場合に特に便利です。 たとえば、次`Person`クラスのコンス トラクターには、型の 2 つの引数が必要です。 `Person`、どちらも指定できます`Nothing`します。 
+このプロシージャを呼び出すときに、位置、名前、またはこの両方の組み合わせを使用して引数を指定できます。
 
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)] 
+## <a name="passing-arguments-by-position"></a>引数を位置で渡す
 
-コードの意図をオフにときに混合の名前付きの位置指定引数を使用して、値の`father`と`mother`引数が`Nothing`:
+次の例に示すように、位置で渡す引数をコンマで区切って指定して、`Display` メソッドを呼び出すことができます。
 
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
+[!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-名前付き引数を位置指定引数を実行するには、Visual Basic プロジェクトに次の要素を追加する必要があります (\*.vbproj) ファイル。
+位置引数リストで省略可能な引数を省略する場合は、コンマを使用してその場所を保持する必要があります。 次の例では、`age` 引数を指定せずに `Display` メソッドを呼び出します。
+
+[!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
+
+## <a name="passing-arguments-by-name"></a>引数を名前で渡す
+
+次の例に示すように、名前で渡す引数をコンマで区切って指定して、`Display` メソッドを呼び出すこともできます。
+
+[!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
+
+このような名前による引数渡しは、省略可能な引数が複数あるプロシージャを呼び出すときに特に役立ちます。 引数を名前で指定する場合、連続するコンマを使用して欠けている位置引数を示す必要はありません。 また、引数を名前で渡すと、渡す引数と省略する引数を追跡しやすくなります。
+
+## <a name="mixing-arguments-by-position-and-by-name"></a>位置と名前の組み合わせで引数を渡す
+
+次の例に示すように、1 つのプロシージャ呼び出しで、位置と名前の両方で引数を指定できます。
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
+
+前の例では、`birth` が名前で渡されているため、省略された `age` 引数の場所を保持するためにコンマを追加する必要はありません。
+
+Visual Basic 15.5 より前のバージョンでは、位置と名前の組み合わせで引数を指定するときに、位置引数を常に最初に指定する必要があります。 引数を名前で指定したら、残りの引数はすべて名前で渡す必要があります。  たとえば、次の `Display` メソッドの呼び出しでは、"[BC30241: Named argument expected\(名前付き引数が必要です\)](../../../misc/bc30241.md)" というコンパイラ エラーが表示されます。
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
+
+Visual Basic 15.5 以降では、末尾の位置引数が正しい位置にあれば、位置引数を名前付き引数の後に指定できます。 Visual Basic 15.5 でコンパイルすると、前の `Display` メソッドの呼び出しは正常にコンパイルされ、コンパイラ エラー [BC30241](../../../misc/bc30241.md) は生成されなくなりました。
+
+名前付き引数と位置引数を任意の順序で組み合わせるこの機能は、名前付き引数を使用してコードを読みやすくする場合に特に役立ちます。 たとえば、次の `Person` クラスのコンストラクターには、`Person` 型の 2 つの引数が必要であり、どちらも `Nothing` にすることができます。
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
+
+名前付き引数と位置引数の組み合わせを使用すると、`father` および `mother` 引数の値が `Nothing` の場合に、コードの意図を明確にすることができます。
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
+
+位置引数の後に名前付き引数を指定するには、Visual Basic プロジェクト (\*.vbproj) ファイルに次の要素を追加する必要があります。
 
 ```xml
 <PropertyGroup>
@@ -86,21 +89,21 @@ Visual Basic 15.5 以降では、位置指定引数は、名前付き引数終�
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic 言語バージョンの設定](../../../language-reference/configure-language-version.md)に関するページを参照してください。
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>名前による引数渡しに関する制限事項  
+## <a name="restrictions-on-supplying-arguments-by-name"></a>引数を名前で指定する場合の制限事項
 
-必須の引数を入力せずに名前では、引数を渡すことはできません。 省略可能な引数のみを省略することができます。  
-  
-名前では、パラメーター配列を渡すことはできません。 これは、プロシージャを呼び出すときに、不特定数のパラメーター配列のコンマ区切りの引数を指定して、コンパイラは 1 つ以上の引数を 1 つの名前に関連付けることはできません。  
-  
+必須の引数の入力を避けるために、引数を名前で渡すことはできません。 省略できるのは、省略可能な引数だけです。
+
+パラメーター配列を名前で渡すことはできません。 これは、プロシージャを呼び出すときに、パラメーター配列に対して不特定数のコンマ区切りの引数を指定しますが、コンパイラは複数の引数を 1 つの名前に関連付けることができないためです。
+
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [省略可能なパラメーター](./optional-parameters.md)
 - [パラメーター配列](./parameter-arrays.md)
-- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
-- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+- [Optional](../../../language-reference/modifiers/optional.md)
+- [ParamArray](../../../language-reference/modifiers/paramarray.md)

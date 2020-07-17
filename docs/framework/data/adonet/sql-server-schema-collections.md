@@ -2,15 +2,15 @@
 title: SQL Server スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878463"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794335"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server スキーマ コレクション
-Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するのには、呼び出し、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
+Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するには、引数を指定しないで、またはスキーマ コレクション名に "MetaDataCollections" を指定して、**GetSchema** メソッドを呼び出します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
 ## <a name="databases"></a>データベース  
   
@@ -44,14 +44,14 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |table_catalog|String|インデックスが関連付けられているテーブル名。|  
 |table_schema|String|インデックスが関連付けられているテーブルを含むスキーマ。|  
 |table_name|String|テーブル名。|  
-|index_name|String|インデックスの名前。|  
+|index_name|String|インデックス名。|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  .NET Framework 3.5 SP1 および SQL Server 2008 以降では、新しい空間型、ファイルストリーム、およびスパース列をサポートするために、以下の列が Indexes スキーマ コレクションに追加されています。 これらの列は、以前のバージョンの .NET Framework および SQL Server ではサポートされません。  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
-|type_desc|String|インデックスの種類。次のいずれかの値になります。<br /><br /> -ヒープ<br />クラスター化<br />-   NONCLUSTERED<br />-   XML<br />空間|  
+|type_desc|String|インデックスの種類。次のいずれかの値になります。<br /><br /> -   HEAP<br />-   CLUSTERED<br />-   NONCLUSTERED<br />-   XML<br />-   SPATIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -66,9 +66,9 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |column_name|String|インデックスが関連付けられている列名。|  
 |ordinal_position|Int32|列の位置を示す序数。|  
 |KeyType|Byte|オブジェクトの型。|  
-|index_name|String|インデックスの名前。|  
+|index_name|String|インデックス名。|  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -257,5 +257,5 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
   
 ## <a name="see-also"></a>関連項目
 
-- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [データベース スキーマ情報の取得](retrieving-database-schema-information.md)
+- [ADO.NET の概要](ado-net-overview.md)

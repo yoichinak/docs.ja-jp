@@ -1,5 +1,5 @@
 ---
-title: '方法: ピクセルをコピーして Windows フォームのちらつきを低減する'
+title: '方法: フリッカを減らすためにピクセルをコピーする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a25295532d7123d92bcacc6828d3e8cfcc839d6e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937749"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182583"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>方法: ピクセルをコピーして Windows フォームのちらつきを低減する
-単純なグラフィックをアニメーション化するとユーザーことができます、ちらつき、またはその他の望ましくない視覚効果発生場合があります。 この問題を制限する方法の 1 つでは、グラフィック"bitblt"プロセスを使用します。 Bitblt 関数は、「ビット ブロック転送」カラー データのピクセルの四角形を配信元からのピクセルの四角形に。  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>方法 :ピクセルをコピーして Windows フォームのちらつきを低減する
+単純なグラフィックをアニメーション化すると、ユーザーがちらつきやその他の望ましくない視覚効果を見つめてしまうことがあります。 この問題を制限する 1 つの方法は、グラフィック上で "bitblt" プロセスを使用することです。 Bitblt は、ピクセルの元の四角形からピクセルのターゲット矩形へのカラーデータの「ビットブロック転送」です。  
   
- 使用して Windows フォーム、bitblt 関数が実行は、<xref:System.Drawing.Graphics.CopyFromScreen%2A>のメソッド、<xref:System.Drawing.Graphics>クラス。 メソッドのパラメーターでは、ソースと宛先 (ポイント単位) として、コピーされる領域のサイズに新しい図形を描画するために使用するグラフィックス オブジェクトを指定します。  
+ Windows フォームでは、クラスのメソッドを<xref:System.Drawing.Graphics.CopyFromScreen%2A>使用して bitblt が実行されます。 <xref:System.Drawing.Graphics> メソッドのパラメータでは、ソースとコピー先 (ポイント)、コピーする領域のサイズ、および新しい図形の描画に使用するグラフィックス オブジェクトを指定します。  
   
- 次の例でのフォームの形状を描画、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 次に、<xref:System.Drawing.Graphics.CopyFromScreen%2A>メソッドを使用して、図形が重複しています。  
+ 次の例では、フォーム上のイベント ハンドラーで図形が<xref:System.Windows.Forms.Control.Paint>描画されます。 次に、<xref:System.Drawing.Graphics.CopyFromScreen%2A>このメソッドを使用して図形を複製します。  
   
 > [!NOTE]
->  フォームの設定<xref:System.Windows.Forms.Control.DoubleBuffered%2A>プロパティを`true`でグラフィックス ベースのコードになります、<xref:System.Windows.Forms.Control.Paint>ダブル バッファーされたイベントがあります。 認識できるようなパフォーマンス上のメリットは、次のコードを使用するときにこれがないより複雑なグラフィックス操作のコードを使用する場合に留意すべきことです。  
+> フォームの<xref:System.Windows.Forms.Control.DoubleBuffered%2A>プロパティを設定すると`true`、イベント内のグラフィックス ベースの<xref:System.Windows.Forms.Control.Paint>コードがダブル バッファリングされます。 以下のコードを使用する場合、この方法でパフォーマンスが向上するわけではありませんが、より複雑なグラフィックス操作コードを使用する場合は、注意が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -54,13 +54,13 @@ private void Form1_Paint(System.Object sender,
             Rectangle(10,10,60,60));  
         e.Graphics.FillRectangle(Brushes.Khaki, new  
             Rectangle(20,30,60,10));  
-        e.Graphics.CopyFromScreen(new Point(10, 10), new Point(100, 100),   
+        e.Graphics.CopyFromScreen(new Point(10, 10), new Point(100, 100),
             new Size(70, 70));  
 }  
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 上記のコードは、フォームの実行は<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー、フォームが再描画されるときに、グラフィックスが持続するようにします。 そのため、呼び出さないでくださいグラフィックに関連するメソッド、<xref:System.Windows.Forms.Form.Load>イベント ハンドラーでは、フォームのサイズを変更または別の形式によって隠されている場合、描画のコンテンツは描画しないためです。  
+ 上記のコードはフォームの<xref:System.Windows.Forms.Control.Paint>イベント ハンドラで実行されるため、フォームが再描画されたときにグラフィックスが保持されます。 そのため、フォームのサイズが変更されたり、別のフォーム<xref:System.Windows.Forms.Form.Load>によって隠されたりしても描画されたコンテンツは再描画されないため、イベント ハンドラでグラフィックス関連のメソッドを呼び出しません。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397529"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607707"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -15,7 +15,7 @@ ms.locfileid: "67397529"
 
 ## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
 
-メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳しくは、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」をご覧ください。 
+メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳細については、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」を参照してください。
 
 ```xml
  <PropertyGroup>
@@ -33,11 +33,11 @@ ms.locfileid: "67397529"
 
 `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージは暗黙的に参照されるので、ベスト プラクティスとして以下が推奨されます。
 
-* .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージを明示的に参照しないようにします。
-* .NET Core を対象にするとき、特定バージョンのランタイムが必要な場合、メタパッケージを参照するのではなく、プロジェクト内で `<RuntimeFrameworkVersion>` プロパティを使用します (`1.0.4` など)。
-  * [自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)を使用し、特定のパッチ バージョンの 1.0.0 LTS ランタイムが必要な場合などにこの問題が発生する可能性があります。
-* .NET Standard を対象にするとき、特定バージョンの `NETStandard.Library` メタパッケージが必要な場合、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
-* .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NETStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
+- .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージを明示的に参照しないようにします。
+- .NET Core を対象にするとき、特定バージョンのランタイムが必要な場合、メタパッケージを参照するのではなく、プロジェクト内で `<RuntimeFrameworkVersion>` プロパティを使用します (`1.0.4` など)。
+  - [自己完結型の展開](../deploying/index.md#publish-self-contained)を使用し、特定のパッチ バージョンの 1.0.0 LTS ランタイムが必要な場合などにこの問題が発生する可能性があります。
+- .NET Standard を対象にするとき、特定バージョンの `NETStandard.Library` メタパッケージが必要な場合、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
+- .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NETStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
 
 ## <a name="implicit-version-for-some-package-references"></a>一部のパッケージ参照に対する暗黙的なバージョン
 
@@ -55,12 +55,12 @@ ms.locfileid: "67397529"
 
 > 既知の問題: .NET Core 2.1 SDK では、プロジェクトでも Microsoft.NET.Sdk.Web が使用されている場合にのみ、この構文がサポートされます。 これは、.NET Core 2.2 SDK で解決されます。
 
-ASP.NET Core メタパッケージに対するこれらの参照では、ほとんどの通常の NuGet パッケージとは動作が若干異なります。 これらのメタパッケージを使用するアプリケーションの[フレームワーク依存の展開](../deploying/index.md#framework-dependent-deployments-fdd)では、ASP.NET Core 共有フレームワークが自動的に利用されます。 メタパッケージを使用する場合、参照される ASP.NET Core NuGet パッケージの資産は、アプリケーションと共に展開**されません**。ASP.NET Core 共有フレームワークにはこれらの資産が含まれています。 共有フレームワーク内の資産は、アプリケーションの起動時間を向上させるため、ターゲット プラットフォームに対して最適化されています。 共有フレームワークについて詳しくは、「[.NET Core の配布パッケージ](../build/distribution-packaging.md)」をご覧ください。
+ASP.NET Core メタパッケージに対するこれらの参照では、ほとんどの通常の NuGet パッケージとは動作が若干異なります。 これらのメタパッケージを使用するアプリケーションの[フレームワーク依存の展開](../deploying/index.md#publish-runtime-dependent)では、ASP.NET Core 共有フレームワークが自動的に利用されます。 メタパッケージを使用する場合、参照される ASP.NET Core NuGet パッケージの資産は、アプリケーションと共に展開**されません**。ASP.NET Core 共有フレームワークにはこれらの資産が含まれています。 共有フレームワーク内の資産は、アプリケーションの起動時間を向上させるため、ターゲット プラットフォームに対して最適化されています。 共有フレームワークについて詳しくは、「[.NET Core の配布パッケージ](../distribution-packaging.md)」をご覧ください。
 
 バージョンを "*指定する*" と、フレームワーク依存の展開では ASP.NET Core の共有フレームワークの "*最小*" バージョンとして扱われ、自己完結型の展開では "*厳密な*" バージョンとして扱われます。 これには、次のような影響があります。
 
-* サーバーにインストールされている ASP.NET Core のバージョンが、PackageReference で指定されているバージョンより小さい場合、.NET Core プロセスの起動は失敗します。 Azure などのホスティング環境でメタパッケージの更新プログラムが使用できるようになる前に、NuGet.org で更新プログラムが利用可能になることがよくあります。 PackageReference でのバージョンを ASP.NET Core に更新すると、展開されているアプリケーションが失敗する可能性があります。
-* アプリケーションが[自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)として展開されている場合、アプリケーションに .NET Core の最新のセキュリティ更新プログラムが含まれていない可能性があります。 バージョンを指定しないと、SDK は自己完結型の展開に ASP.NET Core の最新バージョンを自動的に含めることができます。
+- サーバーにインストールされている ASP.NET Core のバージョンが、PackageReference で指定されているバージョンより小さい場合、.NET Core プロセスの起動は失敗します。 Azure などのホスティング環境でメタパッケージの更新プログラムが使用できるようになる前に、NuGet.org で更新プログラムが利用可能になることがよくあります。 PackageReference でのバージョンを ASP.NET Core に更新すると、展開されているアプリケーションが失敗する可能性があります。
+- アプリケーションが[自己完結型の展開](../deploying/index.md#publish-self-contained)として展開されている場合、アプリケーションに .NET Core の最新のセキュリティ更新プログラムが含まれていない可能性があります。 バージョンを指定しないと、SDK は自己完結型の展開に ASP.NET Core の最新バージョンを自動的に含めることができます。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core プロジェクトの既定のコンパイルの include
 
@@ -125,13 +125,13 @@ ASP.NET Core メタパッケージに対するこれらの参照では、ほと�
 
 ### <a name="sdk-attribute"></a>SDK 属性
 
-*.csproj* ファイルのルート `<Project>` 要素には、`Sdk` という新しい属性があります。 `Sdk` は、プロジェクトで使用される SDK を指定します。 [レイヤー化のドキュメント](cli-msbuild-architecture.md)で説明されているように、SDK は、.NET Core コードをビルドできる MSBuild [タスク](/visualstudio/msbuild/msbuild-tasks)および[ターゲット](/visualstudio/msbuild/msbuild-targets)のセットです。 .NET Core ツールには主に 3 つの SDK が付属しており、.NET Core 3.0 プレビューを使用する場合は、追加の 2 つの SDK があります。
+*.csproj* ファイルのルート `<Project>` 要素には、`Sdk` という新しい属性があります。 `Sdk` は、プロジェクトで使用される SDK を指定します。 [レイヤー化のドキュメント](cli-msbuild-architecture.md)で説明されているように、SDK は、.NET Core コードをビルドできる MSBuild [タスク](/visualstudio/msbuild/msbuild-tasks)および[ターゲット](/visualstudio/msbuild/msbuild-targets)のセットです。 .NET Core では、次の SDK を利用できます。
 
 1. ID が `Microsoft.NET.Sdk` の .NET Core SDK
 2. ID が `Microsoft.NET.Sdk.Web` の .NET Core Web SDK
 3. ID が `Microsoft.NET.Sdk.Razor` の .NET Core Razor クラス ライブラリ SDK
-4. ID が `Microsoft.NET.Sdk.Worker` の .NET Core Worker Service (.NET Core 3.0 プレビュー)
-5. ID が `Microsoft.NET.Sdk.WindowsDesktop` の .NET Core WinForms および WPF (.NET Core 3.0 プレビュー)
+4. ID が `Microsoft.NET.Sdk.Worker` の .NET Core Worker Service (.NET Core 3.0 以降)
+5. ID が `Microsoft.NET.Sdk.WindowsDesktop` の .NET Core WinForms および WPF (.NET Core 3.0 以降)
 
 .NET Core ツールを使用し、コードをビルドするには、`Sdk` 属性を `<Project>` 要素の ID のいずれかに設定する必要があります。
 
@@ -140,12 +140,12 @@ ASP.NET Core メタパッケージに対するこれらの参照では、ほと�
 `<PackageReference>` 項目要素では、[プロジェクトでの NuGet の依存関係](/nuget/consume-packages/package-references-in-project-files)を指定します。 `Include` 属性は、パッケージ ID を指定します。
 
 ```xml
-<PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
+<PackageReference Include="package-id" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>バージョン
 
-必須の `Version` 属性では、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/reference/package-versioning#version-ranges-and-wildcards)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
+必須の `Version` 属性では、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョンの範囲](/nuget/concepts/package-versioning#version-ranges)スキームの規則に従います。 既定の動作は、最小一致バージョンです。 たとえば、`Version="1.2.3"` を指定すると、NuGet 表記の `[1.2.3, )` と同等になります。つまり、パッケージのバージョンは、使用できる場合は 1.2.3 になり、使用できない場合はその後のバージョンになります。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets、PrivateAssets
 
@@ -160,28 +160,31 @@ ASP.NET Core メタパッケージに対するこれらの参照では、ほと�
 
 これらの属性には以下の項目を 1 つ以上含めることができ、複数ある場合はセミコロン `;` 文字で区切ります。
 
-* `Compile` - コンパイルで使用できる lib フォルダーの内容です。
-* `Runtime` - 配布する runtime フォルダーの内容です。
-* `ContentFiles` - 使用する *contentfiles* フォルダーの内容です。
-* `Build` - 使用する build フォルダーのプロパティ/ターゲットです。
-* `Native` - ランタイムの output フォルダーにコピーするネイティブ アセットの内容です。
-* `Analyzers` - アナライザーが使用されます。
+- `Compile` - コンパイルで使用できる *lib* フォルダーの内容です。
+- `Runtime` - 配布する *runtime* フォルダーの内容です。
+- `ContentFiles` - 使用する *contentfiles* フォルダーの内容です。
+- `Build` - 使用する *build* フォルダーのプロパティ/ターゲットです。
+- `Native` - ランタイムの *output* フォルダーにコピーするネイティブ アセットの内容です。
+- `Analyzers` - アナライザーが使用されます。
 
 代わりに、次の値を属性に含めることもできます。
 
-* `None` - いずれのアセットも使用されません。
-* `All` - すべてのアセットが使用されます。
+- `None` - いずれのアセットも使用されません。
+- `All` - すべてのアセットが使用されます。
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+
 `<DotNetCliToolReference>` 項目要素は、プロジェクトのコンテキストでユーザーが復元を望む CLI ツールを指定します。 *project.json* の `tools` ノードに代わるものです。
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>Version
+`DotNetCliToolReference` は[現在非推奨であり](https://github.com/dotnet/announcements/issues/107)、[.NET Core Local Tools](https://aka.ms/local-tools) の使用が推奨されています。
 
-`Version` は、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/create-packages/dependency-versions#version-ranges)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
+#### <a name="version"></a>バージョン
+
+`Version` は、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/create-packages/dependency-versions#version-ranges)スキームの規則に従います。 既定の動作は、最小一致バージョンです。 たとえば、`Version="1.2.3"` を指定すると、NuGet 表記の `[1.2.3, )` と同等になります。つまり、パッケージのバージョンは、使用できる場合は 1.2.3 になり、使用できない場合はその後のバージョンになります。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
@@ -221,6 +224,31 @@ RID により、自己完結型の展開を発行できます。
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
+
+## <a name="build-events"></a>ビルド イベント
+
+プロジェクト ファイルでビルド前およびビルド後のイベントを指定する方法が変更されました。 $ (ProjectDir) などのマクロが解決されないため、PreBuildEvent および PostBuildEvent プロパティは SDK スタイルのプロジェクト形式では推奨されません。 たとえば、次のコードはサポートされなくなりました。
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
+</PropertyGroup>
+```
+
+SDK スタイルのプロジェクトでは、`PreBuild` または `PostBuild` という名前の MSBuild ターゲットを使用し、`PreBuild` の `BeforeTargets` プロパティまたは `AfterTargets` の `PostBuild` プロパティを設定します。 前の例では、次のコードを使用します。
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>MSBuild ターゲットには任意の名前を使用できますが、Visual Studio IDE では `PreBuild` と `PostBuild` ターゲットが認識されるため、Visual Studio IDE でコマンドを編集できるようにするには、これらの名前を使用することをお勧めします。
 
 ## <a name="nuget-metadata-properties"></a>NuGet メタデータ プロパティ
 
@@ -262,6 +290,10 @@ UI 画面用のパッケージの長い説明。
 
 クライアントがユーザーに対して、パッケージのインストール前にパッケージ ライセンスに同意することを必須にするかどうかを示すブール値。 既定値は、`false` です。
 
+### <a name="developmentdependency"></a>DevelopmentDependency
+
+開発専用の依存関係としてパッケージをマークするかどうかを指定するブール値。指定すると、そのパッケージは他のパッケージに依存関係として含まれなくなります。 PackageReference (NuGet 4.8 以降) では、このフラグは、コンパイルからコンパイル時アセットが除外されることも意味します。 詳しくは、「[DevelopmentDependency support for PackageReference (PackageReference に対する DevelopmentDependency のサポート)](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference)」をご覧ください。
+
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
 [SPDX ライセンス識別子](https://spdx.org/licenses/)、または式です。 たとえば、`Apache-2.0` のようにします。
@@ -270,7 +302,7 @@ UI 画面用のパッケージの長い説明。
 
 ライセンス式の正確な構文については、[ABNF](https://tools.ietf.org/html/rfc5234) をご覧ください。
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -293,7 +325,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 SPDX 識別子が割り当てられていないライセンス、またはカスタム ライセンスを使用している場合、パッケージ内のライセンス ファイルへのパス (それ以外の場合は、`PackageLicenseExpression` が優先されます)
 
-`PackageLicenseUrl` を置き換えるもので、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
+`PackageLicenseUrl` が置き換えられ、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio バージョン 15.9.4 および.NET SDK 2.1.502 または 2.2.101 以降が必要です。
 
 プロジェクトに明示的に追加することによって、ライセンス ファイルをパックする必要があります。使用例を次に示します。
 
@@ -348,6 +380,12 @@ UI 画面のパッケージのアイコンとして使用する背景が透明�
 
 リポジトリの種類を指定します。 既定値は "git" です。
 
+### <a name="repositorybranch"></a>RepositoryBranch
+リポジトリ内のソース ブランチの名前を指定します。 プロジェクトが NuGet パッケージにパッケージ化されると、パッケージ メタデータに追加されます。
+
+### <a name="repositorycommit"></a>RepositoryCommit
+任意のリポジトリ コミットまたは変更セット。パッケージがどのソースに対してビルドされたかを示します。 このプロパティを含めるには、`RepositoryUrl` も指定する必要があります。 プロジェクトが NuGet パッケージにパッケージ化されると、このコミットまたは変更セットがパッケージ メタデータに追加されます。
+
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 
 パッケージのビルド後に、パックでパッケージの分析を実行しないことを指定します。
@@ -358,7 +396,7 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-このブール値は、ビルド出力アセンブリを *.nupkg* ファイルにパックするかどうかを指定します。
+このブール値は、ビルド出力アセンブリを *.nupkg* ファイルにパッケージ化するかどうかを指定します。
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
@@ -389,11 +427,11 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 ## <a name="assemblyinfo-properties"></a>AssemblyInfo プロパティ
 
-通常、*AssemblyInfo* ファイル内に存在していた[アセンブリ属性](../../framework/app-domains/set-assembly-attributes.md)は、プロパティから自動的に生成されるようになりました。
+通常、*AssemblyInfo* ファイル内に存在していた[アセンブリ属性](../../standard/assembly/set-attributes.md)は、プロパティから自動的に生成されるようになりました。
 
 ### <a name="properties-per-attribute"></a>属性ごとのプロパティ
 
-次の表に示すように、各属性にはコンテンツを制御するプロパティと生成を無効にするプロパティがあります。
+次の表に示すように、各属性にはその内容を制御するプロパティと、その生成を無効にするプロパティがあります。
 
 | 属性                                                      | プロパティ               | 無効にするプロパティ                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
@@ -410,11 +448,11 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 メモ:
 
-* `AssemblyVersion` と `FileVersion` の既定値は、サフィックスなしで `$(Version)` の値を受け取ることです。 たとえば、`$(Version)` が `1.2.3-beta.4` の場合、値は `1.2.3` です。
-* `InformationalVersion` の既定値は、`$(Version)` の値です。
-* プロパティが存在する場合、`InformationalVersion` の末尾には `$(SourceRevisionId)` が付加されます。 `IncludeSourceRevisionInInformationalVersion` を使用して無効にすることができます。
-* NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
-* `Configuration` はすべてのビルド プロセスで共有され、設定には `dotnet` コマンドの`--configuration` パラメーターを使用します。
+- `AssemblyVersion` と `FileVersion` の既定値は、サフィックスなしで `$(Version)` の値を受け取ることです。 たとえば、`$(Version)` が `1.2.3-beta.4` の場合、値は `1.2.3` です。
+- `InformationalVersion` の既定値は、`$(Version)` の値です。
+- プロパティが存在する場合、`InformationalVersion` の末尾には `$(SourceRevisionId)` が付加されます。 `IncludeSourceRevisionInInformationalVersion` を使用して無効にすることができます。
+- NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
+- `Configuration` はすべてのビルド プロセスで共有され、設定には `dotnet` コマンドの`--configuration` パラメーターを使用します。
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

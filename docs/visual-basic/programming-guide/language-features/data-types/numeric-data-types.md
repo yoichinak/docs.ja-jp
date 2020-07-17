@@ -1,5 +1,5 @@
 ---
-title: 数値データ型 (Visual Basic)
+title: 数値データ型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -23,65 +23,65 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 72cdca295e209935687f67ad290e816775d9fe13
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663376"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393677"
 ---
 # <a name="numeric-data-types-visual-basic"></a>数値データ型 (Visual Basic)
-Visual Basic では、いくつかを提供*数値データ型*のさまざまな表現での数値を処理します。 *整数*型整数を表すのみ (正、負、および 0)、および*非整数*型では、数値を表す整数と小数部の両方でします。  
+Visual Basic には、さまざまな表現の数値を処理するためにいくつかの "*数値データ型*" が用意されています。 "*整数*" 型は整数 (正、負、ゼロ) のみを表し、"*非整数*" 型は整数部と小数部の両方がある数値を表します。  
   
- Visual Basic のデータ型のサイド バイ サイドで比較を示す表を参照してください[データ型](../../../../visual-basic/language-reference/data-types/index.md)します。  
+ Visual Basic データ型を並べて比較している表を、[データ型](../../../language-reference/data-types/index.md)に関するページで参照してください。  
   
 ## <a name="integral-numeric-types"></a>整数数値型  
- *整数データ型*は小数部のない数だけを表す。  
+ "*整数データ型*" は、小数部を含まない数値のみを表す型です。  
   
- *署名*整数データ型は[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)(8 ビット)、 [Short データ型](../../../../visual-basic/language-reference/data-types/short-data-type.md)(16 ビット)、[Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)(32 ビット)、および[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)(64 ビット)。 変数は、小数部ではなく整数を常に保存する場合、これらの型のいずれかとして宣言します。  
+ "*符号付き*" の整数データ型は、[SByte データ型](../../../language-reference/data-types/sbyte-data-type.md) (8 ビット)、[Short データ型](../../../language-reference/data-types/short-data-type.md) (16 ビット)、[Integer データ型](../../../language-reference/data-types/integer-data-type.md) (32 ビット)、および [Long データ型](../../../language-reference/data-types/long-data-type.md) (64 ビット) です。 変数に小数ではなく整数が常に格納される場合は、これらのいずれかの型として宣言します。  
   
- *符号なし*整数型には[Byte データ型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)(8 ビット)、 [UShort データ型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)(16 ビット)、 [UInteger データ型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)(32 ビット)、および[Ulong 型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)(64 ビット)。 バイナリ データ、または不明な性質のデータが、変数が含まれる場合は、これらの型のいずれかとしてを宣言します。  
+ "*符号なし*" の整数型は、[Byte データ型](../../../language-reference/data-types/byte-data-type.md) (8 ビット)、[UShort データ型](../../../language-reference/data-types/ushort-data-type.md) (16 ビット)、[UInteger データ型](../../../language-reference/data-types/uinteger-data-type.md) (32 ビット)、および [ULong データ型](../../../language-reference/data-types/ulong-data-type.md) (64 ビット) です。 変数にバイナリ データまたは不明な性質のデータが含まれる場合は、これらのいずれかの型として宣言します。  
   
 ### <a name="performance"></a>パフォーマンス  
- 算術演算は、他のデータ型よりも整数型の高速です。 最も高速なは、`Integer`と`UInteger`Visual Basic における型。  
+ 算術演算は、整数型を使用すると他のデータ型よりも高速です。 Visual Basic では `Integer` 型と `UInteger` 型が最も高速です。  
   
-### <a name="large-integers"></a>大きな整数  
- 大きい整数値を保持する必要がある場合、`Integer`データ型が保持できる、使用することができます、`Long`代わりにデータを入力します。 `Long` 変数は、9,223,372,036,854,775,807 を通じて-9,223,372,036,854,775,808 から番号を保持できます。 操作を`Long`でよりも少し低速`Integer`します。  
+### <a name="large-integers"></a>大きい整数  
+ `Integer` データ型よりも大きな整数を保持する必要がある場合は、代わりに `Long` データ型を使用できます。 `Long` 変数は、-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807 までの数値を保持できます。 `Long` を使用した演算は、`Integer` よりも少し遅くなります。  
   
- 使用することがさらに大きな値が必要な場合、 [Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)します。 経由で 79,228,162,514,264,337,593,543,950,335-79,228,162,514,264,337,593,543,950,335 から番号を保持できる、`Decimal`変数の場合は、小数点以下桁数を使用しないでください。 ただし、操作を`Decimal`番号は、その他の任意の数値データ型よりも非常に遅くなります。  
+ さらに大きな値が必要な場合は、[Decimal データ型](../../../language-reference/data-types/decimal-data-type.md)を使用できます。 小数位を使用しない場合、`Decimal` 変数には -79,228,162,514,264,337,593,543,950,335 から 79,228,162,514,264,337,593,543,950,335 までの数値を保持できます。 ただし、`Decimal` 数値を使用した演算は、他の数値データ型を使用するよりもかなり遅くなります。  
   
 ### <a name="small-integers"></a>小さい整数  
- 完全な範囲を必要としない場合、`Integer`に使用できるデータの種類、`Short`データ型は、-32,768 ~ 32,767 の整数を格納することができます。 最小の整数の範囲の`SByte`データ型は-128 から 127 までの整数値を格納します。 共通言語ランタイムに格納できる場合があります、非常に多数の小さい整数を保持する変数があれば、`Short`と`SByte`変数より効率的にして、メモリ消費量を保存します。 ただし、操作を`Short`と`SByte`でよりもやや低速`Integer`します。  
+ `Integer` データ型のすべての範囲が必要ない場合は、-32,768 から 32,767 までの整数を保持できる `Short` データ型を使用できます。 最も小さい整数の範囲のためには、`SByte` データ型に -128 から 127 までの整数が保持されます。 小さい整数を保持する変数の数が非常に多い場合、共通言語ランタイムによって `Short` と `SByte` 変数がより効率的に格納され、メモリ消費が節約されることがあります。 ただし、`Short` と `SByte` を使用した演算は、`Integer` よりも多少遅くなります。  
   
 ### <a name="unsigned-integers"></a>符号なし整数  
- 変数には、負の数を保持する必要はありませんを使用することがわかっている場合、*型の unsigned*`Byte`、 `UShort`、 `UInteger`、および`ULong`します。 正の整数を 2 回よりも小さい符号付きの型を対応するこれらのデータ型の各保持できます (`SByte`、 `Short`、 `Integer`、および`Long`)。 パフォーマンスの面では、各符号なしの型は、対応する符号付きの型と同じくらい効率的です。 具体的には、`UInteger`と共有`Integer`されるすべての基本の数値データ型の中で最も効率的なの区別します。  
+ 変数が負の数を保持する必要がないことがわかっている場合は、"*符号なしの型*" である `Byte`、`UShort`、`UInteger`、および `ULong` を使用できます。 これらのデータ型はそれぞれ、対応する符号付きの型 (`SByte`、`Short`、`Integer`、および `Long`) の 2 倍の正の整数を保持できます。 パフォーマンス面では、符号なしの各型の効率は、対応する符号付きの型とまったく同じです。 特に、`UInteger` が `Integer` と共通するのは、すべての基本数値データ型の中で最も効率的であるという特徴です。  
   
-## <a name="nonintegral-numeric-types"></a>非整数の数値型  
- *整数以外のデータ型*は整数と小数部の両方を持つ数値を表す。  
+## <a name="nonintegral-numeric-types"></a>非整数数値型  
+ "*非整数データ型*" は、整数部と小数部の両方を含む数値を表す型です。  
   
- 非整数の数値データ型は`Decimal`(128 ビットの固定小数点)、 [1 つのデータ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)(32 ビットの浮動小数点)、および[Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md)(64 ビットの浮動小数点)。 署名されたすべての種類です。 変数には、小数が含まれることができる場合、これらの型のいずれかとしてを宣言します。  
+ 非整数データ型は、`Decimal` (128 ビット固定小数点)、[Single データ型](../../../language-reference/data-types/single-data-type.md) (32 ビット浮動小数点)、および [Double データ型](../../../language-reference/data-types/double-data-type.md) (64 ビット浮動小数点) です。 これらはすべて符号付きの型です。 変数が小数を含む可能性がある場合は、これらのいずれかの型として宣言します。  
   
- `Decimal` 浮動小数点データ型はありません。 `Decimal` 番号は、バイナリの整数値と値のどの部分が、小数を指定する整数のスケール ファクターがあります。  
+ `Decimal` は浮動小数点データ型ではありません。 `Decimal` 数は、2 進数の整数値と、値のどの部分が小数であるかを指定する整数のスケーリング ファクターを保持します。  
   
- 使用することができます`Decimal`money 値変数。 利点は、値の有効桁数です。 `Double`データ型が高速で、以下のメモリが必要ですが、丸め誤差が発生します。 `Decimal`データ型は小数点以下桁数が 28 を完全な精度を保持します。  
+ 金額には `Decimal` 変数を使用できます。 利点は値の精度です。 `Double` データ型の方が高速で、必要なメモリが少なくなりますが、丸めエラーが発生する可能性があります。 `Decimal` データ型では、小数点以下 28 桁まで完全な精度が保持されます。  
   
- 浮動小数点 (`Single`と`Double`) の数値よりも大きい範囲がある`Decimal`数値しますが、丸め誤差が発生することができます。 浮動小数点型のサポート有効桁数よりも少ない`Decimal`ですより大きい値を表すことができます。  
+ 浮動小数点 (`Single` および `Double`) 数は、`Decimal` 数よりも広い範囲に対応しますが、丸めエラーが発生する可能性があります。 浮動小数点型は、`Decimal` よりも有効桁数は少ないものの、より大きい値を表すことができます。  
   
- 非整数の数値で表現できる mmmEeee、として mmm は、*仮数*(有効桁数) eee であり、*指数*(10 の累乗) します。 非整数型の最上位の正の値は 7.9228162514264337593543950335 e + 28 `Decimal`、3.4028235 e + 38`Single`との-1.79769313486231570e+308`Double`します。  
+ 非整数の数値は mmmEeee として表すことができます。mmm は "*仮数*" (有効桁数)、eee は "*指数*" (10 の累乗) です。 非整数型の最大の正の値は、7.9228162514264337593543950335E+28 (`Decimal`)、3.4028235E+38 (`Single`)、および 1.79769313486231570E+308 (`Double`) です。  
   
 ### <a name="performance"></a>パフォーマンス  
- `Double` 小数部のデータ型の中で最も効率的な現在のプラットフォーム上のプロセッサでは、倍精度浮動小数点演算を実行するためです。 ただし、操作を`Double`などの整数型と同様に高速でない`Integer`します。  
+ `Double` は小数データ型の中で最も効率的です。現在のプラットフォームのプロセッサが、倍精度で浮動小数点演算を実行するためです。 ただし、`Double` を使用した演算は、`Integer` などの整数型ほど高速ではありません。  
   
-### <a name="small-magnitudes"></a>小さい絶対値  
- (0 に最も近い)、最小の可能な大きさの数値の`Double`変数に保持できます - 4.94065645841246544E のような小さい-324 の負の値および 4.94065645841246544E-の正の値。  
+### <a name="small-magnitudes"></a>大きさが小さい  
+ 大きさが最も小さくなる (0 に最も近くなる) 可能性がある数の場合、`Double` 変数は、負の値として -4.94065645841246544E-324、正の値として 4.94065645841246544E-324 を保持できます。  
   
 ### <a name="small-fractional-numbers"></a>小さい小数  
- 完全な範囲を必要としない場合、`Double`に使用できるデータの種類、 `Single` - 3.4028235 e + 38 ~ 3.4028235 e + 38 から浮動小数点数を格納できるデータ型。 最も小さいマグニチュード`Single`変数は、- 1.401298E-45 の負の値および 1.401298-正の値の 45。 非常に多くの小規模の浮動小数点数を保持する変数があれば、共通言語ランタイムが格納できる場合があります、`Single`変数より効率的にして、メモリ消費量を保存します。  
+ `Double` データ型のすべての範囲が必要ない場合は、-3.4028235E+38 から 3.4028235E+38 までの浮動小数点数を保持できる `Single` データ型を使用できます。 `Single` 変数の最小の大きさは、負の値が -1.401298E-45、正の値が 1.401298E-45 です。 小さい浮動小数点数を保持する変数の数が非常に多い場合、共通言語ランタイムによって `Single` 変数がより効率的に格納され、メモリ消費が節約されることがあります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [文字データ型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
-- [その他のデータ型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
-- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [基本データ型](elementary-data-types.md)
+- [文字データ型](character-data-types.md)
+- [その他のデータ型](miscellaneous-data-types.md)
+- [トラブルシューティング (データ型)](troubleshooting-data-types.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f1dd892429724866182248b0c0413a7d2437cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed7110cb2e2b7a91ed81d2d81c2989d1733c1ee6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766075"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207313"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle メソッド
-プロセスを識別するハンドルを取得します。  
+プロセスを処理するハンドルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,16 +33,16 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
   
 ## <a name="parameters"></a>パラメーター  
  `phProcessHandle`  
- [out]ポインター、`HPROCESS`はプロセスを識別するハンドル。  
+ 入出力プロセスを指すハンドルであるへのポインター `HPROCESS` 。  
   
 ## <a name="remarks"></a>Remarks  
- 取得されたハンドルは、デバッグのインターフェイスが所有します。 デバッガーでは、使用する前に、ハンドルを複製する必要があります。  
+ 取得したハンドルは、デバッグインターフェイスによって所有されています。 デバッガーは、使用する前にハンドルを複製する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

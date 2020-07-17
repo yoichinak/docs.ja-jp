@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40a6376d4f4ffd09743441df1965d0a0f0d969b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3bb1857075f857f62ec92ac6a2876a49655c70e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764843"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421060"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next メソッド
-現在のカーソル位置から、コレクションから指定されたプロセスの数を取得します。  
+現在のカーソル位置から開始して、指定した数のプロセスをコレクションから取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]取得するプロセスの数。  
+ から取得するプロセスの数。  
   
  `objects`  
- [out]配列へのポインターの取得[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)プロセスを表すオブジェクト。  
+ 入出力取得された[ICorPublishProcess](icorpublishprocess-interface.md)オブジェクトの配列へのポインター。それぞれがプロセスを表します。  
   
  `pceltFetched`  
- [out]プロセスの数へのポインターが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
+ 入出力実際に返されたプロセスの数へのポインター。 が1の場合、この値は null `celt` になります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl, CorPub.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorPublishProcessEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [ICorPublishProcessEnum インターフェイス](icorpublishprocessenum-interface.md)

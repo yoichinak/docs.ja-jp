@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 550d25e995bdfe010fb1aa664a7c9882a775f4d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 759ba7bd46f8231143e743aa5ffcabffeb99c3b6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757163"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205110"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild メソッド
 現在のフレームが子フレームであるかどうかを判断します。  
@@ -35,7 +33,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="parameters"></a>パラメーター  
  `pIsChild`  
- [out]現在のフレームが子フレームであるかどうかを指定するブール値。  
+ 入出力現在のフレームが子フレームであるかどうかを指定するブール値。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -43,25 +41,25 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|子の状態が正常に返されました。|  
-|E_FAIL|子の状態が返されませんでした。|  
+|E_FAIL|子の状態を返すことができませんでした。|  
 |E_INVALIDARG|`pIsChild` が null です。|  
   
 ## <a name="exceptions"></a>例外  
   
 ## <a name="remarks"></a>Remarks  
- `IsChild`メソッドを返します。`true`フレーム オブジェクトを、メソッドを呼び出すことが別のフレームの子である場合。 大文字と小文字の場合を使用して、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)フレームを親となっているかどうかを確認する方法。  
+ メソッドを `IsChild` `true` 呼び出す frame オブジェクトが別のフレームの子である場合、メソッドはを返します。 この場合は、 [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md)メソッドを使用して、フレームが親であるかどうかを確認します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugNativeFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2 インターフェイス](icordebugnativeframe2-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

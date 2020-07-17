@@ -12,38 +12,36 @@ f1_keywords:
 helpviewer_keywords:
 - ICLRDomainManager interface [.NET Framework hosting]
 ms.assetid: f08b2390-d872-4521-a815-e9c237c4c45d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce53149b92ca40ad50ecbefaf4701940e8567ae5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dda243ccbf18f396c1bcc03358997ea0f06c42a8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984751"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615710"
 ---
 # <a name="iclrdomainmanager-interface"></a>ICLRDomainManager インターフェイス
-初期化プロパティを指定して、既定のアプリケーション ドメインを初期化するために使用されるアプリケーション ドメイン マネージャーを指定するホストを有効にします。  
+既定のアプリケーションドメインを初期化し、初期化プロパティを指定するために使用されるアプリケーションドメインマネージャーをホストが指定できるようにします。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[SetAppDomainManagerType メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)|派生した、型を指定します、<xref:System.AppDomainManager?displayProperty=nameWithType>の既定のアプリケーション ドメインを初期化するために使用されるアプリケーション ドメイン マネージャーのクラス。|  
-|[SetPropertiesForDefaultAppDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setpropertiesfordefaultappdomain-method.md)|既定のアプリケーション ドメインを初期化するために使用されるプロパティを設定します。|  
+|[SetAppDomainManagerType メソッド](iclrdomainmanager-setappdomainmanagertype-method.md)|<xref:System.AppDomainManager?displayProperty=nameWithType>既定のアプリケーションドメインを初期化するために使用されるアプリケーションドメインマネージャーのクラスから派生した型を指定します。|  
+|[SetPropertiesForDefaultAppDomain メソッド](iclrdomainmanager-setpropertiesfordefaultappdomain-method.md)|既定のアプリケーションドメインを初期化するために使用されるプロパティを設定します。|  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスのインスタンスを取得する、 [iclrcontrol::getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) IID マネージャーの種類を持つメソッド`IID_ICLRDomainManager`します。  
+## <a name="remarks"></a>解説  
+ このインターフェイスのインスタンスを取得するには、マネージャーの型 IID で[ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md)メソッドを呼び出し `IID_ICLRDomainManager` ます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ホスト インターフェイス](hosting-interfaces.md)
+- [ホスティング](index.md)

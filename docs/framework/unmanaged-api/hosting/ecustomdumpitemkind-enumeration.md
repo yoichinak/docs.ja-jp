@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12a1142759532890f541a7c81006f8b3aed4d299
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747400"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616269"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 列挙型
-将来の拡張機能用に予約されて、 [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)構造体。  
+[Customdumpitem](customdumpitem-structure.md)構造体の将来の拡張のために予約されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +36,18 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|将来使用するために予約されています。|  
+|`DUMP_ITEM_None`|将来利用するために予約されています。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRErrorReportingManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRErrorReportingManager インターフェイス](iclrerrorreportingmanager-interface.md)
+- [ホスティングの列挙体](hosting-enumerations.md)

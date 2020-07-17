@@ -6,12 +6,12 @@
       items:
         - name: バリアント ジェネリック インターフェイスの作成
           href: creating-variant-generic-interfaces.md
-        - name: ジェネリック コレクションに対するインターフェイスでの分散の使用
+        - name: ジェネリック コレクションに対するインターフェイスでの変性の使用
           href: using-variance-in-interfaces-for-generic-collections.md
-    - name: デリゲートの分散
+    - name: デリゲートの変性
       href: variance-in-delegates.md
       items:
-        - name: デリゲートの分散の使用
+        - name: デリゲートの変性の使用
           href: using-variance-in-delegates.md
-        - name: Func および Action 汎用デリゲートでの分散の使用
+        - name: ' Func および Action 汎用デリゲートでの変性の使用'
           href: using-variance-for-func-and-action-generic-delegates.md

@@ -1,5 +1,5 @@
 ---
-title: REM ステートメント (Visual Basic)
+title: REM ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.'
@@ -13,41 +13,41 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 68c898145bd8845c657b6ebb8776a3a9027c359c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783937"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404266"
 ---
 # <a name="rem-statement-visual-basic"></a>REM ステートメント (Visual Basic)
-プログラムのソース コードにコメントを記述するために使用します。  
+プログラムのソース コード内に説明のための注記を含めるために使用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 REM comment  
 ' comment  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `comment`  
- 省略可能です。 含めるコメントのテキスト。 スペースは間で必要な`REM`キーワードと`comment`します。  
+ 任意。 含めるコメントのテキストです。 `REM` キーワードと `comment` の間にはスペースが必要です。  
   
 ## <a name="remarks"></a>Remarks  
- 配置することができます、`REM`ステートメントまたは行に単独では別のステートメントの後にそれを配置できます。 `REM`ステートメントは、行の最後のステートメントである必要があります。 別のステートメントが続く場合、`REM`からそのステートメントをスペースで区切る必要があります。  
+ `REM` ステートメントを 1 行に単独で配置することも、別のステートメントの後の行に配置することもできます。 `REM` ステートメントは行の最後のステートメントである必要があります。 別のステートメントの後に続く場合、`REM` は、そのステートメントとスペースで区切る必要があります。  
   
- 単一引用符を使用することができます (`'`) の代わりに`REM`します。 これはコメントが同じ行に依存して別のステートメントまたは行に単独ではかどうかに当てはまります。  
+ `REM` ではなく、単一引用符 (`'`) を使用できます。 これは、コメントが同じ行で別のステートメントの後に続くか 1 つの行に単独で存在するかにかかわらず当てはまります。  
   
 > [!NOTE]
->  続行することはできません、`REM`行連結シーケンスを使用してステートメント (`_`)。 コメントが開始されると、コンパイラは特別な意味の文字をチェックしません。 複数行にコメントを記述する場合は、別の操作を使用して`REM`ステートメントまたはコメント記号 (`'`) 行ごとにします。  
+> 行連結シーケンス (`_`) を使用して `REM` ステートメントを継続することはできません。 コメントが開始された後、コンパイラは、文字に特別な意味があるかどうかを調べません。 複数行のコメントでは、各行で別の `REM` ステートメントまたはコメント記号 (`'`) を使用してください。  
   
 ## <a name="example"></a>例  
- 次の例を示しています、`REM`ステートメントでは、プログラムにコメントを記述するために使用します。 単一引用符文字を使用する方法も示しています (`'`) の代わりに`REM`します。  
+ 次の例では、プログラム内に説明のための注記を含めるために使用される `REM` ステートメントを示しています。 また、`REM` ではなく単一引用符文字 (`'`) を使用する別の方法も示しています。  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [コード内のコメント](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
-- [方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [コード内のコメント](../../programming-guide/program-structure/comments-in-code.md)
+- [方法: コード内でステートメントを分割および連結する](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

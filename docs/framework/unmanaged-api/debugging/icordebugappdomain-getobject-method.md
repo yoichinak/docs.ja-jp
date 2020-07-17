@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a21f3b36e418bbde5dcb90f25a39dae03fde77c9
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737843"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895207"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject メソッド
-共通言語ランタイム (CLR) のアプリケーション ドメインにインターフェイス ポインターを取得します。  
+共通言語ランタイム (CLR) アプリケーションドメインへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,19 +35,19 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>パラメーター  
  `ppObject`  
- [out]CLR のアプリケーション ドメインを表す ICorDebugValue インターフェイス オブジェクトのアドレスへのポインター。  
+ 入出力CLR アプリケーションドメインを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- マネージ場合<xref:System.AppDomain?displayProperty=nameWithType>このアプリケーション ドメインのオブジェクトが作成されていないメソッドを返します`S_FALSE`配置`NULL`で`*ppObject`します。  
+ このアプリケーションドメイン<xref:System.AppDomain?displayProperty=nameWithType>に対してマネージオブジェクトが構築されていない`S_FALSE`場合、 `NULL`メソッド`*ppObject`はを返し、をに配置します。  
   
-## <a name="remarks"></a>Remarks  
- マネージ プロセス内の各アプリケーション ドメインがあります<xref:System.AppDomain?displayProperty=nameWithType>それを表す、ランタイム内のオブジェクト。 この関数は、この管理に対応する ICorDebugValue インターフェイス オブジェクトを取得します<xref:System.AppDomain?displayProperty=nameWithType>オブジェクト。  
+## <a name="remarks"></a>解説  
+ プロセス内の各アプリケーションドメインは、それを<xref:System.AppDomain?displayProperty=nameWithType>表すランタイムにマネージオブジェクトを持つことができます。 この関数は、このマネージ<xref:System.AppDomain?displayProperty=nameWithType>オブジェクトに対応する ICorDebugValue インターフェイスオブジェクトを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]

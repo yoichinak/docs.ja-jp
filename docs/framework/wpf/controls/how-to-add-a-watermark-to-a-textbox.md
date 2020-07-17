@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923577"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>方法: TextBox へのウォーターマークの追加
-次の例では、使いやすさを支援する方法を示しています、<xref:System.Windows.Controls.TextBox>内での説明の背景イメージを表示することによって、<xref:System.Windows.Controls.TextBox>この時点で、イメージを削除するまで、ユーザーがテキストを入力します。 さらに、背景画像は、ユーザー入力を削除する場合、再び復元します。 次の図を参照してください。  
+次の例では、<xref:System.Windows.Controls.TextBox> 内に説明のための背景画像を表示し、ユーザーがテキストを入力すると消えるようにすることで、<xref:System.Windows.Controls.TextBox> の利便性を向上させる方法を示しています。 また、ユーザーが入力を削除すると、背景画像が再び表示されます。 次の図を参照してください。  
   
- ![背景イメージを含む TextBox](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
+ ![TextBox と背景画像](./media/editing-textbox-using-background-image.png " Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  背景イメージがこの例ではなく、単に操作で使用される理由、<xref:System.Windows.Controls.TextBox.Text%2A>プロパティの<xref:System.Windows.Controls.TextBox>が背景画像はデータ バインドが妨げられないようにします。  
+> この例で、<xref:System.Windows.Controls.TextBox> の <xref:System.Windows.Controls.TextBox.Text%2A> プロパティを操作するのではなく、背景画像が使用されているのは、背景画像がデータ バインディングに干渉しないという理由からです。  
   
 ## <a name="example"></a>例  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

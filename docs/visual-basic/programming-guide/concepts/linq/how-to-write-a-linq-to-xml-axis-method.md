@@ -1,21 +1,21 @@
 ---
-title: '方法: Linq TO XML 軸メソッド (Visual Basic) を記述します。'
+title: '方法: LINQ to XML 軸メソッドを記述する'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0a20bef800c07b0db8ed47c7a04fd102c1076588
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614597"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397649"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>方法: Linq TO XML 軸メソッド (Visual Basic) を記述します。
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>方法: LINQ to XML 軸メソッドを記述する (Visual Basic)
 XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。 これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。 アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。  
   
 ## <a name="example"></a>例  
  次の例では、2 つの拡張メソッドを使用します。 最初の拡張メソッドである `GetXPath` は、<xref:System.Xml.Linq.XObject> を処理して、評価時にノードまたは属性を返す XPath 式を返します。 2 番目の拡張メソッドである `Find` は、<xref:System.Xml.Linq.XElement> を処理して、 指定されたテキストを含む <xref:System.Xml.Linq.XAttribute> オブジェクトと <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返します。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -204,7 +204,7 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -217,4 +217,4 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- [詳細クエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

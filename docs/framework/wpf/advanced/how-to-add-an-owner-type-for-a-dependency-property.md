@@ -8,21 +8,21 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 5ddc85d159b4bf81751428c13c234c5e53be8ad4
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777118"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401133"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>方法: 依存関係プロパティの所有者の種類を追加する
-この例では、異なる種類の登録されている依存関係プロパティの所有者としてクラスを追加する方法を示します。 この手順を実行して、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]リーダーとプロパティ システムの両方のプロパティの追加の所有者としてクラスを認識することができます。 必要に応じて所有者として追加すると、型固有のメタデータを提供する追加のクラスができます。  
+この例では、別の型に登録されている依存関係プロパティの所有者としてクラスを追加する方法を示します。 これにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] リーダーとプロパティ システムの両方で、クラスがプロパティの追加所有者として認識されるようになります。 所有者として追加すると、追加されたクラスで型固有のメタデータを提供できるようになります。  
   
- 次の例では、`StateProperty`によってプロパティが登録、`MyStateControl`クラス。 クラスは、`UnrelatedStateControl`自体の所有者として追加、`StateProperty`を使用して、<xref:System.Windows.DependencyProperty.AddOwner%2A>メソッド、具体的には、追加の型に存在する依存関係プロパティの新しいメタデータは、署名を使用します。 提供する必要がありますに注意してください[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]に示した例のようなプロパティのアクセサー、[依存関係プロパティを実装して](how-to-implement-a-dependency-property.md)など、追加されるクラスの依存関係プロパティ識別子を再公開所有者。  
+ 次の例では、`StateProperty` は `MyStateControl` クラスによって登録されるプロパティです。 クラス `UnrelatedStateControl` では、<xref:System.Windows.DependencyProperty.AddOwner%2A> メソッドの使用により、`StateProperty` の所有者としてそのクラス自体が追加されます。特に、追加される型に依存関係プロパティの新しいメタデータが存在する場合、それを許可するシグネチャが使用されます。 「[依存関係プロパティを実装する](how-to-implement-a-dependency-property.md)」で示されている例と同じようにプロパティの共通言語ランタイム (CLR) アクセサーを提供する必要があること、また所有者として追加されるクラス上に依存関係プロパティの識別子を再公開する必要があることに注意してください。  
   
- ラッパーの依存関係プロパティは機能を使用したプログラムによるアクセスの観点から<xref:System.Windows.DependencyObject.GetValue%2A>または<xref:System.Windows.DependencyObject.SetValue%2A>します。 通常の場合は、このプロパティ システム動作するには、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]プロパティ ラッパー。 ラッパーがプログラムで、依存関係プロパティを設定するが容易し、としてのプロパティを設定することを可能[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性。  
+ ラッパーがない場合でも、依存関係プロパティは、<xref:System.Windows.DependencyObject.GetValue%2A> または <xref:System.Windows.DependencyObject.SetValue%2A> を使用したプログラムによるアクセスの観点からは機能します。 しかし通常は、このプロパティ システムの動作を CLR プロパティ ラッパーと並列化したいと考えます。 ラッパーを使用すれば、依存関係プロパティをプログラムで設定しやすくなり、プロパティを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 属性として設定できるようになります。  
   
- 既定のメタデータをオーバーライドする方法についてを参照してください。[依存関係プロパティのメタデータをオーバーライド](how-to-override-metadata-for-a-dependency-property.md)します。  
+ 既定のメタデータをオーバーライドする方法については、「[依存関係プロパティのメタデータをオーバーライドする](how-to-override-metadata-for-a-dependency-property.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]

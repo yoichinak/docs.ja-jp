@@ -1,5 +1,5 @@
 ---
-title: <remove> NameValueSectionHandler および DictionarySectionHandler の要素
+title: <remove>NameValueSectionHandler および DictionarySectionHandler の要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: rpetrusha
-ms.author: mairaw
-ms.openlocfilehash: 062aa3921d29cffd33db2d96096ef25c2b819030
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300695"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "77214755"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<削除 > NameValueSectionHandler および DictionarySectionHandler の要素
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove>NameValueSectionHandler および DictionarySectionHandler の要素
 
-以前に定義された設定を削除します。
+以前に定義した設定を削除します。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>構文
 
@@ -38,23 +36,23 @@ ms.locfileid: "66300695"
 
 ## <a name="parent-element"></a>親要素
 
-| 要素 | 説明 |
+| 要素 | Description |
 | ------- | ------------|
-| [ **\<sectionName >** 要素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。 |
+| [**\<sectionName>** Element](custom-element-2.md) | クラスおよびクラスを使用するカスタム構成セクションの設定を定義し <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> ます。 |
 
 ## <a name="child-elements"></a>子要素
 
 なし
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用することができます、 **\<削除 >** 構成ファイル階層内の上位レベルで定義されているアプリケーションから設定を削除する要素。
+要素を使用して、 **\<remove>** 構成ファイル階層の上位レベルで定義されているアプリケーションから設定を削除できます。
 
 ## <a name="example"></a>例
 
-次の例は、使用する方法を示します、 **\<削除 >** マシン構成ファイルで定義した設定を削除するアプリケーション構成ファイル内の要素。
+次の例は、 **\<remove>** アプリケーション構成ファイルで要素を使用して、マシン構成ファイルで以前に定義した設定を削除する方法を示しています。
 
-マシン構成ファイルのコードは、次のセクションを宣言します **\<mySection >** し、2 つの設定を追加`key1`と`key2`に。
+次のマシン構成ファイルのコードでは、セクションを宣言 **\<mySection>** し、2つの設定 ( `key1` と `key2` ) を追加します。
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +67,7 @@ ms.locfileid: "66300695"
 </configuration>
 ```
 
-アプリケーション構成ファイルのコードは、次の削除、`key2`設定から **\<mySection >** :
+次のアプリケーション構成ファイルのコードは、から設定を削除し `key2` **\<mySection>** ます。
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +80,8 @@ ms.locfileid: "66300695"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

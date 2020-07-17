@@ -1,6 +1,5 @@
 ---
 title: internal - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - internal_CSharpKeyword
@@ -8,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: aefb806b452452d4837b29b6ab11ce158ea412bc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745422"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173602"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
-`internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)です。 
+`internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](./access-modifiers.md)です。
   
  > このページでは、`internal` アクセスについて説明します。 `internal` キーワードも [`protected internal`](./protected-internal.md) アクセス修飾子に含まれます。
   
 internal 型またはメンバーは、次の例のように、同じアセンブリ内のファイルでのみアクセスできます。  
   
 ```csharp  
-public class BaseClass   
+public class BaseClass
 {  
-    // Only accessible within the same assembly  
-    internal static int x = 0;  
+    // Only accessible within the same assembly.
+    internal static int x = 0;
 }  
 ```  
 
- `internal` とその他のアクセス修飾子の比較については、「[アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)」と「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。  
+ `internal` とその他のアクセス修飾子の比較については、「[アクセシビリティ レベル](./accessibility-levels.md)」と「[アクセス修飾子](../../programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。  
   
  アセンブリについて詳しくは、「[.NET のアセンブリ](../../../standard/assembly/index.md)」をご覧ください。  
   
@@ -44,7 +43,7 @@ public class BaseClass
 ```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
-internal class BaseClass   
+internal class BaseClass
 {  
    public static int intM = 0;  
 }  
@@ -53,22 +52,22 @@ internal class BaseClass
 ```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
-class TestAccess   
+class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
-      BaseClass myBase = new BaseClass();   // CS0122  
+      var myBase = new BaseClass();   // CS0122  
    }  
 }  
 ```  
   
 ## <a name="example"></a>例  
- この例では、例 1 で使用したのと同じファイルを使用し、`BaseClass` のアクセシビリティ レベルを `public` に変更します。 また、メンバー `IntM` のアクセシビリティ レベルを `internal` に変更します。 この場合、クラスのインスタンス化は可能ですが、内部メンバーへのアクセスはできません。  
+ この例では、例 1 で使用したのと同じファイルを使用し、`BaseClass` のアクセシビリティ レベルを `public` に変更します。 また、メンバー `intM` のアクセシビリティ レベルを `internal` に変更します。 この場合、クラスのインスタンス化は可能ですが、内部メンバーへのアクセスはできません。  
   
 ```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
-public class BaseClass   
+public class BaseClass
 {  
    internal static int intM = 0;  
 }  
@@ -77,11 +76,11 @@ public class BaseClass
 ```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly2.dll  
-public class TestAccess   
+public class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
-      BaseClass myBase = new BaseClass();   // Ok.  
+      var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
    }  
 }  
@@ -89,16 +88,16 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [アクセス修飾子](./access-modifiers.md)
+- [アクセシビリティ レベル](./accessibility-levels.md)
+- [修飾子](index.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

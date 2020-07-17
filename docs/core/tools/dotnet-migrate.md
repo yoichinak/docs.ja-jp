@@ -1,39 +1,36 @@
 ---
 title: dotnet migrate コマンド
 description: dotnet migrate コマンドは、プロジェクトとそのすべての依存関係を移行します。
-ms.date: 06/26/2019
-ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.date: 02/14/2020
+ms.openlocfilehash: 2e7f9ae5a1d11c54280d914b04df761f0d5aff99
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539396"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284093"
 ---
-# <a name="dotnet-migrate"></a>dotnet の移行
+# <a name="dotnet-migrate"></a>dotnet migrate
 
-**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 2.x SDK
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet migrate` - Preview 2 .NET Core プロジェクトを .NET Core SDK スタイルのプロジェクトに移行します。
 
-> [!NOTE]
-> 次のプレビュー リリースでは、`dotnet migrate` が .NET Core 3.0 SDK から削除されます。
-
 ## <a name="synopsis"></a>構文
 
-```
-dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
-dotnet migrate [-h|--help]
+```dotnetcli
+dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json <REPORT_FILE>]
+    [-r|--report-file <REPORT_FILE>] [-s|--skip-project-references [Debug|Release]]
+    [--skip-backup] [-t|--template-file <TEMPLATE_FILE>] [-v|--sdk-package-version]
+    [-x|--xproj-file]
+
+dotnet migrate -h|--help
 ```
 
 ## <a name="description"></a>説明
 
-`dotnet migrate` コマンドは、有効な Preview 2 *project.json* ベースのプロジェクトを有効な .NET Core SDK スタイルの *csproj* プロジェクトに移行します。
+このコマンドは非推奨です。 `dotnet migrate` コマンドは、.NET Core 3.0 SDK 以降では使用できなくなりました。 これは、Preview 2 .NET Core プロジェクトを 1.x .NET Core プロジェクト (サポート対象外) にしか移行できません。
 
 既定では、このコマンドは、ルート プロジェクトとルート プロジェクトに含まれるすべてのプロジェクト参照を移行します。 この動作は、実行時に `--skip-project-references` オプションを使って、無効にすることができます。
 

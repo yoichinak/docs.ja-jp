@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697252"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131748"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity インターフェイス
-コレクションの列挙子として機能`IReferenceIdentity`オブジェクト。  
+`IReferenceIdentity` オブジェクトのコレクションの列挙子として機能します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|新しいインターフェイス ポインターを取得`IEnumReferenceIdentity`これと同じメンバーを格納している`IEnumReferenceIdentity`します。|  
-|`IEnumReferenceIdentity::Next`|指定した数を取得`IReferenceIdentity`オブジェクト、現在の位置で開始します。|  
-|`IEnumReferenceIdentity::Reset`|これの先頭に、命令ポインターを移動`IEnumReferenceIdentity`します。|  
-|`IEnumReferenceIdentity::Skip`|指定数の要素を現在の位置からでは、転送、命令ポインターを移動します。|  
+|`IEnumReferenceIdentity::Clone`|この `IEnumReferenceIdentity`と同じメンバーを含む新しい `IEnumReferenceIdentity` へのインターフェイスポインターを取得します。|  
+|`IEnumReferenceIdentity::Next`|現在の位置から開始して、指定した数の `IReferenceIdentity` オブジェクトを取得します。|  
+|`IEnumReferenceIdentity::Reset`|命令ポインターをこの `IEnumReferenceIdentity`の先頭に移動します。|  
+|`IEnumReferenceIdentity::Skip`|現在位置を開始位置として、指定した要素数だけ前方に命令ポインターを移動します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [IReferenceIdentity インターフェイス](ireferenceidentity-interface.md)

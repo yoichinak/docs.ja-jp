@@ -1,5 +1,5 @@
 ---
-title: += 演算子 (Visual Basic)
+title: += 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.+=
@@ -10,59 +10,59 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c2ce384901a9f0207e8279a5a07a88600c875e7f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608334"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372208"
 ---
 # <a name="-operator-visual-basic"></a>+= 演算子 (Visual Basic)
-数値型の変数またはプロパティの値に数値式の値を追加し、結果を変数またはプロパティに代入します。 連結するためにも使用する、`String`に式を`String`変数やプロパティと、割り当て、その結果を変数またはプロパティ。  
+数値式の値を数値変数またはプロパティの値に加算し、結果をその変数またはプロパティに代入します。 また、`String` 式を `String` 変数またはプロパティに連結し、結果をその変数またはプロパティに代入するために使用することもできます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 variableorproperty += expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 任意の数値または`String`変数またはプロパティ。  
+ 必須です。 任意の数値または `String` 変数またはプロパティ。  
   
  `expression`  
- 必須。 任意の数値または`String`式。  
+ 必須です。 任意の数値または `String` 式。  
   
 ## <a name="remarks"></a>Remarks  
- 左側にある要素、`+=`演算子は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
+ `+=` 演算子の左側の要素には、単純なスカラー変数、プロパティ、または配列の要素を指定できます。 変数またはプロパティを [ReadOnly](../modifiers/readonly.md) にすることはできません。  
   
- `+=`演算子が変数またはプロパティを左側に、右側の値を追加し、変数またはプロパティの左側に、その結果を代入します。 `+=`を連結する演算子を使用することも、 `String` 、右辺の式、`String`変数またはプロパティに割り当て、その結果、変数を左、またはその左側のプロパティ。  
+ `+=` 演算子は、右側の値を左側の変数またはプロパティに追加し、その結果を左側の変数またはプロパティに代入します。 `+=` 演算子を使用して、右側の `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入することもできます。  
   
 > [!NOTE]
->  使用すると、`+=`演算子、する可能性を追加または文字列の連結が発生するかどうかを判断します。 使用して、`&=`演算子の連結のあいまいさを排除し、自己文書化コードを提供します。  
+> `+=` 演算子を使用すると、加算と文字列連結のどちらが行われるのか判断できない可能性があります。 あいまいさをなくし、自己文書化コードを実現するために、連結には `&=` 演算子を使用してください。  
   
- この代入演算子では、拡大縮小しない変換のコンパイル環境は、厳密なセマンティクスを適用している場合、暗黙的に実行します。 これらの変換の詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)します。 厳密なと制限の緩やかなセマンティクスの詳細については、次を参照してください。 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。  
+ コンパイル環境で厳密なセマンティクスが適用されている場合、この代入演算子は拡大変換を暗黙的に実行しますが、縮小変換は実行しません。 これらの変換の詳細については、「[拡大変換と縮小変換](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。 厳密なセマンティクスおよび寛容なセマンティクスの詳細については、「[Option Strict ステートメント](../statements/option-strict-statement.md)」を参照してください。  
   
- 制限の緩やかなセマンティクスは許可されている場合、`+=`演算子は、さまざまなによって実行されるものと同じ文字列と数値の変換を暗黙的に実行、`+`演算子。 これらの変換について詳しくは、次を参照してください。 [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)します。  
+ 寛容なセマンティクスが許可されている場合、`+=` 演算子は、`+` 演算子によって実行されるものと同じ各種変換 (文字列変換および数値変換) を暗黙的に実行します。 これらの変換の詳細については、「[+ 演算子](addition-operator.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- `+`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`+`演算子の動作に影響、`+=`演算子。 コードで使用する場合`+=`クラスまたは構造体をオーバー ロードで`+`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `+` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、このクラスまたは構造体はその動作を再定義できます。 `+` 演算子をオーバーロードすると、`+=` 演算子の動作に影響します。 コードで、`+` をオーバーロードするクラスまたは構造体に `+=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`+=`と他の 1 つの変数の値を結合する演算子。 最初の部分を使用して`+=`別に 1 つの値を追加する数値変数を使用します。 2 番目の部分を使用して`+=`で`String`と他の 1 つの値を連結する変数。 どちらの場合は、結果は最初の変数に割り当てられます。  
+ 次の例では、`+=` 演算子を使用して、ある変数の値を別の値と結合します。 最初の部分では `+=` を数値変数と共に使用して、ある値を別の値に追加します。 2 番目の部分では、`+=` を `String` 変数と共に使用して、ある値を別の値と連結します。 どちらの場合も、結果は最初の変数に代入されます。  
   
  [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  
   
  [!code-vb[VbVbalrOperators#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#8)]  
   
- 値`num1`13、およびの値が、 `str1` 「103」ようになります。  
+ `num1` の値は 13 になり、`str1` の値は "103" になりました。  
   
 ## <a name="see-also"></a>関連項目
 
-- [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)
-- [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
+- [+ 演算子](addition-operator.md)
+- [代入演算子](assignment-operators.md)
+- [算術演算子](arithmetic-operators.md)
+- [連結演算子](concatenation-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [ステートメント](../../programming-guide/language-features/statements.md)

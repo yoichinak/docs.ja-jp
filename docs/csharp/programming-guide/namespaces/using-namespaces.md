@@ -1,6 +1,5 @@
 ---
 title: 名前空間の使用 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -8,17 +7,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bb491ef93f0f2da89f0101d10e2cf3d158962850
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423310"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241930"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
-C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET Framework クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
+
+C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
   
-## <a name="accessing-namespaces"></a>名前空間へのアクセス  
+## <a name="accessing-namespaces"></a>名前空間へのアクセス
+
  ほとんどの C# アプリケーションは `using` ディレクティブのセクションから始まります。 このセクションには、アプリケーションが頻繁に使用する名前空間がリストされ、包含されているメソッドが使用されるたびにプログラマが完全修飾名を指定しなくても済むようにします。  
   
  たとえば、次の行を記述したとします。  
@@ -33,17 +34,20 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>名前空間エイリアス  
- [using ディレクティブ](../../../csharp/language-reference/keywords/using-directive.md)を使用して、[名前空間](../../../csharp/language-reference/keywords/namespace.md)のエイリアスを作成することもできます。 たとえば、入れ子になった名前空間を含む、以前に作成した名前空間を使用する場合は、次の例のようにエイリアスを宣言して、特定の名前空間を簡単に参照することもできます。  
+## <a name="namespace-aliases"></a>名前空間エイリアス
+
+ [`using` ディレクティブ](../../language-reference/keywords/using-directive.md)を使って、名前空間のエイリアスを作成することもできます。 エイリアス化された名前空間のメンバーにアクセスするには、[名前空間エイリアス修飾子 `::`](../../language-reference/operators/namespace-alias-qualifier.md) を使います。 次の例では、名前空間エイリアスを作成して使用する方法を示します。
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>名前空間を使用するスコープの制御  
- `namespace` キーワードを使用して、スコープを宣言します。 プロジェクト内でスコープを作成すると、コードの編成が容易になり、グローバルに一意の型を作成できます。 次の例では、入れ子関係にある 2 つの名前空間で `SampleClass` というクラスを定義します。 [メンバー アクセス `.` 演算子](../../language-reference/operators/member-access-operators.md#member-access-operator-)は、呼び出されるメソッドを区別するために使用されます。  
+## <a name="using-namespaces-to-control-scope"></a>名前空間を用いたスコープの制御
+
+ `namespace` キーワードを使用して、スコープを宣言します。 プロジェクト内でスコープを作成すると、コードの編成が容易になり、グローバルに一意の型を作成できます。 次の例では、入れ子関係にある 2 つの名前空間で `SampleClass` というクラスを定義します。 [`.` トークン](../../language-reference/operators/member-access-operators.md#member-access-expression-)を使用して、呼び出されるメソッドを区別します。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>完全修飾名  
+## <a name="fully-qualified-names"></a>完全修飾名
+
  名前空間と型には、論理階層を示す完全修飾名で表された一意のタイトルが割り当てられています。 たとえば、ステートメント `A.B` は、`A` が名前空間または型の名前であり、`B` はその内部で入れ子になっていることを意味します。  
   
  入れ子になっているクラスと名前空間を次の例に示します。 完全修飾名は、各エンティティの後のコメントとして示されています。  
@@ -64,7 +68,7 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
- 通常、`::` は名前空間エイリアスを参照する際に使用し、`global::` はグローバル名前空間を参照する際に使用します。`.` は型またはメンバーを修飾する際に使用します。  
+ 通常、[名前空間エイリアス修飾子 `::`](../../language-reference/operators/namespace-alias-qualifier.md) は名前空間エイリアスを参照するために使い、`global::` はグローバル名前空間を参照するために使います。`.` は型またはメンバーを修飾するために使います。  
   
  名前空間ではなく型を参照するエイリアスで `::` を使用するのは誤りです。 次に例を示します。  
   
@@ -85,13 +89,11 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
  このコードは動作しますが、`Alias` という名前の型が後で導入された場合、`Alias.` は代わりにその型にバインドされます。 `Alias::Exception` を使用すれば、`Alias` は名前空間エイリアスとして扱われ、型と間違われることがなくなります。  
-  
- 「[方法: グローバル名前空間エイリアスを使用する](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)」をご覧ください (`global` エイリアスに関する詳細情報)。  
-  
+
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [名前空間](../../../csharp/programming-guide/namespaces/index.md)
-- [。演算子](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [extern](../../../csharp/language-reference/keywords/extern.md)
+- [C# プログラミング ガイド](../index.md)
+- [名前空間](./index.md)
+- [メンバー アクセス式](../../language-reference/operators/member-access-operators.md#member-access-expression-)
+- [:: 演算子](../../language-reference/operators/namespace-alias-qualifier.md)
+- [extern エイリアス](../../language-reference/keywords/extern-alias.md)

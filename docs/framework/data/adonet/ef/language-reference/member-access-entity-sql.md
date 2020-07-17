@@ -2,19 +2,19 @@
 title: . (メンバー アクセス) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: 6ebedd2b381d035d199e151f64632acf7d502ff5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 8e63caba9e9efb91d5c4629b9da0b1feca905ace
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760624"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319649"
 ---
 # <a name="-member-access-entity-sql"></a>. (メンバー アクセス) (Entity SQL)
-ドット演算子 (.) は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]メンバー アクセス演算子。 メンバー アクセス演算子を使用すると、構造型概念モデル型のインスタンスのプロパティ値またはフィールド値を生成できます。  
+ドット演算子 (.) は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] のメンバー アクセス演算子です。 メンバー アクセス演算子を使用すると、構造型概念モデル型のインスタンスのプロパティ値またはフィールド値を生成できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 expression.identifier  
 ```  
   
@@ -32,4 +32,4 @@ expression.identifier
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

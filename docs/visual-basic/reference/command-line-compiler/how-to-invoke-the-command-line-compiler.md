@@ -1,5 +1,5 @@
 ---
-title: '方法: コマンド ライン コンパイラ (Visual Basic) を呼び出す'
+title: '方法: コマンド ライン コンパイラを起動する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,57 +7,58 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032072"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408609"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>方法: コマンド ライン コンパイラ (Visual Basic) を呼び出す
-コマンドライン プロンプトとも呼ばれますにその実行可能ファイルの名前を入力して、コマンド ライン コンパイラを呼び出すことができます。 既定の Windows コマンド プロンプトからコンパイルする場合は、実行可能ファイルへの完全修飾パスを入力する必要があります。 この既定の動作を上書きするには、for Visual Studio は、開発者コマンド プロンプトを使用するか、PATH 環境変数を変更します。 コンパイラの名前を入力するだけで、任意のディレクトリからコンパイルをどちらもができます。  
-  
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
-  
-### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプトを使用してコンパイラを起動するには  
-  
-1. Microsoft Visual Studio のプログラム グループ内の Visual Studio Tools のプログラム フォルダーを開きます。  
-  
-2. Visual Studio がインストールされている場合は、任意のディレクトリからコンピューターには、コンパイラにアクセスする Visual Studio 用開発者コマンド プロンプトを使用できます。  
-  
-3. Visual Studio 用開発者コマンド プロンプトを呼び出します。  
-  
-4. コマンドラインで「 `vbc.exe` *sourceFileName*し、ENTER キーを押します。  
-  
-     という名前のディレクトリで、ソース コードが格納されている場合など、 `SourceFiles`、コマンド プロンプトと種類を開くと`cd SourceFiles`そのディレクトリに変更します。 ディレクトリには、という名前のソース ファイルが含まれている場合`Source.vb`、」と入力してコンパイルする`vbc.exe Source.vb`します。  
-  
-### <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Windows コマンド プロンプトをコンパイラに PATH 環境変数を設定するには  
-  
-1. Windows Search の機能を使用して、ローカル ディスク上の Vbc.exe を検索します。  
-  
-     コンパイラがあるディレクトリの正確な名前は、Windows ディレクトリの場所とインストール".NET Framework"のバージョンによって異なります。 ".NET Framework"インストールされているは、複数のバージョンがあれば、(通常は最新のバージョン) を使用するバージョンを決定する必要があります。  
-  
-2. **開始** メニューを右クリックして**マイ コンピューター**、順にクリックします**プロパティ**ショートカット メニューから。  
-  
-3. をクリックして、**詳細** タブをクリックして**環境変数**します。  
-  
-4. **システム**変数ウィンドウで、**パス** をクリックし、リストから**編集**します。  
-  
-5. **編集システム**変数 ダイアログ ボックスで文字列の末尾にカーソルを移動、**変数値**フィールドし、セミコロン (;) を入力後に手順 1. で見つかった完全なディレクトリ名。  
-  
-6. クリックして**OK**を編集内容を確認し、ダイアログ ボックスを閉じます。  
-  
-     PATH 環境変数を変更した後行うことができます、Visual Basic コンパイラ、Windows コマンド プロンプトで任意のディレクトリからコンピューターにします。  
-  
-### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows コマンド プロンプトを使用してコンパイラを起動するには  
-  
-1. **開始** メニューをクリックして、**アクセサリ**フォルダー、および順に開いて、 **Windows コマンド プロンプト**。  
-  
-2. コマンドラインで「 `vbc.exe` *sourceFileName*し、ENTER キーを押します。  
-  
-     という名前のディレクトリで、ソース コードが格納されている場合など、 `SourceFiles`、コマンド プロンプトと種類を開くと`cd SourceFiles`そのディレクトリに変更します。 ディレクトリには、という名前のソース ファイルが含まれている場合`Source.vb`、」と入力してコンパイルする`vbc.exe Source.vb`します。  
-  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>方法: コマンド ライン コンパイラを起動する (Visual Basic)
+
+コマンド ライン コンパイラを起動するには、実行可能ファイルの名前をコマンド ライン (MS-DOS プロンプトとも呼ばれます) に入力します。 既定の Windows コマンド プロンプトからコンパイルする場合は、実行可能ファイルへの完全修飾パスを入力する必要があります。 この既定の動作をオーバーライドするには、Visual Studio の開発者コマンド プロンプトを使用するか、または PATH 環境変数を変更します。 どちらの方法でも、コンパイラ名を入力するだけで、任意のディレクトリからコンパイルすることができます。
+
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
+
+## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio の開発者コマンド プロンプトを使用してコンパイラを起動するには
+
+1. Microsoft Visual Studio プログラム グループ内の Visual Studio Tools プログラム フォルダーを開きます。
+
+2. Visual Studio がインストールされている場合は、Visual Studio の開発者コマンド プロンプトを使用して、ご使用のマシン上の任意のディレクトリからコンパイラにアクセスできます。
+
+3. Visual Studio の開発者コマンド プロンプトを呼び出します。
+
+4. コマンド ラインで「`vbc.exe` *sourceFileName*」と入力し、Enter キーを押します。
+
+    たとえば、ソース コードを `SourceFiles` という名前のディレクトリに保存した場合は、コマンド プロンプトを開き「`cd SourceFiles`」と入力して、そのディレクトリに変更します。 ディレクトリに `Source.vb` という名前のソース ファイルが含まれている場合は、「`vbc.exe Source.vb`」と入力してコンパイルできます。
+
+## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Windows のコマンド プロンプト用のコンパイラに PATH 環境変数を設定するには
+
+1. Windows 検索機能を使用して、ローカル ディスクで Vbc.exe を検索します。
+
+    コンパイラが配置されているディレクトリの正確な名前は、Windows ディレクトリの場所とインストールされている ".NET Framework" のバージョンによって異なります。 ".NET Framework" の複数のバージョンがインストールされている場合は、使用するバージョン (通常は最新バージョン) を決定する必要があります。
+
+2. **[スタート]** メニューから、 **[マイ コンピューター]** を右クリックし、ショートカット メニューから **[プロパティ]** をクリックします。
+
+3. **[詳細設定]** タブをクリックし、 **[環境変数]** をクリックします。
+
+4. **[システム変数]** ペインで、一覧から **[パス]** を選択し、 **[編集]** をクリックします。
+
+5. **[システム変数の編集]** ダイアログ ボックスで、挿入ポイントを **[変数値]** フィールドの文字列の末尾に移動し、セミコロン (;) の後に手順 1 で見つかった完全なディレクトリ名を入力します。
+
+6. **[OK]** をクリックして、編集内容を確認し、ダイアログ ボックスを閉じます。
+
+     PATH 環境変数を変更すると、コンピューター上の任意のディレクトリから Windows コマンド プロンプトで Visual Basic コンパイラを実行できます。
+
+## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows のコマンド プロンプトを使用してコンパイラを起動するには
+
+1. **[スタート]** メニューから、 **[アクセサリ]** フォルダーをクリックし、 **[Windows コマンドプロンプト]** を開きます。
+
+2. コマンド ラインで「`vbc.exe`*sourceFileName*」と入力し、Enter キーを押します。
+
+     たとえば、ソース コードを `SourceFiles` という名前のディレクトリに保存した場合は、コマンド プロンプトを開き「`cd SourceFiles`」と入力して、そのディレクトリに変更します。 ディレクトリに `Source.vb` という名前のソース ファイルが含まれている場合は、「`vbc.exe Source.vb`」と入力してコンパイルできます。
+
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [条件付きコンパイル](../../programming-guide/program-structure/conditional-compilation.md)

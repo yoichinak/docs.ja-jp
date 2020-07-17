@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b437f70-561d-48c7-abe0-0cb9ace10c08
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d40b997cd2b07cfc86e7671f7d7d2fcf9bd9c60a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcaac02526c7d72ffb75ba6c7552632173032cf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772753"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009042"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope メソッド
-現在のスコープ内でアセンブリへのポインターを取得します。  
+現在のスコープ内のアセンブリへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +35,17 @@ HRESULT GetAssemblyFromScope (
   
 ## <a name="parameters"></a>パラメーター  
  `ptkAssembly`  
- [out]取得してへのポインター`mdAssembly`アセンブリを識別するトークン。  
+ 入出力アセンブリを識別する、取得されたトークンへのポインター `mdAssembly` 。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)

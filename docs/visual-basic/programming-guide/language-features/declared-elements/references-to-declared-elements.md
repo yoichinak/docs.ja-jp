@@ -1,24 +1,24 @@
 ---
-title: 宣言された要素の参照 (Visual Basic)
+title: 宣言された要素の参照
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592799"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405184"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>宣言された要素の参照 (Visual Basic)
-宣言された要素をコードが参照されているとき、Visual Basic コンパイラはその名前の適切な宣言に、参照内の名前と一致します。 参照することはそれらの要素を制御するには 1 つ以上の要素が同じ名前で宣言されている場合*条件を満たす*の名前。  
+コードが宣言された要素を参照すると、Visual Basic コンパイラは、参照内の名前と、その名前の適切な宣言を照合します。 同じ名前の複数の要素が宣言されている場合は、その名前を*修飾*することで、それらの要素のうちどれが参照されるかを制御できます。  
   
- コンパイラが名の宣言でへの参照を名前を照合しようとした場合、*最も狭いスコープ*します。 これは、参照するコードから開始して、下位レベルの要素を含むを通じてに向かってを意味します。  
+ コンパイラは、名前宣言への名前参照を*最も狭いスコープ*と照合しようとします。 これは、参照を行うコードから始まり、コンテナー要素のレベルの外側に向かって機能することを意味します。  
   
- 次の例では、同じ名前の 2 つの変数への参照を示します。 例では、2 つの変数を宣言して、各名前付き`totalCount`、モジュール内のスコープのさまざまなレベルで`container`します。 ときに、プロシージャ`showCount`が表示されます`totalCount`Visual Basic コンパイラが、最も狭いスコープ、ローカル宣言内 namely で宣言への参照を解決する限定なく`showCount`します。 適用されるときに`totalCount`を含んでいるモジュール`container`コンパイラがより広いスコープで宣言への参照を解決します。  
+ 次の例では、同じ名前を持つ 2 つの変数への参照を示します。 この例では、それぞれが `totalCount` という名前の 2 つの変数を、モジュール `container` の異なるレベルのスコープで宣言しています。 プロシージャ `showCount` により `totalCount` が修飾なしで表示される場合、Visual Basic コンパイラは、参照を最も狭いスコープ (つまり、`showCount` 内のローカル宣言) に解決します。 含まれているモジュール `container` で `totalCount` を修飾すると、コンパイラは、参照をより広いスコープの宣言に解決します。  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -42,15 +42,15 @@ End Module
 ```  
   
 ## <a name="qualifying-an-element-name"></a>要素名の修飾  
- この検索処理をオーバーライドしより広い範囲での名前を宣言する必要がありますを指定する場合*修飾*より広いスコープの親要素と名前。 場合によっては、コンテナーの要素を修飾する必要がありますも。  
+ この検索プロセスをオーバーライドし、より広いスコープで宣言された名前を指定する場合は、より広いスコープのコンテナー要素で名前を*修飾*する必要があります。 場合によっては、コンテナー要素を修飾する必要がある場合もあります。  
   
- ターゲット要素が定義されているかを識別する情報、ソース ステートメントの前に、名前手段を修飾します。 この情報と呼ばれる、*修飾文字列*します。 1 つ含めることができます、または複数の名前空間とモジュールの場合、クラスまたは構造体します。  
+ 名前の修飾は、ターゲット要素が定義されている場所を識別する情報を、ソース ステートメント内で先に記述することを意味します。 この情報は、*修飾文字列*と呼ばれます。 1 つ以上の名前空間と、1 つのモジュール、クラス、または構造体を含めることができます。  
   
- 修飾文字列には、モジュール、クラス、または対象の要素を含む構造体を指定する必要があります明確にします。 コンテナーは、別のコンテナー要素名前空間には、通常で順番にある可能性があります。 修飾文字列にいくつかのコンテナー要素を含めることがあります。  
+ 修飾文字列では、ターゲット要素を含むモジュール、クラス、または構造体を明確に指定する必要があります。 コンテナーは、別のコンテナー要素 (通常は名前空間) に配置される場合があります。 修飾文字列に複数のコンテナー要素を含めることが必要になる場合があります。  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>その名前を修飾することによって宣言された要素にアクセスするには  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>名前を修飾することで宣言された要素にアクセスするには  
   
-1. 要素が定義されている場所を決定します。 名前空間、または名前空間の階層も可能性があります。 最下位レベルの名前空間内では、モジュール、クラスまたは構造体の要素を含める必要があります。  
+1. 要素が定義されている場所を確認します。 これには、名前空間、または名前空間の階層が含まれる場合があります。 最下位レベルの名前空間内では、要素はモジュール、クラス、または構造体に含まれている必要があります。  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. ターゲット要素の場所に基づく修飾パスを決定します。 最上位レベルの名前空間を持つ開始、最下位レベルの名前空間に進むし、モジュール、クラス、または対象の要素を含む構造体と終了します。 パス内の各要素には、それに続く要素を含める必要があります。  
+2. ターゲット要素の場所に基づいて、修飾パスを確認します。 最上位レベルの名前空間から開始し、最下位レベルの名前空間に進み、ターゲット要素が含まれているモジュール、クラス、または構造体で終了します。 パス内の各要素には、その後に続く要素が含まれている必要があります。  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. ターゲット要素の修飾文字列を準備します。 ピリオドを挿入 (`.`)、パス内のすべての要素の後にします。 アプリケーション、修飾文字列内のすべての要素へのアクセスが必要です。  
+3. ターゲット要素の修飾文字列を準備します。 パス内のすべての要素の後にピリオド (`.`) を配置します。 アプリケーションは、修飾文字列内のすべての要素にアクセスできる必要があります。  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. 式または代入ステートメントの通常の方法で、ターゲット要素に参照を記述します。  
+4. 通常の方法で、ターゲット要素を参照する式または代入ステートメントを記述します。  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. 修飾文字列をターゲット要素名を前します。 名前は、期間直後にする必要があります (`.`) モジュール、クラス、または、要素を含む構造体に依存しています。  
+5. ターゲット要素名の前に修飾文字列を指定します。 名前は、要素が含まれているモジュール、クラス、または構造体の後のピリオド (`.`) の直後に記述する必要があります。  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. コンパイラでは、修飾文字列を使用して、ターゲット要素の参照を一致する明確であいまいさのない宣言を見つけます。  
+6. コンパイラは、修飾文字列を使用して、ターゲット要素参照と照合できる、明確で、あいまいでない宣言を検索します。  
   
- アプリケーションに同じ名前を持つ 1 つ以上のプログラミング要素へのアクセスがある場合は、名前の参照を修飾するためにもあります。 たとえば、<xref:System.Windows.Forms>と<xref:System.Web.UI.WebControls>両方名前空間が含まれて、`Label`クラス (<xref:System.Windows.Forms.Label?displayProperty=nameWithType>と<xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>)。 アプリケーションは、両方を使用する場合、または独自に定義している場合`Label`クラス、さまざまなを区別する必要があります`Label`オブジェクト。 変数の宣言には、名前空間やインポート エイリアスを含めます。 次の例では、インポート エイリアスを使用します。  
+ また、アプリケーションが同じ名前を持つ複数のプログラミング要素にアクセスできる場合は、名前参照の修飾が必要な場合もあります。 たとえば、<xref:System.Windows.Forms> と <xref:System.Web.UI.WebControls> の名前空間のどちらにも、`Label` クラス (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> および <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>) が含まれています。 アプリケーションで両方を使用する場合、または独自の `Label` クラスを定義する場合は、異なる `Label` オブジェクトを区別する必要があります。 変数宣言に、名前空間またはインポートの別名を含めます。 次の例では、インポートの別名を使用します。  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>コンテナー要素の他のメンバー  
- 別のクラスまたは構造体の非共有メンバーを使用して、最初に、変数またはクラスまたは構造体のインスタンスを指す式を使用して、メンバー名を修飾する必要があります。 次の例では、`demoClass`という名前のクラスのインスタンスである`class1`します。  
+## <a name="members-of-other-containing-elements"></a>他のコンテナー要素のメンバー  
+ 別のクラスまたは構造体の非共有メンバーを使用する場合は、まず、クラスまたは構造体のインスタンスを指す変数または式を使用して、メンバー名を修飾する必要があります。 次の例では、`demoClass` は `class1` という名前のクラスのインスタンスです。  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- ないメンバーを修飾するために、クラス名自体を使用することはできません[Shared](../../../../visual-basic/language-reference/modifiers/shared.md)します。 まず、オブジェクト変数にインスタンスを作成する必要があります (ここで`demoClass`) して、変数名で参照します。  
+ [Shared](../../../language-reference/modifiers/shared.md) ではないメンバーを修飾するために、クラス名自体を使用することはできません。 まず、オブジェクト変数にインスタンスを作成してから (この場合は `demoClass`)、変数名によって参照する必要があります。  
   
- クラスまたは構造体がある場合、 `Shared` 、メンバー クラスまたは構造体の名前を持つか、変数またはインスタンスを指す式では、そのメンバーを修飾することができます。  
+ クラスまたは構造体に `Shared` メンバーが含まれている場合は、クラスまたは構造体の名前を使用して、またはインスタンスを指す変数または式を使用して、そのメンバーを修飾できます。  
   
- モジュールには、個別のインスタンスはありませんし、そのすべてのメンバーは`Shared`既定。 そのため、モジュール名を持つモジュール メンバーを修飾します。  
+ モジュールには個別のインスタンスはなく、そのすべてのメンバーは既定で `Shared` です。 そのため、モジュール名を持つモジュール メンバーを修飾します。  
   
- 次の例では、モジュール メンバー プロシージャへの修飾参照を示します。 2 つの例では、宣言しています`Sub`という名前の手順、`perform`プロジェクト内の異なるモジュールでします。 それぞれは独自のモジュール内で修飾なしを指定できますが、その他の場所から参照されている場合に修飾する必要があります。 参照して、最終的なため`module3`修飾していない`perform`コンパイラは、その参照を解決できません。  
+ 次の例では、モジュール メンバー プロシージャへの修飾参照を示します。 この例では、プロジェクト内の異なるモジュールに、両方とも `perform` という名前の 2 つの `Sub` プロシージャを宣言しています。 それぞれをその独自のモジュール内に修飾なしで指定できますが、他の場所から参照されている場合は修飾する必要があります。 `module3` の最後の参照は `perform` を修飾しないため、コンパイラはその参照を解決できません。  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -150,9 +150,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>プロジェクトへの参照  
- 使用する[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)別のプロジェクトで定義された要素は、まず、設定、*参照*にそのプロジェクトのアセンブリやタイプ ライブラリ。 参照を設定するには、次のようにクリックします。**参照の追加**上、**プロジェクト**メニュー、または使用して、 [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コマンド ライン コンパイラ オプション。  
+ 別のプロジェクトで定義されている [Public](../../../language-reference/modifiers/public.md) 要素を使用するには、まず、そのプロジェクトのアセンブリまたは型ライブラリへの*参照*を設定する必要があります。 参照を設定するには、 **[プロジェクト]** メニューで **[参照の追加]** をクリックするか、[-reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) コマンドライン コンパイラ オプションを使用します。  
   
- たとえば、.NET Framework の XML オブジェクト モデルを使用することができます。 参照を設定した場合、<xref:System.Xml>名前空間宣言し、そのクラスのいずれかのように、使う<xref:System.Xml.XmlDocument>します。 次の例では<xref:System.Xml.XmlDocument>します。  
+ たとえば、.NET Framework の XML オブジェクト モデルを使用できます。 <xref:System.Xml> 名前空間への参照を設定する場合は、<xref:System.Xml.XmlDocument> など、そのクラスのいずれかを宣言して使用できます。 <xref:System.Xml.XmlDocument> の使用例を次に示します。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -161,7 +161,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>コンテナー要素のインポート  
- 使用することができます、 [Imports ステートメント (.NET Namespace よぶ型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)に*インポート*モジュールまたは使用するクラスを含む名前空間。 これにより、その名前を完全修飾しなくても、インポートされた名前空間で定義されている要素を参照することができます。 次の例では、リライトをインポートする前の例、<xref:System.Xml>名前空間。  
+ [Imports ステートメント (.NET 名前空間と型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) を使用すると、使用するモジュールまたはクラスを含む名前空間を*インポート*できます。 これにより、インポートされた名前空間で定義されている要素を、その名前を完全修飾せずに参照できます。 次の例では、前の例を記述し直して、<xref:System.Xml> 名前空間をインポートします。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- さらに、`Imports`ステートメントを定義できます、*インポート エイリアス*名前空間ごとにインポートします。 これにより、ソース コードを短く読みやすくします。 次の例を使用する前の例を書き換える`xD`のエイリアスとして、<xref:System.Xml>名前空間。  
+ さらに、`Imports` ステートメントでは、インポートされた名前空間ごとに*インポートの別名*を定義できます。 これにより、ソース コードを短くして、読みやすくすることができます。 次の例では、前の例を記述し直して、`xD` 名前空間の別名として <xref:System.Xml> を使用します。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,24 +181,24 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- `Imports`ステートメントは行いません他のプロジェクトから要素をアプリケーションに使用できます。 つまり、参照設定の代わりにはなりません。 だけ名前空間をインポートするには、その名前空間で定義された名前を修飾するために要件が削除されます。  
+ `Imports` ステートメントによって、他のプロジェクトの要素をアプリケーションで使用できなくなります。 つまり、参照の設定の代わりになりません。 名前空間をインポートすると、その名前空間で定義されている名前を修飾する必要がなくなります。  
   
- 使用することも、`Imports`モジュール、クラス、構造、および列挙型をインポートするステートメント。 このようなインポートされた要素の修飾なしのメンバーを使用できます。 ただし、常にクラスと構造体変数またはクラスまたは構造体のインスタンスに評価される式での非共有メンバーを修飾する必要があります。  
+ また、`Imports` ステートメントを使用して、モジュール、クラス、構造体、および列挙型をインポートすることもできます。 その後、このようなインポートされた要素のメンバーを修飾なしで使用できます。 ただし、クラスや構造体の非共有メンバーは、常に、クラスまたは構造体のインスタンスに評価される変数または式を使用して修飾する必要があります。  
   
 ## <a name="naming-guidelines"></a>名前付けのガイドライン  
- 同じ名前を持つ 2 つ以上のプログラミング要素を定義するときに、*あいまいさを名前*コンパイラがその名前への参照を解決しようとすると発生することができます。 数より多い場合、スコープ内に 1 つの定義、または、参照が解決されない場合は、定義がスコープ内ではありません。 たとえば、このヘルプ ページの「修飾参照例」を参照してください。  
+ 同じ名前を持つ複数のプログラミング要素を定義すると、コンパイラがその名前への参照を解決しようとしたときに、*名前のあいまいさ*が発生する可能性があります。 スコープ内に複数の定義が含まれている場合、またはスコープ内に定義が存在しない場合、参照は解決不可能です。 例については、このヘルプ ページの「修飾参照の例」を参照してください。  
   
- すべての要素に一意の名前を指定することにより、名前のあいまいさを回避できます。 名前空間、モジュール、またはクラスでは、その名前を修飾しなくても、任意の要素への参照を行うことができます。 正しくない要素を誤って参照する可能性を低くします。  
+ すべての要素に一意の名前を付けることで、名前のあいまいさを回避できます。 その後、名前を名前空間、モジュール、またはクラスで修飾しなくても、任意の要素を参照できるようになります。 また、間違った要素が誤って参照される可能性を低くすることもできます。  
   
 ## <a name="shadowing"></a>シャドウ  
- 2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 シャドウされた要素は参照できません。代わりに、コードでは、シャドウされた要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。 例を含む詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
+ 2 つのプログラミング要素が同じ名前を共有している場合、それらのうちの 1 つで他方を非表示にしたり、*シャドウ*したりすることができます。 シャドウされた要素を参照することはできません。代わりに、シャドウされた要素名を使用するコードでは、Visual Basic コンパイラによってシャドウ要素に解決されます。 例の詳細については、「[Visual Basic におけるシャドウ](shadowing.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [宣言された要素の名前](declared-element-names.md)
+- [宣言された要素の特性](declared-element-characteristics.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
-- [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+- [変数](../variables/index.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 演算子](../../../language-reference/operators/new-operator.md)
+- [Public](../../../language-reference/modifiers/public.md)

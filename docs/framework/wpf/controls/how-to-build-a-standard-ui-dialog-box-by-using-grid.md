@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923416"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>方法: グリッドを使用して標準 UI ダイアログ ボックスをビルドする
-この例は、標準を作成する方法を示します[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ダイアログ ボックスを使用して、<xref:System.Windows.Controls.Grid>要素。  
+この例では、<xref:System.Windows.Controls.Grid> 要素を使用して、標準 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ダイアログ ボックスを作成する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例のようなダイアログ ボックスの作成、**実行** ダイアログ ボックスで、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]オペレーティング システム。  
+ 次の例では、Windows オペレーティング システムの **[実行]** ダイアログ ボックスのようなダイアログ ボックスを作成します。  
   
- 例は、作成、<xref:System.Windows.Controls.Grid>を使用して、<xref:System.Windows.Controls.ColumnDefinition>と<xref:System.Windows.Controls.RowDefinition>5 つの列と 4 つの行を定義するクラス。  
+ この例では、<xref:System.Windows.Controls.Grid> を作成し、<xref:System.Windows.Controls.ColumnDefinition> クラスと <xref:System.Windows.Controls.RowDefinition> クラスを使用して、5 つの列と 4 つの行を定義します。  
   
- 例は、追加し、配置、 <xref:System.Windows.Controls.Image>、 `RunIcon.png`、ダイアログ ボックスにある画像を表します。 最初の列との行で、イメージが格納される、 <xref:System.Windows.Controls.Grid> (左上隅)。  
+ 次に、この例では、ダイアログ ボックスにあるイメージを表すために、<xref:System.Windows.Controls.Image>、`RunIcon.png` を追加して配置します。 イメージは、<xref:System.Windows.Controls.Grid> の最初の列と行 (左上隅) に配置されます。  
   
- 次に、例、<xref:System.Windows.Controls.TextBlock>最初の列は、最初の行の残りの列にまたがる要素。 追加別<xref:System.Windows.Controls.TextBlock>要素を表す、最初の列の 2 つ目の行に、**オープン**テキスト ボックス。 A<xref:System.Windows.Controls.TextBlock>フォローで、データ エントリの領域を表します。  
+ 次に、この例では、最初の行の残りの列にまたがる <xref:System.Windows.Controls.TextBlock> 要素を最初の列に追加します。 最初の列の 2 番目の行に別の <xref:System.Windows.Controls.TextBlock> 要素が追加されて、 **[開く]** テキスト ボックスが表されます。 <xref:System.Windows.Controls.TextBlock> が続き、データ入力領域が表されます。  
   
- 最後に、3 つ追加例では、<xref:System.Windows.Controls.Button>を表す要素の最後の行を**OK**、**キャンセル**、および**参照**イベント。  
+ 最後に、この例では、最後の行に 3 つの <xref:System.Windows.Controls.Button> 要素を追加します。これにより、**OK** イベント、**キャンセル** イベント、**参照**イベントが表されます。  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

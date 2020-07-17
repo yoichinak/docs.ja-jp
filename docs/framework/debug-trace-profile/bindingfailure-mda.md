@@ -1,5 +1,6 @@
 ---
 title: bindingFailure MDA
+description: BindingFailure マネージデバッグアシスタント (MDA) について説明します。これは、.NET でのアセンブリの読み込みに失敗したときにアクティブ化されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding failure
@@ -9,20 +10,18 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98c7947c7e5d2a1f0af8c26744d3b292ed8cb4c4
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875083"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415629"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
 `bindingFailure` マネージド デバッグ アシスタント (MDA) は、アセンブリの読み込みに失敗したときにアクティブになります。
 
-## <a name="symptoms"></a>症状
+## <a name="symptoms"></a>現象
 
 コードは、静的参照またはいずれかのローダー メソッド (<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> や <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> など) を使用して、アセンブリを読み込もうとしました。 アセンブリは読み込まれず、<xref:System.IO.FileNotFoundException> または <xref:System.IO.FileLoadException> 例外がスローされました。
 
@@ -40,13 +39,13 @@ ms.locfileid: "61875083"
 
 - ユーザー資格情報には、ファイルを読み取るために必要なアクセス許可が指定されていません。
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決策
 
 最初の手順は、要求されたアセンブリに CLR がバインドできなかった原因を特定することです。 たとえば、「原因」セクションに一覧表示されたシナリオのように、ランタイムが要求されたアセンブリを見つけられなかったり、読み込めなかったりする理由は多数あります。 バインディング エラーの原因を除去するには、次のアクションをお勧めします。
 
 - `bindingFailure` MDA によって提供されるデータを使用して、原因を特定します。
 
-  - アセンブリ バインダーによって生成されるエラー ログを読み取るために、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を実行します。
+  - アセンブリ バインダーによって生成されるエラー ログを読み取るために、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) を実行します。
 
   - アセンブリが要求された位置にあるかどうかを確認します。 <xref:System.Reflection.Assembly.LoadFrom%2A> および <xref:System.Reflection.Assembly.LoadFile%2A> メソッドの場合は、要求された位置を簡単に確認できます。 <xref:System.Reflection.Assembly.Load%2A> メソッドの場合は、アセンブリ ID を使用してバインドするため、アプリケーション ドメインの <xref:System.AppDomain.BaseDirectory%2A> プロパティ プローブ パスおよびグローバル アセンブリ キャッシュで、アセンブリ ID と一致するアセンブリを検索する必要があります。
 
@@ -107,4 +106,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>関連項目
 
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

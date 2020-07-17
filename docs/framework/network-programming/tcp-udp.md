@@ -1,5 +1,6 @@
 ---
 title: TCP-UDP
+description: .NET Framework のデータ転送の詳細を処理する TCP および UDP サービスを TcpClient、TcpListener、UdpClient クラスで処理する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, TCP/UDP
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502094"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 アプリケーションは、<xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener>、<xref:System.Net.Sockets.UdpClient> クラスで伝送制御プロトコル (TCP) サービスとユーザー データグラム プロトコル (UDP) サービスを利用できます。 これらのプロトコルのクラスは <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> クラスの上に構築され、データ転送の詳細を処理します。  
@@ -34,9 +35,9 @@ ms.locfileid: "59172550"
   
 ## <a name="see-also"></a>関連項目
 
-- [TCP サービスの使用](../../../docs/framework/network-programming/using-tcp-services.md)
-- [UDP サービスの使用](../../../docs/framework/network-programming/using-udp-services.md)
-- [ネットワーク上でストリームを使用する](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [非同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
+- [TCP サービスの使用](using-tcp-services.md)
+- [UDP サービスの使用](using-udp-services.md)
+- [ネットワーク上でストリームを使用する](using-streams-on-the-network.md)
+- [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
+- [非同期クライアント ソケットの使用](using-an-asynchronous-client-socket.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)

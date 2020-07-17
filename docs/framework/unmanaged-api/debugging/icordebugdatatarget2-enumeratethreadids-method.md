@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::EnumerateThreadIDs メソッド
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 848929901e91164bdccda5c1e77069364452a782
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a65b76f384cdad68cba75af524dbe672c309624
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750247"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976487"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs メソッド
 アクティブなスレッド ID の一覧を返します。  
@@ -18,8 +16,8 @@ ms.locfileid: "67750247"
   
 ```cpp  
 HRESULT EnumerateThreadIDs(  
-    [in] ULONG32 cThreadIds,   
-    [out] ULONG32 *pcThreadIds,   
+    [in] ULONG32 cThreadIds,
+    [out] ULONG32 *pcThreadIds,
     [out, size_is(cThreadIds), length_is(*pcThreadIds)] ULONG32 pThreadIds[]  
 );  
 ```  
@@ -37,16 +35,16 @@ HRESULT EnumerateThreadIDs(
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** 参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md).**ヘッダー:** CorDebug.idl、CorDebug.h  
+ **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。**ヘッダー:** CorDebug .idl、CorDebug. h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget2 インターフェイス](icordebugdatatarget2-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

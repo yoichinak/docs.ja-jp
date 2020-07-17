@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774018"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131730"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum インターフェイス
-グローバル アセンブリ キャッシュにインストールされている参照先アセンブリの列挙子を表します。  
+グローバルアセンブリキャッシュにインストールされている参照アセンブリの列挙子を表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +40,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem メソッド](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|次のポインターを取得`IInstallReferenceItem`これに含まれる`IInstallReferenceEnum`します。|  
+|[GetNextInstallReferenceItem メソッド](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|この `IInstallReferenceEnum`に含まれる次の `IInstallReferenceItem` へのポインターを取得します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IInstallReferenceItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [IInstallReferenceItem インターフェイス](iinstallreferenceitem-interface.md)

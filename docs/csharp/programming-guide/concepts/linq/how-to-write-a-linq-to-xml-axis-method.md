@@ -1,21 +1,22 @@
 ---
-title: '方法: LINQ to XML 軸メソッドを記述する (C#)'
+title: LINQ to XML 軸メソッドを記述する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 6e777e615d21dd43317f0813461a3f1d8a506c90
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484663"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662447"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>方法: LINQ to XML 軸メソッドを記述する (C#)
-XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。 これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。 アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。  
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>LINQ to XML 軸メソッドを記述する方法 (C#)
+
+XML [軸メソッド](linq-to-xml-axes-overview.md)によって、XML ドキュメントまたは先祖要素から XML 要素のコレクションが取得されます。 XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。 これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。 アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。  
   
 ## <a name="example"></a>例  
  次の例では、2 つの拡張メソッドを使用します。 最初の拡張メソッドである `GetXPath` は、<xref:System.Xml.Linq.XObject> を処理して、評価時にノードまたは属性を返す XPath 式を返します。 2 番目の拡張メソッドである `Find` は、<xref:System.Xml.Linq.XElement> を処理して、 指定されたテキストを含む <xref:System.Xml.Linq.XAttribute> オブジェクトと <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返します。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 public static class MyExtensions  
@@ -42,7 +43,7 @@ public static class MyExtensions
     private static string NameWithPredicate(XElement el)  
     {  
         if (el.Parent != null && el.Parent.Elements(el.Name).Count() != 1)  
-            return GetQName(el) + "[" +   
+            return GetQName(el) + "[" +
                 (el.ElementsBeforeSelf(el.Name).Count() + 1) + "]";  
         else  
             return GetQName(el);  
@@ -280,7 +281,7 @@ class Program
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -290,4 +291,3 @@ class Program
 /PurchaseOrders/PurchaseOrder[3]/@OrderDate  
 1999-10-22  
 ```  
-  

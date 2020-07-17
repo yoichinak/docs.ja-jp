@@ -5,25 +5,23 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185576"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180321"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -39,10 +37,10 @@ signtool [command] [options] [file_name | ...]
   
 |コマンド|説明|  
 |-------------|-----------------|  
-|`catdb`|カタログ ファイルをカタログ データベースに追加したり、カタログ データベースから削除したりします。 カタログ データベースは、カタログ ファイルの自動検索で使用され、GUID によって識別されます。 `catdb` コマンドでサポートされているオプションの一覧については、「[catdb コマンド オプション](../../../docs/framework/tools/signtool-exe.md#catdb)」を参照してください。|  
-|`sign`|ファイルにデジタル署名します。 デジタル署名はファイルの改ざんを防止し、ユーザーが署名証明書に基づいて署名者を検証できるようにします。 `sign` コマンドでサポートされているオプションの一覧については、「[sign コマンド オプション](../../../docs/framework/tools/signtool-exe.md#sign)」を参照してください。|  
-|`Timestamp`|ファイルにタイム スタンプを付けます。 `TimeStamp` コマンドでサポートされているオプションの一覧については、「[TimeStamp コマンド オプション](../../../docs/framework/tools/signtool-exe.md#TimeStamp)」を参照してください。|  
-|`Verify`|ファイルのデジタル署名を検証します。そのために、署名証明書が信頼できる機関により発行されたかどうか、署名証明書が取り消されたかどうかを確認します。また、オプションで、署名証明書が特定のポリシーに対して有効になっているかどうかを確認します。 `Verify` コマンドでサポートされているオプションの一覧については、「[Verify コマンド オプション](../../../docs/framework/tools/signtool-exe.md#Verify)」を参照してください。|  
+|`catdb`|カタログ ファイルをカタログ データベースに追加したり、カタログ データベースから削除したりします。 カタログ データベースは、カタログ ファイルの自動検索で使用され、GUID によって識別されます。 `catdb` コマンドでサポートされているオプションの一覧については、「[catdb コマンド オプション](signtool-exe.md#catdb)」を参照してください。|  
+|`sign`|ファイルにデジタル署名します。 デジタル署名はファイルの改ざんを防止し、ユーザーが署名証明書に基づいて署名者を検証できるようにします。 `sign` コマンドでサポートされているオプションの一覧については、「[sign コマンド オプション](signtool-exe.md#sign)」を参照してください。|  
+|`Timestamp`|ファイルにタイム スタンプを付けます。 `TimeStamp` コマンドでサポートされているオプションの一覧については、「[TimeStamp コマンド オプション](signtool-exe.md#TimeStamp)」を参照してください。|  
+|`Verify`|ファイルのデジタル署名を検証します。そのために、署名証明書が信頼できる機関により発行されたかどうか、署名証明書が取り消されたかどうかを確認します。また、オプションで、署名証明書が特定のポリシーに対して有効になっているかどうかを確認します。 `Verify` コマンドでサポートされているオプションの一覧については、「[Verify コマンド オプション](signtool-exe.md#Verify)」を参照してください。|  
   
  次のオプションは、すべての署名ツール コマンドに適用されます。  
   
@@ -52,7 +50,7 @@ signtool [command] [options] [file_name | ...]
 |**/v**|コマンドが正常に実行したか、失敗したかにかかわらず、詳細出力と警告メッセージが表示されます。|  
 |**/debug**|デバッグ情報を表示します。|  
   
-<a name="catdb"></a>   
+<a name="catdb"></a>
 ## <a name="catdb-command-options"></a>catdb コマンド オプション  
  次の表に、`catdb` コマンドと共に使用できるオプションを示します。  
   
@@ -63,7 +61,7 @@ signtool [command] [options] [file_name | ...]
 |`/r`|指定したカタログをカタログ データベースから削除します。 このオプションが指定されていない場合、署名ツールはカタログ データベースに指定されたカタログを追加します。|  
 |`/u`|追加されたカタログ ファイルに対して、一意な名前を自動的に生成するように指定します。 必要に応じて、既存のカタログ ファイルと名前が競合しないように、カタログ ファイルの名前が変更されます。 このオプションが指定されていない場合、署名ツールは追加されるカタログと同じ名前を持つ既存のカタログを上書きします。|  
   
-<a name="sign"></a>   
+<a name="sign"></a>
 ## <a name="sign-command-options"></a>sign コマンド オプション  
  次の表に、`sign` コマンドと共に使用できるオプションを示します。  
   
@@ -83,7 +81,7 @@ signtool [command] [options] [file_name | ...]
 |`/n`  *SubjectName*|署名証明書の件名を指定します。 この値には、件名全体の部分文字列を指定できます。|  
 |`/nph`|サポートされている場合に、実行可能ファイルのページ ハッシュを抑制します。 既定値は、SIGNTOOL_PAGE_HASHES 環境変数と wintrust.dll のバージョンによって決定されます。 PE ファイル以外では、このオプションは無視されます。|  
 |`/p`  *Password*|PFX ファイルを開くときに使用するパスワードを指定します。 PFX ファイルを指定するには、`/f` オプションを使用します。|  
-|`/p7` *Path*|指定する各コンテンツ ファイルについて公開キー暗号化規格 (PKCS) #7 ファイルを作成することを指定します。 PKCS #7 ファイルの名前は *path*\\*filename*.p7 です。|  
+|`/p7` *パス*|指定する各コンテンツ ファイルについて公開キー暗号化規格 (PKCS) #7 ファイルを作成することを指定します。 PKCS #7 ファイルの名前は *path*\\*filename*.p7 です。|  
 |`/p7ce` *Value*|署名された PKCS#7 コンテンツのオプションを指定します。 署名されたコンテンツを PKCS #7 ファイルに埋め込む場合は *Value* を "Embedded" に設定し、デタッチされた PKCS #7 ファイルの署名されたデータ部分を作成する場合には "DetachedSignedData" に設定します。 `/p7ce` オプションを使用しない場合は、既定で署名されたコンテンツが埋め込まれます。|  
 |`/p7co` *\<OID>*|署名された PKCS#7 コンテンツを識別するオブジェクト識別子 (OID) を指定します。|  
 |`/ph`|サポートされている場合に、実行可能ファイルのページ ハッシュを生成します。|  
@@ -99,7 +97,7 @@ signtool [command] [options] [file_name | ...]
   
  使用例については、「[Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)」(SignTool を使用してファイルに署名する) を参照してください。  
   
-<a name="TimeStamp"></a>   
+<a name="TimeStamp"></a>
 ## <a name="timestamp-command-options"></a>TimeStamp コマンド オプション  
  次の表に、`TimeStamp` コマンドと共に使用できるオプションを示します。  
   
@@ -113,7 +111,7 @@ signtool [command] [options] [file_name | ...]
   
  使用例については、「[Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)」(署名済みのファイルにタイム スタンプを追加する) を参照してください。  
   
-<a name="Verify"></a>   
+<a name="Verify"></a>
 ## <a name="verify-command-options"></a>Verify コマンド オプション  
   
 |Verify オプション|説明|  
@@ -128,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|指定した位置の署名を検証します。|  
 |`/hash` (`SHA1`&#124;`SHA256`)|カタログ内のファイルを検索する場合に使用するオプションのハッシュ アルゴリズムを指定します。|  
 |`/kp`|カーネル モード ドライバーの署名ポリシーを使用して検証を実行するように指定します。|  
-|`/ms`|複数の検証セマンティクスを使用します。 これは、[!INCLUDE[win8](../../../includes/win8-md.md)] 以上での [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼び出しの既定の動作です。|  
+|`/ms`|複数の検証セマンティクスを使用します。 これは、Windows 8 以降での [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼び出しの既定の動作です。|  
 |`/o` *Version*|オペレーティング システムのバージョンでファイルを確認します。 *バージョン*の書式は、*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber* になります。 *PlatformID* は、<xref:System.PlatformID> 列挙メンバーの基になる値を表します。 **重要:** `/o` スイッチを使用することをお勧めします。 `/o` を指定しない場合、SignTool.exe から予期しない結果が返されることがあります。 たとえば、`/o` スイッチを含めない場合、古いオペレーティング システム上で正しく検証されるシステム カタログが新しいオペレーティング システムで正しく検証されないことがあります。|  
 |`/p7`|PKCS #7 ファイルを確認します。 PKCS #7 検証で既存のポリシーは使用されません。 署名がチェックされ、署名証明書のチェーンがビルドされます。|  
 |`/pa`|既定の Authenticode 検証ポリシーを使用するように指定します。 `/pa` オプションが指定されていない場合、署名ツールは Windows ドライバー検証ポリシーを使用します。 このオプションは、`catdb` オプションと一緒に使用することはできません。|  
@@ -151,65 +149,65 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>使用例  
  カタログ ファイル MyCatalogFileName.cat をシステム コンポーネントおよびドライバー データベースに追加するコマンドを次に示します。 `/u` オプションは、必要に応じて一意の名前を生成し、`MyCatalogFileName.cat` という名前の既存のカタログ ファイルが置き換えられないようにします。  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  最適な証明書を使用してファイルに自動的に署名するコマンドを次に示します。  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  パスワードで保護された PFX ファイルに格納されている証明書を使用してファイルにデジタル署名するコマンドを次に示します。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  ファイルにデジタル署名してタイム スタンプを付けるコマンドを次に示します。 ファイルへの署名に使用する証明書は、PFX ファイルに格納されています。  
   
-```  
-signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+```console  
+signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  `My` ストアにある件名が `My Company Certificate` の証明書を使用してファイルに署名するコマンドを次に示します。  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  ActiveX コントロールに署名して、ユーザーがコントロールをインストールするように求められるときに Internet Explorer に表示される情報を指定するコマンドを次に示します。  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  デジタル署名済みのファイルにタイム スタンプを付けるコマンドを次に示します。  
   
-```  
-signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+```console  
+signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  ファイルが署名済みであることを検証するコマンドを次に示します。  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  カタログで署名されている可能性があるシステム ファイルを検証するコマンドを次に示します。  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  `MyCatalog.cat` という名前のカタログで署名されているシステム ファイルを検証するコマンドを次に示します。  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 37851f99eb88543e939ce48995ded41958e57cc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788987"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397489"
 ---
 # <a name="-nowarn"></a>-nowarn
 警告を生成するコンパイラの機能を無効にします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -nowarn[:numberList]  
 ```  
   
@@ -26,28 +26,28 @@ ms.locfileid: "61788987"
   
 |用語|定義|  
 |---|---|  
-|`numberList`|省略可能です。 コンパイラはしないようにする警告の ID 番号のコンマ区切りリスト。 警告の Id が指定されていない場合は、すべての警告が抑制されます。|  
+|`numberList`|任意。 コンパイラにより非表示にされるべき警告 ID 番号のコンマ区切りの一覧。 警告 ID が指定されていない場合、すべての警告は非表示になります。|  
   
 ## <a name="remarks"></a>Remarks  
- `-nowarn`オプションと、コンパイラの警告を生成しません。 個々 の警告を抑制するのに警告の ID を指定します、`-nowarn`コロンに続くオプション。 複数の警告番号をコンマで区切ります。  
+ `-nowarn` オプションを指定すると、コンパイラにより警告が生成されなくなります。 個々の警告を非表示にするには、`-nowarn` オプションの後にコロンを追加し、警告 ID を指定します。 警告が複数ある場合は、番号をコンマで区切ります。  
   
- 警告 id の数値の一部だけを指定する必要があります。 たとえば、BC42024、未使用のローカル変数の警告を抑制する場合は、指定`-nowarn:42024`します。  
+ 警告 ID は、数値部分のみを指定します。 たとえば、BC42024 を非表示にする場合は、使用されていないローカル変数の警告に、`-nowarn:42024` を指定します。  
   
- 警告の ID 番号の詳細については、次を参照してください。 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)します。  
+ 警告 ID の番号の詳細については、「[Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。  
   
-|Visual Studio 統合開発環境で-nowarn を設定するには|  
+|Visual Studio 統合開発環境で -nowarn を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.選択、**すべての警告を無効にする**すべての警告を無効にする チェック ボックス。<br />     または<br />     特定の警告を無効にするには、 **None**警告の横にあるドロップダウン リストから。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3.警告をすべて無効にするには、 **[すべての警告を表示しない]** チェック ボックスをオンにします。<br />     または<br />     特定の警告を無効にするには、その警告の隣のドロップダウン リストから **[なし]** をクリックします。|  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`すべての警告は表示されません。  
+ 次のコードでは `T2.vb` がコンパイルされ、警告が表示されません。  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`未使用のローカル変数 (42024) の警告は表示されません。  
+ 次のコードでは `T2.vb` がコンパイルされ、使用されていないローカル変数 (42024) の警告が表示されません。  
   
 ```console
 vbc -nowarn:42024 t2.vb  
@@ -55,6 +55,6 @@ vbc -nowarn:42024 t2.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
 - [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

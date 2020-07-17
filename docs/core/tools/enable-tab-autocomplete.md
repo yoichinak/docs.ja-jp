@@ -1,25 +1,25 @@
 ---
 title: タブ補完を有効にする
 description: この記事では、PowerShell、Bash、および zsh 向けの .NET Core CLI のタブ補完を有効にする方法を説明します。
-author: thraka
+author: adegeo
 ms.author: adegeo
-ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.date: 11/03/2019
+ms.openlocfilehash: 491e1ca34c20c3994a571fc2deff7392c6bdb3f2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203338"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324383"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
 
-.NET Core 2.0 SDK 以降では、.NET Core CLI はタブ補完をサポートします。 この記事では、3 つのシェル、PowerShell、Bash、および zsh のタブ補完を構成する方法について説明します。 その他のシェルでは、オート コンプリートのサポートがある場合があります。 オート コンプリートの構成方法については、それぞれのドキュメントを参照してください。手順は、この記事で説明されている手順と同様です。
+**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-[!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
+この記事では、3 つのシェル、PowerShell、Bash、および zsh のタブ補完を構成する方法について説明します。 他のシェルについては、タブ補完を構成する方法に関するシェルのドキュメントを参照してください。
 
 セットアップが完了したら、シェルに `dotnet` コマンドを入力した後、TAB キーを押すと、.NET Core CLI のタブ補完がトリガーされます。 現在のコマンド ラインが `dotnet complete` コマンドに送信され、結果がシェルによって処理されます。 何かを `dotnet complete` コマンドに直接送信することで、タブ補完を有効にせずに結果をテストすることができます。 次に例を示します。
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean
@@ -38,18 +38,18 @@ pack
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | アルファベット順では、`add` が最初のサブコマンドのため。
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | タブ補完が部分文字列と一致しており、アルファベット順では `--help` が先になるため。
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Tab キーを 2 回押すと、次の修正候補が表示されるため。      
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Tab キーを 2 回押すと、次の修正候補が表示されるため。
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | 結果はアルファベット順に返されるため。
 `dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | タブ補完がプロジェクト ファイルに対応しているため。
 
 ## <a name="powershell"></a>PowerShell
 
-.NET Core CLI の **PowerShell** にタブ補完を追加するには、変数 `$PROFILE` に格納されているプロファイルを作成または編集します。 詳細については、[プロファイルの作成方法](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile)と[プロファイルと実行ポリシー](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy)のトピックを参照してください。 
+.NET Core CLI の **PowerShell** にタブ補完を追加するには、変数 `$PROFILE` に格納されているプロファイルを作成または編集します。 詳細については、[プロファイルの作成方法](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile)と[プロファイルと実行ポリシー](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)のトピックを参照してください。
 
 自分のプロファイルに次のコードを追加します。
 
 ```powershell
-# PowerShell parameter completion shim for the dotnet CLI 
+# PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
      param($commandName, $wordToComplete, $cursorPosition)
          dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
@@ -70,7 +70,10 @@ _dotnet_bash_complete()
   local word=${COMP_WORDS[COMP_CWORD]}
 
   local completions
-  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}")"
+  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)"
+  if [ $? -ne 0 ]; then
+    completions=""
+  fi
 
   COMPREPLY=( $(compgen -W "$completions" -- "$word") )
 }
@@ -78,14 +81,14 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>Zsh
+## <a name="zsh"></a>zsh
 
 .NET Core CLI の **zsh** シェルにタブ補完を追加するには、次のコードを `.zshrc` ファイルに追加します。
 
 ```zsh
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 

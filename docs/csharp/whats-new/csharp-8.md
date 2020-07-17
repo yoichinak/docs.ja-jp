@@ -1,34 +1,38 @@
 ---
 title: C# 8.0 の新機能 - C# ガイド
-description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
-ms.date: 02/12/2019
-ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+description: C# 8.0 で使用できる新しい機能の概要を説明します。
+ms.date: 04/07/2020
+ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397769"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174732"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
-C# 言語では、既に試すことができる多くの機能強化が行われています。 
+C# 8.0 では、C# 言語に次の機能と機能強化が追加されています。
 
 - [読み取り専用メンバー](#readonly-members)
-- [既定のインターフェイス メンバー](#default-interface-members)
+- [既定のインターフェイス メソッド](#default-interface-methods)
 - [パターン マッチングの拡張機能](#more-patterns-in-more-places):
-  * [switch 式](#switch-expressions)
-  * [プロパティのパターン](#property-patterns)
-  * [タプル パターン](#tuple-patterns)
-  * [位置指定パターン](#positional-patterns)
+  - [switch 式](#switch-expressions)
+  - [プロパティのパターン](#property-patterns)
+  - [タプル パターン](#tuple-patterns)
+  - [位置指定パターン](#positional-patterns)
 - [using 宣言](#using-declarations)
 - [静的ローカル関数](#static-local-functions)
 - [破棄可能な ref 構造体](#disposable-ref-structs)
 - [Null 許容参照型](#nullable-reference-types)
 - [非同期ストリーム](#asynchronous-streams)
+- [非同期の破棄可能](#asynchronous-disposable)
 - [インデックスと範囲](#indices-and-ranges)
+- [null 合体割り当て](#null-coalescing-assignment)
+- [構築されたアンマネージド型](#unmanaged-constructed-types)
+- [入れ子になった式の stackalloc](#stackalloc-in-nested-expressions)
+- [verbatim 補間文字列の拡張](#enhancement-of-interpolated-verbatim-strings)
 
-> [!NOTE]
-> この記事の最後の更新は、C# 8.0 プレビュー 5 に関するものです。
+C# 8.0 は **.NET Core 3.x** と **.NET Standard 2.1** でサポートされています。 詳細については、「[C# 言語のバージョン管理](../language-reference/configure-language-version.md)」を参照してください。
 
 この記事の以降では、これらの機能について簡単に説明します。 詳細な記事がある場合は、それらのチュートリアルと概要へのリンクが提供されています。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
 
@@ -39,7 +43,7 @@ C# 言語では、既に試すことができる多くの機能強化が行わ�
 
 ## <a name="readonly-members"></a>読み取り専用メンバー
 
-構造体の任意のメンバーに `readonly` 修飾子を適用できます。 これは、メンバーによって状態が変更されないことを示します。 `readonly` 修飾子を `struct` 宣言に適用するよりも詳細になります。  次の変更可能な構造体を検討します。
+構造体のメンバーに `readonly` 修飾子を適用できます。 これは、メンバーが状態を変更しないことを示します。 `readonly` 修飾子を `struct` 宣言に適用するよりも詳細になります。  次の変更可能な構造体を検討します。
 
 ```csharp
 public struct Point
@@ -53,26 +57,28 @@ public struct Point
 }
 ```
 
-ほとんどの構造体と同様に、`ToString()` メソッドでは、状態を変更しません。 それを示すには、`ToString()` の宣言に修飾子 `readonly` を追加します。
+`ToString()` メソッドでは、ほとんどの構造体と同様に状態を変更しません。 それを示すには、`ToString()` の宣言に修飾子 `readonly` を追加します。
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-上記の変更により、`ToString` が `readonly` とマークされていない `Distance` プロパティにアクセスするため、コンパイラの警告が生成されます。
+`ToString` が `readonly` とマークされていない `Distance` プロパティにアクセスするため、上記の変更により、コンパイラの警告が生成されます。
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-コンパイラからは、防御用のコピーを作成する必要があるときに警告されます。  `Distance` プロパティでは状態を変更しないため、宣言に `readonly` 修飾子を追加することで、この警告を修正できます。
+コンパイラからは、防御用のコピーを作成する必要があるときに警告されます。  `Distance` プロパティでは状態を変更しないため、次のように宣言に `readonly` 修飾子を追加することで、この警告を修正できます。
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-`readonly` 修飾子は読み取り専用プロパティに必要であることに注意してください。 コンパイラでは、`get` アクセサーが状態を変更しないことを想定していないため、`readonly` を明示的に宣言する必要があります。 コンパイラによって、`readonly` メンバーによって状態が変更されないというルールが適用されます。 次のメソッドは、`readonly` 修飾子を削除しない限りコンパイルされません。
+`readonly` 修飾子は読み取り専用プロパティに必要であることに注意してください。 コンパイラでは、`get` アクセサーが状態を変更しないことを想定していないため、`readonly` を明示的に宣言する必要があります。 自動実装プロパティは例外です。このコンパイラは、自動実装されたすべてのゲッターを `readonly` として処理します。したがって、ここでは、`X` および `Y` プロパティに `readonly` 修飾子を追加する必要はありません。
+
+コンパイラによって、`readonly` メンバーによって状態が変更されないというルールが適用されます。 次のメソッドは、`readonly` 修飾子を削除しない限りコンパイルされません。
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -84,11 +90,13 @@ public readonly void Translate(int xOffset, int yOffset)
 
 この機能により、設計の意図を指定し、コンパイラによってそれが適用され、その意図に基づいて最適化が行われるようにすることができます。
 
-## <a name="default-interface-members"></a>既定のインターフェイス メンバー
+詳細については、[構造体型](../language-reference/builtin-types/struct.md)に関する記事の「[`readonly` インスタンス メンバー](../language-reference/builtin-types/struct.md#readonly-instance-members)」セクションを参照してください。
 
-ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が*継承*されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メンバーでは、"traits" 言語機能のようなシナリオも可能になります。
+## <a name="default-interface-methods"></a>既定のインターフェイス メソッド
 
-多くのシナリオと言語要素が、既定のインターフェイス メンバーによって影響されます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-members-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
+ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が*継承*されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メソッドでは、"traits" 言語機能のようなシナリオも可能になります。
+
+既定のインターフェイス メソッドにより、多くのシナリオと言語要素が影響を受けます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-methods-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
 
 ## <a name="more-patterns-in-more-places"></a>より多くの場所でより多くのパターン
 
@@ -168,14 +176,14 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>プロパティ パターン
 
-**プロパティ パターン**を使用すると、調査対象のオブジェクトのプロパティと照合することができます。 購入者の住所に基づいて消費税を計算する必要がある eコマース サイトについて考えます。 そのような計算は、`Address` クラスの核心的な役割ではありません。 時間とともに、おそらくは住所の形式の変更より頻繁に、変更されます。 消費税の金額は、住所の `State` プロパティに依存します。 次のメソッドでは、プロパティ パターンを使用して、住所と価格から消費税を計算しています。
+**プロパティ パターン**を使用すると、調査対象のオブジェクトのプロパティと照合することができます。 購入者の住所に基づいて消費税を計算する必要がある eコマース サイトについて考えます。 そのような計算は、`Address` クラスの主な役割ではありません。 時間とともに、おそらくは住所の形式の変更より頻繁に、変更されます。 消費税の金額は、住所の `State` プロパティに依存します。 次のメソッドでは、プロパティ パターンを使用して、住所と価格から消費税を計算しています。
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
     location switch
     {
         { State: "WA" } => salePrice * 0.06M,
-        { State: "MN" } => salePrice * 0.75M,
+        { State: "MN" } => salePrice * 0.075M,
         { State: "MI" } => salePrice * 0.05M,
         // other cases removed for brevity...
         _ => 0M
@@ -186,7 +194,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>タプル パターン
 
-いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン**を使うと、[タプル](../tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
+いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン**を使うと、[タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -251,7 +259,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-前の switch での破棄パターンは、`x` または `y` のどちらか一方が 0 のときに一致しますが、両方とも 0 のときには一致しません。 switch 式は、値を生成するか、または例外をスローする必要があります。 どのケースとも一致しない場合、switch 式は例外をスローします。 可能性のあるすべてのケースが switch 式でカバーされていない場合、コンパイラで警告が生成されます。
+前の switch での破棄パターンは、`x` または `y` のどちらか一方が 0 のときに一致しますが、両方とも 0 のときには一致しません。 switch 式は、値を生成するか、または例外をスローする必要があります。 どのケースとも一致しない場合、switch 式は例外をスローします。 可能性のあるすべてのケースが switch 式で網羅されていない場合、コンパイラで警告が生成されます。
 
 この[パターン マッチングの高度なチュートリアル](../tutorials/pattern-matching.md)で、パターン マッチング手法を確認できます。
 
@@ -260,47 +268,61 @@ static Quadrant GetQuadrant(Point point) => point switch
 **using 宣言**は、`using` キーワードが前に付いている変数宣言です。 宣言されている変数を外側のスコープの最後に破棄する必要があることを、コンパイラに伝えます。 たとえば、テキスト ファイルを書き込む次のようなコードについて考えます。
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 上の例では、メソッドの右中かっこに達した時点で、ファイルは破棄されます。 そこは、`file` が宣言されているスコープの末端です。 上記のコードは、従来の [using ステートメント](../language-reference/keywords/using-statement.md)を使用する次のコードと同等です。
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 
 上の例では、`using` ステートメントに関連付けられている右中かっこに達すると、ファイルは破棄されます。
 
-どちらの場合も、コンパイラでは `Dispose()` の呼び出しが生成されます。 using ステートメント内の式を破棄できない場合、コンパイラでエラーが生成されます。
+どちらの場合も、コンパイラでは `Dispose()` の呼び出しが生成されます。 `using` ステートメント内の式を破棄できない場合、コンパイラによってエラーが生成されます。
 
 ## <a name="static-local-functions"></a>静的ローカル関数
 
-`static` 修飾子をローカル関数に追加することにより、ローカル関数で外側のスコープの変数がキャプチャ (参照) されないようにすることができます。 それを行うと、`CS8421` "静的ローカル関数は \<variable> への参照を含むことができない" が生成されます。 
+`static` 修飾子をローカル関数に追加することにより、ローカル関数で外側のスコープの変数がキャプチャ (参照) されないようにすることができます。 それを行うと、`CS8421` "静的ローカル関数は \<variable> への参照を含むことができない" が生成されます。
 
 次のコードについて考えてみましょう。 ローカル関数 `LocalFunction` は、外側のスコープ (`M` メソッド) で宣言されている変数 `y` にアクセスしています。 そのため、`LocalFunction` では `static` 修飾子を宣言することはできません。
 
@@ -330,7 +352,7 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>破棄可能な ref 構造体
 
-`ref` 修飾子付きで宣言されている `struct` ではインターフェイスを実装できないので、<xref:System.IDisposable> を実装できません。 したがって、`ref struct` を破棄できるようにするには、アクセス可能な `void Dispose()` メソッドを持っている必要があります。 これは、`readonly ref struct` 宣言にも当てはまります。
+`ref` 修飾子付きで宣言されている `struct` ではインターフェイスを実装できないので、<xref:System.IDisposable> を実装できません。 したがって、`ref struct` を破棄できるようにするには、アクセス可能な `void Dispose()` メソッドを持っている必要があります。 この機能は、`readonly ref struct` 宣言にも当てはまります。
 
 ## <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -372,21 +394,26 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-[非同期ストリームの作成と使用](../tutorials/generate-consume-asynchronous-stream.md)に関するチュートリアルを使用して、自分で非同期ストリームを試すことができます。
+[非同期ストリームの作成と使用](../tutorials/generate-consume-asynchronous-stream.md)に関するチュートリアルを使用して、自分で非同期ストリームを試すことができます。 既定では、ストリーム要素はキャプチャされたコンテキストで処理されます。 コンテキストのキャプチャを無効にする場合は、<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 拡張メソッドを使用します。 同期コンテキストについて、および現在のコンテキストのキャプチャについての詳細は、「[タスク ベースの非同期パターンの利用](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)」を参照してください。
+
+## <a name="asynchronous-disposable"></a>非同期の破棄可能
+
+C# 8.0 以降、この言語では <xref:System.IAsyncDisposable?displayProperty=nameWithType> インターフェイスを実装する非同期の破棄可能な型がサポートされます。 `using` 式のオペランドで、<xref:System.IDisposable> または <xref:System.IAsyncDisposable> を実装できます。 `IAsyncDisposable` の場合、<xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> から返される <xref:System.Threading.Tasks.Task> を `await` するコードがコンパイラによって生成されます。 詳細については、「[`using` ステートメント](../language-reference/keywords/using-statement.md)」を参照してください。
 
 ## <a name="indices-and-ranges"></a>インデックスと範囲
 
-範囲とインデックスでは、配列、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の部分範囲を指定するための簡潔な構文が提供されます。
+インデックスと範囲には、シーケンス内の 1 つの要素または範囲にアクセスできる簡潔な構文が用意されています。
 
-この言語のサポートでは、2 つの新しい型と 2 つの新しい演算子を使用しています。
+この言語のサポートでは、次の 2 つの新しい型と 2 つの新しい演算子を使用しています。
+
 - <xref:System.Index?displayProperty=nameWithType> はシーケンスとしてインデックスを表します。
-- `^` 演算子。シーケンスの末尾から相対的なインデックスを指定します。
+- index from end 演算子の `^`。シーケンスの末尾から相対的なインデックスを指定します。
 - <xref:System.Range?displayProperty=nameWithType> はシーケンスのサブ範囲を表します。
-- 範囲演算子 (`..`)。範囲の先頭と末尾をオペランドとして指定します。
+- 範囲演算子の `..`。範囲の先頭と末尾をそのオペランドとして指定します。
 
 インデックスのルールから始めましょう。 配列 `sequence` を考えます。 `0` インデックスは `sequence[0]` と同じです。 `^0` インデックスは `sequence[sequence.Length]` と同じです。 `sequence[sequence.Length]` と同様に、`sequence[^0]` は例外をスローすることに注意してください。 任意の数値 `n` の場合、インデックス `^n` は `sequence.Length - n` と同じです。
 
-範囲は、範囲の*先頭*と*末尾*を指定します。 範囲の先頭は包含ですが、範囲の末尾は排他です。つまり、"*先頭*" は範囲に含まれますが、"*末尾*" は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。 
+範囲は、範囲の*先頭*と*末尾*を指定します。 範囲の先頭は包含ですが、範囲の末尾は排他です。つまり、"*先頭*" は範囲に含まれますが、"*末尾*" は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
 
 いくつか例を見てみましょう。 先頭および末尾からのインデックスの注釈が付けられた、次のような配列について考えます。
 
@@ -413,7 +440,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-次のコードでは、単語 "quick"、"brown"、"fox" から成る部分範囲が作成されます。 それには、`words[1]` から `words[3]` までが含まれます。 要素 `words[4]` は範囲内ではありません。
+次のコードでは、単語 "quick"、"brown"、"fox" から成る部分範囲が作成されます。 それには、`words[1]` から `words[3]` までが含まれます。 要素 `words[4]` が範囲内にありません。
 
 ```csharp
 var quickBrownFox = words[1..4];
@@ -445,4 +472,65 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
+配列でインデックスと範囲がサポートされるだけではありません。 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> と共にインデックスと範囲を使用することもできます。 詳細については、「[インデックスと範囲の型のサポート](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)」を参照してください。
+
 チュートリアルでのインデックスと範囲について詳しくは、「[Indices and ranges (インデックスと範囲)](../tutorials/ranges-indexes.md)」で調べることができます。
+
+## <a name="null-coalescing-assignment"></a>null 合体割り当て
+
+C# 8.0 では、null 合体割り当て演算子 `??=` が導入されています。 左側のオペランドが `null` に評価された場合にのみ、`??=` 演算子を使用して右側のオペランドの値を左側のオペランドに割り当てることができます。
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(" ", numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+詳細については、「[?? and ??= 演算子](../language-reference/operators/null-coalescing-operator.md)」の記事を参照してください。
+
+## <a name="unmanaged-constructed-types"></a>構築されたアンマネージド型
+
+C# 7.3 以前では、構築された型 (少なくとも 1 つの型引数を含む型) は[アンマネージド型](../language-reference/builtin-types/unmanaged-types.md)にできません。 C# 8.0 以降、アンマネージド型のフィールドのみが含まれている場合、構築された値型はアンマネージドになります。
+
+たとえば、次の `Coords<T>` ジェネリック型の定義があるとします。
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+この `Coords<int>` 型は、C# 8.0 以降ではアンマネージド型です。 あらゆるアンマネージド型の場合と同様に、この型の変数へのポインターを作成したり、この型のインスタンスの[スタックにメモリ ブロックを割り当て](../language-reference/operators/stackalloc.md)たりすることができます。
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+詳細については、「[アンマネージド型](../language-reference/builtin-types/unmanaged-types.md)」を参照してください。
+
+## <a name="stackalloc-in-nested-expressions"></a>入れ子になった式の stackalloc
+
+C# 8.0 以降、[stackalloc](../language-reference/operators/stackalloc.md) 式の結果が <xref:System.Span%601?displayProperty=nameWithType> または <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 型になる場合、他の式で `stackalloc` 式を使用できます。
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
+Console.WriteLine(ind);  // output: 1
+```
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>verbatim 補間文字列の拡張
+
+verbatim [補間](../language-reference/tokens/interpolated.md)文字列において、`$` および `@` のトークンの順序は任意です。`$@"..."` と `@$"..."` は両方とも有効な verbatim 補間文字列です。 以前のバージョンの C# では、`$` トークンは `@` トークンの前に記述する必要があります。

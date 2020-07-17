@@ -1,18 +1,18 @@
 ---
-title: Func および Action 汎用デリゲートでの分散の使用 (C#)
+title: Func および Action 汎用デリゲート (Visual Basic) の変性の使用
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17f55d594ad4364fd29c8f6e41bd6ad2445b0986
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540599"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169793"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func および Action 汎用デリゲートでの分散の使用 (C#)
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func および Action 汎用デリゲート (Visual Basic) の変性の使用
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。  
   
- 共変性と反変性の詳細については、「[デリゲートの分散 (C# )](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」を参照してください。  
+ 共変性と反変性の詳細については、「[デリゲートの変性 (C# )](./variance-in-delegates.md)」を参照してください。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>デリゲートと共変の型パラメーターの使用  
  次の例は、`Func` 汎用デリゲートにおける共変性のサポートの利点を示しています。 `FindByTitle` メソッドは、`String` 型のパラメーターを受け取り、`Employee` 型のオブジェクトを返します。 ただし、このメソッドは `Func<String, Person>` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。  
@@ -39,8 +39,8 @@ class Program
         // but you can assign it a method that returns Employee.  
         Func<String, Person> findPerson = FindByTitle;  
   
-        // You can also assign a delegate   
-        // that returns a more derived type   
+        // You can also assign a delegate
+        // that returns a more derived type
         // to a delegate that returns a less derived type.  
         findPerson = findEmployee;  
   
@@ -67,21 +67,21 @@ class Program
         // Create an instance of the delegate without using variance.  
         Action<Person> addPersonToContacts = AddToContacts;  
   
-        // The Action delegate expects   
+        // The Action delegate expects
         // a method that has an Employee parameter,  
         // but you can assign it a method that has a Person parameter  
         // because Employee derives from Person.  
         Action<Employee> addEmployeeToContacts = AddToContacts;  
   
-        // You can also assign a delegate   
-        // that accepts a less derived parameter to a delegate   
+        // You can also assign a delegate
+        // that accepts a less derived parameter to a delegate
         // that accepts a more derived parameter.  
         addEmployeeToContacts = addPersonToContacts;  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [共変性と反変性 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [ジェネリック](~/docs/standard/generics/index.md)
+- [共変性と反変性 (C#)](./index.md)
+- [ジェネリック](../../../../standard/generics/index.md)

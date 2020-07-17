@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747622"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893654"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode メソッド
-指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 このメソッドは、.NET Framework version 2.0 で廃止されました。 使用[icordebugcode 2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)代わりにします。  
+指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 このメソッドは .NET Framework バージョン2.0 では非推奨とされました。 代わりに[ICorDebugCode2:: GetCodeChunks](icordebugcode2-getcodechunks-method.md)を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetCode (  
-    [in] ULONG32     startOffset,   
+    [in] ULONG32     startOffset,
     [in] ULONG32     endOffset,  
     [in] ULONG32     cBufferAlloc,  
     [out, size_is(cBufferAlloc),  
@@ -42,32 +40,32 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>パラメーター  
  `startOffset`  
- [in]関数の最初のオフセット。  
+ から関数の開始位置のオフセット。  
   
  `endOffset`  
- [in]関数の最後のオフセット。  
+ から関数の終了位置のオフセット。  
   
  `cBufferAlloc`  
- [in]サイズ、`buffer`にコードを返される配列。  
+ からコードが返される`buffer`配列のサイズ。  
   
  `buffer`  
- [out]コードが返される先の配列。  
+ 入出力コードが返される配列。  
   
  `pcBufferSize`  
- [out]返されるバイト数。  
+ 入出力返されたバイト数。  
   
-## <a name="remarks"></a>Remarks  
- 関数のコードは、複数のチャンクに分割されていますが場合、は、ネイティブのオフセットの昇順で連結されます。 命令の境界はチェックされません。  
+## <a name="remarks"></a>解説  
+ 関数のコードが複数のチャンクに分割されている場合は、ネイティブオフセットが増加する順序で連結されます。 命令の境界はチェックされません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 1.1, 1.0  
+ **.NET Framework のバージョン:** 1.1、1.0  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [GetCodeChunks メソッド](icordebugcode2-getcodechunks-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3cd62384ad87d072cd715d23d0e9ee9dac23270
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764315"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396742"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType メソッド
-この"ICorDebugValue"オブジェクトのプリミティブ型を取得します。  
+この "ICorDebugValue" オブジェクトのプリミティブ型を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>パラメーター  
  `pType`  
- [out]値の型を示す"CorElementType"列挙型の値へのポインター。  
+ 入出力値の型を示す "CorElementType" 列挙値へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- 適切なサブクラスを通じてその型を調べることがありますオブジェクトが実行時の複雑な型の場合、`ICorDebugValue`インターフェイス。 たとえば、"ICorDebugObjectValue"を継承する`ICorDebugValue`、複合型を表します。  
+## <a name="remarks"></a>解説  
+ オブジェクトが複雑な実行時の型である場合、その型はインターフェイスの適切なサブクラスを通じて検査される可能性があり `ICorDebugValue` ます。 たとえば、から継承する "" のような "という値は、 `ICorDebugValue` 複合型を表します。  
   
- `GetType`と[icordebugobjectvalue::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)各メソッドが値の型に関する情報を返します。 どちらも汎用対応によって置き換えられる[icordebugvalue 2::getexacttype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)メソッド。  
+ `GetType`およびの各メソッドは、それぞれ値の型に関する情報[を](icordebugobjectvalue-getclass-method.md)返します。 これらはどちらも、ジェネリック対応[ICorDebugValue2:: GetExactType](icordebugvalue2-getexacttype-method.md)メソッドに置き換えられています。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目

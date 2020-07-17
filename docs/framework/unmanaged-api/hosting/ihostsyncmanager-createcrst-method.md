@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88b7b2093ecb2c601e57eca32e25c21e91641281
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3566907544c72da2735e155d9088fe09fea4a728
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753475"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803478"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst メソッド
-同期のためのクリティカル セクション オブジェクトを作成します。  
+同期のための重要なセクションオブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,37 +35,37 @@ HRESULT CreateCrst (
   
 ## <a name="parameters"></a>パラメーター  
  `ppCrst`  
- [out]アドレスへのポインター、 [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)インスタンスのホストによって実装される、または null の場合は、クリティカル セクションを作成できませんでした。  
+ 入出力ホストによって実装されている[IHostCrst](ihostcrst-interface.md)インスタンスのアドレスへのポインター。クリティカルセクションを作成できなかった場合は null。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`CreateCrst`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|E_OUTOFMEMORY|メモリ不足は、要求のクリティカル セクションを作成できませんでした。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|E_OUTOFMEMORY|要求されたクリティカルセクションを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>Remarks  
- クリティカル セクション オブジェクトは、クリティカル セクションを 1 つのプロセスのスレッドでのみ使用できますが、ミュー テックス オブジェクトによって提供されるような同期を提供します。 `CreateCrst` Win32 をミラー化`InitializeCriticalSection`関数。  
+## <a name="remarks"></a>解説  
+ クリティカルセクションオブジェクトは、1つのプロセスのスレッドのみが使用できるクリティカルセクションを除き、ミューテックスオブジェクトで提供されるものと同様の同期を提供します。 `CreateCrst`Win32 関数をミラー化 `InitializeCriticalSection` します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [IHostSemaphore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [ミューテックス](../../../../docs/standard/threading/mutexes.md)
-- [Semaphore と SemaphoreSlim](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- [ICLRSyncManager インターフェイス](iclrsyncmanager-interface.md)
+- [IHostCrst インターフェイス](ihostcrst-interface.md)
+- [IHostSyncManager インターフェイス](ihostsyncmanager-interface.md)
+- [IHostSemaphore インターフェイス](ihostsemaphore-interface.md)
+- [ミューテックス](../../../standard/threading/mutexes.md)
+- [Semaphore と SemaphoreSlim](../../../standard/threading/semaphore-and-semaphoreslim.md)

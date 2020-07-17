@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e11886917964134a2530ae8484dba3cde5e7b61
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759378"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615099"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces メソッド
 この名前空間の子を取得します。  
@@ -39,20 +37,20 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>パラメーター  
  `cNameSpaces`  
- [in]A`ULONG32`のサイズを示す、`namespaces`配列。  
+ から`ULONG32`配列のサイズを示す `namespaces` 。  
   
  `pcNameSpaces`  
- [out]ポインターを`ULONG32`名前空間の格納に必要なバッファーの文字のサイズを受け取る。  
+ 入出力`ULONG32`名前空間を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
  `namespaces`  
- [out]名前空間を格納しているバッファーへのポインター。  
+ 入出力名前空間を格納しているバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedNamespace インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace インターフェイス](isymunmanagednamespace-interface.md)

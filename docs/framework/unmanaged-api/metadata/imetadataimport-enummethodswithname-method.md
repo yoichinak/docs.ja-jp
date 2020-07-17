@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66a09baea1df2e2de418bdce8821672802f1f51f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779734"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491733"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName メソッド
 指定された名前を持ち、指定された TypeDef トークンによって参照される型で定義されているメソッドを列挙します。  
@@ -42,43 +40,43 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `cl`  
- [in]列挙するメソッドを持つ型を表す TypeDef トークンです。  
+ から列挙するメソッドを持つ型を表す TypeDef トークン。  
   
  `szName`  
- [in]列挙体のスコープを制限する名前です。  
+ から列挙型のスコープを制限する名前。  
   
  `rMethods`  
- [out]MethodDef トークンを格納するために使用する配列。  
+ 入出力MethodDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rMethods` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]返される MethodDef トークン数`rMethods`します。  
+ 入出力で返される MethodDef トークンの数 `rMethods` 。  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、フィールドと、メソッドがないプロパティまたはイベントを列挙します。 異なり[imetadataimport::enummethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)、`EnumMethodsWithName`を指定した名前を持たないすべてのメソッドのトークンを破棄します。  
+## <a name="remarks"></a>解説  
+ このメソッドは、フィールドとメソッドを列挙しますが、プロパティやイベントは列挙しません。 [IMetaDataImport:: enummethods](imetadataimport-enummethods-method.md)とは異なり、は、 `EnumMethodsWithName` 指定された名前を持たないすべてのメソッドトークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumMethodsWithName`正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0になります。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

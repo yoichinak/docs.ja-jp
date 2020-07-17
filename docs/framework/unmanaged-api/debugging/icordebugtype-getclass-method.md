@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 878a57514af34730049864f17f4853c1237904c2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736798"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379959"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass メソッド
-インスタンス化されていないジェネリック型を表す、ICorDebugClass インターフェイス ポインターを取得します。  
+インスタンスジェネリック型を表す、のクラスへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>パラメーター  
  `ppClass`  
- [out]アドレスへのポインター、`ICorDebugClass`インスタンス化されていないジェネリック型を表すインターフェイスです。  
+ 入出力`ICorDebugClass`インスタンスジェネリック型を表すインターフェイスのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `GetClass` 特定の条件下でのみ呼び出すことができます。 呼び出す[icordebugtype::gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)呼び出す前に`GetClass`します。 場合`ICorDebugType::GetType`ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE、CorElementType 値を返します`GetClass`呼び出すジェネリック型のインスタンス化されていない型を取得することができます。  
+ `GetClass`は、特定の条件下でのみ呼び出すことができます。 を[呼び出す前に](icordebugtype-gettype-method.md)、を呼び出して `GetClass` ください。 `ICorDebugType::GetType`が ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE の CorElementType 値を返す場合は、を呼び出して、 `GetClass` ジェネリック型のインスタンス型を取得できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

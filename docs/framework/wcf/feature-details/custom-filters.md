@@ -2,12 +2,12 @@
 title: カスタム フィルター
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ae020173544372c3ce097c8ac57e53f3fde37514
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912681"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185211"
 ---
 # <a name="custom-filters"></a>カスタム フィルター
 カスタム フィルターを使用すると、システムが提供するメッセージ フィルターを使用して実現できない一致ロジックを定義できます。 たとえば、特定のメッセージ要素をハッシュし、その値を検証してフィルターが true または false のどちらを返すかを決定するカスタム フィルターを作成できます。  
@@ -39,7 +39,7 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
->  実際の実装で一致するメソッドにはメッセージを調べ、このメッセージ フィルターを返す必要があるかどうかを判断するロジックが含まれています**true**または**false**します。  
+> 実際の実装では、Match メソッドには、メッセージを調べて、このメッセージ フィルタが**true**または**false**を返す必要があるかどうかを判断するロジックが含まれています。  
   
 ### <a name="performance"></a>パフォーマンス  
  カスタム フィルターを実装する場合は、フィルターがメッセージの評価を完了するのに要する最大時間を考慮する必要があります。 メッセージは、一致が見つかるまでに複数のフィルターに対して評価される場合があるので、すべてのフィルターを評価する前にクライアント要求がタイムアウトしないようにすることが重要です。 したがって、カスタム フィルターのコードは、メッセージがフィルター条件に一致するかどうかを調べるために、メッセージのコンテンツまたは属性を評価するのに必要なコードだけにする必要があります。  
@@ -55,7 +55,7 @@ public class MyMessageFilter: MessageFilter
  実稼働環境でカスタム フィルターを使用する前に、パフォーマンス テストを実行して、フィルターがメッセージを評価するのに要する平均時間を調べる必要があります。 フィルター テーブルで使用される他のフィルターの平均処理時間と合わせることで、クライアント アプリケーションで指定する必要がある最大タイムアウト値を正確に計算できます。  
   
 ## <a name="usage"></a>使用法  
- ルーティング サービスでカスタム フィルターを使用するためにする必要がありますに追加、フィルター テーブル型の新しいフィルター エントリを指定することで"Custom"、メッセージ フィルターの完全修飾型名とアセンブリの名前。  その他の MessageFilter と同様に、カスタム フィルターのコンストラクターに渡される文字列 filterData を指定できます。  
+ ルーティング サービスでカスタム フィルタを使用するには、タイプが "Custom" の新しいフィルタ エントリ、メッセージ フィルタの完全修飾型名、およびアセンブリの名前を指定して、フィルタ テーブルに追加する必要があります。  その他の MessageFilter と同様に、カスタム フィルターのコンストラクターに渡される文字列 filterData を指定できます。  
   
  カスタム フィルターをルーティング サービスと使用する例を次に示します。  
   
@@ -63,8 +63,8 @@ public class MyMessageFilter: MessageFilter
 <!--ROUTING SECTION -->  
 <routing>  
   <filters>  
-    <filter name="CustomFilter1" filterType="Custom"   
-            customType="CustomAssembly.MyMessageFilter,   
+    <filter name="CustomFilter1" filterType="Custom"
+            customType="CustomAssembly.MyMessageFilter,
             CustomAssembly" filterData="custom data" />  
   </filters>  
   <filterTables>  

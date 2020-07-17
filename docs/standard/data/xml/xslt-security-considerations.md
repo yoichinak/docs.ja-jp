@@ -3,14 +3,12 @@ title: XSLT のセキュリティに関する考慮事項
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 81db764016607ebe6facfc530dbb2bac8e6b8cfe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615312"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282511"
 ---
 # <a name="xslt-security-considerations"></a>XSLT のセキュリティに関する考慮事項
 XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能が用意されています。 ただし、多くの機能を利用できることが便利であると同時に、外部から不正に利用される可能性もあります。 XSLT を安全に使用するために、XSLT の使用に伴うさまざまなセキュリティ上の問題とそのリスクを軽減するための基本的な対策を理解しておく必要があります。  
@@ -39,7 +37,7 @@ XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能
 - 変換を実行する場合には、<xref:System.Xml.XmlResolver> 関数を解決するために `document()` を使用します。  
   
     > [!NOTE]
-    >  `document()` クラスでは、<xref:System.Xml.Xsl.XslCompiledTransform> 関数は既定で無効になっています。 この機能を有効にするには、<xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> プロパティを `true` に設定して、<xref:System.Xml.Xsl.XsltSettings> オブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> メソッドに渡します。  
+    > `document()` クラスでは、<xref:System.Xml.Xsl.XslCompiledTransform> 関数は既定で無効になっています。 この機能を有効にするには、<xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> プロパティを `true` に設定して、<xref:System.Xml.Xsl.XsltSettings> オブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> メソッドに渡します。  
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> および <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドには、<xref:System.Xml.XmlResolver> を引数の 1 つとして許容するオーバーロードがそれぞれ含まれます。 <xref:System.Xml.XmlResolver> を指定しない場合は、資格情報を持たない既定の <xref:System.Xml.XmlUrlResolver> が使用されます。  
   
@@ -58,6 +56,6 @@ XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能
   
 ## <a name="see-also"></a>関連項目
 
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [XSLT 処理中の外部リソースの解決](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
-- [コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)
+- [XSLT 変換](xslt-transformations.md)
+- [XSLT 処理中の外部リソースの解決](resolving-external-resources-during-xslt-processing.md)
+- [コード アクセス セキュリティ](../../../framework/misc/code-access-security.md)

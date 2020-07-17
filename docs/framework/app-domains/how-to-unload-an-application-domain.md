@@ -1,5 +1,6 @@
 ---
 title: '方法: アプリケーション ドメインをアンロードする'
+description: 指定されたアプリケーション ドメインを適切にシャットダウンするために AppDomain.Unload メソッドを使用して .NET のアプリケーション ドメインをアンロードする方法について確認します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,12 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b64a9553f63aa4a8deb57f23a97fa464edd64fee
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212181"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104672"
 ---
 # <a name="how-to-unload-an-application-domain"></a>方法: アプリケーション ドメインをアンロードする
 アプリケーション ドメインの使用が完了したら、<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> メソッドを使用してアプリケーション ドメインをアンロードします。 **Unload** メソッドは、指定したアプリケーション ドメインを正常にシャットダウンします。 アンロード プロセス中は、新たなスレッドがアプリケーション ドメインにアクセスすることはできません。また、アプリケーション ドメイン固有のデータ構造はすべて解放されます。  
@@ -34,5 +33,5 @@ ms.locfileid: "59212181"
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)
-- [方法: アプリケーション ドメインを作成する](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
+- [方法: アプリケーション ドメインを作成する](how-to-create-an-application-domain.md)
+- [アプリケーション ドメインの使用](use.md)

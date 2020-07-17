@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674754"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74088546"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > 要素
+# <a name="oidentry-element"></a>\<oidEntry> 要素
 ASN.1 オブジェクト識別子 (OID) を表示名にマップします。  
-  
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings >  
-\<oidMap>  
-\<oidEntry>  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidEntry>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -37,26 +37,26 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
   
 |属性|説明|  
 |---------------|-----------------|  
-|**OID**|必須の属性です。<br /><br /> クラスで実装されているアルゴリズムに対応する ASN.1 OID を指定します。|  
-|**name**|必須の属性です。<br /><br /> 値を指定します、**名前**属性、 [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)タグ。|  
+|**ドーナツ**|必須の属性です。<br /><br /> クラスによって実装されたアルゴリズムに対応する asn.1 OID を指定します。|  
+|**name**|必須の属性です。<br /><br /> タグの**name**属性の値を指定し [\<nameEntry>](nameentry-element.md) ます。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
-|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
-|`oidMap`|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
+|`mscorlib`|要素が含まれてい `cryptographySettings` ます。|  
+|`oidMap`|クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- ASN.1 オブジェクト識別子では、いくつかの暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を特定するアルゴリズムの表示名にマップします。  
+## <a name="remarks"></a>解説  
+ Asn.1 オブジェクト識別子は、一部の暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を、識別するアルゴリズムのフレンドリ名にマップします。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<oidEntry >** ripemd-160 のハッシュ アルゴリズムのオブジェクト識別子をそのハッシュ アルゴリズムの実装にマップする要素。  
+ 次の例では、要素を使用して、 **\<oidEntry>** 160 RIPEMD ハッシュアルゴリズムのオブジェクト識別子をそのハッシュアルゴリズムの実装にマップする方法を示します。  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号設定スキーマ](index.md)
+- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)
+- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)

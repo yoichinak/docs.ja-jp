@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6351fc92-b126-4af6-9bf3-0a8ce92845fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abe1c8881330ebba5f7b68452cf3db0666ac20c3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ba9f68e102696da107b5cb782c76cb55ed95ee6
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736230"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441969"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter メソッド
-このソースで使用するための通知フィルターが割り当てられます。  
+このソースで使用する通知フィルターを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +37,19 @@ HRESULT SetNotifyFilter
   
 ## <a name="parameters"></a>パラメーター  
  `in_NotifyFilter`  
- [in]ビットごとの組み合わせ、 [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)デバッガー API のコールバックを識別する列挙値。  
+ からデバッガー API のコールバックを識別する[NOTIFY_FILTER](notify-filter-enumeration.md)列挙値のビットごとの組み合わせ。  
   
  `in_pUserThreadFilter`  
- [in]ポインターを[USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) API にデバッガー スレッドを識別する構造体。  
+ からデバッガー API のスレッドを識別する[USER_THREAD](user-thread-structure.md)構造体へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
 
-- [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 インターフェイス](inotifysource2-interface.md)
+- [INotifyConnection2 インターフェイス](inotifyconnection2-interface.md)
+- [INotifySink2 インターフェイス](inotifysink2-interface.md)

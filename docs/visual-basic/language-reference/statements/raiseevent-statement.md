@@ -1,5 +1,5 @@
 ---
-title: RaiseEvent ステートメント (Visual Basic)
+title: RaiseEvent ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.RaiseEventMethod
@@ -10,48 +10,48 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 46b93c060a12d82b34dafdf3aa4ea677df6f54cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783969"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404292"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
-クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されているイベントをトリガーします。  
+クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されたイベントをトリガーします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 RaiseEvent eventname[( argumentlist )]  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `eventname`  
- 必須。 トリガーするイベントの名前。  
+ 必須です。 トリガーするイベントの名前です。  
   
  `argumentlist`  
- 省略可能です。 変数、配列、または式のコンマ区切りのリスト。 `argumentlist`引数はかっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
+ 任意。 変数、配列、または式のコンマ区切りのリストです。 `argumentlist` 引数はかっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- 必要な`eventname`は、モジュール内で宣言されたイベントの名前。 Visual Basic 変数の名前付け規則に従います。  
+ 必須の `eventname` は、モジュール内で宣言されたイベントの名前です。 Visual Basic 変数の名前付け規則に従います。  
   
- イベントが発生したモジュール内で宣言されていない、エラーが発生します。 次のコード フラグメントは、イベントの宣言とイベントが発生したプロシージャを示しています。  
+ イベントが発生するモジュール内でそれが宣言されていない場合は、エラーが発生します。 次のコード フラグメントは、イベントの宣言と、イベントが発生するプロシージャを示しています。  
   
  [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
- 使用することはできません`RaiseEvent`モジュールで明示的に宣言されていないイベントを発生させます。 たとえば、すべてのフォームの継承、<xref:System.Windows.Forms.Control.Click>からイベント<xref:System.Windows.Forms.Form?displayProperty=nameWithType>を使用して、発生することはできません`RaiseEvent`派生フォームでします。 宣言する場合、`Click`イベント モジュールでは、フォーム、フォーム自体のシャドウ<xref:System.Windows.Forms.Control.Click>イベント。 フォームを呼び出すことができますも<xref:System.Windows.Forms.Control.Click>イベントを呼び出すことによって、<xref:System.Windows.Forms.Control.OnClick%2A>メソッド。  
+ モジュール内で明示的に宣言されていないイベントを、`RaiseEvent` を使用して発生させることはできません。 たとえば、すべてのフォームが <xref:System.Windows.Forms.Form?displayProperty=nameWithType> から <xref:System.Windows.Forms.Control.Click> イベントを継承している場合、それを派生フォーム内の `RaiseEvent` を使用して発生させることはできません。 フォーム モジュール内で `Click` イベントを宣言すると、それによってフォーム独自の <xref:System.Windows.Forms.Control.Click> イベントはシャドウされます。 それでも、そのフォームの <xref:System.Windows.Forms.Control.Click> イベントは、<xref:System.Windows.Forms.Control.OnClick%2A> メソッドを呼び出すことで呼び出すことができます。  
   
- 既定では、Visual Basic で定義されたイベントは、接続が確立されている順序では、そのイベント ハンドラーを生成します。 イベントがあるため`ByRef`パラメーター、接続するプロセスは以前のイベント ハンドラーによって変更されているパラメーターを受け取ることがあります。 イベント ハンドラーの実行後は、イベントを発生させたサブルーチンに制御が返されます。  
-  
-> [!NOTE]
->  非共有イベントは、宣言されているクラスのコンス トラクター内では発生しません。 このようなイベントでは、実行時エラーが発生しない、関連付けられているイベント ハンドラーによってキャッチするされない場合があります。 使用して、`Shared`修飾子をコンス トラクターからイベントを発生させる必要がある場合は、共有イベントを作成します。  
+ 既定では、Visual Basic で定義されたイベントはそのイベント ハンドラーを、接続が確立された順に発生させます。 イベントには `ByRef` パラメーターを含めることができるため、遅れて接続するプロセスでは、先行するイベント ハンドラーによって変更されたパラメーターを受け取る場合があります。 イベント ハンドラーが実行されると、イベントを発生させたサブルーチンに制御が返されます。  
   
 > [!NOTE]
->  イベントの既定の動作を変更するには、カスタム イベントを定義します。 カスタム イベントの場合、`RaiseEvent`ステートメントで呼び出されるイベントの`RaiseEvent`アクセサー。 カスタム イベントの詳細については、次を参照してください。 [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)します。  
+> 非共有イベントは、それらが宣言されているクラスのコンストラクター内で発生させないでください。 このようなイベントが実行時エラーの原因となることはありませんが、関連付けられたイベント ハンドラーでキャッチされない場合があります。 コンストラクターからイベントを発生させる必要がある場合は、`Shared` 修飾子を使用して共有イベントを作成します。  
+  
+> [!NOTE]
+> イベントの既定の動作を変更するには、カスタム イベントを定義します。 カスタム イベントの場合は、`RaiseEvent` ステートメントによってイベントの `RaiseEvent` アクセサーが呼び出されます。 カスタム イベントの詳細については、「[Event ステートメント](event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードはいくつかのイベントに関連するメソッド、プロパティ、およびなど、ステートメント、`RaiseEvent`ステートメント。  
+ 次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメント (`RaiseEvent` など) の例を示しています。  
   
  イベントを発生させるクラスをイベント ソース、イベントを処理するメソッドをイベント ハンドラーと呼びます。 イベント ソースでは、生成されるイベントに対して複数のイベント ハンドラーを設定できます。 クラスでイベントが発生すると、そのイベントは、オブジェクトのインスタンスに対するイベントを処理するために選択されたすべてのクラスで発生します。  
   
@@ -59,26 +59,26 @@ RaiseEvent eventname[( argumentlist )]
   
  `Form1` のコードでは、フォームの初期状態と終了状態を指定しています。 イベント発生時に実行されるコードも含まれています。  
   
- この例を使用する新しい Windows アプリケーション プロジェクトを開き、という名前のボタンを追加`Button1`という名前のテキスト ボックスと`TextBox1`という名前のメイン フォームに`Form1`します。 次にフォームを右クリックし、をクリックして**コードの表示**コード エディターを開きます。  
+ この例を使用するには、新しい Windows アプリケーション プロジェクトを開き、`Button1` という名前のボタンと、`TextBox1` という名前のテキスト ボックスを、`Form1` という名前のメイン フォームに追加します。 続いてフォームを右クリックし、 **[コードの表示]** をクリックしてコード エディターを開きます。  
   
- 追加、`WithEvents`変数の宣言セクションに、`Form1`クラス。  
+ `Form1` クラスの宣言セクションに、`WithEvents` 変数を追加します。  
   
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>例  
- `Form1` のコードに次のコードを追加します。 など、存在するすべての重複するプロシージャを置き換える`Form_Load`、または`Button_Click`します。  
+ `Form1` のコードに次のコードを追加します。 `Form_Load` や `Button_Click` など、重複して存在する可能性のあるプロシージャを置き換えます。  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- 前の例を実行し、ボタンをクリックします。 f5 キーを押して**開始**します。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
+ F5 キーを押して上の例を実行し、**Start** というラベルのボタンをクリックします。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
->  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
+> `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームによる方法とは一部異なります。 フォームでイベントを直接処理できるようにするには、マルチスレッドを使用します。 詳細については、「[マネージド スレッド処理](../../../standard/threading/index.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
-- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [イベント](../../programming-guide/language-features/events/index.md)
+- [Event ステートメント](event-statement.md)
+- [AddHandler ステートメント](addhandler-statement.md)
+- [RemoveHandler ステートメント](removehandler-statement.md)
+- [Handles](handles-clause.md)

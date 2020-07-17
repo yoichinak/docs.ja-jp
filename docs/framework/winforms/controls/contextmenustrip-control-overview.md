@@ -8,28 +8,28 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a6add5297ba7db606ca1891e9279141f8d6d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955988"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962158"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip コントロールの概要
 > [!NOTE]
->  <xref:System.Windows.Forms.ContextMenuStrip>コントロールが置換および機能を追加、<xref:System.Windows.Forms.ContextMenu>制御します。 ただし、、<xref:System.Windows.Forms.ContextMenu>を選択した場合、下位互換性と将来の使用のコントロールは保持されます。  
+> コントロールは、コントロール<xref:System.Windows.Forms.ContextMenu>に置き換えられ、機能が追加さ<xref:System.Windows.Forms.ContextMenu>れます。ただし、コントロールは旧バージョンとの互換性を維持するために残されています。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
- ショートカット メニューのコンテキスト メニューとも呼ばれます。 は、ユーザーがマウスの右ボタンをクリックしたときにマウスの位置に表示されます。 ショートカット*メニュー*クライアント領域またはマウス ポインターの位置にあるコントロールのオプションを提供します。  
+ ショートカットメニュー (コンテキストメニューとも呼ばれます) は、ユーザーがマウスの右ボタンをクリックしたときにマウスの位置に表示されます。 ショートカット*メニュー*では、クライアント領域またはマウスポインターの位置にあるコントロールのオプションが提供されます。  
   
- <xref:System.Windows.Forms.ContextMenuStrip>新しいシームレスに動作するコントロールがデザインされた<xref:System.Windows.Forms.ToolStrip>が、関連するコントロールに関連付けることができ、<xref:System.Windows.Forms.ContextMenuStrip>には簡単に他のコントロールとします。  
+ コントロールは、新しい<xref:System.Windows.Forms.ToolStrip>および関連するコントロールとシームレスに連携するように設計されて<xref:System.Windows.Forms.ContextMenuStrip>いますが、他のコントロールとも簡単に関連付けることができます。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
- 次の表は、重要な<xref:System.Windows.Forms.ContextMenuStrip>コンパニオン クラス。  
+ 次の表は、重要<xref:System.Windows.Forms.ContextMenuStrip>な関連クラスを示しています。  
   
 |クラス|説明|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|表示される選択可能なオプションを表す、<xref:System.Windows.Forms.MenuStrip>または<xref:System.Windows.Forms.ContextMenuStrip>します。|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|ユーザーが、ユーザーがクリックしたときに表示される一覧から 1 つの項目を選択できるようにするコントロール表します、<xref:System.Windows.Forms.ToolStripDropDownButton>または上位レベルのメニュー項目。|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|派生したコントロールの基本的な機能を提供します<xref:System.Windows.Forms.ToolStripItem>クリックされたときにドロップダウン リストの項目を表示します。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip>または<xref:System.Windows.Forms.ContextMenuStrip>に表示される選択可能なオプションを表します。|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|ユーザーが<xref:System.Windows.Forms.ToolStripDropDownButton>または上位レベルのメニュー項目をクリックしたときに表示される一覧から1つの項目を選択できるようにするコントロールを表します。|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|クリックしたときに表示さ<xref:System.Windows.Forms.ToolStripItem>れるドロップダウン項目から派生したコントロールの基本機能を提供します。|  
   
 ## <a name="see-also"></a>関連項目
 

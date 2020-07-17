@@ -9,54 +9,54 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 2ff0f134ea3174f7f034d47446aab782e2141916
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024028"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186985"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer の概要
-ユーザー インターフェイス内のコンテンツは、多くの場合、コンピューター画面の表示領域よりも大きいです。 <xref:System.Windows.Controls.ScrollViewer>コントロール内のコンテンツのスクロールを有効にする便利な手段を提供する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは、<xref:System.Windows.Controls.ScrollViewer>要素と、いくつかの使用例を提供します。  
+ユーザー インターフェイス内のコンテンツは、多くの場合、コンピューター画面の表示領域よりも大きいです。 <xref:System.Windows.Controls.ScrollViewer> コントロールでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーション内のコンテンツのスクロールを有効にする便利な手段が提供されます。 このトピックでは、<xref:System.Windows.Controls.ScrollViewer> 要素について説明し、いくつかの使用例を示します。  
   
-<a name="what_is_a_scrollviewer_element"></a>   
+<a name="what_is_a_scrollviewer_element"></a>
 ## <a name="the-scrollviewer-control"></a>ScrollViewer コントロール  
- スクロールを有効にする 2 つの定義済みの要素がある[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション:<xref:System.Windows.Controls.Primitives.ScrollBar>と<xref:System.Windows.Controls.ScrollViewer>します。 <xref:System.Windows.Controls.ScrollViewer>コントロールに水平スクロール バーと垂直方向がカプセル化します<xref:System.Windows.Controls.Primitives.ScrollBar>要素およびコンテンツ コンテナー (など、<xref:System.Windows.Controls.Panel>要素)、スクロール可能な領域に表示されるその他の要素を表示するためにします。 使用するには、カスタム オブジェクトを構築する必要があります、<xref:System.Windows.Controls.Primitives.ScrollBar>要素コンテンツのスクロールします。 ただし、使用することができます、<xref:System.Windows.Controls.ScrollViewer>単独の要素、複合コントロールであるカプセル化<xref:System.Windows.Controls.Primitives.ScrollBar>機能します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでのスクロールを有効にする 2 つの定義済みの要素 <xref:System.Windows.Controls.Primitives.ScrollBar> と <xref:System.Windows.Controls.ScrollViewer> があります。 <xref:System.Windows.Controls.ScrollViewer> コントロールには、水平方向および垂直方向の <xref:System.Windows.Controls.Primitives.ScrollBar> 要素と、スクロール可能領域内に他の表示可能要素を表示するためのコンテンツ コンテナー (<xref:System.Windows.Controls.Panel> 要素など) がカプセル化されています。 コンテンツのスクロールに <xref:System.Windows.Controls.Primitives.ScrollBar> 要素を使用するには、カスタム オブジェクトを作成する必要があります。 ただし、<xref:System.Windows.Controls.ScrollViewer> 要素は、<xref:System.Windows.Controls.Primitives.ScrollBar> の機能をカプセル化する複合コントロールであるため、単独で使用できます。  
   
- <xref:System.Windows.Controls.ScrollViewer>コントロールがマウスとキーボードの両方のコマンドに応答して、あらかじめ決められたインクリメントでコンテンツをスクロールするために多数のメソッドを定義します。 使用することができます、<xref:System.Windows.Controls.ScrollViewer.ScrollChanged>で変更を検出するイベントを<xref:System.Windows.Controls.ScrollViewer>状態。  
+ <xref:System.Windows.Controls.ScrollViewer> コントロールはマウスとキーボードの両方のコマンドに応答し、このコントロールでは事前に決められた増分でコンテンツをスクロールするためのさまざまなメソッドが定義されています。 <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> イベントを使用して、<xref:System.Windows.Controls.ScrollViewer> の状態の変化を検出できます。  
   
- A<xref:System.Windows.Controls.ScrollViewer>通常 1 つの子をしか、<xref:System.Windows.Controls.Panel>要素をホストできる、<xref:System.Windows.Controls.Panel.Children%2A>要素のコレクション。 <xref:System.Windows.Controls.ContentPresenter.Content%2A>プロパティ定義の唯一の子、<xref:System.Windows.Controls.ScrollViewer>します。  
+ <xref:System.Windows.Controls.ScrollViewer> で保持できる子は 1 つだけであり、通常は、要素の <xref:System.Windows.Controls.Panel.Children%2A> コレクションをホストできる <xref:System.Windows.Controls.Panel> 要素です。 <xref:System.Windows.Controls.ContentPresenter.Content%2A> プロパティでは、<xref:System.Windows.Controls.ScrollViewer> の唯一の子を定義します。  
   
-<a name="scrollviewer_physical_vs_logical"></a>   
+<a name="scrollviewer_physical_vs_logical"></a>
 ## <a name="physical-vs-logical-scrolling"></a>物理スクロールと論理スクロール  
- 物理スクロールは、定義済みの物理インクリメント(通常ピクセル単位で宣言されている値) でコンテンツをスクロールするために使用します。 論理スクロールは、論理ツリーの次の項目にスクロールするために使用します。 ほとんどの既定のスクロール動作は、物理スクロール<xref:System.Windows.Controls.Panel>要素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は両方の種類のスクロールをサポートしています。  
+ 物理スクロールは、定義済みの物理インクリメント(通常ピクセル単位で宣言されている値) でコンテンツをスクロールするために使用します。 論理スクロールは、論理ツリーの次の項目にスクロールするために使用します。 物理スクロールは、ほとんどの <xref:System.Windows.Controls.Panel> 要素で既定のスクロール動作です。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は両方の種類のスクロールをサポートしています。  
   
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo インターフェイス  
- <xref:System.Windows.Controls.Primitives.IScrollInfo>インターフェイス内のメインのスクロール領域を表す、<xref:System.Windows.Controls.ScrollViewer>または派生コントロール。 スクロールのプロパティとメソッドを実装できるインターフェイスを定義します<xref:System.Windows.Controls.Panel>物理インクリメントではなく、論理ユニットのスクロールを必要とします。 インスタンスにキャスト<xref:System.Windows.Controls.Primitives.IScrollInfo>を派生する<xref:System.Windows.Controls.Panel>ピクセル インクリメントではなく、子のコレクションでは、次の論理ユニットにスクロールする便利な方法を提供し、そのスクロール メソッドを使用しているとします。 既定で、<xref:System.Windows.Controls.ScrollViewer>コントロールは、物理単位でスクロールをサポートしています。  
+ <xref:System.Windows.Controls.Primitives.IScrollInfo> インターフェイスは、<xref:System.Windows.Controls.ScrollViewer> または派生コントロール内のメインのスクロール領域を表します。 このインターフェイスでは、物理インクリメントではなく、論理単位でのスクロールを必要する <xref:System.Windows.Controls.Panel> 要素で実装できる、スクロールのプロパティとメソッドが定義されています。 <xref:System.Windows.Controls.Primitives.IScrollInfo> のインスタンスを派生した <xref:System.Windows.Controls.Panel> にキャストしてそのスクロール メソッドを使用することで、ピクセル インクリメントではなく、子コレクションの次の論理単位までスクロールする便利な方法が提供されます。 既定の <xref:System.Windows.Controls.ScrollViewer> コントロールでは、物理単位でのスクロールがサポートされています。  
   
- <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.VirtualizingStackPanel>両方実装<xref:System.Windows.Controls.Primitives.IScrollInfo>論理スクロールをネイティブでサポートしているとします。 ホストをラップすることによって、物理スクロールを実現するレイアウトをネイティブ サポート論理スクロールをコントロールにはまだできます<xref:System.Windows.Controls.Panel>内の要素を<xref:System.Windows.Controls.ScrollViewer>と設定、<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>プロパティを`false`します。  
+ <xref:System.Windows.Controls.StackPanel> と <xref:System.Windows.Controls.VirtualizingStackPanel> のどちらでも、<xref:System.Windows.Controls.Primitives.IScrollInfo> が実装されており、論理スクロールがネイティブにサポートされます。 論理スクロールをネイティブにサポートするレイアウト コントロールの場合でも、ホスト <xref:System.Windows.Controls.Panel> 要素を <xref:System.Windows.Controls.ScrollViewer> 内にラップし、<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> プロパティを `false` に設定することによって、物理スクロールを実現できます。  
   
- 次のコード例は、のインスタンスにキャストする方法を示します<xref:System.Windows.Controls.Primitives.IScrollInfo>を<xref:System.Windows.Controls.StackPanel>コンテンツ スクロール メソッドを使用して (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A>と<xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) インターフェイスによって定義されています。  
+ 次のコード例では、<xref:System.Windows.Controls.Primitives.IScrollInfo> のインスタンスを <xref:System.Windows.Controls.StackPanel> にキャストし、インターフェイスで定義されているコンテンツ スクロール メソッド (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> と <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) を使用する方法を示します。  
   
  [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
  [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
-<a name="scrollviewer_markup_syntax_and_sample"></a>   
+<a name="scrollviewer_markup_syntax_and_sample"></a>
 ## <a name="defining-and-using-a-scrollviewer-element"></a>ScrollViewer 要素の定義と使用  
- 次の例では、作成、<xref:System.Windows.Controls.ScrollViewer>ウィンドウにいくつかのテキストと四角形が含まれています。 <xref:System.Windows.Controls.Primitives.ScrollBar> 要素は、必要ながときにのみ表示されます。 ウィンドウのサイズを変更するときに、<xref:System.Windows.Controls.Primitives.ScrollBar>要素の表示し、非表示の更新された値によって、<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>と<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>プロパティ。  
+ 次の例では、いくつかのテキストと四角形を含む <xref:System.Windows.Controls.ScrollViewer> をウィンドウ内に作成します。 <xref:System.Windows.Controls.Primitives.ScrollBar> 要素は、必要なときにだけ表示されます。 ウィンドウのサイズを変更すると、<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> プロパティと <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> プロパティの更新された値によって、<xref:System.Windows.Controls.Primitives.ScrollBar> 要素が表示されたり、表示されなくなったりします。  
   
  [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
  [!code-vb[ScrollViewer#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
  [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
-<a name="scrollviewer_styling_scrollviewer"></a>   
+<a name="scrollviewer_styling_scrollviewer"></a>
 ## <a name="styling-a-scrollviewer"></a>ScrollViewer のスタイル設定  
- Windows Presentation foundation のすべてのコントロールと同様、<xref:System.Windows.Controls.ScrollViewer>コントロールの既定のレンダリング動作を変更するにはスタイルを設定できます。 コントロールのスタイル設定の詳細については、「[スタイルとテンプレート](styling-and-templating.md)」を参照してください。  
+ Windows Presentation Foundation のすべてのコントロールと同様に、<xref:System.Windows.Controls.ScrollViewer> のスタイルを設定して、コントロールの既定のレンダリング動作を変更できます。 コントロールのスタイル設定の詳細については、「[スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)」を参照してください。  
   
-<a name="scrollviewer_scroll_vs_paginate"></a>   
+<a name="scrollviewer_scroll_vs_paginate"></a>
 ## <a name="paginating-documents"></a>ドキュメントの改ページ調整  
- ドキュメントのコンテンツでは、スクロールする代わりに、改ページ調整をサポートするドキュメントのコンテナーを選択します。 <xref:System.Windows.Documents.FlowDocument> などの表示コントロール内でホストされるように設計されたドキュメントが<xref:System.Windows.Controls.FlowDocumentPageViewer>、スクロールの必要をなくし、複数のページ コンテンツの改ページ調整をサポートします。 <xref:System.Windows.Controls.DocumentViewer> 表示するため、ソリューションを提供します。<xref:System.Windows.Documents.FixedDocument>コンテンツで、従来のスクロールを使用して、表示領域の領域外のコンテンツを表示します。  
+ ドキュメントのコンテンツでは、スクロールする代わりに、改ページ調整をサポートするドキュメントのコンテナーを選択します。 <xref:System.Windows.Documents.FlowDocument> は、<xref:System.Windows.Controls.FlowDocumentPageViewer> などの表示コントロール内でホストされるように設計されたドキュメント用であり、複数のページにわたるコンテンツの改ページ調整がサポートされており、スクロールの必要がなくなります。 <xref:System.Windows.Controls.DocumentViewer> では、<xref:System.Windows.Documents.FixedDocument> コンテンツを表示するためのソリューションが提供されており、表示領域外のコンテンツを表示するには従来のスクロールが使用されます。  
   
  ドキュメント形式とプレゼンテーション オプションの詳細については、「[WPF のドキュメント](../advanced/documents-in-wpf.md)」を参照してください。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62024028"
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [方法: スクロール ビューアーを作成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
+- [方法: スクロール ビューアーを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [WPF のドキュメント](../advanced/documents-in-wpf.md)
 - [ScrollBar のスタイルとテンプレート](scrollbar-styles-and-templates.md)
 - [コントロール](../advanced/optimizing-performance-controls.md)

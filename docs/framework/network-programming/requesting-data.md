@@ -1,5 +1,6 @@
 ---
 title: データの要求
+description: プラグ可能なプロトコルを利用することで、単一のインターフェイスを使用して複数のプロトコルからデータを取得するアプリケーションを開発するしくみについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502185"
 ---
 # <a name="requesting-data"></a>データの要求
 今日のインターネットの分散操作環境で動作するアプリケーションを開発するには、あらゆる種類のリソースからデータを取得するための効率的で使いやすい方法が必要です。 プラグ可能なプロトコルを使うと、単一のインターフェイスを使って複数のインターネット プロトコルからデータを取得するアプリケーションを開発できます。  
@@ -54,6 +55,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
-- [方法: Web ページを要求し、ストリームとして結果を取得する](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [方法: WebRequest に一致するプロトコル固有の WebResponse を取得する](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [.NET Framework のネットワーク プログラミング](index.md)
+- [方法: Web ページを要求し、ストリームとして結果を取得する](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [方法: WebRequest に一致するプロトコル固有の WebResponse を取得する](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

@@ -1,5 +1,5 @@
 ---
-title: ドキュメント コメントとして推奨される XML タグ (Visual Basic)
+title: ドキュメント コメントとして推奨される XML タグ
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlDocComment
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: af57fc7d55c5cfda24a2fd9406b17dedee898760
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940859"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "85503787"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>ドキュメント コメントとして推奨される XML タグ (Visual Basic)
-Visual Basic コンパイラでは、ドキュメントのコメントをコードに XML ファイルを処理できます。 その他のツールを使用して、ドキュメントに XML ファイルを処理することができます。  
+Visual Basic コンパイラでは、コード内のドキュメント コメントを処理し、XML ファイルに変換できます。 追加のツールを利用すれば、XML ファイルを処理してドキュメントに変換できます。  
   
- XML コメントは、型などのコード コンストラクトでは許可し、メンバーを入力します。 部分の型は、型の 1 つだけの一部はコメントのメンバーに制限はありませんが、XML コメントを持つことができます。  
+ XML コメントは、型や型メンバーなどのコード コンストラクターで許可されます。 部分型の場合、そのメンバーに対するコメント作成に制限はありませんが、XML コメントを追加できる型の部分は 1 つだけです。  
   
 > [!NOTE]
->  ドキュメントのコメントは、名前空間には適用できません。 理由は、1 つの名前空間は、複数のアセンブリをまたがることができ、同時に読み込む必要がないすべてのアセンブリのことです。  
+> ドキュメント コメントは、名前空間に適用できません。 その理由は、1 つの名前空間は複数のアセンブリにまたがることができて、かつ、すべてのアセンブリを同時に読み込む必要はないということにあります。  
   
- コンパイラは、有効な XML である任意のタグを処理します。 次のタグは、ユーザー ドキュメントでよく使用される機能を提供します。  
+ コンパイラは、有効な XML であるタグをすべて処理します。 次のタグによって、ユーザー ドキュメントで一般的に使用される機能が与えられます。  
   
 ||||  
 |---|---|---|  
-|[\<c>](../../../visual-basic/language-reference/xmldoc/c.md)|[\<code>](../../../visual-basic/language-reference/xmldoc/code.md)|[\<example>](../../../visual-basic/language-reference/xmldoc/example.md)|  
-|[\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md) <sup>1</sup>|[\<include>](../../../visual-basic/language-reference/xmldoc/include.md) <sup>1</sup>|[\<list>](../../../visual-basic/language-reference/xmldoc/list.md)|  
-|[\<para>](../../../visual-basic/language-reference/xmldoc/para.md)|[\<param>](../../../visual-basic/language-reference/xmldoc/param.md) <sup>1</sup>|[\<paramref>](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
-|[\<permission>](../../../visual-basic/language-reference/xmldoc/permission.md) <sup>1</sup>|[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
-|[\<see>](../../../visual-basic/language-reference/xmldoc/see.md) <sup>1</sup>|[\<seealso>](../../../visual-basic/language-reference/xmldoc/seealso.md) <sup>1</sup>|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
-|[\<typeparam>](../../../visual-basic/language-reference/xmldoc/typeparam.md) <sup>1</sup>|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
+|[\<c>](c.md)|[\<code>](code.md)|[\<example>](example.md)|  
+|[\<exception>](exception.md) <sup>1</sup>|[\<include>](include.md) <sup>1</sup>|[\<list>](list.md)|  
+|[\<para>](para.md)|[\<param>](param.md) <sup>1</sup>|[\<paramref>](paramref.md)|  
+|[\<permission>](permission.md) <sup>1</sup>|[\<remarks>](remarks.md)|[\<returns>](returns.md)|  
+|[\<see>](see.md) <sup>1</sup>|[\<seealso>](seealso.md) <sup>1</sup>|[\<summary>](summary.md)|  
+|[\<typeparam>](typeparam.md) <sup>1</sup>|[\<value>](value.md)||  
   
- (<sup>1</sup>コンパイラが構文を検証します)。  
+ (<sup>1</sup> コンパイラによって構文が検証されます。)  
   
 > [!NOTE]
->  山かっこをドキュメントのコメントのテキストで表示される場合を使用して、`&lt;`と`&gt;`します。 たとえば、文字列`"&lt;text in angle brackets&gt;"`として表示されます`<text in angle brackets>`します。  
+> ドキュメント コメントのテキストに山かっこを表示する場合は、`&lt;` と `&gt;` を使用します。 たとえば、文字列 `"&lt;text in angle brackets&gt;"` は `<text in angle brackets>` として表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [方法: XML ドキュメントを作成します。](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML の使用によるコードのドキュメントの作成](../../programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [-doc](../../reference/command-line-compiler/doc.md)
+- [方法: XML ドキュメントを作成する](../../programming-guide/program-structure/how-to-create-xml-documentation.md)

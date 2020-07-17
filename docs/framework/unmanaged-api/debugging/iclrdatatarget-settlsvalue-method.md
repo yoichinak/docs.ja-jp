@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c98fc93fd659ccfc0ccd42eec7d95382cf342f8
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738554"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860519"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue メソッド
-ターゲット プロセス内の指定したスレッドのスレッド ローカル ストレージ (TLS) の値を設定します。 このメソッドは、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
+ターゲットプロセス内の指定したスレッドのスレッドローカルストレージ (TLS) の値を設定します。 このメソッドは、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT SetTLSValue (
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。  
+ からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
   
  `index`  
- [in]位置のインデックス。 この値は、指定したスレッドのローカル ストアに有効なインデックスを指定する必要があります。  
+ から位置のインデックス。 この値は、指定されたスレッドのローカルストア内の有効なインデックスである必要があります。  
   
  `value`  
- [in]A `CLRDATA_ADDRESS` TLS の指定した場所に配置する値を指定する値。  
+ から指定`CLRDATA_ADDRESS`された TLS の場所に格納する値を指定する値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

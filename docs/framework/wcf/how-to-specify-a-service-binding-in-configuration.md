@@ -1,27 +1,28 @@
 ---
 title: '方法: 構成でサービス バインディングを指定する'
+description: 構成ファイルで WCF サービスのエンドポイントを構成する方法について説明します。 コントラクトは、サービスに対して定義され、クラスに実装されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928584"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051949"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>方法: 構成でサービス バインディングを指定する
-この例では、簡単な電卓サービス用に `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスで実装し、そのエンドポイントを Web.config ファイルで構成します。このファイルでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> を使用するように指定します。 構成の代わりにコードを使用してこのサービスを構成する方法については、次を参照してください。[方法。コードでサービス バインディングを指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)します。  
+この例では、簡単な電卓サービス用に `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスで実装し、そのエンドポイントを Web.config ファイルで構成します。このファイルでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> を使用するように指定します。 構成ではなくコードを使用してこのサービスを構成する方法の詳細については、「[方法: コード内でサービスバインディングを指定](how-to-specify-a-service-binding-in-code.md)する」を参照してください。  
   
  通常、ベスト プラクティスは、コードで命令として記述するよりも、構成でバインディングを指定して情報を明示的にアドレス指定することです。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般的に、バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
- 使用して実行の次の構成手順をすべて、[構成エディター ツール (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)します。  
+ 次のすべての構成手順は、[構成エディターツール (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md)を使用して実行できます。  
   
- この例のソースのコピーを次を参照してください。 [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md)します。  
+ この例のソースコピーについては、「 [Basicbinding](./samples/basicbinding.md)」を参照してください。  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>サービスの構成で BasicHttpBinding が使用されるように指定するには  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>サービスの構成で BasicHttpBinding が使用されるように指定するには  
   
 1. サービスの種類にサービス コントラクトを定義します。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "61928584"
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    >  アドレス情報とバインディング情報は、サービスの実装内では指定されません。 また、構成ファイルからこの情報を取得するためのコードを記述する必要もありません。  
+    > アドレス情報とバインディング情報は、サービスの実装内では指定されません。 また、構成ファイルからこの情報をフェッチするためのコードを記述する必要もありません。  
   
 3. `CalculatorService` を使用する <xref:System.ServiceModel.WSHttpBinding> のエンドポイントを構成する Web.config ファイルを作成します。  
   
@@ -44,19 +45,20 @@ ms.locfileid: "61928584"
       <system.serviceModel>  
         <services>  
           <service name=" CalculatorService" >  
-            <endpoint   
-            <!-- Leave the address blank to be populated by default -->  
-            <!-- from the hosting environment,in this case IIS, so -->  
-            <!-- the address will just be that of the IIS Virtual -->  
-            <!-- Directory. -->  
-                address=""   
-            <!-- Specify the binding type -->  
+
+            <!-- Leave the address blank to be populated by default -->
+            <!-- from the hosting environment,in this case IIS, so -->
+            <!-- the address will just be that of the IIS Virtual -->
+            <!-- Directory. -->
+
+            <!-- Specify the binding configuration name for that -->
+            <!-- binding type. This is optional but useful if you -->
+            <!-- want to modify the properties of the binding. -->
+            <!-- The bindingConfiguration name Binding1 is defined -->
+            <!-- below in the bindings element. -->
+            <endpoint
+                address=""
                 binding="wsHttpBinding"  
-            <!-- Specify the binding configuration name for that -->  
-            <!-- binding type. This is optional but useful if you -->  
-            <!-- want to modify the properties of the binding. -->  
-            <!-- The bindingConfiguration name Binding1 is defined -->  
-            <!-- below in the bindings element. -->  
                 bindingConfiguration="Binding1"  
                 contract="ICalculator" />  
           </service>  
@@ -75,13 +77,13 @@ ms.locfileid: "61928584"
   
 4. 次の行を含む Service.svc ファイルを作成し、インターネット インフォメーション サービス (IIS: Internet Information Services) 仮想ディレクトリに配置します。  
   
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
+    ```aspx-csharp
+    <%@ServiceHost language=c# Service="CalculatorService" %>
     ```  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a>バインディング プロパティの既定値を変更するには  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>バインディング プロパティの既定値を変更するには  
   
-1. 既定のプロパティ値のいずれかを変更する、 <xref:System.ServiceModel.WSHttpBinding>、作成する新しいバインディング構成名 -`<binding name="Binding1">`内に、 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素の属性の新しい値を設定し、このバインド要素にバインドします。 たとえば、開く操作と閉じる操作の既定のタイムアウト値を 1 分から 2 分に変更するには、構成ファイルに以下を追加します。  
+1. の既定のプロパティ値の1つを変更するには、 <xref:System.ServiceModel.WSHttpBinding> 要素内に新しいバインド構成名を作成 `<binding name="Binding1">` [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) し、このバインド要素でバインディングの属性の新しい値を設定します。 たとえば、開く操作と閉じる操作の既定のタイムアウト値を 1 分から 2 分に変更するには、構成ファイルに以下を追加します。  
   
     ```xml  
     <wsHttpBinding>  
@@ -94,5 +96,5 @@ ms.locfileid: "61928584"
   
 ## <a name="see-also"></a>関連項目
 
-- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [エンドポイント アドレスの指定](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [サービスとクライアントを構成するためのバインディングの使用](using-bindings-to-configure-services-and-clients.md)
+- [エンドポイント アドレスの指定](specifying-an-endpoint-address.md)

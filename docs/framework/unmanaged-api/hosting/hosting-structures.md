@@ -6,48 +6,46 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985596"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616087"
 ---
 # <a name="hosting-structures"></a>ホスト構造体
-このセクションでは、ホスティング API で使用されるアンマネージ構造体について説明します。  
+このセクションでは、ホスティング API が使用するアンマネージ構造体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [AssemblyBindInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
+ [AssemblyBindInfo 構造体](assemblybindinfo-structure.md)  
  参照アセンブリに関する詳細情報を提供します。  
   
- [BucketParameters 構造体](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- イベントに関連付けられている現在の例外のイベントと、パラメーターの型名を格納します。  
+ [BucketParameters 構造体](bucketparameters-structure.md)  
+ イベントの型名と、イベントに関連付けられている現在の例外のパラメーターを格納します。  
   
- [COR_GC_STATS 構造体](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- 共通言語ランタイム (CLR) のガベージ コレクションのメカニズムについての統計情報を提供します。  
+ [COR_GC_STATS 構造体](cor-gc-stats-structure.md)  
+ 共通言語ランタイム (CLR) のガベージコレクション機構に関する統計情報を提供します。  
   
- [COR_GC_THREAD_STATS 構造体](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
- ガベージ コレクションに関連するスレッドごとの統計情報が含まれています。  
+ [COR_GC_THREAD_STATS 構造体](cor-gc-thread-stats-structure.md)  
+ ガベージコレクションに関連するスレッドごとの統計情報を格納します。  
   
- [CustomDumpItem 構造体](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- エラー報告でのカスタム ダンプに追加する項目をについて説明します。  
+ [CustomDumpItem 構造体](customdumpitem-structure.md)  
+ エラー報告のカスタムダンプに追加するアイテムについて説明します。  
   
- [MDAInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- 詳細について説明します、 `Event_MDAFired` 、マネージ デバッグ アシスタント (MDA) の作成をトリガーするイベントです。  
+ [MDAInfo 構造体](mdainfo-structure.md)  
+ `Event_MDAFired`マネージデバッグアシスタント (MDA) の作成をトリガーするイベントについて詳しく説明します。  
   
- [ModuleBindInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
- 参照されるモジュールとそれを含んでいるアセンブリに関する詳細情報を提供します。  
+ [ModuleBindInfo 構造体](modulebindinfo-structure.md)  
+ 参照されるモジュールとそれを含むアセンブリに関する詳細情報を提供します。  
   
- [StackOverflowInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- オーバーフローによりスローされた例外でオーバーフローが発生しましたが、情報の種類を格納します。  
+ [StackOverflowInfo 構造体](stackoverflowinfo-structure.md)  
+ 発生したオーバーフローの種類とオーバーフローによってスローされた例外に関する情報を格納します。  
   
 ## <a name="related-sections"></a>関連項目  
- [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+ [ホスト コクラス](hosting-coclasses.md)  
   
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [ホスト インターフェイス](hosting-interfaces.md)  
   
- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)  
   
- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [ホスティングの列挙体](hosting-enumerations.md)

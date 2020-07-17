@@ -1,5 +1,5 @@
 ---
-title: 入れ子になった制御構造 (Visual Basic)
+title: 入れ子になった制御構造
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 539ad639320615c1e53176fe47e5468864aa21d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907994"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414390"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
-たとえば他のコントロール ステートメント内のコントロール ステートメントを配置することができます、`If...Then...Else`ブロック内で、`For...Next`ループします。 別のコントロール ステートメントの内側に配置する制御ステートメントはモード*入れ子になった*します。  
+`For...Next` ループ内の `If...Then...Else` ブロックなど、制御ステートメントを他の制御ステートメントに配置することができます。 別の制御ステートメントに配置された制御ステートメントは、"*入れ子にされた*" ステートメントと呼ばれます。  
   
 ## <a name="nesting-levels"></a>入れ子のレベル  
- Visual Basic での制御構造は、複数のレベルにネストできます。 一般的に、それぞれのインデントして入れ子になった構造体を読みやすくすることをお勧めします。 統合開発環境 (IDE) のエディターを使用して、この自動的に行います。  
+ Visual Basic の制御構造は、必要な数のレベルで入れ子にできます。 一般的には、入れ子構造を読みやすくするには、各本体をインデントします。 統合開発環境 (IDE) エディターでは、これが自動的に行われます。  
   
- 次の例では、プロシージャ`sumRows`マトリックスの行ごとの正の要素をまとめて追加します。  
+ 次の例では、プロシージャ `sumRows` は、マトリックスの各行の正の要素をすべて加算します。  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- 前の例では、最初の`Next`ステートメント終了内部`For`ループし、最後`Next`外側のステートメントを閉じます`For`ループします。  
+ 前の例では、最初の `Next` ステートメントが内側の `For` ループを閉じ、最後の `Next` ステートメントが外側の `For` ループを閉じます。  
   
- 同様に、入れ子になった`If`、ステートメント、`End If`ステートメントが自動的に適用する前に、最も近い`If`ステートメント。 入れ子になった`Do`で同様に、最も内側のループが`Loop`ステートメントの内側に一致する`Do`ステートメント。  
+ 同様に、入れ子にされた `If` ステートメントでは、`End If` ステートメントは、最も近い前の `If` ステートメントに自動的に適用されます。 入れ子にされた `Do` ループも同じように機能し、最も内側の `Loop` ステートメントと最も内側の `Do` ステートメントが一致します。  
   
 > [!NOTE]
->  多くの制御構造のキーワードをクリックすると、すべての構造のキーワードが強調表示されます。 クリックすると、`If`で、`If...Then...Else`構築のすべてのインスタンス`If`、 `Then`、 `ElseIf`、 `Else`、および`End If`構築では強調表示されます。 次または前の強調表示されているキーワードに移動するには、CTRL と shift キーを押しながら下方向キーまたは CTRL + SHIFT キーを押しながら上方向キーを押します。  
+> 多くの制御構造で、キーワードの 1 つをクリックすると、構造内のすべてのキーワードが強調表示されます。 たとえば、`If...Then...Else` コンストラクションで `If` をクリックすると、コンストラクション内の `If`、`Then`、`ElseIf`、`Else`、および `End If` のすべてのインスタンスが強調表示されます。 次または前の強調表示されたキーワードに移動するには、Ctrl + Shift + ↓キーを押すか、Ctrl + Shift + ↑キーを押します。  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>さまざまな種類の制御構造の入れ子  
- 別の種類内のコントロール構造体の 1 つの種類を入れ子にすることができます。 次の例では、`With`ブロック内で、`For Each`ループを入れ子になった`If`ブロック内で、`With`ブロックします。  
+## <a name="nesting-different-kinds-of-control-structures"></a>入れ子にされたさまざまな種類の制御構造  
+ ある種類の制御構造を、別の種類の制御構造の中で入れ子にできます。 次の例は、`For Each` ループ内の `With` ブロックと、`With` ブロック内の入れ子にされた `If` ブロックを使用しています。  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,16 +64,16 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>重複する制御構造  
- 制御構造を重ねることはできません。 つまり、入れ子になった構造を完全に次の最も内側の構造内で含める必要があります。 たとえば、次の配置が無効ですので、`For`内部の前にループが終了した`With`ブロックを終了します。  
+## <a name="overlapping-control-structures"></a>制御構造のオーバーラップ  
+ 制御構造をオーバーラップさせることはできません。 つまり、入れ子構造は、次の最も内側にある構造に完全に含まれている必要があります。 たとえば、次の配置は、内側の `With` ブロックが終了する前に `For` ループが終了するため無効です。  
   
- ![無効な入れ子の例を示す図。](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![無効な入れ子の例を示す図。](./media/nested-control-structures/example-invalid-nesting.gif)
   
- Visual Basic コンパイラでは、このような重複する制御構造を検出し、コンパイル時エラーを通知します。  
+ Visual Basic コンパイラは、このような制御構造の重なりを検出し、コンパイル時にエラーが発生したことを通知します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [条件判断構造](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [その他の制御構造](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [制御フロー](index.md)
+- [条件判断構造](decision-structures.md)
+- [ループ構造](loop-structures.md)
+- [その他の制御構造](other-control-structures.md)

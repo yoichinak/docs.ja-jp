@@ -3,24 +3,30 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427254"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396877"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
 このチュートリアルでは、変数を調べ、その変数に基づいて実行パスを変更するコードを記述する方法について説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、C# における分岐構造とループ構造を確認する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` ステートメントを使用した条件判定
 
-「**branches-tutorial**」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n BranchesAndLoops -o .` を実行します。 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
+「*branches-tutorial*」という名前のディレクトリを作成します。 それを現在のディレクトリにして、次のコマンドを実行します。
 
-お好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
+
+お好みのエディターで *Program.cs* を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
 
 ```csharp
 int a = 5;
@@ -44,7 +50,7 @@ int b = 3;
 
 この最初のサンプルは、`if` とブール型の機能を示しています。 *ブール値*は、`true` または `false` という 2 つの値のいずれかを持つことができる変数です。 C# ではブール変数の専用の型として `bool` を定義しています。 `if` ステートメントは、`bool` の値を確認します。 値が `true` の場合、`if` に続くステートメントを実行します。 それ以外の場合はスキップします。
 
-条件を確認してその条件に基づいてステートメントを実行するというこのプロセスは非常に機能的です。
+条件を確認してその条件に基づいてステートメントを実行するというこのプロセスは機能的です。
 
 ## <a name="make-if-and-else-work-together"></a>if と else を組み合わせた使用
 
@@ -66,7 +72,7 @@ else
 > C# 言語はインデントや空白文字を重要なものとして扱いません。
 > `if` や `else` のキーワードに続くステートメントは、条件に基づいて実行されます。 このチュートリアルのすべてのサンプルでは、一般的な記述方法に従い、ステートメントの制御フローに基づいて行にインデントを挿入しています。
 
-インデントは重要ではないため、条件に基づいて実行するブロック内に 1 つ以上のステートメントがある場合には、`{` と `}` を使用して示します。 通常、C# プログラマーは `if` と `else` の句にはこの中かっこを使用します。 次の例は、さきほど作成したものと同じ内容です。 上のコードを、次のコードに一致するように変更します。
+インデントは重要ではないため、条件に基づいて実行するブロック内に 1 つ以上のステートメントがある場合には、`{` と `}` を使用して示します。 通常、C# プログラマーは `if` と `else` の句にはこの中かっこを使用します。 次の例は、作成したものと同じ内容です。 上のコードを、次のコードに一致するように変更します。
 
 ```csharp
 int a = 5;
@@ -143,6 +149,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -202,10 +209,10 @@ while (counter < 10)
 > [!IMPORTANT]
 > コードを実行したときに `while` のループ条件が false に切り替わることを確認してください。 それ以外の場合は、プログラムが終了することのない**無限ループ**を作成します。 **CTRL-C** またはその他の方法でプログラムを強制的に終了する必要があるため、このサンプルでは実践しません。
 
-`while` ループは、条件を判定してから `while` に続くコードを実行します。 `do` ... `while` ループは、最初にコードを実行してからその条件を確認します。 do while ループを次のコードで示します。
+`while` ループは、条件を判定してから `while` に続くコードを実行します。 `do` ... `while` ループは、最初にコードを実行してからその条件を確認します。 *do while* ループを次のコードで示します。
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -220,13 +227,13 @@ do
 C# では **for** ループがよく使用されます。 Main() メソッドで次のコードを試してみてください。
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
 }
 ```
 
-このループは、既に使用した `while` ループや `do` ループと同じ機能を持っています。 `for` ステートメントは 3 つの部分に分かれてその機能を制御します。
+前のコードは、既に使用した `while` ループや `do` ループと同じ機能を持っています。 `for` ステートメントは 3 つの部分に分かれてその機能を制御します。
 
 最初の部分は、**for 初期化子**です。`int index = 0;` は、`index` がループ変数であることを宣言し、その初期値を `0` に設定しています。
 
@@ -234,12 +241,50 @@ for(int index = 0; index < 10; index++)
 
 最後の部分は、**for 反復子**です。`index++` は、`for` ステートメントに続くブロックを実行したあとにループ変数を変更する方法を指定しています。 ここでは、ブロックが実行されるごとに `index` が 1 ずつ増加するよう指定しています。
 
-ご自身でこれを実行してみてください。 以下をそれぞれ試してみます。
+自分で試してみてください。 次のバリエーションをそれぞれ試してみます。
 
 - 初期化子を変更して別の値で開始する。
 - 条件を変更して別の値で停止する。
 
 完了したら次に進み、学習したことを使用して自分でいくつかのコードを記述してみましょう。
+
+このチュートリアルでは説明していないループ ステートメントが1つあります。`foreach` ステートメントです。 `foreach` ステートメントは、一連の項目内のすべての項目に対してステートメントを繰り返します。 これは、"*コレクション*" で最もよく使用されます。次のチュートリアルで説明します。
+
+## <a name="created-nested-loops"></a>入れ子になったループの作成
+
+`while`、`do`、または `for` ループを別のループ内に入れ子にして、外側のループの各項目を内側のループの各項目と組み合わせて使用してマトリックスを作成することができます。 行と列を表す一連の英数字ペアを作成してみましょう。
+
+1 つの `for` ループで行を生成できます。
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+別のループで列を生成できます。
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+一方のループをもう一方のループ内に入れ子にして、ペアを形成することができます。
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+外側のループは、内側のループが完全に実行されるたびに 1 回インクリメントされることがわかります。 行と列の入れ子を逆にし、自分で変更を確認します。
 
 ## <a name="combine-branches-and-loops"></a>分岐とループの組み合わせ
 
@@ -255,7 +300,7 @@ C# 言語における `if` ステートメントとループ構造を見てき�
 
 続けて独自の開発環境で[配列とコレクション](arrays-and-collections.md)のチュートリアルに進むことができます。
 
-次のトピックでこれらの概念の詳細を学習できます。
+次の記事でこれらの概念の詳細を学習できます。
 
 - [if と else ステートメント](../../language-reference/keywords/if-else.md)
 - [while ステートメント](../../language-reference/keywords/while.md)

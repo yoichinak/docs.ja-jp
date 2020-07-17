@@ -1,23 +1,23 @@
 ---
-title: My.Computer.Network オブジェクト (Visual Basic)
+title: My.Computer.Network オブジェクト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
-ms.openlocfilehash: 4c79989f3bbae1bdb52e3eb0839503b330c6b8fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c4b57352c46bce22fd3647444e0258359ecea960
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751294"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372779"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network オブジェクト
-プロパティ、イベント、およびコンピューターが接続されているネットワークと対話するためのメソッドを提供します。  
+コンピューターが接続されるネットワークと対話するためのプロパティ、イベント、およびメソッドを提供します。  
   
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Network` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Network>」をご覧ください。  
   
- 詳細については、次を参照してください。[ネットワーク操作の実行](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)します。  
+ 詳細については、「[ネットワーク操作の実行](../../developing-apps/programming/computer-resources/performing-network-operations.md)」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
@@ -28,4 +28,4 @@ ms.locfileid: "61751294"
   
 ## <a name="see-also"></a>関連項目
 
-- [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [My.Computer オブジェクト](my-computer-object.md)

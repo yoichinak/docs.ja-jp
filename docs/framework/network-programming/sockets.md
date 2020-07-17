@@ -1,5 +1,6 @@
 ---
 title: ソケット
+description: Winsock32 API が提供するソケット サービスのマネージ コード版である .NET Framework Socket クラスについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b44409a0fafc770625be55881ccef3b57045acef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136046"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502133"
 ---
 # <a name="sockets"></a>ソケット
 <xref:System.Net.Sockets> 名前空間には、Windows ソケット インターフェイスのマネージド実装が含まれます。 <xref:System.Net> 名前空間のその他すべてのネットワーク アクセス クラスは、ソケットのこの実装の上に構築されます。  
@@ -31,6 +32,6 @@ ms.locfileid: "59136046"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [方法: ソケットを作成する](how-to-create-a-socket.md)
 
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)

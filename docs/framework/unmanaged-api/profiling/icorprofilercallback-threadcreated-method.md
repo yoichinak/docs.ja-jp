@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c7cd897237539be9bd832a793ad623cf7f31c4b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25a4b101388bfc0151ba7c9c52da6561d48f806b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747126"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503160"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated メソッド
 スレッドが作成されたことをプロファイラーに通知します。  
@@ -31,26 +29,26 @@ ms.locfileid: "67747126"
   
 ```cpp  
 HRESULT ThreadCreated(  
-    [in] ThreadID threadId);   
+    [in] ThreadID threadId);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in]作成されたスレッドの ID。  
+ から作成されたスレッドの ID。  
   
-## <a name="remarks"></a>Remarks  
- `threadId`値はすぐに有効です。  
+## <a name="remarks"></a>解説  
+ この `threadId` 値はすぐに有効です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ThreadDestroyed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ThreadDestroyed メソッド](icorprofilercallback-threaddestroyed-method.md)

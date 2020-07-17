@@ -2,43 +2,43 @@
 title: XML からのデータ型クラスの生成
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: b99bb40105398dbd91b910c4a19828d069c3d9e7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: d66cbd1806b90d21a483d0c470f953ddfb9c4fca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380223"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184130"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML からのデータ型クラスの生成
-.NET framework 4.5 には、XML からのデータ型クラスを生成する新しい機能が含まれています。 このトピックでは、.NET ブログ RSS フィードのデータ型を自動的に生成する方法について説明します。  
+.NET Framework 4.5 には、XML からデータ型クラスを生成する新しい機能が含まれています。 このトピックでは、.NET ブログ RSS フィードのデータ型を自動的に生成する方法について説明します。  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>フィードから .NET ブログの RSS XML を取得します。  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>.NET ブログ RSS フィードからの XML の取得  
   
-1. Internet Explorer に移動します。、 [.NET ブログの RSS フィード](https://devblogs.microsoft.com/dotnet/feed/)します。  
+1. インターネット エクスプローラで[、.NET ブログ RSS フィード](https://devblogs.microsoft.com/dotnet/feed/)に移動します。  
   
-2. ページを右クリックして**ソースの表示**します。  
+2. ページを右クリックし、[**ソースの表示 ]** を選択します。  
   
-3. キーを押してフィードのテキストをコピー **Ctrl + A**すべてのテキストを選択して**Ctrl + C**にコピーします。  
+3. **Ctrl キーを押しながら A キー**を押してすべてのテキストを選択し **、Ctrl + C キーを押**してコピーしてフィードのテキストをコピーします。  
   
 ### <a name="creating-the-data-types"></a>データ型の作成  
   
-1. プロキシが使用されるコード ファイルを開きます。 このファイルは、.NET Framework 4.5 プロジェクトの一部である必要があります。  
+1. プロキシが使用されるコード ファイルを開きます。 このファイルは.NET Framework 4.5 プロジェクトの一部である必要があります。  
   
 2. 既存のクラスの外部にあるファイルの場所にカーソルを置きます。  
   
-3. 選択**編集**、**ペースト**、 **XML をクラスとして貼り付ける**します。  
+3. [**編集]、[****形式の貼り付け****]、[XML をクラスとして貼り付け] を選択**します。  
   
-4. クラスと呼ばれる`link`、 `rss`、 `rssChannel`、 `rssChannelImage`、`rssChannelItem`と`rssChannelItemGuid`RSS フィード内の要素にアクセスするために必要なメンバーで作成されます。  
+4. 、 `link`、 `rss` `rssChannel`、`rssChannelImage``rssChannelItem`と`rssChannelItemGuid`呼ばれるクラスは、RSS フィード内の要素にアクセスするために必要なメンバーを使用して作成されます。  
   
 ### <a name="using-the-generated-classes"></a>生成されたクラスの使用  
   
 1. クラスが生成されると、他のクラスのコードなどで使用できます。 次のコード例では、`rssChannelImage` クラスの新しいインスタンスが返されます。  
   
-    ```  
-    var channelImage = new rssChannelImage()   
-    {   
-        title = "MyImage",   
-        link = "http://www.contoso.com/images/channelImage.jpg",   
-        url = "http://www.contoso.com/entries/myEntry.html"   
+    ```csharp
+    var channelImage = new rssChannelImage()
+    {
+        title = "MyImage",
+        link = "http://www.contoso.com/images/channelImage.jpg",
+        url = "http://www.contoso.com/entries/myEntry.html"
     };  
     ```

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 5ede6e2cd52ad55f8c35a42d137044dd1ceea400
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607567"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785961"
 ---
 # <a name="row-error-information"></a>行エラー情報
-<xref:System.Data.DataTable> の値を編集しているときに、行エラーに対処する必要をなくすために、エラー情報を行に追加して後で使用することができます。 <xref:System.Data.DataRow> オブジェクトは、この目的のために各行に <xref:System.Data.DataRow.RowError%2A> プロパティを提供します。 データを追加する、 **RowError**のプロパティを**DataRow**設定、<xref:System.Data.DataRow.HasErrors%2A>のプロパティ、 **DataRow**に**true**します。 場合、 **DataRow**の一部である、 **DataTable**、および**DataRow.HasErrors**は**true**、 **DataTable.HasErrors**プロパティも**true**します。 これにも適用されます、**データセット**先、 **DataTable**が属しています。 チェックすることができますのエラーをテストする場合、 **HasErrors**プロパティを任意の行にエラー情報が追加されたかどうかを判断します。 場合**HasErrors**は**true**、使用することができます、<xref:System.Data.DataTable.GetErrors%2A>のメソッド、 **DataTable**に戻り、次の例に示すように、エラーがある行のみを確認します。  
+<xref:System.Data.DataTable> の値を編集しているときに、行エラーに対処する必要をなくすために、エラー情報を行に追加して後で使用することができます。 <xref:System.Data.DataRow> オブジェクトは、この目的のために各行に <xref:System.Data.DataRow.RowError%2A> プロパティを提供します。 **DataRow** の **RowError** プロパティにデータを追加すると、その **DataRow** の <xref:System.Data.DataRow.HasErrors%2A> プロパティが **true** に設定されます。 **DataRow** が **DataTable** の一部であり、**DataRow.HasErrors** が **true** である場合は、**DataTable.HasErrors** プロパティも **true** になります。 これは、**DataTable** が属している **DataSet** に対しても適用されます。 エラーの有無を確認する場合は、**HasErrors** プロパティをチェックして、エラー情報が追加された行があるかどうかを判断できます。 **HasErrors** が **true** の場合は、次の例に示すように、**DataTable** の <xref:System.Data.DataTable.GetErrors%2A> メソッドを使用して、エラーのある行だけを返してチェックすることができます。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -82,5 +82,5 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
+- [ADO.NET の概要](../ado-net-overview.md)

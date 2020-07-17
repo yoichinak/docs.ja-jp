@@ -1,6 +1,5 @@
 ---
-title: '方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする - C# プログラミング ガイド'
-ms.custom: seodec18
+title: Office 相互運用オブジェクトにアクセスする方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398162"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75700836"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする (C# プログラミング ガイド)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office 相互運用オブジェクトにアクセスする方法 (C# プログラミング ガイド)
 
-Visual C# には、Office API オブジェクトへのアクセスを容易にする機能があります。 新機能は、名前付き引数と省略可能な引数、`dynamic` と呼ばれる新しい型、値パラメーターの場合と同様に COM メソッドの参照パラメーターに引数を渡す機能などです。
+C# には、Office API オブジェクトへのアクセスを容易にする機能があります。 新機能は、名前付き引数と省略可能な引数、`dynamic` と呼ばれる新しい型、値パラメーターの場合と同様に COM メソッドの参照パラメーターに引数を渡す機能などです。
 
 このトピックでは、新機能を使用して、Microsoft Office Excel ワークシートを作成および表示するコードを記述します。 その後、Excel ワークシートにリンクされているアイコンを含む Office Word 文書を追加するコードを記述します。
 
@@ -49,13 +48,13 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
 1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。
 
-2. **[アセンブリ]** ページの **[コンポーネント名]** 一覧で **[Microsoft.Office.Interop.Word]** を選択し、Ctrl キーを押しながら **[Microsoft.Office.Interop.Excel]** を選択します。  アセンブリが表示されない場合は、それをインストールして表示させることが必要になる場合があります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)
+2. **[アセンブリ]** ページの **[コンポーネント名]** 一覧で **[Microsoft.Office.Interop.Word]** を選択し、Ctrl キーを押しながら **[Microsoft.Office.Interop.Excel]** を選択します。  アセンブリが表示されない場合は、アセンブリがインストールされ表示されることを確認する必要があります。 「[方法:Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照してください。
 
 3. **[OK]** をクリックします。
 
 ## <a name="to-add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加するには
 
-1. **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、 **[コードの表示]** をクリックします。
+1. **ソリューション エクスプローラー**で、*Program.cs* ファイルを右クリックし、 **[コードの表示]** をクリックします。
 
 2. 次の `using` ディレクティブをコード ファイルの先頭に追加します。
 
@@ -95,7 +94,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 以降のバージョンでは、アセンブリが [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションで参照される場合、または同等に、Excel の **[相互運用機能型の埋め込み]** プロパティが true に設定されている場合は、返される `Object` が `dynamic` に自動的に変換されます。 このプロパティの既定値は true です。
+     C# 4 以降のバージョンでは、アセンブリが [-link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションで参照される場合、または同等に、Excel の **[相互運用機能型の埋め込み]** プロパティが true に設定されている場合は、返される `Object` が `dynamic` に自動的に変換されます。 このプロパティの既定値は true です。
 
 ## <a name="to-run-the-project"></a>プロジェクトを実行するには
 
@@ -137,9 +136,9 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
 ## <a name="to-set-the-embed-interop-types-property"></a>[相互運用機能型の埋め込み] プロパティを設定するには
 
-1. 実行時に、プライマリ相互運用機能アセンブリ (PIA) を必要としない COM 型を呼び出すときに、追加の拡張が可能です。 PIA への依存関係を削除することによって、バージョンに依存しない、より簡単な展開が実現されます。 PIA を使用しないプログラミングのメリットの詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」をご覧ください。
+1. 実行時に、プライマリ相互運用機能アセンブリ (PIA) を必要としない COM 型を呼び出すときに、追加の拡張が可能です。 PIA への依存関係を削除することによって、バージョンに依存しない、より簡単な展開が実現されます。 PIA を使用しないプログラミングのメリットの詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)」をご覧ください。
 
-     また、`dynamic` ではなく `Object` 型を使用して、COM メソッドに必要とされ、COM メソッドによって返される型を簡単に表現できるため、プログラミングがより簡単になります。 型が `dynamic` の変数は、明示的なキャストが不要になる実行時まで評価されません。 詳細については、「[dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)」を参照してください。
+     また、`dynamic` ではなく `Object` 型を使用して、COM メソッドに必要とされ、COM メソッドによって返される型を簡単に表現できるため、プログラミングがより簡単になります。 型が `dynamic` の変数は、明示的なキャストが不要になる実行時まで評価されません。 詳細については、「[dynamic 型の使用](../types/using-type-dynamic.md)」を参照してください。
 
      C# 4 の既定の動作では、PIA を使用せずに型情報が埋め込まれます。 この既定のため、前の例のいくつかは、明示的なキャストが必要ないために簡素化されます。 たとえば、`worksheet` での `DisplayInExcel` の宣言は、`Excel._Worksheet workSheet = excelApp.ActiveSheet` ではなく `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet` と記述されます。 同じメソッドの `AutoFit` への呼び出しでも、既定値を使用せずに明示的なキャストが必要になります。これは、`ExcelApp.Columns[1]` が `Object` を返し、`AutoFit` が Excel のメソッドであるためです。 次のコードはキャストを示しています。
 
@@ -149,7 +148,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
 3. **[プロパティ]** ウィンドウが表示されない場合は、**F4** キーを押します。
 
-4. プロパティの一覧で **[相互運用機能型の埋め込み]** を見つけて、値を **[False]** に変更します。 同様に、コマンド プロンプトで [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) の代わりに [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションを使用してコンパイルすることができます。
+4. プロパティの一覧で **[相互運用機能型の埋め込み]** を見つけて、値を **[False]** に変更します。 同様に、コマンド プロンプトで [-link](../../language-reference/compiler-options/link-compiler-option.md) の代わりに [-reference](../../language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションを使用してコンパイルすることができます。
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>テーブルに追加の書式設定を追加するには
 
@@ -176,7 +175,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
+- [dynamic 型の使用](../types/using-type-dynamic.md)
+- [名前付き引数と省略可能な引数](../classes-and-structs/named-and-optional-arguments.md)
+- [Office プログラミングで名前付き引数と省略可能な引数を使用する方法](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

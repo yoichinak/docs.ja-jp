@@ -2,31 +2,31 @@
 title: 企業の購買プロセス
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 93cfc3546fc312f046c4a5e1dd63dfb357f143c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876164"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182870"
 ---
 # <a name="corporate-purchase-process"></a>企業の購買プロセス
 このサンプルは、Request for Proposals (RFP: 提案依頼書) に基づくごく基本的な購買プロセスを作成する方法を示しています。この購買プロセスでは最良の提案が自動的に選択されます。 このサンプルでは、<xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、および <xref:System.Activities.Statements.ForEach%601> と、プロセスを表すワークフローを作成するカスタム アクティビティが組み合わされています。
 
- このサンプルには、異なる参加者として (元の要求者や特定のベンダー) としてプロセスと対話できるようにする ASP.NET クライアント アプリケーションが含まれています。
+ このサンプルには、異なる参加者 (元の要求元または特定のベンダー) としてプロセスと対話できるASP.NETクライアント アプリケーションが含まれています。
 
 ## <a name="requirements"></a>必要条件
 
-- Visual Studio 2012.
+- ビジュアル スタジオ 2012.
 
-- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
-## <a name="demonstrates"></a>使用例
+## <a name="demonstrates"></a>対象
 
 - カスタム アクティビティ。
 
 - アクティビティの構成。
 
-- ブックマーク。
+- ブックマーク
 
 - 永続性。
 
@@ -36,25 +36,25 @@ ms.locfileid: "65876164"
 
 - 追跡。
 
-- ホストしている[!INCLUDE[wf1](../../../../includes/wf1-md.md)]別のクライアント (ASP.NET Web アプリケーションおよび WinForms アプリケーション) にします。
+- 異[!INCLUDE[wf1](../../../../includes/wf1-md.md)]なるクライアント (ASP.NET Web アプリケーションと WinForms アプリケーション) でのホスティング。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+>
+> `<InstallDrive>:\WF_WCF_Samples`  
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>プロセスの説明  
- このサンプルでは、一般的な会社のベンダーから提案を収集する Windows Workflow Foundation (WF) プログラムの実装を示します。  
+ このサンプルでは、一般企業のベンダーから提案を収集する Windows ワークフロー ファウンデーション (WF) プログラムの実装を示します。  
   
 1. Company X の従業員が Request for Proposal (RFP) を作成します。  
   
     1. RFP のタイトルと説明を入力します。  
   
-    2. 提案の送信を依頼するベンダーを選択します。  
+    2. 従業員は、提案を送信するために招待する仕入先を選択します。  
   
 2. 従業員が提案を送信します。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "65876164"
 ## <a name="projects-in-this-sample"></a>このサンプルのプロジェクト  
  このサンプルには次のプロジェクトが含まれています。  
   
-|プロジェクト|説明|  
+|Project|説明|  
 |-------------|-----------------|  
 |共通|プロセス内で使用されるエンティティ オブジェクト (Request for Proposal、Vendor、および Vendor Proposal)。|  
 |WfDefinition|購買プロセス ワークフローのインスタンスの作成および使用のためにクライアント アプリケーションによって使用されるプロセス ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] プログラムとしてのプロセス) とホスト (`PurchaseProcessHost`) の定義。|  
-|WebClient|ASP.NET クライアント アプリケーションの購入プロセスのインスタンスを作成して参加することができます。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
+|WebClient|ユーザーが購入プロセスのインスタンスを作成して参加できるようにするASP.NETクライアント アプリケーション。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
 |WinFormsClient|購買プロセスのインスタンスを作成したりそれに参加したりできる Windows フォーム クライアント アプリケーション。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
@@ -93,7 +93,7 @@ ms.locfileid: "65876164"
 |IPurchaseProcessHost.cs|ワークフローのホストのインターフェイス。|  
 |PurchaseProcessHost.cs|ワークフローのホストの実装。 ホストは、ワークフロー ランタイムの詳細を抽象化します。`PurchaseProcess` ワークフローのインスタンスの読み込み、実行、およびインスタンスとのやり取りのために、すべてのクライアント アプリケーションで使用されます。|  
 |PurchaseProcessWorkflow.cs|Purchase Process ワークフローの定義を含むアクティビティ (<xref:System.Activities.Activity> から派生します)。<br /><br /> <xref:System.Activities.Activity> から派生するアクティビティは、既存のカスタム アクティビティと [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] アクティビティ ライブラリのアクティビティをまとめることで機能を構成します。 これらのアクティビティをまとめることは、カスタム機能を作成するための最も基本的な方法です。|  
-|WaitForVendorProposal.cs|このカスタム アクティビティは <xref:System.Activities.NativeActivity> から派生し、後にベンダーが提案を送信するときに再開する必要がある名前付きブックマークを作成します。<br /><br /> <xref:System.Activities.NativeActivity> から派生するアクティビティは、<xref:System.Activities.CodeActivity> から派生するアクティビティと同様に、<xref:System.Activities.NativeActivity.Execute%2A> をオーバーライドすることで、命令型機能を作成します。ただし、<xref:System.Activities.ActivityContext> メソッドに渡される `Execute` を介して、ワークフロー ランタイムのすべての機能にもアクセスできます。 このコンテキストは、子アクティビティのスケジュールと取り消し、非永続化ゾーン (アトミック トランザクションの中など、ランタイムによってワークフローのデータが永続化されない実行ブロック) の設定、および <xref:System.Activities.Bookmark> オブジェクト (一時停止したワークフローの再開を処理) をサポートします。|  
+|WaitForVendorProposal.cs|このカスタム アクティビティは <xref:System.Activities.NativeActivity> から派生し、後にベンダーが提案を送信するときに再開する必要がある名前付きブックマークを作成します。<br /><br /> <xref:System.Activities.NativeActivity> から派生するアクティビティは、<xref:System.Activities.CodeActivity> から派生するアクティビティと同様に、<xref:System.Activities.NativeActivity.Execute%2A> をオーバーライドすることで、命令型機能を作成します。ただし、<xref:System.Activities.ActivityContext> メソッドに渡される `Execute` を介して、ワークフロー ランタイムのすべての機能にもアクセスできます。 このコンテキストは、子アクティビティのスケジュールとキャンセル、非永続ゾーン (ランタイムがアトミック トランザクション内など、ワークフローのデータを保持しない実行ブロック) と<xref:System.Activities.Bookmark>オブジェクト (一時停止したワークフローを再開するためのハンドル) を設定します。|  
 |TrackingParticipant.cs|すべての追跡イベントを受信してテキスト ファイルに保存する <xref:System.Activities.Tracking.TrackingParticipant>。<br /><br /> 追跡参加要素は拡張としてワークフロー インスタンスに追加されます。|  
 |XmlWorkflowInstanceStore.cs|ワークフロー アプリケーションを XML ファイルに保存するカスタムの <xref:System.Runtime.DurableInstancing.InstanceStore>。|  
 |XmlPersistenceParticipant.cs|Request for Proposal のインスタンスを XML ファイルに保存するカスタムの <xref:System.Activities.Persistence.PersistenceParticipant>。|  
@@ -104,7 +104,7 @@ ms.locfileid: "65876164"
   
 |クラス|説明|  
 |-----------|-----------------|  
-|ベンダー|Request for Proposals で提案を送信するベンダー。|  
+|製造元|Request for Proposals で提案を送信するベンダー。|  
 |RequestForProposal|Request for Proposals (RFP) は、ベンダーに特定の商品またはサービスについての提案の送信を求める依頼書です。|  
 |VendorProposal|ベンダーによって具象 RFP に送信された提案。|  
 |VendorRepository|Vendor のリポジトリ。 この実装には、Vendor のインスタンスのメモリ内コレクションと、それらのインスタンスを公開するためのメソッドが含まれています。|  
@@ -124,17 +124,17 @@ ms.locfileid: "65876164"
 ### <a name="winforms-client"></a>WinForms Client  
  次の表には、WinForms Client プロジェクトの最も重要なフォームの説明が含まれています。  
   
-|フォーム|説明|  
+|Form|説明|  
 |-|-|  
 |NewRfp|新しい Request for Proposals を作成して送信します。|  
-|ShowProposals|アクティブな Request for Proposals と完了した Request for Proposals をすべて表示します。 **注:** をクリックする必要があります、**更新**作成または Request for Proposal を変更した後、その画面の変更を表示する UI のボタンをクリックします。|  
+|ShowProposals|アクティブな Request for Proposals と完了した Request for Proposals をすべて表示します。 **注:** 提案依頼を作成または変更した後、UI の **[更新**] ボタンをクリックして、その画面の変更を確認する必要がある場合があります。|  
 |SubmitProposal|具象 Request for Proposals 内のベンダーからの提案を取得します。 このウィンドウを使用するのはベンダーだけです。|  
 |ViewRfp|Request for Proposals に関するすべての情報 (受信した提案、日付、金額、およびその他の情報) を表示します。 このウィンドウを使用するのは Request for Proposals の作成者だけです。|  
   
 ### <a name="persistence-files"></a>永続化ファイル  
  次の表は、永続化プロバイダー (`XmlPersistenceProvider`) によって生成されるファイルを示しています。これらのファイルは、現在のシステムの一時フォルダーのパスに配置されます (<xref:System.IO.Path.GetTempPath%2A> を使用)。 トレース ファイルは現在の実行パスに作成されます。  
   
-|ファイル名|説明|パス|  
+|ファイル名|説明|Path|  
 |-|-|-|  
 |rfps.xml|アクティブな Request for Proposals と完了した Request for Proposals をすべて含む XML ファイル。|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|このファイルには、ワークフロー インスタンスに関するすべての情報が含まれています。<br /><br /> このファイルは、スキーマ化された永続化の実装 (XmlPersistenceProvider の PersistenceParticipant) によって生成されます。|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -143,11 +143,11 @@ ms.locfileid: "65876164"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1. Visual Studio 2010 を使用して、PurchaseProcess.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2010 を使用して、購入プロセス.sln ソリューション ファイルを開きます。  
   
-2. Web Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **Web クライアント**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
+2. Web クライアント プロジェクトを実行するには、**ソリューション エクスプローラー**を開き **、Web クライアント**プロジェクトを右クリックします。 [**スタートアップ プロジェクトに設定**] を選択します。  
   
-3. WinForms Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **WinForms Client**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
+3. WinForms クライアント プロジェクトを実行するには、**ソリューション エクスプ ローラー**を開き **、WinForms クライアント**プロジェクトを右クリックします。 [**スタートアップ プロジェクトに設定**] を選択します。  
   
 4. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
@@ -155,20 +155,20 @@ ms.locfileid: "65876164"
   
 ### <a name="web-client-options"></a>Web Client のオプション  
   
-- **作成する新しい RFP**:新しい Request for Proposals (RFP) を作成し、Purchase Process ワークフローを開始します。  
+- **新しい RFP の作成**: 提案依頼 (RFP) を新規作成し、購買プロセス ワークフローを開始します。  
   
-- **更新**:Active and Finished RFPs のメイン ウィンドウの一覧を更新します。  
+- **更新**: メイン ウィンドウのアクティブおよび完了した RFP の一覧を更新します。  
   
-- **表示**:既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
+- **表示**: 既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
   
-- として参照してください。ユーザーが目的の参加者を選択して別の id を使用して RFP にアクセスできる、**として表示**アクティブな Rfp のグリッドのコンボ ボックス。  
+- [表示方法]: アクティブな RFP グリッドの **[表示**するユーザー] コンボ ボックスで目的の参加者を選択することで、異なる ID を使用して RFP にアクセスできます。  
   
 ### <a name="winforms-client-options"></a>WinForms Client のオプション  
   
-- **Create RFP**:新しい Request for Proposals (RFP) を作成し、Purchase Process ワークフローを開始します。  
+- **RFP**の作成 : 新しい提案依頼 (RFP) を作成し、購買プロセス ワークフローを開始します。  
   
-- **更新**:Active and Finished RFPs のメイン ウィンドウの一覧を更新します。  
+- **更新**: メイン ウィンドウのアクティブおよび完了した RFP の一覧を更新します。  
   
-- **View RFP**:既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
+- **RFP**の表示 : 既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
   
-- **として接続**:ユーザーが目的の参加者を選択して別の id を使用して RFP にアクセスできる、**として表示**アクティブな Rfp のグリッドのコンボ ボックス。
+- **接続:** ユーザーは、アクティブな RFP グリッドの **[表示**] コンボ ボックスで目的の参加者を選択することで、異なる ID を使用して RFP にアクセスできます。

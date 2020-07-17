@@ -1,50 +1,50 @@
 ---
-title: 定数の概要 (Visual Basic)
+title: 定数の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: f45cb12c6ef0f90b9c90190f30ce8600fec80947
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907089"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414519"
 ---
 # <a name="constants-overview-visual-basic"></a>定数の概要 (Visual Basic)
-定数とは、数値または変更されない文字列の代わりに使用されるわかりやすい名前です。 定数は、名前が示すようは、アプリケーションの実行全体で同じ値を格納します。 大幅に、コードの読みやすさを向上し、定数を使用して管理しやすくできます。 再び表示される値を含むコードで使用するが困難に注意してくださいまたは明確な意味のない特定の番号に依存します。  
+定数とは、不変の数値または文字列の代わりとなるわかりやすい名前です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 定数を使用することで、コードの可読性を大きく高め、管理を容易にすることができます。 これらは、繰り返し現れる値を含むコードや、覚えにくい数値または意味のわかりにくい数値に依存するコードで使用します。  
   
-## <a name="how-to-create-and-use-constants"></a>作成、および定数を使用する方法  
- Visual Basic には、さまざまな定義済み定数は、主に印刷と表示の使用が含まれています。 独自の定数を作成することもできます、`Const`ステートメントでは、変数名を作成するための場合と同じガイドラインを使用します。 場合`Option Strict`は`On`、定数の型を明示的に宣言する必要があります。  
+## <a name="how-to-create-and-use-constants"></a>定数の作成方法と使用方法  
+ Visual には定義済みの定数が多数含まれており、その大部分は印刷や表示に使用されています。 変数名を作成するときと同じガイドラインに従い、`Const` ステートメントによって独自の定数を作成することもできます。 `Option Strict` に `On` を指定した場合、定数の型を明示的に宣言する必要があります。  
   
- 定数のスコープは、その名前を修飾せずに参照できるすべてのコードのセットは、同じ場所で宣言された変数の場合と同じです。 特定のプロシージャのスコープ内に存在する定数を作成するには、そのプロシージャ内で宣言します。 アプリケーション全体で使用できる定数を作成するには、宣言を使用して、`Public`クラスの宣言セクション内のキーワード。  
+ 定数のスコープは、定数の名前を修飾しなくても参照可能なすべてのコードであり、同一の場所で宣言された変数のものと同じになります。 特定のプロシージャのスコープ内に存在する定数を作成するには、該当するプロシージャ内で宣言します。 アプリケーション全体で利用可能な定数を作成するには、クラスの宣言セクションで `Public` キーワードを使用して宣言します。  
   
 > [!NOTE]
->  定数には、変数と似ていますは、それらを変更または変数には、それらを新しい値を割り当てることはできません。  
+> 定数は変数にやや似ていますが、定数を変更したり、変数のように新しい値を割り当てたりすることはできません。  
   
- コントロールまたはコンポーネントを使用すると、動作するためのオブジェクト モデルでは、コードで使用する定数を定義できますまたはユーザー定義されている可能性がある (つまり、自分で作成した)。  
+ コードで使用する定数は、利用するコントロールまたはコンポーネントのオブジェクト モデルにより定義できます。また、ユーザー定義定数 (つまり、独自に作成した定数) を使用することもできます。  
   
-## <a name="compile-time-and-run-time-constants"></a>コンパイル時と実行時の定数  
- コンパイル時定数は、実行時の定数は、アプリケーションの実行中にのみ計算するときに、コードのコンパイル時に計算されます。 コンパイル時定数では、毎回アプリケーションを実行中に、実行時の定数は毎回変えることがあります、同じ値があります。 コンパイル時定数では、配列の範囲、case 式は、列挙子の初期化子などの場合必要です。  
+## <a name="compile-time-and-run-time-constants"></a>コンパイル時定数と実行時定数  
+ コンパイル時定数はコードのコンパイル時に計算されますが、実行時定数はアプリケーションの実行中にしか計算できません。 コンパイル時定数には、アプリケーションを実行するたびに同じ値が割り当てられますが、実行時定数は実行のたびに変わる可能性があります。 配列の範囲、Case 式、列挙子の初期化子などにはコンパイル時定数を使用する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |定義|用語|  
 |---|---|  
-|[方法: 定数を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|使用する方法について説明します、`Const`定数を宣言し、その値を設定するステートメントの定数を宣言する値にわかりやすい名前を割り当てます。|  
-|[ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|循環参照を回避する方法とスコープに関する情報など、独自の定数を作成する方法について説明します。|  
-|[定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Visual Basic コンパイラが定数を初期化する方法についての情報と`Option Explicit`は無効になります。|  
-|[方法: 関連する定数値をまとめてグループ](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|関連する定数値をグループ化する方法を示します。|  
+|[方法: 定数を宣言する](how-to-declare-a-constant.md)|`Const` ステートメントを使用して定数とその値を宣言する方法について説明します。定数を宣言することで、値にわかりやすい名前を付けることができます。|  
+|[ユーザー定義定数](user-defined-constants.md)|独自の定数の作成方法について、スコープの設定や循環参照の回避方法なども含めて説明します。|  
+|[定数とリテラルのデータ型](constant-and-literal-data-types.md)|`Option Explicit` が Off の場合に Visual Basic コンパイラが定数を初期化するしくみについて説明します。|  
+|[方法: 関連する定数値をまとめてグループ化する](how-to-group-related-constant-values-together.md)|関連する定数の値をグループ化する方法について説明します。|  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
   
 |定義|用語|  
 |---|---|  
-|[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic での定義済み定数を示します。|  
-|[Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)|について説明します、`Const`ステートメントとその使用します。|  
-|[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|について説明します、`Option Strict`ステートメントとその使用します。|  
+|[定数と列挙体](../../../language-reference/constants-and-enumerations.md)|Visual Basic の事前定義定数の一覧を紹介します。|  
+|[Const ステートメント](../../../language-reference/statements/const-statement.md)|`Const` ステートメントとその使用法について説明します。|  
+|[Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)|`Option Strict` ステートメントとその使用法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [方法: Visual Basic で配列変数を初期化します。](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [列挙型の概要](enumerations-overview.md)
+- [方法: Visual Basic で配列変数を初期化する](../arrays/how-to-initialize-an-array-variable.md)

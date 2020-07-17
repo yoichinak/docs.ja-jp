@@ -1,30 +1,30 @@
 ---
-title: Alias 句 (Visual Basic)
+title: Alias 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Alias
 helpviewer_keywords:
 - Alias keyword [Visual Basic]
 ms.assetid: 58c06b11-465d-4d87-906a-73200a3d7f19
-ms.openlocfilehash: 84c8f39e632eebbe5382492669820910b38bc360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c28e931a376b20b2058a7187551405cd9523d4fe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053354"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408472"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 句 (Visual Basic)
-外部プロシージャにその DLL 内の別の名前があることを示します。  
+外部プロシージャがその DLL で別の名前を使用することを示します。  
   
 ## <a name="remarks"></a>Remarks  
- `Alias`キーワードは、このコンテキストで使用できます。  
+ `Alias` キーワードは次のコンテキストで使用できます。  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare ステートメント](declare-statement.md)  
   
- 次の例では、 `Alias` advapi32.dll、内の関数の名前を指定するキーワードが使用される`GetUserNameA`、その`getUserName`の代わりにこの例では使用します。 関数`getUserName`sub で呼び出される`getUser`、現在のユーザーの名前が表示されます。  
+ 次の例では、`Alias` キーワードを使用して、advapi32.dll 内の関数の名前 `GetUserNameA` を指定しています。この例では代わりに `getUserName` が使用されています。 関数 `getUserName` はサブ `getUser` で呼び出され、それによって現在のユーザーの名前が表示されます。  
   
  [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [キーワード](../keywords/index.md)

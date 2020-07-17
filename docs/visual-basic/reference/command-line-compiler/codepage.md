@@ -1,24 +1,24 @@
 ---
-title: -codepage (Visual Basic)
+title: -codepage
 ms.date: 03/09/2018
 helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 34dbf36cc79a8c4715cf6a07c57d559e14f40030
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944704"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363631"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -codepage:id  
 ```  
   
@@ -26,16 +26,16 @@ ms.locfileid: "61944704"
   
 |用語|定義|  
 |---|---|  
-|`id`|必須。 コンパイラで指定されたコード ページを使用して`id`ソース ファイルのエンコーディングを解釈します。|  
+|`id`|必須です。 コンパイラは、`id` で指定されたコード ページを使用して、ソース ファイルのエンコードを解釈します。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用することが特定のエンコーディングで保存されたソース コードをコンパイルする`-codepage`コード ページを使用する必要がありますを指定します。 `-codepage`オプションは、コンパイル時にすべてのソース コード ファイルに適用されます。 詳細については、次を参照してください。 [.NET Framework における文字エンコーディング](../../../standard/base-types/character-encoding.md)します。  
+ 特定のエンコードを使用して保存されたソース コードをコンパイルするには、`-codepage` を使用して、使用するコード ページを指定します。 `-codepage` オプションは、コンパイル時にすべてのソース コード ファイルに適用されます。 詳細については、[.NET Framework での文字エンコード](../../../standard/base-types/character-encoding.md)に関する記事を参照してください。  
   
- `-codepage`オプションは、シグネチャを持つ現在の ANSI コード ページ、Unicode または utf-8 を使用して、ソース コード ファイルを保存した場合は必要ありません。 Visual Studio に保存既定では、すべてのソース コード ファイルが現在の ANSI コード ページで、ユーザーで別のエンコードを指定しない限り、**エンコード** ダイアログ ボックス。 Visual Studio を使用して、**エンコード**異なるコード ページで保存されたソース コード ファイルを開く ダイアログ ボックス。  
+ ソース コード ファイルが現在の ANSI コード ページ、Unicode、または UTF-8 を使用して保存されている場合、`-codepage` オプションは必要ありません。 Visual Studio では、ユーザーが **[エンコード]** ダイアログ ボックスで別のエンコードを指定しない限り、既定ですべてのソース コード ファイルが現在の ANSI コード ページで保存されます。 Visual Studio では、 **[エンコード]** ダイアログ ボックスを使用して、別のコード ページで保存されたソースコード ファイルが開かれます。  
   
 > [!NOTE]
->  `-codepage`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> `-codepage` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)

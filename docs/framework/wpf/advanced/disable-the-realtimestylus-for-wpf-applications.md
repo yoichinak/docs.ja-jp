@@ -1,30 +1,31 @@
 ---
-title: WPF アプリケーションのリアルタイムなスタイラス入力を無効にする
+title: RealTimeStylus を無効にする
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c2500b494f76c85e4b23823a44a180d85d5092ff
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962491"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186077"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>WPF アプリケーションのリアルタイムなスタイラス入力を無効にする
-Windows Presentation Foundation (WPF) Windows 7 のタッチ入力を処理するためのサポートが組み込まれています。サポートがタブレット プラットフォームのリアルタイム スタイラス入力をそのまま<xref:System.Windows.UIElement.OnStylusDown%2A>、 <xref:System.Windows.UIElement.OnStylusUp%2A>、および<xref:System.Windows.UIElement.OnStylusMove%2A>イベント。 また、Windows 7 は、WM_TOUCH の Win32 ウィンドウ メッセージとしてマルチ タッチ入力を提供します。 これら 2 つの Api は、同じ HWND で相互に排他的です。 有効にするタッチでは、WM_TOUCH メッセージを無効にします。 tablet プラットフォーム (WPF アプリケーションの既定値) を使用して入力します。 その結果、WM_TOUCH を使用すると、WPF ウィンドウからタッチ メッセージを受信して、WPF での組み込みのスタイラスのサポートを無効にする必要があります。 これは、WM_TOUCH を使用するコンポーネントをホストする WPF ウィンドウなどのシナリオで適用します。  
+
+Windows Presentation Foundation (WPF) には、Windows 7 のタッチ入力を処理するためのサポートが組み込まれています。 このサポートは、タブレット プラットフォームでの <xref:System.Windows.UIElement.OnStylusDown%2A>、<xref:System.Windows.UIElement.OnStylusUp%2A>、および <xref:System.Windows.UIElement.OnStylusMove%2A> イベントとしてのリアルタイム スタイラス入力によって行われます。 Windows 7 では、Win32 WM_TOUCH ウィンドウ メッセージとしてマルチタッチ入力も提供されます。 これらの 2 つの API を同じ HWND で同時に使用することはできません。 タブレット プラットフォームによるタッチ入力 (WPF アプリケーションの既定値) を有効にすると、WM_TOUCH メッセージは無効になります。 そのため、WM_TOUCH を使用して WPF ウィンドウからタッチ メッセージを受け取るには、WPF の組み込みスタイラス サポートを無効にする必要があります。 これは、WM_TOUCH を使用するコンポーネントをホストする WPF ウィンドウなどのシナリオに適用されます。  
   
- スタイラスからの入力をリッスンする WPF を無効にするには、WPF ウィンドウで追加された任意のタブレット サポートを削除します。  
+ WPF によるスタイラス入力のリッスンを無効にするには、WPF ウィンドウによって追加されるすべてのタブレット サポートを削除します。  
   
 ## <a name="example"></a>例  
  次のサンプル コードでは、リフレクションを使用して既定のタブレット プラットフォームのサポートを削除する方法を示します。  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
-    // Get a collection of the tablet devices for this window.    
+    // Get a collection of the tablet devices for this window.
     TabletDeviceCollection devices = System.Windows.Input.Tablet.TabletDevices;  
   
     if (devices.Count > 0)  
-    {     
+    {
         // Get the Type of InputManager.  
         Type inputManagerType = typeof(System.Windows.Input.InputManager);  
   
@@ -45,7 +46,7 @@ public static void DisableWPFTabletSupport()
                 stylusLogicType.InvokeMember("OnTabletRemoved",  
                         BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.NonPublic,  
                         null, stylusLogic, new object[] { (uint)0 });  
-            }                  
+            }
         }  
   
     }  

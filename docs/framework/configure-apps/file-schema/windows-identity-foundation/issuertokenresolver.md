@@ -3,21 +3,22 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67d7e0aa5b6b05bfe8b17a1b1efebb1fbddbb0eb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791613"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79152672"
 ---
-# <a name="issuertokenresolver"></a>\<issuerTokenResolver >
-トークン ハンドラー コレクションのハンドラーによって使用される発行者トークン リゾルバーを登録します。 発行者トークン リゾルバーを使用して、受信トークンおよびメッセージの署名トークンを解決します。  
+# \<issuerTokenResolver>
+トークンハンドラーコレクションのハンドラーによって使用される発行者トークンリゾルバーを登録します。 発行者トークンリゾルバーは、受信トークンとメッセージの署名トークンを解決するために使用されます。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration>  
-\<issuerTokenResolver >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerTokenResolver>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,27 +42,27 @@ ms.locfileid: "61791613"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|発行者トークン リゾルバーの種類を指定します。 いずれかである必要があります、<xref:System.IdentityModel.Tokens.IssuerTokenResolver>クラスまたは型から派生した、<xref:System.IdentityModel.Tokens.IssuerTokenResolver>クラス。 必須。|  
+|type|発行者トークンリゾルバーの種類を指定します。 は、クラス <xref:System.IdentityModel.Tokens.IssuerTokenResolver> またはクラスから派生した型のいずれかである必要があり <xref:System.IdentityModel.Tokens.IssuerTokenResolver> ます。 必須。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|セキュリティトークンハンドラーのコレクションの構成を提供します。|  
   
-## <a name="remarks"></a>Remarks  
- 発行者トークン リゾルバーを使用して、受信トークンおよびメッセージの署名トークンを解決します。 これを使用して、署名を確認するために使用される暗号化マテリアルを取得します。 指定する必要があります、`type`属性。 指定された型には、いずれかを指定できる<xref:System.IdentityModel.Tokens.IssuerTokenResolver>またはカスタム型から派生した、<xref:System.IdentityModel.Tokens.IssuerTokenResolver>クラス。  
+## <a name="remarks"></a>解説  
+ 発行者トークンリゾルバーは、受信トークンとメッセージの署名トークンを解決するために使用されます。 署名の確認に使用される暗号化マテリアルを取得するために使用されます。 属性を指定する必要があり `type` ます。 指定できる型は、 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> またはクラスから派生したカスタム型のいずれか <xref:System.IdentityModel.Tokens.IssuerTokenResolver> です。  
   
- いくつかのトークン ハンドラーを使用すると、発行者トークン リゾルバーの設定を構成で指定できます。 セキュリティ トークン ハンドラー コレクションの指定された個々 のトークン ハンドラーの設定をオーバーライドします。  
+ 一部のトークンハンドラーでは、構成で発行者トークンリゾルバーの設定を指定できます。 個々のトークンハンドラーの設定は、セキュリティトークンハンドラーコレクションで指定された設定よりも優先されます。  
   
 > [!NOTE]
->  指定する、`<issuerTokenResolver>`要素の子要素として、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)要素は非推奨とされましたが、旧バージョンとの互換性もサポートします。 上の設定、`<securityTokenHandlerConfiguration>`要素のオーバーライド、`<identityConfiguration>`要素。  
+> 要素 `<issuerTokenResolver>` の子要素としての指定 [\<identityConfiguration>](identityconfiguration.md) は非推奨とされましたが、旧バージョンとの互換性のために引き続きサポートされています。 要素の設定は、要素の設定 `<securityTokenHandlerConfiguration>` よりも優先さ `<identityConfiguration>` れます。  
   
 ## <a name="example"></a>例  
- 次の XML から派生したカスタム クラスに基づいている発行者トークン リゾルバーの構成を表示する<xref:System.IdentityModel.Tokens.IssuerTokenResolver>します。 トークン リゾルバーは、カスタム構成要素から初期化された対象ユーザー キーのペアのディクショナリを保持 (`<AddAudienceKeyPair>`) クラスに対して定義されています。 クラスのオーバーライド、<xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A>この要素を処理するメソッド。 次の例で、上書きを表示します。ただし、呼び出すメソッドは、簡潔にするためには表示されません。 完全な例では、次を参照してください。、`CustomToken`サンプル。  
+ 次の XML は、から派生したカスタムクラスに基づく発行者トークンリゾルバーの構成を示して <xref:System.IdentityModel.Tokens.IssuerTokenResolver> います。 トークンリゾルバーは、 `<AddAudienceKeyPair>` クラスに対して定義されているカスタム構成要素 () から初期化される、ユーザーとキーのペアのディクショナリを保持します。 クラスは、メソッドをオーバーライドして <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> この要素を処理します。 オーバーライドを次の例に示します。ただし、簡潔にするために呼び出すメソッドは表示されません。 完全な例については、「」のサンプルを参照してください `CustomToken` 。  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  
@@ -69,9 +70,9 @@ ms.locfileid: "61791613"
 </issuerTokenResolver>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example"></a>例
   
-```  
+```csharp
 public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)  
 {  
     foreach (XmlNode node in nodelist)  
@@ -85,7 +86,7 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
         this.AddAudienceKeyPair(audience, symmetricKey);  
     }  
 }  
-```  
+```
   
 ## <a name="see-also"></a>関連項目
 

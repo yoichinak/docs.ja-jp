@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772294"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007495"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列挙型
-メタデータ トークンの種類を示します。  
+メタデータトークンの種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,43 +63,43 @@ typedef enum CorTokenType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule`トークンです。|  
-|`mdtTypeRef`|`mdTypeRef`トークンです。|  
-|`mdtTypeDef`|`mdTypeDef`トークンです。|  
-|`mdtFieldDef`|`mdFieldDef`トークンです。|  
-|`mdtMethodDef`|`mdMethodDef`トークンです。|  
-|`mdtParamDef`|`mdParamDef`トークンです。|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl`トークンです。|  
-|`mdtMemberRef`|`mdMemberRef`トークンです。|  
-|`mdtCustomAttribute`|`mdCustomAttribute`トークンです。|  
-|`mdtPermission`|`mdPermission`トークンです。|  
-|`mdtSignature`|`mdSignature`トークンです。|  
-|`mdtEvent`|`mdEvent`トークンです。|  
-|`mdtProperty`|`mdProperty`トークンです。|  
-|`mdtModuleRef`|`mdModuleRef`トークンです。|  
-|`mdtTypeSpec`|`mdTypeSpec`トークンです。|  
-|`mdtAssembly`|`mdAssembly`トークンです。|  
-|`mdtAssemblyRef`|`mdAssemblyRef`トークンです。|  
-|`mdtFile`|`mdFile`トークンです。|  
-|`mdtExportedType`|`mdExportedType`トークンです。|  
-|`mdtManifestResource`|`mdManifestResource`トークンです。|  
-|`mdtGenericParam`|`mdGenericParam`トークンです。|  
-|`mdtMethodSpec`|`mdMethodSpec`トークンです。|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint`トークンです。|  
-|`mdtString`|`mdString`トークンです。|  
-|`mdtName`|`mdName`トークンです。|  
-|`mdtBaseType`|使用しません。|  
+|`mdtModule`|`mdModule`トークン。|  
+|`mdtTypeRef`|`mdTypeRef`トークン。|  
+|`mdtTypeDef`|`mdTypeDef`トークン。|  
+|`mdtFieldDef`|`mdFieldDef`トークン。|  
+|`mdtMethodDef`|`mdMethodDef`トークン。|  
+|`mdtParamDef`|`mdParamDef`トークン。|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl`トークン。|  
+|`mdtMemberRef`|`mdMemberRef`トークン。|  
+|`mdtCustomAttribute`|`mdCustomAttribute`トークン。|  
+|`mdtPermission`|`mdPermission`トークン。|  
+|`mdtSignature`|`mdSignature`トークン。|  
+|`mdtEvent`|`mdEvent`トークン。|  
+|`mdtProperty`|`mdProperty`トークン。|  
+|`mdtModuleRef`|`mdModuleRef`トークン。|  
+|`mdtTypeSpec`|`mdTypeSpec`トークン。|  
+|`mdtAssembly`|`mdAssembly`トークン。|  
+|`mdtAssemblyRef`|`mdAssemblyRef`トークン。|  
+|`mdtFile`|`mdFile`トークン。|  
+|`mdtExportedType`|`mdExportedType`トークン。|  
+|`mdtManifestResource`|`mdManifestResource`トークン。|  
+|`mdtGenericParam`|`mdGenericParam`トークン。|  
+|`mdtMethodSpec`|`mdMethodSpec`トークン。|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint`トークン。|  
+|`mdtString`|`mdString`トークン。|  
+|`mdtName`|`mdName`トークン。|  
+|`mdtBaseType`|使用されていません。|  
   
-## <a name="remarks"></a>Remarks  
- 各値は、対応するメタデータ トークン内の最上位バイトの値と同じです。  
+## <a name="remarks"></a>コメント  
+ 各値は、対応するメタデータトークンの上位バイトの値に相当します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

@@ -2,18 +2,18 @@
 title: モデル アイテム ツリーのプログラミング
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: f14b140fdac95f3763cc5625841a725793876fa4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170068"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142694"
 ---
 # <a name="programming-model-item-tree"></a>モデル アイテム ツリーのプログラミング
-このサンプルでは、移動、<xref:System.Activities.Presentation.Model.ModelItem>宣言型データ バインディング、Windows Presentation Foundation (WPF) のツリー ビューを使用してツリーします。
+このサンプルでは、Windows プレゼンテーションファン<xref:System.Activities.Presentation.Model.ModelItem>デーション (WPF) ツリー ビューから宣言型データ バインディングを使用してツリーを移動する方法を示します。
 
 ## <a name="sample-details"></a>サンプルの詳細
- <xref:System.Activities.Presentation.Model.ModelItem> ツリーは、編集する基のインスタンスに関するデータを公開するために [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] のインフラストラクチャで使用される抽象表現です。 次の図は、[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]のインフラストラクチャのさまざまな層を表しています。
+ ツリー<xref:System.Activities.Presentation.Model.ModelItem>は、Windows ワークフロー デザイナー インフラストラクチャで使用される抽象化で、編集対象の基になるインスタンスに関するデータを公開します。 次の図は、ワークフロー デザイナー内のさまざまなインフラストラクチャ 層を示しています。
 
  ![ワークフロー デザイナーのアーキテクチャを示す図。](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
@@ -29,24 +29,24 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. Visual Studio 2010 で ProgrammingModelItemTree.sln ソリューションを開きます。
+1. 2010 年にプログラムモデルアイテムツリー.sln ソリューションを開きます。
 
-2. 選択すると、ソリューションをビルド**ソリューションのビルド**から、**ビルド**メニュー。
+2. [ビルド] メニューの [**ソリューションのビルド**] を選択してソリューションを**ビルド**します。
 
-3. F5 キーを押してアプリケーションを実行します。 WPF フォームが表示されます。
+3. F5 キーを押してアプリケーションを実行します。 その後、WPF フォームが表示されます。
 
-4. をクリックして、 **Load WF**を読み込む ボタン、<xref:System.Activities.Presentation.Model.ModelItem>ツリー ビューにバインドします。
+4. [WF**のロード**] ボタン<xref:System.Activities.Presentation.Model.ModelItem>をクリックして、 をロードし、ツリー ビューにバインドします。
 
-5. クリックすると、 **Change Model Item Tree**ボタン、ツリーにアイテムを追加し、プロパティを設定するには、上記のコードを実行します。
+5. [**モデル アイテム ツリーの変更]** ボタンをクリックすると、上記のコードが実行され、ツリーに項目が追加され、プロパティが設定されます。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+>
+> `<InstallDrive>:\WF_WCF_Samples`  
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
 ## <a name="see-also"></a>関連項目
 

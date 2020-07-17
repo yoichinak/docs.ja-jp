@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6187da564a62b8c30abdc6a150f0df45d565615
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25e931ec17cad3508d548fb4ca7e53b0ade3f119
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763870"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804956"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager メソッド
-指定したホストのインターフェイスの実装にインターフェイス ポインターを取得します。`IID`します。  
+指定したを使用して、ホストのインターフェイスの実装へのインターフェイスポインターを取得し `IID` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,58 +36,58 @@ HRESULT GetHostManager (
   
 ## <a name="parameters"></a>パラメーター  
  `riid`  
- [in]`IID`インターフェイスの共通言語ランタイム (CLR) を照会しているのです。  
+ から`IID`共通言語ランタイム (CLR) が照会しているインターフェイスの。  
   
  `ppObject`  
- [out]ホスト実装のインターフェイスの場合、または、ホストがこのインターフェイスをサポートしていない場合は null へのポインター。  
+ 入出力ホストに実装されたインターフェイスへのポインター。ホストがこのインターフェイスをサポートしていない場合は null。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`GetHostManager`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|E_INVALIDARG|要求された`IID`が無効です。|  
-|E_NOINTERFACE|要求されたインターフェイスがサポートされていません。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|E_INVALIDARG|要求された `IID` が無効です。|  
+|E_NOINTERFACE|要求されたインターフェイスはサポートされていません。|  
   
-## <a name="remarks"></a>Remarks  
- CLR では、次のインターフェイスの 1 つ以上をサポートすることかどうかを確認するホストを照会します。  
+## <a name="remarks"></a>解説  
+ CLR はホストに対してクエリを実行し、次のインターフェイスの1つまたは複数がサポートされているかどうかを判断します。  
   
-- [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+- [IHostMemoryManager](ihostmemorymanager-interface.md)  
   
-- [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+- [IHostTaskManager](ihosttaskmanager-interface.md)  
   
-- [IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
+- [IHostThreadPoolManager](ihostthreadpoolmanager-interface.md)  
   
-- [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
+- [IHostIoCompletionManager](ihostiocompletionmanager-interface.md)  
   
-- [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+- [IHostSyncManager](ihostsyncmanager-interface.md)  
   
-- [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
+- [IHostAssemblyManager](ihostassemblymanager-interface.md)  
   
-- [IHostGCManager](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
+- [IHostGCManager](ihostgcmanager-interface.md)  
   
-- [IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
+- [IHostPolicyManager](ihostpolicymanager-interface.md)  
   
-- [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
+- [IHostSecurityManager](ihostsecuritymanager-interface.md)  
   
- ホストは、指定したインターフェイスをサポートする場合は設定`ppObject`そのインターフェイスの実装にします。 それ以外の場合、設定`ppObject`を null にします。  
+ ホストが指定されたインターフェイスをサポートしている場合は、そのインターフェイス `ppObject` の実装にを設定します。 それ以外の場合は、 `ppObject` を null に設定します。  
   
- CLR は呼び出しません`Release`シャット ダウンした場合でも、ホスト マネージャー。  
+ ホストマネージャーをシャットダウンした場合でも、CLR はを呼び出しません `Release` 。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IHostControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [IHostControl インターフェイス](ihostcontrol-interface.md)

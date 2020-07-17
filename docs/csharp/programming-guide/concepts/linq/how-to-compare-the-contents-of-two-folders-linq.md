@@ -1,15 +1,15 @@
 ---
-title: '方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)'
+title: 2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 44dc97d6d48bed5e8b4d0376838e4dada2e8300c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585917"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169403"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
   
 - 2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
@@ -19,7 +19,7 @@ ms.locfileid: "65585917"
 - 1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
   
     > [!NOTE]
-    >  ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
+    > ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
   
  ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。 このクラスは、実際のシナリオで使用することは想定されていません。 各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。 実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。  
   
@@ -34,7 +34,7 @@ namespace QueryCompareTwoDirs
         static void Main(string[] args)  
         {  
   
-            // Create two identical or different temporary folders   
+            // Create two identical or different temporary folders
             // on a local drive and change these file paths.  
             string pathA = @"C:\TestDir";  
             string pathB = @"C:\TestDir2";  
@@ -64,11 +64,11 @@ namespace QueryCompareTwoDirs
                 Console.WriteLine("The two folders are not the same");  
             }  
   
-            // Find the common files. It produces a sequence and doesn't   
+            // Find the common files. It produces a sequence and doesn't
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
-            if (queryCommonFiles.Count() > 0)  
+            if (queryCommonFiles.Any())  
             {  
                 Console.WriteLine("The following files are in both folders:");  
                 foreach (var v in queryCommonFiles)  
@@ -111,7 +111,7 @@ namespace QueryCompareTwoDirs
                     f1.Length == f2.Length);  
         }  
   
-        // Return a hash that reflects the comparison criteria. According to the   
+        // Return a hash that reflects the comparison criteria. According to the
         // rules for IEqualityComparer<T>, if Equals is true, then the hash codes must  
         // also be equal. Because equality as defined here is a simple value equality, not  
         // reference identity, it is possible that two or more objects will produce the same  
@@ -128,7 +128,7 @@ namespace QueryCompareTwoDirs
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

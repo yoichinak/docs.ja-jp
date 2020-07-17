@@ -9,23 +9,23 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: MT
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935252"
 ---
 # <a name="bitmap-effects"></a>ビットマップ効果
-このセクションのトピックを使用してビットマップ イメージに視覚効果を適用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  
+このセクションのトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] を使用して、ビットマップ イメージに視覚効果を適用する方法について説明します。  
   
 > [!IMPORTANT]
->  .NET Framework 4 以降では、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは廃止されています。 使用しようとする場合、<xref:System.Windows.Media.Effects.BitmapEffect>クラス、廃止例外が発生します。 旧式でない代わりに、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは、<xref:System.Windows.Media.Effects.Effect>クラス。 ほとんどの場合、<xref:System.Windows.Media.Effects.Effect>クラスが大幅に高速です。  
+> .NET Framework 4 以降では、<xref:System.Windows.Media.Effects.BitmapEffect> クラスが廃止されています。 <xref:System.Windows.Media.Effects.BitmapEffect> クラスを使用しようとすると、廃止例外が発生します。 <xref:System.Windows.Media.Effects.BitmapEffect> クラスの旧式でない代替クラスは、<xref:System.Windows.Media.Effects.Effect> クラスです。 ほとんどの場合、<xref:System.Windows.Media.Effects.Effect> クラスの方がはるかに高速です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ビットマップ効果の概要](bitmap-effects-overview.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  

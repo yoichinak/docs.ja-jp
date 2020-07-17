@@ -1,6 +1,5 @@
 ---
 title: コンテキスト キーワード yield - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: d3fe4cf92ca17457bd541f092f5d146ba6c1c095
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267783"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794417"
 ---
 # <a name="yield-c-reference"></a>yield (C# リファレンス)
 
@@ -26,7 +25,7 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 各要素を 1 つずつ返すには、`yield return` ステートメントを使用します。
 
@@ -42,13 +41,13 @@ Iterator メソッドから返されるシーケンスを、[foreach](foreach-in
 
 - 戻り値の型は、<xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator>、または <xref:System.Collections.Generic.IEnumerator%601> であることが必要です。
 
-- この宣言には、[in](in-parameter-modifier.md)、[ref](ref.md)、[out](out-parameter-modifier.md) パラメーターを含めることはできません。
+- この宣言には、[in](in-parameter-modifier.md)、[ref](ref.md)、または [out](out-parameter-modifier.md) パラメーターを含めることはできません。
 
 `yield` または <xref:System.Collections.IEnumerable> を返す反復子の <xref:System.Collections.IEnumerator> 型は `object` です。  反復子が <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.Generic.IEnumerator%601> を返す場合、`yield return` ステートメント内の式の型から、ジェネリック型パラメーターへの暗黙的な変換が存在する必要があります。
 
-次の特性を持つメソッドに `yield return` ステートメントまたは `yield break` ステートメントを含めることはできません。
+`yield return` または `yield break` ステートメントを以下に含めることはできません。
 
-- 匿名メソッド。 詳しくは、「[匿名メソッド](../../programming-guide/statements-expressions-operators/anonymous-methods.md)」をご覧ください。
+- [ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)および[匿名メソッド](../operators/delegate-operator.md)。
 
 - unsafe ブロックを含むメソッド。 詳しくは、「[unsafe](unsafe.md)」をご覧ください。
 
@@ -98,7 +97,7 @@ Iterator メソッドの戻り値の型は <xref:System.Collections.IEnumerable>
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
+- [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [foreach、in](foreach-in.md)
 - [反復子](../../iterators.md)

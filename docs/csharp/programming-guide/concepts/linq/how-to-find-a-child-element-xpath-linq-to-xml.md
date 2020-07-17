@@ -1,23 +1,23 @@
 ---
-title: '方法: 子要素を検索する (XPath-LINQ to XML) (C#)'
+title: 子要素を検索する方法 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 4a6d18c86416f7c54df554bc2f518994446a2a84
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 37ce6c9d91d4edf2576ccddabd1d7f14a96b0a33
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485724"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "74141240"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>方法: 子要素を検索する (XPath-LINQ to XML) (C#)
-このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> メソッドを比較します。  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>子要素を検索する方法 (XPath-LINQ to XML) (C#)
+このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Element%2A> メソッドを比較します。  
   
  XPath 式は `DeliveryNotes` です。  
   
 ## <a name="example"></a>例  
  この例では、`DeliveryNotes` 子要素を検索します。  
   
- この例では、次の XML ドキュメントを使用します。「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ この例では、次の XML ドキュメントを使用します。「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -40,7 +40,7 @@ Console.WriteLine(el1);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Results are identical  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  

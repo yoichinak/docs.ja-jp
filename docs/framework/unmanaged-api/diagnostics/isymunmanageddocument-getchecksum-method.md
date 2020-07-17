@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776768"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441098"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum メソッド
 チェックサムを取得します。  
@@ -38,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>パラメーター  
  `cData`  
- [in]によって提供されるバッファーの長さ、`data`パラメーター  
+ からパラメーターによって指定されたバッファーの長さ `data`  
   
  `pcData`  
- [out]サイズとチェックサムをバイト単位の長さ。  
+ 入出力チェックサムのサイズと長さ (バイト単位)。  
   
  `data`  
- [out]チェックサムを受け取るバッファー。  
+ 入出力チェックサムを受け取るバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument インターフェイス](isymunmanageddocument-interface.md)

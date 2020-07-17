@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a57c7d71-c4b0-41f9-a964-0c5ee84a3124
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0191f1fa17d436944fcb590d88dd4004adfa1aba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5144feab742bc5dac36563d701d81a699d0bb2f3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744302"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609444"
 ---
-# <a name="userthread-structure"></a>USER_THREAD 構造体
-デバッガー スレッドに関する情報を提供します。 詳細については、次を参照してください。、 [inotifysource 2::setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)メソッド。  
+# <a name="user_thread-structure"></a>USER_THREAD 構造体
+スレッドに関する情報をデバッガーに提供します。 詳細については、 [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md)メソッドを参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,14 +39,14 @@ typedef struct tagUSER_THREAD
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pSidBuffer`|スレッドのバッファーのアドレス。|  
-|`dwSidLen`|(バイト単位) のスレッドのバッファーの長さ。|  
-|`dwTid`|スレッド id です。|  
+|`pSidBuffer`|スレッドバッファーのアドレス。|  
+|`dwSidLen`|スレッドバッファーの長さ (バイト単位)。|  
+|`dwTid`|スレッド ID。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
 
-- [SetNotifyFilter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
-- [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [SetNotifyFilter メソッド](inotifysource2-setnotifyfilter-method.md)
+- [シンボル ストア診断構造体](diagnostics-symbol-store-structures.md)

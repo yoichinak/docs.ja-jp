@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a1adb79e5081fc909d0cd180d8161eccea7e58e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e901c65824ee8d6949c79c7778944148c0d9eb28
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754354"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976058"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort メソッド
-計算の中止この`ICorDebugEval2`は現在実行中です。  
+この`ICorDebugEval2`が現在実行している計算を中止します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +32,13 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `RudeAbort` 安全でない状態で、デバッグ セッションの外に出ているため、エバリュエーターを保持しているすべてのロックを解放しません。 十分注意してこのメソッドを呼び出します。  
+ `RudeAbort`は、エバリュエーターによって保持されているロックを解放しないため、デバッグセッションは安全ではない状態のままになります。 このメソッドは細心の注意を払って呼び出してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

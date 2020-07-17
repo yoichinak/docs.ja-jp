@@ -1,6 +1,6 @@
 ---
-title: EndMethodEnumeration 関数 (アンマネージ API リファレンス)
-description: EndMethodEnumeration 関数には、メソッドの列挙体シーケンスが終了します。
+title: メソッド列挙関数 (アンマネージ API リファレンス)
+description: 関数は、メソッド列挙体のシーケンスを終了します。
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -14,27 +14,25 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63667d0668f905ded2aedd961be0d1831faf838c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746833"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175006"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 関数
-呼び出しで開始した、列挙体シーケンスの終了、 [BeginMethodEnumeration 関数](beginmethodenumeration.md)します。  
+関数の呼び出しで開始される列挙シーケンス[を](beginmethodenumeration.md)終了します。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT EndMethodEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr 
-); 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr
+);
 ```  
 
 ## <a name="parameters"></a>パラメーター
@@ -43,25 +41,25 @@ HRESULT EndMethodEnumeration (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
 
-|定数  |値  |説明  |
+|常時  |Value  |説明  |
 |---------|---------|---------|
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 内部エラーが発生しました。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | An internal error occurred. |
+|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数の呼び出しをラップする、 [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)メソッド。
+この関数は、メソッドの呼び出し[をラップします](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)。
 
-呼び出し元が列挙体シーケンスの使用を開始[BeginMethodEnumeration 関数](beginmethodenumeration.md)、号餧ェヒェマル、 [NextMethod 関数](nextmethod.md )メソッドが戻るまで`WBEM_S_NO_MORE_DATA`します。 呼び出し元は、呼び出すことによって、シーケンスを完了する必要に応じて`EndMethodEnumeration`します。 呼び出し元が呼び出すことによって、列挙体を早期終了可能性があります`EndMethodEnumeration`いつでもできます。
+呼び出し元は[、BeginMethodEnumeration 関数](beginmethodenumeration.md)を使用して列挙シーケンスを開始し、メソッドが`WBEM_S_NO_MORE_DATA`返されるまで[NextMethod 関数](nextmethod.md )を呼び出します。 呼び出し元はオプションで、`EndMethodEnumeration`を呼び出してシーケンスを終了します。 呼び出し元は、いつでも呼`EndMethodEnumeration`び出すことによって、列挙を早期に終了できます。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
@@ -69,4 +67,4 @@ HRESULT EndMethodEnumeration (
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

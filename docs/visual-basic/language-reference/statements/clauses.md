@@ -1,35 +1,33 @@
 ---
-title: 句 (Visual Basic)
+title: 句
 ms.date: 07/20/2015
 helpviewer_keywords:
 - clauses [Visual Basic]
 ms.assetid: 5e89f5f3-d129-4ed1-8857-30cd71cff95e
-ms.openlocfilehash: a77a95879bd556b1dfb1503c4648d04629052189
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a8974d83901c1f005a8d6042bf3a9de2e5e0e125
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051807"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397143"
 ---
 # <a name="clauses-visual-basic"></a>句 (Visual Basic)
-このセクションのトピックでは、Visual Basic 実行時の句を文書化します。  
+このセクションのトピックでは、Visual Basic ランタイム句について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
+ [Alias](alias-clause.md)  
   
- [As](../../../visual-basic/language-reference/statements/as-clause.md)  
+ [As](as-clause.md)  
   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [Handles](handles-clause.md)  
   
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [Implements](implements-clause.md)  
   
- [In](../../../visual-basic/language-reference/statements/in-clause.md)  
+ [In](in-clause.md)  
   
- [Into](../../../visual-basic/language-reference/statements/into-clause.md)  
+ [Into](into-clause.md)  
   
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [Of](of-clause.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)
+ [Visual Basic の言語リファレンス](../index.md)  

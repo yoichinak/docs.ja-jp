@@ -1,5 +1,5 @@
 ---
-title: For...Next ステートメント (Visual Basic)
+title: For...Next ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Step
@@ -23,161 +23,171 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 7f982c97bd76288ecd1a8d1f53fc2b25b0bb829e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 6896c6cfb4ec5d6207011e56b72639c459120e53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623885"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404642"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next ステートメント (Visual Basic)
-ステートメントのグループを指定した回数だけ繰り返されます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-For counter [ As datatype ] = start To end [ Step step ]  
-    [ statements ]  
-    [ Continue For ]  
-    [ statements ]  
-    [ Exit For ]  
-    [ statements ]  
-Next [ counter ]  
-```  
-  
-## <a name="parts"></a>指定項目  
-  
-|パーツ|説明|  
-|----------|-----------------|  
-|`counter`|必要な`For`ステートメント。 数値型の変数。 ループ コントロール変数。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
-|`datatype`|省略可能です。 データ型`counter`します。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
-|`start`|必須。 数値式。 `counter` の初期値になります。|  
-|`end`|必須。 数値式。 最終値`counter`します。|  
-|`step`|省略可能です。 数値式。 量`counter`ループのたびに増加します。|  
-|`statements`|省略可能です。 1 つまたは複数のステートメント間`For`と`Next`指定された回数を実行します。|  
-|`Continue For`|省略可能です。 次のループの反復処理の制御を転送します。|  
-|`Exit For`|省略可能です。 うちに制御を転送、`For`ループします。|  
-|`Next`|必須。 定義を終了、`For`ループします。|  
-  
+
+ステートメントのグループを指定した回数だけ繰り返します。
+
+## <a name="syntax"></a>構文
+
+```vb
+For counter [ As datatype ] = start To end [ Step step ]
+    [ statements ]
+    [ Continue For ]
+    [ statements ]
+    [ Exit For ]
+    [ statements ]
+Next [ counter ]
+```
+
+## <a name="parts"></a>指定項目
+
+|パーツ|説明|
+|----------|-----------------|
+|`counter`|`For` ステートメントには必ず指定します。 数値変数。 ループの制御変数。 詳細については、このトピックで後述する「[Counter 引数](#BKMK_Counter)」を参照してください。|
+|`datatype`|任意。 `counter` のデータ型。 詳細については、このトピックで後述する「[Counter 引数](#BKMK_Counter)」を参照してください。|
+|`start`|必須です。 数値式。 `counter` の初期値になります。|
+|`end`|必須です。 数値式。 `counter` の最終値。|
+|`step`|任意。 数値式。 ループを通るたびに `counter` が増分される量。|
+|`statements`|任意。 指定した回数だけ実行される、`For` と `Next` の間の 1 つ以上のステートメント。|
+|`Continue For`|任意。 ループの次の反復に制御を移します。|
+|`Exit For`|任意。 `For` ループから制御を移します。|
+|`Next`|必須です。 `For` ループの定義を終了します。|
+
 > [!NOTE]
->  `To`キーワードは、カウンターの範囲を指定するこのステートメントで使用されます。 このキーワードを使用することも、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)と配列の宣言。 配列の宣言に関する詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。  
-  
-## <a name="simple-examples"></a>簡単な例  
- 使用する、 `For`.`Next`時間数の一連のステートメントを繰り返し表示するときに構造体します。  
-  
- 次の例では、`index`変数の値が 1 で開始し、終了の値の後に、ループの反復ごとにインクリメントされます`index`5 に到達します。  
-  
- [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
-  
- 次の例では、`number`変数が 2 から開始し、終了の値の後に、ループの各反復処理で 0.25 を消費`number`が 0 になります。 `Step`の引数`-.25`ループの各反復処理で 0.25 で値を減らします。  
-  
- [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
-  
+> このステートメントで `To` キーワードを使用して、カウンターの範囲を指定します。 また、このキーワードは、[Select...Case ステートメント](select-case-statement.md)と配列宣言でも使用できます。 配列宣言の詳細については、「[Dim ステートメント](dim-statement.md)」を参照してください。
+
+## <a name="simple-examples"></a>簡単な例
+
+一連のステートメントを設定した回数だけ繰り返す場合は、`For`...`Next` 構造を使用します。
+
+次の例では、`index` 変数は値 1 で始まり、ループの反復ごとに増分され、`index` の値が 5 に達した後に終了します。
+
+[!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]
+
+次の例では、`number` 変数は 2 から始まり、ループの反復ごとに 0.25 減り、`number` の値が 0 に達した後に終了します。 `-.25` の `Step` 引数は、ループの反復ごとに値を 0.25 ずつ減らします。
+
+[!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]
+
 > [!TIP]
->  A[中.While ステートメント終了](../../../visual-basic/language-reference/statements/while-end-while-statement.md)または[の操作を行います.Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)ときがわからない事前に、ループ内でステートメントを実行する回数をうまく機能します。 ただし、特定回数、ループを実行しようとする`For`.`Next`ループが適しています。 ループを最初に入力したときに、イテレーションの数を決定します。  
-  
-## <a name="nesting-loops"></a>ループの入れ子  
- 入れ子にすることができます`For`内に別の 1 つのループを配置することでループします。 次の例で入れ子になった`For`.`Next`異なるステップ値を持つ構造体。 外側のループは、ループのイテレーションごとに文字列を作成します。 内側のループのイテレーションごとのループ カウンター変数をデクリメントをループします。  
-  
- [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
-  
- ループを入れ子にする場合は、各ループが一意必要があります`counter`変数。  
-  
- 内で他のさまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
-  
-## <a name="exit-for-and-continue-for"></a>終了しの続行  
- `Exit For`ステートメントがすぐに終了させる、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
-  
- `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  
-  
- 次の例では、使用、`Continue For`と`Exit For`ステートメント。  
-  
- [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]  
-  
- 任意の数を配置する`Exit For`内のステートメントを`For`.`Next` ループします。 使用すると内で入れ子になった`For`.`Next` ループ、`Exit For`最も内側のループを終了し、入れ子の上位のレベルに制御を転送します。  
-  
- `Exit For` いくつかの条件を評価した後は、よく使用 (たとえば、 `If`.`Then`...`Else`構造)。 使用する`Exit For`次の条件。  
-  
-- 反復処理を続けることは不要なか不可能です。 エラー値や終了要求は、この条件を作成可能性があります。  
-  
-- A `Try`.`Catch`...`Finally`ステートメントが例外をキャッチします。 使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
-  
-- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は`Exit For`を使用してループをエスケープすることができます。 詳細については、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。  
-  
-## <a name="technical-implementation"></a>技術的な実装  
- ときに、 `For`.`Next`ループの開始、Visual Basic の評価`start`、 `end`、および`step`します。 Visual Basic では、この時間とし、割り当てにのみこれらの値を評価`start`に`counter`します。 ステートメントの前にブロックが実行、Visual Basic の比較`counter`に`end`します。 場合`counter`よりも大きいは既に、`end`値 (より小さい場合、または`step`が負の値)、`For`ループが終了と制御に続くステートメントに渡す、`Next`ステートメント。 それ以外の場合、ステートメント ブロックが実行されます。  
-  
- Visual Basic が発生するたびに、`Next`インクリメント ステートメントでは、`counter`によって`step`に戻って、`For`ステートメント。 もう一度比較`counter`に`end`、もう一度、ブロックが実行か、その結果に応じて、ループが終了したとします。 までこのプロセスは継続`counter`渡します`end`または`Exit For`ステートメントが見つかりました。  
-  
- まで、ループが停止しない`counter`経過`end`します。 場合`counter`と等しい`end`ループが続行されます。 ブロックを実行するかどうかを決定する比較では、 `counter`  <=  `end`場合`step`が正の値と`counter`  >=  `end`場合`step`が負の値。  
-  
- 値を変更する場合`counter`ループ内で、コードは読み取り、デバッグが難しくなります。 値を変更する`start`、 `end`、または`step`ループが最初に入力すると判断した反復値には影響しません。  
-  
- ループを入れ子にする場合、コンパイラはエラーが発生したかどうか、`Next`する前に外側の入れ子レベルのステートメント、`Next`内部レベルのステートメント。 ただし、コンパイラが検出できるこれを指定する場合にのみ、エラーを重複`counter`ですべて`Next`ステートメント。  
-  
-### <a name="step-argument"></a>手順の引数  
- 値`step`正または負にすることができます。 このパラメーターは、次の表に従って、ループ処理を決定します。  
-  
-|**ステップ値**|**場合、ループが実行されます。**|  
-|--------------------|--------------------------|  
-|正またはゼロ|`counter` <= `end`|  
-|負|`counter` >= `end`|  
-  
- 既定値の`step`は 1 です。  
-  
-### <a name="BKMK_Counter"></a> カウンターの引数  
- 次の表に示すかどうか`counter`全体をスコープは、新しいローカル変数を定義します。`For…Next`ループします。 この決定によって異なるかどうか`datatype`が存在するかどうかおよび`counter`は既に定義されています。  
-  
-|`datatype`存在でしょうか。|`counter`既に定義されていますか?|結果 (かどうか`counter`全体をスコープは、新しいローカル変数を定義します`For...Next`ループ)。|  
-|----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|いいえ|[はい]|いいえ、ため`counter`は既に定義されています。 場合のスコープ`counter`いない、プロシージャに対してローカルに、コンパイル時に警告が発生します。|  
-|いいえ|いいえ|はい。 データ型から推論されます、 `start`、 `end`、および`step`式。 型の推定については、次を参照してください。 [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。|  
-|[はい]|[はい]|[はい] が場合にのみ、既存の`counter`プロシージャの外部変数が定義されています。 その変数は別に維持します。 場合、既存のスコープ`counter`変数は、プロシージャに対してローカルに、コンパイル時エラーが発生します。|  
-|[はい]|いいえ|はい。|  
-  
- データ型`counter`イテレーションでは、次の種類のいずれかを指定する必要がありますの種類を決定します。  
-  
-- A `Byte`、 `SByte`、 `UShort`、 `Short`、 `UInteger`、 `Integer`、 `ULong`、 `Long`、 `Decimal`、 `Single`、または`Double`します。  
-  
-- 列挙体を使用して宣言する、 [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)します。  
-  
-- `Object`。  
-  
-- 型`T`、次の演算子を持つ場所`B`型で使用できるは、`Boolean`式。  
-  
-     `Public Shared Operator >= (op1 As T, op2 As T) As B`  
-  
-     `Public Shared Operator <= (op1 As T, op2 As T) As B`  
-  
-     `Public Shared Operator - (op1 As T, op2 As T) As T`  
-  
-     `Public Shared Operator + (op1 As T, op2 As T) As T`  
-  
- 必要に応じて指定することができます、`counter`変数、`Next`ステートメント。 入れ子にしていない場合は特に、この構文は、プログラムの読みやすさを向上`For`ループします。 対応する表示される変数を指定する必要があります`For`ステートメント。  
-  
- `start`、 `end`、および`step`式が評価される任意のデータ型の型を拡張する`counter`します。 ユーザー定義型を使用する場合`counter`、定義する必要がありますが、`CType`変換演算子の型に変換する`start`、 `end`、または`step`の型に`counter`。  
-  
-## <a name="example"></a>例  
- 次の例では、ジェネリック リストからすべての要素を削除します。 この例では、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の代わりに、降順に反復処理する`For`...`Next`ステートメントを使用します。 例では、`removeAt`メソッドで削除された要素の後にある要素のインデックス値がより小さくなるため、この手法を使用します。  
-  
- [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
-  
-## <a name="example"></a>例  
- 次の例を使用して宣言されている列挙型を反復処理、 [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)します。  
-  
- [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
-  
-## <a name="example"></a>例  
- 次の例では、ステートメントのパラメーターが演算子のオーバー ロードを持つクラスを使用して、 `+`、 `-`、 `>=`、および`<=`演算子。  
-  
- [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
-  
+> [While...End While ステートメント](while-end-while-statement.md)または [Do...Loop ステートメント](do-loop-statement.md)は、ループ内でステートメントを実行する回数が事前にわからない場合に適しています。 ただし、ループを特定の回数だけ実行する場合は、`For`...`Next` ループを使用することをお勧めします。 ループに最初に入るときの反復の数を決定します。
+
+## <a name="nesting-loops"></a>ループを入れ子にする
+
+`For` ループを入れ子にするには、別のループ内にループを配置します。 次の例は、異なるステップ値を持つ入れ子になった `For`...`Next` 構造を示しています。 外側のループは、ループの反復ごとに文字列を作成します。 内側のループは、ループの反復ごとにループ カウンター変数の値を減らします。
+
+[!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]
+
+ループを入れ子にする場合、各ループには一意の `counter` 変数が必要です。
+
+また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+
+## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
+
+`Exit For` ステートメントは、`For`...`Next` ループを終了し、`Next` ステートメントの次のステートメントに制御を移します。
+
+`Continue For` ステートメントは、ループの次の反復に直ちに制御を移します。 詳細については、「[Continue ステートメント](continue-statement.md)」を参照してください。
+
+次の例では、`Continue For` および `Exit For` ステートメントの使用方法を示します。
+
+[!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]
+
+`For`...`Next` ループには、任意の数の `Exit For` ステートメントを 含めることができます。 入れ子になった `For`...`Next` ループ内で使用すると、 `Exit For` は、最も内側のループを終了し、次に高いレベルの入れ子に制御を移します。
+
+`Exit For` は、何らかの条件 (たとえば、`If`...`Then`...`Else` 構造など) を評価した後によく使用されます。 `Exit For` は次の条件で使用することもできます。
+
+- 反復処理の続行が不要または不可能である。 この条件は、正しくない値または終了要求によって生じる場合があります。
+
+- `Try`...`Catch`...`Finally` ステートメントが例外をキャッチする。 `Exit For` ブロックの末尾で `Finally` を使用することもできます。
+
+- 無限ループがある。無限ループは、膨大な回数または無限に実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「[Do...Loop ステートメント](do-loop-statement.md)」を参照してください。
+
+## <a name="technical-implementation"></a>技術的な実装
+
+`For`...`Next` ループが開始されると、Visual Basic は `start`、`end`、および `step` を評価します。 Visual Basic は、現時点ではこれらの値のみを評価してから、`start` を `counter` に割り当てます。 ステートメント ブロックが実行される前に、Visual Basic は `counter` と `end` を比較します。 `counter` が既に `end` の値よりも大きい場合 (または `step` が負の場合)、`For` ループは終了し、制御は `Next` ステートメントの次のステートメントに渡されます。 それ以外の場合は、ステートメント ブロックが実行されます。
+
+Visual Basic は、`Next` ステートメントを検出するたびに `counter` を `step` ずつ増分し、`For` ステートメントに返します。 もう一度 `counter` と `end` を比較し、その結果に応じて、もう一度ブロックを実行するかループを終了します。 このプロセスは、`counter` が `end` を渡すか、`Exit For` ステートメントが検出されるまで続行されます。
+
+`counter` が `end` を渡すまで、ループは停止しません。 `counter` が `end` に等しい場合、ループは続行されます。 ブロックを実行するかどうかを決定する比較は、`step` が正の場合は `counter` <= `end`、`counter` が負の場合は  >= `end``step` です。
+
+ループ内にあるときに `counter` の値を変更すると、コードの読み取りやデバッグが困難になることがあります。 `start`、`end`、または `step` の値を変更しても、ループが最初に入力されたときに決定された反復値には影響しません。
+
+ループを入れ子にした場合、内側のレベルの `Next` ステートメントの前に外側の入れ子レベルの `Next` ステートメントが検出されると、コンパイラはエラーを通知します。 ただし、コンパイラは、すべての `Next` ステートメントで `counter` を指定した場合にのみ、この重複エラーを検出できます。
+
+### <a name="step-argument"></a>Step 引数
+
+`step` の値には、正または負のどちらかを指定できます。 このパラメーターは、次の表に従ってループ処理を決定します。
+
+|**ステップ値**|**ループが実行される場合**|
+|--------------------|--------------------------|
+|正または 0|`counter` <= `end`|
+|負|`counter` >= `end`|
+
+`step` の既定値は 1 です。
+
+### <a name="counter-argument"></a><a name="BKMK_Counter"></a> Counter 引数
+
+次の表は、`counter` が `For…Next` ループ全体に範囲が設定されている新しいローカル変数を定義するかどうかを示しています。 この決定は、`datatype` が存在するかどうかと、`counter` が既に定義されているかどうかによって異なります。
+
+|`datatype` が存在する|`counter` が既に定義されている|結果 (`counter` が `For...Next` ループ全体にスコープ設定されている新しいローカル変数を定義するかどうか)|
+|----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
+|いいえ|はい|いいえ。`counter` が既に定義されているため。 `counter` のスコープがプロシージャに対してローカルでない場合は、コンパイル時の警告が発生します。|
+|いいえ|いいえ|はい。 データ型は、`start`、`end`、および `step` 式から推論されます。 型の推定については、「[Option Infer ステートメント](option-infer-statement.md)」と「[ローカル型の推論](../../programming-guide/language-features/variables/local-type-inference.md)」を参照してください。|
+|はい|はい|はい。ただし、既存の `counter` 変数がプロシージャの外側で定義されている場合に限ります。 この変数は個別に保持されます。 既存の `counter` 変数のスコープがプロシージャに対してローカルである場合は、コンパイル時エラーが発生します。|
+|はい|いいえ|はい。|
+
+`counter` のデータ型によって、反復の種類が決定されます。これは、次のいずれかの型である必要があります。
+
+- `Byte`、`SByte`、`UShort`、`Short`、`UInteger`、`Integer`、`ULong`、`Long`、`Decimal`、`Single`、または `Double`。
+
+- [Enum ステートメント](enum-statement.md)を使用して宣言する列挙型。
+
+- `Object`。
+
+- 次の演算子を持つ型 `T`。ここで、`B` は `Boolean` 式で使用できる型です。
+
+  `Public Shared Operator >= (op1 As T, op2 As T) As B`
+
+  `Public Shared Operator <= (op1 As T, op2 As T) As B`
+
+  `Public Shared Operator - (op1 As T, op2 As T) As T`
+
+  `Public Shared Operator + (op1 As T, op2 As T) As T`
+
+必要であれば、`Next` ステートメントに `counter` 変数を指定することもできます。 この構文を使用すると、特に `For` ループを入れ子にした場合に、プログラムの読みやすさが向上します。 対応する `For` ステートメントに存在する変数を指定する必要があります。
+
+`start`、`end`、および `step` 式は、型 `counter` に拡大変換される任意のデータ型に評価できます。 `counter` にユーザー定義型を使用する場合は、型 `start`、`end`、または `step` を型 `counter` に変換するために `CType` 変換演算子を定義することが必要になる場合があります。
+
+## <a name="example"></a>例
+
+次の例では、ジェネリック リストからすべての要素を削除します。 [For Each...Next ステートメント](for-each-next-statement.md)の代わりに、この例では、降順で反復する `For`...`Next` ステートメントを示しています。 `removeAt` メソッドを実行すると、削除された要素の後にある各要素のインデックス値が小さくなるため、この例ではこの手法を使用しています。
+
+[!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
+
+## <a name="example"></a>例
+
+次の例では、[Enum ステートメント](enum-statement.md)を使用して宣言された列挙型を反復処理します。
+
+[!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]
+
+## <a name="example"></a>例
+
+次の例では、ステートメントのパラメーターは、`+`、`-`、`>=`、および `<=` の各演算子に対して演算子のオーバーロードがあるクラスを使用しています。
+
+[!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic.List%601>
-- [ループ構造](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [ループ構造](../../programming-guide/language-features/control-flow/loop-structures.md)
+- [While...End While ステートメント](while-end-while-statement.md)
+- [Do...Loop ステートメント](do-loop-statement.md)
+- [入れ子になった制御構造](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Exit ステートメント](exit-statement.md)
 - [コレクション](../../programming-guide/concepts/collections.md)

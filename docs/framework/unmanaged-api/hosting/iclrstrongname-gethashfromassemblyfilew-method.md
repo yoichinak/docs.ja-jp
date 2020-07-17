@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 371ed85f53109856d9c8f64e42aadca10302c269
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f44753b3e836b43bc09548a35eb68f0f22e3170f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748208"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762137"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW メソッド
 Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。  
@@ -41,33 +39,33 @@ HRESULT GetHashFromAssemblyFileW (
   
 ## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]ハッシュされるファイルへのパス。 このパラメーターは、Unicode 文字列である必要があります。  
+ からハッシュされるファイルへのパス。 このパラメーターは Unicode 文字列である必要があります。  
   
  `piHashAlg`  
- [入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のハッシュ アルゴリズムのゼロを使用します。  
+ [入力、出力]ハッシュアルゴリズムを指定する定数。 既定のハッシュアルゴリズムには0を使用します。  
   
  `pbHash`  
- [out]返されたハッシュ バッファー。  
+ 入出力返されたハッシュバッファー。  
   
  `cchHash`  
- [in]要求の最大サイズの`pbHash`します。  
+ から要求された最大サイズ `pbHash` 。  
   
  `pchHash`  
- [out]サイズ (バイト単位) が返されますの`pbHash`します。  
+ 入出力の返されたサイズ (バイト単位) `pbHash` 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
+ `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetHashFromAssemblyFile メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromAssemblyFile メソッド](iclrstrongname-gethashfromassemblyfile-method.md)
+- [ICLRStrongName インターフェイス](iclrstrongname-interface.md)

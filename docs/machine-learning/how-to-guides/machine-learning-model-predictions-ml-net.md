@@ -1,16 +1,16 @@
 ---
 title: トレーニング済みモデルを使用して予測する
 description: トレーニング済みモデルを使用して予測する方法について説明します
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307397"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "73977040"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>トレーニング済みモデルを使用して予測する
 
@@ -18,7 +18,7 @@ ms.locfileid: "67307397"
 
 ## <a name="create-data-models"></a>データ モデルを作成する
 
-### <a name="input-data"></a>データを入力する
+### <a name="input-data"></a>入力データ
 
 ```csharp
 public class HousingData
@@ -36,28 +36,26 @@ public class HousingData
 }
 ```
 
-### <a name="output-data"></a>データを出力する
+### <a name="output-data"></a>出力データ
 
 `Features` と `Label` の入力列名と同様に、ML.NET にはモデルによって生成される予測値列の既定の名前があります。 タスクによっては名前が異なる場合があります。
 
 このサンプルで使用されているアルゴリズムは線形回帰アルゴリズムなので、出力列の既定の名前は `Score` です。これは `PredictedPrice` プロパティの [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性によって定義されます。
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
 
-`HousingPrediction` データ モデルは `HousingData` を継承するので、モデルによって生成された出力と共に元の入力データを簡単に視覚化することができます。  
-
 ## <a name="set-up-a-prediction-pipeline"></a>予測パイプラインを設定する
 
 1 つの予測でもバッチ予測でも、予測パイプラインをアプリケーションに読み込む必要があります。 このパイプラインには、データの前処理変換とトレーニング済みモデルの両方が含まれています。 次のコード スニペットは、`model.zip` という名前のファイルから予測パイプラインを読み込みます。
 
 ```csharp
-//Create MLContext 
+//Create MLContext
 MLContext mlContext = new MLContext();
 
 // Load Trained Model
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 `prediction` オブジェクトの `Score` プロパティにアクセスすると、`150079` のような値になります。
 
-## <a name="batch-prediction"></a>バッチ予測
+## <a name="multiple-predictions"></a>複数の予測
 
 次のデータがあるとして、[`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。 この場合、[`IDataView`](xref:Microsoft.ML.IDataView) の名前は `inputData` です。 `CurrentPrice` は新しいデータを使用して予測しようとしているターゲットまたはラベルなので、この時点では値がないと見なされます。
 
@@ -101,7 +99,7 @@ HousingData[] housingData = new HousingData[]
     new HousingData
     {
         Size = 850f,
-        HistoricalPrices = new float[] { 150000f,175000f,210000f }
+        HistoricalPrices = new float[] { 150000f, 175000f, 210000f }
     },
     new HousingData
     {

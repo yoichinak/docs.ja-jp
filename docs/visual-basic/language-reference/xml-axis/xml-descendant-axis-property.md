@@ -1,5 +1,5 @@
 ---
-title: XML 子孫軸プロパティ (Visual Basic)
+title: XML Descendant Axis Property
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyDescendantsAxis
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: bc1dff6dc3b580079087f370212b7d3acd30e4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 52544619171dbc7034baeb5feb61395d81096387
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938672"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400254"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 子孫軸プロパティ (Visual Basic)
 
-次の子孫にアクセスできます。<xref:System.Xml.Linq.XElement>オブジェクト、<xref:System.Xml.Linq.XDocument>オブジェクト、コレクションの<xref:System.Xml.Linq.XElement>オブジェクト、または一連の<xref:System.Xml.Linq.XDocument>オブジェクト。
+<xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションの子孫にアクセスできるようにします。
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 object...<descendant>
 ```
 
@@ -33,12 +33,12 @@ object...<descendant>
 
 `...<` 必須。 子孫軸プロパティの開始を示します。
 
-`descendant` 必須。 フォームにアクセスする子孫ノードの名前 [`prefix:]name`します。
+`descendant` 必須。 アクセスする子孫ノードの名前です。[`prefix:]name` の形式で指定します。
 
 |パーツ|説明|
 |----------|-----------------|
-|`prefix`|任意。 子孫ノードの XML 名前空間プレフィックス。 使用して定義されているグローバル XML 名前空間にある必要があります、`Imports`ステートメント。|
-|`name`|必須。 子孫ノードのローカル名。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|
+|`prefix`|任意。 子孫ノードの XML 名前空間プレフィックスです。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間にする必要があります。|
+|`name`|必須です。 子孫ノードのローカル名。 「[宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|
 
 `>` 必須。 子孫軸プロパティの終了を示します。
 
@@ -48,17 +48,17 @@ object...<descendant>
 
 ## <a name="remarks"></a>Remarks
 
-XML 子孫軸プロパティを使用して情報を取得する子孫ノードにアクセスすることができます、<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XDocument>オブジェクトのコレクションから、または<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XDocument>オブジェクト。 XML を使用して、`Value`返されたコレクション内の最初の子孫ノードの値にアクセスするプロパティ。 詳細については、次を参照してください。 [XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)します。
+XML 子孫軸プロパティを使用すると、<xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションから子孫ノードに名前でアクセスできます。 返されるコレクションの最初の子孫ノードの値にアクセスするには、XML の `Value` プロパティを使用します。 詳細については、「[XML Value プロパティ](xml-value-property.md)」を参照してください。
 
-Visual Basic コンパイラでは、descendant 軸のプロパティへの呼び出しに変換します、<xref:System.Xml.Linq.XContainer.Descendants%2A>メソッド。
+Visual Basic コンパイラによって、子孫軸プロパティが <xref:System.Xml.Linq.XContainer.Descendants%2A> メソッドの呼び出しに変換されます。
 
 ## <a name="xml-namespaces"></a>XML 名前空間
 
-Descendant 軸のプロパティの名前をグローバルに宣言されている XML 名前空間のみを使用できます、`Imports`ステートメント。 XML 要素リテラル内でローカルに宣言されている XML 名前空間は使用できません。 詳細については、次を参照してください。 [Imports ステートメント (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)します。
+子孫軸プロパティの名前では、`Imports` ステートメントでグローバルに宣言されている XML 名前空間のみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間は使用できません。 詳細については、「[Imports ステートメント (XML 名前空間)](../statements/imports-statement-xml-namespace.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例は、という名前の最初の子孫ノードの値にアクセスする方法を示しています。`name`という名前のすべての子孫ノードの値と`phone`から、`contacts`オブジェクト。
+次の例は、`contacts` オブジェクトから、`name` という名前の最初の子孫ノードの値と、`phone` という名前のすべての子孫ノードの値にアクセスする方法を示しています。
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ Descendant 軸のプロパティの名前をグローバルに宣言されてい
 
 ## <a name="example"></a>例
 
-次の例では、`ns` を名前空間プレフィックスとして宣言します。 XML リテラルを作成し、修飾名を持つ最初の子ノードの値にアクセスする次の名前空間のプレフィックスを使用して`ns:name`します。
+次の例では、`ns` を名前空間プレフィックスとして宣言します。 その後、この名前空間のプレフィックスを使用して XML リテラルを作成し、修飾名 `ns:name` を持つ最初の子ノードの値にアクセスします。
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
@@ -81,7 +81,7 @@ Descendant 軸のプロパティの名前をグローバルに宣言されてい
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement>
-- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [XML 軸プロパティ](index.md)
+- [XML リテラル](../xml-literals/index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)
+- [宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e118c9ec29b8d4e46fe799f24bb8a96929bf2ed8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663258"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796953"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>方法: 署名および暗号化に個別の X.509 証明書を使用する
 
-このトピックでは、メッセージの署名と暗号化がクライアントとサービスの両方で異なる証明書を使用するように、Windows Communication Foundation (WCF) を構成する方法を示します。
+このトピックでは、クライアントとサービスの両方で、メッセージの署名と暗号化に異なる証明書を使用するように Windows Communication Foundation (WCF) を構成する方法について説明します。
 
-署名と暗号化に使用する別の証明書を有効にするには、WCF が複数のクライアントまたはサービスの証明書を設定するための API を提供しないためには、カスタムのクライアントまたはサービスの資格情報 (または両方) を作成する必要があります。 さらに、複数の証明書の情報を利用し、指定されたキーの使用方法やメッセージの方向について適切なセキュリティ トークン プロバイダーを作成するために、セキュリティ トークン マネージャーを用意する必要があります。
+個別の証明書を署名と暗号化に使用できるようにするには、カスタムクライアントまたはサービスの資格情報 (またはその両方) を作成する必要があります。これは、WCF では、複数のクライアントまたはサービス証明書を設定するための API を提供しないためです。 さらに、複数の証明書の情報を利用し、指定されたキーの使用方法やメッセージの方向について適切なセキュリティ トークン プロバイダーを作成するために、セキュリティ トークン マネージャーを用意する必要があります。
 
 使用される主要なクラス、そのクラスの継承元のクラス (上向きの矢印で表示)、および特定のメソッドおよびプロパティの戻り値の型を次の図に示します。
 
@@ -34,17 +34,17 @@ ms.locfileid: "67663258"
 
   - メソッド <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> は、<xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> のインスタンスを返します。
 
-![クライアントの資格情報を使用する方法を示す図](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![クライアント資格情報の使用方法を示すグラフ](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-カスタム資格情報の詳細については、次を参照してください。[チュートリアル。カスタムのクライアントとサービスの資格情報を作成する](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)します。
+カスタム資格情報の詳細について[は、「チュートリアル:カスタムクライアントおよびサービスの資格](walkthrough-creating-custom-client-and-service-credentials.md)情報を作成しています。
 
 また、カスタム ID 検証機能を作成し、カスタム バインドのセキュリティ バインド要素にリンクする必要があります。 さらに、既定の資格情報の代わりにカスタム資格情報を使用する必要があります。
 
 カスタム バインドに関連したクラス、およびカスタム ID 検証機能のリンク方法を次の図に示します。 関連するバインド要素はいくつかありますが、そのすべてが <xref:System.ServiceModel.Channels.BindingElement> から継承されています。 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> には、<xref:System.ServiceModel.Channels.LocalClientSecuritySettings> プロパティがあります。このプロパティは、<xref:System.ServiceModel.Security.IdentityVerifier> のカスタマイズの元となる `MyIdentityVerifier` のインスタンスを返します。
 
-![カスタム バインド要素を示す図](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
+![カスタムバインド要素を示すグラフ](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-カスタム id 検証機能を作成する方法の詳細については、次を参照してください。 方法。[方法: カスタムのクライアント Id 検証機能作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)です。
+カスタム id 検証機能の作成の詳細については、「方法:[方法: カスタムのクライアント Id 検証](how-to-create-a-custom-client-identity-verifier.md)機能を作成します。
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>署名と暗号化に別個の証明書を使用するには
 
@@ -97,4 +97,4 @@ ms.locfileid: "67663258"
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [チュートリアル: カスタムのクライアントとサービスの資格情報を作成します。](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [チュートリアル: カスタムのクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)

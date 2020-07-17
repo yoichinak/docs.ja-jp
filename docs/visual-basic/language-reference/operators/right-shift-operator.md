@@ -1,5 +1,5 @@
 ---
-title: '>> 演算子 (Visual Basic)'
+title: '>> 演算子'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.>>
@@ -10,87 +10,87 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 870460d78eb2e627de2984c79571fd5172672b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 10b07da22b8b43d6a966fa7c334ac6a0ef4b430d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629131"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406367"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
-ビット パターン上で算術右シフトを実行します。  
+ビット パターンに対して算術右シフトを実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 result = pattern >> amount  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須。 整数値。 ビット パターンのシフトの結果。 データ型がの場合と同じ`pattern`します。  
+ 必須です。 整数数値。 ビット パターンをシフトした結果。 データ型は `pattern` のデータ型と同じです。  
   
  `pattern`  
- 必須。 整数の数値式です。 シフトするビット パターンです。 データ型は整数型である必要があります (`SByte`、 `Byte`、 `Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、または`ULong`)。  
+ 必須です。 整数数値式。 シフトするビット パターン。 データ型は、整数型 (`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、または `ULong`) である必要があります。  
   
  `amount`  
- 必須。 数値式。 ビット パターンをシフトするビット数。 データ型である必要があります`Integer`に拡大変換または`Integer`します。  
+ 必須です。 数値式。 ビット パターンをシフトするビット数。 データ型は `Integer` であるか、`Integer` に拡大変換する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- 算術シフトは循環、つまり、もう一方の端に結果の 1 つの端のシフトは行われません。 算術右シフトの右端のビット位置より後ろのシフトが破棄されと左端 (署名) のビットが左側にある空いたビット位置に反映されます。 つまり、`pattern`負の値を持つ、空いた位置は、いずれかに設定されます。 0 に設定されているそれ以外の場合。  
+ 算術シフトは循環ではありません。つまり、結果の一方の端からシフトされたビットはもう一方の端に再入されません。 算術右シフトでは、右端のビット位置を超えてシフトされたビットは破棄され、左端 (符号) ビットは左側の空いたビット位置に伝搬されます。 したがって、`pattern` に負の値がある場合、空いている位置は 1 に設定されます。それ以外の場合は 0 に設定されます。  
   
- なお、データ型`Byte`、 `UShort`、 `UInteger`、および`ULong`に反映されるまでの符号ビットがないために、符号がないです。 場合`pattern`の符号なしのいずれかの型、空いた位置は常に 0 に設定します。  
+ `Byte`、`UShort`、`UInteger`、および `ULong` データ型は符号なしであるため、伝搬する符号ビットはありません。 `pattern` が符号なしの型の場合、空いている位置は常に 0 に設定されます。  
   
- 結果が保持できるより多くのビット シフトを防ぐためには、Visual Basic がの値をマスク`amount`のデータ型に対応するサイズのマスクを含む`pattern`します。 これらの値のバイナリとは、シフト数に使用されます。 マスク サイズは次のとおりです。  
+ 結果で保持できるよりも多くのビットがシフトされないようにするため、Visual Basic は `pattern` のデータ型に対応するサイズ マスクを使用して `amount` の値をマスクします。 これらの値のバイナリ AND がシフト量に使用されます。 サイズ マスクを次に示します。  
   
-|データ型 `pattern`|サイズのマスク (10 進数)|サイズのマスク (16 進数)|  
+|`pattern` のデータ型|サイズ マスク (10 進数)|サイズ マスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&AMP; H00000007|  
-|`Short`, `UShort`|15|&AMP; H0000000F|  
-|`Integer`, `UInteger`|31|&AMP; H0000001F|  
-|`Long`, `ULong`|63|&AMP; H0000003F|  
+|`SByte`、`Byte`|7|&H00000007|  
+|`Short`、`UShort`|15|&H0000000F|  
+|`Integer`、`UInteger`|31|&H0000001F|  
+|`Long`、`ULong`|63|&H0000003F|  
   
- 場合`amount`の値は 0 が`result`の値と同一では、`pattern`します。 場合`amount`が負の場合、符号なしの値として取得され、適切なサイズのマスクでマスクします。  
+ `amount` が 0 の場合、`result` の値は `pattern` の値と同じになります。 `amount` が負の場合は、符号なしの値として扱われ、適切なサイズ マスクでマスクされます。  
   
- 算術シフトでは、オーバーフロー例外が生成されません。  
+ 算術シフトではオーバーフロー例外は生成されません。  
   
 ## <a name="overloading"></a>オーバーロード  
- `>>`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `>>` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`>>`整数値に対して算術右シフトを実行する演算子。 結果は常に同じデータとしてシフトされる式の型を持ちます。  
+ 次の例では、`>>` 演算子を使用して、整数値に対して算術右シフトを実行しています。 結果のデータ型は、シフトする式のデータ型と常に同じになります。  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- 前の例の結果は次のとおりです。  
+ 前の例の結果は次のようになります。  
   
-- `result1` 2560 (0000 1010 0000 0000) です。  
+- `result1` は 2560 (0000 1010 0000 0000) です。  
   
-- `result2` 160 (0000 0000 1010 0000) です。  
+- `result2` は 160 (0000 0000 1010 0000) です。  
   
-- `result3` 2 (0000 0000 0000 0010) です。  
+- `result3` は 2 (0000 0000 0000 0010) です。  
   
-- `result4` 640 (0000 0010 1000 0000) です。  
+- `result4` は 640 (0000 0010 1000 0000) です。  
   
-- `result5` 0 (右側のシフト 15 の桁数) です。  
+- `result5` は 0 (右に 15 桁シフト)。  
   
- シフト数`result4`18 として計算されますが 2 と等しいと 15 です。  
+ `result4` のシフト量は 18 AND 15 として計算されます。これは 2 と同等です。  
   
- 次の例では、負の値に算術シフトを示します。  
+ 次の例は、負の値に対する算術シフトを示しています。  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- 前の例の結果は次のとおりです。  
+ 前の例の結果は次のようになります。  
   
-- `negresult1` (1111 1110 0000 0000) -512 です。  
+- `negresult1` は -512 (1111 1110 0000 0000) です。  
   
-- `negresult2` -1 (符号ビットが反映されます) です。  
+- `negresult2` は -1 です (符号ビットが伝播されます)。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [ビット シフト演算子](bit-shift-operators.md)
+- [代入演算子](assignment-operators.md)
+- [>>= 演算子](right-shift-assignment-operator.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Visual Basic における算術演算子](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

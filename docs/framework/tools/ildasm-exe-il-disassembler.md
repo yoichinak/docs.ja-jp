@@ -9,26 +9,24 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025968"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "73105055"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
 IL 逆アセンブラーは、IL アセンブラー (*Ilasm.exe*) と対をなすツールです。 *Ildasm.exe* は、中間言語 (IL: Intermediate Language) コードを含む、ポータブル実行可能 (PE) ファイルを使用して、*Ilasm.exe* に対する入力として適したテキスト ファイルを作成します。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -53,7 +51,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|元のソース行への参照を組み込みます。|
 |**/nobar**|逆アセンブルのプログレス インジケーター ポップアップ ウィンドウの表示を中止します。|
 |**/noca**|カスタム属性の出力を抑止します。|
-|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
+|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
 |**/pubonly**|パブリックな型とメンバーだけを逆アセンブルします。 **/visibility:PUB**と等価です。|
 |**/quoteallnames**|すべての名前を単一引用符で囲みます。|
 |**/raweh**|例外処理句を生の形式で表示します。|
@@ -89,9 +87,9 @@ ildasm [options] [PEfilename] [options]
 |**/objectfile**=`filename`|指定したライブラリ内の単一のオブジェクト ファイルのメタデータを表示します。|
 
 > [!NOTE]
-> *Ildasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、 **/quo** は **/quoteallnames** と等価です。 引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、 **/output:** *filename* は **/output=** *filename*と等価です。
+> *Ildasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、 **/quo** は **/quoteallnames** と等価です。 引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、 **/output:** *filename* は **/output=** *filename* と同等です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 *Ildasm.exe* はディスク上のファイルについてだけ動作します。 グローバル アセンブリ キャッシュ内にインストールされたファイルについては動作しません。
 
@@ -100,7 +98,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > 現時点では、埋め込みのネイティブ コード (たとえば Visual C++ で生成された PE ファイル) を含む PE ファイルについては、この手法を使用できません。  
 
-IL 逆アセンブラーで既定の GUI を使用すると、既存のどの PE ファイルのメタデータおよび逆アセンブルしたコードでも、階層ツリー ビューで表示できます。 GUI を使用するには、引数 *PEfilename* またはその他のオプションを指定せずに、コマンド行で「**ildasm**」と入力します。 **[ファイル]** メニューで、*Ildasm.exe* に読み込む PE ファイルまで移動できます。 選択した PE ファイルについて表示されたメタデータおよび逆アセンブルしたコードを保存するには、 **[ファイル]** メニューの **[ダンプ]** をクリックします。 階層ツリー ビューだけを保存するには、 **[ファイル]** メニューの **[ツリービューをダンプ]** をクリックします。 *Ildasm.exe* へのファイルの読み込みおよび出力の解釈の詳細については、Windows Software Development Kit (SDK) に提供されている Samples フォルダー内の *Ildasm.exe* チュートリアルを参照してください。
+IL 逆アセンブラーで既定の GUI を使用すると、既存のどの PE ファイルのメタデータおよび逆アセンブルしたコードでも、階層ツリー ビューで表示できます。 GUI を使用するには、引数 *PEfilename* またはその他のオプションを指定せずに、コマンド行で「**ildasm**」と入力します。 **[ファイル]** メニューで、*Ildasm.exe* に読み込む PE ファイルまで移動できます。 選択した PE ファイルについて表示されたメタデータおよび逆アセンブルしたコードを保存するには、 **[ファイル]** メニューの **[ダンプ]** をクリックします。 階層ツリー ビューだけを保存するには、 **[ファイル]** メニューの **[ツリービューをダンプ]** をクリックします。 *Ildasm.exe* へのファイルの読み込みとその出力の解釈について詳しくは、Windows SDK に付属している Samples フォルダー内にある、*Ildasm.exe* のチュートリアルを参照してください。
 
 *Ildasm.exe* に対して、埋め込みリソースを含む引数 *PEfilename* を指定した場合は、複数の出力ファイルが生成されます。生成されるファイルは、IL コードを含む 1 つのテキスト ファイルと、埋め込みマネージド リソースごとにリソース名を使用してメタデータから生成した .resources ファイルです。 アンマネージ リソースが *PEfilename* の中に埋め込まれている場合は、IL 出力に対して **/output** オプションで指定されたファイル名を使用して、.res ファイルが生成されます。
 
@@ -117,14 +115,14 @@ IL 逆アセンブラーで既定の GUI を使用すると、既存のどの PE
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 次の *Ildasm.exe* の出力からの抜粋に示すように、.NET Framework 4.5 以降、*Ildasm.exe* ではインターフェイス実装に適用される属性が表示されます。
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface
@@ -186,7 +184,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (IL アセンブラー)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Ilasm.exe (IL アセンブラー)](ilasm-exe-il-assembler.md)
+- [マネージド実行プロセス](../../standard/managed-execution-process.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e283bea2ce2f4b2e17da6e8dcb85165d3c4d6693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bba0fc039c403d45e8a5b60f2b0231eb24226280
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776964"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614956"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition メソッド
-メソッドのドキュメントで指定された位置にブレークポイントを含む配列を返します。  
+メソッドの配列を返します。各メソッドには、ドキュメント内の指定された位置にあるブレークポイントが含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,29 +40,29 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in]指定されたドキュメントです。  
+ から指定されたドキュメント。  
   
  `line`  
- [in]指定されたドキュメントの行。  
+ から指定したドキュメントの行。  
   
  `column`  
- [in]指定されたドキュメントの列です。  
+ から指定されたドキュメントの列。  
   
  `cMethod`  
  [in] `pRetVal` 配列のサイズ。  
   
  `pcMethod`  
- [out]返される要素の数を受け取る変数へのポインター、`pRetVal`配列。  
+ 入出力配列で返された要素の数を受け取る変数へのポインター `pRetVal` 。  
   
  `pRetVal`  
- [out]それぞれが指すポインターの配列、 [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)ブレークポイントを含むメソッドを表すオブジェクト。  
+ 入出力ポインターの配列。各ポインターは、ブレークポイントを含むメソッドを表す[ISymUnmanagedMethod](isymunmanagedmethod-interface.md)オブジェクトを指します。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader インターフェイス](isymunmanagedreader-interface.md)

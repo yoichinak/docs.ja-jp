@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781747"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007651"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 列挙型
 メソッドとそれに関連付けられているプロパティまたはイベントとの関係を記述する値が格納されます。  
@@ -45,20 +43,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`msSetter`|メソッドを指定します、`set`プロパティのアクセサー。|  
-|`msGetter`|メソッドを指定します、`get`プロパティのアクセサー。|  
-|`msOther`|メソッドに、プロパティまたはここで定義されているもの以外のイベントへのリレーションシップを指定します。|  
-|`msAddOn`|メソッドがイベント ハンドラー メソッドを追加指定します。|  
-|`msRemoveOn`|メソッドがイベント ハンドラー メソッドを削除するを指定します。|  
+|`msSetter`|メソッドがプロパティのアクセサーであることを指定し `set` ます。|  
+|`msGetter`|メソッドがプロパティのアクセサーであることを指定し `get` ます。|  
+|`msOther`|メソッドが、ここで定義されたプロパティ以外のプロパティまたはイベントへのリレーションシップを持つことを指定します。|  
+|`msAddOn`|メソッドがイベントのハンドラーメソッドを追加することを指定します。|  
+|`msRemoveOn`|メソッドがイベントのハンドラーメソッドを削除することを指定します。|  
 |`msFire`|メソッドがイベントを発生させることを指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

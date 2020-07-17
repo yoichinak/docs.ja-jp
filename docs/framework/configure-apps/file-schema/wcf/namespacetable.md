@@ -2,20 +2,21 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aefe7beec7335d80341e670961800907c2bd0200
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772412"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70855101"
 ---
-# <a name="namespacetable"></a>\<namespaceTable>
+# \<namespaceTable>
 
 名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<ルーティング >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,15 +41,15 @@ ms.locfileid: "61772412"
 
 ### <a name="child-elements"></a>子要素
 
-|     | 説明 |
+|     | Description |
 | --- | ----------- |
-| [**\<フィルター >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | XPath 式に使用される名前空間とプレフィックスのマッピングを定義します。 |
+| [**\<filter>**](filter.md) | XPath 式に使用される名前空間とプレフィックスのマッピングを定義します。 |
 
 ### <a name="parent-elements"></a>親要素
 
-|     | 説明 |
+|     | Description |
 | --- | ----------- |
-| [**\<ルーティング >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクションを表します<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価とルーティング テーブルをするターゲット エンドポイントを定義するときに使用される。フィルターが一致したときにメッセージを送信します。 |
+| [**\<routing>**](routing.md) | 一連のルーティングフィルターを定義するための構成セクションを表します。これにより、受信メッセージを評価するときに使用される Windows Communication Foundation (WCF) の種類、 <xref:System.ServiceModel.Dispatcher.MessageFilter> およびフィルターが一致したときにメッセージを送信するターゲットエンドポイントを定義するルーティングテーブルが決定されます。 |
 
 ## <a name="see-also"></a>関連項目
 

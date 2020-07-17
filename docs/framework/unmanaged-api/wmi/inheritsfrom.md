@@ -1,6 +1,6 @@
 ---
-title: InheritsFrom 関数 (アンマネージ API リファレンス)
-description: InheritsFrom 関数では、クラスまたはインスタンスが特定の親クラスから派生するかどうかを決定します。
+title: 継承関数 (アンマネージ API リファレンス)
+description: InheritsFrom 関数は、クラスまたはインスタンスが特定の親クラスから派生するかどうかを決定します。
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -14,28 +14,26 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c735c01c45beda8a1ba988a5c580e6b04ae46312
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746508"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174941"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 関数
 指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>構文  
   
 ```cpp
 HRESULT InheritsFrom (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszAncestor 
-); 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszAncestor
+);
 ```  
 
 ## <a name="parameters"></a>パラメーター
@@ -44,27 +42,27 @@ HRESULT InheritsFrom (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
 
 `wszAncestor`  
-[in]クラスの名前。 `wszAncestor` 有効なをポイントする必要があります`LPCWSTR`します。
+[in]クラスの名前。 `wszAncestor`有効な`LPCWSTR`を指す必要があります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
 
-|定数  |値  |説明  |
+|常時  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトが継承`wszAncestor`します。  |
-| `WBEM_S_FALSE` | 1 | 現在のオブジェクトを継承しない`wszAncestor`します。 |
+| `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトは`wszAncestor`から継承されます。  |
+| `WBEM_S_FALSE` | 1 | 現在のオブジェクトは`wszAncestor`から継承しません。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` は `null` です。 |
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数の呼び出しをラップする、 [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)メソッド。
+この関数は、メソッドの呼び出し[を](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)ラップします。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
@@ -72,4 +70,4 @@ HRESULT InheritsFrom (
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

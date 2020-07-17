@@ -10,14 +10,12 @@ api_type:
 ms.assetid: e795e6a2-1008-4a81-af88-d777888e942e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 059e823110686a2b939c9664fa5b67e4041c3486
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 54332f5b3383f1c1513242a79cbd81eb8aa5c4f2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740315"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179259"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind 列挙体
 エクスポートされた関数がマネージド コードを呼び出す方法を示します。  
@@ -27,9 +25,9 @@ ms.locfileid: "67740315"
 ```cpp  
 typedef enum CorDebugCodeInvokeKind  
 {  
-    CODE_INVOKE_KIND_NONE,       
-    CODE_INVOKE_KIND_RETURN,     
-    CODE_INVOKE_KIND_TAILCALL,   
+    CODE_INVOKE_KIND_NONE,
+    CODE_INVOKE_KIND_RETURN,
+    CODE_INVOKE_KIND_TAILCALL,
 } CorDebugCodeInvokeKind;  
 ```  
   
@@ -41,14 +39,14 @@ typedef enum CorDebugCodeInvokeKind
 |`CODE_INVOKE_KIND_RETURN`|このメソッドは、戻り命令を使用してマネージド コードを呼び出します。 ステップ アウトは次のマネージド コードに到達する必要があります。|  
 |`CODE_INVOKE_KIND_TAILCALL`|このメソッドは、末尾呼び出しを使用してマネージド コードを呼び出します。 いずれかの呼び出し命令をシングル ステップ実行およびステップ オーバーすると、マネージド コードに到達します。|  
   
-## <a name="remarks"></a>Remarks  
- この列挙体を使って、 [icordebugprocess 6::getexportstepinfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)マネージ コードをステップ実行に関する情報を提供するメソッド。  
+## <a name="remarks"></a>解説  
+ この列挙体は、マネージ コードのステップ実行に関する情報を提供するために[、ICorDebugProcess6::GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md)メソッドによって使用されます。  
   
 > [!NOTE]
->  この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
+> この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -58,5 +56,5 @@ typedef enum CorDebugCodeInvokeKind
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [列挙体のデバッグ](debugging-enumerations.md)
+- [デバッグ](index.md)

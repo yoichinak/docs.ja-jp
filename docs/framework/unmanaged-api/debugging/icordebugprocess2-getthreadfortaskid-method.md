@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c85040a31966a92ead6ca4786f62852f17923056
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89be29c770098d92ce3c47f7c45b1bb8580f2edb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736919"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213518"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID メソッド
-指定した識別子を持つタスクが実行されているスレッドを取得します。  
+指定した id を持つタスクが実行されているスレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +36,19 @@ HRESULT GetThreadForTaskID (
   
 ## <a name="parameters"></a>パラメーター  
  `taskid`  
- [in]タスクの識別子です。  
+ からタスクの識別子です。  
   
  `ppThread`  
- [out]取得するスレッドを表す ICorDebugThread2 オブジェクトのアドレスへのポインター。  
+ 入出力取得するスレッドを表す ICorDebugThread2 オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- ホストを使用してタスクの識別子を設定することができます、 [iclrtask::settaskidentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)メソッド。  
+ ホストは、 [ICLRTask:: SetTaskIdentifier](../hosting/iclrtask-settaskidentifier-method.md)メソッドを使用してタスク識別子を設定できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

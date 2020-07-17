@@ -1,13 +1,13 @@
 ---
-title: データのパーティション分割 (Visual Basic)
+title: データのパーティション分割
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 34749f9d7b137bade66b6103650871246c3cc532
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665891"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406847"
 ---
 # <a name="partitioning-data-visual-basic"></a>データのパーティション分割 (Visual Basic)
 LINQ におけるパーティション分割とは、要素を並べ替えずに入力シーケンスを 2 つのセクションに分割し、それらのセクションの 1 つを返す操作を指します。  
@@ -30,30 +30,30 @@ LINQ におけるパーティション分割とは、要素を並べ替えずに
 ## <a name="query-expression-syntax-examples"></a>クエリ式の構文例  
   
 ### <a name="skip"></a>Skip  
- 次のコード例では、`Skip`句を残りを返す前に、文字列の配列内の最初の 4 つの文字列をスキップする Visual Basic では配列の文字列します。  
+ 次のコード例は、Visual Basic の `Skip` 句を使用し、文字列配列に格納されている最初の 4 つの文字列をスキップして残りの文字列を返します。  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- 次のコード例では、`Skip While`句は、文字列の最初の文字は、配列内の文字列をスキップする Visual Basic では"a"です。 配列内の残りの文字列が返されます。  
+ 次のコード例は、Visual Basic の `Skip While` 句を使用し、配列内の文字列のうち、先頭文字が "a" である文字列をスキップします。 配列に格納されている残りの文字列が返されます。  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- 次のコード例では、`Take`句では、Visual Basic で文字列の配列の最初の 2 つの文字列が返されます。  
+ 次のコード例は、Visual Basic の `Take` 句を使用して、文字列配列内の最初の 2 つの文字列を返します。  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- 次のコード例では、`Take While`を配列から文字列を返す文字列の長さは 5 個以下の Visual Basic での句。  
+ 次のコード例は、Visual Basic の `Take While` 句を使用し、配列から長さが 5 以下である文字列を返します。  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Skip 句](../../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Skip While 句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Take 句](../../../../visual-basic/language-reference/queries/take-clause.md)
-- [Take While 句](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Skip 句](../../../language-reference/queries/skip-clause.md)
+- [Skip While 句](../../../language-reference/queries/skip-while-clause.md)
+- [Take 句](../../../language-reference/queries/take-clause.md)
+- [Take While 句](../../../language-reference/queries/take-while-clause.md)

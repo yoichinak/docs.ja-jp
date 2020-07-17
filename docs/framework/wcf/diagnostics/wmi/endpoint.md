@@ -2,12 +2,12 @@
 title: エンドポイント
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963606"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795898"
 ---
 # <a name="endpoint"></a>エンドポイント
 エンドポイント  
@@ -37,92 +37,92 @@ class Endpoint
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|操作パフォーマンス カウンターのインスタンスの名前を取得します。|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|操作パフォーマンス カウンターのインスタンスの名前を取得します。|  
   
 ## <a name="properties"></a>プロパティ  
  Endpoint クラスには次のプロパティがあります。  
   
-### <a name="address"></a>アドレス  
+### <a name="address"></a>Address  
  データ型: string  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  エンドポイントのアドレスを格納している URI。  
   
 ### <a name="addressheaders"></a>AddressHeaders  
  データ型 : string array  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  このエンドポイントに接続しているアドレス ヘッダーのコレクション  
   
 ### <a name="addressidentity"></a>AddressIdentity  
  データ型: string  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  エンドポイントの ID  
   
 ### <a name="appdomainid"></a>AppDomainId  
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  エンドポイントをホストする appdomain の appdomain ID  
   
 ### <a name="behaviors"></a>ビヘイビアー  
  データの種類:動作の配列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  このエンドポイントが実装する動作のコレクション  
   
 ### <a name="binding"></a>バインディング  
  データの種類:バインディング  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  このエンドポイントが使用するバインディング  
   
 ### <a name="contractname"></a>ContractName  
  データ型: string  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  このエンドポイントが公開するコントラクトを指定する文字列  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  データ型: string  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  エンドポイントのパフォーマンス カウンターのインスタンス名  
   
 ### <a name="listenuri"></a>ListenUri  
  データ型: string  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  エンドポイントがリッスンする URI  
   
-### <a name="name"></a>名前  
+### <a name="name"></a>Name  
  データ型: string  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  このエンドポイントの一意の名前  
   
 ### <a name="processid"></a>ProcessId  
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  エンドポイントをホストするプロセスのプロセス ID  
   
 ### <a name="ref"></a>ref  
  データの種類:コントラクト  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類:読み取り専用です。  
   
  このエンドポイントが公開しているコントラクト。  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6140ecda1d12c26e1936daee4eaad11cbd9b6ba4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a0f5316900dedc6c8983f9e670f60767ed783a40
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493995"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 関数
-によって開始されるスタック ウォーク中にスタックの各マネージ フレームとフレームの非管理対象の各実行に関する情報を使用してプロファイラーを提供、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッド。  
+[ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md)メソッドによって開始されるスタックウォーク中に、各マネージフレームおよびスタック上のアンマネージフレームの各実行に関する情報をプロファイラーに提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,40 +39,40 @@ HRESULT __stdcall StackSnapshotCallback (
   
 ## <a name="parameters"></a>パラメーター  
  `funcId`  
- [in]この値が 0 の場合は、このコールバックは非管理対象のフレームの実行それ以外の場合、マネージ関数の識別子は、このコールバック マネージ フレームです。  
+ からこの値が0の場合、このコールバックはアンマネージフレームの実行用です。それ以外の場合は、マネージ関数の識別子であり、このコールバックはマネージフレーム用です。  
   
  `ip`  
- [in]フレームのネイティブ コードの命令ポインターの値。  
+ からフレーム内のネイティブコード命令ポインターの値。  
   
  `frameInfo`  
- [in]A`COR_PRF_FRAME_INFO`スタック フレームに関する情報を参照する値。 この値は、このコールバック中にのみ使用して有効です。  
+ から`COR_PRF_FRAME_INFO`スタックフレームに関する情報を参照する値。 この値は、このコールバック中にのみ使用できます。  
   
  `contextSize`  
- [in]サイズ、`CONTEXT`によって参照されている構造体、`context`パラメーター。  
+ から`CONTEXT`パラメーターによって参照される構造体のサイズ `context` 。  
   
  `context`  
- [in]Win32 へのポインター`CONTEXT`このフレームの cpu 使用率の状態を表す構造体です。  
+ から`CONTEXT`このフレームの CPU の状態を表す Win32 構造体へのポインター。  
   
- `context`パラメーターは COR_PRF_SNAPSHOT_CONTEXT フラグが渡された場合にのみ有効です。`ICorProfilerInfo2::DoStackSnapshot`します。  
+ `context`パラメーターは、COR_PRF_SNAPSHOT_CONTEXT フラグが渡された場合にのみ有効です `ICorProfilerInfo2::DoStackSnapshot` 。  
   
  `clientData`  
- [in]直接渡されるクライアント データへのポインター`ICorProfilerInfo2::DoStackSnapshot`します。  
+ からから直接渡されるクライアントデータへのポインター `ICorProfilerInfo2::DoStackSnapshot` 。  
   
-## <a name="remarks"></a>Remarks  
- `StackSnapshotCallback`関数がプロファイラー ライターによって実装されます。 実行される作業の複雑さを制限する必要があります`StackSnapshotCallback`します。 たとえばを使用する場合`ICorProfilerInfo2::DoStackSnapshot`非同期で対象のスレッドが保持してロックします。 場合内のコード`StackSnapshotCallback`同じのロックが必要です、デッドロック、議論が生じる可能性があります。  
+## <a name="remarks"></a>解説  
+ 関数は、 `StackSnapshotCallback` プロファイラーライターによって実装されます。 で実行される作業の複雑さを制限する必要があり `StackSnapshotCallback` ます。 たとえば、を非同期方式で使用する場合、 `ICorProfilerInfo2::DoStackSnapshot` ターゲットスレッドはロックを保持している可能性があります。 内のコードで `StackSnapshotCallback` 同じロックが要求された場合、デッドロックが議論れる可能性があります。  
   
- `ICorProfilerInfo2::DoStackSnapshot`メソッドの呼び出し、`StackSnapshotCallback`関数のマネージ フレームごとに 1 回または 1 回あたりアンマネージ フレームの実行。 場合`StackSnapshotCallback`呼びますプロファイラーの非管理対象のフレームの実行、レジスタのコンテキストを使用できます (によって参照される、`context`パラメーター)、独自のアンマネージ スタック ウォークを実行します。 この場合は、Win32`CONTEXT`構造体が最後にプッシュされたフレーム アンマネージ フレームの実行中の CPU の状態を表します。 ただし、Win32`CONTEXT`構造体には、すべてのレジスタの値が含まれています、フレーム ポインター レジスタ、スタック ポインター レジスタ、命令ポインター レジスタ、および (つまり、保持された) 不揮発性の値にのみ依存する必要があります整数レジスタします。  
+ メソッドは、 `ICorProfilerInfo2::DoStackSnapshot` マネージフレームごとに1回、 `StackSnapshotCallback` またはアンマネージフレームの実行ごとに1回関数を呼び出します。 `StackSnapshotCallback`アンマネージフレームの実行に対してが呼び出された場合、プロファイラーは、(パラメーターによって参照される) レジスタコンテキストを使用して、 `context` 独自のアンマネージスタックウォークを実行できます。 この場合、Win32 `CONTEXT` 構造体は、アンマネージフレームの実行中に最後にプッシュされたフレームの CPU 状態を表します。 Win32 `CONTEXT` 構造体にはすべてのレジスタの値が含まれていますが、スタックポインターレジスタ、フレームポインターレジスタ、命令ポインターレジスタ、および不揮発性 (つまり保持されている) 整数レジスタの値のみに依存する必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [DoStackSnapshot メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [グローバル静的関数のプロファイル](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [DoStackSnapshot メソッド](icorprofilerinfo2-dostacksnapshot-method.md)
+- [グローバル静的関数のプロファイル](profiling-global-static-functions.md)

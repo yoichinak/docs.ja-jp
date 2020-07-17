@@ -13,7 +13,7 @@
       href: ../../../../_vblang/spec/attributes.md
     - name: ソース ファイルと名前空間
       href: ../../../../_vblang/spec/source-files-and-namespaces.md
-    - name: 種類
+    - name: 型
       href: ../../../../_vblang/spec/types.md
     - name: 変換
       href: ../../../../_vblang/spec/conversions.md
@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: ドキュメント コメント
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: オーバーロードの解決
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: 文法
       items:
         - name: vb.html

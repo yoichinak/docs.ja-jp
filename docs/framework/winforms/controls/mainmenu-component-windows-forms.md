@@ -1,31 +1,31 @@
 ---
-title: MainMenu コンポーネント (Windows フォーム)
+title: MainMenu コンポーネント
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b56ae27d32d85ca75f749727674ea24e91d82ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012778"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747141"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu コンポーネント (Windows フォーム)
 > [!NOTE]
->  `MenuStrip`と`ContextMenuStrip`が置換または追加する機能、`MainMenu`と<xref:System.Windows.Forms.ContextMenu>、以前のバージョン コントロール`MainMenu`と<xref:System.Windows.Forms.ContextMenu>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+> `MenuStrip` と `ContextMenuStrip` によって、以前のバージョンの `MainMenu` および <xref:System.Windows.Forms.ContextMenu> のコントロールに置き換えられ、機能が追加されますが、`MainMenu` と <xref:System.Windows.Forms.ContextMenu> は下位互換性と将来の使用の両方のために保持されます。  
   
- Windows フォーム`MainMenu`コンポーネントには、実行時にメニューが表示されます。  
+ Windows フォーム `MainMenu` コンポーネントは、実行時にメニューを表示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [MainMenu コンポーネントの概要](mainmenu-component-overview-windows-forms.md)  
- このコンポーネントの用途、主な機能、およびプロパティについて説明します。  
+ このコンポーネントの概要と主な機能とプロパティについて説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.MainMenu>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

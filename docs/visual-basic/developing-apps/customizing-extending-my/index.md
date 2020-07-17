@@ -1,50 +1,46 @@
 ---
-title: Visual Basic でのプロジェクトのカスタマイズと My の拡張
+title: プロジェクトのカスタマイズと My の拡張
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: e6ed43aeff90295f71590bcee180ca1e0f88e5ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014195"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330336"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic でのプロジェクトのカスタマイズと My の拡張
-追加するためにプロジェクト テンプレートをカスタマイズする`My`オブジェクト。 これにより、簡単に検索して、オブジェクトを使用するには、他の開発者。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [Visual Basic における My 名前空間の拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- カスタム メンバーを追加する方法について説明し、値を`My`Visual Basic における名前空間。  
-  
- [カスタム My 拡張のパッケージ化と配置](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
- ユーザー設定を発行する方法について説明します`My`Visual Studio テンプレートを使用して名前空間の拡張機能。  
-  
- [Visual Basic アプリケーション モデルの拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- メンバーをオーバーライドすることで、アプリケーション モデルを独自の拡張機能を指定する方法について説明します、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>クラス。  
-  
- [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- これを制御する方法について説明します`My`オブジェクトは、プロジェクトの設定で有効になって\_MYTYPE の条件付きコンパイル定数。  
-  
-## <a name="related-sections"></a>関連項目  
- [My による開発](../../../visual-basic/developing-apps/development-with-my/index.md)  
- これについて説明します`My`オブジェクトは既定で種類のプロジェクトで使用できます。  
-  
- [Visual Basic アプリケーション モデルの概要](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Windows フォーム アプリケーションの動作を制御するための Visual Basic のモデルについて説明します。  
-  
- [プロジェクトの種類に応じた My の機能](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- これについて説明します`My`オブジェクトは既定で種類のプロジェクトで使用できます。  
-  
- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- コンパイラが条件付きコンパイルを使用して、コードをコンパイルし、その他のセクションを除外する特定のセクションを選択する方法について説明します。  
-  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- について説明します、`My`プロパティ、メソッド、およびイベントを提供するオブジェクトが現在のアプリケーションに関連します。  
-  
+
+プロジェクト テンプレートをカスタマイズして追加の `My` オブジェクトを提供することができます。 これにより、お客様のオブジェクトを他の開発者が簡単に見つけて使用できるようになります。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+- [Visual Basic における My 名前空間の拡張](extending-the-my-namespace.md)  
+ Visual Basic の `My` 名前空間にカスタム メンバーと値を追加する方法について説明します。
+- [カスタム My 拡張のパッケージ化と配置](packaging-and-deploying-custom-my-extensions.md)  
+ Visual Studio テンプレートを使用して、カスタム `My` 名前空間拡張を発行する方法について説明します。
+- [Visual Basic アプリケーション モデルの拡張](extending-the-visual-basic-application-model.md)  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> クラスのメンバーをオーバーライドして、アプリケーション モデルに独自の拡張を指定する方法について説明します。
+- [My で利用可能なオブジェクトのカスタマイズ](customizing-which-objects-are-available-in-my.md)  
+ プロジェクトの \_ 条件付きコンパイル定数を設定して、どの `My` オブジェクトを有効にするかを制御する方法について説明します。
+
+## <a name="related-sections"></a>関連項目
+
+- [My による開発](../development-with-my/index.md)  
+ 既定で、さまざまなプロジェクト タイプで使用できる `My` オブジェクトについて説明します。
+- [Visual Basic アプリケーション モデルの概要](../development-with-my/overview-of-the-visual-basic-application-model.md)  
+ Windows フォーム アプリケーションの動作を制御するための Visual Basic のモデルについて説明します。
+- [プロジェクトの種類に応じた My の機能](../development-with-my/how-my-depends-on-project-type.md)  
+ 既定で、さまざまなプロジェクト タイプで使用できる `My` オブジェクトについて説明します。
+- [条件付きコンパイル](../../programming-guide/program-structure/conditional-compilation.md)  
+ コンパイラで条件付きコンパイルを使用して、コンパイルするコードの特定のセクションを選択し、他のセクションを除外する方法について説明します。
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ 現在のアプリケーションに関連するプロパティ、メソッド、およびイベントを提供する `My` オブジェクトについて説明します。
+
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic でのアプリケーションの開発](../../../visual-basic/developing-apps/index.md)
+- [Visual Basic でのアプリケーションの開発](../index.md)

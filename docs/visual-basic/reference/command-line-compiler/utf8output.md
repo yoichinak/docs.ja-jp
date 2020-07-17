@@ -1,39 +1,39 @@
 ---
-title: -utf8output (Visual Basic)
+title: -utf8output
 ms.date: 07/20/2015
 helpviewer_keywords:
 - -utf8output compiler option [Visual Basic]
 - utf8output compiler option [Visual Basic]
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
-ms.openlocfilehash: 75369c3bcb19afbf98bfb80bc3e439f996d2a9d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0a16cdc535de5ed0619bf080bb4637449b11cfef
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796079"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403058"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 UTF-8 エンコードを使用してコンパイラ出力を表示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -utf8output[+ | -]  
 ```  
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 このオプションの既定値は`-utf8output-`、つまり、コンパイラの出力は utf-8 エンコードを使用しません。 `-utf8output` を指定することは、`-utf8output+` を指定することと同じです。  
+ 任意。 このオプションの既定値は `-utf8output-` です。これは、コンパイラ出力で UTF-8 エンコードが使用されないことを意味します。 `-utf8output` を指定することは、`-utf8output+` を指定することと同じです。  
   
 ## <a name="remarks"></a>Remarks  
- 国際対応の構成によっては、コンパイラの出力は、コンソールで正常に表示できません。 このような状況では、次のように使用します。`-utf8output`してコンパイラ出力をファイルにリダイレクトします。  
+ 地域と言語の構成によっては、コンパイラ出力をコンソールに正しく表示できない場合があります。 このような場合は、`-utf8output` を使用して、コンパイラ出力をファイルにリダイレクトします。  
   
 > [!NOTE]
->  `-utf8output`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> `-utf8output` オプションは、Visual Studio 開発環境内からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`In.vb`表示をコンパイラに指示して utf-8 エンコードを使用して出力します。  
+ 次のコードでは `In.vb` をコンパイルし、UTF-8 エンコードを使用して出力を表示するようにコンパイラに指示します。  
   
 ```console  
 vbc -utf8output in.vb  
@@ -41,5 +41,5 @@ vbc -utf8output in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

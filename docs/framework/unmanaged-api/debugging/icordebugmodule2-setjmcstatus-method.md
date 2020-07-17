@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d438123dcefb901098954845596c210e5b76cea6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5109043a8601d7997f52e88ea472644f1b9ca03
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764108"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208786"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus メソッド
-この ICorDebugModule2 を除く、指定された値でのすべてのクラスのすべてのメソッドだけマイ コードのみ (JMC) 状態を設定、`pTokens`配列で、逆の値に設定します。  
+この ICorDebugModule2 内のすべてのクラスのすべてのメソッドのマイコードのみ (JMC) の状態を、指定した値に設定し `pTokens` ます。ただし、逆の値に設定されている配列内のすべてのメソッドを除きます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>パラメーター  
  `bIsJustMycode`  
- [in]設定`true`コードは、デバッグ対象以外の場合に場合に、設定`false`します。  
+ からコードを `true` デバッグする場合はに設定し、それ以外の場合はに設定 `false` します。  
   
  `cTokens`  
  [in] `pTokens` 配列のサイズ。  
   
  `pTokens`  
- [in]配列の`mdToken`値、その JMC ステータスに設定するメソッドを指す各!`bIsJustMycode`します。  
+ から値の配列 `mdToken` 。各値は、JMC の状態が! に設定されるメソッドを参照し `bIsJustMycode` ます。  
   
 ## <a name="remarks"></a>Remarks  
- 指定されている各メソッドの JMC 状態、`pTokens`の反対に配列が設定されている、`bIsJustMycode`値。 このモジュールで他のすべてのメソッドの状態に設定、`bIsJustMycode`値。  
+ 配列に指定されている各メソッドの JMC の状態 `pTokens` は、値の逆に設定され `bIsJustMycode` ます。 このモジュール内の他のすべてのメソッドの状態は、値に設定され `bIsJustMycode` ます。  
   
- `SetJMCStatus`メソッドは、このモジュール内のすべての以前 JMC 設定を消去します。  
+ メソッドは、 `SetJMCStatus` このモジュール内の以前のすべての JMC 設定を消去します。  
   
- `SetJMCStatus`メソッドは、すべての関数が正常に設定されている場合に S_OK HRESULT を返します。 いくつかの関数の場合は、CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT がマークされている返します`true`デバッグ可能ではありません。  
+ `SetJMCStatus`すべての関数が正常に設定されている場合、メソッドは S_OK HRESULT を返します。 マークされている一部の関数がデバッグ可能でない場合は、CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT が返され `true` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

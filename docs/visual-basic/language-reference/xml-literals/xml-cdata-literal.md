@@ -1,5 +1,5 @@
 ---
-title: XML CDATA リテラル (Visual Basic)
+title: XML CDATA リテラル
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralCdata
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: b9cc830d27625f192d8f5e059bd3783d05d8ba3b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621431"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400229"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA リテラル (Visual Basic)
-リテラルを表す、<xref:System.Xml.Linq.XCData>オブジェクト。  
+<xref:System.Xml.Linq.XCData> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,39 +26,39 @@ ms.locfileid: "64621431"
   
 ## <a name="parts"></a>指定項目  
  `<![CDATA[`  
- 必須。 XML CDATA セクションの開始を示します。  
+ 必須です。 XML CDATA セクションの先頭を表します。  
   
  `content`  
- 必須。 XML CDATA セクションに表示するテキスト コンテンツ。  
+ 必須です。 XML CDATA セクションに表示されるテキスト コンテンツ。  
   
  `]]>`  
- 必須。 セクションの終了を示します。  
+ 必須です。 セクションの末尾を表します。  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XCData> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- XML CDATA セクションを含む未加工のテキストが含まれている場合は、それを含んでいる XML を解析できません。 XML CDATA セクションは、任意のテキストを含めることができます。 これには、予約済み XML 文字が含まれます。 XML CDATA セクションは、シーケンスで終わる"] >"。 これは、次の点を意味します。  
+ XML CDATA セクションには、未加工のテキストが含まれています。この未加工のテキストは XML に含める必要がありますが、そのテキストを含む XML で解析する必要はありません。 XML CDATA セクションには、任意のテキストを含めることができます。 予約済み XML 文字も含めることができます。 XML CDATA セクションの末尾には "]]>" シーケンスが使用されます。 これは以下を意味します。  
   
-- 埋め込み式の区切り記号が有効な XML の CDATA コンテンツであるので、XML CDATA リテラルの埋め込み式を使うことはできません。  
+- 埋め込み式の区切り記号は有効な XML CDATA コンテンツであるため、XML CDATA リテラルでは埋め込み式を使用できません。  
   
-- XML CDATA セクションは入れ子にできないため、`content`値を含めることはできません"] >"。  
+- `content` には値 "]]>" を含めることができないため、XML CDATA セクションを入れ子にすることはできません。  
   
- XML CDATA リテラルの変数を割り当てたり、XML 要素リテラルに含めることができます。  
+ XML CDATA リテラルは、変数に代入するか、XML 要素リテラルに含めることができます。  
   
 > [!NOTE]
->  XML リテラルでは、複数の行にまたがることができますが、行継続文字を使用しません。 これにより、XML ドキュメントの内容をコピーし、Visual Basic プログラムに直接貼り付けることができます。  
+> XML リテラルは複数行にまたがることができますが、行連結文字は使用されません。 これにより、XML ドキュメントからコンテンツをコピーして、Visual Basic プログラムに直接貼り付けることができます。  
   
- Visual Basic コンパイラに、XML CDATA リテラルへの呼び出しに変換します、<xref:System.Xml.Linq.XCData.%23ctor%2A>コンス トラクター。  
+ XML CDATA リテラルは、Visual Basic コンパイラによって、<xref:System.Xml.Linq.XCData.%23ctor%2A> コンストラクターへの呼び出しに変換されます。  
   
 ## <a name="example"></a>例  
- 次の例では、テキストを含む CDATA セクション"リテラルを含めることができます\<XML > タグ"。  
+ 次の例では、"Can contain literal \<XML> tags" というテキストを含む CDATA セクションを作成します。  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XCData>
-- [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 要素リテラル](xml-element-literal.md)
+- [XML リテラル](index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)

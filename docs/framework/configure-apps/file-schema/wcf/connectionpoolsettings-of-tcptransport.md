@@ -2,22 +2,23 @@
 title: <connectionPoolSettings> の <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f9b0fff741c32c1a3d6f9461f478e89acc18114e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423155"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70398098"
 ---
-# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > の\<tcpTransport >
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> の \<tcpTransport>
 TCP トランスポートの追加の接続プール設定を指定します。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<binding>  
-\<tcpTransport>  
-\<connectionPoolSettings>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<tcpTransport>**](tcptransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionPoolSettings>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,9 +46,9 @@ TCP トランスポートの追加の接続プール設定を指定します。
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
+|[\<namedPipeTransport>](namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -56,9 +57,9 @@ TCP トランスポートの追加の接続プール設定を指定します。
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [トランスポート](../../../wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
+- [バインド](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

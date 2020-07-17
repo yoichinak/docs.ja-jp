@@ -1,15 +1,15 @@
 ---
-title: 純粋関数 (Visual Basic) へのリファクタリング
+title: 純粋関数へのリファクタリング
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 0a37b30278c850256355612cec09a4c017c7adc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787167"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413480"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>純粋関数 (Visual Basic) へのリファクタリング
+# <a name="refactoring-into-pure-functions-visual-basic"></a>純粋関数へのリファクタリング (Visual Basic)
 
 純粋関数型変換で重要なのは、純粋関数を使用してコードをリファクターする方法を理解することです。
 
@@ -21,7 +21,7 @@ ms.locfileid: "61787167"
 
  関数型プログラミングに移行するには、既存のコードをリファクターして不要な副作用や外部依存関係を排除するのが 1 つの方法です。 この方法で、既存のコードの純粋関数バージョンを作成できます。
 
-このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。 「[チュートリアル:WordprocessingML ドキュメント (Visual Basic) 内のコンテンツを操作する](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)チュートリアル、WordprocessingML ドキュメントを操作する方法を示しています、純粋関数を使用してリファクターする方法の 2 つの例が含まれています。
+このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。 「[チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)」チュートリアルでは、WordprocessingML ドキュメントの操作方法を説明し、純粋関数を使用してリファクターする方法を示す 2 つの例を紹介しています。
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>副作用と外部依存関係の排除
 
@@ -48,11 +48,11 @@ End Module
 
 このコードを実行すると、次の出力が生成されます。
 
-```
+```console
 StringOne-StringTwo
 ```
 
-関連するデータの変更があるかどうかに注意してください`public`または`private`アクセスのどちらが、`shared`メンバーまたはインスタンス メンバーです。 純粋関数は、関数の外部にあるデータを一切変更しません。
+この場合、変更されるデータに `public` アクセスと `private` アクセスのどちらがあるか、またはこのデータが `shared` メンバーとインスタンス メンバーのどちらであるかは関係ありません。 純粋関数は、関数の外部にあるデータを一切変更しません。
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>引数を変更する非純粋関数
 
@@ -103,9 +103,9 @@ End Module
 
 標準クエリ演算子の重要な特性は、純粋関数として実装される点です。
 
-詳細については、次を参照してください。[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。
+詳細については、「[標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [純粋関数型変換 (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [関数型プログラミングと命令型プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [純粋関数型変換の概要 (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [関数型プログラミングと命令型プログラミング (Visual Basic)](functional-programming-vs-imperative-programming.md)

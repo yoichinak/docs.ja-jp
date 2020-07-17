@@ -1,17 +1,17 @@
 ---
 title: 例外:invalidArg 関数
-description: について説明しますが、どのようにF#'invalidArg' 関数に引数例外が生成されます。
+description: "' Invalidarg F# ' 関数が引数の例外を生成する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6b1c5fdb5a541da336977d3a67d471302edb36b6
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645497"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083011"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>例外:invalidArg 関数
 
-`invalidArg`関数に引数例外が生成されます。
+関数`invalidArg`は、引数の例外を生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -21,15 +21,15 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>Remarks
 
-前の構文でパラメーター名は、文字列の引数が正しくないパラメーターの名前です。 *エラー メッセージの文字列*リテラル文字列または型の値は、`string`します。 `Message`例外オブジェクトのプロパティ。
+前の構文のパラメーター名は、引数が無効であるパラメーターの名前を含む文字列です。 *エラーメッセージ文字列*は、リテラル文字列または型`string`の値です。 これは、 `Message` exception オブジェクトのプロパティになります。
 
-によって生成された例外`invalidArg`は、`System.ArgumentException`例外。 次のコードの使用を示します`invalidArg`例外をスローします。
+によって`invalidArg`生成される`System.ArgumentException`例外は例外です。 次の`invalidArg`コードは、を使用して例外をスローする方法を示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-出力は、次は、後に (非表示) スタック トレース。
+出力は次のようになり、その後にスタックトレース (表示されません) が続きます。
 
-```
+```console
 December
 January
 System.ArgumentException: Month parameter out of range.

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d1ca8ea9d00de8a07c67977cf108c50268802e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e33029e8244fdfa180a79aa4a5b05b07f594d928
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739361"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860908"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish コクラス
 アプリケーション ドメインとプロセスに関する情報を発行するためのインターフェイスを提供します。  
@@ -40,26 +38,26 @@ coclass CorpubPublish {
   
 ## <a name="interfaces"></a>インターフェイス  
   
-|Interface|説明|  
+|インターフェイス|説明|  
 |---------------|-----------------|  
-|[ICorPublish インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|これらのプロセスでプロセスとアプリケーション ドメインに関する情報を公開するためのメソッドを提供します。|  
-|[ICorPublishAppDomain インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|表していると、プロセス内のアプリケーション ドメインに関する情報を提供します。|  
-|[ICorPublishAppDomainEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|現在、プロセス内に存在するアプリケーション ドメインのコレクションを走査するメソッドを提供します。|  
-|[ICorPublishProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|コンピューターで実行されているプロセスを表します。|  
-|[ICorPublishProcessEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|コンピューターで実行されているプロセスのコレクションを走査するメソッドを提供します。|  
+|[ICorPublish インターフェイス](icorpublish-interface.md)|プロセスおよびプロセス内のアプリケーションドメインに関する情報を公開するためのメソッドを提供します。|  
+|[ICorPublishAppDomain インターフェイス](icorpublishappdomain-interface.md)|プロセス内のアプリケーションドメインに関する情報を表し、提供します。|  
+|[ICorPublishAppDomainEnum インターフェイス](icorpublishappdomainenum-interface.md)|プロセス内に現在存在するアプリケーションドメインのコレクションを走査するメソッドを提供します。|  
+|[ICorPublishProcess インターフェイス](icorpublishprocess-interface.md)|コンピューター上で実行されているプロセスを表します。|  
+|[ICorPublishProcessEnum インターフェイス](icorpublishprocessenum-interface.md)|コンピューター上で実行されているプロセスのコレクションを走査するメソッドを提供します。|  
   
-## <a name="remarks"></a>Remarks  
- 発行の一般的なシナリオでは、開発者は、アプリケーション ドメイン内のコンピューターで実行されているマネージ コードをデバッグする必要があります。 ホスティング環境では、プロセス内で 1 つ以上のアプリケーション ドメインが実行されている可能性があります。 開発者は、グラフィカル ユーザー インターフェイスまたはその他の手段を使用して、すべてのコンピューターで実行されているプロセスの一覧を表示して、特定のプロセスを選択したいです。 一覧には、すべてのマネージ コードを実行しているプロセス内でアプリケーション ドメインを含める必要があります。 開発者は特定のアプリケーション ドメインを識別し、そのドメインにデバッガーをアタッチします。  
+## <a name="remarks"></a>解説  
+ 一般的な発行シナリオでは、開発者がアプリケーションドメイン内のコンピューターで実行されているマネージコードをデバッグする必要があります。 ホスト環境で、プロセス内で複数のアプリケーションドメインが実行されている可能性があります。 開発者は、コンピューター上で実行されているすべてのプロセスを一覧表示し、特定のプロセスを選択するために、グラフィカルユーザーインターフェイスまたはその他の方法を使用したいと考えています。 この一覧には、マネージコードを実行しているプロセス内のすべてのアプリケーションドメインが含まれている必要があります。 開発者は、特定のアプリケーションドメインを特定し、そのドメインにデバッガーをアタッチできます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl  
+ **ヘッダー:** CorPub .idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ](index.md)

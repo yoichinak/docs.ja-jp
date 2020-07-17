@@ -2,19 +2,19 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 9cd3276583741f2b0261cb8a0e55f4185d20100e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 894a9d41aa3a14ad66b537433aa315823a299f95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780264"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150170"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 参照またはエンティティ式のキーを抽出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 KEY(createref_expression)  
 ```  
   
@@ -23,23 +23,23 @@ KEY(createref_expression)
   
  次の例では、キー演算子は、BadOrder エンティティへの参照に渡され、その参照のキー部分を返します。 この場合、 `Id` プロパティに対応する 1 つだけのフィールドを持つレコード型です。  
   
-```  
-select Key( CreateRef(LOB.BadOrders, row(o.Id)) )   
+```sql  
+select Key( CreateRef(LOB.BadOrders, row(o.Id)) )
 from LOB.Orders as o  
 ```  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、KEY 演算子を使用して、型参照を持つ式のキー部分を抽出します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#KEY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#key)]  
+ [!code-sql[DP EntityServices Concepts#KEY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#key)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [CREATEREF](createref-entity-sql.md)
+- [REF](ref-entity-sql.md)
+- [DEREF](deref-entity-sql.md)

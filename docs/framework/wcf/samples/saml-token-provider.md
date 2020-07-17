@@ -2,23 +2,23 @@
 title: SAML トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 19781b6b162034fb45587103d2a4af6684ab0fe1
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: db1307b0f440f8bd55f1728b6645aec706dfe442
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487510"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602415"
 ---
 # <a name="saml-token-provider"></a>SAML トークン プロバイダー
-このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF には、CardSpace トークン プロバイダーも含まれています。 カスタム トークン プロバイダーは、次の場合に便利です。
+このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) のトークンプロバイダーは、セキュリティインフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF には、既定の資格情報マネージャートークンプロバイダーが付属しています。 また、WCF には、CardSpace トークンプロバイダーも付属しています。 カスタム トークン プロバイダーは、次の場合に便利です。
 
 - トークン プロバイダーが連携動作できない資格情報ストアがある場合。
 
-- ユーザーは、WCF クライアント フレームワークが資格情報を使用する場合に、詳細を提供するときに、ポイントから資格情報を変換するための独自のカスタム メカニズムを提供する場合は。
+- ユーザーが資格情報を使用するときに、ユーザーが詳細情報を提供した時点から資格情報を変換するための独自のカスタムメカニズムを提供する場合。
 
 - カスタム トークンを構築している場合。
 
- このサンプルでは、使用する WCF クライアント フレームワークの外部から取得した SAML トークンを使用するカスタム トークン プロバイダーを構築する方法を示します。
+ このサンプルでは、WCF クライアントフレームワークの外部から取得した SAML トークンを使用できるようにするカスタムトークンプロバイダーを構築する方法を示します。
 
  このサンプルに示されている手順の概要は次のとおりです。
 
@@ -26,11 +26,11 @@ ms.locfileid: "67487510"
 
 - SAML トークンをカスタム クライアント資格情報に渡す手順。
 
-- どのように、SAML トークンは、WCF クライアント フレームワークに提供されます。
+- SAML トークンを WCF クライアントフレームワークに提供する方法。
 
 - サーバーがクライアントによってサーバーの X.509 証明書を使用して認証される手順。
 
- サービスは、そのサービスとの通信に使用する 2 つのエンドポイントを公開します。エンドポイントは構成ファイル App.config で定義します。各エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 バインディングの構成には、標準の `wsFederationHttpBinding` が使用されます。これはメッセージ セキュリティを使用します。 1 つのエンドポイントは、クライアントが対称証明キーを使用する SAML トークンで認証を行うことを想定しています。これに対してもう 1 つのエンドポイントでは、クライアントが非対称証明キーを使用する SAML トークンで認証を行うことを想定しています。 また、サービスは `serviceCredentials` 動作を使用してサービス証明書の構成も行います。 `serviceCredentials` 動作を使用すると、サービス証明書を構成できます。 クライアントはサービス証明書を使用して、サービスを認証し、メッセージを保護します。 次の構成では、このトピックの最後のセットアップ手順で説明しているサンプル セットアップでインストールされる "localhost" 証明書を参照しています。 `serviceCredentials` 動作を使用すると、SAML トークンに署名する信頼できる証明書を構成することもできます。 次の構成では、サンプルでインストールされる 'Alice' 証明書を参照しています。
+ サービスは、構成ファイル App.config を使用して定義された、サービスと通信するための2つのエンドポイントを公開します。各エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングの構成には、標準の `wsFederationHttpBinding` が使用されます。これはメッセージ セキュリティを使用します。 1 つのエンドポイントは、クライアントが対称証明キーを使用する SAML トークンで認証を行うことを想定しています。これに対してもう 1 つのエンドポイントでは、クライアントが非対称証明キーを使用する SAML トークンで認証を行うことを想定しています。 また、サービスは `serviceCredentials` 動作を使用してサービス証明書の構成も行います。 `serviceCredentials` 動作を使用すると、サービス証明書を構成できます。 クライアントはサービス証明書を使用して、サービスを認証し、メッセージを保護します。 次の構成では、このトピックの最後のセットアップ手順で説明しているサンプル セットアップでインストールされる "localhost" 証明書を参照しています。 `serviceCredentials` 動作を使用すると、SAML トークンに署名する信頼できる証明書を構成することもできます。 次の構成では、サンプルでインストールされる 'Alice' 証明書を参照しています。
 
 ```xml
 <system.serviceModel>
@@ -111,7 +111,7 @@ ms.locfileid: "67487510"
 </system.serviceModel>
 ```
 
- 次の手順は、カスタムの SAML トークン プロバイダーを開発し、それを WCF に統合する方法を示します。 セキュリティ フレームワーク。
+ 次の手順は、カスタム SAML トークンプロバイダーを開発し、WCF: security framework と統合する方法を示しています。
 
 1. カスタムの SAML トークン プロバイダーを作成します。
 
@@ -119,7 +119,7 @@ ms.locfileid: "67487510"
 
      このタスクを実行するため、カスタム トークン プロバイダーは <xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスから派生し、<xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> メソッドをオーバーライドします。 このメソッドは、新しい `SecurityToken` を作成して返します。
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
      // Create a SamlSecurityToken from the provided assertion
@@ -160,9 +160,8 @@ ms.locfileid: "67487510"
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスは、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、渡されたトークンの要件で SAML トークンが必要であることが示されている場合に、`CreateSecurityTokenProvider` メソッドをオーバーライドしてカスタムの SAML トークン プロバイダーを返します。 クライアント資格情報クラス (手順 3. を参照) がアサーションを指定していない場合、セキュリティ トークン マネージャーは適切なインスタンスを作成します。
 
-    ```
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    ```csharp
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 
@@ -232,7 +231,7 @@ ms.locfileid: "67487510"
 
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダー、およびトークン シリアライザーの取得に使用されるセキュリティ トークン マネージャーを作成します。
 
-    ```
+    ```csharp
     public class SamlClientCredentials : ClientCredentials
     {
      ClaimSet claims;
@@ -275,7 +274,7 @@ ms.locfileid: "67487510"
 
      サンプルでは既定のクライアント資格情報を削除し、新しいクライアント資格情報クラスを提供して、クライアントがカスタム クライアント資格情報を使用できるようにします。
 
-    ```
+    ```csharp
     // Create new credentials class
     SamlClientCredentials samlCC = new SamlClientCredentials();
 
@@ -309,7 +308,7 @@ ms.locfileid: "67487510"
 
      証明書は、LocalMachine ストアの場所の My (Personal) ストアに保存されます。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -323,7 +322,7 @@ ms.locfileid: "67487510"
 
      Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -333,7 +332,7 @@ ms.locfileid: "67487510"
 
      証明書は、CurrentUser 保存場所の My ストアに保存されます。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -347,31 +346,31 @@ ms.locfileid: "67487510"
 
      Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、サーバー証明書ストアに発行元証明書を配置するこの手順は不要です。
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには
 
-1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
 
-2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。
 
 > [!NOTE]
->  Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。
+> Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. Visual Studio 2012 コマンド プロンプトを管理者特権で実行中のサンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で実行する Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    >  Setup.bat バッチ ファイルは、Visual Studio 2012 コマンド プロンプトから実行する設計されています。 Visual Studio 2012 のコマンド プロンプト ポイント内で設定して、Setup.bat スクリプトで必要な実行可能ファイルを格納するディレクトリ パス環境変数。  
+    > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。  
   
 2. Service.exe を service\bin で起動します。  
   
 3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -379,7 +378,7 @@ ms.locfileid: "67487510"
   
 2. サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 Setup.bat ファイルは、管理者特権で開いた Visual Studio ウィンドウの開発者コマンド プロンプトで実行する必要がありますに注意してください。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
+3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 セットアップの .bat ファイルは、管理者特権で開いた Visual Studio ウィンドウの開発者コマンドプロンプトで実行する必要があることに注意してください。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
   
 4. サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 この手順は、サーバー証明書の発行元をクライアントが信頼できる場合は不要です。  
   
@@ -393,7 +392,7 @@ ms.locfileid: "67487510"
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから `Client.exe` を起動します。  
   
-10. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+10. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

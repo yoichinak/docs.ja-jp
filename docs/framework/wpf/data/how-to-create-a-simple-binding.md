@@ -1,31 +1,31 @@
 ---
 title: '方法: 簡単なバインディングを作成する'
+description: Windows Presentation Foundation (WPF) で、この操作方法の例を使用して、アプリケーションの簡単なバインディングを作成します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - simple binding [WPF], creating
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 63dc44b442bb4658382bf12faf57b51c8e0698bb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618702"
 ---
 # <a name="how-to-create-a-simple-binding"></a>方法: 簡単なバインディングを作成する
-この例、単純なを作成する方法を示します<xref:System.Windows.Data.Binding>します。  
+この例では、簡単な <xref:System.Windows.Data.Binding> を作成する方法を示します。  
   
 ## <a name="example"></a>例  
- この例である、`Person`という名前の文字列プロパティを持つオブジェクト`PersonName`します。 `Person`という名前空間でオブジェクトが定義されている`SDKSample`します。  
+ この例では、`PersonName` という名前の文字列プロパティを持つ `Person` オブジェクトがあります。 `Person` オブジェクトは `SDKSample` という名前空間で定義されています。  
   
- 強調表示された行を含む、`<src>`次の例では、内の要素をインスタンス化、`Person`オブジェクトを`PersonName`プロパティの値`Joe`します。 これを行う、`Resources`セクションし、割り当てられている、`x:Key`します。  
+ 次の例の `<src>` 要素を含む強調表示された行では、`PersonName` プロパティの値が `Joe` である `Person` オブジェクトがインスタンス化されています。 これは `Resources` セクションで行われ、`x:Key` が割り当てられます。  
   
  [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- 強調表示された行を含む、`<TextBlock>`要素にバインドし、<xref:System.Windows.Controls.TextBlock>への制御、`PersonName`プロパティ。 結果として、 <xref:System.Windows.Controls.TextBlock> "Joe"の値が表示されます。  
+ `<TextBlock>` 要素を含む強調表示された行では、<xref:System.Windows.Controls.TextBlock> コントロールが `PersonName` プロパティにバインドされます。 その結果、<xref:System.Windows.Controls.TextBlock> に "Joe" という値が表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [データ バインディングの概要](data-binding-overview.md)
+- [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)
 - [方法トピック](data-binding-how-to-topics.md)

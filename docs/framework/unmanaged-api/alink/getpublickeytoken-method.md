@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741874"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447246"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken メソッド
-指定したキー ファイルまたはキー コンテナーの公開キー トークンを取得します。  
+指定されたキーキーまたはキーコンテナーの公開キートークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,22 +40,22 @@ HRESULT GetPublicKeyToken(
  キーのファイル名。  
   
  `pszKeyContainer`  
- キー コンテナーの名前。  
+ キーコンテナーの名前。  
   
  `pvPublicKeyToken`  
- キー トークンが格納されるアドレスです。  
+ キートークンを格納するアドレス。  
   
  `pcbPublicKeyToken`  
- バイト単位で示されるバッファーのサイズを指定`pvPublicKeyToken`します。 戻り時に、実際の使用バイト数が含まれています。  
+ `pvPublicKeyToken`によって示されるバッファーのサイズ (バイト単位) を指定します。 戻り時には、実際に使用されたバイト数が含まれます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

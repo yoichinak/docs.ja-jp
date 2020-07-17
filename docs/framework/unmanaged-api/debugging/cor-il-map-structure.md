@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c79d0e4e37f3f884651e49c8fff6db72fac4f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740533"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179294"
 ---
-# <a name="corilmap-structure"></a>COR_IL_MAP 構造体
+# <a name="cor_il_map-structure"></a>COR_IL_MAP 構造体
 機能の相対オフセットでの変更を指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef struct _COR_IL_MAP {  
-    ULONG32 oldOffset;   
-    ULONG32 newOffset;   
+    ULONG32 oldOffset;
+    ULONG32 newOffset;
     BOOL    fAccurate;  
 } COR_IL_MAP;  
 ```  
@@ -40,51 +38,51 @@ typedef struct _COR_IL_MAP {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`oldOffset`|古い Microsoft intermediate language (MSIL) 関数の先頭からの相対オフセットします。|  
+|`oldOffset`|関数の先頭を基準とした、古い Microsoft 中間言語 (MSIL) オフセット。|  
 |`newOffset`|関数の先頭を基準とした新しい MSIL オフセット。|  
-|`fAccurate`|`true` 正確であるマッピングがわかっている場合それ以外の場合、`false`します。|  
+|`fAccurate`|`true`マッピングが正確であることがわかっている場合。それ以外`false`の場合は、 .|  
   
-## <a name="remarks"></a>Remarks  
- マップの形式は次のとおりです。デバッガーは仮定`oldOffset`、変更されていない元の MSIL コード内で MSIL オフセットを示します。 `newOffset`パラメーターは、新しい、インストルメント化されたコード内で、対応する MSIL のオフセットを表します。  
+## <a name="remarks"></a>解説  
+ マップの形式は次のとおりです: デバッガーは、元の変更されていない`oldOffset`MSIL コード内の MSIL オフセットを参照することを想定します。 パラメーター`newOffset`は、新しいインストルメント化されたコード内の対応する MSIL オフセットを参照します。  
   
- 適切に機能するステップの場合は、次の要件を満たす必要があります。  
+ ステップが正しく機能するためには、次の要件を満たす必要があります。  
   
-- マップは、昇順で並べ替えする必要があります。  
+- マップは昇順で並べ替える必要があります。  
   
-- インストルメント化された MSIL コードは並べ替えないでください。  
+- インストルメント化された MSIL コードは並べ替えできません。  
   
-- 元の MSIL コードを削除しない必要があります。  
+- 元の MSIL コードは削除しないでください。  
   
-- マップには、プログラム データベース (PDB) ファイルからのすべてのシーケンス ポイントをマップするエントリを含める必要があります。  
+- マップには、プログラム データベース (PDB) ファイルからのすべてのシーケンス ポイントをマップするエントリが含まれている必要があります。  
   
- マップに存在しないエントリが補間されません。 次の例では、マップとその結果を示します。  
+ マップは、欠落しているエントリを補間しません。 次の例は、マップとその結果を示しています。  
   
- マップ:  
+ マップ：  
   
-- 以前のオフセットは 0、0 の新しいオフセット  
+- 0 古いオフセット、0 新しいオフセット  
   
-- 以前のオフセットが 5、10 の新しいオフセット  
+- 5 古いオフセット、10 の新しいオフセット  
   
-- 以前のオフセットを 9、20 の新しいオフセット  
+- 9 古いオフセット、20 の新しいオフセット  
   
  結果:  
   
-- 0、1、2、3、または 4 の以前のオフセットは、新しいオフセットは 0 にマップされます。  
+- 古いオフセットが 0、1、2、3、または 4 の場合は、新しいオフセット 0 にマップされます。  
   
-- 5、6、7、または 8 の以前のオフセットは、10 の新しいオフセットにマップされます。  
+- 古いオフセットが 5、6、7、または 8 の場合は、新しいオフセット 10 にマップされます。  
   
-- 9 以降の以前のオフセットは、20 の新しいオフセットにマップされます。  
+- 9 以上の古いオフセットは、新しいオフセット 20 にマップされます。  
   
-- 0、1、2、3、4、5、6、7、8、または 9 の新しいオフセットは、以前のオフセット 0 にマップされます。  
+- 新しいオフセット 0、1、2、3、4、5、6、7、8、または 9 は、古いオフセット 0 にマップされます。  
   
-- 10、11、12、13、14、15、16、17、18 または 19 の新しいオフセットは、以前のオフセット 5 にマップされます。  
+- 10、11、12、13、14、15、16、17、18、または 19 の新しいオフセットは、古いオフセット 5 にマップされます。  
   
-- 20 以上の新しいオフセットは、以前のオフセット 9 にマップされます。  
+- 20 以上の新しいオフセットは、古いオフセット 9 にマップされます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl, CorProf.idl  
+ **ヘッダー:** コルデバッグ.idl、コルプロフ.idl  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -92,5 +90,5 @@ typedef struct _COR_IL_MAP {
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

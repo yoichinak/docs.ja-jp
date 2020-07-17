@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60390fecad15dbb2c453453fa8c35556b5db6b54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 91ef9eaa855ed841bc75bfaeead462f045eb1d8b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777722"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007456"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo メソッド
-このメソッドは実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
+このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,27 +38,27 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `pITI`  
- [in]ポインター、 [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)を開くスコープ型情報を提供するインターフェイスです。  
+ からスコープを開く対象の型情報を提供する[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)インターフェイスへのポインター。  
   
  `dwOpenFlags`  
- [in]Open モード フラグ。  
+ からOpen モードフラグ。  
   
  `riid`  
- [in]必要なインターフェイスです。  
+ から目的のインターフェイス。  
   
  `ppIUnk`  
- [out]返されるインターフェイスへのポインターへのポインター。  
+ 入出力返されたインターフェイスへのポインターへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx インターフェイス](imetadatadispenserex-interface.md)
+- [IMetaDataDispenser インターフェイス](imetadatadispenser-interface.md)

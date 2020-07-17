@@ -1,16 +1,16 @@
 ---
-title: '方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)'
+title: ディレクトリ ツリーで重複するファイルを照会する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584346"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168883"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)
-同じ名前のファイルが複数のフォルダーに存在することがあります。 たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。 次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。 また、2 番目の例では、名前のほかにサイズと作成時刻が一致するファイルをクエリする方法を示します。  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>ディレクトリ ツリーで重複するファイルを照会する方法 (LINQ) (C#)
+同じ名前のファイルが複数のフォルダーに存在することがあります。 たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。 次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。 また、2 番目の例では、名前のほかにサイズと LastWrite 時刻が一致するファイルをクエリする方法を示します。  
   
 ## <a name="example"></a>例  
   
@@ -61,25 +61,25 @@ class QueryDuplicateFileNames
     class PortableKey  
     {  
         public string Name { get; set; }  
-        public DateTime CreationTime { get; set; }  
+        public DateTime LastWriteTime { get; set; }  
         public long Length { get; set; }  
   
         public override bool Equals(object obj)  
         {  
             PortableKey other = (PortableKey)obj;  
-            return other.CreationTime == this.CreationTime &&  
+            return other.LastWriteTime == this.LastWriteTime &&  
                    other.Length == this.Length &&  
                    other.Name == this.Name;  
         }  
   
         public override int GetHashCode()  
         {  
-            string str = $"{this.CreationTime}{this.Length}{this.Name}";
+            string str = $"{this.LastWriteTime}{this.Length}{this.Name}";
             return str.GetHashCode();  
         }  
         public override string ToString()  
         {  
-            return $"{this.Name} {this.Length} {this.CreationTime}";
+            return $"{this.Name} {this.Length} {this.LastWriteTime}";
         }  
     }  
     static void QueryDuplicates2()  
@@ -99,11 +99,11 @@ class QueryDuplicateFileNames
         // A named type is used to enable the query to be  
         // passed to another method. Anonymous types can also be used  
         // for composite keys but cannot be passed across method boundaries  
-        //   
+        //
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  
-                new PortableKey { Name = file.Name, CreationTime = file.CreationTime, Length = file.Length } into fileGroup  
+                new PortableKey { Name = file.Name, LastWriteTime = file.LastWriteTime, Length = file.Length } into fileGroup  
             where fileGroup.Count() > 1  
             select fileGroup;  
   
@@ -172,7 +172,7 @@ class QueryDuplicateFileNames
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

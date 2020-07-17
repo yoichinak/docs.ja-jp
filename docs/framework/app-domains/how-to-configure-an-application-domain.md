@@ -1,5 +1,6 @@
 ---
 title: '方法: アプリケーション ドメインを構成する'
+description: .NET のアプリケーション ドメインを構成します。 AppDomainSetup クラスを利用し、新しいアプリケーション ドメインの構成情報を CLR に提供できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,12 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe0c7ecf1b0daf0e9ea56ec590083fe1ccd2d693
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 27afcf161bec74143fafb5dceb20597de73e23d4
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225080"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104854"
 ---
 # <a name="how-to-configure-an-application-domain"></a>方法: アプリケーション ドメインを構成する
 <xref:System.AppDomainSetup> クラスを利用し、新しいアプリケーション ドメインの構成情報を共通言語ランタイムに提供できます。 独自のアプリケーション ドメインを作成するとき、最も重要なプロパティが <xref:System.AppDomainSetup.ApplicationBase%2A> です。 その他の **AppDomainSetup** プロパティは、特定のアプリケーション ドメインを構成する目的で主にランタイム ホストにより使用されます。  
@@ -24,7 +23,7 @@ ms.locfileid: "59225080"
  **ApplicationBase** プロパティにより、アプリケーションのルート ディレクトリが定義されます。 ランタイムで型要求を満たす必要があるとき、**ApplicationBase** プロパティで指定されたディレクトリでその型を含むアセンブリが検索されます。  
   
 > [!NOTE]
->  新しいアプリケーション ドメインは、作成者の **ApplicationBase** プロパティのみを継承します。  
+> 新しいアプリケーション ドメインは、作成者の **ApplicationBase** プロパティのみを継承します。  
   
  次の例では、**AppDomainSetup** クラスのインスタンスが作成され、このクラスを利用して新しいアプリケーション ドメインが作成され、情報がコンソールに書き込まれ、アプリケーション ドメインがアンロードされます。  
   
@@ -36,4 +35,4 @@ ms.locfileid: "59225080"
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)
-- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
+- [アプリケーション ドメインの使用](use.md)

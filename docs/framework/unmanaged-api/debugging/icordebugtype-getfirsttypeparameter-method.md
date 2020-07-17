@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3031cf2d9509f94b50c386b44e6d9e5d9ee5509c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da0097daea183c76f97f0b1966b313e1cb5a557b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768231"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379951"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter メソッド
-1 つ目を表す、ICorDebugType へインターフェイス ポインターを取得<xref:System.Type>これによって表される型のパラメーター`ICorDebugType`します。  
+<xref:System.Type>このによって表される型の最初のパラメーターを表す、の型へのインターフェイスポインターを取得し `ICorDebugType` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT GetFirstTypeParameter (
   
 ## <a name="parameters"></a>パラメーター  
  `value`  
- [out]アドレスへのポインター、`ICorDebugType`最初のパラメーターを表すオブジェクト。  
+ 入出力最初のパラメーターを表すオブジェクトのアドレスへのポインター `ICorDebugType` 。  
   
 ## <a name="remarks"></a>Remarks  
- `GetFirstTypeParameter` できる場合に呼び出される場所の種類に関する追加情報は、最大で 1 つの型パラメーター。 具体的には、使用できます、型が ELEMENT_TYPE_ARRAY、ELEMENT_TYPE_SZARRAY、ELEMENT_TYPE_BYREF、または ELEMENT_TYPE_PTR 場合、によって示される、 [icordebugtype::gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)メソッド。  
+ `GetFirstTypeParameter`型に関する追加情報には、最大で1つの型パラメーターが含まれる場合に、を呼び出すことができます。 具体的には、型が ELEMENT_TYPE_ARRAY、ELEMENT_TYPE_SZARRAY、ELEMENT_TYPE_BYREF、または ELEMENT_TYPE_PTR である場合に使用できます。これは、のように、の型[:: GetType](icordebugtype-gettype-method.md)メソッドによって示されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

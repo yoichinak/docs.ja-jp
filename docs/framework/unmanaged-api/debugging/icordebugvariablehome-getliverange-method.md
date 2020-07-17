@@ -1,5 +1,5 @@
 ---
-title: IcorDebugVariableHome::GetLiveRange メソッド
+title: 'いい変数 Home:: GetLiveRange メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774141"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396579"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange メソッド
-この変数はライブのネイティブの範囲を取得します。  
+# <a name="icordebugvariablehomegetliverange-method"></a>いい変数 Home:: GetLiveRange メソッド
+この変数がライブであるネイティブ範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +36,20 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>パラメーター  
  `pStartOffset`  
- [out]これで、変数が最初ライブ論理オフセット。  
+ 入出力変数が最初にライブになる論理オフセット。  
   
  `pEndOffset`  
- [out]位置、変数が最後ライブ後すぐに論理オフセット。  
+ 入出力変数が最後にライブになる位置の直後の論理オフセット。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugVariableHome インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)

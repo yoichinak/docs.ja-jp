@@ -1,19 +1,19 @@
 ---
-title: 特殊文字 (Visual Basic リファレンス)
+title: 特殊文字
 ms.date: 10/31/2017
-ms.openlocfilehash: c179ac69833404f0ad7e36cfcada1643d91d604d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: afe514eaa3e6b1837711ef4620ce8e36aa403d1e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945146"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "85503767"
 ---
 # <a name="special-characters-visual-basic-reference"></a>特殊文字 (Visual Basic リファレンス)
 
-特殊文字には、それが付加されるプログラム要素を変更する定義済み、コンテキストの文字です。 Visual Basic では、次の特殊文字がサポートされています。 
+特殊文字は、それが付加されたプログラム要素を変更する、コンテキストに応じた定義済みの文字です。 Visual Basic では、次の特殊文字がサポートされています。
 
 - [$](interpolated.md): 挿入文字列の文字。
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic リファレンス](../../../visual-basic/language-reference/index.md)
+- [Visual Basic リファレンス](../index.md)

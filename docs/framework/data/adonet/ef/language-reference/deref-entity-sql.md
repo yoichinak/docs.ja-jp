@@ -2,20 +2,20 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: 1ba562ba6542e6ab0d62f1f8348434ae4f4c9b13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 27fc23a2be47ea00eff20aa8d2f559af5ae90387
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785308"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833905"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 参照値を逆参照し、その逆参照の結果を生成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-SELECT DEREF ( o.expression ) from Table as o;  
+```sql  
+SELECT DEREF ( o.expression ) FROM Table AS o;
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -26,21 +26,21 @@ SELECT DEREF ( o.expression ) from Table as o;
  参照されるエンティティの値。  
   
 ## <a name="remarks"></a>Remarks  
- DEREF 演算子は参照値を逆参照し、その逆参照の結果を生成します。 たとえば場合、 `r` ref 型の参照は、\<T >、`Deref(r)`型の式は、`T`によって参照されるエンティティを生成する`r`します。 参照値が null または未解決 (つまり、参照先が存在しない) の場合、DEREF 演算子の結果は null になります。  
+ DEREF 演算子は参照値を逆参照し、その逆参照の結果を生成します。 たとえば、`r` が ref\<T> 型の参照である場合、`Deref(r)` は `T` によって参照されるエンティティを生成する `r` 型の式です。 参照値が null または未解決 (つまり、参照先が存在しない) の場合、DEREF 演算子の結果は null になります。  
   
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、DEREF 演算子を使用して参照値を逆参照し、その逆参照の結果を生成します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
+1. 「[方法: PrimitiveType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として ExecutePrimitiveTypeQuery メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
+ [!code-sql[DP EntityServices Concepts#DEREF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#deref)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [REF](ref-entity-sql.md)
+- [CREATEREF](createref-entity-sql.md)
+- [KEY](key-entity-sql.md)
+- [NULL 値が許容される構造化型](nullable-structured-types-entity-sql.md)

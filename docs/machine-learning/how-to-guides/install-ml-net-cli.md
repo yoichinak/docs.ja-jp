@@ -1,39 +1,41 @@
 ---
 title: ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
-description: ML.NET コマンドライン インターフェイス (CLI) ツールの概要とインストール。
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+description: ML.NET コマンド ライン インターフェイス (CLI) ツールをインストール、アップグレード、ダウングレード、およびアンインストールする方法を説明します。
+ms.date: 06/08/2020
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602272"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 
-ML.NET CLI (コマンドライン インターフェイス) は、用意したトレーニング データセットに基づいて高品質の ML.NET モデルとソース コードを生成するための、コマンドプロンプト (Windows、Mac、または Linux) 上で実行できるツールです。
+Windows、Mac、または Linux で ML.NET CLI (コマンド ライン インターフェイス) ツールをインストールする方法を説明します。
+
+ML.NET CLI では、自動機械学習 (AutoML) とトレーニング データセットを使用して、高品質 ML.NET モデルとソース コードが生成されます。
 
 > [!NOTE]
 > このトピックは、現在プレビュー段階の ML.NET CLI と ML.NET AutoML について述べており、内容が変更される場合があります。
 
 ## <a name="pre-requisites"></a>前提条件
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (省略可能) [Visual Studio 2017 または 2019](https://visualstudio.microsoft.com/vs/)
+- (省略可能) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
-生成された C# コード プロジェクトは、Visual Studio で F5 キーまたは `dotnet run` (.NET Core CLI) を使用して実行できます。
+生成された C# コード プロジェクトを Visual Studio で実行するには、`F5` キーを押すか、`dotnet run` (.NET Core CLI) を使用します。
 
-メモ:[.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) のインストール後に `dotnet tool` コマンドが機能しない場合は、Windows からサインアウトしてから再度サインインします。
+メモ:.NET Core SDK のインストール後に `dotnet tool` コマンドが機能しない場合は、Windows からサインアウトしてから再度サインインします。
 
 ## <a name="install"></a>インストール
 
-ML.NET CLI のインストール方法は他の .NET グローバル ツールと同様です。 `dotnet tool install` .NET Core CLI コマンドを使用します。 
+ML.NET CLI のインストール方法は他の .NET グローバル ツールと同様です。 `dotnet tool install` .NET Core CLI コマンドを使用します。
 
 次の例は、既定の NuGet フィードの場所に ML.NET CLI をインストールする方法を示しています。
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -52,19 +54,19 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 mlnet
 ```
 
-"auto-train" コマンドなど、mlnet ツールに利用できるコマンドのヘルプを参照することをお勧めします。
+"classification" コマンドなど、mlnet ツールに利用できるコマンドのヘルプを参照することをお勧めします。
 
 ## <a name="install-a-specific-release-version"></a>特定のリリース バージョンをインストールする
 
 ツールのプレリリース バージョンまたは特定のバージョンをインストールしようとしている場合は、次の形式を使用して、[フレームワーク](../../standard/frameworks.md)を指定できます。
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 次のコマンドを入力して、パッケージが正しくインストールされているかどうかを確認することもできます。
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +74,7 @@ dotnet tool list -g
 
 ローカル コンピューターからパッケージをアンインストールするには、次のコマンドを入力します。
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +82,7 @@ dotnet tool uninstall mlnet -g
 
 ローカル コンピューターからパッケージを更新するには、次のコマンドを入力します。
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,19 +102,19 @@ ML.NET CLI は `System.CommandLine` に基づいているので、タブ補完�
 
 1. 次のコマンドを実行して、`dotnet-suggest` グローバル ツールをインストールします。
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 
 2. 適切な shim スクリプトをシェル プロファイルに追加します。 必要に応じてシェル プロファイル ファイルを作成します。 shim スクリプトによって、シェルからの完了要求が `dotnet-suggest` ツールに転送され、適切な `System.CommandLine` ベースのアプリに委任されます。
 
-    * bash の場合、[dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) の内容を `~/.bash_profile` に追加します。
+    - bash の場合、[dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) の内容を `~/.bash_profile` に追加します。
 
-    * PowerShell の場合は、[dotnet-recommend-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) の内容を PowerShell プロファイルに追加します。 コンソールで次のコマンドを実行して、PowerShell プロファイルへの予想されるパスを見つけることができます。
+    - PowerShell の場合は、[dotnet-recommend-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) の内容を PowerShell プロファイルに追加します。 コンソールで次のコマンドを実行して、PowerShell プロファイルへの予想されるパスを見つけることができます。
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (他のシェルについては、[検索する](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22)か、[問題](https://github.com/dotnet/System.CommandLine/issues)を開いてください。)
 
@@ -134,7 +136,7 @@ ML.NET CLI は、既定のディレクトリまたは特定の場所にインス
 
 ## <a name="see-also"></a>関連項目
 
-- ["ML.NET CLI ツールの概要" のチュートリアル](../tutorials/mlnet-cli.md)
-- [ML.NET CLI ツールを使用してモデルを自動的にトレーニングする方法](../automate-training-with-cli.md)
-- [ML.NET CLI auto-train コマンド リファレンス ガイド](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLI の概要](../automate-training-with-cli.md)
+- [チュートリアル: ML.NET CLI を使用してセンチメントを分析する](../tutorials/sentiment-analysis-cli.md)
+- [ML.NET CLI auto-train コマンド リファレンス ガイド](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI のテレメトリ](../resources/ml-net-cli-telemetry.md)

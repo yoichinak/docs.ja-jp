@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8809d00e-beaa-4dcf-b4e8-e89d0a5406b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 206e4fb232f4786a76525d24aa379b25d6d2f71d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740774"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099347"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 構造体
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE 構造体
 コードの範囲に関するオフセット情報が含まれます。  
   
- この構造が使用者、 [icordebugstepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)メソッド。  
+ この構造体は、 [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md)メソッドによって使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,12 +40,12 @@ typedef struct {
 |メンバー|説明|  
 |------------|-----------------|  
 |`startOffset`|範囲の先頭のオフセット。|  
-|`endOffset`|範囲の最後のオフセット。|  
+|`endOffset`|範囲の末尾のオフセット。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -55,6 +53,6 @@ typedef struct {
   
 ## <a name="see-also"></a>関連項目
 
-- [StepRange メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange メソッド](icordebugstepper-steprange-method.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

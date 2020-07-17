@@ -9,33 +9,33 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 8bed7784b00f49178c9a87def74b62f7ce620ec7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947364"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923404"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>方法: パラメーターとしてジオメトリを使用してヒット テストを実行する
-この例を使用して、ビジュアル オブジェクトに対してヒット テストを実行する方法を示しています、<xref:System.Windows.Media.Geometry>ヒット テスト パラメーター。  
+この例では、<xref:System.Windows.Media.Geometry> をヒット テスト パラメーターとして使用して、ビジュアル オブジェクトに対してヒット テストを実行する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例を使用してヒット テストを設定する方法を示しています。<xref:System.Windows.Media.GeometryHitTestParameters>の、<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>メソッド。 <xref:System.Windows.Point>に渡される値、`OnMouseDown`メソッドの使用を作成、<xref:System.Windows.Media.Geometry>ヒット テストの範囲を拡張するためにオブジェクト。  
+ 次の例では、<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> メソッドの <xref:System.Windows.Media.GeometryHitTestParameters> を使用してヒット テストを設定する方法を示します。 `OnMouseDown` メソッドに渡される <xref:System.Windows.Point> 値は、<xref:System.Windows.Media.Geometry> オブジェクトを作成してヒット テストの範囲を拡張するために使用されます。  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
   
- <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A>プロパティの<xref:System.Windows.Media.GeometryHitTestResult>を使用するヒット テストの結果に関する情報を提供します、<xref:System.Windows.Media.Geometry>ヒット テスト パラメーター。 ヒット テストのジオメトリ (青い円) と対象のビジュアル オブジェクト (赤い正方形) の描画されるコンテンツとの関係を次の図に示します。  
+ <xref:System.Windows.Media.GeometryHitTestResult> の <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> プロパティは、<xref:System.Windows.Media.Geometry> をヒット テスト パラメーターとして使用するヒット テストの結果に関する情報を提供します。 ヒット テストのジオメトリ (青い円) と対象のビジュアル オブジェクト (赤い正方形) の描画されるコンテンツとの関係を次の図に示します。  
   
- ![ヒット テストに使用される IntersectionDetail を示す図。](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
+ ![ヒット テストで使用される IntersectionDetail を示す図。](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
- 次の例は、ヒット テスト コールバックを実装する方法を示しています。 ときに、<xref:System.Windows.Media.Geometry>ヒット テスト パラメーターとして使用されます。 `result`にパラメーターをキャスト、<xref:System.Windows.Media.GeometryHitTestResult>の値を取得するために、<xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A>プロパティ。 プロパティの値を使用するかどうか、<xref:System.Windows.Media.Geometry>ヒット テスト パラメーター完全または部分的に含まれるヒット テスト対象の表示内容。 ここに示すサンプル コードでは、完全に対象の境界内に含まれるビジュアルについてのみ、ヒット テストの結果をリストに追加しています。  
+ <xref:System.Windows.Media.Geometry> をヒット テスト パラメーターとして使用する場合に、ヒット テストのコールバックを実装する方法を次の例に示します。 `result` パラメーターは、<xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> プロパティの値を取得するために、<xref:System.Windows.Media.GeometryHitTestResult> にキャストされます。 このプロパティ値を使用すると、<xref:System.Windows.Media.Geometry> ヒット テスト パラメーターの全体または一部が、ヒット テストの対象の、レンダリングされるコンテンツ内に含まれるかどうかを判別することができます。 ここに示すサンプル コードでは、完全に対象の境界内に含まれるビジュアルについてのみ、ヒット テストの結果をリストに追加しています。  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.HitTestResult> 、Intersectiondetail がときに、コールバックを呼び出すことはできません<xref:System.Windows.Media.IntersectionDetail.Empty>します。  
+> 交差の詳細が <xref:System.Windows.Media.IntersectionDetail.Empty> の場合は、<xref:System.Windows.Media.HitTestResult> コールバックを呼び出さないでください。  
   
 ## <a name="see-also"></a>関連項目
 

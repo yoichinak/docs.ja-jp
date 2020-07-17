@@ -1,19 +1,18 @@
 ---
 title: XPath ナビゲーションによるノードの選択
+description: .NET で XML ノードを選択する方法について説明します。 XML Path Language (XPath) ナビゲーションを使用して DOM 情報を照会できる、ドキュメント オブジェクト モデル (DOM) メソッドを使用します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596950"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662512"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath ナビゲーションによるノードの選択
 XML ドキュメント オブジェクト モデル (DOM) には、DOM 内の情報を照会するための XPath (XML Path Language) ナビゲーションに使用できるメソッドが含まれています。 XPath を使用すると、特定の単一ノードを見つけたり、条件に一致するすべてのノードを検索したりできます。  
@@ -32,7 +31,7 @@ Dim root As XmlNode = doc.DocumentElement
 Dim nsmgr As New XmlNamespaceManager(doc.NameTable)  
 nsmgr.AddNamespace("bk", "urn:newbooks-schema")  
   
-' Select and display the first node in which the author's   
+' Select and display the first node in which the author's
 ' last name is Kingsolver.  
 Dim node As XmlNode = root.SelectSingleNode( _  
      "descendant::bk:book[bk:author/bk:last-name='Kingsolver']", nsmgr)  
@@ -49,7 +48,7 @@ XmlNode root = doc.DocumentElement;
 XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
 nsmgr.AddNamespace("bk", "urn:newbooks-schema");  
   
-// Select and display the first node in which the author's   
+// Select and display the first node in which the author's
 // last name is Kingsolver.  
 XmlNode node = root.SelectSingleNode(  
     "descendant::bk:book[bk:author/bk:last-name='Kingsolver']", nsmgr);  
@@ -121,13 +120,13 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
  すべての <xref:System.Xml.XmlNodeList> オブジェクトは、元のドキュメントに同期されます。 そのため、ノード リストを反復処理してノードの値を変更すると、そのノードは元のドキュメントにおいても更新されます。 前の例で、選択した <xref:System.Xml.XmlNodeList> でノードが変更されると、基になっているドキュメントも変更されることに注意してください。  
   
 > [!NOTE]
->  元のドキュメントが変更された場合は、選択を再実行するのが適切です。 変更されたノードが、以前はノード リストに含まれておらず、ノード リストに追加されるものであったり、ノード リストから削除されるものであったりした場合は、ノード リストの正確さは保証されなくなります。  
+> 元のドキュメントが変更された場合は、選択を再実行するのが適切です。 変更されたノードが、以前はノード リストに含まれておらず、ノード リストに追加されるものであったり、ノード リストから削除されるものであったりした場合は、ノード リストの正確さは保証されなくなります。  
   
 ## <a name="namespaces-in-xpath-expressions"></a>XPath 式の名前空間  
  XPath 式は名前空間を含むことができます。 名前空間の解決は <xref:System.Xml.XmlNamespaceManager> を使用してサポートされます。 XPath 式にプレフィックスが含まれる場合は、プレフィックスと名前空間 URI のペアを <xref:System.Xml.XmlNamespaceManager> に追加して、<xref:System.Xml.XmlNamespaceManager> を <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> メソッド、または <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> メソッドに渡す必要があります。 前のコード例では、<xref:System.Xml.XmlNamespaceManager> を使用して bookstore.xml ドキュメントの名前空間を解決しています。  
   
 > [!NOTE]
->  XPath 式にプレフィックスが含まれない場合は、名前空間 URI は空の名前空間であると仮定されます。 XML に既定の名前空間が含まれる場合でも、プレフィックスと名前空間 URI を <xref:System.Xml.XmlNamespaceManager> に追加する必要があります。そうしないと、ノードは選択されません。  
+> XPath 式にプレフィックスが含まれない場合は、名前空間 URI は空の名前空間であると仮定されます。 XML に既定の名前空間が含まれる場合でも、プレフィックスと名前空間 URI を <xref:System.Xml.XmlNamespaceManager> に追加する必要があります。そうしないと、ノードは選択されません。  
   
 #### <a name="input-file"></a>入力ファイル  
  次に示すのは、このトピックの例で入力ファイルとして使用している bookstore.xml ファイルです。  
@@ -164,4 +163,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

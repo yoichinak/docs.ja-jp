@@ -1,15 +1,15 @@
 ---
-title: '方法: LINQ to XML の例をビルドする (C#)'
+title: LINQ to XML の例をビルドする方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 116f708eb18d642cbe914cea1ea44bd1833f2af6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 289a13daed7e3c871156bf50c6fa04c113c0cd13
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486065"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "74141453"
 ---
-# <a name="how-to-build-linq-to-xml-examples-c"></a>方法: LINQ to XML の例をビルドする (C#)
+# <a name="how-to-build-linq-to-xml-examples-c"></a>LINQ to XML の例をビルドする方法 (C#)
 このドキュメントに含まれている各種のスニペットおよびコード例では、さまざまな名前空間のクラスと型が使用されます。 C# のコードをコンパイルする場合は、適切な `using` ディレクティブを指定する必要があります。  
   
 ## <a name="example"></a>例  
@@ -34,6 +34,6 @@ using System.Reflection;
 using System.IO.Packaging;  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](./linq-to-xml-overview.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e59fda62-77d5-4e37-89cb-ce7ae4627975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b86828e01fb00b12feff2ed451793c240e16e240
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744526"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134389"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty メソッド
-指定したプロパティの識別子によって参照されるプロパティにポインターを取得します。  
+指定したプロパティ識別子によって参照されるプロパティへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +37,21 @@ HRESULT GetProperty (
   
 ## <a name="parameters"></a>パラメーター  
  `PropertyId`  
- [in]要求されたプロパティの一意の識別子。  
+ から要求されたプロパティの一意の識別子。  
   
  `pvProperty`  
- [out]返されたプロパティのデータ。  
+ 入出力返されたプロパティデータ。  
   
  `pcbProperty`  
- [入力、出力]サイズ (バイト単位) の`pvProperty`します。  
+ [入力、出力]`pvProperty`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)

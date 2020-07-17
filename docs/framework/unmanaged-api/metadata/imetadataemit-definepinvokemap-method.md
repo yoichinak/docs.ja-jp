@@ -15,52 +15,50 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c6421ca47c3439d94c1ae86caaf2198298872d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777523"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008028"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap メソッド
-指定したトークンによって参照されるメソッドの PInvoke 署名の機能を設定します。  
+指定したトークンによって参照されるメソッドの PInvoke 署名の特徴を設定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefinePinvokeMap (   
-    [in]  mdToken            tk,   
-    [in]  DWORD              dwMappingFlags,   
-    [in]  LPCWSTR            szImportName,   
-    [in]  mdModuleRef        mrImportDLL   
+HRESULT DefinePinvokeMap (
+    [in]  mdToken            tk,
+    [in]  DWORD              dwMappingFlags,
+    [in]  LPCWSTR            szImportName,
+    [in]  mdModuleRef        mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]ターゲット メソッドのトークンです。  
+ からターゲットメソッドのトークン。  
   
  `dwMappingFlags`  
- [in]PInvoke によって、マッピングを行うために使用するフラグ。  
+ からマッピングを行うために PInvoke によって使用されるフラグ。  
   
  `szImportName`  
- [in]ターゲットの名前は、アンマネージ DLL 内のメソッドをエクスポートします。  
+ からアンマネージ DLL 内の対象のエクスポートメソッドの名前。  
   
  `mrImportDLL`  
- [in]ターゲットのトークン ネイティブ DLL。  
+ からターゲットのネイティブ DLL のトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

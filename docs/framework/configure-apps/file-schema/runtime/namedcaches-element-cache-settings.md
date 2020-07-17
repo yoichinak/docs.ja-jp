@@ -6,30 +6,30 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0640ca18d386141f3c03135019eb4fe959b5bf8
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704870"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79153959"
 ---
-# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 要素 (キャッシュ設定)
-名前付きの構成設定のコレクションを指定します<xref:System.Runtime.Caching.MemoryCache>インスタンス。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>プロパティから 1 つまたは複数の構成設定のコレクションの参照`namedCaches`構成ファイルの要素。  
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches> 要素 (キャッシュ設定)
+名前付きインスタンスの構成設定のコレクションを指定し <xref:System.Runtime.Caching.MemoryCache> ます。 プロパティは、構成 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> ファイルの1つ以上の要素から構成設定のコレクションを参照し `namedCaches` ます。  
   
- \<configuration>  
-\< system.runtime.caching >  
-\<memoryCache>  
-\<namedCaches>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<namedCaches>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <namedCaches>  
-  <add name="default"/>   
+  <add name="default"/>
 </namedCaches>  
 ```  
   
-## <a name="type"></a>型  
+## <a name="type"></a>Type  
  `None`  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -39,36 +39,38 @@ ms.locfileid: "61704870"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`cacheMemoryLimitMegabytes`|メガバイト単位で、最大許容サイズを指定する整数値のインスタンスを<xref:System.Runtime.Caching.MemoryCache>まで拡張できます。 既定値は 0 の自動サイズ調整ヒューリスティック。 つまり、<xref:System.Runtime.Caching.MemoryCache>クラスは、既定で使用されます。|  
+|`cacheMemoryLimitMegabytes`|のインスタンスを拡張できる最大許容サイズを mb 単位で指定する整数値 <xref:System.Runtime.Caching.MemoryCache> 。 既定値は0です。これは、クラスの自動サイズ調整ヒューリスティックが <xref:System.Runtime.Caching.MemoryCache> 既定で使用されることを意味します。|  
 |`name`|キャッシュの名前。|  
-|`physicalMemoryLimitPercentage`|キャッシュで使用できるコンピューターを物理的にインストールされているメモリの最大パーセンテージを指定する整数 0 ~ 100 の値。 既定値は 0 の自動サイズ調整ヒューリスティック。 つまり、<xref:System.Runtime.Caching.MemoryCache>クラスは、既定で使用されます。|  
-|`pollingInterval`|時間間隔を示す値。この値を超えると、キャッシュの実装によりキャッシュ インスタンスに設定されている絶対およびパーセントのメモリ制限と現在のメモリ負荷が比較されます。 この値は"HH:MM:SS"形式で入力します。|  
+|`physicalMemoryLimitPercentage`|物理的にインストールされたコンピューターメモリのうち、キャッシュで使用できる最大パーセンテージを指定する 0 ~ 100 の整数値。 既定値は0です。これは、クラスの自動サイズ調整ヒューリスティックが <xref:System.Runtime.Caching.MemoryCache> 既定で使用されることを意味します。|  
+|`pollingInterval`|時間間隔を示す値。この値を超えると、キャッシュの実装によりキャッシュ インスタンスに設定されている絶対およびパーセントのメモリ制限と現在のメモリ負荷が比較されます。 この値は、"HH: MM: SS" 形式で入力します。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|名前付きキャッシュを、メモリ キャッシュの `namedCaches` コレクションに追加します。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|メモリ キャッシュの `namedCaches` コレクションを消去します。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。|  
+|[\<add>](add-element-for-namedcaches.md)|名前付きキャッシュを、メモリ キャッシュの `namedCaches` コレクションに追加します。|  
+|[\<clear>](clear-element-for-namedcaches.md)|メモリ キャッシュの `namedCaches` コレクションを消去します。|  
+|[\<remove>](remove-element-for-namedcaches.md)|名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> クラスに基づくキャッシュを構成するために使用される要素を定義します。|  
+|[\<configuration>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
+|[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> クラスに基づくキャッシュを構成するために使用される要素を定義します。|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework に組み込まれているアプリケーションに出力キャッシュを実装できる型が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- Web.config ファイルのメモリ キャッシュ構成セクションに含めることができます`add`、 `remove`、および`clear`の属性を`namedCaches`コレクション。 各`namedCaches`でエントリを一意に識別、`name`属性。  
+## <a name="remarks"></a>解説  
+ Web.config ファイルのメモリキャッシュ構成セクションには `add` 、コレクションの、、の各属性を含めることができ `remove` `clear` `namedCaches` ます。 各 `namedCaches` エントリは、属性によって一意に識別され `name` ます。  
   
- アプリケーション構成ファイル内の情報を参照することによって、メモリ キャッシュ エントリのインスタンスを取得できます。 既定では、既定のキャッシュ インスタンスの構成ファイルにエントリがあります。 既定のキャッシュ インスタンスがインスタンスから返される、<xref:System.Runtime.Caching.MemoryCache.Default%2A>プロパティ。  
+ メモリキャッシュエントリのインスタンスを取得するには、アプリケーション構成ファイル内の情報を参照します。 既定では、構成ファイルにエントリが存在するのは既定のキャッシュインスタンスだけです。 既定のキャッシュインスタンスは、プロパティから返されるインスタンスです <xref:System.Runtime.Caching.MemoryCache.Default%2A> 。  
   
- 名前属性を"default"を設定した場合、要素は、既定のメモリ キャッシュ インスタンスを使用します。  
+ Name 属性を "default" に設定した場合、要素は既定のメモリキャッシュインスタンスを使用します。  
   
 ## <a name="example"></a>例  
- 次の例では、既定のキャッシュ エントリ名に設定して、キャッシュの名前を設定する方法を示しています、`name`属性を"default"です。  
+ 次の例は、属性を "default" に設定することによって、キャッシュの名前を既定のキャッシュエントリ名に設定する方法を示して `name` います。  
   
- `cacheMemoryLimitMegabytes` 属性および `physicalMemoryPercentage` 属性はゼロに設定されます。 これらの属性を 0 に設定することを意味の自動サイズ調整ヒューリスティック、<xref:System.Runtime.Caching.MemoryCache>クラスを使用します。 キャッシュの実装では、絶対およびパーセントのメモリ制限 2 分ごとの現在のメモリ負荷を比較します。  
+ `cacheMemoryLimitMegabytes` 属性および `physicalMemoryPercentage` 属性はゼロに設定されます。 これらの属性を0に設定すると、クラスの自動サイズ調整ヒューリスティックが <xref:System.Runtime.Caching.MemoryCache> 使用されます。 キャッシュの実装では、現在のメモリ負荷と、絶対値および割合に基づくメモリ制限を2分ごとに比較します。  
   
 ```xml  
 <configuration>  
@@ -76,8 +78,8 @@ ms.locfileid: "61704870"
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -89,4 +91,4 @@ ms.locfileid: "61704870"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<memoryCache > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+- [\<memoryCache>要素 (キャッシュ設定)](memorycache-element-cache-settings.md)

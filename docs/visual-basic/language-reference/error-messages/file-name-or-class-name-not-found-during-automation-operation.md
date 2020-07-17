@@ -1,23 +1,23 @@
 ---
-title: オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)
+title: オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID432
 ms.assetid: 6883c208-de5e-44da-a525-b50122e5a170
-ms.openlocfilehash: 135dd8839ec406a8a9700c7ce7006c368d26b7c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: c9387286a3a4bbece4f73e05d28eb9e0afda048d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592069"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363084"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)
-ファイル名またはクラスへの呼び出しで指定された名前、`GetObject`関数が見つかりませんでした。  
+`GetObject` 関数の呼び出しで、ファイル名またはクラスに指定された名前が見つかりませんでした。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 名前を確認してもう一度やり直してください。 使用される名前の確認、`class`パラメーターでは、システムに登録されていると一致します。  
+- 名前を確認し、再試行してください。 `class` パラメーターに使用されている名前が、システムに登録されている名前と一致していることを確認してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [エラーの種類](../../programming-guide/language-features/error-types.md)

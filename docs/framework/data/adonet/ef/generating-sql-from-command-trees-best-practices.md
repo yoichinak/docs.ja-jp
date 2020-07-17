@@ -2,12 +2,12 @@
 title: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606668"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039997"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>コマンド ツリーからの SQL の生成: ベスト プラクティス
 
@@ -31,7 +31,7 @@ ORDER BY …
 
 例として、次のクエリ コマンド ツリーについて考えます。
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ WHERE b.y = 5
 
 左辺スパイン結合 (別の結合の左辺の子として表示される結合) は、1 つの SQL SELECT ステートメントに簡単にフラット化できます。 たとえば、次のクエリ コマンド ツリーについて考えます。
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 ただし、左辺スパイン結合以外の結合のフラット化は容易ではないので、実行しないでください。 たとえば、次のクエリ コマンド ツリーの結合について考えます。
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -125,7 +125,7 @@ ON b.y = d.z
 
 ## <a name="join-alias-flattening"></a>結合の別名のフラット化
 
-出力コマンド ツリーの他の関係式とは異なり、DbJoinExpression は 2 つの列から成る行として結果の型を出力します。この 2 つの列のそれぞれが、いずれか 1 つの入力に対応しています。 結合から生じたスカラー プロパティにアクセスする、DbPropertyExpression が構築されると、1 つの DbPropertyExpression になります。
+出力コマンド ツリーの他の関係式とは異なり、DbJoinExpression は 2 つの列から成る行として結果の型を出力します。この 2 つの列のそれぞれが、いずれか 1 つの入力に対応しています。 結合から生じたスカラー プロパティにアクセスするために作成された DbPropertyExpression は、別の DbPropertyExpression に基づいています。
 
 例として、例 2 の "a.b.y" と例 3 の "b.c.y" が挙げられます。 ただし、対応する SQL ステートメントでは、これらは "b.y" になります。 この別名の再設定は、結合の別名のフラット化と呼ばれます。
 
@@ -137,16 +137,16 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>SELECT * の回避
 
-ベース テーブルから選択する際には `SELECT *` を使用しないでください。 ストレージ モデル、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーションは、データベース テーブルに含まれる列のサブセットのみを含めることがあります。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。
+ベース テーブルから選択する際には `SELECT *` を使用しないでください。 Entity Framework アプリケーションのストレージ モデルでは、データベース テーブル内の列のサブセットのみを含めることができます。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。
 
 ## <a name="reuse-of-expressions"></a>式の再利用
 
-式は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって渡されたクエリ コマンド ツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。
+式は、Entity Framework によって渡されたクエリ コマンド ツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。
 
 ## <a name="mapping-primitive-types"></a>プリミティブ型のマッピング
 
-概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 BLOB の種類と同様に、多くの操作を使用できない型へのマッピングを回避することも、(たとえば、 `ntext` SQL server)。
+概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 また、BLOB 型のような、多様な操作に使用できない型 (SQL Server の `ntext` など) にマップすることは避けてください。
 
 ## <a name="see-also"></a>関連項目
 
-- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 生成](sql-generation.md)

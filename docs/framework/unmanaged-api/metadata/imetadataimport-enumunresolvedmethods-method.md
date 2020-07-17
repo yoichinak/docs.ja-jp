@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c991c0af845bc6825db6b3bf258fe0809d5db804
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782546"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503698"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods メソッド
 現在のメタデータ スコープ内の未解決のメソッドを表す MemberDef トークンを列挙します。  
@@ -40,39 +38,39 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `rMethods`  
- [out]MemberDef トークンを格納するために使用する配列。  
+ 入出力MemberDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rMethods` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]返される MemberDef トークン数`rMethods`します。  
+ 入出力で返された MemberDef トークンの数 `rMethods` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumUnresolvedMethods`正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- 未解決のメソッドは宣言されましたが、実装されていません。 メソッドがマークされている場合に、列挙体のメソッドが含まれている`miForwardRef`、`mdPinvokeImpl`または`miRuntime`0 に設定されます。 つまり、未解決のメソッドは、マークされているクラス メソッド`miForwardRef`(PInvoke 経由で到達)、アンマネージ コードで実装またはランタイム自体によって内部的に実装するはありませんが、  
+## <a name="remarks"></a>解説  
+ 未解決のメソッドとは、宣言されていても実装されていないメソッドです。 メソッドがマークされ、 `miForwardRef` `mdPinvokeImpl` またはが0に設定されている場合、メソッドは列挙体に含まれ `miRuntime` ます。 つまり、未解決のメソッドは、とマークされているものの、 `miForwardRef` アンマネージコードでは実装されていない (PInvoke 経由で)、またはランタイム自体によって内部的に実装されていないクラスメソッドです。  
   
- 列挙体は、モジュール スコープ (グローバル) またはインターフェイスまたは抽象クラスで定義されているすべてのメソッドを除外します。  
+ 列挙体には、モジュールスコープ (globals) またはインターフェイスまたは抽象クラスで定義されているすべてのメソッドが除外されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

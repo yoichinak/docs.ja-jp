@@ -2,17 +2,15 @@
 title: .NET ネイティブによる起動時間の改善の測定
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea993880d68ab13eab8dfb4cf5e1d172025c6186
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052571"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79180999"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
-.NET ネイティブの場合、大幅に、アプリの起動時間を向上します。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
+.NET ネイティブすると、アプリの起動時間が大幅に短縮されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
   
  パフォーマンスの調査を容易にするために、.NET Framework と Windows では、イベントが発生したときにアプリからツールに通知できるようにする Windows イベント トレーシング (ETW) という名前のイベント フレームワークを使用しています。 PerfView というツールを使用して、ETW イベントを簡単に表示および分析できます。 このトピックでは、次の方法を説明します。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "66052571"
   
 - アプリが新しいストーリーの同期を終了した場合。  
   
- アプリをインストルメント化することは簡単です。派生クラスで適切なメソッドを呼び出すだけです。 前の例の `AppEventSource` を使用して、次のようにアプリをインストルメント化できます。  
+ アプリのインストルメント化は簡単です。派生クラスで適切なメソッドを呼び出すのみです。 前の例の `AppEventSource` を使用して、次のようにアプリをインストルメント化できます。  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -57,15 +55,15 @@ ms.locfileid: "66052571"
  PerfView は ETW イベントを使用して、アプリでさまざまなパフォーマンスを調査できるようにします。 また、さまざまな種類のイベントのログ記録をオンまたはオフにするために使用できる構成 GUI も含まれています。 PerfView は無料ツールであり、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=28567)からダウンロードできます。 詳細については、[PerfView のチュートリアル ビデオ](https://channel9.msdn.com/Series/PerfView-Tutorial)をご覧ください。  
   
 > [!NOTE]
->  PerfView を使用して ARM システムでイベントを収集することはできません。 ARM システムでイベントを収集する場合は、Windows Performance Recorder (WPR) を使用します。 詳細については、[Vance Morrison のブログ投稿](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx)をご覧ください。  
+> PerfView を使用して ARM システムでイベントを収集することはできません。 ARM システムでイベントを収集する場合は、Windows Performance Recorder (WPR) を使用します。 詳細については、[Vance Morrison のブログ投稿](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device)をご覧ください。  
   
  コマンド ラインから PerfView を呼び出すこともできます。 プロバイダーからのイベントのみをログに記録する場合は、コマンドプロンプト ウィンドウを開き、次のコマンドを入力します。  
   
-```  
-perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
+```console
+perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
- それぞれの文字について以下に説明します。  
+ 各値の説明:  
   
  `-KernelEvents:Process`  
  プロセスが開始および停止したときに通知するよう指定します。 他のイベント時間から減算できるよう、アプリに Process/Start イベントが必要です。  
@@ -95,7 +93,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  左ペインに示されているイベントをすべて選択し (Ctrl + A)、**Enter** キーを押します。 これで、各イベントのタイムスタンプを表示できるようになります。 これらのタイムスタンプは、トレースの開始時間を基準としています。そのため、起動時からの経過時間を調べるには、プロセスの開始時間から各イベントの時間を減算する必要があります。 Ctrl キーを押しながらクリックして 2 つのタイムスタンプを選択すると、ページ下部にあるステータス バーにそれらのタイムスタンプの差が表示されます。 これにより、表示されている 2 つのイベント間の経過時間が簡単にわかるようになります (プロセスの開始を含む)。 ビューのショートカット メニューを開いて、CSV ファイルにエクスポートしたり、Microsoft Excel を開いてデータを保存または処理したりするなど、便利なオプションを選択できます。  
   
- 元のアプリと .NET ネイティブ ツール チェーンを使用してビルドしたバージョンの両方の手順を繰り返すことによってパフォーマンスの違いを比較できます。   .NET ネイティブ アプリは、一般に .NET ネイティブ以外のアプリよりも高速起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)をご覧ください。  
+ 元のアプリと .NET ネイティブツールチェーンを使用して作成したバージョンの両方に対して手順を繰り返すことで、パフォーマンスの違いを比較できます。   .NET ネイティブアプリは、一般に non-.NET ネイティブアプリよりも高速に起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8298e7240052bdd859dbe414281d8e78984342e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b48d131fa99b65d38856d2b635bf59145db9157e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778245"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615242"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName メソッド
 この変数の名前を取得します。  
@@ -39,20 +37,20 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in]バッファーの長さを`pcchName`パラメーターを指します。  
+ からパラメーターが指すバッファーの長さ `pcchName` 。  
   
  `pcchName`  
- [out]ポインター、`ULONG32`文字、終端の null を含む、名前を格納するために必要なバッファーのサイズを受け取る。  
+ 入出力`ULONG32`Null 終了を含む、名前を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
  `szName`  
- [out]名前を格納するバッファー。  
+ 入出力名前を格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedVariable インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable インターフェイス](isymunmanagedvariable-interface.md)

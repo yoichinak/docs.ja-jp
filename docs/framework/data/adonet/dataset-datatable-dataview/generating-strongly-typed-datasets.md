@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
-ms.translationtype: MT
+ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504095"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040086"
 ---
 # <a name="generating-strongly-typed-datasets"></a>厳密に型指定された DataSet の生成
-標準的な XML スキーマ定義言語 (XSD) に準拠する XML スキーマを指定するを作成して、厳密に型指定された<xref:System.Data.DataSet>Windows ソフトウェア開発キット (SDK) で提供される、XSD.exe ツールを使用します。  
+XML スキーマ定義言語 (XSD) 標準に準拠する XML スキーマがあれば、Windows ソフトウェア開発キット (SDK) に付属する XSD.exe ツールを使用して、厳密に型指定された <xref:System.Data.DataSet> を生成できます。  
   
- (データベース テーブルから xsd を作成するを参照してください。<xref:System.Data.DataSet.WriteXmlSchema%2A>または[Visual Studio でのデータセットの操作](/visualstudio/data-tools/dataset-tools-in-visual-studio))。  
+ (データベース テーブルから xsd を作成するには、<xref:System.Data.DataSet.WriteXmlSchema%2A> に関するトピック、または「[Visual Studio でのデータセットの操作](/visualstudio/data-tools/dataset-tools-in-visual-studio)」を参照してください)。  
   
- 次のコードを生成するための構文を示しています、**データセット**このツールを使用します。  
+ 次のコードでは、このツールを使用して **DataSet** を生成する構文を示します。  
   
-```  
+```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- この構文では、`/d`ディレクティブを生成するツールに指示を**データセット**、および`/l:`(たとえば、c# または Visual Basic .NET) を使用するには、どのような言語、ツールに指示します。 省略可能な`/eld`ディレクティブは、生成されたに対するクエリを LINQ to DataSet を使用することができますを指定します**データセット。** このオプションは、`/d` オプションと組み合わせて指定します。 詳細については、次を参照してください。[型指定されたデータセットのクエリを実行する](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)します。 省略可能な`/n:`ディレクティブもの名前空間を生成するツールに指示、**データセット**と呼ばれる**XSDSchema.Namespace**します。 コマンドの出力は XSDSchemaFileName.cs で、ADO.NET アプリケーションでコンパイルおよび使用できます。 生成されたコードをライブラリまたはモジュールとしてコンパイルできます。  
+ この構文の `/d` ディレクティブでは、**DataSet** を生成することをツールに指示し、`/l:` では使用する言語 (C#、Visual Basic .NET など) をツールに指示します。 オプションの `/eld` ディレクティブを指定すると、生成された **DataSet** に対し、LINQ to DataSet を使用してクエリを実行できます。 このオプションは、`/d` オプションと組み合わせて指定します。 詳しくは、「[型指定された DataSet のクエリ](../querying-typed-datasets.md)」をご覧ください。 オプションの `/n:` ディレクティブでは、**XSDSchema.Namespace** という名前の名前空間も **DataSet** に対して生成することをツールに指示します。 コマンドの出力は XSDSchemaFileName.cs で、ADO.NET アプリケーションでコンパイルおよび使用できます。 生成されたコードをライブラリまたはモジュールとしてコンパイルできます。  
   
  C# コンパイラ (csc.exe) を使用して、生成されたコードをライブラリとしてコンパイルする構文を次のコードで示します。  
   
-```  
+```console  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- 次のコード例は、型指定された**データセット**という**CustomerDataSet**から顧客の一覧を読み込む、 **Northwind**データベース。 使用して、データが読み込まれると、**入力**メソッド、例は、各顧客をループ処理、**顧客**、型指定されたを使用してテーブル**CustomersRow** (**DataRow**) オブジェクト。 これによりへの直接アクセス、 **CustomerID**を経由している列、 **DataColumnCollection**します。  
+ 次のコード例では、**CustomerDataSet** という名前の型指定された **DataSet** を使用して、**Northwind** データベースから顧客リストを読み込みます。 **Fill** メソッドを使用してデータを読み込んだ後、例では、型指定された **CustomersRow** (**DataRow**) オブジェクトを使用して、**Customers** テーブルの各顧客をループします。 このようにすると、**DataColumnCollection** による場合とは異なり、**CustomerID** 列に直接アクセスできます。  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- 例に使用された XML スキーマを次に示します。  
+ 例に使用された XML スキーマを次に示します。
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -98,6 +98,6 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [型指定されたデータセット](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [型指定されたデータセット](typed-datasets.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

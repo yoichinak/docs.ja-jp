@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879828"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151300"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow および DataRowView
-<xref:System.Data.DataView> は、<xref:System.Data.DataRowView> オブジェクトの列挙可能なコレクションを公開します。 **DataRowView**オブジェクトは、名前または基になるテーブル内の列の序数参照によってインデックスが作成されるオブジェクトの配列として値を公開します。 アクセスできる、<xref:System.Data.DataRow>公開している、 **DataRowView**を使用して、<xref:System.Data.DataRowView.Row%2A>のプロパティ、 **DataRowView**します。  
+<xref:System.Data.DataView> は、<xref:System.Data.DataRowView> オブジェクトの列挙可能なコレクションを公開します。 **DataRowView** オブジェクトは、基になるテーブルの列の名前または列の序数参照によってインデックスが設定されているオブジェクトの配列として値を公開します。 **DataRowView** の <xref:System.Data.DataRowView.Row%2A> プロパティを使用することによって、**DataRowView** で公開されている <xref:System.Data.DataRow> にアクセスできます。  
   
- 使用して値を表示すると、 **DataRowView**、<xref:System.Data.DataView.RowStateFilter%2A>のプロパティ、 **DataView** 、基になる行バージョンが決まります**DataRow**公開されます。 使用して別の行のバージョンにアクセスする方法については、 **DataRow**を参照してください[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+ **DataRowView** を使用して値を表示している場合は、**DataView** の <xref:System.Data.DataView.RowStateFilter%2A> プロパティによって、基になる **DataRow** から公開される行バージョンが決まります。 **DataRow** を使用してさまざまな行バージョンにアクセスする方法については、「[行の状態とバージョン](row-states-and-row-versions.md)」をご覧ください。  
   
  テーブルの現在の値と元の値をすべて表示するコード サンプルを次に示します。  
   
@@ -25,7 +25,7 @@ Console.WriteLine("Current Values:")
 WriteView(catView)  
 Console.WriteLine("Original Values:")  
 catView.RowStateFilter = DataViewRowState.ModifiedOriginal  
-WriteView(catView)      
+WriteView(catView)
   
 Public Shared Sub WriteView(thisDataView As DataView)  
   Dim rowView As DataRowView  
@@ -65,5 +65,5 @@ public static void WriteView(DataView thisDataView)
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET の概要](../ado-net-overview.md)

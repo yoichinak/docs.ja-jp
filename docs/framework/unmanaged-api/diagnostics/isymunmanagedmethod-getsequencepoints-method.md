@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759451"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615145"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints メソッド
-このメソッド内のすべてのシーケンス ポイントを取得します。  
+このメソッド内のすべてのシーケンスポイントを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>パラメーター  
  `cPoints`  
- [in]A`ULONG32`のサイズを受け取る、 `offsets`、 `documents`、 `lines`、 `columns`、 `endLines`、および`endColumns`配列。  
+ から、、、、、 `ULONG32` およびの各配列のサイズを受け取る `offsets` `documents` `lines` `columns` `endLines` `endColumns` 。  
   
  `pcPoints`  
- [out]ポインター、`ULONG32`シーケンス ポイントの格納に必要なバッファーの長さを受け取る。  
+ 入出力`ULONG32`シーケンスポイントを格納するために必要なバッファーの長さを受け取るへのポインター。  
   
  `offsets`  
- [in]シーケンス ポイントに対するメソッドの先頭から language (MSIL) オフセットを Microsoft 中間を格納する配列。  
+ からシーケンスポイントのメソッドの先頭からの MSIL (Microsoft 中間言語) オフセットを格納する配列。  
   
  `documents`  
- [in]シーケンス ポイントが配置されているドキュメントを格納する配列。  
+ からシーケンスポイントが配置されているドキュメントを格納する配列。  
   
  `lines`  
- [in]シーケンス ポイントが配置されているドキュメントの行を格納する配列。  
+ からシーケンスポイントが配置されているドキュメント内の行を格納する配列。  
   
  `columns`  
- [in]シーケンス ポイントが配置されているドキュメント内の列を格納する配列。  
+ からシーケンスポイントが配置されているドキュメント内の列を格納する配列。  
   
  `endLines`  
- [in]シーケンス ポイントが終了するドキュメント内の行の配列。  
+ からシーケンスポイントが終了するドキュメント内の行の配列。  
   
  `endColumns`  
- [in]シーケンス ポイントが終了するドキュメント内の列の配列。  
+ からシーケンスポイントが終了するドキュメント内の列の配列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod インターフェイス](isymunmanagedmethod-interface.md)

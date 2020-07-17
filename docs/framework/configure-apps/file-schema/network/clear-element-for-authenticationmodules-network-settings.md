@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674611"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74087509"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<クリア > authenticationModules (ネットワーク設定) の要素
-アプリケーションからのすべての認証モジュールを削除します。  
-  
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<clear>  
-  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>authenticationModules の \<clear> 要素 (ネットワーク設定)
+アプリケーションからすべての認証モジュールを削除します。  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -38,22 +38,22 @@ ms.locfileid: "61674611"
  なし。  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|ネットワーク要求の認証に使用されるモジュールを指定します。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|ネットワーク要求を認証するために使用するモジュールを指定します。|  
   
-## <a name="remarks"></a>Remarks  
- `clear`要素は、構成ファイルで、または構成階層のより高いレベルで既に定義されているすべての認証モジュールを削除します。  
+## <a name="remarks"></a>解説  
+ 要素は、構成 `clear` ファイルまたは構成階層内の上位レベルで定義されたすべての認証モジュールを削除します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、すべての構成済み認証モジュールを削除します。  
+ 次の例では、構成されているすべての認証モジュールを削除します。  
   
 ```xml  
 <configuration>  
@@ -69,4 +69,4 @@ ms.locfileid: "61674611"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

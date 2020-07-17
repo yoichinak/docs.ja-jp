@@ -15,79 +15,77 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777634"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501314"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember メソッド
-型または現在のスコープ外に定義され、その参照のトークンを定義するモジュールの指定されたメンバーへの参照を作成します。  
+現在のスコープの外部で定義されている型またはモジュールの指定したメンバーへの参照を作成し、その参照のトークンを定義します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefineImportMember (   
-    [in]  IMetaDataAssemblyImport  *pAssemImport,   
-    [in]  const void               *pbHashValue,   
+HRESULT DefineImportMember (
+    [in]  IMetaDataAssemblyImport  *pAssemImport,
+    [in]  const void               *pbHashValue,
     [in]  ULONG                    cbHashValue,  
-    [in]  IMetaDataImport          *pImport,   
-    [in]  mdToken                  mbMember,   
-    [in]  IMetaDataAssemblyEmit    *pAssemEmit,   
-    [in]  mdToken                  tkParent,   
-    [out] mdMemberRef              *pmr   
+    [in]  IMetaDataImport          *pImport,
+    [in]  mdToken                  mbMember,
+    [in]  IMetaDataAssemblyEmit    *pAssemEmit,
+    [in]  mdToken                  tkParent,
+    [out] mdMemberRef              *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in][IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)対象メンバーのインポート元となるアセンブリを表すインターフェイスです。  
+ からターゲットメンバーのインポート元のアセンブリを表す[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)インターフェイス。  
   
  `pbHashValue`  
- [in]指定されたアセンブリのハッシュを格納する配列`pAssemImport`します。  
+ からによって指定されたアセンブリのハッシュを格納している配列 `pAssemImport` 。  
   
  `cbHashValue`  
  [in] `pbHashValue` 配列のバイト数。  
   
  `pImport`  
- [in][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)対象メンバーのインポート元のメタデータ スコープを表すインターフェイスです。  
+ からターゲットメンバーのインポート元のメタデータスコープを表す[IMetaDataImport](imetadataimport-interface.md)インターフェイス。  
   
  `mbMember`  
- [in]ターゲット メンバーを指定するメタデータ トークンです。 トークンを指定できます、 `mdMethodDef` (メンバー メソッドの場合) の`mdProperty`(のメンバー プロパティの場合) または`mdFieldDef`(メンバー フィールド) のトークン。  
+ からターゲットメンバーを指定するメタデータトークン。 トークンには、 `mdMethodDef` (メンバーメソッドの場合)、(メンバープロパティの場合)、 `mdProperty` または `mdFieldDef` (メンバーフィールドの場合) トークンを指定できます。  
   
  `pAssemEmit`  
- [in][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)対象メンバーのインポート先のアセンブリを表すインターフェイスです。  
+ からターゲットメンバーがインポートされるアセンブリを表す[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)インターフェイス。  
   
  `tkParent`  
- [in]`mdTypeRef`または`mdModuleRef`型またはモジュールのトークンを所有する対象のメンバー。  
+ から`mdTypeRef` `mdModuleRef` ターゲットメンバーを所有する型またはモジュールのトークンまたはトークン。  
   
  `pmr`  
- [out]`mdMemberRef`メンバー参照の現在のスコープで定義されているトークンです。  
+ 入出力`mdMemberRef`メンバー参照の現在のスコープで定義されているトークン。  
   
-## <a name="remarks"></a>Remarks  
- `DefineImportMember`メソッドで指定されたメンバーを検索`mbMember`がで指定された別のスコープで定義されている`pImport`、そのプロパティを取得します。 呼び出しにこの情報を使用して、 [imetadataemit::definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)メンバー参照を作成する現在のスコープ内のメソッド。  
+## <a name="remarks"></a>解説  
+ メソッドは、で指定された `DefineImportMember` メンバーを検索し `mbMember` ます。このメンバーは、で指定した別のスコープで定義され、 `pImport` そのプロパティを取得します。 この情報を使用して、現在のスコープで[IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md)メソッドを呼び出し、メンバー参照を作成します。  
   
- 使用する前に、一般に、`DefineImportMember`メソッドを作成する必要が、現在のスコープは、型参照またはターゲット メンバーの親クラス、インターフェイス、またはモジュールのモジュール参照。 この参照のメタデータ トークンが渡されたし、`tkParent`引数。 コンパイラまたはリンカーによって後で解決する場合は、ターゲット メンバーの親への参照を作成する必要はありません。 まとめ  
+ 一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。 その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。 後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。 まとめ  
   
-- 対象のメンバーがフィールドまたはメソッドの場合は、いずれかを使用、 [imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)または[imetadataemit::defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)の現在のスコープ内の型参照を作成する方法、メンバーの親クラスまたはインターフェイスの親。  
+- ターゲットメンバーがフィールドまたはメソッドの場合は、 [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md)または[IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)メソッドを使用して、メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成します。  
   
-- グローバル変数またはグローバル関数 (つまり、いないメンバー クラスまたはインターフェイスの) の場合は、対象のメンバーを使用して、 [imetadataemit::definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)メソッド メンバーの親の現在のスコープ内のモジュール参照を作成するにはモジュール。  
+- ターゲットメンバーがグローバル変数またはグローバル関数 (つまり、クラスまたはインターフェイスのメンバーではない) である場合は、 [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md)メソッドを使用して、メンバーの親モジュールに対して、現在のスコープでモジュール参照を作成します。  
   
-- ターゲット メンバーの親はコンパイラまたはリンカーで後で解決される、その渡す`mdTokenNil`で`tkParent`します。 これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が最終的には、現在のモジュールにリンクされる .obj ファイルからインポートされると、メタデータのマージします。  
+- ターゲットメンバーの親が、後でコンパイラまたはリンカーによって解決される場合は、を渡し `mdTokenNil` `tkParent` ます。 これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が、最終的に現在のモジュールにリンクされ、メタデータがマージされる .obj ファイルからインポートされる場合です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

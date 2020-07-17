@@ -1,22 +1,22 @@
 ---
-title: <workflow> WCF の
+title: <workflow>WCF の
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: 190e66096cf2dfa2028c95b22526fc3c84712ab8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6c9e14a4ad3d9713ae2d35d6ade20690e0c3575
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769682"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "69932790"
 ---
-# <a name="workflow-of-wcf"></a>\<ワークフロー > の WCF
+# <a name="workflow-of-wcf"></a>\<workflow>WCF の
 ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素を構成します。 これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。  
   
- ワークフロー追跡と追跡参加要素の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)します。  
+ ワークフロー追跡と追跡参加要素の詳細については、「[ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「[追跡参加要素](../../../windows-workflow-foundation/tracking-participants.md)」を参照してください。  
   
  \<system.serviceModel>  
-\<追跡 >  
-\<参加者 >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -40,7 +40,7 @@ ms.locfileid: "61769682"
 |-------------|-----------------|  
 |name|追跡参加要素の名前を指定する文字列。|  
 |profileName|追跡参加要素が定期受信した追跡レコードを定義する、追跡プロファイルの名前を指定する文字列。|  
-|型|追跡参加要素の型を指定する文字列。|  
+|type|追跡参加要素の型を指定する文字列。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -49,9 +49,9 @@ ms.locfileid: "61769682"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|追跡参加要素の一覧|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|追跡参加要素の一覧|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  追跡参加要素は、ワークフローから生成される追跡データを取得し、それを別のメディアに保存するために使用します。 同様に、追跡レコードの後処理はすべて、追跡参加要素内でも実行できます。  
   
  複数の追跡参加要素が追跡イベントを同時に使用することができます。 各追跡参加要素は、それぞれ別の追跡プロファイルと関連付けることができます。  
@@ -93,5 +93,5 @@ ms.locfileid: "61769682"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [ワークフロー追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡参加要素](../../../windows-workflow-foundation/tracking-participants.md)

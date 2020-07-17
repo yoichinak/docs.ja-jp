@@ -7,35 +7,35 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: a4e3492b4ff4a0eb670d2f1e0c0f8daab269cb7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d86397fc49ad1fe04c4c3b4565b2cab850dfb695
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982671"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441461"
 ---
 # <a name="ui-automation-control-patterns"></a>UI オートメーション コントロール パターン
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- このセクションを使用する方法の詳細については、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]コントロール パターン。  
+ ここでは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロールパターンの使用方法について詳しく説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーション Dock コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
- [UI オートメーション ExpandCollapse コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
- [UI オートメーション Grid コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
- [UI オートメーション GridItem コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [UI オートメーション Invoke コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern.md)  
- [UI オートメーション MultipleView コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-multipleview-control-pattern.md)  
- [UI オートメーション RangeValue コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-rangevalue-control-pattern.md)  
- [UI オートメーション Scroll コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-scroll-control-pattern.md)  
- [UI オートメーション ScrollItem コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-scrollitem-control-pattern.md)  
- [UI オートメーション Selection コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [UI オートメーション SelectionItem コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
- [UI オートメーション Table コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [UI オートメーション TableItem コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
- [UI オートメーション Toggle コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)  
- [UI オートメーション Transform コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
- [UI オートメーション Value コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
- [UI オートメーション Window コントロール パターンの実装](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [方法トピック](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [UI オートメーション Dock コントロール パターンの実装](implementing-the-ui-automation-dock-control-pattern.md)  
+ [UI オートメーション ExpandCollapse コントロール パターンの実装](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
+ [UI オートメーション Grid コントロール パターンの実装](implementing-the-ui-automation-grid-control-pattern.md)  
+ [UI オートメーション GridItem コントロール パターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)  
+ [UI オートメーション Invoke コントロール パターンの実装](implementing-the-ui-automation-invoke-control-pattern.md)  
+ [UI オートメーション MultipleView コントロール パターンの実装](implementing-the-ui-automation-multipleview-control-pattern.md)  
+ [UI オートメーション RangeValue コントロール パターンの実装](implementing-the-ui-automation-rangevalue-control-pattern.md)  
+ [UI オートメーション Scroll コントロール パターンの実装](implementing-the-ui-automation-scroll-control-pattern.md)  
+ [UI オートメーション ScrollItem コントロール パターンの実装](implementing-the-ui-automation-scrollitem-control-pattern.md)  
+ [UI オートメーション Selection コントロール パターンの実装](implementing-the-ui-automation-selection-control-pattern.md)  
+ [UI オートメーション SelectionItem コントロール パターンの実装](implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [UI オートメーション Table コントロール パターンの実装](implementing-the-ui-automation-table-control-pattern.md)  
+ [UI オートメーション TableItem コントロール パターンの実装](implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [UI オートメーション Toggle コントロール パターンの実装](implementing-the-ui-automation-toggle-control-pattern.md)  
+ [UI オートメーション Transform コントロール パターンの実装](implementing-the-ui-automation-transform-control-pattern.md)  
+ [UI オートメーション Value コントロール パターンの実装](implementing-the-ui-automation-value-control-pattern.md)  
+ [UI オートメーション Window コントロール パターンの実装](implementing-the-ui-automation-window-control-pattern.md)  
+ [方法のトピック](ui-automation-control-patterns-how-to-topics.md)

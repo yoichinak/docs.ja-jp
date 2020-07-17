@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8a74304-1cb2-4977-a21d-e1af48c563ff
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f823f660efee2d53bc1f6fa50d8878f496417379
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90ba690897abced2d4f6282eedef91712d8ceeca
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752279"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976344"
 ---
 # <a name="icordebugenumgetcount-method"></a>ICorDebugEnum::GetCount メソッド
 列挙に含まれる項目の数を取得します。  
@@ -37,13 +35,13 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>パラメーター  
  `pcelt`  
- [out]列挙に含まれる項目数へのポインター。  
+ 入出力列挙体に含まれる項目の数へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

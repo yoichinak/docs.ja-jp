@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e81055163e5cbd64ecfbb412704e43e7663ccd45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645150"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501080"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 インターフェイス
-拡張[IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)メタデータ ストリームを操作するためのメソッドを含めます。  
+メタデータストリームを操作するためのメソッドを含めるように[Imetadatatables](imetadatatables-interface.md)拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetMetaDataStorage メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|指定されたセクションに格納されているメタデータの内容とサイズを取得します。|  
-|[GetMetaDataStreamInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|名前、サイズ、および指定したインデックス位置にあるメタデータのストリームの内容を取得します。|  
+|[GetMetaDataStorage メソッド](imetadatatables2-getmetadatastorage-method.md)|指定したセクションに格納されているメタデータのサイズと内容を取得します。|  
+|[GetMetaDataStreamInfo メソッド](imetadatatables2-getmetadatastreaminfo-method.md)|指定したインデックス位置にあるメタデータストリームの名前、サイズ、および内容を取得します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataTables インターフェイス](imetadatatables-interface.md)
+- [メタデータ インターフェイス](metadata-interfaces.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4cce59e1-80b9-4fc4-b3aa-126f1c5876bc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd7131c55f9c06a8fcfc0cad859c18e410169c78
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a7ecd475a8031fedb2c8474593b45045fcc6fb9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778199"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610133"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>ISymUnmanagedWriter::Close メソッド
-シンボルをシンボル ストアにコミットした後は、シンボル ライターを閉じます。  
+シンボルをシンボルストアにコミットした後、シンボルライターを閉じます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +32,14 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>Remarks  
- この呼び出しの後、シンボルのライターが、以降の更新は無効になります。 シンボルをコミットせずシンボル ライターを閉じるには使用、 [isymunmanagedwriter::abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)メソッド代わりにします。  
+## <a name="remarks"></a>解説  
+ この呼び出しの後、シンボルライターは、さらに更新するために無効になります。 シンボルをコミットせずにシンボルライターを閉じるには、代わりに[ISymUnmanagedWriter:: Abort](isymunmanagedwriter-abort-method.md)メソッドを使用します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter インターフェイス](isymunmanagedwriter-interface.md)

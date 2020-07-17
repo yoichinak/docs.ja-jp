@@ -1,34 +1,33 @@
 ---
-title: Windows システムの大きなオブジェクト ヒープ
+title: Windows の大きなオブジェクト ヒープ (LOH)
+description: この記事では、ラージ オブジェクト、.NET ガベージ コレクターによる管理方法、およびラージ オブジェクトを使用した場合のパフォーマンスへの影響について説明します。
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753956"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286029"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 
-.NET のガベージ コレクター (GC) は、オブジェクトを小さなオブジェクトと大きなオブジェクトに分けます。 オブジェクトが大きい場合、その属性のいくつかは、オブジェクトが小さい場合に比べて、より重要な意味を持つようになります。 たとえば、最適化 (つまり、メモリをヒープ上の他の場所にコピーする処理) のコストが高くなる場合があります。 そのため、.NET ガベージ コレクターは、大きなオブジェクトを大きなオブジェクト ヒープ (LOH) に配置します。 このトピックでは、大きなオブジェクト ヒープについて詳しく説明します。 大きなオブジェクトの定義、その収集方法、大きなオブジェクトがパフォーマンスに与える影響などについて説明します。
+.NET のガベージ コレクター (GC) は、オブジェクトを小さなオブジェクトと大きなオブジェクトに分けます。 オブジェクトが大きい場合、その属性のいくつかは、オブジェクトが小さい場合に比べて、より重要な意味を持つようになります。 たとえば、最適化 &mdash; つまり、ヒープ上の他の場所のメモリにコピーする処理 &mdash; のコストが高くなる場合があります。 そのため、ガベージ コレクターは、大きなオブジェクトを大きなオブジェクト ヒープ (LOH) に配置します。 この記事では、大きなオブジェクトの定義、大きなオブジェクトの収集方法、大きなオブジェクトがパフォーマンスに与える影響などについて説明します。
 
 > [!IMPORTANT]
-> このトピックでは、Windows システムのみで実行されている .NET Framework と .NET Core の大きなオブジェクト ヒープについて説明します。 その他のプラットフォームの .NET 実装で実行されている LOH については取り上げません。
+> この記事では、Windows システムのみで実行されている .NET Framework と .NET Core の大きなオブジェクト ヒープについて説明します。 その他のプラットフォームの .NET 実装で実行されている LOH については取り上げません。
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>大きなオブジェクト ヒープのオブジェクトが最終的にどのようになり、GC でどのように処理されるかについて
+## <a name="how-an-object-ends-up-on-the-loh"></a>オブジェクトが LOH と見なされる条件
 
 オブジェクトのサイズが 85,000 バイト以上の場合、大きなオブジェクトと見なされます。 この数値は、パフォーマンス チューニングによって決定されたものです。 85,000 バイト以上のオブジェクトの割り当て要求の場合、ランタイムはそれを大きなオブジェクト ヒープに割り当てます。
 
-.NET GC に関する基本事項をいくつか確認することで、これが何を意味するのかを理解しやすくなります。
+ガベージ コレクターに関する基本事項をいくつか確認することで、これが何を意味するのかを理解しやすくなります。
 
-.NET ガベージ コレクターは世代別コレクターです。 世代 0、世代 1、世代 2 という 3 つの世代があります。 世代が 3 つあるのは、適切にチューニングされたアプリでは、ほとんどのオブジェクトが世代 0 で終了するためです。 たとえば、サーバー アプリでは、各要求に関連付けられた割り当ては、その要求の完了後に終了する必要があります。 処理中の割り当て要求は、世代 1 に進み、その世代で終了します。 本質的に、世代 1 は、短期間存在するオブジェクトの領域と長期間存在するオブジェクトの領域との間でバッファーとして機能します。
+ガベージ コレクターは世代別コレクターです。 世代 0、世代 1、世代 2 という 3 つの世代があります。 世代が 3 つあるのは、適切にチューニングされたアプリでは、ほとんどのオブジェクトが世代 0 で終了するためです。 たとえば、サーバー アプリでは、各要求に関連付けられた割り当ては、その要求の完了後に終了する必要があります。 処理中の割り当て要求は、世代 1 に進み、その世代で終了します。 本質的に、世代 1 は、短期間存在するオブジェクトの領域と長期間存在するオブジェクトの領域との間でバッファーとして機能します。
 
 小さなオブジェクトは常に世代 0 に割り当てられ、その有効期間に応じて、世代 1 または世代 2 に昇格される場合があります。 大きなオブジェクトは常に世代 2 に割り当てられます。
 
@@ -66,7 +65,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 ## <a name="when-is-a-large-object-collected"></a>大きなオブジェクトが収集されるタイミング
 
-一般に、GC は次の 3 つの状態のいずれかになった場合に発生します。
+一般に、GC は次の 3 つの状態のいずれかで発生します。
 
 - 割り当てが世代 0 または大きなオブジェクトのしきい値を超えている場合。
 
@@ -74,7 +73,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
   これは一般的なケースです。マネージド ヒープでの割り当てにより、ほとんどの GC が発生します。
 
-- <xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドが呼び出された場合。
+- <xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドが呼び出されます。
 
   パラメーターなしの <xref:System.GC.Collect?displayProperty=nameWithType> メソッドが呼び出されたか、別のオーバーロードに引数として <xref:System.GC.MaxGeneration?displayProperty=nameWithType> が渡された場合、マネージド ヒープの残りの部分と共に LOH が収集されます。
 
@@ -124,7 +123,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 3 つの要因のうち、通常は最初の 2 つが 3 番目より重要です。 そのため、一時オブジェクトを割り当てる代わりに再利用する大きなオブジェクトのプールを割り当てることをお勧めします。
 
-## <a name="collecting-performance-data-for-the-loh"></a>LOH のパフォーマンス データの収集
+## <a name="collect-performance-data-for-the-loh"></a>LOH のパフォーマンス データの収集
 
 特定の領域のパフォーマンス データを収集するには、次のような状況である必要があります。
 
@@ -132,7 +131,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 2. 既知の他の領域を調べつくしたが、確認されたパフォーマンス上の問題を説明できる原因が見つからなかった。
 
-メモリと CPU の基礎の詳細については、ブログの「[Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/)」 (解決策を見つける前に問題を理解する) を参照してください。
+メモリと CPU の基礎の詳細については、ブログの「[Understand the problem before you try to find a solution](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/)」 (解決策を見つける前に問題を理解する) を参照してください。
 
 次のツールを使用して、LOH のパフォーマンスに関するデータを収集することができます。
 
@@ -168,13 +167,13 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 ガベージ コレクターは、ヒープで行われる内容とその理由を理解するのに役立つ、豊富な ETW イベントのセットを提供します。 次のブログ記事には、ETW を使用して GC イベントを収集および理解する方法が示されています。
 
-- [GC ETW イベント - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW イベント - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW イベント - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW イベント - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW イベント - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW イベント - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW イベント - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW イベント - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 一時 LOH の割り当てによる過度の世代 2 の GC を特定するには、GC のトリガー理由の列を確認します。 大きな一時オブジェクトのみを割り当てる簡単なテストの場合は、次の [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) コマンド ラインを使用して、ETW イベントに関する情報を収集できます。
 
@@ -204,14 +203,14 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>デバッガー
 
-メモリ ダンプしかない状態で、LOH に実際にどのオブジェクトが存在するかを確認する必要がある場合は、.NET で提供される [SoS デバッガー拡張](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)を使用できます。
+メモリ ダンプしかない状態で、LOH に実際にどのオブジェクトが存在するかを確認する必要がある場合は、.NET で提供される [SoS デバッガー拡張](../../framework/tools/sos-dll-sos-debugging-extension.md)を使用できます。
 
 > [!NOTE]
 > このセクションに示されているデバッグ コマンドは、[Windows デバッガー](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)に適用できます。
 
 LOH の分析からのサンプル出力を次に示します。
 
-```
+```console
 0:003> .loadby sos mscorwks
 0:003> !eeheap -gc
 Number of GC Heaps: 1
@@ -252,7 +251,7 @@ LOH は最適化されないため、LOH が断片化の元であると考えら
 
    次の例は、VM 領域内の断片化を示しています。
 
-   ```
+   ```console
    0:000> !address
    00000000 : 00000000 - 00010000
    Type     00000000

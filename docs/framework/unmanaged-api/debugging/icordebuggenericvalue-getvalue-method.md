@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e2fc054e42c34b13051e2125f8e18adc3029633
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 646b2661148e38f3c918fc18fce5c9cd0b1134a1
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755563"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213024"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue メソッド
-このジェネリックの値は、指定されたバッファーにコピーします。  
+このジェネリックの値を、指定したバッファーにコピーします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>パラメーター  
  `pTo`  
- [out]ICorDebugGenericValue オブジェクトによって表される値へのポインター。 値には、単純型または参照型 (つまり、ポインター) があります。  
+ 入出力このは、この値オブジェクトによって表される値へのポインターです。 値には、単純型または参照型 (つまり、ポインター) を指定できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

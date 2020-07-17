@@ -2,22 +2,22 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: MT
+ms.openlocfilehash: de6c497e7d781d705c68092e4a13ee07b727b2b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489885"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149910"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 クエリで返される要素を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
-SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
+```sql  
+SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
-or  
+-- or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
@@ -34,28 +34,28 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `topSubclause`  
  `top(expr)`の形式で、クエリから返す最初の結果数を指定する有効な式。  
   
- LIMIT パラメーター、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)演算子では、結果セット内の最初の n 個のアイテムを選択することもできます。  
+ [ORDER BY](order-by-entity-sql.md) 演算子の LIMIT パラメーターにより、結果セットの最初の n 項目を選ぶこともできます。  
   
  `aliasedExpr`  
  次の形式の式。  
   
- `expr` として`identifier`&#124; `expr`  
+ `expr` as `identifier` &#124; `expr`  
   
  `expr`  
  リテラルまたは式。  
   
 ## <a name="remarks"></a>Remarks  
- SELECT 句が評価される、 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)、 [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)、および[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)句が評価されました。 SELECT 句は、FROM 句または外側のスコープから現在スコープ内にある項目のみを参照できます。 GROUP BY 句を指定した場合、SELECT 句は GROUP BY キーの別名のみを参照できます。 FROM 句の項目への参照は、集計関数でのみ実行できます。  
+ [FROM](from-entity-sql.md)、[GROUP BY](group-by-entity-sql.md)、[HAVING](having-entity-sql.md) 句が評価された後で、SELECT 句が評価されます。 SELECT 句は、FROM 句または外側のスコープから現在スコープ内にある項目のみを参照できます。 GROUP BY 句を指定した場合、SELECT 句は GROUP BY キーの別名のみを参照できます。 FROM 句の項目への参照は、集計関数でのみ実行できます。  
   
  SELECT キーワードの後に続く 1 つまたは複数のクエリ式の一覧は、選択リスト (旧称、投影) と呼びます。 投影のより一般的な形式は、単一クエリ式です。 次の例に示すように、コレクション `member1` からメンバー `collection1`を選択すると、 `member1` の各オブジェクトに対応するすべての `collection1`値の新しいコレクションが生成されます。  
   
-```  
+```sql  
 SELECT collection1.member1 FROM collection1  
 ```  
   
  たとえば、 `customers` が、タイプ `Customer` のコレクションで、このコレクションに、タイプ `Name` であるプロパティ `string`が含まれる場合、 `Name` から `customers` を選択すると、文字列のコレクションが返されます。  
   
-```  
+```sql  
 SELECT customers.Name FROM customers AS c  
 ```  
   
@@ -70,9 +70,9 @@ SELECT customers.Name FROM customers AS c
   
  次の例に示すように、row select は常に VALUE SELECT として表現できます。  
   
-```  
+```sql  
 SELECT 1 AS a, "abc" AS b FROM C  
-SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
+SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ```  
   
 ## <a name="all-and-distinct-modifiers"></a>ALL 修飾子および DISTINCT 修飾子  
@@ -81,27 +81,27 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ## <a name="differences-from-transact-sql"></a>Transact-SQL との違い  
  Transact-SQL とは異なり、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では SELECT 句で * 引数を使用できません。  代わりに、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、次の例に示すように、FROM 句からコレクションの別名を参照して、レコード全体にクエリを投影できます。  
   
-```  
+```sql  
 SELECT * FROM T1, T2  
 ```  
   
- 前の TRANSACT-SQL クエリ式がで表される[!INCLUDE[esql](../../../../../../includes/esql-md.md)]次のようにします。  
+ 上の Transact-SQL クエリ式は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では次のように表されます。  
   
-```  
+```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、SELECT 演算子を使用して、クエリによって返される要素を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
+ [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [クエリ式](query-expressions-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [TOP](top-entity-sql.md)

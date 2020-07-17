@@ -9,14 +9,12 @@ helpviewer_keywords:
 - times [.NET Framework], time zones
 - time [.NET Framework], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86602cd6e662b1b1057832247babc558ef67b79f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61819705"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276934"
 ---
 # <a name="dates-times-and-time-zones"></a>日付、時刻、およびタイム ゾーン
 
@@ -24,7 +22,7 @@ ms.locfileid: "61819705"
 
 * <xref:System.TimeZone>
 
-  システムのローカル タイム ゾーンおよび世界協定時刻 (UTC) ゾーンで作業を行うには、このクラスを使用します。<xref:System.TimeZone> クラスの機能は、<xref:System.TimeZoneInfo> クラスによって大幅に置き換えられます。
+  システムのローカル タイム ゾーンおよび世界協定時刻 (UTC) ゾーンでの作業を行うには、このクラスを使用します。 クラスの機能は、 <xref:System.TimeZone> クラスによって主に置き換えられてい <xref:System.TimeZoneInfo> ます。
 
 * <xref:System.TimeZoneInfo>
 
@@ -38,42 +36,42 @@ ms.locfileid: "61819705"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md) タイム ゾーンに対応したアプリケーションの作成に関連する用語、概念、問題について説明します。
+[タイム ゾーンの概要](time-zone-overview.md) タイム ゾーンに対応したアプリケーションの作成に関連する用語、概念、問題について説明します。
 
-[DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../../../docs/standard/datetime/choosing-between-datetime.md) 日付および時刻のデータでの作業を行う場合、どのようなときに <xref:System.DateTime>、<xref:System.DateTimeOffset>、<xref:System.TimeZoneInfo> の型を使用するかについて説明します。
+[DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の選択](choosing-between-datetime.md)<xref:System.DateTime> <xref:System.DateTimeOffset> <xref:System.TimeZoneInfo> 日付と時刻のデータを操作するときに、型、型、および型を使用する場合について説明します。
 
-[ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) ローカル システムで検出されたタイム ゾーンを列挙する方法について説明します。
+[ローカル システムで定義されているタイム ゾーンの検索](finding-the-time-zones-on-local-system.md) ローカル システムで検出されたタイム ゾーンを列挙する方法について説明します。
 
-[方法: コンピューター上に存在するタイム ゾーンを列挙](../../../docs/standard/datetime/enumerate-time-zones.md)コンピューターのレジストリで定義されているタイム ゾーンを列挙するユーザー定義済みのタイム ゾーンを一覧から選択できるようにする例を提供します。
+[方法: コンピューター上に存在するタイム ゾーンを列挙する](enumerate-time-zones.md) コンピューターのレジストリに定義されているタイム ゾーンを列挙して、ユーザーが一覧から事前定義のタイム ゾーンを選択できるようにするための例を提供します。
 
-[方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)世界協定時刻とローカル タイム ゾーンにアクセスする方法について説明します。
+[方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする](access-utc-and-local.md) 世界協定時刻とローカル タイム ゾーンにアクセスする方法について説明します。
 
-[方法: TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)インスタンスを作成する方法について説明します、<xref:System.TimeZoneInfo>ローカル システム レジストリからのオブジェクト。
+[方法: TimeZoneInfo オブジェクトをインスタンス化する](instantiate-time-zone-info.md) ローカル システムのレジストリから <xref:System.TimeZoneInfo> オブジェクトをインスタンス化する方法について説明します。
 
-[DateTimeOffset オブジェクトのインスタンス化](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md) <xref:System.DateTimeOffset> オブジェクトをインスタンス化する方法、および <xref:System.DateTime> の値を <xref:System.DateTimeOffset> の値に変換する方法について説明します。
+[DateTimeOffset オブジェクトのインスタンス化](instantiating-a-datetimeoffset-object.md)<xref:System.DateTimeOffset> オブジェクトをインスタンス化する方法、および <xref:System.DateTime> の値を <xref:System.DateTimeOffset> の値に変換する方法について説明します。
 
-[方法: 調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)夏時間からの移行をサポートしないカスタム タイム ゾーンを作成する方法について説明します。
+[方法: 調整規則のないタイム ゾーンを作成する](create-time-zones-without-adjustment-rules.md) 夏時間の調整をサポートしないカスタム タイム ゾーンを作成する方法について説明します。
 
-[方法: タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)と夏時間の間、1 つまたは複数の遷移をサポートするカスタム タイム ゾーンを作成する方法について説明します。
+[方法 : 調整規則のあるタイム ゾーンを作成する](create-time-zones-with-adjustment-rules.md) 1 つ以上の夏時間調整をサポートするカスタム タイム ゾーンを作成する方法について説明します。
 
-[タイム ゾーンの保存と復元](../../../docs/standard/datetime/saving-and-restoring-time-zones.md) タイム ゾーン データのシリアル化と逆シリアル化が <xref:System.TimeZoneInfo> でどのようにサポートされるかを説明し、これらの機能を使用できるいくつかのシナリオを示します。
+[タイム ゾーンの保存と復元](saving-and-restoring-time-zones.md) タイム ゾーン データのシリアル化と逆シリアル化が <xref:System.TimeZoneInfo> でどのようにサポートされるかを説明し、これらの機能を使用できるいくつかのシナリオを示します。
 
-[方法: 埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)カスタム タイム ゾーンを作成し、リソース ファイルにその情報を保存する方法について説明します。
+[方法 : 埋め込みリソースにタイム ゾーンを保存する](save-time-zones-to-an-embedded-resource.md) カスタム タイム ゾーンを作成し、その情報をリソース ファイルに保存する方法について説明します。
 
-[方法: 埋め込みリソースからタイム ゾーンを復元](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)埋め込みリソース ファイルに保存されているカスタムのタイム ゾーンをインスタンス化する方法について説明します。
+[方法: 埋め込みリソースからタイム ゾーンを復元する](restore-time-zones-from-an-embedded-resource.md) 埋め込みリソース ファイルに保存されているカスタム タイム ゾーンをインスタンス化する方法について説明します。
 
-[日付と時刻を使用した算術演算の実行](../../../docs/standard/datetime/performing-arithmetic-operations.md) <xref:System.DateTime> および <xref:System.DateTimeOffset> の値の加算、減算、比較に関連する問題について説明します。
+[日付と時刻を使用した算術演算の実行](performing-arithmetic-operations.md)<xref:System.DateTime> および <xref:System.DateTimeOffset> の値の加算、減算、比較に関連する問題について説明します。
 
-[方法: 日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)日付と時刻の算術演算、タイム ゾーンの調整規則を反映する実行する方法について説明します。
+[方法: 日付と時刻の演算でタイム ゾーンを使用する](use-time-zones-in-arithmetic.md) タイム ゾーンの調整規則を反映する日付と時刻の演算を実行する方法について説明します。
 
-[DateTime と DateTimeOffset 間の変換](../../../docs/standard/datetime/converting-between-datetime-and-offset.md) <xref:System.DateTime> の値と <xref:System.DateTimeOffset> の値の変換方法について説明します。
+[DateTime と DateTimeOffset 間の変換](converting-between-datetime-and-offset.md)<xref:System.DateTime> の値と <xref:System.DateTimeOffset> の値の変換方法について説明します。
 
-[タイム ゾーン間での時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md) タイム ゾーン間での時刻の変換方法について説明します。
+[タイム ゾーン間での時刻の変換](converting-between-time-zones.md) タイム ゾーン間での時刻の変換方法について説明します。
 
-[方法: あいまいな時刻を解決](../../../docs/standard/datetime/resolve-ambiguous-times.md)タイム ゾーンの標準時刻にマップすることで、あいまいな時刻を解決する方法について説明します。
+[方法: あいまいな時刻を解決する](resolve-ambiguous-times.md) 時刻をタイム ゾーンの標準時刻に対応させることで、あいまいな時刻を解決する方法について説明します。
 
-[方法: ユーザーがあいまいな時刻を解決できるように](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)ユーザーがあいまいな現地時刻と世界協定時刻の間のマッピングを決定できるようにする方法について説明します。
+[方法: ユーザーがあいまいな時刻を解決できるようにする](let-users-resolve-ambiguous-times.md) ユーザーがあいまいな現地時刻と世界協定時刻の対応を決定できるようにする方法について説明します。
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>リファレンス
 
 <xref:System.TimeZoneInfo?displayProperty=nameWithType>

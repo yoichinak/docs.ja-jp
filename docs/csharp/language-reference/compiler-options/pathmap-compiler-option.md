@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 063cee694e8367a86fead2f1258c3cbda5ab7018
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635833"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "69606630"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (C# コンパイラ オプション)
 
@@ -32,7 +32,7 @@ ms.locfileid: "54635833"
 
 複数のマップされるソース パスを指定するには、コンマで区切ります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コンパイラは、次の理由でその出力にソース パスを書き込みます。
 
@@ -50,7 +50,7 @@ ms.locfileid: "54635833"
 csc -pathmap:C:\work\tests=\publish t.cs
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

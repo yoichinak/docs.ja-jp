@@ -14,36 +14,34 @@ helpviewer_keywords:
 ms.assetid: 71ea170f-872d-4fc5-81b6-27da1dec9b19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed0075da1429c70900750f3f28e8ce36a41fb28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697681"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134537"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache インターフェイス
-Fusion のテクノロジで使用するためのグローバル アセンブリ キャッシュを表します。  
+Fusion テクノロジによって使用されるグローバルアセンブリキャッシュを表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|新しいへの参照を取得します。 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)します。|  
-|[CreateAssemblyScavenger メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Fusion のテクノロジでは、内部使用のため予約されています。|  
-|[InstallAssembly メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|指定したアセンブリをグローバル アセンブリ キャッシュにインストールします。|  
-|[QueryAssemblyInfo メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|指定したアセンブリについて、要求されたデータを取得します。|  
-|[UninstallAssembly メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。|  
+|[CreateAssemblyCacheItem メソッド](iassemblycache-createassemblycacheitem-method.md)|新しい[Iassemblycacheitem](iassemblycacheitem-interface.md)への参照を取得します。|  
+|[CreateAssemblyScavenger メソッド](iassemblycache-createassemblyscavenger-method.md)|Fusion テクノロジによる内部使用のために予約されています。|  
+|[InstallAssembly メソッド](iassemblycache-installassembly-method.md)|指定したアセンブリをグローバルアセンブリキャッシュにインストールします。|  
+|[QueryAssemblyInfo メソッド](iassemblycache-queryassemblyinfo-method.md)|指定したアセンブリに関する要求されたデータを取得します。|  
+|[UninstallAssembly メソッド](iassemblycache-uninstallassembly-method.md)|指定したアセンブリをグローバルアセンブリキャッシュからアンインストールします。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [グローバル アセンブリ キャッシュ](../../app-domains/gac.md)

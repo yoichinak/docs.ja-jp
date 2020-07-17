@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 822396e28d000a5309738680fec502e1aeacd67c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772398"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616217"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 列挙型
-コンピューター上の空き物理メモリの量を示す値を含みます。 返されるメモリの高値と安値のこの値は、論理的にイベントに対応付ける、 `CreateMemoryResourceNotification` Windows api 関数。  
+コンピューターの空き物理メモリの量を示す値を格納します。 これらの値は、Windows API の関数から返されるメモリの量が多い場合のイベントに論理的にマップされ `CreateMemoryResourceNotification` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,7 +30,7 @@ ms.locfileid: "67772398"
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
-    eMemoryAvailableHigh    = 3   
+    eMemoryAvailableHigh    = 3
 } EMemoryAvailable;  
 ```  
   
@@ -40,22 +38,22 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|大量の物理メモリは使用できます。|  
-|`eMemoryAvailableLow`|ほとんどの物理メモリは使用できます。|  
-|`eMemoryAvailableNeutral`|使用可能な物理メモリは、ニュートラルです。|  
+|`eMemoryAvailableHigh`|十分な物理メモリを使用できます。|  
+|`eMemoryAvailableLow`|使用できる物理メモリが非常に少なくなっています。|  
+|`eMemoryAvailableNeutral`|使用可能な物理メモリはニュートラルです。|  
   
-## <a name="remarks"></a>Remarks  
- 呼び出しを使用して、共通言語ランタイム (CLR) にホストによってこの値が渡される、 [iclrmemorynotificationcallback::onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)メソッド。  
+## <a name="remarks"></a>解説  
+ この値は、 [ICLRMemoryNotificationCallback:: OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md)メソッドの呼び出しを使用して、ホストによって共通言語ランタイム (CLR) に渡されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ホスティングの列挙体](hosting-enumerations.md)

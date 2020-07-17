@@ -14,46 +14,44 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d0ac91681313b60ebfcaf725dcc2e0d6547e3c1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603ab20b57dc4ba736b0342797d0be649a5bebc4
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987819"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207489"
 ---
 # <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue インターフェイス
 
-オブジェクトを含む値を表す"ICorDebugValue"のサブクラスです。  
+オブジェクトを含む値を表す "ICorDebugValue" のサブクラス。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|共通言語ランタイム (CLR) へのインターフェイス ポインターを取得<xref:System.Type>オブジェクトのこの`ICorDebugObjectValue`参照。|  
-|[GetContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getcontext-method.md)|実装されていません。|  
-|[GetFieldValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getfieldvalue-method.md)|インターフェイス ポインターを取得、 [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-interface.md)指定したクラスの指定したフィールドの値を表します。|  
-|[GetManagedCopy メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getmanagedcopy-method.md)|互換性のために残されています。 このメソッドを呼び出さないでください。|  
-|[GetVirtualMethod メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getvirtualmethod-method.md)|実装されていません。|  
-|[IsValueClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|これによって、オブジェクトが参照されるかどうかを示す値を取得します`ICorDebugObjectValue`は値型です。|  
-|[SetFromManagedCopy メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-setfrommanagedcopy-method.md)|互換性のために残されています。 このメソッドを呼び出さないでください。|  
+|[GetClass メソッド](icordebugobjectvalue-getclass-method.md)|<xref:System.Type>このが参照するオブジェクトの共通言語ランタイム (CLR) へのインターフェイスポインターを取得し `ICorDebugObjectValue` ます。|  
+|[GetContext メソッド](icordebugobjectvalue-getcontext-method.md)|実装されていません。|  
+|[GetFieldValue メソッド](icordebugobjectvalue-getfieldvalue-method.md)|指定したクラスの指定したフィールドの値を表す、 [ICorDebugValue](icordebugvalue-interface.md)へのインターフェイスポインターを取得します。|  
+|[GetManagedCopy メソッド](icordebugobjectvalue-getmanagedcopy-method.md)|互換性のために残されています。 このメソッドは呼び出さないでください。|  
+|[GetVirtualMethod メソッド](icordebugobjectvalue-getvirtualmethod-method.md)|実装されていません。|  
+|[IsValueClass メソッド](icordebugobjectvalue-isvalueclass-method.md)|このによって参照されるオブジェクトが値型かどうかを示す値を取得し `ICorDebugObjectValue` ます。|  
+|[SetFromManagedCopy メソッド](icordebugobjectvalue-setfrommanagedcopy-method.md)|互換性のために残されています。 このメソッドは呼び出さないでください。|  
   
 ## <a name="remarks"></a>Remarks  
- `ICorDebugObjectValue`デバッグ中の処理を続行するまで有効なままになります。  
+ は、 `ICorDebugObjectValue` デバッグ中のプロセスが続行されるまで有効なままです。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

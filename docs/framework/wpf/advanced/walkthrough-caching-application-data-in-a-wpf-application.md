@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ'
+title: アプリ データをキャッシュする
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,153 +9,153 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: MT
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457515"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728060"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
 
- .NET Framework は、.NET Framework アプリケーションでキャッシュを使用するためのクラスを提供します。 これらのクラスにある、<xref:System.Runtime.Caching>名前空間。
+ .NET Framework には、.NET Framework アプリケーションでキャッシュを使用できるようになるクラスが用意されています。 これらのクラスは <xref:System.Runtime.Caching> 名前空間にあります。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>名前空間は、.NET Framework 4 の新機能です。 この名前空間は、キャッシュは、すべての .NET Framework アプリケーションで使用します。 以前のバージョンの .NET Framework では、キャッシュでのみ使用できますが、<xref:System.Web>名前空間と、このため ASP.NET クラスへの依存関係が必要です。
+> <xref:System.Runtime.Caching> 名前空間は、.NET Framework 4 で新しく追加されました。 この名前空間により、すべての .NET Framework アプリケーションでキャッシュを使用できるようになります。 .NET Framework の以前のバージョンでは、キャッシュは <xref:System.Web> 名前空間でのみ使用可能だったため、ASP.NET クラスへの依存が必要でした。
 
- このチュートリアルは、キャッシュの一部として .NET Framework で提供される機能を使用する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 チュートリアルでは、テキスト ファイルの内容をキャッシュします。
+ このチュートリアルでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの一部として .NET Framework で使用できるキャッシュ機能を使用する方法を示します。 このチュートリアルでは、テキスト ファイルのコンテンツをキャッシュします。
 
  このチュートリアルでは、以下のタスクを行います。
 
-- WPF アプリケーション プロジェクトを作成します。
+- WPF アプリケーション プロジェクトを作成する。
 
-- .NET Framework 4 への参照を追加します。
+- .NET Framework 4 への参照を追加する。
 
-- キャッシュを初期化しています。
+- キャッシュを初期化する。
 
-- テキスト ファイルの内容を格納するキャッシュ エントリを追加します。
+- テキスト ファイルのコンテンツを含むキャッシュ エントリを追加する。
 
-- キャッシュ エントリの削除ポリシーを提供します。
+- キャッシュ エントリの削除ポリシーを指定する。
 
-- キャッシュされたファイルのパスの監視と通知する、キャッシュ インスタンスは、監視対象の項目に変更します。
+- キャッシュされたファイルのパスを監視し、監視対象の項目に対する変更についてキャッシュ インスタンスに通知する。
 
 ## <a name="prerequisites"></a>必須コンポーネント
  このチュートリアルを完了するための要件は次のとおりです。
 
-- Microsoft Visual Studio 2010。
+- Visual Studio 2010。
 
-- 少量のテキストを含むテキスト ファイル。 (テキスト ファイルの内容は、メッセージ ボックスに表示されます)。このチュートリアルで示すコードでは、次のファイルを使用していることを前提としています。
+- 少量のテキストを含むテキスト ファイル (テキスト ファイルのコンテンツをメッセージ ボックスに表示します)。このチュートリアルで示すコードは、次のファイルで作業していることを前提としています。
 
      `c:\cache\cacheText.txt`
 
-     ただし、テキスト ファイルを使用し、このチュートリアルのコードに小さな変更を加えることができます。
+     ただし、任意のテキスト ファイルを使用して、このチュートリアルのコードに小さな変更を加えることができます。
 
-## <a name="creating-a-wpf-application-project"></a>WPF アプリケーション プロジェクトを作成します。
- WPF アプリケーション プロジェクトの作成から始めます。
+## <a name="creating-a-wpf-application-project"></a>WPF アプリケーション プロジェクトを作成する
+ まず、WPF アプリケーション プロジェクトを作成します。
 
 #### <a name="to-create-a-wpf-application"></a>WPF アプリケーションを作成するには
 
 1. Visual Studio を起動します。
 
-2. **ファイル** メニューのをクリックして**新規**、 をクリックし、**新しいプロジェクト**します。
+2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[新しいプロジェクト]** をクリックします。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **インストールされたテンプレート**、使用するプログラミング言語を選択します (**Visual Basic**または**Visual c#** )。
+3. **[インストール済みのテンプレート]** で使用するプログラミング言語を選択します ( **[Visual Basic]** または **[Visual C#]** )。
 
-4. **新しいプロジェクト**ダイアログ ボックスで、 **WPF アプリケーション**します。
+4. **[新しいプロジェクト]** ダイアログ ボックスで **[WPF アプリケーション]** を選択します。
 
     > [!NOTE]
-    >  表示されない場合、 **WPF アプリケーション**テンプレート、WPF をサポートする .NET Framework のバージョンをターゲットにするかどうかを確認します。 **新しいプロジェクト**ダイアログ ボックスで、一覧から .NET Framework 4 を選択します。
+    > **WPF アプリケーション** テンプレートが表示されない場合は、WPF をサポートする .NET Framework のバージョンをターゲットにしていることを確認します。 **[新しいプロジェクト]** ダイアログ ボックスで、一覧から [.NET Framework 4] を選択します。
 
-5. **名前**テキスト ボックスに、プロジェクトの名前を入力します。 たとえば、入力**WPFCaching**します。
+5. **[プロジェクト名]** テキスト ボックスにプロジェクトの名前を入力します。 たとえば、「**WPFCaching**」と入力できます。
 
 6. **[ソリューションのディレクトリを作成]** チェック ボックスをオンにします。
 
 7. **[OK]** をクリックします。
 
-     WPF デザイナーで開きます**デザイン**を表示し、MainWindow.xaml ファイルを表示します。 Visual Studio によって作成、 **My Project**フォルダーや、Application.xaml ファイル MainWindow.xaml ファイル。
+     WPF デザイナーが **[デザイン]** ビューで開き、MainWindow.xaml ファイルが表示されます。 Visual Studio によって**マイ プロジェクト** フォルダー、Application.xaml ファイル、および MainWindow.xaml ファイルが作成されます。
 
-## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework を対象として、キャッシュのアセンブリへの参照を追加します。
- 既定では、WPF アプリケーションのターゲットによって、[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]します。 使用する、 <xref:System.Runtime.Caching> WPF アプリケーションでは、アプリケーションの名前空間は、.NET Framework 4 をターゲットする必要があります (いない、 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 名前空間への参照を含める必要があります。
+## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework のターゲット設定とキャッシュ アセンブリへの参照の追加
+ 既定で、WPF アプリケーションでは .NET Framework 4 クライアント プロファイルをターゲットとしています。 WPF アプリケーションで <xref:System.Runtime.Caching> 名前空間を使用するには、アプリケーションで (.NET Framework 4 クライアント プロファイルではなく).NET Framework 4 をターゲットとし、名前空間への参照を含める必要があります。
 
- したがって、次の手順が、.NET Framework のターゲットを変更しへの参照を追加するは、<xref:System.Runtime.Caching>名前空間。
+ そのため、次の手順は、.NET Framework のターゲットを変更し、<xref:System.Runtime.Caching> 名前空間への参照を追加することです。
 
 > [!NOTE]
->  .NET Framework のターゲットを変更する手順は、Visual Basic プロジェクトおよび Visual c# プロジェクトでは異なります。
+> .NET Framework のターゲットを変更する手順は、Visual Basic プロジェクトと Visual C# プロジェクトとで異なります。
 
-#### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Visual Basic での .NET Framework のターゲットを変更するには
+#### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Visual Basic でターゲットの .NET Framework を変更するには
 
-1. **ソリューション エクスプ ローラー**プロジェクト名を右クリックし、クリックして**プロパティ**します。
+1. **ソリューション エクスプローラー**で、プロジェクト名を右クリックし、 **[プロパティ]** をクリックします。
 
-     アプリケーションのプロパティ ウィンドウが表示されます。
+     アプリケーションの [プロパティ] ウィンドウが表示されます。
 
 2. **[コンパイル]** タブをクリックします。
 
-3. ウィンドウの下部には、をクリックして**詳細コンパイル オプション**.
+3. ウィンドウの下部にある **[詳細コンパイル オプション]** をクリックします。
 
-     **コンパイラの詳細設定** ダイアログ ボックスが表示されます。
+     **[コンパイラの詳細設定]** ダイアログ ボックスが表示されます。
 
-4. **ターゲット フレームワーク (すべての構成)** 一覧で、.NET Framework 4 を選択します。 (選択しないでください[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])。
+4. **[ターゲット フレームワーク (すべての構成)]** 一覧で [.NET Framework 4] を選択します ([.NET Framework 4 Client Profile] は選択しないでください)。
 
 5. **[OK]** をクリックします。
 
      **[ターゲット フレームワークの変更]** ダイアログ ボックスが表示されます。
 
-6. **ターゲット フレームワークの変更**ダイアログ ボックスで、をクリックして**はい**します。
+6. **[ターゲット フレームワークの変更]** ダイアログ ボックスで **[はい]** をクリックします。
 
-     プロジェクトは閉じられ、再度は。
+     プロジェクトが閉じられ、再び開かれます。
 
-7. 次の手順では、キャッシュのアセンブリへの参照を追加します。
+7. 次の手順に従って、キャッシュ アセンブリへの参照を追加します。
 
-    1. **ソリューション エクスプ ローラー**プロジェクトの名前を右クリックし、クリックして**参照の追加**します。
+    1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。
 
-    2. 選択、 **.NET** ] タブで [ `System.Runtime.Caching`、順にクリックします**OK**します。
+    2. **[.NET]** タブを選択し、`System.Runtime.Caching` を選択し、 **[OK]** をクリックします。
 
-#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Visual c# プロジェクトで .NET Framework ターゲットを変更するには
+#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Visual C# プロジェクトでターゲットの .NET Framework を変更するには
 
-1. **ソリューション エクスプ ローラー**プロジェクト名を右クリックし、クリックして**プロパティ**します。
+1. **ソリューション エクスプローラー**でプロジェクト名を右クリックし、 **[プロパティ]** をクリックします。
 
-     アプリケーションのプロパティ ウィンドウが表示されます。
+     アプリケーションの [プロパティ] ウィンドウが表示されます。
 
 2. **[アプリケーション]** タブをクリックします。
 
-3. **ターゲット フレームワーク**一覧で、.NET Framework 4 を選択します。 (選択しないでください **.NET Framework 4 Client Profile**)。
+3. **[ターゲット フレームワーク]** 一覧で [.NET Framework 4] を選択します ( **[.NET Framework 4 Client Profile]** は選択しないでください)。
 
-4. 次の手順では、キャッシュのアセンブリへの参照を追加します。
+4. 次の手順に従って、キャッシュ アセンブリへの参照を追加します。
 
-    1. 右クリックし、**参照**フォルダーをクリック**参照の追加**します。
+    1. **[参照]** フォルダーを右クリックし、 **[参照の追加]** をクリックします。
 
-    2. 選択、 **.NET** ] タブで [ `System.Runtime.Caching`、順にクリックします**OK**します。
+    2. **[.NET]** タブを選択し、`System.Runtime.Caching` を選択し、 **[OK]** をクリックします。
 
-## <a name="adding-a-button-to-the-wpf-window"></a>WPF ウィンドウにボタンの追加
- 次に、ボタン コントロールを追加し、ボタンのイベント ハンドラーを作成`Click`イベント。 後で、テキスト ファイルの内容がキャッシュされ、表示されるボタンをクリックすると、コードを追加します。
+## <a name="adding-a-button-to-the-wpf-window"></a>WPF ウィンドウへのボタンの追加
+ 次に、ボタン コントロールを追加し、ボタンの `Click` イベントのイベント ハンドラーを作成します。 後でコードを追加して、ボタンをクリックするとテキスト ファイルのコンテンツがキャッシュされ、表示されるようにします。
 
 #### <a name="to-add-a-button-control"></a>ボタン コントロールを追加するには
 
-1. **ソリューション エクスプ ローラー**、開く MainWindow.xaml ファイルをダブルクリックします。
+1. **ソリューション エクスプローラー**で MainWindow.xaml ファイルをダブルクリックして開きます。
 
-2. **ツールボックス** **コモン WPF コントロール** 、ドラッグ、 `Button` への制御、 `MainWindow` ウィンドウ。
+2. **[ツールボックス]** の **[コモン WPF コントロール]** で、`Button` コントロールを `MainWindow` ウィンドウにドラッグします。
 
-3. **プロパティ**ウィンドウで、設定、`Content`のプロパティ、`Button`に制御を**取得キャッシュ**します。
+3. **[プロパティ]** ウィンドウで、`Button` コントロールの `Content` プロパティを **[Get Cache]\(キャッシュの取得\)** に設定します。
 
-## <a name="initializing-the-cache-and-caching-an-entry"></a>キャッシュの初期化とエントリをキャッシュ
+## <a name="initializing-the-cache-and-caching-an-entry"></a>キャッシュの初期化とエントリのキャッシュ
  次に、次のタスクを実行するコードを追加します。
 
-- キャッシュ クラスのインスタンスを作成-これは、インスタンス化する新しい<xref:System.Runtime.Caching.MemoryCache>オブジェクト。
+- キャッシュ クラスのインスタンスを作成します。つまり、新しい <xref:System.Runtime.Caching.MemoryCache> オブジェクトをインスタンス化します。
 
-- キャッシュが使用するように指定、<xref:System.Runtime.Caching.HostFileChangeMonitor>のテキスト ファイルの変更を監視するオブジェクト。
+- キャッシュで <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを使用してテキスト ファイルの変更を監視するように指定します。
 
-- テキスト ファイルを読み取るし、キャッシュ エントリとしてその内容をキャッシュします。
+- テキスト ファイルを読み取り、そのコンテンツをキャッシュ エントリとしてキャッシュします。
 
-- キャッシュされたテキスト ファイルの内容を表示します。
+- キャッシュされたテキスト ファイルのコンテンツを表示します。
 
 #### <a name="to-create-the-cache-object"></a>キャッシュ オブジェクトを作成するには
 
-1. MainWindow.xaml.cs または MainWindow.Xaml.vb ファイルで、イベント ハンドラーを作成するために追加したボタンをダブルクリックします。
+1. MainWindow.xaml.cs ファイルまたは MainWindow.Xaml.vb ファイルにイベント ハンドラーを作成するために、追加したボタンをダブルクリックします。
 
-2. 次のコードを追加 (クラス宣言) の前に、ファイルの上部にある`Imports`(Visual Basic) または`using`ステートメント (c#)。
+2. ファイルの先頭 (クラス宣言の前) に、次の `Imports` (Visual Basic) または `using` (C#) ステートメントを追加します。
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ ms.locfileid: "66457515"
     Imports System.IO
     ```
 
-3. イベント ハンドラーでは、キャッシュ オブジェクトをインスタンス化する次のコードを追加します。
+3. イベント ハンドラーで、次のコードを追加してキャッシュ オブジェクトをインスタンス化します。
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -177,9 +177,9 @@ ms.locfileid: "66457515"
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     <xref:System.Runtime.Caching.ObjectCache>クラスは、メモリ内オブジェクト キャッシュを提供する組み込みのクラスです。
+     <xref:System.Runtime.Caching.ObjectCache> クラスは、メモリ内オブジェクト キャッシュを提供する組み込みクラスです。
 
-4. という名前のキャッシュ エントリの内容を読み取るには、次のコードを追加`filecontents`:
+4. 次のコードを追加して、`filecontents` というキャッシュ エントリのコンテンツを読み取ります。
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "66457515"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. キャッシュ エントリが名前付きかどうかを確認するには、次のコードを追加`filecontents`存在します。
+5. 次のコードを追加して、`filecontents` というキャッシュ エントリが存在するかどうかを確認します。
 
     ```vb
     If fileContents Is Nothing Then
@@ -204,9 +204,9 @@ ms.locfileid: "66457515"
     }
     ```
 
-     指定したキャッシュ エントリが存在しない場合は、テキスト ファイルの読み取りし、キャッシュのエントリとしてキャッシュに追加する必要があります。
+     指定したキャッシュ エントリが存在しない場合は、テキスト ファイルを読み取り、それをキャッシュ エントリとしてキャッシュに追加する必要があります。
 
-6. `if/then`ブロック、新たに作成する次のコードを追加<xref:System.Runtime.Caching.CacheItemPolicy>キャッシュ エントリが 10 秒後に有効期限が切れるを指定するオブジェクト。
+6. `if/then` ブロックで、次のコードを追加して、キャッシュ エントリが 10 秒後に期限切れになることを指定する新しい <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトを作成します。
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,9 +218,9 @@ ms.locfileid: "66457515"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     削除または有効期限の情報が指定されていない場合、既定値は<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>、絶対時間にのみに基づいて切れないので、キャッシュ エントリ。 代わりに、キャッシュ エントリは、メモリ負荷がある場合にのみ有効期限します。 ベスト プラクティスとして、絶対またはスライド式有効期限のいずれかを常に明示的に指定する必要があります。
+     削除または有効期限の情報が提供されていない場合、既定値は <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration> です。これは、キャッシュ エントリが絶対時間のみに基づいて期限切れになることはないことを意味します。 代わりに、メモリが不足している場合にのみ、キャッシュ エントリが期限切れになります。 ベスト プラクティスとして、絶対またはスライド式の有効期限を常に明示的に指定することをお勧めします。
 
-7. 内で、`if/then`をブロックし、前の手順で追加したコードの後を監視して、コレクションにテキスト ファイルのパスを追加するファイルのパスのコレクションを作成するには、次のコードを追加します。
+7. `if/then` ブロック内で、前の手順で追加したコードの後に、次のコードを追加し、監視するファイル パスのコレクションを作成し、テキスト ファイルのパスをコレクションに追加します。
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -233,9 +233,9 @@ ms.locfileid: "66457515"
     ```
 
     > [!NOTE]
-    >  使用するテキスト ファイルがない`c:\cache\cacheText.txt`、テキスト ファイルが使用する場所のパスを指定します。
+    > 使用するテキスト ファイルが `c:\cache\cacheText.txt` でない場合は、使用するテキスト ファイルのパスを指定します。
 
-8. 新しいを追加するには、次のコードを追加する前の手順で追加したコードを次<xref:System.Runtime.Caching.HostFileChangeMonitor>キャッシュ エントリの変更のコレクションにオブジェクトを監視します。
+8. 前の手順で追加したコードの後に、次のコードを追加し、新しい <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトをキャッシュ エントリの変更モニターのコレクションに追加します。
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,9 +245,9 @@ ms.locfileid: "66457515"
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     <xref:System.Runtime.Caching.HostFileChangeMonitor>オブジェクトは、テキスト ファイルのパスを監視し、変更が発生した場合、キャッシュに通知します。 この例で、ファイルの内容が変更された場合、キャッシュ エントリの有効期限します。
+     <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを使用すると、テキスト ファイルのパスを監視し、変更が発生した場合はキャッシュに通知することができます。 この例では、ファイルのコンテンツが変更されると、キャッシュ エントリが期限切れになります。
 
-9. 前の手順で追加したコードの後に、テキスト ファイルの内容を読み取るには、次のコードを追加します。
+9. 前の手順で追加したコードの後に次のコードを追加し、テキスト ファイルのコンテンツを読み取ります。
 
     ```vb
     fileContents = File.ReadAllText("c:\cache\cacheText.txt") & vbCrLf & DateTime.Now.ToString()
@@ -257,9 +257,9 @@ ms.locfileid: "66457515"
     fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
-     キャッシュ エントリの有効期限が切れるときに表示できるように、日付と時刻のタイムスタンプが追加されます。
+     日付と時刻のタイムスタンプが追加されるので、キャッシュ エントリの有効期限がいつ切れるかを確認できます。
 
-10. としてキャッシュ オブジェクトに、ファイルの内容を挿入する次のコードを追加する前の手順で追加したコードの後、<xref:System.Runtime.Caching.CacheItem>インスタンス。
+10. 前の手順で追加したコードの後に次のコードを追加し、ファイルのコンテンツを <xref:System.Runtime.Caching.CacheItem> インスタンスとしてキャッシュ オブジェクトに挿入します。
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,9 +269,9 @@ ms.locfileid: "66457515"
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     渡すことによって、キャッシュ エントリを削除する方法に関する情報を指定する、<xref:System.Runtime.Caching.CacheItemPolicy>をパラメーターとして、先ほど作成したオブジェクト。
+     前の手順で作成した <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトをパラメーターとして渡すことにより、キャッシュ エントリを削除する方法に関する情報を指定します。
 
-11. 後に、`if/then`ブロック、メッセージ ボックスに、キャッシュされたファイルの内容を表示する次のコードを追加します。
+11. `if/then` ブロックの後に次のコードを追加し、キャッシュされたファイルのコンテンツをメッセージ ボックスに表示します。
 
     ```vb
     MessageBox.Show(fileContents)
@@ -281,46 +281,46 @@ ms.locfileid: "66457515"
     MessageBox.Show(fileContents);
     ```
 
-12. **ビルド** メニューのをクリックして**ビルド WPFCaching**プロジェクトをビルドします。
+12. **[ビルド]** メニューで、 **[WPFCaching のビルド]** をクリックしてプロジェクトをビルドします。
 
 ## <a name="testing-caching-in-the-wpf-application"></a>WPF アプリケーションでのキャッシュのテスト
- アプリケーションをテストすることができます。
+ これで、アプリケーションをテストすることができます。
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>WPF アプリケーションでキャッシュをテストするには
 
 1. Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。
 
-     `MainWindow`ウィンドウが表示されます。
+     `MainWindow`  ウィンドウが表示されます。
 
-2. クリックして**キャッシュを取得する**します。
+2. **[Get Cache]\(キャッシュの取得\)** をクリックします。
 
-     テキスト ファイルからキャッシュされたコンテンツは、メッセージ ボックスに表示されます。 ファイルのタイムスタンプに注目してください。
+     テキスト ファイルからキャッシュされたコンテンツがメッセージ ボックスに表示されます。 ファイルのタイムスタンプに注意してください。
 
-3. メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度です。
+3. メッセージ ボックスを閉じ、 **[Get Cache]\(キャッシュの取得\)** をクリックします。
 
-     タイムスタンプは変更されません。 これは、キャッシュされたコンテンツの表示を示します。
+     タイムスタンプは変更されません。 これは、キャッシュされたコンテンツが表示されることを示します。
 
-4. クリックして、10 秒以上待機**取得キャッシュ**もう一度です。
+4. 10 秒以上待ってから、 **[Get Cache]\(キャッシュの取得\)** をクリックします。
 
-     この時間に、新しいタイムスタンプが表示されます。 これは、ポリシーが有効期限が切れるキャッシュ エントリを使用し、新しいキャッシュされたコンテンツが表示されることを示します。
+     今回は、新しいタイムスタンプが表示されます。 これは、ポリシーによってキャッシュ エントリの有効期限が切れ、新しいキャッシュされたコンテンツが表示されることを示しています。
 
-5. テキスト エディターで作成したテキスト ファイルを開きます。 すべての変更をまだしないでください。
+5. テキスト エディターで、作成したテキスト ファイルを開きます。 まだ変更を加えないでください。
 
-6. メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度です。
+6. メッセージ ボックスを閉じ、 **[Get Cache]\(キャッシュの取得\)** をクリックします。
 
-     もう一度、タイムスタンプに注目してください。
+     タイムスタンプに再び注目してください。
 
-7. テキスト ファイルに変更を加えるし、ファイルを保存します。
+7. テキスト ファイルに変更を加え、ファイルを保存します。
 
-8. メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度です。
+8. メッセージ ボックスを閉じ、 **[Get Cache]\(キャッシュの取得\)** をクリックします。
 
-     このメッセージ ボックスには、テキスト ファイルと新しいタイムスタンプから更新されたコンテンツが含まれています。 これは、ホスト ファイルの変更モニター削除されるキャッシュ エントリ、ファイルを変更したときにすぐに、絶対のタイムアウト期間の有効期限が切れていない場合でもを示します。
+     このメッセージ ボックスには、テキスト ファイルの更新されたコンテンツと新しいタイムスタンプが含まれています。 これは、絶対タイムアウト期間が経過していなくても、ファイルを変更した直後にホスト ファイル変更モニターによってキャッシュ エントリが削除されたことを示しています。
 
     > [!NOTE]
-    >  ファイルを変更するための時間を 20 秒以上削除時間を増やすことができます。
+    > 削除時間を 20 秒以上に増やして、ファイルに変更を加える時間を増やすことができます。
 
 ## <a name="code-example"></a>コード例
- このチュートリアルを完了すると後に、作成したプロジェクトのコードが次の例のようになります。
+ このチュートリアルを完了すると、作成したプロジェクトのコードは次の例のようになります。
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]

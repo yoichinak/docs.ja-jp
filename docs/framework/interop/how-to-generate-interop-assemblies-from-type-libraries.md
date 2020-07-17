@@ -1,5 +1,6 @@
 ---
 title: '方法: 相互運用機能アセンブリをタイプ ライブラリから生成する'
+description: 相互運用機能アセンブリをタイプ ライブラリから生成します。 タイプライブラリ インポーター (Tlbimp.exe) を使用して、コクラスおよびインターフェイスを COM タイプライブラリからメタデータに変換します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -8,17 +9,14 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a3ee82a9091f0caeee010ec79632ce703efb589
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 6f54875d6aadb1da18cf25a1bec0a0e451f4a24c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619560"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>方法: 相互運用機能アセンブリをタイプ ライブラリから生成する
-[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) は、COM タイプ ライブラリに含まれているコクラスとインターフェイスをメタデータに変換するコマンド ライン ツールです。 このツールは、型情報の相互運用機能アセンブリと名前空間を自動的に作成します。 クラスのメタデータが使用可能になった後、マネージド クライアントは COM 型のインスタンスを作成し、.NET インスタンスの場合と同じように、そのメソッドを呼び出すことができます。 Tlbimp.exe は、タイプ ライブラリ全体を一度にメタデータに変換しますが、タイプ ライブラリで定義されている型のサブセットの型情報は生成できません。  
+[タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) は、COM タイプ ライブラリに含まれているコクラスとインターフェイスをメタデータに変換するコマンド ライン ツールです。 このツールは、型情報の相互運用機能アセンブリと名前空間を自動的に作成します。 クラスのメタデータが使用可能になった後、マネージド クライアントは COM 型のインスタンスを作成し、.NET インスタンスの場合と同じように、そのメソッドを呼び出すことができます。 Tlbimp.exe は、タイプ ライブラリ全体を一度にメタデータに変換しますが、タイプ ライブラリで定義されている型のサブセットの型情報は生成できません。  
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>タイプ ライブラリから相互運用機能アセンブリを生成するには  
   
@@ -31,17 +29,17 @@ ms.locfileid: "59338840"
 ## <a name="example"></a>例  
  次のコマンドでは、`Loanlib` 名前空間で Loanlib.dll アセンブリを生成します。  
   
-```  
+```console  
 tlbimp Loanlib.tlb  
 ```  
   
  次のコマンドでは、別の名前 (LOANLib.dll) で相互運用機能アセンブリが生成されます。  
   
-```  
+```console  
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [タイプ ライブラリのアセンブリとしてのインポート](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-- [.NET Framework への COM コンポーネントの公開](../../../docs/framework/interop/exposing-com-components.md)
+- [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)
+- [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)

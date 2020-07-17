@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58f148eb4c3206ba12eed41df670846d7beab77a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 293d1a9cd93b5ce45105427e7df864ad8bfbe77a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771639"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379192"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next メソッド
-現在の位置から始まり、列挙体から ICorDebugStepper インスタンスの指定した数を取得します。  
+現在の位置から開始して、指定した数の ICorDebugStepper インスタンスを列挙から取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +38,19 @@ HRESULT Next(
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`ICorDebugStepper`インスタンスを取得します。  
+ から`ICorDebugStepper`取得するインスタンスの数。  
   
  `steppers`  
- [out]それぞれが指すポインターの配列、`ICorDebugStepper`オブジェクト。  
+ 入出力ポインターの配列。それぞれがオブジェクトを指し `ICorDebugStepper` ます。  
   
  `pceltFetched`  
- [out]数へのポインター`ICorDebugStepper`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
+ 入出力実際に返されたインスタンスの数へのポインター `ICorDebugStepper` 。 が1の場合、この値は null `celt` になります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b853a6f2175009cbcbc01c14a6732b98e37e1a7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903982"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003061"
 ---
 # <a name="how-to-return-rowsets"></a>方法: 行セットを返す
 この例では、データベースから行セットを返し、入力パラメーターを使用して結果をフィルター処理します。  
   
- 行セットを返すストアド プロシージャを実行するときに使用する、*結果*ストアド プロシージャからの戻り値を格納するクラスです。 詳細については、次を参照してください。 [LINQ to SQL のソース コードに分析](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)します。  
+ 行セットを返すストアド プロシージャを実行する場合は、ストアド プロシージャからの戻り値を格納する "*結果*" クラスを使用します。 詳しくは、「[LINQ to SQL のソース コードの分析](analyzing-linq-to-sql-source-code.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次の例は、顧客の行を返し、入力パラメーターを使用して、顧客が在住する市が "London" である行のみを返すストアド プロシージャを示しています。 例では、列挙可能な `CustomersByCityResult` クラスを想定しています。  
   
-```  
+```sql  
 CREATE PROCEDURE [dbo].[Customers By City]  
     (@param1 NVARCHAR(20))  
 AS  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>関連項目
 
-- [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [ストアド プロシージャ](stored-procedures.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)

@@ -1,17 +1,15 @@
 ---
-title: <Property> 要素 (.NET ネイティブ)
+title: <Property>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 374ace4ec5e25731e4a7e958be145a660ff2ef7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614867"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73128208"
 ---
-# <a name="property-element-net-native"></a>\<プロパティ > 要素 (.NET ネイティブ)
+# <a name="property-element-net-native"></a>\<Property>要素 (.NET ネイティブ)
 プロパティにランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -28,7 +26,7 @@ ms.locfileid: "64614867"
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|説明|  
+|属性|属性の型|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 プロパティ名を指定します。|  
 |`Browse`|リフレクション|省略可能な属性です。 プロパティに関する情報の照会やプロパティの列挙を制御しますが、実行時の動的アクセスは有効にしません。|  
@@ -37,15 +35,15 @@ ms.locfileid: "64614867"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|*method_name*|プロパティ名。 プロパティの型は、親の [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) または [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素により定義されます。|  
+|*method_name*|プロパティ名。 プロパティの型は、親要素または要素によって定義され [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) ます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|*policy_setting*|プロパティのこのポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
+|*policy_setting*|プロパティのこのポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -54,10 +52,10 @@ ms.locfileid: "64614867"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロパティのポリシーが明示的に定義されていない場合は、親要素の実行時ポリシーを継承します。  
   
 ## <a name="example"></a>例  
@@ -75,15 +73,15 @@ ms.locfileid: "64614867"
   
  このファイルは、`All` クラスの `Activate` ポリシーに `Book` 値を適用します。これにより、リフレクションを介してクラス コンストラクターにアクセスできるようになります。 `Browse` クラスの `Book` ポリシーは、その親名前空間から継承されます。 これは `Required Public` に設定され、メタデータが実行時に使用できるようになります。  
   
- この例のソース コードを次に示します。 `outputBlock`変数を表す、<xref:Windows.UI.Xaml.Controls.TextBlock>コントロール。  
+ この例のソース コードを次に示します。 変数は、 `outputBlock` コントロールを表し <xref:Windows.UI.Xaml.Controls.TextBlock> ます。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- ただし、この例をコンパイルして実行すると、[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外がスローされます。 `Book` 型のメタデータは使用可能になりましたが、プロパティの getter の実装は動的に使用可能になりませんでした。 このエラーは、次の 2 つの方法のいずれかを使用して修正できます。  
+ ただし、この例をコンパイルして実行すると、[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外がスローされます。 `Book` 型のメタデータは使用可能になりましたが、プロパティの getter の実装は動的に使用可能になりませんでした。 このエラーは、次の 2 つの方法のいずれかを使用して修正できます。  
   
-- [\<Type](../../../docs/framework/net-native/type-element-net-native.md) 要素で `Book` 型の `Dynamic` ポリシーを定義する。  
+- `Dynamic` `Book` 要素内の型のポリシーを定義し [\<Type>](type-element-net-native.md) ます。  
   
-- 次の default.rd.xml ファイルのように、呼び出す getter を持つ各プロパティに入れ子になった [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 要素を追加する。  
+- [\<Property>](property-element-net-native.md)次の既定の .xml ファイルのように、呼び出す getter を持つ各プロパティに対して、入れ子になった要素を追加します。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -101,6 +99,6 @@ ms.locfileid: "64614867"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

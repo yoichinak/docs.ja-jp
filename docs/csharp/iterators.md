@@ -2,19 +2,20 @@
 title: Iterators
 description: 組み込み C# の反復子を使用して、独自のカスタム反復子メソッドを作成する方法について説明します。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613435"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507378"
 ---
 # <a name="iterators"></a>Iterators
 
 プログラムを記述するうえで、ほとんどのプログラムに必要になるのがコレクションの反復処理です。 反復処理が必要な場合は、コレクション内のすべての項目を調べるコードを記述します。
 
-また、クラスの要素に対して反復子を生成するメソッドである、反復子メソッドも作成することになります。 反復子メソッドは以下のような目的に使用できます。
+また、クラスの要素に対して反復子 (コンテナーを横断するオブジェクト。特にリスト) を生成するメソッドである、反復子メソッドも作成することになります。 反復子メソッドは以下のような目的に使用できます。
 
 + コレクション内の各項目に対するアクションの実行。
 + カスタム コレクションの列挙。
@@ -69,8 +70,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 }
 ```
 
@@ -80,14 +81,14 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
     index = 100;
-    while (index++ < 110)
-        yield return index;
+    while (index < 110)
+        yield return index++;
 }
 ```
 
@@ -111,8 +112,8 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -130,8 +131,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -155,9 +156,12 @@ public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
 private IEnumerable<int> IteratorMethod()
 {
     int index = 0;
-    while (index++ < 10)
+    while (index < 10)
+    {
         if (index % 2 == 1)
             yield return index;
+        index++;
+    }
 }
 ```
 

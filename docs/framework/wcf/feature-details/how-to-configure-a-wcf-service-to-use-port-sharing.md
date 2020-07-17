@@ -1,19 +1,19 @@
 ---
-title: '方法: ポート共有を使用する Windows Communication Foundation サービスを構成します。'
+title: '方法 : ポート共有を使用するように Windows Communication Foundation サービスを構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699715"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579528"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>方法: ポート共有を使用する Windows Communication Foundation サービスを構成します。
-Windows Communication Foundation (WCF) アプリケーションで net.tcp:// ポート共有を使用する最も簡単な方法を使用してサービスを公開する、<xref:System.ServiceModel.NetTcpBinding>します。  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>方法 : ポート共有を使用するように Windows Communication Foundation サービスを構成する
+Windows Communication Foundation (WCF) アプリケーションで net.tcp://ポート共有を使用する最も簡単な方法は、を使用してサービスを公開することです <xref:System.ServiceModel.NetTcpBinding> 。  
   
  このバインディングは、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> プロパティを提供します。このプロパティは、このバインディングを使用して構成されるサービスに対して net.tcp:// ポート共有を有効にするかどうかを制御します。  
   
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) アプリケーションで net.tcp:// �
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>コードで NetTcpBinding の net.tcp:// ポート共有を有効にするには  
   
-1. 呼び出すコントラクトを実装するサービスを作成`IMyService`、呼び出す`MyService`、します。  
+1. というコントラクトを実装するサービスを作成し、という名前 `IMyService` `MyService` を呼び出します。  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF) アプリケーションで net.tcp:// �
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
   
     > [!NOTE]
-    >  このエンドポイント アドレス URI は異なるポート番号を指定しないため、この例では既定の TCP ポートである 808 を使用します。 トランスポート バインディングでポート共有が明示的に有効になっているため、このサービスはポート 808 を他のプロセスの他のサービスと共有できます。 ポート共有が許可されておらず、既に別のアプリケーションがポート 808 を使用している場合は、このサービスを開こうとすると <xref:System.ServiceModel.AddressAlreadyInUseException> がスローされます。  
+    > このエンドポイント アドレス URI は異なるポート番号を指定しないため、この例では既定の TCP ポートである 808 を使用します。 トランスポート バインディングでポート共有が明示的に有効になっているため、このサービスはポート 808 を他のプロセスの他のサービスと共有できます。 ポート共有が許可されておらず、既に別のアプリケーションがポート 808 を使用している場合は、このサービスを開こうとすると <xref:System.ServiceModel.AddressAlreadyInUseException> がスローされます。  
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>構成で NetTcpBinding の net.tcp:// ポート共有を有効にするには  
   
@@ -46,7 +46,7 @@ Windows Communication Foundation (WCF) アプリケーションで net.tcp:// �
 ```xml  
 <system.serviceModel>  
   <bindings>  
-    <netTcpBinding name="portSharingBinding"   
+    <netTcpBinding name="portSharingBinding"
                    portSharingEnabled="true" />  
   </bindings>  
   <services>  
@@ -62,5 +62,5 @@ Windows Communication Foundation (WCF) アプリケーションで net.tcp:// �
   
 ## <a name="see-also"></a>関連項目
 
-- [Net.TCP ポート共有](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [方法: Net.TCP ポート共有サービスを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Net.TCP ポート共有](net-tcp-port-sharing.md)
+- [方法: Net.TCP ポート共有サービスを有効にする](how-to-enable-the-net-tcp-port-sharing-service.md)

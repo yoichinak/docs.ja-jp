@@ -9,38 +9,38 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: bcbc690690993a094bc5360d0c13bddebf8cd615
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593072"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414247"
 ---
 # <a name="-win32resource"></a>-win32resource
-出力ファイルには、Win32 リソース ファイルを挿入します。  
+Win32 リソース ファイルを出力ファイルに挿入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -win32resource:filename  
 ```  
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 出力ファイルに追加するリソース ファイルの名前。 ファイル名を引用符で囲みます ("")、スペースが含まれている場合。  
+ 出力ファイルに追加するリソース ファイルの名前。 ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
- Microsoft Windows リソース コンパイラ (RC) では、Win32 リソース ファイルを作成できます。  
+ Win32 リソース ファイルは、Microsoft Windows リソース コンパイラ (RC) を使用して作成することができます。  
   
- Win32 リソースは、バージョンを含めることができますか役立つビットマップ (アイコン) 情報でアプリケーションを識別する**ファイル エクスプ ローラー**します。 指定しない場合`-win32resource`コンパイラがアセンブリのバージョンに基づいてバージョン情報を生成します。 `-win32resource`と`-win32icon`オプションは相互に排他的です。  
+ Win32 リソースは、バージョンまたはビットマップ (アイコン) 情報を格納することができ、**エクスプローラー**でアプリケーションを識別するのに役立ちます。 `-win32resource` を指定しない場合、コンパイラでアセンブリ バージョンに基づいてバージョン情報が生成されます。 `-win32resource` オプションと `-win32icon` オプションは同時に指定できません。  
   
- 参照してください[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) 、.NET Framework リソース ファイルを参照または[-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) .NET Framework リソース ファイルを添付します。  
+ .NET Framework リソース ファイルの参照については「[-linkresource (Visual Basic)](linkresource.md)」を、.NET Framework リソース ファイルのアタッチについては「[-resource (Visual Basic)](resource.md)」を参照してください。  
   
 > [!NOTE]
->  `-win32resource`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> `-win32resource` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`In.vb`、Win32 リソース ファイルをアタッチします`Rf.res`:  
+ 次のコードでは `In.vb` がコンパイルされ、Win32 リソース ファイル `Rf.res` がアタッチされます。  
   
 ```console  
 vbc -win32resource:rf.res in.vb  
@@ -48,5 +48,5 @@ vbc -win32resource:rf.res in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

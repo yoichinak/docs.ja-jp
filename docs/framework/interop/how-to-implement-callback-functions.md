@@ -1,5 +1,6 @@
 ---
 title: '方法: コールバック関数を実装する'
+description: コールバック関数を実装する方法について説明します。 この例で、マネージド アプリケーションは、プラットフォーム呼び出しを使用して、コンピューター上の各ウィンドウのハンドル値を出力します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,11 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619118"
 ---
 # <a name="how-to-implement-callback-functions"></a>方法: コールバック関数を実装する
 次の手順と例は、マネージド アプリケーションがプラットフォーム呼び出しを使用して、ローカル コンピューター上の各ウィンドウのハンドル値を出力する方法を示しています。 具体的には、この手順と例では **EnumWindows** 関数を使用してウィンドウのリストをステップスルーし、(CallBack という名前の) マネージド コールバック関数を使用してウィンドウ ハンドルの値を出力します。  
@@ -24,9 +22,9 @@ ms.locfileid: "59331326"
   
 1. 実装を進める前に、**EnumWindows** 関数のシグネチャを見てみます。 **EnumWindows** のシグネチャは次のとおりです。  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
      この関数がコールバックを必要とする 1 つの手掛かりは、**lpEnumFunc** 引数が存在することです。 コールバック関数へのポインターを使用する引数の名前では、**lp** (long pointer) プレフィックスが **Func** サフィックスと組み合わされているのが一般的です。 Win32 の関数に関するドキュメントについては、Microsoft プラットフォーム SDK を参照してください。  
   
@@ -38,7 +36,7 @@ ms.locfileid: "59331326"
   
 4. コールバック関数がその作業を完了する前にガベージ コレクターがデリゲートをクリアしないようにしてください。 デリゲートをパラメーターとして渡した場合、または構造内のフィールドとして含まれるデリゲートを渡した場合、デリゲートは呼び出しの間収集されないままです。 したがって、次の列挙例と同様に、コールバック関数はその作業を呼び出しが戻る前に完了するので、マネージド呼び出し元による追加操作を必要としません。  
   
-     ただし、呼び出しが戻った後にコールバック関数を呼び出せる場合、マネージド呼び出し元は、コールバック関数が終了するまでデリゲートが収集されないようにしておくための対策を講じる必要があります。 ガベージ コレクションを回避する方法の詳細については、プラットフォーム呼び出しによる「[相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)」を参照してください。  
+     ただし、呼び出しが戻った後にコールバック関数を呼び出せる場合、マネージド呼び出し元は、コールバック関数が終了するまでデリゲートが収集されないようにしておくための対策を講じる必要があります。 ガベージ コレクションを回避する方法の詳細については、プラットフォーム呼び出しによる「[相互運用マーシャリング](interop-marshaling.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -76,16 +74,16 @@ public delegate bool CallBack(int hwnd, int lParam);
 public class EnumReportApp  
 {  
     [DllImport("user32")]  
-    public static extern int EnumWindows(CallBack x, int y);   
+    public static extern int EnumWindows(CallBack x, int y);
   
-    public static void Main()   
+    public static void Main()
     {  
         CallBack myCallBack = new CallBack(EnumReportApp.Report);  
         EnumWindows(myCallBack, 0);  
     }  
   
     public static bool Report(int hwnd, int lParam)  
-    {   
+    {
         Console.Write("Window handle is ");  
         Console.WriteLine(hwnd);  
         return true;  
@@ -131,5 +129,5 @@ int main()
   
 ## <a name="see-also"></a>関連項目
 
-- [コールバック関数](../../../docs/framework/interop/callback-functions.md)
-- [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)
+- [コールバック関数](callback-functions.md)
+- [DLL 関数の呼び出し](calling-a-dll-function.md)

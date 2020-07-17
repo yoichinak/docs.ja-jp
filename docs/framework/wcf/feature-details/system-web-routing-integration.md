@@ -2,20 +2,20 @@
 title: System.Web.Routing 統合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 059f14c94bb7502a2e4f4616ca2c5e6ac5273afa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600738"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 統合
-Windows Communication Foundation (WCF) サービスでは、インターネット インフォメーション サービス (IIS) をホストする場合は、仮想ディレクトリで、.svc ファイルを配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 たとえば、URI で .svc ファイルを指定する、サービスに要求を行うときに:`http://contoso.com/EmployeeServce.svc`します。 REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing>統合機能では、拡張子のない Uri に応答する WCF REST サービスをホストすることができます。 ルーティングの参照の詳細については[ASP.NET ルーティング](https://go.microsoft.com/fwlink/?LinkId=184660)します。  
+インターネットインフォメーションサービス (IIS) で Windows Communication Foundation (WCF) サービスをホストする場合は、.svc ファイルを仮想ディレクトリに配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 サービスに要求を行うときは、URI に .svc ファイルを指定します。たとえば、のように指定します。 `http://contoso.com/EmployeeServce.svc` REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing>統合機能を使用すると、拡張されていない uri に応答する WCF REST サービスをホストできます。 ルーティングの詳細については、「 [ASP.NET routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))」を参照してください。  
   
 ## <a name="using-systemwebrouting-integration"></a>System.Web.Routing 統合の使用  
- <xref:System.Web.Routing> 統合機能を使用するには、<xref:System.ServiceModel.Activation.ServiceRoute> クラスを使用して 1 つ以上のルートを作成し、Global.asax ファイルでそれらを <xref:System.Web.Routing.RouteTable> に追加します。 これらのルートは、サービスが応答する相対 URI を指定します。 その方法を次の例に示します。  
+ <xref:System.Web.Routing> 統合機能を使用するには、<xref:System.ServiceModel.Activation.ServiceRoute> クラスを使用して 1 つ以上のルートを作成し、Global.asax ファイルでそれらを <xref:System.Web.Routing.RouteTable> に追加します。 これらのルートは、サービスが応答する相対 URI を指定します。 次の例は、その方法を示したものです。  
   
-```  
+```aspx-csharp  
 <%@ Application Language="C#" %>  
 <%@ Import Namespace="System.Web.Routing" %>  
 <%@ Import Namespace="System.ServiceModel.Activation" %>  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) サービスでは、インターネッ�
   
     private void RegisterRoutes(RouteCollection routes)  
     {  
-        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));   
+        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));
    }  
 </script>  
 ```  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) サービスでは、インターネッ�
     </system.webServer>  
 ```  
   
- これで、ルーティングに必要なモジュールとハンドラーが読み込まれます。 詳細については、[ルーティング](../../../../docs/framework/wcf/feature-details/routing.md)に関するページを参照してください。 また、次の例に示すように、`aspNetCompatibilityEnabled` 要素で `true` 属性を `<serviceHostingEnvironment>` に設定する必要もあります。  
+ これで、ルーティングに必要なモジュールとハンドラーが読み込まれます。 詳細については、[ルーティング](routing.md)に関するページを参照してください。 また、次の例に示すように、`aspNetCompatibilityEnabled` 要素で `true` 属性を `<serviceHostingEnvironment>` に設定する必要もあります。  
   
 ```xml  
 <system.serviceModel>  
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) サービスでは、インターネッ�
   
  次の例に示すように、このサービスを実装するクラスでは、ASP.NET 互換要件を有効にする必要があります。  
   
-```  
+```csharp
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  
@@ -71,5 +71,5 @@ Windows Communication Foundation (WCF) サービスでは、インターネッ�
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET ルーティング](https://go.microsoft.com/fwlink/?LinkId=184660)
+- [WCF Web HTTP プログラミング モデル](wcf-web-http-programming-model.md)
+- [ASP.NET ルーティング](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

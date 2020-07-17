@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b6eab8156f72847eb6dd3369950f9b46a3fc877
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781668"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007560"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 列挙型
-呼び出しから返される、ポータブル実行可能 (PE) ファイルを記述する値を含む[imetadataimport 2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)します。  
+[IMetaDataImport2:: GetPEKind](imetadataimport2-getpekind-method.md)の呼び出しから返される、ポータブル実行可能 (PE) ファイルを記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,23 +43,23 @@ typedef enum CorPEKind {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`peNot`|PE ファイルではないことを示します。|  
-|`peILOnly`|この PE ファイルには、マネージ コードだけが含まれていることを示します。|  
+|`peNot`|これが PE ファイルではないことを示します。|  
+|`peILOnly`|この PE ファイルにマネージコードのみが含まれていることを示します。|  
 |`pe32BitRequired`|この PE ファイルが Win32 呼び出しを行うことを示します。|  
-|`pe32Plus`|64 ビット プラットフォームでこの PE ファイルを実行することを示します。|  
-|`pe32Unmanaged`|この PE ファイルがネイティブ コードであることを示します。|  
-|pe32BitPreferred|この PE ファイルが 32 ビット環境に読み込むことが推奨プラットフォームに依存しないことを示します。|  
+|`pe32Plus`|この PE ファイルが64ビットプラットフォームで実行されることを示します。|  
+|`pe32Unmanaged`|この PE ファイルがネイティブコードであることを示します。|  
+|pe32BitPreferred|この PE ファイルがプラットフォームに依存せず、32ビット環境で読み込まれることを示すことを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  これらの値は、ビットごとの組み合わせで使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

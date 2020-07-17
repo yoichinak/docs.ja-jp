@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9a26547a-9a34-4284-a463-78a7d4b496cf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c434595414fd5bdabeae96d959aaa6be6d84af2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5dbb5dc483bc5a08c59606654d55b5a62266e509
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134369"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName メソッド
-これによって参照されるアセンブリの人間が判読できる名前を取得[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。  
+この[IAssemblyName](iassemblyname-interface.md)オブジェクトによって参照されるアセンブリの、人間が判読できる名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>パラメーター  
  `szDisplayName`  
- [out]参照先アセンブリの名前を格納している文字列バッファー。  
+ 入出力参照されたアセンブリの名前を格納している文字列バッファー。  
   
  `pccDisplayName`  
- [入力、出力]サイズ`szDisplayName`ワイド文字、終端の null 文字を含むです。  
+ [入力、出力]ワイド文字の `szDisplayName` のサイズ (null 終端文字を含む)。  
   
  `dwDisplayFlags`  
- [in]ビットごとの組み合わせ[ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)の機能に影響を与える値`szDisplayName`します。  
+ から`szDisplayName`の機能に影響を与える[ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md)値のビットごとの組み合わせ。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [Fusion 列挙型](fusion-enumerations.md)

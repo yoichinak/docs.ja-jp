@@ -1,5 +1,6 @@
 ---
 title: 構造体の受け渡し
+description: 構造体とクラスをアンマネージド関数に渡す方法について説明します。 書式設定された型を定義するために使用する StructLayoutAttribute 属性について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +8,11 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e932481496aef7fd0533054316deb32f65e95deb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: eae28d6746cd89d98b659b9eb957f158e1319190
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620821"
 ---
 # <a name="passing-structures"></a>構造体の受け渡し
 多くのアンマネージド 関数では、構造体のメンバー (Visual Basic ではユーザー定義型) またはマネージド コードで定義されたクラスのメンバーがパラメーターとして渡されることを期待しています。 プラットフォーム呼び出しを使って構造体またはクラスをアンマネージ コードに渡す場合は、元のレイアウトやアラインメントを保持するための追加情報を提供する必要があります。 このトピックでは、フォーマットされた型を定義するために使用する <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性について説明します。 マネージ構造体やマネージド クラスの場合は、**LayoutKind** 列挙型によって提供される想定されたレイアウト動作から選択できます。  
@@ -38,7 +36,7 @@ ms.locfileid: "65063181"
 ## <a name="declaring-and-passing-structures"></a>構造体の宣言と受け渡し  
  マネージド コードで `Point` 型および `Rect` 型を定義し、これらの型を User32.dll ファイル内の **PtInRect** 関数にパラメーターとして渡す方法の例を次に示します。 **PtInRect** は、次に示すアンマネージ シグネチャを持っています。  
   
-```  
+```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
@@ -59,7 +57,7 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Friend Class NativeMethods      
+Friend Class NativeMethods
     Friend Declare Auto Function PtInRect Lib "user32.dll" (
         ByRef r As Rect, p As Point) As Boolean  
 End Class  
@@ -72,7 +70,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
     public int x;  
     public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -80,7 +78,7 @@ public struct Rect {
     [FieldOffset(4)] public int top;  
     [FieldOffset(8)] public int right;  
     [FieldOffset(12)] public int bottom;  
-}     
+}
   
 internal static class NativeMethods
 {  
@@ -92,7 +90,7 @@ internal static class NativeMethods
 ## <a name="declaring-and-passing-classes"></a>クラスの宣言と受け渡し  
  クラスが固定したメンバー レイアウトを持っている場合に限り、クラスのメンバーをアンマネージ DLL 関数に渡すことができます。 定義の順序で固定されている `MySystemTime` クラスのメンバーを User32.dll ファイル内の **GetSystemTime** に渡す方法の例を次に示します。 **GetSystemTime** は、次に示すアンマネージ シグネチャを持っています。  
   
-```  
+```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
@@ -104,7 +102,7 @@ Imports System.Runtime.InteropServices
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
     Public wMonth As Short  
-    Public wDayOfWeek As Short   
+    Public wDayOfWeek As Short
     Public wDay As Short  
     Public wHour As Short  
     Public wMinute As Short  
@@ -119,7 +117,7 @@ Friend Class NativeMethods
         hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
-Public Class TestPlatformInvoke      
+Public Class TestPlatformInvoke
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
         NativeMethods.GetSystemTime(sysTime)  
@@ -130,7 +128,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)
     End Sub  
 End Class  
 ```  
@@ -138,14 +136,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
 public class MySystemTime {  
-    public ushort wYear;   
+    public ushort wYear;
     public ushort wMonth;  
-    public ushort wDayOfWeek;   
-    public ushort wDay;   
-    public ushort wHour;   
-    public ushort wMinute;   
-    public ushort wSecond;   
-    public ushort wMilliseconds;   
+    public ushort wDayOfWeek;
+    public ushort wDay;
+    public ushort wHour;
+    public ushort wMinute;
+    public ushort wSecond;
+    public ushort wMilliseconds;
 }  
 internal static class NativeMethods
 {  
@@ -177,6 +175,6 @@ public class TestPlatformInvoke
   
 ## <a name="see-also"></a>関連項目
 
-- [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)
+- [DLL 関数の呼び出し](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

@@ -1,5 +1,5 @@
 ---
-title: .NET 正規表現での前方参照構成体
+title: .NET 正規表現での前方参照コンストラクト
 description: 正規表現の中で前方参照構成体を使用して、繰り返されるテキスト要素を識別する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -12,24 +12,21 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-author: rpetrusha
-ms.author: ronpet
-ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678359"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290605"
 ---
-# <a name="backreference-constructs-in-regular-expressions"></a>正規表現での前方参照構成体
+# <a name="backreference-constructs-in-regular-expressions"></a>正規表現での前方参照コンストラクト
 
 前方参照は、文字列内の繰り返しの文字または部分文字列を識別するために便利な方法を提供します。 たとえば、入力文字列に複数回出現する任意の部分文字列が含まれている場合は、キャプチャ グループを使用して最初の一致を検出し、前方参照を使用して部分文字列の後続の出現箇所を見つけます。
 
 > [!NOTE]
 > 別の構文を使用して、置換文字列内の名前付きおよび番号付きのキャプチャ グループを参照します。 詳細については、「 [置換](substitutions-in-regular-expressions.md)」を参照してください。
 
-.NET では、番号付きおよび名前付きのキャプチャ グループを参照する個別の言語要素が定義されています。 キャプチャ グループの詳細については、「[グループ化コンストラクト](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。
+.NET では、番号付きおよび名前付きのキャプチャ グループを参照する個別の言語要素が定義されています。 キャプチャ グループの詳細については、「[グループ化コンストラクト](grouping-constructs-in-regular-expressions.md)」を参照してください。
 
 ## <a name="numbered-backreferences"></a>番号付き前方参照
 
@@ -53,7 +50,7 @@ ms.locfileid: "57678359"
 
 次の例では、文字列内の単語に使用される重複した文字を検索します。 例で定義している正規表現 `(\w)\1` は、次の要素で構成されています。
 
-|要素|説明|
+|要素|[説明]|
 |-------------|-----------------|
 |`(\w)`|単語文字を検出し、最初のキャプチャ グループに割り当てます。|
 |`\1`|最初のキャプチャ グループの値と同じ次の文字を検出します。|
@@ -75,7 +72,7 @@ ms.locfileid: "57678359"
 
 次の例では、文字列内の単語に使用される重複した文字を検索します。 例で定義している正規表現 `(?<char>\w)\k<char>` は、次の要素で構成されています。
 
-|要素|説明|
+|要素|[説明]|
 |-------------|-----------------|
 |`(?<char>\w)`|単語文字を検出し、`char` という名前のキャプチャ グループに割り当てます。|
 |`\k<char>`|`char` キャプチャ グループの値と同じ次の文字を検出します。|
@@ -95,7 +92,7 @@ ms.locfileid: "57678359"
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-ただし、*name* が数字の文字列表現であり、その位置のキャプチャ グループに数値名が明示的に割り当てられている場合、正規表現パーサーではその序数位置でキャプチャ グループを識別することはできません。 代わりに、<xref:System.ArgumentException> をスローします。次の例の唯一のキャプチャ グループには "2" という名前が付けられています。 `\k` コンストラクトが "1" という名前の前方参照を定義するために使用されているため、正規表現パーサーは最初のキャプチャ グループを識別できず、例外をスローします。
+ただし、*name* が数字の文字列表現であり、その位置のキャプチャ グループに数値名が明示的に割り当てられている場合、正規表現パーサーではその序数位置でキャプチャ グループを識別することはできません。 代わりに、<xref:System.ArgumentException> がスローされます。 次の例の唯一のキャプチャ グループには "2" という名前が付けられています。 `\k` コンストラクトが "1" という名前の前方参照を定義するために使用されているため、正規表現パーサーは最初のキャプチャ グループを識別できず、例外をスローします。
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
@@ -106,7 +103,7 @@ ms.locfileid: "57678359"
 
 次の例には、正規表現パターン `(?<1>a)(?<1>\1b)*` が含まれています。このパターンは \1 の名前付きグループを再定義します。 正規表現の各パターンは、次の表に示すように定義されています。
 
-|パターン|説明|
+|パターン|[説明]|
 |-------------|-----------------|
 |`(?<1>a)`|文字 "a" を検出し、結果を `1` という名前のキャプチャ グループに割り当てます。|
 |`(?<1>\1b)*`|`1` という名前のグループの 0 個以上の出現箇所を "b" と共に検出し、結果を `1` という名前のキャプチャ グループに割り当てます。|
@@ -126,7 +123,7 @@ ms.locfileid: "57678359"
 
 グループで部分文字列がキャプチャされなかった場合、そのグループへの前方参照は未定義になり、一致することはありません。 次のように定義されている正規表現パターン `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` を例として示します。
 
-|パターン|説明|
+|パターン|[説明]|
 |-------------|-----------------|
 |`\b`|ワード境界から照合を開始します。|
 |`(\p{Lu}{2})`|2 つの大文字と一致します。 これが最初のキャプチャ グループです。|
@@ -139,6 +136,6 @@ ms.locfileid: "57678359"
 [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
 [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)

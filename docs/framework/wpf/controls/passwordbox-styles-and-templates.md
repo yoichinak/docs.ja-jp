@@ -9,28 +9,28 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4ba90182468466773644c7375059f0cc01675b33
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770644"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283458"
 ---
 # <a name="passwordbox-styles-and-templates"></a>PasswordBox のスタイルとテンプレート
 
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.PasswordBox>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。
+このトピックでは、<xref:System.Windows.Controls.PasswordBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。
 
 ## <a name="passwordbox-parts"></a>PasswordBox のパーツ
 
-次の表に、名前付きパーツ、<xref:System.Windows.Controls.PasswordBox>コントロール。
+次の表は、<xref:System.Windows.Controls.PasswordBox> コントロールの名前付きパーツの一覧を示します。
 
-|パーツ|型|説明|
+|パーツ|種類|説明|
 |-|-|-|
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|ビジュアル要素を含めることができます、<xref:System.Windows.FrameworkElement>します。 テキスト、<xref:System.Windows.Controls.PasswordBox>がこの要素に表示されます。|
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement> を含めることができるビジュアル要素。 <xref:System.Windows.Controls.PasswordBox> のテキストがこの要素に表示されます。|
 
 ## <a name="passwordbox-states"></a>PasswordBox の状態
 
-次の表のビジュアルの状態、<xref:System.Windows.Controls.PasswordBox>コントロール。
+次の表は、<xref:System.Windows.Controls.PasswordBox> コントロールの表示状態の一覧を示します。
 
 |VisualState 名|VisualStateGroup 名|説明|
 |-|-|-|
@@ -39,13 +39,13 @@ ms.locfileid: "61770644"
 |無効|CommonStates|コントロールが無効になっています。|
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|
 
-## <a name="passwordbox-controltemplate-example"></a>PasswordBox ControlTemplate の例
+## <a name="passwordbox-controltemplate-example"></a>PasswordBox の ControlTemplate の例
 
-次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.PasswordBox>コントロール。
+次の例は、<xref:System.Windows.Controls.PasswordBox> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。
 
 [!code-xaml[ControlTemplateExamples#PasswordBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]
 
@@ -61,5 +61,5 @@ ms.locfileid: "61770644"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

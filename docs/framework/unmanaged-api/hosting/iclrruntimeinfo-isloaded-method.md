@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7eafd9c3c9eeb14e53643bed09309ca8d3b5855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45e27ac3c2d4912d2ed3e5d43ea3020b9db5dbdc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748432"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504031"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded メソッド
-共通言語ランタイム (CLR) に関連付けられているかどうかを示す、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスが、プロセスに読み込まれます。 ランタイムも開始されないまま読み込むことができます。  
+[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスに関連付けられている共通言語ランタイム (CLR) をプロセスに読み込むかどうかを示します。 ランタイムは、起動しなくても読み込むことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +35,10 @@ HRESULT IsLoaded(
   
 ## <a name="parameters"></a>パラメーター  
  `hndProcess`  
- [in]プロセスへのハンドル。  
+ からプロセスを処理するハンドル。  
   
  `pbLoaded`  
- [out]`true` 、CLR がプロセスに読み込まれます。 それ以外の場合`false`します。  
+ [出力] `true`CLR がプロセスに読み込まれている場合は、それ以外の場合は `false` 。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -50,30 +48,30 @@ HRESULT IsLoaded(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pbLoaded` が null です。|  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、旧バージョンと互換性のある次の関数とインターフェイスで。  
+## <a name="remarks"></a>解説  
+ このメソッドは、次の関数およびインターフェイスと下位互換性があります。  
   
-- [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) (.NET Framework バージョン 1 ホスティング API) のインターフェイス。  
+- [ICorRuntimeHost](icorruntimehost-interface.md)インターフェイス (.NET Framework version 1 ホスティング API)。  
   
-- [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)インターフェイス (API をホストしている .NET Framework 2.0) にします。  
+- [ICLRRuntimeHost](iclrruntimehost-interface.md)インターフェイス (.NET Framework 2.0 ホスティング API)。  
   
-- 非推奨`CorBindTo*`関数 (を参照してください[CLR ホスト関数の非推奨とされます](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)API をホストしている .NET Framework 2.0 で)。  
+- 非推奨 `CorBindTo*` の関数 (「.NET Framework 2.0 ホスティング API での[非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)」を参照してください)。  
   
- ホストは、非推奨のいずれかを呼び出すことができます`CorBindTo*`などの関数、 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)関数、CLR の特定のバージョンのインスタンスを作成します。 ホストが呼び出す可能性がありますし、 [iclrmetahost::getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)メソッドを取得する同じバージョン番号を指定し、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス。  
+ ホストは、 `CorBindTo*` [Corbindtoruntime](corbindtoruntime-function.md)関数など、非推奨の関数の1つを呼び出して、特定のバージョンの CLR をインスタンス化することができます。 ホストは[ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md)メソッドを呼び出し、同じバージョン番号を指定して[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを取得することができます。  
   
- ホストが、呼び出した場合、`IsLoaded`メソッドで返された[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス、`pbLoaded`返します`true`。 それ以外が返されます`false`。  
+ その後、返された ICLRRuntimeInfo インターフェイスでホストがメソッドを呼び出すと、はを返します。 `IsLoaded` [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) `pbLoaded` `true` それ以外の場合はを返し `false` ます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo インターフェイス](iclrruntimeinfo-interface.md)
+- [ホスト インターフェイス](hosting-interfaces.md)
+- [ホスティング](index.md)

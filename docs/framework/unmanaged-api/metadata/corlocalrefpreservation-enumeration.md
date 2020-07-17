@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781788"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008990"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 列挙型
 ローカル参照の処理のためのフラグ値が格納されます。  
@@ -41,17 +39,17 @@ typedef enum CorLocalRefPreservation
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|ローカルの参照を保存しません。|  
-|`MDPreserveLocalTypeRef`|ローカル型の参照を保持します。|  
-|`MDPreserveLocalMemberRef`|ローカル メンバーの参照を保持します。|  
+|`MDPreserveLocalRefsNone`|ローカル参照を保持しません。|  
+|`MDPreserveLocalTypeRef`|ローカル型参照を保持します。|  
+|`MDPreserveLocalMemberRef`|ローカルメンバー参照を保持します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

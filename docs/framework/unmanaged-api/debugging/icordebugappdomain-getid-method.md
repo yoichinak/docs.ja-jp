@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb8917fa401db9424cff168fe0b06ad84065827c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737943"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895253"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId メソッド
-アプリケーション ドメインの一意の識別子を取得します。  
+アプリケーションドメインの一意の識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>パラメーター  
  `pId`  
- [out]アプリケーション ドメインの一意の識別子。  
+ 入出力アプリケーションドメインの一意の識別子。  
   
-## <a name="remarks"></a>Remarks  
- アプリケーション ドメインの識別子は、格納しているプロセス内で一意です。  
+## <a name="remarks"></a>解説  
+ アプリケーションドメインの識別子は、含まれているプロセス内で一意です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

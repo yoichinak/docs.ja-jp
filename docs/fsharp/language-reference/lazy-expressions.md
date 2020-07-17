@@ -1,17 +1,17 @@
 ---
 title: 遅延式
-description: 学習方法F#遅延式は、アプリとライブラリのパフォーマンスを向上させることができます。
+description: レイジー式F#を使用して、アプリとライブラリのパフォーマンスを向上させる方法について説明します。
 ms.date: 03/13/2019
-ms.openlocfilehash: 6d53d53093f4e93f53e1c956b94e2f1e4a1bbd55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97429e9a4c3838cbaa2ead197db4443e0820e8b3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904112"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630738"
 ---
 # <a name="lazy-expressions"></a>遅延式
 
-*遅延式*は、すぐには評価されませんが、結果が必要な場合は代わりに評価される式です。 これは、コードのパフォーマンスを向上させるために役立ちます。
+*レイジー式*は、すぐに評価されるのではなく、結果が必要になったときに評価される式です。 これは、コードのパフォーマンスを向上させるのに役立ちます。
 
 ## <a name="syntax"></a>構文
 
@@ -21,17 +21,17 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Remarks
 
-前の構文で*式*結果が、必要な場合にのみ評価されるコードと*識別子*は結果を格納する値です。 型の値は、 [ `Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489)場所、実際の種類のために使用`'T`式の結果から決定されます。
+前の構文では、 *expression*は結果が必要な場合にのみ評価されるコードであり、 *identifier*は結果を格納する値です。 値は型[`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489)であり、に`'T`使用される実際の型は、式の結果から決定されます。
 
-遅延式を使用すると、結果が必要な場合のみ、式の実行を制限することでパフォーマンスを向上させることができます。
+レイジー式を使用すると、式の実行を、結果が必要な状況のみに制限することで、パフォーマンスを向上させることができます。
 
-メソッドを呼び出すを強制的に実行する式、`Force`します。 `Force` 1 回だけ実行する実行をします。 後続の呼び出し`Force`同じが、任意のコードを実行せずに返します。
+式を強制的に実行するには、メソッド`Force`を呼び出します。 `Force`実行を1回だけ実行します。 後続のを`Force`呼び出すと、同じ結果が返されますが、コードは実行されません。
 
-次のコードは限定的な表現の使用と、使用して`Force`します。 このコードの種類で`result`は`Lazy<int>`、および`Force`メソッドを返します。、`int`します。
+次のコードは、レイジー式の使用方法との`Force`使用方法を示しています。 このコードで`result`は、の型は`Lazy<int>`で、メソッドは`Force`を返し`int`ます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-遅延評価は、ではなく、`Lazy`入力、シーケンスにも使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)します。
+遅延評価は、 `Lazy`型ではなく、シーケンスにも使用されます。 詳細については、「[シーケンス](sequences.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

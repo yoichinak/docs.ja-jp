@@ -15,98 +15,96 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0efda458d51677fcd16140cd0f0a835b76c20173
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778131"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617179"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 関数
-アプリケーションによって要求された共通言語ランタイム (CLR) のバージョンとディレクトリ情報を取得します。  
+アプリケーションによって要求された共通言語ランタイム (CLR) に関するバージョンとディレクトリ情報を取得します。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetRequestedRuntimeInfo (  
-    [in]  LPCWSTR  pExe,   
-    [in]  LPCWSTR  pwszVersion,   
-    [in]  LPCWSTR  pConfigurationFile,   
-    [in]  DWORD    startupFlags,   
-    [in]  DWORD    runtimeInfoFlags,   
-    [out] LPWSTR   pDirectory,   
-    [in]  DWORD    dwDirectory,   
-    [out] DWORD   *dwDirectoryLength,   
-    [out] LPWSTR   pVersion,   
-    [in]  DWORD    cchBuffer,   
+    [in]  LPCWSTR  pExe,
+    [in]  LPCWSTR  pwszVersion,
+    [in]  LPCWSTR  pConfigurationFile,
+    [in]  DWORD    startupFlags,
+    [in]  DWORD    runtimeInfoFlags,
+    [out] LPWSTR   pDirectory,
+    [in]  DWORD    dwDirectory,
+    [out] DWORD   *dwDirectoryLength,
+    [out] LPWSTR   pVersion,
+    [in]  DWORD    cchBuffer,
     [out] DWORD   *dwlength  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pExe`  
- [in]アプリケーションの名前。  
+ からアプリケーションの名前。  
   
  `pwszVersion`  
- [in]ランタイムのバージョン番号を指定する文字列。  
+ からランタイムのバージョン番号を指定する文字列。  
   
  `pConfigurationFile`  
- [in]関連付けられている構成ファイルの名前`pExe`します。  
+ からに関連付けられている構成ファイルの名前 `pExe` 。  
   
  `startupFlags`  
- [in]1 つ以上の[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列挙値。  
+ から1つ以上の[STARTUP_FLAGS](startup-flags-enumeration.md)列挙値。  
   
  `runtimeInfoFlags`  
- [in]1 つ以上の[RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)列挙値。  
+ から1つ以上の[RUNTIME_INFO_FLAGS](runtime-info-flags-enumeration.md)列挙値。  
   
  `pDirectory`  
- [out]正常完了時にランタイムのディレクトリ パスを格納するバッファー。  
+ 入出力正常に完了したときのランタイムへのディレクトリパスを格納するバッファー。  
   
  `dwDirectory`  
- [in]ディレクトリのバッファーの長さ。  
+ からディレクトリバッファーの長さ。  
   
  `dwDirectoryLength`  
- [out]ディレクトリのパス文字列の長さへのポインター。  
+ 入出力ディレクトリパス文字列の長さへのポインター。  
   
  `pVersion`  
- [out]正常完了時にランタイムのバージョン番号を格納するバッファー。  
+ 入出力正常に完了したときのランタイムのバージョン番号を格納するバッファー。  
   
  `cchBuffer`  
- [in]バージョンの文字列バッファーの長さ。  
+ からバージョン文字列バッファーの長さ。  
   
  `dwlength`  
- [out]バージョン文字列の長さへのポインター。  
+ 入出力バージョン文字列の長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値だけでなく、WinError.h で定義されている標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|ERROR_INSUFFICIENT_BUFFER|ディレクトリ バッファーは、ディレクトリ パスを格納するのに十分な大きさではありません。<br /><br /> または<br /><br /> バージョン バッファーは、バージョン文字列を格納するのに十分な大きさではありません。|  
+|ERROR_INSUFFICIENT_BUFFER|ディレクトリのバッファーが、ディレクトリパスを格納するのに十分な大きさではありません。<br /><br /> または<br /><br /> バージョンバッファーが、バージョン文字列を格納するのに十分な大きさではありません。|  
   
-## <a name="remarks"></a>Remarks  
- `GetRequestedRuntimeInfo`メソッドは必ずしもコンピューターにインストールされている最新バージョンではないと、プロセスに読み込まれたバージョンに関する実行時の情報を返します。  
+## <a name="remarks"></a>解説  
+ メソッドは、 `GetRequestedRuntimeInfo` プロセスに読み込まれたバージョンに関するランタイム情報を返します。これは、必ずしもコンピューターにインストールされている最新バージョンではありません。  
   
- .NET Framework version 2.0 を使用している最新のバージョンに関する情報を取得できます、`GetRequestedRuntimeInfo`メソッドとして、次のとおりです。  
+ .NET Framework バージョン2.0 では、次の方法でメソッドを使用して、インストールされている最新のバージョンに関する情報を取得でき `GetRequestedRuntimeInfo` ます。  
   
-- 指定、 `pExe`、 `pwszVersion`、および`pConfigurationFile`パラメーターを null として。  
+- `pExe`、 `pwszVersion` 、およびの各 `pConfigurationFile` パラメーターを null として指定します。  
   
-- RUNTIME_INFO_UPGRADE_VERSION フラグを指定、`RUNTIME_INFO_FLAGS`の列挙体、`runtimeInfoFlags`パラメーター。  
+- パラメーターの列挙に RUNTIME_INFO_UPGRADE_VERSION フラグを指定し `RUNTIME_INFO_FLAGS` `runtimeInfoFlags` ます。  
   
- `GetRequestedRuntimeInfo`メソッドでは、次の状況では、最新の CLR バージョンは返しません。  
+ メソッドは、 `GetRequestedRuntimeInfo` 次のような状況では、最新の CLR バージョンを返しません。  
   
-- 特定の CLR バージョンの読み込みを指定するアプリケーション構成ファイルが存在します。 Null を指定した場合でも、.NET Framework は構成ファイルを使用ことに注意してください、`pConfigurationFile`パラメーター。  
+- 特定の CLR バージョンの読み込みを指定するアプリケーション構成ファイルが存在します。 パラメーターに null を指定した場合でも、.NET Framework は構成ファイルを使用することに注意 `pConfigurationFile` してください。  
   
-- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) CLR の以前のバージョンを指定するメソッドが呼び出されました。  
+- [Corbindtoruntimeex](corbindtoruntimeex-function.md)メソッドが、以前の CLR バージョンを指定して呼び出されました。  
   
-- CLR の以前のバージョン用にコンパイルされたアプリケーションは現在実行中です。  
+- 以前のバージョンの CLR 用にコンパイルされたアプリケーションが現在実行されています。  
   
- `runtimeInfoFlags`パラメーターを指定できますアーキテクチャの定数の 1 つだけ、`RUNTIME_INFO_FLAGS`一度に列挙体。  
+ パラメーターの場合 `runtimeInfoFlags` 、列挙体のアーキテクチャ定数は一度に1つだけ指定でき `RUNTIME_INFO_FLAGS` ます。  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -114,17 +112,17 @@ HRESULT GetRequestedRuntimeInfo (
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetRequestedRuntimeVersion 関数](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [GetVersionFromProcess 関数](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [GetRequestedRuntimeVersion 関数](getrequestedruntimeversion-function.md)
+- [GetVersionFromProcess 関数](getversionfromprocess-function.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

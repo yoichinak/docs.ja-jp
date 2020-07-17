@@ -4,15 +4,13 @@ description: .NET Core 2.1 の新機能について。
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975213"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283443"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -39,17 +37,17 @@ ms.locfileid: "56975213"
 
 - 長時間にわたる SDK ビルド サーバー (`dotnet build` の個々の呼び出しにまたがるプロセス) の使用。 これにより、`dotnet build` が実行されるたびに大きなコード ブロックを JIT コンパイルする必要がなくなります。 ビルド サーバー プロセスは、次のコマンドで自動的に終了することができます。
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
 ### <a name="new-cli-commands"></a>新しい CLI コマンド
 
-[`DotnetCliToolReference`](../tools/extensibility.md) を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 それらのツールを以下に示します。
+`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 それらのツールを以下に示します。
 
 - `dotnet watch` は、ファイルの変更を待機してから、指定された一連のコマンドを実行するファイル システム ウォッチャーを提供します。 たとえば、次のコマンドは現在のプロジェクト内のファイルが変更されるたびにプロジェクトを自動的にリビルドして、詳細な出力を生成します。
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -67,15 +65,15 @@ ms.locfileid: "56975213"
 
 ### <a name="global-tools"></a>グローバル ツール
 
-.NET Core 2.1 では、*グローバル ツール* (コマンドラインからグローバルに使用できるカスタム ツール) がサポートされます。 以前のバージョンの .NET Core の拡張モデルでは、[`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) を使用してカスタム ツールをプロジェクト単位で入手することのみ可能でした。
+.NET Core 2.1 では、*グローバル ツール* (コマンドラインからグローバルに使用できるカスタム ツール) がサポートされます。 以前のバージョンの .NET Core の拡張モデルでは、`DotnetCliToolReference` を使用してカスタム ツールをプロジェクト単位で入手することのみ可能でした。
 
 グローバル ツールをインストールするには、[dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。 次に例を示します。
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-インストールしたツールは、ツール名を指定してコマンドラインから実行できます。 詳細については、「[.NET Core Global Tools overview](../tools/global-tools.md)」(.NET Core グローバル ツールの概要) を参照してください。
+インストールしたツールは、ツール名を指定してコマンドラインから実行できます。 詳細については、[.NET core グローバル ツールの概要](../tools/global-tools.md) を参照してください。
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>`dotnet tool` コマンドによるツールの管理
 
@@ -93,12 +91,13 @@ dotnet tool install -g dotnetsay
 
 .NET Core 2.0 以降のすべての .NET Core アプリケーションは、システムにインストールされている最新の*マイナー バージョン*に自動的にロールフォワードされます。
 
-.NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の*マイナー バージョン*に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
+.NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の "*マイナー バージョン*" に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
 
 > [!IMPORTANT]
 > このロールフォワードの動作はプレビュー リリースには適用されません。 既定では、メジャー リリースにも適用されませんが、次の設定で変更できます。
 
 共有フレームワークの候補なしでロール フォワードの設定を変更することで、この動作を変更できます。 使用可能な設定は次のとおりです。
+
 - `0` - マイナー バージョンのロールフォワード動作を無効にします。 この設定では、.NET Core 2.0.0 用にビルドされたアプリケーションが、.NET Core 2.2.0 または .NET Core 3.0.0 ではなく、.NET Core 2.0.1 にロール フォワードされます。
 - `1` - マイナー バージョンのロールフォワード動作を有効にします。 これが設定の既定値です。 この設定では、.NET Core 2.0.0 用にビルドされたアプリケーションが、インストールされているバージョンに応じて、.NET Core 2.0.1 または .NET Core 2.2.0 のいずれかにロール フォワードされますが、.NET Core 3.0.0 にはロール フォワードされません。
 - `2` - マイナー バージョンとメジャー バージョンのロールフォワード動作を有効にします。 設定すると、異なるメジャー バージョンも考慮されるため、.NET Core 2.0.0 用にビルドされたアプリケーションは、.NET Core 3.0.0 にロール フォワードされます。
@@ -107,15 +106,15 @@ dotnet tool install -g dotnetsay
 
 - `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 環境変数を目的の値に設定します。
 
-- 次の行を目的の値を指定して `runtimeconfig.json` ファイルに追加します。
+- 次の行を、目的の値を指定して *.runtimeconfig.json* ファイルに追加します。
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- [.NET Core CLI ツール](../tools/index.md)を使用している場合、次のオプションに目的の値を指定して .NET Core コマンド (`run` など) に追加します。
+- [.NET Core CLI](../tools/index.md) を使用している場合、次のオプションに必要な値を指定して .NET Core コマンド (`run` など) に追加します。
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 
@@ -178,15 +177,17 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
 次の例では、<xref:System.Span%601> および <xref:System.Memory%601> インスタンスを使用して配列の 10 個の要素を仮想的に表示します。
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 圧縮
 
 .NET Core 2.1 には、Brotli 圧縮と展開のサポートが追加されています。 Brotli は、[RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) で定義されており、ほとんどの Web ブラウザーと主要な Web サーバーでサポートされている汎用の無損失圧縮アルゴリズムです。 ストリーム ベースの <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> クラスまたは高性能なスパン ベースの <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> クラスと <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> クラスを使用できます。 次の例は、<xref:System.IO.Compression.BrotliStream> クラスによる圧縮を示しています。
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> の動作は、<xref:System.IO.Compression.DeflateStream> および <xref:System.IO.Compression.GZipStream> と同じです。そのため、これらの API を呼び出すコードを簡単に <xref:System.IO.Compression.BrotliStream> に変換できます。
 
@@ -210,7 +211,7 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
 - 静的メソッドである <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> は <xref:System.Span%601> にランダムな値を入力します。
 
-- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> が Linux と maxOS でサポートされるようになりました。
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> が Linux と macOS でサポートされるようになりました。
 
 - Elliptic-Curve Diffie-Hellman (ECDH) を <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> クラス ファミリーで使用できるようになりました。 セキュリティ、外部からのアクセスは .NET Framework の場合と同じです。
 
@@ -242,10 +243,14 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 Windows では、ネイティブ実装に依存する <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType> を使用するか、または <xref:System.Net.Http.HttpClient> コンストラクターにクラスのインスタンスを渡すことにより <xref:System.Net.Http.SocketsHttpHandler> クラスを使用することもできます。
 
-Linux と macOS では、<xref:System.Net.Http.HttpClient> をプロセス単位でのみ構成できます。 Linux で古い <xref:System.Net.Http.HttpClient> 実装を使用する場合は、[libcurl](https://curl.haxx.se/libcurl/) を配置する必要があります  (これは .NET Core 2.0 と共にインストールされています)。
+Linux と macOS では、<xref:System.Net.Http.HttpClient> をプロセス単位でのみ構成できます。 Linux で古い <xref:System.Net.Http.HttpClient> 実装を使用する場合は、[libcurl](https://curl.haxx.se/libcurl/) を配置する必要があります (これは .NET Core 2.0 と共にインストールされています)。
+
+### <a name="breaking-changes"></a>互換性に影響する変更
+
+重大な変更の詳細については、「[バージョン 2.0 から 2.1 への移行の破壊的変更](../compatibility/2.0-2.1.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core の新機能](index.md)
+- [.NET Core 3.1 の新機能](dotnet-core-3-1.md)
 - [EF Core 2.1 の新機能](/ef/core/what-is-new/ef-core-2.1)
 - [ASP.NET Core 2.1 の新機能](/aspnet/core/aspnetcore-2.1)

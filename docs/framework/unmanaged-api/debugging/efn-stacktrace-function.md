@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a725aa2c0f1fdea523bbf7cba880bc805f855782
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738985"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860738"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_StackTrace 関数
+# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace 関数
 マネージド スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージド コードとマネージド コードの間の各移行につき 1 つ) を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,65 +40,65 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>パラメーター  
  `Client`  
- [in]デバッグ中のクライアント。  
+ からデバッグ中のクライアント。  
   
  `wszTextOut`  
- [out]スタック トレースのテキスト表現。  
+ 入出力スタックトレースのテキスト表現。  
   
  `puiTextLength`  
- [out]文字数へのポインター`wszTextOut`します。  
+ 入出力内`wszTextOut`の文字数へのポインター。  
   
  `pTransitionContexts`  
- [out]コンテキストの切り替えの配列。  
+ 入出力遷移コンテキストの配列。  
   
  `puiTransitionContextCount`  
- [out]配列内の遷移のコンテキストの数へのポインター。  
+ 入出力配列内の遷移コンテキストの数へのポインター。  
   
  `uiSizeOfContext`  
- [in]Context 構造体のサイズ。  
+ からコンテキスト構造のサイズ。  
   
  `Flags`  
- [in]0 または SOS_STACKTRACE_SHOWADDRESSES (0x01) のいずれかに設定すると、EBP レジスタとそれぞれの前に入力スタック ポインター (ESP) を表示する`module!functionname`行。  
+ からを0または SOS_STACKTRACE_SHOWADDRESSES (0x01) のいずれかに設定すると、EBP レジスタと、各`module!functionname`行の前に入力スタックポインター (ESP) が表示されます。  
   
-## <a name="remarks"></a>Remarks  
- `_EFN_StackTrace`構造体は、WinDbg プログラマティック インターフェイスから呼び出すことができます。 パラメーターは、次のように使用されます。  
+## <a name="remarks"></a>解説  
+ この`_EFN_StackTrace`構造体は、WinDbg プログラムインターフェイスから呼び出すことができます。 パラメーターは次のように使用されます。  
   
-- 場合`wszTextOut`が null と`puiTextLength`が null でない関数は、返す文字列の長さで`puiTextLength`します。  
+- が`wszTextOut` null で、 `puiTextLength`が null でない場合、関数はの`puiTextLength`文字列長を返します。  
   
-- 場合`wszTextOut`が null でないテキストでは、関数には格納`wszTextOut`によって示される位置まで`puiTextLength`します。 バッファーの長さが不足している場合、バッファー、または返します E_OUTOFMEMORY で十分な空き領域が認識されたかどうかを正常に返します。  
+- が`wszTextOut` null でない場合、関数はによっ`wszTextOut`て`puiTextLength`示される場所までテキストを格納します。 バッファーに十分な空き領域がある場合は、正常に返されます。バッファーの長さが十分でない場合は E_OUTOFMEMORY を返します。  
   
-- 場合、関数の遷移の部分は無視されます`pTransitionContexts`と`puiTransitionContextCount`はどちらも null です。 この場合、関数は、関数名のみのテキスト出力を持つ呼び出し元を提供します。  
+- とが両方と`pTransitionContexts` `puiTransitionContextCount`も null の場合、関数の移行部分は無視されます。 この場合、関数は呼び出し元に関数名のみのテキスト出力を提供します。  
   
-- 場合`pTransitionContexts`が null と`puiTransitionContextCount`が null でない関数返しますコンテキスト エントリのために必要な数`puiTransitionContextCount`します。  
+- が`pTransitionContexts` null で、 `puiTransitionContextCount`が null でない場合、関数はで`puiTransitionContextCount`必要なコンテキストエントリの数を返します。  
   
-- 場合`pTransitionContexts`が null でない関数として扱われます長さの構造体の配列`puiTransitionContextCount`します。 構造体のサイズがで指定された`uiSizeOfContext`のサイズを指定する必要があります[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)または`CONTEXT`のアーキテクチャ。  
+- が`pTransitionContexts` null でない場合、関数はそれを長さ`puiTransitionContextCount`の構造体の配列として扱います。 構造体のサイズはに`uiSizeOfContext`よって指定され、 [simplecontext](stacktrace-simplecontext-structure.md)または`CONTEXT`アーキテクチャのサイズである必要があります。  
   
-- `wszTextOut` 次の形式で書き込まれます。  
+- `wszTextOut`は、次の形式で記述されます。  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- 16 進数でオフセットが「0x0」の場合、オフセットは書き込まれません。  
+- 16進数のオフセットが0x0 の場合、オフセットは書き込まれません。  
   
-- コードがないマネージ スレッドの現在のコンテキストで、関数は SOS_E_NOMANAGEDCODE を返します。  
+- 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は SOS_E_NOMANAGEDCODE を返します。  
   
-- `Flags`パラメーターが 0 またはそれぞれの前に、EBP と ESP を表示する SOS_STACKTRACE_SHOWADDRESSES`module!functionname`行。 既定では、これは 0 です。  
+- パラメーター `Flags`は、各`module!functionname`行の前に EBP と ESP を表示する場合は0または SOS_STACKTRACE_SHOWADDRESSES になります。 既定値は0です。  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace.h  
+ **ヘッダー:** SOS_Stacktrace  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [デバッグ グローバル静的関数](debugging-global-static-functions.md)

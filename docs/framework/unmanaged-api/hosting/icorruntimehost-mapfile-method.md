@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3b1a0cd9a1dfba6f33a20416f2a10c967f871a06
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780084"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762670"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile メソッド
-指定したファイルをメモリにマップします。 このメソッドは、互換性のために残されています。  
+指定されたファイルをメモリにマップします。 このメソッドは、互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +36,20 @@ HRESULT MapFile(
   
 ## <a name="parameters"></a>パラメーター  
  `hFile`  
- [in]マップするファイルのハンドル。  
+ からマップするファイルのハンドル。  
   
  `hMapAddress`  
- [out]ファイルのマッピングを開始する位置の開始メモリ アドレス。  
+ 入出力ファイルのマッピングを開始する開始メモリアドレス。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET framework のバージョン:** 1.0, 1.1  
+ **.NET Framework バージョン:** 1.0、1.1  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost インターフェイス](icorruntimehost-interface.md)

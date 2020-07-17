@@ -15,47 +15,45 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767332"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207289"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject メソッド
-オブジェクトのアドレスを"ICorDebugObjectValue"オブジェクトに変換します。  
+オブジェクトのアドレスを "の値" オブジェクトに変換します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `addr`  
- [in]オブジェクトのアドレス。  
+ からオブジェクトのアドレス。  
   
  `ppObject`  
- [out]"ICorDebugObjectValue"オブジェクトのアドレスへのポインター。  
+ 入出力"の値" オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 場合`addr`が有効なマネージ オブジェクトを指していない、`GetObject`メソッドを返します。`E_FAIL`します。  
+ `addr`が有効なマネージオブジェクトを指していない場合、 `GetObject` メソッドはを返し `E_FAIL` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

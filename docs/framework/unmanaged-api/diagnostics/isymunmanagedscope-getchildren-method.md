@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614865"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren メソッド
 このスコープの子を取得します。  
@@ -39,21 +37,21 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>パラメーター  
  `cChildren`  
- [in]A`ULONG32`のサイズを示す、`children`配列。  
+ から`ULONG32`配列のサイズを示す `children` 。  
   
  `pcChildren`  
- [out]ポインター、`ULONG32`子の格納に必要なバッファーのサイズを受け取る。  
+ 入出力`ULONG32`子を格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `children`  
- [out]子の返される配列。  
+ 入出力返された子の配列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetParent メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [ISymUnmanagedScope インターフェイス](isymunmanagedscope-interface.md)
+- [GetParent メソッド](isymunmanagedscope-getparent-method.md)

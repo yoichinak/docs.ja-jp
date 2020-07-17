@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020544"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646449"
 ---
 # <a name="data"></a>データ
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび XML の形式のさまざまなデータ ソースのデータにバインドできます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーションがデータを提示し、データと対話するための簡単で一貫性のある方法を提供します。 要素は、共通言語ランタイム (CLR) オブジェクトおよび XML 形式のさまざまなデータ ソースのデータにバインドできます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データ バインディング](data-binding-wpf.md)  
+ [データ バインディング](../../../desktop-wpf/data/data-binding-overview.md)  
  [ドラッグ アンド ドロップ](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -34,11 +34,11 @@ ms.locfileid: "62020544"
 ## <a name="related-sections"></a>関連項目  
  [コントロール](../controls/index.md)  
   
- [スタイルとテンプレート](../controls/styling-and-templating.md)  
+ [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  [データ バインディング](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>関連項目
 
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

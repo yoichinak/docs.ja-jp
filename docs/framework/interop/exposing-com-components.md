@@ -1,19 +1,17 @@
 ---
 title: .NET Framework への COM コンポーネントの公開
+description: COM コンポーネントを .NET に公開するプロセスについて説明します。 COM コンポーネントは、中間層のビジネス アプリケーション、または独立した機能として、マネージド コードで貴重です。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 459ba7ffed2e4f6c458f89a63b2baa37180d270d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620847"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>.NET Framework への COM コンポーネントの公開
 このセクションでは、既存の COM コンポーネントをマネージド コードに公開するために必要なプロセスをまとめています。 .NET Framework と緊密に統合される COM サーバーの詳細については、「[Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))」(相互運用のためのデザインの考慮事項) を参照してください。
@@ -32,11 +30,11 @@ ms.locfileid: "66833673"
   
 3. [相互運用プロジェクトをコンパイルする](compiling-an-interop-project.md)。  
   
-     Windows Software Development Kit (SDK) では、共通言語仕様 (CLS) に準拠する複数の言語 (Visual Basic、C#、C++ など) 用のコンパイラが用意されています。  
+     Windows SDK には、共通言語仕様 (CLS) に準拠するいくつかの言語 (Visual Basic、C#、C++ など) のコンパイラが用意されています。  
   
 4. [相互運用アプリケーションを展開する](deploying-an-interop-application.md)。  
   
-     相互運用アプリケーションは、[厳密な名前を付けた](../app-domains/strong-named-assemblies.md)、署名されたアセンブリとして、グローバル アセンブリ キャッシュに最適に展開されます。  
+     相互運用アプリケーションは、[厳密な名前を付けた](../../standard/assembly/strong-named.md)、署名されたアセンブリとして、グローバル アセンブリ キャッシュに最適に展開されます。  
   
 ## <a name="see-also"></a>関連項目
 

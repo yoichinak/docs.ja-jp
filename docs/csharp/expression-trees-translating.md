@@ -2,17 +2,18 @@
 title: 式ツリーの変換
 description: 式ツリーの各ノードにアクセスし、その式ツリーに変更を加えたコピーを構築する方法について説明します。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490074"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "76115773"
 ---
-# <a name="translating-expression-trees"></a>式ツリーの変換
+# <a name="translate-expression-trees"></a>式ツリーを変換する
 
-[前回 -- 式の構築](expression-trees-building.md)
+[前へ -- 式の構築](expression-trees-building.md)
 
 この最終セクションでは、式ツリーの各ノードにアクセスし、その式ツリーに変更を加えたコピーを構築する方法について説明します。 これらの手法は、2 つの重要なシナリオで使用されます。 1 つ目は、別の環境に変換するために、式ツリーで表現されるアルゴリズムを理解する場合です。 2 つ目は、作成したアルゴリズムを変更する場合です。 この目的として、ログ記録の追加、メソッド呼び出しの取得と追跡などがあります。
 
@@ -124,7 +125,7 @@ private static int Aggregate(Expression exp)
 
 同じ式に対して実行すると、次の出力が生成されます。
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +162,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 この式の実行の出力を次に示します。
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1
@@ -191,9 +192,9 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>詳細情報
 
-このサンプルは、式ツリーで表されるアルゴリズムを走査し、解釈するために構築するコードのごく一部です。 式ツリーを別の言語に変換する汎用的なライブラリを構築するために必要なすべての作業の説明については、Matt Warren の[このシリーズ](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx)を参照してください。 式ツリーに含まれる任意のコードを変換する方法について、詳しく説明されています。
+このサンプルは、式ツリーで表されるアルゴリズムを走査し、解釈するために構築するコードのごく一部です。 式ツリーを別の言語に変換する汎用的なライブラリを構築するために必要なすべての作業の説明については、Matt Warren の[このシリーズ](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series)を参照してください。 式ツリーに含まれる任意のコードを変換する方法について、詳しく説明されています。
 
 式ツリーの真の力がおわかりいただけたでしょうか。
 コードのセットを確認し、そのコードに必要な変更を加え、変更されたバージョンを実行することができます。 式ツリーは不変なので、既存のツリーのコンポーネントを使用して新しいツリーを作成できます。 その結果、変更した式ツリーの作成に必要なメモリ量が最小限に抑えられます。
 
-[次回 -- まとめ](expression-trees-summary.md)
+[次へ -- まとめ](expression-trees-summary.md)

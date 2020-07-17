@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 28b54026c8743f31a420e164944f60709e2e271b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745637"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894366"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread メソッド
-この呼び出しチェーンが物理スレッドの一部を取得します。  
+この呼び出しチェーンが含まれている物理スレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>パラメーター  
  `ppThread`  
- [out]この呼び出しチェーンがの一部に物理スレッドを表す ICorDebugThread オブジェクトへのポインターです。  
+ 入出力この呼び出しチェーンが含まれている物理スレッドを表す、スレッドオブジェクトへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

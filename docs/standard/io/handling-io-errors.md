@@ -1,5 +1,6 @@
 ---
 title: .NET での I/O エラーの処理
+description: .NET で I/O エラーを処理する方法について学習します。 エラー コードを例外にマップし、I/O 操作で例外を処理して、IOException を処理します。
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,17 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126876"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599803"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET での I/O エラーの処理
 
@@ -26,14 +25,14 @@ ms.locfileid: "53126876"
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>。すべての <xref:System.IO> 例外の種類の基底クラス。 これは、オペレーティング システムからのリターン コードが他の例外の種類に直接マップされないエラーに対してスローされます。
 - <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>。
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>。
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>。
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>。
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>。
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>。
 - <xref:System.ArgumentException?displayProperty=nameWithType>、.NET Framework と .NET Core 2.0 以前のバージョンで、無効なパス文字に対してスローされます。
 - <xref:System.NotSupportedException?displayProperty=nameWithType>、.NET Framework で無効なコロンに対してスローされます。
-- <xref:System.Security.SecurityException?displayProperty=nameWithType>、.NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます  (完全な信頼は .NET Framework の既定の設定です)。
+- <xref:System.Security.SecurityException?displayProperty=nameWithType>、.NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます (完全な信頼は .NET Framework の既定の設定です)。
 
 ## <a name="mapping-error-codes-to-exceptions"></a>エラー コードの例外へのマッピング
 
@@ -41,7 +40,7 @@ ms.locfileid: "53126876"
 
 たとえば、Windows オペレーティング システムでは、エラー コード`ERROR_FILE_NOT_FOUND` (または 0x02) を返すメソッドの呼び出しは <xref:System.IO.FileNotFoundException> にマップされ、エラー コード `ERROR_PATH_NOT_FOUND` (または 0x03) は <xref:System.IO.DirectoryNotFoundException> にマップされます。
 
-ただし、オペレーティング システムが特定のエラー コードが返す正確な条件は、多くの場合、文書化されていないか、適切に文書化されていません。 その結果、予期しない例外が発生する可能性があります。 たとえば、ファイルではなくディレクトリを操作している場合、無効なディレクトリ パスを <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> に提供すると、<xref:System.IO.DirectoryNotFoundException> コンストラクターがスローされることが想定されます。 ただし、<xref:System.IO.FileNotFoundException> がスローされる場合もあります。
+ただし、オペレーティング システムが特定のエラー コードが返す正確な条件は、多くの場合、文書化されていないか、適切に文書化されていません。 その結果、予期しない例外が発生する可能性があります。 たとえば、ファイルではなくディレクトリを操作している場合、無効なディレクトリ パスを <xref:System.IO.DirectoryInfo.%23ctor%2A> に提供すると、<xref:System.IO.DirectoryNotFoundException> コンストラクターがスローされることが想定されます。 ただし、<xref:System.IO.FileNotFoundException> がスローされる場合もあります。
 
 ## <a name="exception-handling-in-io-operations"></a>I/O 操作の例外処理
 
@@ -49,16 +48,16 @@ ms.locfileid: "53126876"
 
 | 例外の種類 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | [はい] | [はい] |
-| <xref:System.IO.FileNotFoundException> | [はい] | [はい] |
-| <xref:System.IO.DirectoryNotFoundException> | [はい] | [はい] |
-| <xref:System.IO.DriveNotFoundException?> | [はい] | [はい] |
-| <xref:System.IO.PathTooLongException> | [はい] | [はい] |
-| <xref:System.OperationCanceledException> | [はい] | [はい] |
-| <xref:System.UnauthorizedAccessException> | [はい] | [はい] |
+| <xref:System.IO.IOException> | [はい] | はい |
+| <xref:System.IO.FileNotFoundException> | はい | はい |
+| <xref:System.IO.DirectoryNotFoundException> | はい | はい |
+| <xref:System.IO.DriveNotFoundException?> | はい | はい |
+| <xref:System.IO.PathTooLongException> | はい | はい |
+| <xref:System.OperationCanceledException> | はい | はい |
+| <xref:System.UnauthorizedAccessException> | はい | はい |
 | <xref:System.ArgumentException> | .NET Core 2.0 以前| はい |
 | <xref:System.NotSupportedException> | × | はい |
-| <xref:System.Security.SecurityException> | × | 限定的な信頼のみ |
+| <xref:System.Security.SecurityException> | いいえ | 限定的な信頼のみ |
 
 ## <a name="handling-ioexception"></a>IOException の処理
 

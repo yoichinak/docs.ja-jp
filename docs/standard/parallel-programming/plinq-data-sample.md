@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298914"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291709"
 ---
 # <a name="plinq-data-sample"></a>PLINQ データのサンプル
 このサンプルには、.csv 形式のデータ例と、データを顧客、製品、注文、その他の詳細のメモリ内コレクションに変換するメソッドが含まれています。 PLINQ でさらに試す場合は、他の特定のトピックのコード例をこのトピックのコードに貼り付けて、`Main` メソッドから呼び出すことができます。 また、独自の PLINQ クエリでこのデータを使用することもできます。  
@@ -23,7 +21,7 @@ ms.locfileid: "59298914"
  データは、Northwind データベースのサブセットを表します。 50 の顧客レコードが含まれていますが、すべてのフィールドが含まれているわけではありません。 すべての顧客の注文および対応する Order_Detail データからの行のサブセットが含まれます。 製品はすべて含まれます。  
   
 > [!NOTE]
->  データ セットは、PLINQ が基本的な `where` 句と `select` 句のみを含むクエリの LINQ to Objects よりも高速であることを示すには十分な大きさではありません。 このような小さいデータ セットでの速度向上を確認するには、データ セットのすべての要素に対して負荷の大きい操作を含むクエリを使用します。  
+> データ セットは、PLINQ が基本的な `where` 句と `select` 句のみを含むクエリの LINQ to Objects よりも高速であることを示すには十分な大きさではありません。 このような小さいデータ セットでの速度向上を確認するには、データ セットのすべての要素に対して負荷の大きい操作を含むクエリを使用します。  
   
 ### <a name="to-set-up-this-sample"></a>このサンプルをセットアップするには  
   
@@ -35,7 +33,7 @@ ms.locfileid: "59298914"
   
 4. F5 キーを押し、プロジェクトが正常にビルドされ、実行されることを確認します。 次の出力がコンソール ウィンドウに表示されます。  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -46,9 +44,9 @@ ms.locfileid: "59298914"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>データ  
+## <a name="data"></a>Data  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  
@@ -862,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 05122f7c980c4b7dfdb27eec73464a4f0556ba99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 9d21b17068ff3ce5b0bd3990144383d7f9ded2f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034386"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151339"
 ---
 # <a name="creating-a-dataview"></a>DataView の作成
-<xref:System.Data.DataView> は 2 とおりの方法で作成できます。 使用することができます、 **DataView**への参照を作成できますコンス トラクター、または、<xref:System.Data.DataTable.DefaultView%2A>のプロパティ、<xref:System.Data.DataTable>します。 **DataView**コンス トラクターは空、またはいずれかがかかることができます、 **DataTable**引数を 1 つとして、または**DataTable**フィルター条件、並べ替え条件、および行と共に状態フィルター。 使用する追加の引数の詳細については、 **DataView**を参照してください[並べ替えとフィルター データ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)します。  
+<xref:System.Data.DataView> は 2 とおりの方法で作成できます。 **DataView** コンストラクターを使用するか、または <xref:System.Data.DataTable> の <xref:System.Data.DataTable.DefaultView%2A> プロパティへの参照を作成します。 空の **DataView** コンストラクターを使用できます。また、DataView コンストラクターでは、**DataTable** を 1 つの引数としてとるか、またはフィルター条件、並べ替え条件、および行状態フィルターと共に **DataTable** を使用します。 **DataView** で使用できるその他の引数については、「[データの並べ替えとフィルター処理](sorting-and-filtering-data.md)」を参照してください。  
   
- のインデックス、 **DataView**ときにも、構築、 **DataView**が作成されるときのいずれかと、**並べ替え**、 **RowFilter**、または**RowStateFilter**プロパティが変更されると、任意の最初の並べ替え順序を指定するか、作成するときに、コンス トラクター引数としてフィルタ リング条件によって最適なパフォーマンスを実現し、 **DataView**します。 作成、 **DataView**並べ替えまたはフィルター条件を指定しを設定せず、**並べ替え**、 **RowFilter**、または**RowStateFilter**プロパティが、その後、インデックスの構築には少なくとも 2 回: したらときに、 **DataView**が作成し、もう一度、並べ替えまたはフィルターのプロパティのいずれかが変更された日時。  
+ **DataView** のインデックスが作成されるのは、**DataView** が作成される時点と、**Sort**、**RowFilter**、または **RowStateFilter** の各プロパティが変更される時点であるため、**DataView** の作成時に初期の並べ替え順序または初期フィルター条件をコンストラクター引数として指定すると、パフォーマンスを最大限に引き出すことができます。 並べ替え条件やフィルター条件を指定せずに **DataView** を作成してから、**Sort**、**RowFilter**、または **RowStateFilter** の各プロパティを設定すると、インデックスが少なくとも 2 回作成されます。これは、**DataView** の作成時点と、並べ替えプロパティまたはフィルター プロパティの変更時です。  
   
- 作成する場合、 **DataView**を任意の引数を受け取らないコンス トラクターを使用することができなくを使用する、 **DataView**を設定するまで、**テーブル**プロパティ.  
+ 引数のないコンストラクターを使用して **DataView** を作成すると、**Table** プロパティを設定するまで、**DataView** を使用できないことに注意してください。  
   
- 次のコード例は、作成する方法を示します、 **DataView**を使用して、 **DataView**コンス トラクター。 A **RowFilter**、**並べ替え**列、および**DataViewRowState**に沿ってで提供されている、 **DataTable**します。  
+ 次のコード例では、**DataView** コンストラクターを使用して **DataView** を作成する方法を示します。 **DataTable** と共に **RowFilter**、**Sort** 列、および **DataViewRowState** が指定されています。  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -29,13 +29,13 @@ Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _
 ```  
   
 ```csharp  
-DataView custDV = new DataView(custDS.Tables["Customers"],   
-    "Country = 'USA'",   
-    "ContactName",   
+DataView custDV = new DataView(custDS.Tables["Customers"],
+    "Country = 'USA'",
+    "ContactName",
     DataViewRowState.CurrentRows);  
 ```  
   
- 次のコード例は、既定値への参照を取得する方法を示します**DataView**の**DataTable**を使用して、 **DefaultView**テーブルのプロパティ。  
+ テーブルの **DefaultView** プロパティを使用して **DataTable** の既定の **DataView** への参照を取得するコード サンプルを次に示します。  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
@@ -49,7 +49,7 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [データの並べ替えとフィルター処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [データの並べ替えとフィルター処理](sorting-and-filtering-data.md)
+- [DataTables](datatables.md)
+- [ADO.NET の概要](../ado-net-overview.md)

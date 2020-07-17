@@ -3,20 +3,21 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 5c68fe618f965f364a3716c3bc65de5e165b12ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793797"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "81646067"
 ---
-# <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
-サービスまたはセキュリティ トークン ハンドラー コレクションのセッション トークン キャッシュに登録します。  
+# \<sessionSecurityTokenCache>
+セッショントークンのキャッシュをサービスまたはセキュリティトークンハンドラーコレクションに登録します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<caches>  
-\<sessionSecurityTokenCache>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<caches>**](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionSecurityTokenCache>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +39,19 @@ ms.locfileid: "61793797"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生した型、<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>クラス。|  
+|type|クラスから派生する型 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
+|[\<caches>](caches.md)|サービスまたはセキュリティトークンハンドラーコレクションによって使用されるキャッシュを登録します。|  
   
 ## <a name="example"></a>例  
- 次の XML はセッション セキュリティ トークンを保持するためのカスタム キャッシュの構成 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 構成から取得されますが、`ClaimsAwareWebFarm`サンプル。 このサンプルの詳細については、次を参照してください。 [WIF コード サンプル インデックス](../../../../../docs/framework/security/wif-code-sample-index.md)します。  
+ 次の XML は、セッションセキュリティトークン () を保持するためのカスタムキャッシュの構成を示して <xref:System.IdentityModel.Tokens.SessionSecurityToken> います。 この構成は、サンプルから取得され `ClaimsAwareWebFarm` ます。 このサンプルの詳細については、「 [WIF Code Sample Index](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index)」を参照してください。  
   
 ```xml  
 <caches>  

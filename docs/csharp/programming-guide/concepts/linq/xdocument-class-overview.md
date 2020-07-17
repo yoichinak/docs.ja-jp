@@ -2,12 +2,12 @@
 title: XDocument クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: bf666a95cbb31a3ac808b5c10a37dffdaeed939f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483169"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "69590845"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument クラスの概要 (C#)
 このトピックでは、<xref:System.Xml.Linq.XDocument> クラスについて説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "66483169"
   
  <xref:System.Xml.Linq.XDocument> クラスが提供する特定の機能が必要な場合は、<xref:System.Xml.Linq.XDocument> オブジェクトを作成するだけで済みます。 多くの場合、<xref:System.Xml.Linq.XElement> を直接操作できます。 <xref:System.Xml.Linq.XElement> を直接操作するのは、比較的単純なプログラミング モデルです。  
   
- <xref:System.Xml.Linq.XDocument> は、<xref:System.Xml.Linq.XContainer> から派生します。 したがって子ノードを含めることができます。 ただし、<xref:System.Xml.Linq.XDocument> オブジェクトに格納できる子 <xref:System.Xml.Linq.XElement> ノードは 1 つだけです。 これは、XML ドキュメントにルート要素を 1 つしか持てないという XML 標準を反映しています。  
+ <xref:System.Xml.Linq.XDocument> は <xref:System.Xml.Linq.XContainer> から派生しています。 したがって子ノードを含めることができます。 ただし、<xref:System.Xml.Linq.XDocument> オブジェクトに格納できる子 <xref:System.Xml.Linq.XElement> ノードは 1 つだけです。 これは、XML ドキュメントにルート要素を 1 つしか持てないという XML 標準を反映しています。  
   
 ## <a name="components-of-xdocument"></a>XDocument のコンポーネント  
  <xref:System.Xml.Linq.XDocument> には、次の要素を含めることができます。  
@@ -86,6 +86,6 @@ d.Save("test.xml");
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](./linq-to-xml-overview.md)

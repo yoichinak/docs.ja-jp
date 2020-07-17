@@ -1,5 +1,5 @@
 ---
-title: <remove> の <listeners> の <source> 要素
+title: <remove>のの <listeners> 要素<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 4809c471deb51e0560b438b5a2c8849daad34ca0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 657e6db2af9b99b3bbf03afc6aab02c58a830f2d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701607"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79153336"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<削除 > 要素の\<リスナー > の\<ソース >
+# <a name="remove-element-for-listeners-for-source"></a>\<remove>のの \<listeners> 要素\<source>
 トレース ソースの `Listeners` コレクションからリスナーを削除します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<ソース >  
-\<ソース >  
-\<listeners>  
-\<remove>  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -37,52 +37,52 @@ ms.locfileid: "61701607"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須の属性です。<br /><br /> 削除するリスナーの名前、`Listeners`コレクション。|  
+|`name`|必須の属性です。<br /><br /> コレクションから削除するリスナーの名前 `Listeners` 。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
 |`source`|トレース メッセージを開始するトレース ソースを指定します。|  
-|`listeners`|収集、格納、およびメッセージをルーティングするリスナーを指定します。|  
+|`listeners`|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
   
-## <a name="remarks"></a>Remarks  
- `<remove>`要素から指定されたリスナーの削除、`Listeners`トレース ソースのコレクション。  
+## <a name="remarks"></a>解説  
+ 要素は、 `<remove>` 指定されたリスナーを `Listeners` トレースソースのコレクションから削除します。  
   
- 要素を削除することができます、`Listeners`呼び出すことによってプログラムでトレース ソースのコレクション、<xref:System.Diagnostics.TraceListenerCollection.Remove%2A>メソッドを<xref:System.Diagnostics.TraceSource.Listeners%2A>のプロパティ、<xref:System.Diagnostics.TraceSource>インスタンス。  
+ `Listeners` <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> インスタンスのプロパティに対してメソッドを呼び出すことによって、プログラムによってトレースソースのコレクションから要素を削除でき <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource> ます。  
   
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<remove>`要素を使用する前に、`<add>`リスナーを追加する要素`console`を`Listeners`トレース ソースのコレクション`TraceSourceApp`します。  
+ 次の例では、要素を使用し `<remove>` て、 `<add>` リスナーを `console` `Listeners` トレースソースのコレクションに追加する前に、要素を使用する方法を示し `TraceSourceApp` ます。  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="TraceSourceApp" switchName="sourceSwitch"   
+      <source name="TraceSourceApp" switchName="sourceSwitch"
          switchType="System.Diagnostics.SourceSwitch" >  
          <listeners>  
            <remove name="Default"/>  
-           <add name="console"   
+           <add name="console"
              type="System.Diagnostics.ConsoleTraceListener" />  
          </listeners>  
       </source>  
     </sources>  
   </system.diagnostics>  
-</configuration>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
-- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)
+- [\<clear>](clear-element-for-listeners-for-source.md)
+- [トレース リスナー](../../../debug-trace-profile/trace-listeners.md)

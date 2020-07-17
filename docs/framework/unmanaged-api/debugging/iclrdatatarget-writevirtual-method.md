@@ -15,24 +15,22 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6a7a7736837f7e6bbf1ad4982e78a75550abbeab
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738505"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860500"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual メソッド
-指定された仮想メモリ アドレスには、指定したバッファーからデータを書き込みます。  
+指定されたバッファーから指定された仮想メモリアドレスにデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT WriteVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [in, size_is(bytesRequested)]   
+    [in, size_is(bytesRequested)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesWritten  
@@ -41,26 +39,26 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- [in]仮想メモリ アドレスを格納する CLRDATA_ADDRESS します。  
+ から仮想メモリアドレスを格納する CLRDATA_ADDRESS。  
   
  `buffer`  
- [in]書き込むデータを格納するバッファーへのポインター。  
+ から書き込まれるデータを格納するバッファーへのポインター。  
   
  `bytesRequested`  
- [in]書き込むバイト数。  
+ から書き込むバイト数。  
   
  `bytesWritten`  
- [out]実際に書き込まれたバイト数へのポインター。  
+ 入出力書き込まれた実際のバイト数へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

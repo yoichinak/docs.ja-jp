@@ -2,13 +2,14 @@
 title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.technology: csharp-fundamentals
+ms.date: 09/02/2019
+ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251024"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "73039207"
 ---
 # <a name="string-interpolation-in-c"></a>C\# における文字列補間
 
@@ -26,7 +27,7 @@ ms.locfileid: "66251024"
 
 例に示すように、式を中かっこで囲むことで挿入文字列に含めることができます。
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +37,7 @@ ms.locfileid: "66251024"
 
 コロン (":") と書式設定文字列を持つ補間式に従って、式の結果の型でサポートされる書式設定文字列を指定します。
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +51,7 @@ ms.locfileid: "66251024"
 
 コンマ (",") と定数式を持つ補間式に従って、書式設定された式の結果の最小フィールド幅と配置を指定します。
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +59,7 @@ ms.locfileid: "66251024"
 
 配置と書式設定文字列の両方を指定する必要がある場合は、alignment コンポーネントから開始します。
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +75,7 @@ ms.locfileid: "66251024"
 
 挿入文字列は、通常の文字列リテラルで使用できるすべてのエスケープ シーケンスをサポートします。 詳細については、「[文字列のエスケープ シーケンス](../programming-guide/strings/index.md#string-escape-sequences)」を参照してください。
 
-エスケープ シーケンスをリテラルで解釈するには、[verbatim](../language-reference/tokens/verbatim.md) 文字列リテラルを使用します。 verbatim 挿入文字列は、`@` 文字が続く `$` 文字で始まります。
+エスケープ シーケンスをリテラルで解釈するには、[verbatim](../language-reference/tokens/verbatim.md) 文字列リテラルを使用します。 verbatim 補間文字列は、`$` 文字で始まり、`@` 文字が続きます。 C# 8.0 以降では、`$` と `@` のトークンを任意の順序で使用できます。`$@"..."` と `@$"..."` はどちらも有効な verbatim 補間文字列です。
 
 中かっこ "{" または "}" を結果文字列に含める場合は、2 つの中かっこ "{{" または "}}" を使用します。 詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md)」トピックの「[エスケープ中かっこ ({})](../../standard/base-types/composite-formatting.md#escaping-braces)」のセクションを参照してください。
 
@@ -106,7 +107,7 @@ ms.locfileid: "66251024"
 
 このチュートリアルでは、文字列補間の使用に関する一般的なシナリオについて説明しています。 文字列補間の詳細については、[文字列補間](../language-reference/tokens/interpolated.md)に関するトピックを参照してください。 .NET の型の書式設定の詳細については、「[.NET での型の書式設定](../../standard/base-types/formatting-types.md)」および「[複合書式設定](../../standard/base-types/composite-formatting.md)」のトピックを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - <xref:System.FormattableString?displayProperty=nameWithType>

@@ -2,14 +2,12 @@
 title: ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aaecbe3640e5da78c13a077611887c6b62d355a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a555acb9e23098b0a0f70924032771b1ae18e88e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771518"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376113"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
 マージされたアセンブリ内の指定の相対仮想アドレス (RVA: relative virtual address) で、マージされたアセンブリのデータを読み取ります。  
@@ -18,8 +16,8 @@ ms.locfileid: "67771518"
   
 ```cpp  
 HRESULT GetAssemblyImageBytes(  
-   [in] CORDB_ADDRESS rva,   
-   [in] ULONG32 length,   
+   [in] CORDB_ADDRESS rva,
+   [in] ULONG32 length,
    [out] ICorDebugMemoryBuffer** ppMemoryBuffer  
 );  
 ```  
@@ -32,23 +30,23 @@ HRESULT GetAssemblyImageBytes(
  マージされたアセンブリから読み取るバイト数。  
   
  `ppMemoryBuffer`  
- アドレスへのポインター、 [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)マージされたアセンブリ メタデータのメモリ バッファーに関する情報を含むオブジェクト。  
+ マージされたアセンブリメタデータを持つメモリバッファーに関する情報を格納している、[のオブジェクトの](icordebugmemorybuffer-interface.md)アドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

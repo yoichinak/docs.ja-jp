@@ -1,33 +1,34 @@
 ---
-title: dotnet-add reference コマンド
+title: dotnet add reference コマンド
 description: dotnet add 参照コマンドは、プロジェクト間参照を追加する便利なオプションを提供します。
-ms.date: 06/26/2019
-ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.date: 02/14/2020
+ms.openlocfilehash: b261e24ed6a9d5bd489d317d2663b1420b5c34ff
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422004"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158321"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add 参照
+# <a name="dotnet-add-reference"></a>dotnet add reference
 
-**この記事の対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet add reference` - プロジェクト間 (P2P) 参照を追加します。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
+```dotnetcli
+dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     [--interactive] <PROJECT_REFERENCES>
+
+dotnet add reference -h|--help
+```
 
 ## <a name="description"></a>説明
 
-`dotnet add reference` コマンドは、プロジェクトにプロジェクト参照を追加する便利なオプションを提供します。 このコマンドを実行すると、[`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 要素がプロジェクト ファイルに追加されます。
+`dotnet add reference` コマンドは、プロジェクトにプロジェクト参照を追加する便利なオプションを提供します。 このコマンドを実行すると、`<ProjectReference>` 要素がプロジェクト ファイルに追加されます。
 
 ```xml
 <ItemGroup>
@@ -39,44 +40,44 @@ ms.locfileid: "67422004"
 
 ## <a name="arguments"></a>引数
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   プロジェクト ファイルを指定します。 指定されていない場合、現在のディレクトリで検索されます。
 
-* **`PROJECT_REFERENCES`**
+- **`PROJECT_REFERENCES`**
 
   追加するプロジェクト間参照 (P2P) です。 1 つ以上のプロジェクトを指定します。 [glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))は Unix/Linux ベースのシステムで利用できます。
 
 ## <a name="options"></a>オプション
 
-* **`-h|--help`**
+- **`-f|--framework <FRAMEWORK>`**
+
+  TFM 形式を使用して特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、プロジェクト参照を追加します。
+
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`--interactive`**
 
-  特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、プロジェクト参照を追加します。
-
-* **`--interactive`**
-
-  コマンドを停止して、ユーザーの入力または操作のために待機させることができます (たとえば、認証を完了する場合)。 .NET Core 3.0 SDK 以降で使用できます。
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます (通常は、認証を完了する場合)。 .NET Core 3.0 SDK 以降で使用できます。
 
 ## <a name="examples"></a>使用例
 
-* プロジェクト参照を追加する:
+- プロジェクト参照を追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-* 現在のディレクトリのプロジェクトに複数のプロジェクト参照を追加する:
+- 現在のディレクトリのプロジェクトに複数のプロジェクト参照を追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-* Linux/Unix で glob パターンを使って複数のプロジェクト参照を追加する:
+- Linux/Unix で glob パターンを使って複数のプロジェクト参照を追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
   ```

@@ -14,27 +14,25 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eb1e7baf950e978bd921be20769810619658bc3
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697825"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442112"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach インターフェイス
-サーバー起動デバッガーの自動アタッチ用インターフェイスを定義します。  
+サーバーによって呼び出されるデバッガーの自動アタッチのインターフェイスを定義します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[AutoAttach メソッド](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|サーバー起動デバッガーの自動実行をアタッチします。|  
+|[AutoAttach メソッド](idebugautoattach-autoattach-method.md)|サーバーによって呼び出されたデバッガーの自動アタッチを実行します。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** DbgAutoAttach.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** DbgAutoAttach .idl  
   
 ## <a name="see-also"></a>関連項目
 
-- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [シンボル ストア診断インターフェイス](diagnostics-symbol-store-interfaces.md)

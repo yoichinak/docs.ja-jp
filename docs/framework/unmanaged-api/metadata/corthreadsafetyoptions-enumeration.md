@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045228"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007508"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 列挙型
 
@@ -42,17 +40,17 @@ typedef enum CorThreadSafetyOptions {
 |メンバー|説明|
 |------------|-----------------|
 |`MDThreadSafetyDefault`|既定値です。 `MDThreadSafetyOff` と同じ。|
-|`MDThreadSafetyOff`|読み取り/書き込みロックを設定できないことを示します。|
-|`MDThreadSafetyOn`|読み取り/書き込みロックを設定できることを示します。|
+|`MDThreadSafetyOff`|リーダー/ライターロックを設定できないことを示します。|
+|`MDThreadSafetyOn`|リーダー/ライターロックを設定できることを示します。|
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
-**ヘッダー:** CorHdr.h
+**ヘッダー:** CorHdr. h
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

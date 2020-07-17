@@ -1,23 +1,23 @@
 ---
-title: '方法: 複雑なフィルター (Visual Basic) を使用したクエリを作成します。'
+title: '方法: 複雑なフィルターを使用してクエリを記述する'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 18ed4379b7ec9c8007cc3c189fc45571b5161911
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614845"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397623"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>方法: 複雑なフィルター (Visual Basic) を使用したクエリを作成します。
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>方法: 複雑なフィルターを使用してクエリを記述する (Visual Basic)
 複雑なフィルターを使用して LINQ to XML クエリを記述することが必要になる場合があります。 たとえば、特定の名前と値を持つ子要素を含む要素をすべて検索しなければならない場合があります。 このトピックでは、複雑なフィルターを使用してクエリを記述する例について説明します。  
   
 ## <a name="example"></a>例  
  この例では、`PurchaseOrder` 属性が "Shipping" で `Address` 子要素が "NY" である `Type` 子要素を含む `State` 要素をすべて検索します。 この例では、入れ子になったクエリを `Where` 句で使用しています。コレクションに要素が含まれる場合、`Any` 演算子は `True` を返します。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
- 詳細については、`Any`演算子を参照してください[量指定子操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)します。  
+ `Any` 演算子の詳細については、「[量指定子操作 (Visual Basic)](quantifier-operations.md)」を参照してください。  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -38,14 +38,14 @@ Next
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 99505  
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
- この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル:名前空間内の複数の購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル:名前空間内の複数の購買発注書](sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -72,7 +72,7 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 99505  
 ```  
   
@@ -80,9 +80,9 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [XML 子軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [XML Value プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [射影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
-- [量指定子操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [XML 子軸プロパティ](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [XML 属性軸プロパティ](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [XML Value プロパティ](../../../language-reference/xml-axis/xml-value-property.md)
+- [射影操作 (Visual Basic)](projection-operations.md)
+- [量指定子操作 (Visual Basic)](quantifier-operations.md)

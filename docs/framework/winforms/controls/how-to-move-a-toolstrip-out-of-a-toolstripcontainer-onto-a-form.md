@@ -5,31 +5,28 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6519add6789485d41146633abb5e11f80913649
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913658"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039825"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>方法: ToolStrip を ToolStripContainer からフォームに移動する
-移動する、次の手順を使用して、<xref:System.Windows.Forms.ToolStrip>のうち、<xref:System.Windows.Forms.ToolStripContainer>からフォームにします。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>ToolStrip を ToolStripContainer からフォームに外に移動するには  
-  
-1. <xref:System.Windows.Forms.ToolStrip>を選択します。  
-  
-2. 切り取り、<xref:System.Windows.Forms.ToolStrip>で ctrl キーを押しながら X キーを押すか右クリック、<xref:System.Windows.Forms.ToolStrip>選択**切り取り**コンテキスト メニュー。  
-  
-3. フォームを選択します。  
-  
-4. 貼り付け、<xref:System.Windows.Forms.ToolStrip>で ctrl キーを押しながら V キーを押すか、選択**貼り付け**から、**編集**メニュー。  
-  
-5. 設定、<xref:System.Windows.Forms.ToolStrip.Dock%2A>のプロパティ、<xref:System.Windows.Forms.ToolStrip>に**上部**します。  
-  
+をフォームに移動<xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.ToolStripContainer>するには、次の手順に従います。
+
+## <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>ToolStrip を ToolStripContainer からフォームに移動するには
+
+1. <xref:System.Windows.Forms.ToolStrip>を選択します。
+
+2. CTRL キーを押しながら X キーを押し<xref:System.Windows.Forms.ToolStrip> てを切り取るか、を右クリックしてコンテキストメニューの[切り取り]を選択し<xref:System.Windows.Forms.ToolStrip>ます。
+
+3. フォームを選択します。
+
+4. CTRL キー <xref:System.Windows.Forms.ToolStrip>を押しながら V キーを押すか、 **[編集]** メニューの **[貼り付け]** をクリックして、を貼り付けます。
+
+5. のプロパティを**Top**に設定します<xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.ToolStrip.Dock%2A> 。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ToolStrip>

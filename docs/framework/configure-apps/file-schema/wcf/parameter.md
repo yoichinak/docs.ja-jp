@@ -2,22 +2,23 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783436"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70400110"
 ---
-# <a name="parameter"></a>\<パラメーター >
+# \<parameter>
 宣言された型がジェネリック型である場合、ジェネリック パラメーターを指定します。  
   
- \<system.runtime.serialization>  
-\<dataContractSerializer >  
-\<declaredTypes > 要素  
-\<追加 > 要素の\<declaredTypes >  
-\<knownType > 要素  
-\<パラメーター > 要素  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.serialization>**](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<dataContractSerializer>**](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<declaredTypes>**](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-of-declaredtypes-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<knownType>**](knowntype.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<parameter>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,12 +34,12 @@ ms.locfileid: "61783436"
   
 |属性|説明|  
 |---------------|-----------------|  
-|インデックス|宣言された型がジェネリック型である場合、既知の型を返すジェネリック パラメーターを指定します。|  
-|型|シリアル化と逆シリアル化で使用される既知の型を説明する文字列。|  
+|インデックス (index)|宣言された型がジェネリック型である場合、既知の型を返すジェネリック パラメーターを指定します。|  
+|type|シリアル化と逆シリアル化で使用される既知の型を説明する文字列。|  
   
 ## <a name="index-attribute"></a>index 属性  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |"0"|ジェネリック型の最初のパラメーター。 たとえば、<xref:System.Collections.Generic.List%601> にはパラメーターが 1 つだけあります。 宣言型として使用される場合、index は "0" に設定されます。|  
 |"1"|ジェネリック型の 2 番目のパラメーター。 たとえば、<xref:System.Collections.Generic.Dictionary%602> には 2 つのパラメーターがあります。 2 番目のパラメーターによって既知の型が返される場合は、index 属性を "1" に設定します。|  
@@ -48,20 +49,20 @@ ms.locfileid: "61783436"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|宣言型のフィールドまたはプロパティによって返される既知の型を指定します。|  
+|[\<knownType>](knowntype.md)|宣言型のフィールドまたはプロパティによって返される既知の型を指定します。|  
   
-## <a name="remarks"></a>Remarks  
- 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>します。  
+## <a name="remarks"></a>解説  
+ 既知の型の詳細については、「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」と「」を参照してください <xref:System.Runtime.Serialization.DataContractSerializer> 。  
   
- 参照してください、 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)この要素の使用例についてはします。  
+ [\<dataContractSerializer>](datacontractserializer-element.md)この要素の使用例については、「」を参照してください。  
   
  この構成要素に、両方の属性を同時に設定することはできません。 両方の属性が設定された場合、<xref:System.Configuration.ConfigurationErrorsException> が発生します。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [既知のデータ コントラクト型](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [\<add>](add-of-declaredtypes-element.md)

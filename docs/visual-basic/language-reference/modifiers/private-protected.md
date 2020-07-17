@@ -1,23 +1,23 @@
 ---
-title: Private Protected (Visual Basic)
+title: Private Protected
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: b7d9f81e41950b92c787e2e50fb94fe3d7c07559
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920498"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362230"
 ---
 # <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
-キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 A`Private Protected`メンバーがアクセスできるは、外側のクラスから派生した型と、含まれるクラスのすべてのメンバーによっては、含んでいるアセンブリが見つかった場合にのみです。
+キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 `Private Protected` メンバーは、その親クラスのすべてのメンバーと、親クラスから派生した型でアクセスできますが、それらがその親アセンブリにも存在する場合に限られます。
 
-指定できます`Private Protected`クラスのメンバーにのみ適用することはできません`Private Protected`構造体のメンバーに構造体は継承できないためです。
+`Private Protected` は、クラスのメンバーに対してのみ指定できます。構造体は継承できないため、構造体のメンバーに `Private Protected` を適用することはできません。
 
-`Private Protected`アクセス修飾子は Visual Basic 15.5 以降でサポートされています。 これを使用する Visual Basic プロジェクトに次の要素を追加することができます (\*.vbproj) ファイル。 Visual Basic 15.5 いる限り、またはそれ以降は、システムにインストールされているが、最新バージョンの Visual Basic コンパイラでサポートされているすべての言語機能を活用することができます。
+`Private Protected` アクセス修飾子は Visual Basic 15.5 以降でサポートされています。 これを使用するには、次の要素を Visual Basic プロジェクト (\*.vbproj) ファイルに追加します。 システムに Visual Basic 15.5 以降がインストールされている限り、Visual Basic コンパイラの最新バージョンでサポートされているすべての言語機能を利用できます。
 
 ```xml
 <PropertyGroup>
@@ -25,55 +25,55 @@ ms.locfileid: "61920498"
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic 言語バージョンの設定](../configure-language-version.md)に関するページを参照してください。
 
 > [!NOTE]
-> Visual Studio での F1 ヘルプを選択する`private protected`のいずれかのヘルプを提供します。[プライベート](private.md)または[保護](protected.md)します。 IDE では、複合語ではなく、カーソルの下の 1 つのトークンを取得します。
+> Visual Studio で、`private protected` に対して F1 ヘルプを選択すると、[private](private.md) または [protected](protected.md) のヘルプが表示されます。 IDE では、複合語ではなくカーソルの下にある 1 つのトークンが選択されます。
 
 ## <a name="rules"></a>ルール
 
-- **宣言コンテキスト。** 使用することができます`Private Protected`クラス レベルでのみです。 これは、意味の宣言のコンテキストを`Protected`要素は、クラスでなければなりませんし、ソース ファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
+- **宣言コンテキスト。** `Private Protected` は、クラス レベルでのみ使用できます。 つまり、`Protected` 要素の宣言コンテキストはクラスにする必要があり、ソース ファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
 
 ## <a name="behavior"></a>動作
 
-- **アクセス レベルです。** クラスのすべてのコードは、その要素にアクセスできます。 基本クラスから派生し、同じアセンブリに含まれているすべてのクラスでコードがすべてにアクセスできる、`Private Protected`基底クラスの要素。 基本クラスを基底クラスから派生し、別のアセンブリに含まれているすべてのクラスでのコードでアクセスできませんただし、`Private Protected`要素。
+- **アクセス レベル。** クラス内のすべてのコードで、その要素にアクセスできます。 基底クラスから派生し、同じアセンブリに含まれるすべてのクラスのコードで、基底クラスのすべての `Private Protected` 要素にアクセスできます。 ただし、基底クラスから派生し、別のアセンブリに含まれるクラスのコードでは、基底クラスの `Private Protected` 要素にアクセスできません。
 
-- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。
+- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `Private Protected` 修飾子は、次のコンテキストで使用できます。
 
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)の入れ子になったクラス
+- 入れ子になったクラスの [Class ステートメント](../statements/class-statement.md)
 
-- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const ステートメント](../statements/const-statement.md)
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../statements/declare-statement.md)
 
-- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)デリゲートのクラスで入れ子になった
+- クラスに入れ子にされたデリゲートの [Delegate ステートメント](../statements/delegate-statement.md)
 
-- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim ステートメント](../statements/dim-statement.md)
 
-- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)列挙型のクラスで入れ子になった
+- クラスに入れ子にされた列挙型の [Enum ステートメント](../statements/enum-statement.md)
 
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Event ステートメント](../statements/event-statement.md)
 
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function ステートメント](../statements/function-statement.md)
 
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)インターフェイスのクラスで入れ子になった
+- クラスに入れ子にされたインターフェイスの [Interface ステートメント](../statements/interface-statement.md)
 
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property ステートメント](../statements/property-statement.md)
 
-- [ステートメントの構造体](../../../visual-basic/language-reference/statements/structure-statement.md)クラスで入れ子になった構造体
+- クラスに入れ子にされた構造体の[Structure ステートメント](../statements/structure-statement.md)
 
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub ステートメント](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Public](public.md)
+- [Protected](protected.md)
 - [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](private.md)
 - [Protected Friend](./protected-friend.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../programming-guide/language-features/procedures/index.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)

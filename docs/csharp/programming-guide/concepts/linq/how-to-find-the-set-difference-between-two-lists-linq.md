@@ -1,26 +1,26 @@
 ---
-title: '方法: 2 つのリストの差集合を見つける (LINQ) (C#)'
+title: 2 つのリストの差集合を見つける方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: c8f01cb53665d01d4c7861bab758ecc9e0dcc3c8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585707"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169182"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>方法: 2 つのリストの差集合を見つける (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>2 つのリストの差集合を見つける方法 (LINQ) (C#)
 この例では、LINQ を使用して、2 つの文字列リストを比較し、names2.txt ではなく names1.txt でそれらの行を出力する方法を示します。  
   
 ### <a name="to-create-the-data-files"></a>データ ファイルを作成するには  
   
-1. 「[方法:文字列コレクションを結合および比較する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)」に示されているように、ソリューション フォルダーに names1.txt と names2.txt をコピーします。  
+1. 「[文字列コレクションを結合および比較する方法 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)」に示されているように、ソリューション フォルダーに names1.txt と names2.txt をコピーします。  
   
 ## <a name="example"></a>例  
   
 ```csharp  
 class CompareLists  
-{          
+{
     static void Main()  
     {  
         // Create the IEnumerable data sources.  
@@ -57,6 +57,6 @@ class CompareLists
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)

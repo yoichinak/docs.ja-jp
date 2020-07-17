@@ -2,12 +2,12 @@
 title: Oracle スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: cb91a90ae7323283556954caa401646a2063a37e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878476"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783297"
 ---
 # <a name="oracle-schema-collections"></a>Oracle スキーマ コレクション
 
@@ -19,7 +19,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 
 - IndexColumns
 
-- 手順
+- プロシージャ
 
 - シーケンス
 
@@ -102,21 +102,21 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |LAST_ANALYZED|DateTime|インデックスが最後に分析された日付。|
 |DEGREE|String|インデックスがスキャンされるインスタンスごとのスレッド数。|
 |INSTANCES|String|インデックスがスキャンされるインスタンス数。|
-|PARTITIONED|String|このインデックスがパーティション分割されているかどうか (はい&#124;なし)。|
+|PARTITIONED|String|インデックスが分割されているかどうか (YES &#124; NO)。|
 |TEMPORARY|String|インデックスが一時テーブルにあるかどうかを示します。|
-|GENERATED|String|インデックスの名前はシステムによって生成される、かどうか (Y&#124;N)。|
-|SECONDARY|String|インデックスが Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトでかどうか (Y&#124;N)。|
+|GENERATED|String|インデックスの名前がシステム生成かどうか (Y&#124;N)。|
+|SECONDARY|String|インデックスが Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y&#124;N)。|
 |BUFFER_POOL|String|インデックス ブロックで使用される既定のバッファー プールの名前。|
 |USER_STATS|String|統計情報がユーザーによって直接入力されたものかどうかを示します。|
-|DURATION|String|一時テーブルの期間を示します。1) SYS$ セッション: 2) SYS$ トランザクション、セッションの間、行が保持されます。 3) 永続テーブルの場合は Null のコミット後の行が削除されます。|
+|DURATION|String|一時テーブルの存続期間を示します。1) SYS$SESSION: 行は、セッションが存続している間、保持されます。2) SYS$TRANSACTION: 行は、COMMIT 後に削除されます。3) 永続テーブルの場合は NULL です。|
 |PCT_DIRECT_ACCESS|Decimal (10 進数型)|索引構成表のセカンダリ インデックスでは、VALID であると推測される行のパーセンテージを示します。|
 |ITYP_OWNER|String|ドメイン インデックスでは、indextype の所有者を示します。|
 |ITYP_NAME|String|ドメイン インデックスでは、indextype の名前を示します。|
 |PARAMETERS|String|ドメイン インデックスでは、パラメーターの文字列を示します。|
 |GLOBAL_STATS|String|分割されたインデックスでは、統計情報がインデックス全体を分析して収集されたものか (YES)、または基になるインデックスのパーティションおよびサブパーティションから推測されたものであるか (NO) どうかを示します。|
 |DOMIDX_STATUS|String|ドメイン インデックスのステータスが反映されます。 NULL: 指定されたインデックスはドメイン インデックスではありません。 VALID: インデックスは有効なドメイン インデックスです。 IDXTYP_INVLD: このドメイン インデックスのインデックス型は無効です。|
-|DOMIDX_OPSTATUS|String|ドメイン インデックスに対して実行された操作の状態を反映しています。NULL: 指定されたインデックスはドメイン インデックスではありません。 VALID: 操作がエラーなく実行されました。 FAILED: エラーによって操作が失敗しました。|
-|FUNCIDX_STATUS|String|関数ベースのインデックスの状態を示します。NULL: これは関数に基づくインデックス作成、有効: 関数ベースのインデックスを有効にすると、無効になっています: 関数ベースのインデックスが無効になっています。|
+|DOMIDX_OPSTATUS|String|ドメイン インデックス上で実行された操作のステータスが反映されます。NULL: 指定されたインデックスはドメイン インデックスではありません。 VALID: 操作がエラーなく実行されました。 FAILED: エラーによって操作が失敗しました。|
+|FUNCIDX_STATUS|String|関数ベースのインデックスの状態を示します。NULL: これは関数ベースのインデックスではありません。ENABLED: 関数ベースのインデックスは有効になっています。DISABLED: 関数ベースのインデックスは無効になっています。|
 |JOIN_INDEX|String|結合インデックスかどうかを示します。|
 
 ## <a name="indexcolumns"></a>IndexColumns
@@ -133,7 +133,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |CHAR_LENGTH|Decimal (10 進数型)|列の最大コードポイント長。|
 |DESCEND|String|列が降順で並べ替えられるかどうかを示します。|
 
-## <a name="procedures"></a>手順
+## <a name="procedures"></a>プロシージャ
 
 |ColumnName|DataType|説明|
 |----------------|--------------|-----------------|
@@ -146,8 +146,8 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
 |状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
-|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
-|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
+|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &#124; N)。|
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうかを示します (Y &#124; N)。|
 |CREATED|DateTime|オブジェクトが作成された日付。|
 
 ## <a name="sequences"></a>シーケンス
@@ -221,8 +221,8 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
 |状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
-|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
-|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
+|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &#124; N)。|
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうかを示します (Y &#124; N)。|
 
 ## <a name="packages"></a>パッケージ
 
@@ -237,8 +237,8 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
 |状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
-|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
-|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
+|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &#124; N)。|
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうかを示します (Y &#124; N)。|
 |CREATED|DateTime|オブジェクトが作成された日付。|
 
 ## <a name="packagebodies"></a>PackageBodies
@@ -254,8 +254,8 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
 |状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
-|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
-|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
+|GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &#124; N)。|
+|SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトかどうかを示します (Y &#124; N)。|
 |CREATED|DateTime|オブジェクトが作成された日付。|
 
 ## <a name="arguments"></a>引数
@@ -382,4 +382,4 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

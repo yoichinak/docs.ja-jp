@@ -2,18 +2,18 @@
 title: '方法: サービスのバージョン管理'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654538"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586937"
 ---
 # <a name="how-to-service-versioning"></a>方法: サービスのバージョン管理
 このトピックでは、メッセージを同じサービスの異なるバージョンにルーティングするルーティング構成を作成するために必要な、基本的な手順について説明します。 この例では、電卓サービスの 2 つのバージョン `roundingCalc` (v1) および `regularCalc` (v2) にメッセージがルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、古い方のサービス `roundingCalc` では、戻る前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションは、新しい方の `regularCalc` サービスを使用するかどうかを示すことが可能である必要があります。  
   
 > [!WARNING]
->  メッセージをサービスの特定のバージョンにルーティングするには、ルーティング サービスで、メッセージの内容に基づいて、そのメッセージの転送先を特定できることが必要です。 次に示す手法では、クライアントがメッセージ ヘッダーに情報を挿入することでバージョンを指定します。 サービスのバージョンを指定するいくつかの手法では、クライアントが追加データを渡す必要はありません。 たとえば、サービスの最新のバージョン、または最も互換性のあるバージョンにメッセージをルーティングしたり、ルーターが標準の SOAP エンベロープの一部を使用したりすることもできます。  
+> メッセージをサービスの特定のバージョンにルーティングするには、ルーティング サービスで、メッセージの内容に基づいて、そのメッセージの転送先を特定できることが必要です。 次に示す手法では、クライアントがメッセージ ヘッダーに情報を挿入することでバージョンを指定します。 サービスのバージョンを指定するいくつかの手法では、クライアントが追加データを渡す必要はありません。 たとえば、サービスの最新のバージョン、または最も互換性のあるバージョンにメッセージをルーティングしたり、ルーターが標準の SOAP エンベロープの一部を使用したりすることもできます。  
   
  次の操作が両方のサービスによって公開されます。  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. 送信先エンドポイントにメッセージをルーティングするのに使用するフィルターを定義します。  この例では、XPath フィルターを使用して、バージョンにメッセージをルーティングする必要がありますを決定するカスタム CalcVer ヘッダーの値を検出できます。 XPath フィルターは、CalcVer ヘッダーが含まれていないメッセージの検出にも使用されます。 次の例では、必要なフィルターおよび名前空間のテーブルを定義します。  
+2. 送信先エンドポイントにメッセージをルーティングするのに使用するフィルターを定義します。  この例では、XPath フィルターを使用して "CalcVer" カスタムヘッダーの値を検出し、メッセージのルーティング先のバージョンを決定します。 XPath フィルターは、"CalcVer" ヘッダーが含まれていないメッセージを検出するためにも使用されます。 次の例では、必要なフィルターおよび名前空間のテーブルを定義します。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -90,13 +90,13 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
            messages that do not contain the custom header-->  
        <filter name="XPathFilterNoHeader" filterType="XPath"  
                filterData="count(sm:header()/custom:CalcVer)=0"/>  
-    </filters  
+    </filters>
     ```  
   
     > [!NOTE]
-    > S12 の名前空間プレフィックスは既定では、名前空間テーブルに定義されているし、名前空間を表す`http://www.w3.org/2003/05/soap-envelope`します。
+    > S12 名前空間プレフィックスは、既定で名前空間テーブルに定義され、名前空間を表し `http://www.w3.org/2003/05/soap-envelope` ます。
   
-3. 各フィルターをクライアント エンドポイントと関連付けるフィルター テーブルを定義します。 メッセージに値 1 の CalcVer ヘッダーが含まれている場合は、regularCalc サービスに送信されます。 ヘッダーに値 2 が含まれる場合は、roundingCalc サービスに送信されます。 ヘッダーがない場合、メッセージは regularCalc にルーティングされます。  
+3. 各フィルターをクライアント エンドポイントと関連付けるフィルター テーブルを定義します。 メッセージの "CalcVer" ヘッダーに値1が含まれている場合は、regularCalc サービスに送信されます。 ヘッダーに値 2 が含まれる場合は、roundingCalc サービスに送信されます。 ヘッダーがない場合、メッセージは regularCalc にルーティングされます。  
   
      次のコードでは、フィルター テーブルを定義し、前に定義されたフィルターを追加します。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 次の例では、関連付けることを示します`filterTable1`サービスのエンドポイントで。  
+4. フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 次の例は、 `filterTable1` サービスエンドポイントとの関連付けを示しています。  
   
     ```xml  
     <behaviors>  
@@ -269,7 +269,7 @@ namespace Microsoft.Samples.AdvancedFilters
                     //if they wanted to create the header, go ahead and add it to the outgoing message  
                     if (header != null && (header=="1" || header=="2"))  
                     {  
-                        //create a new header "RoundingCalculator", no specific namespace, and set the value to   
+                        //create a new header "RoundingCalculator", no specific namespace, and set the value to
                         //the value of header.  
                         //the Routing Service will look for this header in order to determine if the message  
                         //should be routed to the RoundingCalculator  
@@ -326,4 +326,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>関連項目
 
-- [ルーティング サービス](../../../../docs/framework/wcf/samples/routing-services.md)
+- [ルーティング サービス](../samples/routing-services.md)

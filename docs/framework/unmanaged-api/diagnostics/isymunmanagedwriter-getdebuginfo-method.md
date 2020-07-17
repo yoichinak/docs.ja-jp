@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777310"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614787"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo メソッド
-コンパイラがポータブル実行可能 (PE) ファイル ヘッダーのデバッグ ディレクトリのエントリを書き込むために必要な情報を返します。 シンボル ライターを除くのすべてのフィールドは`TimeDateStamp`と`PointerToRawData`します。 (コンパイラは、これら 2 つのフィールドを適切に設定を行います)。  
+コンパイラがポータブル実行可能 (PE) ファイルヘッダーにデバッグディレクトリエントリを書き込むために必要な情報を返します。 シンボルライターは、およびを除くすべてのフィールドを入力し `TimeDateStamp` `PointerToRawData` ます。 (コンパイラは、これらの2つのフィールドを適切に設定する必要があります)。  
   
- このメソッドを呼び出す、PE ファイルまでデータ blob の出力、設定する必要があります、コンパイラ、 `PointerToRawData` 、出力されたデータをポイントして、IMAGE_DEBUG_DIRECTORY を PE ファイルに書き込む IMAGE_DEBUG_DIRECTORY フィールド。 コンパイラを設定する必要がありますも、`TimeDateStamp`フィールドと等しい、 `TimeDateStamp` PE ファイルが生成されるのです。  
+ コンパイラは、このメソッドを呼び出し、PE ファイルにデータ blob を出力します。次に、 `PointerToRawData` 生成されたデータを指すように IMAGE_DEBUG_DIRECTORY のフィールドを設定し、IMAGE_DEBUG_DIRECTORY を pe ファイルに書き込みます。 また、コンパイラは、 `TimeDateStamp` `TimeDateStamp` 生成される PE ファイルのと同じフィールドをに設定する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,23 +40,23 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `pIDD`  
- [入力、出力]シンボルのライターが入力する、IMAGE_DEBUG_DIRECTORY へのポインター。  
+ [入力、出力]シンボルライターが入力する IMAGE_DEBUG_DIRECTORY へのポインター。  
   
  `cData`  
- [in]A`DWORD`デバッグ データのサイズを格納しています。  
+ から`DWORD`デバッグデータのサイズを格納している。  
   
  `pcData`  
- [out]ポインターを`DWORD`デバッグ データの格納に必要なバッファーのサイズを受け取る。  
+ 入出力`DWORD`デバッグデータを格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `data`  
- [out]シンボル ストアのデバッグ データを保持するために十分な大きさであるバッファーへのポインター。  
+ 入出力シンボルストアのデバッグデータを保持するのに十分な大きさのバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter インターフェイス](isymunmanagedwriter-interface.md)

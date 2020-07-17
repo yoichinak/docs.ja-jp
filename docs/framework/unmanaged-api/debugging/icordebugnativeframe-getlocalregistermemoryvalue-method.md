@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f16150ad7d9ecec4b4aceee5c9266e9a7859f1cb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746197"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213297"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue メソッド
-引数またはうち下位ワードと上位ワード メモリ位置に格納され、このネイティブ フレームにそれぞれ、レジスタを指定のローカル変数の値を取得します。  
+このネイティブフレームのメモリ位置と指定したレジスタに、下位ワードと上位ワードが格納される引数またはローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,27 +39,27 @@ HRESULT GetLocalRegisterMemoryValue (
   
 ## <a name="parameters"></a>パラメーター  
  `highWordReg`  
- [in]値の上位ワードを含むレジスタを指定する"CorDebugRegister"列挙型の値。  
+ から値の上位ワードを含むレジスタを指定する "CorDebugRegister" 列挙体の値。  
   
  `lowWordAddress`  
- [in]A`CORDB_ADDRESS`値の下位ワードを格納しているメモリの場所を指定する値。  
+ から`CORDB_ADDRESS`値の下位ワードを格納しているメモリ位置を指定する値。  
   
  `cbSigBlob`  
- [in]によって参照されているバイナリ メタデータ シグネチャのサイズを指定する整数、`pvSigBlob`パラメーター。  
+ からパラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数 `pvSigBlob` 。  
   
  `pvSigBlob`  
- [in]A`PCCOR_SIGNATURE`値の型のバイナリ メタデータ シグネチャを示す値。  
+ から`PCCOR_SIGNATURE`値の型のバイナリメタデータシグネチャを指す値。  
   
  `ppValue`  
- [out]指定した登録とメモリの場所に格納されている取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。  
+ 入出力指定されたレジスタおよびメモリ位置に格納されている取得値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705169"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79155168"
 ---
-# <a name="oidmap-element"></a>\<oidMap > 要素
-クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  
-  
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings >  
-\<oidMap>  
-  
+# <a name="oidmap-element"></a>\<oidMap> 要素
+クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidMap>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<oidMap>   
+<oidMap>
 </oidMap>  
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61705169"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|ASN.1 OID をフレンドリ名にマップします。|  
+|[\<oidEntry>](oidentry-element.md)|Asn.1 OID をフレンドリ名にマップします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -48,10 +48,10 @@ ms.locfileid: "61705169"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
-|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
+|`mscorlib`|要素が含まれてい `cryptographySettings` ます。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<oidMap >** 要素にそのハッシュ アルゴリズムの実装に ripemd-160 のハッシュ アルゴリズムの OID のマッピングが含まれます。  
+ 次の例は、要素を使用して、 **\<oidMap>** RIPEMD-160 ハッシュアルゴリズムの OID とそのハッシュアルゴリズムの実装とのマッピングを格納する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "61705169"
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号設定スキーマ](index.md)
+- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)
+- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)

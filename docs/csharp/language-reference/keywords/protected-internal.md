@@ -1,14 +1,13 @@
 ---
 title: protected internal - C# リファレンス
-ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 2a06165714095a65c23826543c309a82c43c2f9a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633322"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75713197"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# リファレンス)
 
@@ -30,7 +29,7 @@ class TestAccess
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
         baseObject.myValue = 5;
     }
 }
@@ -43,8 +42,8 @@ class DerivedClass : BaseClass
 {
     static void Main()
     {
-        BaseClass baseObject = new BaseClass();
-        DerivedClass derivedObject = new DerivedClass();
+        var baseObject = new BaseClass();
+        var derivedObject = new DerivedClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
@@ -66,14 +65,14 @@ class DerivedClass : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

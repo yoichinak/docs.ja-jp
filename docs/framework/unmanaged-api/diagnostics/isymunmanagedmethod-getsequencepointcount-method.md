@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22c45ff77c030dcbe87e5aa53284b2cace9849ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a44f81deb2d57b49f1fd0650fa52c06383210352
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759477"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614436"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount メソッド
-このメソッド内のシーケンス ポイントの数を取得します。  
+このメソッド内のシーケンスポイントの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,14 +34,14 @@ HRESULT GetSequencePointCount(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`ULONG32`シーケンス ポイントの格納に必要なバッファーのサイズを受け取る。  
+ 入出力`ULONG32`シーケンスポイントを格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod インターフェイス](isymunmanagedmethod-interface.md)

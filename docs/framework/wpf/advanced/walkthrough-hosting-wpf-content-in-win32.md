@@ -1,70 +1,70 @@
 ---
-title: 'チュートリアル: Win32 での WPF コンテンツのホスト'
+title: Win32 で WPF のコンテンツをホストする
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 9042548c52a7a82f75b4287323097655ffec48bf
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
-ms.translationtype: MT
+ms.openlocfilehash: 8a5d556abf49c9c1f49e7853e752ebc5248d1101
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610422"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186067"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>チュートリアル: Win32 での WPF コンテンツのホスト
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ホストするための簡単なメカニズムを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、Win32 コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、Win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストする簡単なメカニズムがあります。  
   
- このチュートリアルは、サンプル アプリケーションを記述する方法を説明します[Win32 ウィンドウのサンプルで WPF コンテンツをホストしている](https://go.microsoft.com/fwlink/?LinkID=160004)、そのホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。 このサンプルを拡張すると、いずれの [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ウィンドウでもホストできます。 マネージド コードとアンマネージド コードの混在が関係しているため、このアプリケーションは [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] で記述されます。  
+ このチュートリアルでは、Win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストするサンプル アプリケーション ([Win32 ウィンドウでの WPF コンテンツのホストのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)) の作成方法について説明します。 このサンプルを拡張すると、いずれの Win32 ウィンドウでもホストできます。 マネージド コードとアンマネージド コードの混在が関係しているため、このアプリケーションは C++/CLI で記述されます。  
 
-<a name="requirements"></a>   
+<a name="requirements"></a>
 ## <a name="requirements"></a>必要条件  
- このチュートリアルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラミングの基礎知識があることを前提としています。 基本的な事柄[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プログラミングを参照してください[Getting Started](../getting-started/index.md)します。 概要については[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プログラミングでは、参照すること、この主題に関する数多くの書籍の特に*プログラミング Windows* Charles Petzold 著。  
+ このチュートリアルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と Win32 プログラミングの基礎知識があることを前提としています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプログラミングの基本的な概要については、「[概要](../getting-started/index.md)」を参照してください。 Win32 のプログラミングの概要については、この主題に関する数多くの書籍、特に『*Programming Windows (プログラミング Windows)* 』(Charles Petzold 著) を参照することをお勧めします。  
   
- このチュートリアルに付属するサンプルがで実装されているため[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]、このチュートリアルの使用に関する知識を前提としています[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]プログラムに、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]API に加え、理解のマネージ コード プログラミングします。 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の知識があることは、役立ちますが、必須ではありません。  
+ このチュートリアルに付属するサンプルは C++/CLI で実装されているため、このチュートリアルでは C++ を使用した Windows API のプログラミングの知識があることと、マネージド コード プログラミングを理解していることを前提としています。 C++/CLI の知識があることは、役立ちますが、必須ではありません。  
   
 > [!NOTE]
->  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードで、次を参照してください。 [Win32 ウィンドウのサンプルで WPF のコンテンツをホストしている](https://go.microsoft.com/fwlink/?LinkID=160004)します。  
+> このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードについては、[Win32 ウィンドウでの WPF コンテンツのホストのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)に関するページを参照してください。  
   
-<a name="basic_procedure"></a>   
+<a name="basic_procedure"></a>
 ## <a name="the-basic-procedure"></a>基本手順  
- このセクションで説明を使用する基本手順ホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。 残りのセクションでは、各手順の詳細について説明します。  
+ このセクションでは、Win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストするために使用する基本手順について概説します。 残りのセクションでは、各手順の詳細について説明します。  
   
- ホストする鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウは、<xref:System.Windows.Interop.HwndSource>クラス。 このクラスは、ラップ、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]に組み込むことができるように、ウィンドウ、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]子ウィンドウとして。 次の方法では、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を単一のアプリケーションに統合します。  
+ Win32 のウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストするときに鍵となるのは、<xref:System.Windows.Interop.HwndSource> クラスです。 このクラスでは、Win32 ウィンドウ内の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツがラップされ、子ウィンドウとして [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] に組み込むことができます。 次に示すのは、Win32 と [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を単一のアプリケーションに統合する方法です。  
   
-1. 実装、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マネージ クラスとしてコンテンツ。  
+1. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをマネージド クラスとして実装します。  
   
-2. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] で実装します。 既存のアプリケーションとアンマネージドの [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] コードで使用を開始する場合、通常は、プロジェクトの設定を `/clr` コンパイラ フラグを含めるように変更して、マネージド コードを呼び出せるようにします。  
+2. C++/CLI を使用して Windows アプリケーションを実装します。 既存のアプリケーションとアンマネージドの C++ コードで始める場合は、通常、`/clr` コンパイラ フラグを含むようにプロジェクトの設定を変更することで、マネージド コードを呼び出せるようにすることができます。  
   
 3. スレッド処理モデルをシングル スレッド アパートメント (STA: Single Threaded Apartment) に設定します。  
   
-4. 処理、 [WM_CREATE](/windows/desktop/winmsg/wm-create)ウィンドウ プロシージャと次の操作で通知します。  
+4. ウィンドウのプロシージャで [WM_CREATE](/windows/desktop/winmsg/wm-create) 通知を処理してから、次のようにします。  
   
     1. 新しい <xref:System.Windows.Interop.HwndSource> オブジェクトを、親ウィンドウがその `parent` パラメーターとなるように指定して作成します。  
   
     2. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ クラスのインスタンスを作成します。  
   
-    3. 参照を割り当てる、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ オブジェクト、<xref:System.Windows.Interop.HwndSource.RootVisual%2A>のプロパティ、<xref:System.Windows.Interop.HwndSource>します。  
+    3. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ オブジェクトへの参照を、<xref:System.Windows.Interop.HwndSource> の <xref:System.Windows.Interop.HwndSource.RootVisual%2A> プロパティに割り当てます。  
   
     4. コンテンツの HWND を取得します。 <xref:System.Windows.Interop.HwndSource.Handle%2A> オブジェクトの <xref:System.Windows.Interop.HwndSource> プロパティにウィンドウ ハンドル (HWND) が格納されます。 アプリケーションのアンマネージ部分で使用できる HWND を取得するには、`Handle.ToPointer()` を HWND にキャストします。  
   
-5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を保持する静的フィールドを含むマネージド クラスを実装します。 このクラスを使用すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コードから [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コンテンツへの参照を取得できるようになります。  
+5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を保持する静的フィールドを含むマネージド クラスを実装します。 このクラスを使用すると、Win32 コードから [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を取得できます。  
   
 6. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを静的フィールドに割り当てます。  
   
-7. 通知を受信、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを 1 つまたは複数のハンドラーをアタッチすることにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イベント。  
+7. ハンドラーを 1 つ以上の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントにアタッチすることで、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツから通知を受け取ります。  
   
 8. 静的フィールドに格納した参照を使用して [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツと通信し、プロパティの設定などを行います。  
   
 > [!NOTE]
->  使用することも[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]実装するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。 ただし、このコンテンツは [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] として別にコンパイルしてから、その [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] に [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションから参照する必要があります。 手順の残りの部分は、前述の手順と同様です。
+> また、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用して、独自の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを実装することもできます。 ただし、その場合は、ダイナミックリンク ライブラリ (DLL) として別にコンパイルし、その DLL を Win32 アプリケーションから参照する必要があります。 手順の残りの部分は、前述の手順と同様です。
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>ホスト アプリケーションの実装
- このセクションの説明をホストする方法[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で基本的なコンテンツ[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーション。 コンテンツ自体は、マネージド クラスとして [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] に実装されます。 ほとんどの部分が、簡単な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプログラミングです。 コンテンツの実装の重要な側面は、後ほど[WPF コンテンツを実装する](#implementing_the_wpf_page)します。
+ このセクションでは、基本的な Win32 アプリケーションで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストする方法について説明します。 コンテンツ自体は、マネージド クラスとして C++/CLI で実装します。 ほとんどの部分が、簡単な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプログラミングです。 コンテンツの実装の重要な側面については、「[WPF ページの実装](#implementing_the_wpf_page)」で説明します。
 
-<a name="autoNestedSectionsOUTLINE1"></a>
 - [基本的なアプリケーション](#the_basic_application)
 
 - [WPF コンテンツのホスティング](#hosting_the_wpf_page)
@@ -75,71 +75,71 @@ ms.locfileid: "67610422"
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>基本的なアプリケーション
- ホスト アプリケーションの開始点は、Visual Studio 2005 テンプレートを作成しました。
+ ホスト アプリケーションの開始点は、Visual Studio 2005 テンプレートを作成することでした。
 
-1. Visual Studio 2005 を開き、選択**新しいプロジェクト**から、**ファイル**メニュー。
+1. Visual Studio 2005 を開き、 **[ファイル]** メニューで **[新しいプロジェクト]** を選択します。
 
-2. 選択**Win32**の一覧から[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]プロジェクトの種類。 既定の言語がない場合[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]、これらのプロジェクト タイプの下に表示されます**他の言語**します。
+2. Visual C++ プロジェクトの種類の一覧から、**Win32** を選択します。 既定の言語が C++ ではない場合、このプロジェクトの種類は **[他の言語]** の下にあります。
 
-3. 選択、 **Win32 プロジェクト**テンプレート、プロジェクトに名前を割り当てるし、をクリックして**OK**を起動する、 **Win32 アプリケーション ウィザード**。
+3. **[Win32 プロジェクト]** テンプレートを選択し、プロジェクトに名前を割り当ててから、 **[OK]** をクリックして、**Win32 アプリケーション ウィザード**を開始します。
 
-4. ウィザードの既定の設定をそのまま使用し、をクリックして**完了**プロジェクトを開始します。
+4. ウィザードの既定の設定をそのまま使用し、 **[完了]** をクリックしてプロジェクトを開始します。
 
- このテンプレートは、次のような基本的な [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを作成します。
+ このテンプレートでは、次のような基本的な Win32 アプリケーションが作成されます。
 
 - アプリケーションのエントリ ポイント。
 
 - 関連するウィンドウ プロシージャ (WndProc) を含むウィンドウ。
 
-- 持つメニュー**ファイル**と**ヘルプ**見出し。 **ファイル**メニューがあります、**終了**項目をアプリケーションを閉じます。 **ヘルプ**メニューがあります、**について**簡単なダイアログ ボックスを起動する項目。
+- **[ファイル]** と **[ヘルプ]** の見出しのメニュー。 **[ファイル]** メニューには、アプリケーションを閉じる **[終了]** 項目があります。 **[ヘルプ]** メニューには、簡単なダイアログ ボックスを起動する **[バージョン情報]** 項目があります。
 
- ホストにコードを記述する前に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ、する必要がある 2 つの基本的なテンプレートを変更します。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストするコードの記述を始める前に、基本のテンプレートに対して 2 つの変更を行う必要があります。
 
  1 つ目は、プロジェクトをマネージド コードとしてコンパイルすることです。 既定では、プロジェクトはアンマネージ コードとしてコンパイルされます。 ただし、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] はマネージド コードで実装されているため、プロジェクトは状況に応じてコンパイルする必要があります。
 
-1. プロジェクト名を右クリックして**ソリューション エクスプ ローラー**選択**プロパティ**を起動するコンテキスト メニューから、**プロパティ ページ** ダイアログ ボックス。
+1. **ソリューション エクスプローラー**で、プロジェクト名を右クリックし、コンテキスト メニューの **[プロパティ]** を選択して、 **[プロパティ ページ]** ダイアログ ボックスを開始します。
 
-2. 選択**構成プロパティ**左側のウィンドウで、ツリー ビューから。
+2. 左ペインのツリー ビューで、 **[構成プロパティ]** を選択します。
 
-3. 選択**共通言語ランタイム**からサポート、**プロジェクトの既定値**右側のウィンドウの一覧。
+3. 右ペインの **[プロジェクトの既定値]** の一覧から、 **[共通言語ランタイム]** のサポートを選択します。
 
-4. 選択**共通言語ランタイム サポート (/clr)** ドロップダウン リスト ボックスから。
+4. ドロップダウン リスト ボックスから **[共通言語ランタイム サポート (/clr)]** を選択します。
 
 > [!NOTE]
->  このコンパイラ フラグを使用すると、アプリケーションでマネージド コードを使用できますが、アンマネージド コードは以前と同様にコンパイルされます。
+> このコンパイラ フラグを使用すると、アプリケーションでマネージド コードを使用できますが、アンマネージド コードは以前と同様にコンパイルされます。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、シングル スレッド アパートメント (STA) スレッド処理モデルを使用します。 正しく動作するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ コードは、する必要があります設定するアプリケーションのスレッド モデルを STA にエントリ ポイントに属性を適用しています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、シングル スレッド アパートメント (STA) スレッド処理モデルを使用します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのコードで正常に機能するためには、エントリ ポイントに属性を適用することで、アプリケーションのスレッド モデルを STA に設定する必要があります。
 
  [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>WPF コンテンツのホスティング
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツは、単純なアドレス入力アプリケーションです。 それは、ユーザー名やアドレスなどを取得する複数の <xref:System.Windows.Controls.TextBox> コントロールで構成されています。 2 つあります<xref:System.Windows.Controls.Button>コントロール、 **OK**と**キャンセル**します。 ユーザーがクリックすると **[ok]** 、ボタンの<xref:System.Windows.Controls.Primitives.ButtonBase.Click>からデータを収集するイベント ハンドラー、<xref:System.Windows.Controls.TextBox>を制御に対応するプロパティは、代入、およびカスタム イベントを発生させます`OnButtonClicked`します。 ユーザーがクリックすると**キャンセル**、ハンドラーが発生させるだけです`OnButtonClicked`します。 `OnButtonClicked` のイベント引数オブジェクトには、どのボタンをクリックしたかを示すブール型フィールドが含まれています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは、単純な住所入力アプリケーションです。 それは、ユーザー名やアドレスなどを取得する複数の <xref:System.Windows.Controls.TextBox> コントロールで構成されています。 また、 **[OK]** と **[Cancel]** という 2 つの <xref:System.Windows.Controls.Button> コントロールがあります。 ユーザーが **[OK]** をクリックすると、ボタンの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベント ハンドラーで <xref:System.Windows.Controls.TextBox> コントロールからデータが収集され、それが対応するプロパティに割り当てられて、カスタム イベント `OnButtonClicked` が生成されます。 ユーザーが **[Cancel]** をクリックすると、ハンドラーでは単に `OnButtonClicked` が生成されます。 `OnButtonClicked` のイベント引数オブジェクトには、どのボタンをクリックしたかを示すブール型フィールドが含まれています。
 
- ホストするコード、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のハンドラーでコンテンツが実装されている、 [WM_CREATE](/windows/desktop/winmsg/wm-create)ホスト ウィンドウに通知します。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストするコードは、ホスト ウィンドウの [WM_CREATE](/windows/desktop/winmsg/wm-create) 通知用ハンドラーで実装されています。
 
  [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
- `GetHwnd`メソッドのサイズと位置情報および親ウィンドウ ハンドルを受け取るし、ホスト型のウィンドウ ハンドルを返します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。
+ `GetHwnd` メソッドは、サイズと位置の情報および親ウィンドウ ハンドルを受け取り、ホストされている [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのウィンドウ ハンドルを返します。
 
 > [!NOTE]
->  `#using` 名前空間に `System::Windows::Interop` ディレクティブを使用することはできません。 使用すると、その名前空間の <xref:System.Windows.Interop.MSG> 構造体と winuser.h で宣言した MSG 構造体の間で名前の競合が発生します。 代わりに、その名前空間のコンテンツにアクセスするための完全修飾名を使用する必要があります。
+> `#using` 名前空間に `System::Windows::Interop` ディレクティブを使用することはできません。 使用すると、その名前空間の <xref:System.Windows.Interop.MSG> 構造体と winuser.h で宣言した MSG 構造体の間で名前の競合が発生します。 代わりに、その名前空間のコンテンツにアクセスするための完全修飾名を使用する必要があります。
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
- ホストすることはできません、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを直接アプリケーション ウィンドウ。 代わりに、まず <xref:System.Windows.Interop.HwndSource> コンテンツをラップするための [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] オブジェクトを作成します。 このオブジェクトをホストするように設計されたウィンドウで、基本的に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。 ホストする、<xref:System.Windows.Interop.HwndSource>親ウィンドウの子として作成することでオブジェクトを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウは、アプリケーションの一部であります。 <xref:System.Windows.Interop.HwndSource> コンストラクターのパラメーターには、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] の子ウィンドウの作成時に CreateWindow に渡される情報とほとんど同じ情報が含まれています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをアプリケーション ウインドウで直接ホストすることはできません。 代わりに、まず <xref:System.Windows.Interop.HwndSource> コンテンツをラップするための [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] オブジェクトを作成します。 このオブジェクトは、基本的に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストするように設計されているウィンドウです。 <xref:System.Windows.Interop.HwndSource> オブジェクトをアプリケーションの一部である Win32 ウィンドウの子として作成することで、このオブジェクトを親ウィンドウでホストします。 <xref:System.Windows.Interop.HwndSource> コンストラクターのパラメーターには、Win32 の子ウィンドウの作成時に CreateWindow に渡す情報とほとんど同じ情報が含まれています。
 
- 次のインスタンスを作成、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ オブジェクト。 この場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは、`WPFPage` を使用して、別のクラス [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] として実装されます。 さらに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で実装することもできます。 ただし、これを行うにする必要がある別のプロジェクトを設定して、ビルド、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツとして、[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]します。 プロジェクトにその [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] への参照を追加し、その参照を使用して [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのインスタンスを作成します。
+ 次に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ オブジェクトのインスタンスを作成します。 この場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは、C++/CLI を使用して、別のクラス `WPFPage` として実装されます。 さらに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で実装することもできます。 ただし、これを行うためには、別のプロジェクトをセットアップしてから、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを DLL としてビルドする必要があります。 プロジェクトにその DLL への参照を追加し、その参照を使用して [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのインスタンスを作成することができます。
 
- 表示する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツへの参照を割り当てることで、子ウィンドウに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを<xref:System.Windows.Interop.HwndSource.RootVisual%2A>のプロパティ、<xref:System.Windows.Interop.HwndSource>します。
+ <xref:System.Windows.Interop.HwndSource> の <xref:System.Windows.Interop.HwndSource.RootVisual%2A> プロパティに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を割り当てることで、子ウィンドウに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを表示します。
 
- 次のコード行は、イベント ハンドラー `WPFButtonClicked` を [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツの `OnButtonClicked` イベントにアタッチしています。 ユーザーがクリックしたときに、このハンドラーが呼び出されます、 **OK**または**キャンセル**ボタン。 参照してください[communicating_with_the_WPF コンテンツ](#communicating_with_the_page)このイベント ハンドラーの詳細についてはします。
+ 次のコード行は、イベント ハンドラー `WPFButtonClicked` を [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツの `OnButtonClicked` イベントにアタッチしています。 このハンドラーは、ユーザーが **[OK]** または **[Cancel]** ボタンをクリックすると呼び出されます。 このイベント ハンドラーの詳細な説明については、「[WPF コンテンツとの通信](#communicating_with_the_page)」を参照してください。
 
- 示されているコードの最後の行は、<xref:System.Windows.Interop.HwndSource> オブジェクトに関連付けられているウィンドウ ハンドル (HWND) を返します。 このハンドルは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードから使用してホストされたウィンドウにメッセージを送信することができます。ただし、サンプルではこれはできません。 <xref:System.Windows.Interop.HwndSource> オブジェクトは、メッセージを受信するたびにイベントを発生させます。 メッセージを処理するには、<xref:System.Windows.Interop.HwndSource.AddHook%2A> メソッドを呼び出してメッセージ ハンドラーをアタッチしてから、そのハンドラーでメッセージを処理します。
+ 示されているコードの最後の行は、<xref:System.Windows.Interop.HwndSource> オブジェクトに関連付けられているウィンドウ ハンドル (HWND) を返します。 このハンドルを Win32 コードから使用して、ホストされたウィンドウにメッセージを送信できます。ただし、サンプルでは行っていません。 <xref:System.Windows.Interop.HwndSource> オブジェクトは、メッセージを受信するたびにイベントを発生させます。 メッセージを処理するには、<xref:System.Windows.Interop.HwndSource.AddHook%2A> メソッドを呼び出してメッセージ ハンドラーをアタッチしてから、そのハンドラーでメッセージを処理します。
 
 <a name="holding_a_reference"></a>
 ### <a name="holding-a-reference-to-the-wpf-content"></a>WPF コンテンツへの参照の保持
- 多くのアプリケーションでは、後で [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツと通信することができます。 たとえば、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのプロパティを変更したり、場合によっては <xref:System.Windows.Interop.HwndSource> オブジェクトが異なる [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストするようにしたりできます。 そのためには、<xref:System.Windows.Interop.HwndSource> オブジェクトまたは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照が必要です。 <xref:System.Windows.Interop.HwndSource> オブジェクトと関連する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは、ウィンドウ ハンドルを破棄するまでメモリに残ります。 ただし、<xref:System.Windows.Interop.HwndSource> オブジェクトに割り当てる変数は、ウィンドウ プロシージャから戻ると同時にスコープの外に出ます。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションでこの問題を処理するためによく使用される方法は、静的変数またはグローバル変数を使用することです。 残念ながら、このような変数の種類に対してマネージド オブジェクトを割り当てることはできません。 <xref:System.Windows.Interop.HwndSource> オブジェクトに関連付けられているウィンドウ ハンドルを、グローバル変数または静的変数に割り当てることができますが、オブジェクト自体にアクセスすることはできません。
+ 多くのアプリケーションでは、後で [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツと通信することができます。 たとえば、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのプロパティを変更したり、場合によっては <xref:System.Windows.Interop.HwndSource> オブジェクトが異なる [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストするようにしたりできます。 そのためには、<xref:System.Windows.Interop.HwndSource> オブジェクトまたは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照が必要です。 <xref:System.Windows.Interop.HwndSource> オブジェクトと関連する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは、ウィンドウ ハンドルを破棄するまでメモリに残ります。 ただし、<xref:System.Windows.Interop.HwndSource> オブジェクトに割り当てる変数は、ウィンドウ プロシージャから戻ると同時にスコープの外に出ます。 Win32 アプリケーションでこの問題を処理するためによく使用される方法は、静的変数またはグローバル変数を使用することです。 残念ながら、このような変数の種類に対してマネージド オブジェクトを割り当てることはできません。 <xref:System.Windows.Interop.HwndSource> オブジェクトに関連付けられているウィンドウ ハンドルを、グローバル変数または静的変数に割り当てることができますが、オブジェクト自体にアクセスすることはできません。
 
  この問題の最も簡単な解決法は、静的フィールドのセットを含むマネージド クラスを実装して、アクセスが必要なすべてのマネージド オブジェクトへの参照を保持することです。 サンプルでは、`WPFPageHost` クラスを使用して、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照、および後でユーザーが変更する可能性があるプロパティの数の初期値を保持します。 これは、ヘッダーで定義します。
 
@@ -149,15 +149,15 @@ ms.locfileid: "67610422"
 
 <a name="communicating_with_the_page"></a>
 ### <a name="communicating-with-the-wpf-content"></a>WPF コンテンツとの通信
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツとの通信には次の 2 種類があります。 アプリケーションから情報を受信する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ、ユーザーがクリックしたときに、 **OK**または**キャンセル**ボタン。 アプリケーションには、背景色や既定のフォント サイズなどのさまざまな [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] コンテンツのプロパティをユーザーが変更できるようにする [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] があります。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツとの通信には次の 2 種類があります。 ユーザーが **[OK]** ボタンまたは **[Cancel]** ボタンをクリックすると、アプリケーションは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツから情報を受け取ります。 アプリケーションには、背景色や既定のフォント サイズなどのさまざまな [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] コンテンツのプロパティをユーザーが変更できるようにする [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] があります。
 
- 前述のように、ユーザーがいずれかのボタンをクリックすると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは `OnButtonClicked` イベントを発生させます。 アプリケーションは、これらの通知を受信するため、このイベントにハンドラーをアタッチします。 場合、 **OK**ボタンがクリックされた、ハンドラーからのユーザー情報を取得する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツし、一連の静的コントロールで表示されます。
+ 前述のように、ユーザーがいずれかのボタンをクリックすると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは `OnButtonClicked` イベントを発生させます。 アプリケーションは、これらの通知を受信するため、このイベントにハンドラーをアタッチします。 **[OK]** ボタンがクリックされた場合は、ハンドラーでユーザー情報が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツから取得され、一連の静的コントロールでそれが表示されます。
 
  [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
- ハンドラーは、カスタム イベント引数オブジェクトを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツ、`MyPageEventArgs` から受信します。 オブジェクトの`IsOK`プロパティに設定されて`true`場合、 **OK**ボタンがクリックされたと`false`場合、**キャンセル**ボタンがクリックされました。
+ ハンドラーは、カスタム イベント引数オブジェクトを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツ、`MyPageEventArgs` から受信します。 オブジェクトの `IsOK` プロパティは、 **[OK]** ボタンがクリックされると `true` に設定され、 **[Cancel]** ボタンがクリックされると `false` に設定されます。
 
- 場合、 **OK**ボタンがクリックされた、ハンドラーへの参照を取得する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテナー クラスからのコンテンツ。 その後、関連する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ プロパティが保持するユーザー情報を収集し、静的コントロールを使用して親ウィンドウに情報を表示します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ データは、マネージド文字列の形式であるため、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コントロールによってマーシャリングする必要があります。 場合、**キャンセル**ボタンがクリックされ、ハンドラーは、スタティック コントロールからデータをクリアします。
+ **[OK]** ボタンがクリックされた場合、ハンドラーではコンテナー クラスから [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照が取得されます。 その後、関連する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ プロパティが保持するユーザー情報を収集し、静的コントロールを使用して親ウィンドウに情報を表示します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ データはマネージド文字列の形式であるため、Win32 コントロールで使用するにはマーシャリングする必要があります。 **[Cancel]** ボタンがクリックされた場合、ハンドラーでは、スタティック コントロールからのデータがクリアされます。
 
  アプリケーション [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] には、ユーザーが [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツの背景色を変更できるようにするラジオ ボタンのセット、および複数のフォント関連のプロパティが用意されています。 次の例は、アプリケーションのウィンドウ プロシージャ (WndProc)、および背景色など、各種のメッセージに対してさまざまなプロパティを設定するそのプロシージャのメッセージ処理からの抜粋です。 その他は類似しているため、示していません。 詳細とコンテキストについては、完全なサンプルを参照してください。
 
@@ -167,9 +167,8 @@ ms.locfileid: "67610422"
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>WPF ページの実装
- ホストして、使用することができます、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]実際の実装の知識がなくてもコンテンツ。 場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]別でコンテンツをパッケージ化されていた[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]、いずれかで構築されたでした[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語。 以下は、このサンプルで使用する [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の実装の簡単なチュートリアルです。 このセクションには、次のサブセクションが含まれています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは、実際の実装に関する知識がなくても、ホストして使用できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツが別の DLL にパッケージ化されていれば、任意の共通言語ランタイム (CLR) 言語で構築できます。 以下は、このサンプルで使用する C++/CLI の実装の簡単なチュートリアルです。 このセクションには、次のサブセクションが含まれています。
 
-<a name="autoNestedSectionsOUTLINE2"></a>
 - [レイアウト](#page_layout)
 
 - [データをホスト ウィンドウに返す](#returning_data_to_window)
@@ -178,11 +177,11 @@ ms.locfileid: "67610422"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>レイアウト
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]内の要素、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツから成る 5<xref:System.Windows.Controls.TextBox>制御は、関連付けられている<xref:System.Windows.Controls.Label>コントロール。名前、アドレス、市区町村、状態、および Zip です。 2 つある<xref:System.Windows.Controls.Button>コントロール、 **OK**と**キャンセル**
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素は、5 つの <xref:System.Windows.Controls.TextBox> コントロールと、それに関連付けられた次の <xref:System.Windows.Controls.Label> コントロールで構成されています: Name、Address、City、State、Zip。 また、 **[OK]** と **[Cancel]** という 2 つの <xref:System.Windows.Controls.Button> コントロールがあります
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツは `WPFPage` クラスに実装されています。 レイアウトは、<xref:System.Windows.Controls.Grid> レイアウト要素で処理されます。 クラスは <xref:System.Windows.Controls.Grid> から継承されます。これにより、クラスは効果的に [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのルート要素になります。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツのコンス トラクターは、必要な幅と高さ、およびサイズ、<xref:System.Windows.Controls.Grid>それに応じて。 セットを作成して基本的なレイアウトを定義し<xref:System.Windows.Controls.ColumnDefinition>と<xref:System.Windows.Controls.RowDefinition>オブジェクトと追加すること、<xref:System.Windows.Controls.Grid>オブジェクトの基本<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>と<xref:System.Windows.Controls.Grid.RowDefinitions%2A>コレクション、それぞれします。 これにより、5 つの行と、7 つの列のグリッドが定義され、セルの内容によって大きさが決定します。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのコンストラクターは、必要な幅と高さを受け取り、それに合わせて <xref:System.Windows.Controls.Grid> のサイズを決定します。 その後、<xref:System.Windows.Controls.ColumnDefinition> オブジェクトと <xref:System.Windows.Controls.RowDefinition> オブジェクトのセットが作成され、それらが <xref:System.Windows.Controls.Grid> オブジェクトの基本の <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> および <xref:System.Windows.Controls.Grid.RowDefinitions%2A> コレクションにそれぞれ追加されることで、基本のレイアウトが定義されます。 これにより、5 つの行と、7 つの列のグリッドが定義され、セルの内容によって大きさが決定します。
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
 
@@ -198,13 +197,13 @@ ms.locfileid: "67610422"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
 
- 最後に、サンプルは、追加、 **[ok]** と**キャンセル**] ボタンし、[イベント ハンドラーをアタッチします、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。
+ 最後に、サンプルでは **[OK]** ボタンと **[Cancel]** ボタンが追加され、<xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントにイベント ハンドラーがアタッチされます。
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
 
 <a name="returning_data_to_window"></a>
 ### <a name="returning-the-data-to-the-host-window"></a>データをホスト ウィンドウに返す
- いずれかのボタンをクリックすると、その <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントが発生します。 ホスト ウィンドウはこれらのイベントにハンドラーをアタッチして、<xref:System.Windows.Controls.TextBox> コントロールから直接データを取得します。 サンプルは、いくぶん直接的ではない方法を使用します。 処理、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>内、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ、およびカスタム イベントが発生し、`OnButtonClicked`に通知する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。 これにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツをホストに通知する前にパラメーターの検証を実行します。 ハンドラーは、<xref:System.Windows.Controls.TextBox> コントロールからテキストを取得し、パブリック プロパティに割り当てます。ここからホストは情報を取得します。
+ いずれかのボタンをクリックすると、その <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントが発生します。 ホスト ウィンドウはこれらのイベントにハンドラーをアタッチして、<xref:System.Windows.Controls.TextBox> コントロールから直接データを取得します。 サンプルは、いくぶん直接的ではない方法を使用します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツでの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> が処理され、カスタム イベント `OnButtonClicked` が生成されて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツに通知されます。 これにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツでホストに通知する前にパラメーターの検証を実行できます。 ハンドラーは、<xref:System.Windows.Controls.TextBox> コントロールからテキストを取得し、パブリック プロパティに割り当てます。ここからホストは情報を取得します。
 
  WPFPage.h でのイベント宣言:
 
@@ -216,7 +215,7 @@ ms.locfileid: "67610422"
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>WPF のプロパティを設定する
- [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ホストにより、ユーザーがいくつか変更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツのプロパティ。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 側では、これはプロパティの変更の問題にすぎません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツ クラスの実装はいくらか複雑になります。これは、全コントロールのフォントを制御する 1 つのグローバル プロパティがないためです。 代わりに、各コントロールの適切なプロパティは、プロパティの set アクセサーで変更されます。 次の例のコードを示しています、`DefaultFontFamily`プロパティ。 プロパティを設定すると、プライベート メソッドが呼び出され、さまざまなコントロールに <xref:System.Windows.Controls.Control.FontFamily%2A> プロパティが設定されます。
+ Win32 ホストでは、ユーザーはいくつかの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ プロパティを変更できます。 Win32 側では、これはプロパティの変更の問題にすぎません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツ クラスの実装はいくらか複雑になります。これは、全コントロールのフォントを制御する 1 つのグローバル プロパティがないためです。 代わりに、各コントロールの適切なプロパティは、プロパティの set アクセサーで変更されます。 次の例では、`DefaultFontFamily` プロパティのコードを示します。 プロパティを設定すると、プライベート メソッドが呼び出され、さまざまなコントロールに <xref:System.Windows.Controls.Control.FontFamily%2A> プロパティが設定されます。
 
  WPFPage.h から:
 

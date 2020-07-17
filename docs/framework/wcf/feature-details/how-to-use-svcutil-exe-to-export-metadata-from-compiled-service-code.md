@@ -2,12 +2,12 @@
 title: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650226"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595363"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする
 Svcutil.exe は、次のように、コンパイル済みアセンブリのサービス、コントラクト、およびデータ型のメタデータをエクスポートできます。  
@@ -19,7 +19,7 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
 - アセンブリ セットのすべてのデータ コントラクト型をエクスポートするには、`/dataContractOnly` オプションを使用します。  
   
 > [!NOTE]
->  `/reference` オプションを使用して、任意の依存アセンブリへのファイル パスを指定してください。  
+> `/reference` オプションを使用して、任意の依存アセンブリへのファイル パスを指定してください。  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>コンパイル済みサービス コントラクトのメタデータをエクスポートするには  
   
@@ -28,9 +28,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
 2. コンパイルされたアセンブリに対して Svcutil.exe を実行します。  
   
     > [!NOTE]
-    >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
+    > 依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
   
-    ```  
+    ```console
     svcutil.exe Contracts.dll  
     ```  
   
@@ -56,9 +56,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
 3. コンパイルされたサービス実行可能ファイルに対して Svcutil.exe を実行します。その際、`/serviceName` スイッチを使用してサービスの構成名を指定してください。  
   
     > [!NOTE]
-    >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
+    > 依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
   
-    ```  
+    ```console  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
@@ -69,9 +69,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
 2. コンパイルされたアセンブリに対して Svcutil.exe を実行します。その際、`/dataContract` スイッチを使用して、データ コントラクトのメタデータだけが生成されるように指定してください。  
   
     > [!NOTE]
-    >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
+    > 依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
   
-    ```  
+    ```console  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
@@ -80,26 +80,26 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
  サービス コントラクトのメタデータをエクスポートするには、次のように指定します。  
   
-```  
+```console  
 svcutil.exe Contracts.dll  
 ```  
   
  データ コントラクトのメタデータをエクスポートするには、次のように指定します。  
   
-```  
+```console  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
  サービス実装のメタデータをエクスポートするには、次のように指定します。  
   
-```  
+```console  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
  `<path>` は Contracts.dll へのパスです。  
   
-```  
-// The following service contract and data contracts are compiled into   
+```csharp
+// The following service contract and data contracts are compiled into
 // Contracts.dll.  
 [ServiceContract(ConfigurationName="IPeopleFinder")]  
 public interface IPersonFinder  
@@ -133,8 +133,10 @@ public class Address
     [DataMember]  
     public Person person;  
 }  
-  
-// The following service implementation is compiled into Service.exe.     
+```
+
+```csharp
+// The following service implementation is compiled into Service.exe.
 // This service uses the contracts specified in Contracts.dll.  
 [ServiceBehavior(ConfigurationName = "MyService")]  
 public class MyService : IPersonFinder  
@@ -146,7 +148,9 @@ public class MyService : IPersonFinder
         return address;  
     }  
 }  
-  
+```
+
+```xml  
 <!-- The following is the configuration file for Service.exe. -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
@@ -164,5 +168,5 @@ public class MyService : IPersonFinder
   
 ## <a name="see-also"></a>関連項目
 
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [メタデータのエクスポートとインポート](exporting-and-importing-metadata.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14266f02dd402e81928b72d155f224e10e910592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7245a4c222e2ad3ef1854f3c9e2d0abe37e0650a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781242"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009484"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory コクラス
 型名の分解を管理するためのインターフェイスを提供します。  
@@ -36,19 +34,19 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>インターフェイス  
   
-|Interface|説明|  
+|インターフェイス|説明|  
 |---------------|-----------------|  
-|[ITypeNameFactory インターフェイス](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
+|[ITypeNameFactory インターフェイス](itypenamefactory-interface.md)|このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [ホスト コクラス](hosting-coclasses.md)

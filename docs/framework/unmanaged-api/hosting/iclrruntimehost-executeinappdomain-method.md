@@ -15,61 +15,59 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 314ffb143e99f9490bcd4a6489f2afed314b7c2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 505c16cb7ead7950b6d2d6d401730cc3368fb6aa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768763"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703301"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain メソッド
-指定します、<xref:System.AppDomain>指定したマネージ コードを実行します。  
+指定し <xref:System.AppDomain> たマネージコードを実行するを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ExecuteInAppDomain(  
-    [in] DWORD AppDomainId,   
-    [in] FExecuteInDomainCallback pCallback,   
+    [in] DWORD AppDomainId,
+    [in] FExecuteInDomainCallback pCallback,
     [in] void* cookie  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `AppDomainId`  
- [in]数値 ID、<xref:System.AppDomain>指定されたメソッドを実行します。  
+ から<xref:System.AppDomain>指定したメソッドを実行するの数値 ID。  
   
  `pCallback`  
- [in]指定した中で実行する関数へのポインター<xref:System.AppDomain>します。  
+ から指定した内で実行する関数へのポインター <xref:System.AppDomain> 。  
   
  `cookie`  
- [in]非透過の呼び出し元が割り当てたメモリへのポインター。 このパラメーターは、共通言語ランタイム (CLR) でドメインのコールバックに渡されます。 ランタイムで管理されたヒープ メモリではありません。このメモリの有効期間と割り当ては、呼び出し元によって制御されます。  
+ から非透過的な呼び出し元に割り当てられたメモリへのポインター。 このパラメーターは、共通言語ランタイム (CLR) によってドメインコールバックに渡されます。 ランタイムによって管理されるヒープメモリではありません。このメモリの割り当てと有効期間は、どちらも呼び出し元によって制御されます。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`ExecuteInAppDomain`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>Remarks  
- `ExecuteInAppDomain` コントロールを練習をホストできるように管理 over<xref:System.AppDomain>で指定したマネージ メソッドを実行する必要があります。 値に対応するアプリケーション ドメインの識別子の値を取得することができます、<xref:System.AppDomain.Id%2A>プロパティを呼び出すことによって[GetCurrentAppDomainId メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)します。  
+## <a name="remarks"></a>解説  
+ `ExecuteInAppDomain`指定したマネージメソッドを実行する管理対象をホストで制御できるように <xref:System.AppDomain> します。 アプリケーションドメインの識別子の値を取得できます。これは、 <xref:System.AppDomain.Id%2A> [GetCurrentAppDomainId メソッド](iclrruntimehost-getcurrentappdomainid-method.md)を呼び出すことによって、プロパティの値に対応します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [ICLRRuntimeHost インターフェイス](iclrruntimehost-interface.md)

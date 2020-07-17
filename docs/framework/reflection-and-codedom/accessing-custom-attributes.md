@@ -10,20 +10,18 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130298"
 ---
 # <a name="accessing-custom-attributes"></a>カスタム属性へのアクセス
 属性がプログラム要素に関連付けられると、リフレクションを使用して、その存在と値をクエリすることができます。 .NET Framework バージョン 1.0 および 1.1 では、カスタム属性は実行コンテキストで検証されます。 .NET Framework バージョン 2.0 では、新しい読み込みコンテキスト (リフレクションのみのコンテキスト) が提供されます。これを使用して、実行のために読み込むことができないコードを検証できます。  
   
 ## <a name="the-reflection-only-context"></a>リフレクションのみのコンテキスト  
- リフレクションのみのコンテキストに読み込まれたコードは、実行することができません。 つまり、コンストラクターを実行する必要があるため、カスタム属性のインスタンスは作成できないということです。 リフレクションのみのコンテキストにカスタム属性を読み込み、検証するには、<xref:System.Reflection.CustomAttributeData> クラスを使用します。 静的な <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> メソッドの適切なオーバーロードを使用して、このクラスのインスタンスを取得できます。 「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+ リフレクションのみのコンテキストに読み込まれたコードは、実行することができません。 つまり、コンストラクターを実行する必要があるため、カスタム属性のインスタンスは作成できないということです。 リフレクションのみのコンテキストにカスタム属性を読み込み、検証するには、<xref:System.Reflection.CustomAttributeData> クラスを使用します。 静的な <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> メソッドの適切なオーバーロードを使用して、このクラスのインスタンスを取得できます。 「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 ## <a name="the-execution-context"></a>実行コンテキスト  
  実行コンテキストの属性をクエリする主なリフレクション メソッドは、<xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> と <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> です。  
@@ -34,7 +32,7 @@ ms.locfileid: "59321732"
   
  次の C# の例は、一般的なカスタム属性の設計パターンです。 これは、ランタイムのカスタム属性のリフレクション モデルを示しています。  
   
-```  
+```csharp
 System.DLL  
 public class DescriptionAttribute : Attribute  
 {  
@@ -76,5 +74,5 @@ public class LocalizationExtenderProvider
 
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [型情報の表示](viewing-type-information.md)
+- [リフレクションに関するセキュリティ上の考慮事項](security-considerations-for-reflection.md)

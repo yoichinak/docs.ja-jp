@@ -1,5 +1,6 @@
 ---
 title: 同期クライアント ソケットの例
+description: この .NET Framework プログラムの例では、非同期ソケットを使用してサーバーに接続するクライアントを作成します。 それによって文字列が送信され、返信が表示されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7455307441045360bc62cee50f13d106df4d005e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219747"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502120"
 ---
 # <a name="synchronous-client-socket-example"></a>同期クライアント ソケットの例
 次のプログラム例では、サーバーに接続するクライアントを作成します。 このクライアントは同期ソケットで構築されます。そのため、クライアント アプリケーションの実行は、サーバーが応答を返すまで一時停止となります。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  
@@ -90,7 +91,7 @@ public class SynchronousSocketClient {
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
             // Create a TCP/IP  socket.  
-            Socket sender = new Socket(ipAddress.AddressFamily,   
+            Socket sender = new Socket(ipAddress.AddressFamily,
                 SocketType.Stream, ProtocolType.Tcp );  
   
             // Connect the socket to the remote endpoint. Catch any errors.  
@@ -137,6 +138,6 @@ public class SynchronousSocketClient {
   
 ## <a name="see-also"></a>関連項目
 
-- [同期サーバー ソケットの例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [ソケットのコード例](../../../docs/framework/network-programming/socket-code-examples.md)
+- [同期サーバー ソケットの例](synchronous-server-socket-example.md)
+- [同期クライアント ソケットの使用](using-a-synchronous-client-socket.md)
+- [ソケットのコード例](socket-code-examples.md)

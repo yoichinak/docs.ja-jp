@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 46c608a644619c28709de135d7c062175b012d80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777382"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614917"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap メソッド
-その名前に基づくカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらの属性は、シンボル ストアに保持されます。  
+名前に基づいてカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらの属性はシンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,26 +39,26 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]親のメタデータ トークンです。  
+ から親のメタデータトークン。  
   
  `name`  
- [in]ポインターを`WCHAR`名前を格納します。  
+ から名前を格納し `WCHAR` ているへのポインター。  
   
  `cBuffer`  
- [in]A`ULONG32`のサイズを示す、`buffer`配列。  
+ から`ULONG32`配列のサイズを示す `buffer` 。  
   
  `pcBuffer`  
- [out]ポインターを`ULONG32`属性データの格納に必要なバッファーのサイズを受け取る。  
+ 入出力`ULONG32`属性バイトを格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `buffer`  
- [out]属性のバイトを受け取るバッファーへのポインター。  
+ 入出力属性バイトを受け取るバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedReader2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 インターフェイス](isymunmanagedreader2-interface.md)

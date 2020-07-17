@@ -2,15 +2,16 @@
 title: エンタープライズ サービスのトランザクション コンポーネントの統合
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 682bf5b92a5e01391766d614e955954019a4ce8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c4fabfadb113c79b216fa10ff80b551ba0f9716
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638669"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596852"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
-Windows Communication Foundation (WCF) は、Enterprise Services と統合するための自動メカニズムを提供します (を参照してください[COM + アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能に基づいているため、<xref:System.Transactions>インフラストラクチャ、WCF を使用した Enterprise Services を統合するためのプロセスは間の相互運用性を指定するのと同じですが<xref:System.Transactions>と」の説明に従って、エンタープライズ サービス[Enterprise Services および COM + トランザクションとの相互運用性](https://go.microsoft.com/fwlink/?LinkId=94949)します。  
+
+Windows Communication Foundation (WCF) は、エンタープライズサービスと統合するための自動メカニズムを提供します (「 [COM + アプリケーションとの統合](integrating-with-com-plus-applications.md)」を参照してください)。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能はインフラストラクチャ上に構築されているため <xref:System.Transactions> 、Enterprise services と wcf を統合するプロセスは、エンタープライズサービス <xref:System.Transactions> [と com + トランザクションとの相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))に関する説明にあるとおり、エンタープライズサービス間の相互運用性を指定するためのものと同じです。  
   
  フローされる受信トランザクションと COM+ コンテキスト トランザクションの間に必要なレベルの相互運用性を提供するには、サービス実装で <xref:System.Transactions.TransactionScope> インスタンスを作成し、<xref:System.Transactions.EnterpriseServicesInteropOption> 列挙型の適切な値を使用する必要があります。  
   
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) は、Enterprise Services と統合する
   
  任意の追加のメソッド呼び出しも、同じ操作のトランザクションのスコープ内で行われます。  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ICustomerServiceContract  
 {  
@@ -45,11 +46,11 @@ public class CustomerService : ICustomerServiceContract
                      EnterpriseServicesInteropOption.Full))  
       {  
          // Create an Enterprise Services component  
-         // Call UpdateCustomer method on an Enterprise Services   
-         // component   
+         // Call UpdateCustomer method on an Enterprise Services
+         // component
   
-         // Call UpdateOtherCustomerData method on an Enterprise   
-         // Services component   
+         // Call UpdateOtherCustomerData method on an Enterprise
+         // Services component
          ts.Complete();  
       }  
   
@@ -64,7 +65,7 @@ public class CustomerService : ICustomerServiceContract
 ## <a name="integrating-enterprise-services-with-a-client"></a>エンタープライズ サービスとクライアントの統合  
  <xref:System.Transactions.TransactionScope> を設定した <xref:System.Transactions.EnterpriseServicesInteropOption.Full> インスタンスを使用するクライアント コードを次のコードに示します。 このシナリオでは、トランザクション フローをサポートするサービス操作の呼び出しが、エンタープライズ サービス コンポーネントへの呼び出しと同じトランザクションのスコープ内で発生します。  
   
-```  
+```csharp
 static void Main()  
 {  
     // Create a client  
@@ -80,13 +81,13 @@ static void Main()
   
         // Create an Enterprise Services component  
   
-        // Call UpdateCustomer method on an Enterprise Services   
-        // component   
+        // Call UpdateCustomer method on an Enterprise Services
+        // component
   
         ts.Complete();  
     }  
   
-    // Closing the client gracefully closes the connection and   
+    // Closing the client gracefully closes the connection and
     // cleans up resources  
     client.Close();  
 }  
@@ -94,5 +95,5 @@ static void Main()
   
 ## <a name="see-also"></a>関連項目
 
-- [COM+ アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [COM アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [COM + アプリケーションとの統合](integrating-with-com-plus-applications.md)
+- [COM アプリケーションとの統合](integrating-with-com-applications.md)

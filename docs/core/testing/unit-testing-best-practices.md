@@ -4,13 +4,12 @@ description: .NET Core プロジェクトと .NET Standard プロジェクトの
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.custom: seodec18
-ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410375"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324475"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 
@@ -43,16 +42,23 @@ ms.locfileid: "67410375"
 したがって、コードに対するテストを記述する際には、必然的にコードを分離します。そうしないと、テストが困難になるからです。
 
 ## <a name="characteristics-of-a-good-unit-test"></a>適切な単体テストの特性
+
 - **高速**。 完成度の高いプロジェクトに数千もの単体テストが含まれることは、珍しくありません。 単体テストの実行にかかる時間はごくわずかで、 数ミリ秒です。
 - **独立性**。 単体テストはスタンドアロンであり、独立して実行でき、ファイル システムやデータベースなどの外部要因に対する依存関係がありません。
 - **反復可能**。 単体テストの実行では、その結果に一貫性がある必要があります。つまり、実行と実行の間で何も変更しない場合、常に同じ結果を返す必要があります。
 - **自己チェック**。 テストは人の介入なしに、合格したか失敗したかを自動的に検出できる必要があります。
 - **タイムリー**。 単体テストは、テスト対象のコードの記述と比較して時間がかかりすぎないようにする必要があります。 コードの記述と比較してコードのテストに時間がかかりすぎる場合は、よりテストしやすい設計を検討してください。
 
-## <a name="lets-speak-the-same-language"></a>用語を統一する
-テストに関して、*モック*という用語はよく誤用されます。 単体テストの記述時における最も一般的な種類の*フェイク*の定義を次に示します。
+## <a name="code-coverage"></a>コード カバレッジ
 
-*フェイク* - フェイクは、スタブまたはモック オブジェクトのいずれかを示すのに使用できる汎用的な用語です。 スタブとモックのどちらであるかは、使用されているコンテキストによって決まります。 つまり、フェイクはスタブとモックのどちらにもなりえます。
+コード カバレッジのパーセンテージの高さは多くの場合、コードの品質の高さに関連します。 ただし、測定自体でコードの品質を判断することは "*できません*"。 コード カバレッジのパーセンテージ目標を過度に大きく設定すると、逆効果になることがあります。 条件分岐が大量にある複雑なプロジェクトを想像してください。また、コード カバレッジ目標を 95% に設定することを想像してください。 現在、このプロジェクトは 90% のコード カバレッジを維持しています。 残り 5% の極端な状況をすべて考慮するために膨大な時間が必要になる可能性があり、提案された価値がすぐに減少します。
+
+コード カバレッジのパーセンテージの高さは成功を示すものではありません。コードの品質の高さを暗に示すものでもありません。 単体テストの対象となるコードの量を表すだけです。 詳細については、[単体テストのコード カバレッジ](unit-testing-code-coverage.md)に関するページを参照してください。
+
+## <a name="lets-speak-the-same-language"></a>用語を統一する
+テストに関して、"*モック*" という用語は残念ながら誤用されることがしばしばあります。 単体テストの記述時における最も一般的な種類の "*フェイク*" を定義するポイントを以下に挙げます。
+
+"*フェイク*" - フェイクは、スタブまたはモック オブジェクトのいずれかを示すのに使用できる汎用的な用語です。 スタブとモックのどちらであるかは、使用されているコンテキストによって決まります。 つまり、フェイクはスタブとモックのどちらにもなりえます。
 
 *モック* - モック オブジェクトは、単体テストに合格したか失敗したかを判断する、システム内のフェイク オブジェクトです。 モックは、アサートされるまでフェイクとして開始します。
 
@@ -69,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-これは、モックとして参照されるスタブの例です。 ここでは、実際にはスタブです。 `Purchase` (テスト対象のシステム) をインスタンス化する手段として、Order を渡しているだけです。 Order はモックでないので、名前 `MockOrder` も非常に紛らわしいものです。
+これは、モックとして参照されるスタブの例です。 ここでは、実際にはスタブです。 `Purchase` (テスト対象のシステム) をインスタンス化する手段として、Order を渡しているだけです。 Order はモックでないので、名前 `MockOrder` も紛らわしいものです。
 
 より適切なアプローチを以下に示します。
 
@@ -82,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-クラスの名前を `FakeOrder` に変更して、クラスをより汎用的な名前にし、クラスをモックまたはスタブとして使用できるようにしました。 テスト ケースに適切な方をどちらでも使用できます。 上記の例では、`FakeOrder` はスタブとして使用されています。 アサート時には、どのような形状または形式でも `FakeOrder` を使用していません。 `FakeOrder` は、コンストラクターの要件を満たすために `Purchase` クラスに渡されただけです。
+クラスの名前を `FakeOrder` に変更して、クラスをより汎用的な名前にし、クラスをモックまたはスタブとして使用できるようにしました。 テスト ケースに適切な方をどちらでも使用できます。 上記の例では、`FakeOrder` はスタブとして使用されています。 アサート時には、どのような形状または形式でも `FakeOrder` を使用していません。 `FakeOrder` は、コンストラクターの要件を満たすためだけに `Purchase` クラスに渡されました。
 
 これをモックとして使用するには、たとえば次のようにします。
 
@@ -106,76 +112,83 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="naming-your-tests"></a>テストの名前付け
 テストの名前は、次の 3 つの部分で構成される必要があります。
+
 - テスト対象のメソッドの名前。
 - それがテストされるシナリオ。
 - シナリオが呼び出されたときに想定される動作。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 名前付け規則は、テストの目的を明示的に表すので重要です。
 
 テストは、コードが機能することを確認するだけでなく、ドキュメントも提供します。 単体テストのスイートを見るだけで、コード自体を見なくても、コードの動作を推測できます。 さらに、テストが失敗した際には、どのシナリオが想定を満たしていないかを正確に判断できます。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>テストの配置
 **Arrange、Act、Assert** は、単体テスト時に共通するパターンです。 名前が示すように、これは次の 3 つの主なアクションで構成されます。
+
 - オブジェクトを*配置 (Arrange)* し、必要に応じて作成および設定します。
 - オブジェクトを*操作 (Act)* します。
 - 何かが想定どおりであることを*アサート (Assert)* します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - *配置*と*アサート*の手順で、テストする対象を明確に区別します。
 - "Act" コードにより、アサーションが混合される可能性が低くなります。
 
 読みやすさは、テストの作成時において最も重要な側面の 1 つです。 テスト内でこれらの各アクションを分離することで、コードの呼び出しに必要な依存関係、コードを呼び出す方法、および何をアサートしようとしているかが明確に区別されます。 いくつかの手順を結合し、テストのサイズを小さくすることは可能ですが、主な目的はテストをできるだけ読みやすくすることにあります。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>最小限の情報で合格するテストを記述する
 単体テストで使用する入力は、現在テストしている動作を検証するために、できる限り単純である必要があります。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - コードベースでの今後の変更に対して、テストの回復力が高くなります。
 - 実装よりもテストの動作に的が絞られます。
 
 テストに合格するために必要以上の情報を含むテストは、テストでエラーが発生する可能性が高く、テストの目的が不明確になる可能性があります。 テストの記述時には、動作に的を絞る必要があります。 モデルに追加のプロパティを設定したり、不要な場合に 0 以外の値を使用すると、証明しようとしている内容が不明瞭になるだけです。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>マジック文字列を回避する
 単体テストにおける変数の名前付けは、より重要というわけではなくとも、運用コードにおける変数の名前付けと同等に重要です。 単体テストにマジック文字列を含めることはできません。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 特殊な値となっている原因を特定するために、テストを読む人が運用コードを調べる必要がなくなります。
 - *実現*しようとしている内容ではなく*証明*しようとしている内容が明示的に示されます。
 
 マジック文字列は、テストを読む人に混乱をきたす可能性があります。 文字列が通常からかけ離れて見えれば、パラメーターや戻り値としてその特定の値がなぜ選択されたかが気になります。 そのような場合、テストに集中するのではなく、実装の詳細を調べようとします。
 
-> [!TIP] 
+> [!TIP]
 > テストの記述時には、その意図をできる限り表現することを目指す必要があります。 マジック文字列の場合の適切なアプローチとしては、これらの値を定数に割り当てます。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>テストで論理を回避する
 単体テストの記述時には、手動による文字列の連結、および `if`、`while`、`for`、`switch` などの論理条件を回避します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - テスト内にバグが発生する可能性が低くなります。
 - 実装の詳細ではなく、最終的な結果に的が絞られます。
 
@@ -185,51 +198,54 @@ Assert.True(mockOrder.Validated);
 > テスト内の論理を避けられない場合は、テストを 2 つ以上の別々のテストに分割することを検討してください。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>設定と破棄よりもヘルパー メソッドを優先する
 テストに同様のオブジェクトまたは状態が必要な場合は、設定属性と破棄属性を利用する (存在する場合) よりもヘルパー メソッドを優先します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 各テスト内からコード全体を見ることができるので、テストを読むときに混乱が少なくなります。
 - 特定のテストに対する設定が多すぎたり少なすぎたりする可能性が低くなります。
 - テスト間で状態を共有して、テスト間に不要な依存関係が生じる可能性が低くなります。
 
 単体テスト フレームワークでは、テスト スイート内のすべての各単体テスト前に `Setup` が呼び出されます。 これは便利なツールとして見なされる場合もありますが、通常はテストが膨張して読みづらくなってしまいます。 各テストには、テストが稼働するためにさまざまな要件があります。 しかし、`Setup` は各テストに対してまったく同じ要件を使用することを強制します。
 
-> [!NOTE] 
+> [!NOTE]
 > xUnit では、バージョン 2.x の時点で SetUp と TearDown の両方が削除されています。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>複数のアサートを回避する
 テストを記述する際には、テストごとにアサートを 1 つだけ含めるようにしてください。 アサートを 1 つだけ使用する一般的なアプローチには、次のものがあります。
+
 - アサートごとに別々のテストを作成します。
 - パラメーター化されたテストを使用します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 1 つのアサートに失敗した場合、後続のアサートは評価されません。
 - テストで複数のケースをアサートしないようにします。
-- テストが失敗した理由に関する全体像をとらえることができます。 
+- テストが失敗した理由に関する全体像をとらえることができます。
 
 テスト ケースに複数のアサートを導入した場合、すべてのアサートが実行されることは保証されません。 ほとんどの単体テスト フレームワークでは、単体テストでアサーションが失敗すると、続行中のテストは自動的に失敗と見なされます。 この際、実際には動作している機能が失敗として示されるので、混乱を招きます。
 
@@ -237,13 +253,13 @@ Assert.True(mockOrder.Validated);
 > この規則の一般的な例外は、オブジェクトに対してアサートを行う場合です。 この場合、オブジェクトが想定どおりの状態にあること保証するために、通常は各プロパティに対して複数のアサートを使用することが許容されます。
 
 #### <a name="bad"></a>不適切な例:
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>より適切な例:
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>パブリック メソッドの単体テストを行うことでプライベート メソッドを検証する
-ほとんどの場合、プライベート メソッドをテストする必要はありません。 プライベート メソッドは実装の詳細です。 プライベート メソッドは独立して存在することはない、と考えることができます。 いずれかの時点で、実装の一部としてプライベート メソッドを呼び出す、パブリックに公開されたメソッドが存在することになります。 鍵となるのは、プライベート メソッドを呼び出すパブリック メソッドの最終結果です。 
+ほとんどの場合、プライベート メソッドをテストする必要はありません。 プライベート メソッドは実装の詳細です。 プライベート メソッドは独立して存在することはない、と考えることができます。 いずれかの時点で、実装の一部としてプライベート メソッドを呼び出す、パブリックに公開されたメソッドが存在することになります。 鍵となるのは、プライベート メソッドを呼び出すパブリック メソッドの最終結果です。
 
 次のケースを考えてみます。
 
@@ -260,9 +276,9 @@ private string TrimInput(string input)
 }
 ```
 
-メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`TrimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`TrimInput` に対するテストが無効になる可能性があります。 
+メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`TrimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`TrimInput` に対するテストが無効になる可能性があります。
 
-実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。 
+実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -283,11 +299,11 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -316,7 +332,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-ただし、このテストにはいくつかの問題があることがすぐにわかります。 
+ただし、このテストにはいくつかの問題があることがすぐにわかります。
 
 - テスト スイートが火曜日に実行される場合、2 番目のテストには合格しますが、最初のテストには失敗します。
 - テスト スイートが他のいずれかの曜日に実行される場合、最初のテストには合格しますが、2 番目のテストには失敗します。
@@ -331,11 +347,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

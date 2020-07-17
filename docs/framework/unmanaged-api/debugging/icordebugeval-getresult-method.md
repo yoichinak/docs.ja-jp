@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b12ba5ad5c85643d1f4c91585cf7abca210d22bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d065d956319076d3b92eddafd4a2c25ffbfbac1
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752943"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976266"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult メソッド
 この評価の結果を取得します。  
@@ -37,18 +35,18 @@ HRESULT GetResult (
   
 ## <a name="parameters"></a>パラメーター  
  `ppResult`  
- [out]評価が正常に完了した場合は、この評価の結果を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
+ 入出力評価が正常に完了した場合に、この評価の結果を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `GetResult`メソッドは、評価の完了後にのみ有効です。  
+ `GetResult`メソッドは、評価が完了した後にのみ有効です。  
   
- 通常、評価が完了すると`ppResult`結果を指定します。 例外で終了した場合にスローされる例外になります。 新しいオブジェクトの場合、評価は、新しいオブジェクトへの参照になります。  
+ 評価が正常に完了し`ppResult`た場合は、結果を指定します。 例外が発生して終了した場合は、スローされた例外が結果になります。 新しいオブジェクトの評価がの場合、結果は新しいオブジェクトへの参照になります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

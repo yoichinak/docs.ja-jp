@@ -1,15 +1,15 @@
 ---
-title: My.Computer.Clock オブジェクト (Visual Basic)
+title: My.Computer.Clock オブジェクト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Clock object
 ms.assetid: a362b270-8a1b-404a-95c8-516a60c607dd
-ms.openlocfilehash: 593f39d6d481d053a772193ffcb4b92bda654e47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0d61c9fd08e1024cc85eed8bb64d986f351bcb6a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054498"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415363"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock オブジェクト
 システム クロックから現在の現地時刻と世界協定時刻 (グリニッジ標準時に相当します) にアクセスするためのプロパティを提供します。  
@@ -26,4 +26,4 @@ ms.locfileid: "62054498"
   
 ## <a name="see-also"></a>関連項目
 
-- [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [My.Computer オブジェクト](my-computer-object.md)

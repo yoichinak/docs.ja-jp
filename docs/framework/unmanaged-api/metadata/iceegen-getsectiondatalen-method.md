@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: febf952dbfd80a37017cb165aec4a6b207052d1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745947"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008301"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen メソッド
-指定されたセクションの長さを取得します。  
+指定したセクションの長さを取得します。  
   
- このメソッドは廃止され、使用する必要があります。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in]データ セクションは、長さが取得されます。  
+ から長さを取得するデータセクション。  
   
  `dataLen`  
- [out]返される、指定されたセクションの長さ。  
+ 入出力指定したセクションの返された長さ。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出す`GetSectionDataLen`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
+## <a name="remarks"></a>コメント  
+ `GetSectionDataLen`他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、を呼び出します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen インターフェイス](iceegen-interface.md)

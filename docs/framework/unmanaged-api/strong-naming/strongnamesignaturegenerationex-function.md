@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e9d2d5786ee7db334b8b9b0817c2319a6257dc9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8f63a6379af8f2b7b88c511840622d49d65d587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141578"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 関数
-指定したフラグに基づいて、指定されたアセンブリの厳密な名前の署名を生成します。  
+指定したフラグに従って、指定したアセンブリの厳密な名前の署名を生成します。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameSignatureGenerationEx](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,61 +42,61 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
 ## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]厳密な名前の署名を生成するアセンブリのマニフェストを含むファイルへのパス。  
+ から厳密な名前の署名が生成されるアセンブリのマニフェストを含むファイルへのパス。  
   
  `wszKeyContainer`  
- [in]公開/秘密キー ペアを格納するキー コンテナーの名前。  
+ から公開キーと秘密キーのペアを格納するキーコンテナーの名前。  
   
- 場合`pbKeyBlob`が null、`wszKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 ここでは、コンテナーに格納されているキーのペアは、ファイルの署名に使用します。  
+ `pbKeyBlob` が null の場合、`wszKeyContainer` は暗号化サービスプロバイダー (CSP) 内の有効なコンテナーを指定する必要があります。 この場合、コンテナーに格納されているキーペアがファイルの署名に使用されます。  
   
- 場合`pbKeyBlob`が null でないと見なされます、キーのペア キー バイナリ ラージ オブジェクト (BLOB) に格納します。  
+ `pbKeyBlob` が null でない場合、キーのペアは、バイナリラージオブジェクト (BLOB) に格納されていると見なされます。  
   
  `pbKeyBlob`  
- [in]公開/秘密キーのペアへのポインター。 このペアは、Win32 によって作成された形式で、`CryptExportKey`関数。 場合`pbKeyBlob`が null で指定されたキー コンテナー`wszKeyContainer`キー ペアを格納すると見なされます。  
+ から公開/秘密キーのペアへのポインター。 このペアは、Win32 `CryptExportKey` 関数によって作成される形式です。 `pbKeyBlob` が null の場合、`wszKeyContainer` によって指定されたキーコンテナーには、キーのペアが含まれていると見なされます。  
   
  `cbKeyBlob`  
- [in]サイズ (バイト単位) の`pbKeyBlob`します。  
+ から`pbKeyBlob`のサイズ (バイト単位)。  
   
  `ppbSignatureBlob`  
- [out]共通言語ランタイムには、署名を返す位置へのポインター。 場合`ppbSignatureBlob`が null の場合、ランタイム、シグネチャ ファイルに格納で指定された`wszFilePath`します。  
+ 入出力共通言語ランタイムが署名を返す場所へのポインター。 `ppbSignatureBlob` が null の場合、ランタイムは `wszFilePath`によって指定されたファイルに署名を格納します。  
   
- 場合`ppbSignatureBlob`が null でない共通言語ランタイム割り当て領域が、署名を返します。 呼び出し元が使用して、この領域を解放する必要があります、 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)関数。  
+ `ppbSignatureBlob` が null でない場合は、共通言語ランタイムによって、署名を返す領域が割り当てられます。 呼び出し元は、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を使用してこの領域を解放する必要があります。  
   
  `pcbSignatureBlob`  
- [out]返される署名のバイト単位のサイズ。  
+ 入出力返されたシグネチャのサイズ (バイト単位)。  
   
  `dwFlags`  
- [in]1 つ以上の次の値。  
+ から次の値の1つまたは複数です。  
   
-- `SN_SIGN_ALL_FILES` (0x00000001) - リンクされたモジュールのすべてのハッシュを再計算します。  
+- `SN_SIGN_ALL_FILES` (0x00000001)-リンクされたモジュールのすべてのハッシュを再計算します。  
   
-- `SN_TEST_SIGN` (0x00000002) - テスト アセンブリに署名します。  
+- `SN_TEST_SIGN` (0x00000002)-アセンブリにテスト署名します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ 正常に完了した場合は `true`。それ以外の場合は、`false`ます。  
   
 ## <a name="remarks"></a>Remarks  
- Null を指定`wszFilePath`署名を作成することがなく、署名のサイズを計算します。  
+ 署名を作成せずに署名のサイズを計算するには、`wszFilePath` に null を指定します。  
   
- 署名は、いずれか、ファイルに直接格納または呼び出し元に返されます。  
+ 署名は、ファイルに直接格納するか、呼び出し元に返すことができます。  
   
- 場合`SN_SIGN_ALL_FILES`が指定されてが公開キーは含まれません (両方`pbKeyBlob`と`wszFilePath`が null の場合)、リンクされたモジュールのハッシュが再計算されますが、アセンブリは、再署名することはありません。  
+ `SN_SIGN_ALL_FILES` が指定されていても、公開キーが含まれていない場合 (`pbKeyBlob` と `wszFilePath` の両方が null の場合)、リンクモジュールのハッシュは再計算されますが、アセンブリは再署名されません。  
   
- 場合`SN_TEST_SIGN`を指定すると、共通言語ランタイム ヘッダーは、アセンブリが厳密な名前で署名されているかを示すには変更されません。  
+ `SN_TEST_SIGN` が指定されている場合、共通言語ランタイムヘッダーは、アセンブリが厳密な名前で署名されていることを示すために変更されません。  
   
- 場合、`StrongNameSignatureGenerationEx`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ `StrongNameSignatureGenerationEx` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [StrongNameSignatureGenerationEx メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [StrongNameSignatureGeneration メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureGenerationEx メソッド](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [StrongNameSignatureGeneration メソッド](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

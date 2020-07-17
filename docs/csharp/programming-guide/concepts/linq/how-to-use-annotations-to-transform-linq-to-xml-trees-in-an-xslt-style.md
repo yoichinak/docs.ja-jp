@@ -1,15 +1,15 @@
 ---
-title: '方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)'
+title: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 3aaf141a8ac5d8f3fc75d0a31b460fc84733a62e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484801"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168558"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する方法 (C#)
 注釈を使用することで、XML ツリーの変換が容易になります。  
   
  XML ドキュメントには、"ドキュメント中心で混合コンテンツを含んでいる" ものがあります。 このようなドキュメントでは、必ずしも要素の子ノードの構造を把握する必要はありません。 たとえば、テキストを含んでいるノードは次のようになります。  
@@ -122,7 +122,7 @@ Console.WriteLine(newData);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root>  
@@ -147,8 +147,8 @@ After Transform
   
 - この関数の擬似コードはかなり単純です。  
   
-```  
-The function takes an XElement as an argument and returns an XElement.   
+```text  
+The function takes an XElement as an argument and returns an XElement.
 If an element has an XElement annotation, then  
     Return a new XElement  
         The name of the new XElement is the annotation element's name.  
@@ -233,7 +233,7 @@ static XElement XForm(XElement source)
                 )  
         );  
     }  
-}   
+}
 ```  
   
 ## <a name="complete-example"></a>コード例全体  
@@ -393,7 +393,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root Att1="123">  

@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::CreateVirtualUnwinder メソッド
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a983561f34bee96f5de1e05d608bff930c7ec8c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a479fba9bbcf28c60474fffc6219af23e62c251
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750234"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976500"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder メソッド
 初期コンテキストからアンワインドを開始する新しいスタック アンワインダーを作成します (これは、必ずしもスレッドのリーフではありません)。  
@@ -43,23 +41,23 @@ HRESULT CreateVirtualUnwinder(
  [出力] ICorDebugVirtualUnwinder インターフェイス オブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は、`S_OK`。 それ以外の `HRESULT` は失敗を示します。 失敗した`HRESULT`mscordbi によって受信は致命的と見なされ、により[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)メソッドを返す`CORDBG_E_DATA_TARGET_ERROR`します。  
+ 正常終了した場合は、`S_OK`。 それ以外の `HRESULT` は失敗を示します。 Mscordbi.dll に`HRESULT`よって受信された失敗は、致命的と見なさ`CORDBG_E_DATA_TARGET_ERROR`れ、 [ICorDebug](icordebug-interface.md)メソッドによって返されます。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget2 インターフェイス](icordebugdatatarget2-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: <filter> の <add> の <sharedListeners> 要素
+title: <filter>のの <add> 要素<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673720"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79153454"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<フィルター > 要素の\<追加 > の\<上 sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<filter>のの \<add> 要素\<sharedListeners>
 `sharedListeners` コレクションのリスナーにフィルターを追加します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<上の sharedListeners > 要素  
-\<add>  
-\<フィルター >  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sharedListeners>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<filter type="System.Diagnostics.EventTypeFilter"   
+<filter type="System.Diagnostics.EventTypeFilter"
   initializeData="Warning" />  
 ```  
   
@@ -40,28 +40,28 @@ ms.locfileid: "61673720"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全な名前のみを使用することができます (の形式で、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ)、アセンブリ情報を含む完全修飾型名を使用することも (の形式で、<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>プロパティ)。 完全修飾型名を作成する方法の詳細については、次を参照してください。[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
-|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
+|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全な名前 (プロパティの形式) のみを使用することも、 <xref:System.Type.FullName%2A?displayProperty=nameWithType> アセンブリ情報を含む完全修飾型名 (プロパティの形式) を使用することもでき <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> ます。 完全修飾型名の作成の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
+|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
-|`sharedListeners`|任意のソースまたは trace 要素を参照できるリスナーのコレクション。|  
-|`add`|リスナーを追加、**上 sharedListeners**コレクション。|  
+|`sharedListeners`|任意のソースまたはトレース要素が参照できるリスナーのコレクション。|  
+|`add`|リスナーを**sharedListeners**コレクションに追加します。|  
   
-## <a name="remarks"></a>Remarks  
- リスナーがで定義されている場合、`<add>`の要素、`<sharedListeners>`要素、リスナーのフィルターで定義する必要があります、`<filter>`要素の子である、`<add>`要素。  
+## <a name="remarks"></a>解説  
+ リスナーが要素の要素で定義されている場合 `<add>` `<sharedListeners>` 、そのリスナーのフィルターは、要素の子である要素で定義されている必要があり `<filter>` `<add>` ます。  
   
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<filter>`トレース リスナーにフィルターを追加する要素`console`で、`sharedListeners`コレクション。  
+ 次の例は、要素を使用して、 `<filter>` コレクション内のトレースリスナーにフィルターを追加する方法を示して `console` `sharedListeners` います。  
   
 ```xml  
 <configuration>  
@@ -75,9 +75,9 @@ ms.locfileid: "61673720"
       </source>  
     </sources>  
     <sharedListeners>  
-      <add name="console"   
+      <add name="console"
         type="System.Diagnostics.ConsoleTraceListener" >  
-        <filter type="System.Diagnostics.EventTypeFilter"   
+        <filter type="System.Diagnostics.EventTypeFilter"
           initializeData="Error" />  
       </add>  
     </sharedListeners>  
@@ -90,4 +90,4 @@ ms.locfileid: "61673720"
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

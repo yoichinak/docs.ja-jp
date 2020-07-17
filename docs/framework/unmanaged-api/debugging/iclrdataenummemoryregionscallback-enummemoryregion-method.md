@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4fa0a3745200d39a468292e9520b1aeb0e9f1b2
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738825"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860667"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion メソッド
-によって呼び出される[iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メモリの指定した領域の列挙の試行の結果をデバッガーに報告します。  
+指定されたメモリ領域を列挙しようとした結果をデバッガーに報告するために、 [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)によって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +36,25 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- [in]列挙されるメモリ領域の開始アドレス。  
+ から列挙されたメモリ領域の開始アドレス。  
   
  `size`  
- [in] \(バイト単位\) のメモリ領域のサイズ。  
+ からメモリ領域のサイズ (バイト単位)。  
   
-## <a name="remarks"></a>コメント  
- `ICLRDataEnumMemoryRegions::EnumMemoryRegions`メソッドは、メモリ領域を列挙するために試行するたびにこのコールバック メソッドを呼び出します。 このメソッドは、エラーを示す HRESULT を返した場合であっても、列挙は継続されます。  
+## <a name="remarks"></a>解説  
+ メソッド`ICLRDataEnumMemoryRegions::EnumMemoryRegions`は、メモリ領域を列挙するたびに、このコールバックメソッドを呼び出します。 このメソッドがエラーを示す HRESULT を返す場合でも、列挙は続行されます。  
   
- このコールバックによって報告されたリージョンには、重複またはオーバー ラップがあります。  
+ このコールバックによって報告されたリージョンが重複しているか、重複している可能性があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataEnumMemoryRegionsCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+- [ICLRDataEnumMemoryRegionsCallback インターフェイス](iclrdataenummemoryregionscallback-interface.md)

@@ -15,67 +15,65 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff0660ef2b30e32af540fe7bef5936ab6d0a359f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: edce5cb93b770fb5730e5a06633ffffacf332f7a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777630"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004694"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType メソッド
-現在のスコープ外に定義され、その参照のトークンを定義する指定した型への参照を作成します。  
+現在のスコープの外部で定義されている指定した型への参照を作成し、その参照のトークンを定義します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefineImportType (   
-    [in]  IMetaDataAssemblyImport  *pAssemImport,   
-    [in]  const void               *pbHashValue,   
-    [in]  ULONG                    cbHashValue,    
-    [in]  IMetaDataImport          *pImport,   
-    [in]  mdTypeDef                tdImport,   
-    [in]  IMetaDataAssemblyEmit    *pAssemEmit,   
+HRESULT DefineImportType (
+    [in]  IMetaDataAssemblyImport  *pAssemImport,
+    [in]  const void               *pbHashValue,
+    [in]  ULONG                    cbHashValue,
+    [in]  IMetaDataImport          *pImport,
+    [in]  mdTypeDef                tdImport,
+    [in]  IMetaDataAssemblyEmit    *pAssemEmit,
     [out] mdTypeRef                *ptr  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in][IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)ターゲットの種類のインポート元となるアセンブリを表すインターフェイスです。  
+ から対象の型のインポート元のアセンブリを表す[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)インターフェイス。  
   
  `pbHashValue`  
- [in]指定されたアセンブリのハッシュを格納する配列`pAssemImport`します。  
+ からによって指定されたアセンブリのハッシュを格納している配列 `pAssemImport` 。  
   
  `cbHashValue`  
  [in] `pbHashValue` 配列のバイト数。  
   
  `pImport`  
- [in][IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)ターゲットの種類のインポート元のメタデータ スコープを表すインターフェイスです。  
+ から対象の型のインポート元のメタデータスコープを表す[IMetaDataImport](imetadataimport-interface.md)インターフェイス。  
   
  `tdImport`  
- [in]`mdTypeDef`対象の型を示すトークン。  
+ から`mdTypeDef`対象の型を指定するトークンです。  
   
  `pAssemEmit`  
- [in][IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)ターゲットの種類のインポート先のアセンブリを表すインターフェイスです。  
+ からターゲット型がインポートされるアセンブリを表す[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)インターフェイス。  
   
  `ptr`  
- [out]`mdTypeRef`型参照の現在のスコープで定義されているトークンです。  
+ 入出力`mdTypeRef`型参照の現在のスコープで定義されているトークン。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出しの前に、 [imetadataemit::defineimportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)メソッドが使用できる、`DefineImportType`メンバーの親クラスまたは親インターフェイスの現在のスコープ内の型の参照を作成します。  
+## <a name="remarks"></a>コメント  
+ [IMetaDataEmit::D efineImportMember](imetadataemit-defineimportmember-method.md)メソッドを呼び出す前に、メソッドを使用して、 `DefineImportType` メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

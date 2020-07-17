@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878227"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149246"
 ---
 # <a name="performing-catalog-operations"></a>カタログ操作の実行
-データベースまたは CREATE TABLE または CREATE PROCEDURE ステートメントなどのカタログを変更するコマンドを実行するには、作成、**コマンド**オブジェクト、適切な SQL ステートメントを使用して、**接続**オブジェクト。 コマンドを実行、 **ExecuteNonQuery**のメソッド、**コマンド**オブジェクト。  
+データベースまたはカタログを変更するコマンド (CREATE TABLE ステートメント、CREATE PROCEDURE ステートメントなど) を実行するには、適切な SQL ステートメントと **Connection** オブジェクトを使用して、**Command** オブジェクトを作成します。 **Command** オブジェクトの **ExecuteNonQuery** メソッドでコマンドを実行します。  
   
  Microsoft SQL Server データベースにストアド プロシージャを作成するコード サンプルを次に示します。  
   
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>関連項目
 
-- [コマンドを使用したデータ変更](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [コマンドを使用したデータ変更](using-commands-to-modify-data.md)
+- [コマンドおよびパラメーター](commands-and-parameters.md)
+- [ADO.NET の概要](ado-net-overview.md)

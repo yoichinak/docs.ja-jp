@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879763"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319274"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -15,13 +15,13 @@ SELECT 句には、オプションの ALL/DISTINCT 修飾子に続けてオプ�
 
 ## <a name="syntax"></a>構文
 
-```
+```sql
 [ TOP (n) ]
 ```
 
 ## <a name="arguments"></a>引数
 
-`n` 返される行の数を指定する数値式。 `n` は単一の数値リテラルかまたは単一のパラメーターです。
+`n` 返す行の数を指定する数値式。 `n` は単一の数値リテラルかまたは単一のパラメーターです。
 
 ## <a name="remarks"></a>Remarks
 
@@ -33,28 +33,28 @@ TOP 式には、単一の数値リテラルまたは単一のパラメーター�
 select distinct top(10) c.a1, c.a2 from T as a
 ```
 
-パラメーター化された TOP 式の例を次に示します。
+パラメーター化された TOP 式の例を以下に示します。
 
 ```sql
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-TOP は、クエリが並べ替えられていない限り、非決定的です。 確定的な結果が必要な場合は、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) 句の [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) サブ句および [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) サブ句を使用します。 TOP     SKIP/LIMIT
+TOP は、クエリが並べ替えられていない限り、非決定的です。 確定的な結果が必要な場合は、 [ORDER BY](skip-entity-sql.md) 句の [SKIP](limit-entity-sql.md) サブ句および [LIMIT](order-by-entity-sql.md) サブ句を使用します。 TOP     SKIP/LIMIT
 
 ## <a name="example"></a>例
 
 次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは、TOP を使用して、クエリ結果から返される 1 番上の 1 行を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。
 
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。
+1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。
 
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。
 
-    [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]
+    [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
 ## <a name="see-also"></a>関連項目
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

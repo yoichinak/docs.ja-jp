@@ -1,5 +1,5 @@
 ---
-title: '方法: ツール バー コントロールにボタンを追加する'
+title: '方法 : ツール バー コントロールにボタンを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1bb6de58010e70a4edafacafe3dc00b511fc63de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343689"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182337"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>方法: ツール バー コントロールにボタンを追加する
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>方法 : ツール バー コントロールにボタンを追加する
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+> <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- 不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。  
+ <xref:System.Windows.Forms.ToolBar>コントロールの重要な部分は、追加するボタンです。 メニュー コマンドに簡単にアクセスしたり、アプリケーションのユーザー インターフェイスの別の領域に配置して、メニュー構造で使用できないコマンドをユーザーに公開したりするために使用できます。  
   
- 次の例では、あると想定する<xref:System.Windows.Forms.ToolBar>Windows フォームにコントロールが追加されました (`Form1`)。  
+ 以下の例では、<xref:System.Windows.Forms.ToolBar>コントロールが Windows フォーム ( )`Form1`に追加されていることを前提としています。  
   
 ### <a name="to-add-buttons-programmatically"></a>プログラムでボタンを追加するには  
   
-1. プロシージャでは、ツールバーのボタンの作成に追加して、<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクション。  
+1. プロシージャで、ツール バー ボタンをコレクションに追加<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>して作成します。  
   
-2. 使用して、ボタンのインデックスを渡すことによって、各ボタンのプロパティ設定を指定、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティ。  
+2. プロパティを使用してボタンのインデックスを渡すことによって、個々のボタンのプロパティ<xref:System.Windows.Forms.ToolBar.Buttons%2A>設定を指定します。  
   
-     次の例でフォームを前提としています、<xref:System.Windows.Forms.ToolBar>コントロールが既に追加されています。  
+     次の例では、コントロールが既<xref:System.Windows.Forms.ToolBar>に追加されているフォームを想定しています。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクションには、0 から始まるコレクションがあるので、それに応じてコードを続行する必要があります。  
+    > コレクション<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>は 0 から始まるコレクションなので、コードはこれに従って処理を進める必要があります。  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -90,7 +90,7 @@ ms.locfileid: "59343689"
        toolBar1.Buttons[2].PartialPush = true;  
   
        // Instantiate a ContextMenu component and menu items.  
-       // Set the DropDownButton's DropDownMenu property to   
+       // Set the DropDownButton's DropDownMenu property to
        // the context menu.  
        ContextMenu cm = new ContextMenu();  
        MenuItem miOne = new MenuItem("One");  
@@ -129,7 +129,7 @@ ms.locfileid: "59343689"
           toolBar1->Buttons[2]->PartialPush = true;  
   
           // Instantiate a ContextMenu component and menu items.  
-          // Set the DropDownButton's DropDownMenu property to   
+          // Set the DropDownButton's DropDownMenu property to
           // the context menu.  
           System::Windows::Forms::ContextMenu^ cm = gcnew System::Windows::Forms::ContextMenu;  
           MenuItem^ miOne = gcnew MenuItem( "One" );  
@@ -151,7 +151,7 @@ ms.locfileid: "59343689"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ToolBar>
-- [方法: ツール バー ボタンのアイコンを定義します。](how-to-define-an-icon-for-a-toolbar-button.md)
-- [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [方法: ToolBar ボタンのアイコンを定義する](how-to-define-an-icon-for-a-toolbar-button.md)
+- [方法: ツール バー ボタンのメニュー イベントをトリガーする](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar コントロールの概要](toolbar-control-overview-windows-forms.md)
 - [ToolBar コントロール](toolbar-control-windows-forms.md)

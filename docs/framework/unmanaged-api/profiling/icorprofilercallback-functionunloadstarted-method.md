@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6dd7792fe298aa1950b23053a7c5cd576b62e7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 320aaf074452fd02cd8ee8e80194a4c35b831eb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755897"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503381"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted メソッド
-関数のアンロードをランタイムが開始されたことをプロファイラーに通知します。  
+ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
-    [in] FunctionID functionId);   
+    [in] FunctionID functionId);
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `functionId`  
- [in]アンロードされている関数の ID。  
+## <a name="parameters"></a>パラメーター
+
+- `functionId`
+
+  \[in] アンロードされる関数の ID。
+
+## <a name="remarks"></a>解説  
+ パラメーターの値 `functionId` は、このメソッドが呼び出し元に戻った後に有効ではなくなりました。  
   
-## <a name="remarks"></a>Remarks  
- 値、`functionId`このメソッドが呼び出し元に返された後にパラメーターが無効になっています。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

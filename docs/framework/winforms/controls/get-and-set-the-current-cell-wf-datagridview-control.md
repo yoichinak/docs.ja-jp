@@ -1,5 +1,6 @@
 ---
-title: '方法: Windows フォーム DataGridView コントロールの現在のセルを取得および設定する'
+title: DataGridView コントロールの現在のセルを取得および設定します。
+description: Windows フォーム DataGridView コントロールで現在のセルを取得および設定することによって、現在アクティブなセルをプログラムで検出する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +10,31 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: f60acbfa73ef363d58c57e1c01bdce8cf3337e48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1651ca9c8fa0329f9435a70ce777bce68f15ff63
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622212"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの現在のセルを取得および設定する
-対話、<xref:System.Windows.Forms.DataGridView>多くの場合、プログラムで検出されるセルが現在アクティブなが必要です。 また、現在のセルを変更する必要があります。 これらのタスクを実行することができます、<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>プロパティ。  
+との対話で <xref:System.Windows.Forms.DataGridView> は、現在アクティブなセルをプログラムによって検出する必要があります。 また、現在のセルの変更が必要になる場合もあります。 これらのタスクは、プロパティを使用して実行でき <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> ます。  
   
 > [!NOTE]
->  行または列を持つ現在のセルを設定することはできません、<xref:System.Windows.Forms.DataGridViewBand.Visible%2A>プロパティに設定`false`します。  
+> プロパティがに設定されている行または列の現在のセルを設定することはできません <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> `false` 。  
   
- に応じて、<xref:System.Windows.Forms.DataGridView>現在のセルを変更するコントロールの選択モードが選択を変更できます。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールの選択モード](selection-modes-in-the-windows-forms-datagridview-control.md)します。  
+ コントロールの選択モードによっては、現在のセルを変更すると <xref:System.Windows.Forms.DataGridView> 選択範囲が変更される場合があります。 詳細については、「 [Windows フォーム DataGridView コントロールの選択モード](selection-modes-in-the-windows-forms-datagridview-control.md)」を参照してください。  
   
 ### <a name="to-get-the-current-cell-programmatically"></a>現在のセルをプログラムで取得するには  
   
-- 使用して、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>プロパティ。  
+- <xref:System.Windows.Forms.DataGridView>コントロールのプロパティを使用し <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> ます。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
-### <a name="to-set-the-current-cell-programmatically"></a>現在のセルをプログラムで設定するには  
+### <a name="to-set-the-current-cell-programmatically"></a>現在のセルをプログラムによって設定するには  
   
-- 設定、<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>のプロパティ、<xref:System.Windows.Forms.DataGridView>コントロール。 次のコード例では、現在のセルが行の 0、列 1 に設定されます。  
+- <xref:System.Windows.Forms.DataGridView.CurrentCell%2A>コントロールのプロパティを設定 <xref:System.Windows.Forms.DataGridView> します。 次のコード例では、現在のセルは行0、列1に設定されています。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
@@ -41,7 +42,7 @@ ms.locfileid: "64619664"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- <xref:System.Windows.Forms.Button> という名前のコントロール`getCurrentCellButton`と`setCurrentCellButton`します。 ビジュアルでC#、アタッチする必要があります、<xref:System.Windows.Forms.Control.Click>のコード例に関連付けられているイベント ハンドラーには、各ボタンのイベント。  
+- <xref:System.Windows.Forms.Button>およびという名前のコントロール `getCurrentCellButton` `setCurrentCellButton` 。 Visual C# では、 <xref:System.Windows.Forms.Control.Click> 各ボタンのイベントを、コード例の関連付けられたイベントハンドラーにアタッチする必要があります。  
   
 - `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   

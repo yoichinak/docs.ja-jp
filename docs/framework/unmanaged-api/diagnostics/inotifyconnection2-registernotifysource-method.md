@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7d3c0d833208c91c548ea993bb6aa32e36e1f358
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7fa777466e2c7edd7b3110dd91e776785c63c58
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776640"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442073"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource メソッド
-指定された通知のソースをインストールします。  
+指定された通知ソースをインストールします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +37,20 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>パラメーター  
  `in_pNotifySource`  
- [in]通知のソースとして使用するオブジェクトを指定します。  
+ から通知ソースとして使用するオブジェクトを指定します。  
   
  `out_ppNotifySink`  
- [out]通知シンクとして使用するオブジェクトを受け取ります。  
+ 入出力通知シンクとして使用されるオブジェクトを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
 
-- [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [UnregisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+- [INotifyConnection2 インターフェイス](inotifyconnection2-interface.md)
+- [INotifySource2 インターフェイス](inotifysource2-interface.md)
+- [INotifySink2 インターフェイス](inotifysink2-interface.md)
+- [UnregisterNotifySource メソッド](inotifyconnection2-unregisternotifysource-method.md)

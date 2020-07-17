@@ -1,5 +1,6 @@
 ---
 title: 非同期要求を行う
+description: System.Net クラスで、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用するしくみについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0af143b723c90b146dc5de8447d4a7e1866e7105
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422439"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502302"
 ---
 # <a name="making-asynchronous-requests"></a>非同期要求を行う
 <xref:System.Net> クラスは、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用します。 <xref:System.Net.WebRequest> クラスの <xref:System.Net.WebRequest.BeginGetResponse%2A> および <xref:System.Net.WebRequest.EndGetResponse%2A> メソッドは、インターネット リソースの非同期要求の開始と完了を行います。  
   
 > [!NOTE]
->  非同期コールバック メソッドで同期呼び出しを使用すると、パフォーマンスが大幅に低下する可能性があります。 **WebRequest** とその子孫を使用して作成されたインターネット要求で、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドで返されたストリームを読み取るには、<xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> を使用する必要があります。  
+> 非同期コールバック メソッドで同期呼び出しを使用すると、パフォーマンスが大幅に低下する可能性があります。 **WebRequest** とその子孫を使用して作成されたインターネット要求で、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドで返されたストリームを読み取るには、<xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> を使用する必要があります。  
   
  次のサンプル コードは、**WebRequest** クラスで非同期呼び出しを使用する方法の例です。 このサンプルは、コマンド ラインから URI を取得し、その URI のリソースを要求し、インターネットから受信したデータをコンソールに出力するコンソール プログラムです。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "67422439"
 - `ReadCallBack()` メソッドは、応答ストリームを読み取るための非同期コールバック メソッドを実装します。 インターネット リソースから受信したデータを **RequestState** インスタンスの **ResponseData** プロパティに転送し、データが返されなくなるまで、応答ストリームの非同期読み取りを再び開始します。 すべてのデータが読み取られたら、`ReadCallBack()` は応答ストリームを終了し、`allDone.Set()` メソッドを呼び出して、応答全体が **ResponseData** 内にあることを示します。  
   
     > [!NOTE]
-    >  すべてのネットワーク ストリームが終了していることが重要です。 各要求と応答ストリームが終了していない場合、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなります。  
+    > すべてのネットワーク ストリームが終了していることが重要です。 各要求と応答ストリームが終了していない場合、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなります。  
   
 ```csharp  
 using System;  
@@ -69,18 +70,18 @@ public class RequestState
       RequestData = new StringBuilder(String.Empty);  
       Request = null;  
       ResponseStream = null;  
-   }       
+   }
 }  
   
 // ClientGetAsync issues the async request.  
-class ClientGetAsync   
+class ClientGetAsync
 {  
    public static ManualResetEvent allDone = new ManualResetEvent(false);  
    const int BUFFER_SIZE = 1024;  
   
-   public static void Main(string[] args)   
+   public static void Main(string[] args)
    {  
-      if (args.Length < 1)   
+      if (args.Length < 1)
       {  
          showusage();  
          return;  
@@ -102,7 +103,7 @@ class ClientGetAsync
       IAsyncResult r = (IAsyncResult) wreq.BeginGetResponse(  
          new AsyncCallback(RespCallback), rs);  
   
-      // Wait until the ManualResetEvent is set so that the application   
+      // Wait until the ManualResetEvent is set so that the application
       // does not exit until after the callback is called.  
       allDone.WaitOne();  
   
@@ -127,18 +128,18 @@ class ClientGetAsync
   
       // Call EndGetResponse, which produces the WebResponse object  
       //  that came from the request issued above.  
-      WebResponse resp = req.EndGetResponse(ar);           
+      WebResponse resp = req.EndGetResponse(ar);
   
       //  Start reading data from the response stream.  
       Stream ResponseStream = resp.GetResponseStream();  
   
-      // Store the response stream in RequestState to read   
+      // Store the response stream in RequestState to read
       // the stream asynchronously.  
       rs.ResponseStream = ResponseStream;  
   
       //  Pass rs.BufferRead to BeginRead. Read data into rs.BufferRead  
-      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,   
-         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);   
+      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,
+         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);
    }  
   
    private static void ReadCallBack(IAsyncResult asyncResult)  
@@ -146,10 +147,10 @@ class ClientGetAsync
       // Get the RequestState object from AsyncResult.  
       RequestState rs = (RequestState)asyncResult.AsyncState;  
   
-      // Retrieve the ResponseStream that was set in RespCallback.   
+      // Retrieve the ResponseStream that was set in RespCallback.
       Stream responseStream = rs.ResponseStream;  
   
-      // Read rs.BufferRead to verify that it contains data.   
+      // Read rs.BufferRead to verify that it contains data.
       int read = responseStream.EndRead( asyncResult );  
       if (read > 0)  
       {  
@@ -158,7 +159,7 @@ class ClientGetAsync
   
          // Convert byte stream to Char array and then to String.  
          // len contains the number of characters converted to Unicode.  
-      int len =   
+      int len =
          rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0);  
   
          String str = new String(charBuffer, 0, len);  
@@ -166,12 +167,12 @@ class ClientGetAsync
          // Append the recently read data to the RequestData stringbuilder  
          // object contained in RequestState.  
          rs.RequestData.Append(  
-            Encoding.ASCII.GetString(rs.BufferRead, 0, read));           
+            Encoding.ASCII.GetString(rs.BufferRead, 0, read));
   
-         // Continue reading data until   
+         // Continue reading data until
          // responseStream.EndRead returns –1.  
-         IAsyncResult ar = responseStream.BeginRead(   
-            rs.BufferRead, 0, BUFFER_SIZE,   
+         IAsyncResult ar = responseStream.BeginRead(
+            rs.BufferRead, 0, BUFFER_SIZE,
             new AsyncCallback(ReadCallBack), rs);  
       }  
       else  
@@ -179,16 +180,16 @@ class ClientGetAsync
          if(rs.RequestData.Length>0)  
          {  
             //  Display data to the console.  
-            string strContent;                    
+            string strContent;
             strContent = rs.RequestData.ToString();  
          }  
          // Close down the response stream.  
-         responseStream.Close();           
+         responseStream.Close();
          // Set the ManualResetEvent so the main thread can exit.  
-         allDone.Set();                             
+         allDone.Set();
       }  
       return;  
-   }      
+   }
 }  
 ```  
   
@@ -302,9 +303,9 @@ Class ClientGetAsync
          ' len contains the number of characters converted to Unicode.  
          Dim len As Integer = _  
            rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0)  
-         Dim str As String = new String(charBuffer, 0, len)      
+         Dim str As String = new String(charBuffer, 0, len)
   
-         ' Append the recently read data to the RequestData stringbuilder   
+         ' Append the recently read data to the RequestData stringbuilder
          ' object contained in RequestState.  
          rs.RequestData.Append( _  
             Encoding.ASCII.GetString(rs.BufferRead, 0, read))  
@@ -336,4 +337,4 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- [データの要求](../../../docs/framework/network-programming/requesting-data.md)
+- [データの要求](requesting-data.md)

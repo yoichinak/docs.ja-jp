@@ -1,20 +1,20 @@
 ---
 title: 例外の使用 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a00259dfd5634ad9b9c951c3cd76da97afe5077d
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595469"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241696"
 ---
-# <a name="using-exceptions-c-programming-guide"></a>例外の使用 (C# プログラミング ガイド)
-C# では、例外と呼ばれるメカニズムを使用して、プログラムの実行時に発生したエラーがプログラムに伝えられます。 例外は、エラーが発生したコードによってスローされ、エラーを修正できるコードによってキャッチされます。 例外をスローできるのは、.NET Framework 共通言語ランタイム (CLR) か、プログラム内のコードです。 スローされた例外は、例外の `catch` ステートメントが見つかるまで呼び出し履歴をさかのぼります。 キャッチされない例外は、システムが提供する汎用の例外ハンドラーによって処理されます。このとき、ダイアログ ボックスが表示されます。  
+# <a name="use-exceptions-c-programming-guide"></a>例外の使用 (C# プログラミング ガイド)
+
+C# では、例外と呼ばれるメカニズムを使用して、プログラムの実行時に発生したエラーがプログラムに伝えられます。 例外は、エラーが発生したコードによってスローされ、エラーを修正できるコードによってキャッチされます。 例外をスローできるのは、.NET ランタイム、またはプログラム内のコードです。 スローされた例外は、例外の `catch` ステートメントが見つかるまで呼び出し履歴をさかのぼります。 キャッチされない例外は、システムが提供する汎用の例外ハンドラーによって処理されます。このとき、ダイアログ ボックスが表示されます。  
   
  例外は、<xref:System.Exception> から派生したクラスによって表されます。 このクラスは例外の型を識別し、例外に関する詳細情報が含まれたプロパティを保持します。 例外をスローするには、例外の派生クラスのインスタンスを作成し、必要に応じて例外のプロパティを設定してから、`throw` キーワードを使用してオブジェクトをスローする必要があります。 次に例を示します。  
   
@@ -46,5 +46,5 @@ C# では、例外と呼ばれるメカニズムを使用して、プログラ�
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [例外と例外処理](./index.md)

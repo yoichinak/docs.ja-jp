@@ -1,15 +1,15 @@
 ---
-title: '方法: (Visual Basic) の要素の浅い値を取得します。'
+title: '方法: 要素の浅い値を取得する'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 69e85c3b87ef1052bbb3eab832f93774fa35066f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 24e6b128481f56941f0a61da9766f02813a46e97
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918087"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397818"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>方法: (Visual Basic) の要素の浅い値を取得します。
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>方法: 要素の浅い値を取得する (Visual Basic)
 
 このトピックでは、要素の浅い値を取得する方法について説明します。 浅い値は、特定の要素のみの値のことです。これに対し、深い値とは、すべての子孫要素の値が単一の文字列として連結された値をいいます。
 
@@ -69,7 +69,7 @@ End Module
 
 この例を実行すると、次の出力が生成されます。
 
-```
+```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
 Column  Name="Name"         =Customer.Name.Heading
 Column  Name="CustomerId"   =Customer.CustomerId
@@ -78,4 +78,4 @@ Column  Name="Name"         =Customer.Name
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (Visual Basic)](linq-to-xml-axes.md)

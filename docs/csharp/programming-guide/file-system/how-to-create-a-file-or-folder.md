@@ -1,6 +1,5 @@
 ---
-title: '方法: ファイルまたはフォルダーを作成する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: ファイルまたはフォルダーを作成する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595637"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241644"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>方法: ファイルまたはフォルダーを作成する (C# プログラミング ガイド)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>ファイルまたはフォルダーを作成する方法 (C# プログラミング ガイド)
 プログラムによって、コンピューター上でのフォルダーの作成、サブフォルダーの作成、サブフォルダー内でのファイルの作成、およびファイルへのデータの記述を行うことができます。  
   
 ## <a name="example"></a>例  
@@ -38,7 +37,7 @@ ms.locfileid: "64595637"
 - 次のコードで、`if`-`else` ステートメントを `using` に置き換えます。  
   
     ```csharp  
-    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
+    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))
     {  
         for (byte i = 0; i < 100; i++)  
         {  
@@ -63,7 +62,7 @@ ms.locfileid: "64595637"
   
 - フォルダー名がコロン (":") だけである場合 (<xref:System.IO.PathTooLongException> クラス)。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+## <a name="net-security"></a>.NET セキュリティ  
  部分的に信頼された状況では、<xref:System.Security.SecurityException> クラスのインスタンスがスローされることがあります。  
   
  フォルダーの作成に必要なアクセス許可が与えられていない場合、この例では <xref:System.UnauthorizedAccessException> クラスのインスタンスがスローされます。  
@@ -71,5 +70,5 @@ ms.locfileid: "64595637"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

@@ -1,23 +1,23 @@
 ---
-title: '方法: コード内でサービス バインディングを指定する'
+title: '方法 : コード内でサービス バインディングを指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6cfd084055d59d3292b49897ff710f14f92737
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928805"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320871"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>方法: コード内でサービス バインディングを指定する
+# <a name="how-to-specify-a-service-binding-in-code"></a>方法 : コード内でサービス バインディングを指定する
 この例では、電卓サービスに `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスに実装し、コード内でサービス エンドポイントを定義します。このエンドポイントでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> クラスを使用するように指定します。  
   
  通常、ベスト プラクティスは、コードで命令として記述するよりも、構成でバインディングを指定して情報を明示的にアドレス指定することです。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般的に、バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
- コードではなく構成要素を使用してこのサービスを構成する方法については、次を参照してください。[方法。構成でサービス バインディング指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。  
+ コードの代わりに構成要素を使用してこのサービスを構成する方法の詳細については、「[方法: 構成でサービスバインディングを指定](how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。  
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>サービスで BasicHttpBinding が使用されるようにコードで指定するには  
   
@@ -50,5 +50,5 @@ ms.locfileid: "61928805"
   
 ## <a name="see-also"></a>関連項目
 
-- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [エンドポイント アドレスの指定](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [サービスとクライアントを構成するためのバインディングの使用](using-bindings-to-configure-services-and-clients.md)
+- [エンドポイント アドレスの指定](specifying-an-endpoint-address.md)

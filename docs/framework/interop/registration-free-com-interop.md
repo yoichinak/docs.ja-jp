@@ -10,14 +10,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648525"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124971"
 ---
 # <a name="registration-free-com-interop"></a>登録を必要としない COM 相互運用機能
 登録を必要としない COM 相互運用機能は、アセンブリ情報を格納するために Windows レジストリを使用しないで、コンポーネントをアクティブにします。 展開中にコンピューター上のコンポーネントを登録するのではなく、バインディングとアクティベーションに関する情報を含む Win32 スタイルのマニフェスト ファイルをデザイン時に作成します。 レジストリ キーではなく、これらのマニフェスト ファイルが、オブジェクトのアクティベーションを指示します。  
@@ -41,7 +39,7 @@ ms.locfileid: "64648525"
   
      Windows Server 2003 ファミリも、.NET ベースのアセンブリで、登録を必要としない COM 相互運用機能をサポートしています。  
   
-     NET ベースのクラスが COM からのレジストリを必要としないアクティベーションと互換性を持つためには、そのクラスが既定のコンストラクターを持ち、パブリックであることが必要です。  
+     NET ベースのクラスが COM からの登録を必要としないアクティブ化と互換性を持つためには、そのクラスがパラメーターなしのコンストラクターを持ち、パブリックであることが必要です。  
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>登録を必要としないアクティベーション用の COM コンポーネントの構成  
   
@@ -52,8 +50,8 @@ ms.locfileid: "64648525"
      登録を必要としないアクティベーションは、Windows XP にインストールされている COM コンポーネントでは省略可能です。 アプリケーションに side-by-side アセンブリを追加する方法の詳細な手順については、「[Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies)」(side-by-side アセンブリの使用) をご覧ください。  
   
     > [!NOTE]
-    >  Side-by-side 実行は、ランタイムの複数のバージョンと、特定のバージョンのランタイムを使用するアプリケーションおよびコンポーネントの複数のバージョンを、同一のコンピューター上で同時に実行できるようにするための、.NET Framework の機能です。 Side-by-side 実行と side-by-side アセンブリは、side-by-side 機能を提供するための別個のメカニズムです。  
+    > Side-by-side 実行は、ランタイムの複数のバージョンと、特定のバージョンのランタイムを使用するアプリケーションおよびコンポーネントの複数のバージョンを、同一のコンピューター上で同時に実行できるようにするための、.NET Framework の機能です。 Side-by-side 実行と side-by-side アセンブリは、side-by-side 機能を提供するための別個のメカニズムです。  
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+- [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](configure-net-framework-based-com-components-for-reg.md)

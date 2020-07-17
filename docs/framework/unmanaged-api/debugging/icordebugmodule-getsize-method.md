@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ee21a9fd7b9267672a14107c1706af5d5cdcc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f9818137016dc3e0522ed516c52df2550ffdfca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763577"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212517"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize メソッド
-モジュールのバイト単位のサイズを取得します。  
+モジュールのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>パラメーター  
  `pcBytes`  
- [out](バイト単位)、モジュールのサイズ。  
+ 入出力モジュールのサイズ (バイト単位)。  
   
- モジュールは、ネイティブ イメージ ジェネレーター (NGen.exe) から生成された、モジュールのサイズが 0 になります。  
+ モジュールがネイティブイメージジェネレーター (Ngen.exe) から生成された場合、モジュールのサイズはゼロになります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

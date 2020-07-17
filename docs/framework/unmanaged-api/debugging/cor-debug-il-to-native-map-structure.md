@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132374"
 ---
-# <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 構造体
+# <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 構造体
 Microsoft intermediate language (MSIL) コードをネイティブ コードにマップするために使用するオフセットが含まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -41,13 +39,13 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |メンバー|説明|  
 |------------|-----------------|  
 |`ilOffset`|MSIL コードのオフセット。|  
-|`nativeStartOffset`|ネイティブ コードの開始のオフセット。|  
-|`nativeEndOffset`|ネイティブ コードの最後のオフセット。|  
+|`nativeStartOffset`|ネイティブコードの開始位置のオフセット。|  
+|`nativeEndOffset`|ネイティブコードの末尾のオフセット。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl, CorDebug.idl  
+ **ヘッダー:** Corprof.idl、CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -55,7 +53,7 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 ## <a name="see-also"></a>関連項目
 
-- [GetILToNativeMapping メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [GetILToNativeMapping メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetILToNativeMapping メソッド](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping メソッド](icordebugcode-getiltonativemapping-method.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

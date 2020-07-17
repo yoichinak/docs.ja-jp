@@ -1,5 +1,6 @@
 ---
-title: ConnectionGroup.m_ConnectionList フィールド
+title: ConnectionGroup. m_ConnectionList フィールド
+description: .NET の ConnectionGroup. m_ConnectionList フィールドについて説明します。このフィールドには、同じ URI を提供し、他のプロパティの値を共有する接続オブジェクトが含まれています。
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
-ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 478b2441c062e8df6f4e718bd66d7af329f20f12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989725"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList フィールド
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup. m \_ connectiongroup フィールド
 
-`ConnectionGroup.m_ConnectionList` <xref:System.Collections.ArrayList>同じ URI と共有サービスを提供する接続オブジェクトの他のいくつかのプロパティの値は同じなどの有効期限と認証します。
+`ConnectionGroup.m_ConnectionList`は、 <xref:System.Collections.ArrayList> 同じ URI を提供し、有効期限や認証などの他のいくつかのプロパティで同じ値を共有する接続オブジェクトのです。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +29,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList`フィールドはプライベートであり、コード内で直接使用するものではありません。
-> 
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> `ConnectionGroup.m_ConnectionList`フィールドはプライベートであり、コードで直接使用するためのものではありません。
+>
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:** (System.dll) のシステム
+**アセンブリ:** システム (System.dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

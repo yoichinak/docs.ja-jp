@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 5d3ada6e-feea-47da-a7ed-b664107c137f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f789105751ae2d498740ab60f326f9c0597483b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099211"
 ---
-# <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 列挙型
+# <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 列挙型
 列挙するプロセスの型を識別します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,15 +36,15 @@ typedef enum {
   
 |メンバー名|説明|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|管理対象のプロセス。|  
+|`COR_PUB_MANAGEDONLY`|マネージプロセス。|  
   
 ## <a name="remarks"></a>Remarks  
- アンマネージ デバッグ API の現在のバージョンでは、マネージ プロセスのみを列挙します。  
+ アンマネージデバッグ API の現在のバージョンは、マネージプロセスのみを列挙します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl, CorPub.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -54,4 +52,4 @@ typedef enum {
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738942"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860725"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 関数
 プロセスで CLR を列挙するメカニズムを提供します。  
@@ -65,20 +63,20 @@ HRESULT EnumerateCLRs (
  E_FAIL (またはその他の E_ リターン コード)  
  読み込まれている CLR を列挙できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、`debuggeePID` で指定された対象プロセスについて、プロセスに読み込まれている CLR のパスの配列 (`ppStringArrayOut`)、同じインデックスにある CLR の継続スタートアップ イベントを含むイベント ハンドルの配列 (`ppHandleArrayOut`)、および読み込まれている CLR の数を示す配列のサイズ (`pdwArrayLengthOut`) を返します。  
   
  Windows オペレーティング システムでは、`debuggeePID` がプロセス識別子に対応づけられます。  
   
- `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 呼び出す必要があります、割り当てられたメモリを解放して[CloseCLREnumeration 関数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)します。  
+ `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 割り当てられたメモリを解放するには、 [CloseCLREnumeration 関数](closeclrenumeration-function.md)を呼び出す必要があります。  
   
  両方の配列パラメーターを null に設定してこの関数を呼び出すことで、対象プロセス内の CLR の数を取得できます。 この数から、呼び出し元は、作成されるバッファーのサイズを推論できます (`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`)。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** dbgshim.h  
+ **ヘッダー:** dbgshim. h  
   
- **ライブラリ:** dbgshim.dll  
+ **ライブラリ:** dbgshim .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

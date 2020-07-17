@@ -2,12 +2,12 @@
 title: C# 7.2 の新機能
 description: C# 7.2 の新機能の概要。
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347411"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75694596"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 の新機能
 
@@ -20,15 +20,15 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
 
 このリリースの新しい言語機能は次のとおりです。
 
-* [安全で効率的なコードを記述するための手法](#safe-efficient-code-enhancements)
+- [安全で効率的なコードを記述するための手法](#safe-efficient-code-enhancements)
   - 参照セマンティクスを使用したさまざまな値の型の使用を有効にする、構文の機能強化の組み合わせ。
-* [末尾以外の名前付き引数](#non-trailing-named-arguments)
+- [末尾以外の名前付き引数](#non-trailing-named-arguments)
   - 名前付き引数の後ろに位置引数を続けることができます。
-* [数値リテラルでの先頭のアンダースコア (_)](#leading-underscores-in-numeric-literals)
+- [数値リテラルでの先頭のアンダースコア (_)](#leading-underscores-in-numeric-literals)
   - 数値リテラルの印刷桁の前に先頭のアンダースコア(_) を含めることができるようになりました。
-* [`private protected` アクセス修飾子](#private-protected-access-modifier)
+- [`private protected` アクセス修飾子](#private-protected-access-modifier)
   - `private protected` アクセス修飾子によって、同じアセンブリ内の派生クラスのアクセスが有効になります。
-* [条件付きの `ref` 式](#conditional-ref-expressions)
+- [条件付きの `ref` 式](#conditional-ref-expressions)
   - 条件式 (`?:`) の結果を参照にすることができるようになりました。
 
 この記事の残りでは、各機能の概要について説明します。 機能ごとに、その背後にある論拠のほか、 構文についても説明します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
@@ -40,7 +40,7 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
 
 ## <a name="safe-efficient-code-enhancements"></a>安全で効率的なコードの機能拡張
 
-7\.2 で導入された言語機能では、参照セマンティクスを使用しているときに、さまざまな値の型を使用できます。 これらは、参照型の使用に関連するメモリの割り当てを生じさせずに、値の型のコピーを最小限に抑えてパフォーマンスを改善するように設計されています。 次のような機能があります。
+7\.2 で導入された言語機能では、参照セマンティクスを使用しているときに、さまざまな値の型を使用できます。 これらは、参照型の使用に関連するメモリの割り当てを生じさせずに、値の型のコピーを最小限に抑えてパフォーマンスを改善するように設計されています。 機能は、次のとおりです。
 
 - パラメーターの `in` 修飾子。引数が参照によって渡されるが、呼び出されたメソッドでは変更されないことを指定します。 引数に `in` 修飾子を加えることは、[ソース互換性がある変更](version-update-considerations.md#source-compatible-changes)です。
 - メソッド戻りの `ref readonly` 修飾子。メソッドが参照によってその値を戻しますが、そのオブジェクトに対する書き込みを許可しないことを指定します。 戻り値が値に割り当てられている場合、`ref readonly` 修飾子を追加することは、[ソース互換性がある変更](version-update-considerations.md#source-compatible-changes)です。 既存の `ref` return ステートメントに `readonly` 修飾子を追加することは、[互換性がない変更](version-update-considerations.md#incompatible-changes)です。 呼び出し元は、`readonly` 修飾子を含むように `ref` ローカル変数の宣言を更新する必要があります。
@@ -63,7 +63,7 @@ C# 7.0 の桁区切り記号のサポートの実装では、`_` をリテラル
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_private protected_ アクセス修飾子
+## <a name="private-protected-access-modifier"></a>*private protected* アクセス修飾子
 
 新しい複合アクセス修飾子: `private protected` は、同じアセンブリで宣言されているクラスまたは派生クラスを含むことでメンバーにアクセスできることを示しています。 `protected internal` は同じアセンブリの派生クラスまたはクラスによるアクセスを許可していますが、`private protected` は同じアセンブリで宣言された派生型へのアクセスを制限しています。
 

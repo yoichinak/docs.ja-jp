@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a570813-21be-407e-92a6-7ae8de3bc728
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6aeda4901551b7e79becff132e44382ed11b0d31
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0632a7f5feee87c386d9488a6c989413af68a47f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773351"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615892"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList メソッド
-一覧でアセンブリを参照して、指定されたポインターかどうかを示す値を取得します。  
+指定されたポインターがリスト内のアセンブリを参照しているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,28 +35,28 @@ HRESULT IsAssemblyReferenceInList (
   
 ## <a name="parameters"></a>パラメーター  
  `pName`  
- [in]検索対象のアセンブリへのインターフェイス ポインター。 有効な値の種類は`IAssemblyName`または`IReferenceIdentity`します。  
+ から検索対象のアセンブリへのインターフェイスポインター。 有効な値は `IAssemblyName` 、型または型です `IReferenceIdentity` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|文字列は、一覧に表示されます。|  
-|S_FALSE|文字列は、一覧には表示されません。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返された、後に、共通言語ランタイムは、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|S_OK|文字列が一覧に表示されます。|  
+|S_FALSE|文字列は一覧に表示されません。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で共通言語ランタイムは使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRAssemblyIdentityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [ICLRAssemblyIdentityManager インターフェイス](iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList インターフェイス](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager インターフェイス](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore インターフェイス](ihostassemblystore-interface.md)

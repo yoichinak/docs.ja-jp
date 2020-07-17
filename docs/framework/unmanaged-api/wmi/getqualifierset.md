@@ -1,6 +1,6 @@
 ---
-title: GetQualifierSet 関数 (アンマネージ API リファレンス)
-description: GetQualifierSet 関数は、修飾子をクラスまたはインスタンスの設定を取得します。
+title: 取得修飾子セット関数 (アンマネージ API リファレンス)
+description: 関数は、クラスまたはインスタンスの修飾子セットを取得します。
 ms.date: 11/06/2017
 api_name:
 - GetQualifierSet
@@ -14,28 +14,26 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 368f0a13871bd48780fa30b370d37157d2724bb8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746463"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176774"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 関数
 クラス インスタンスまたはクラス定義で設定された修飾子が取得されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetQualifierSet (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [out] IWbemQualifierSet  **ppQualSet
-); 
+);
 ```  
 
 ## <a name="parameters"></a>パラメーター
@@ -44,31 +42,31 @@ HRESULT GetQualifierSet (
 [in]このパラメーターは使用されません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
 
 `ppQualSet`  
-[out]クラスのオブジェクトの修飾子にアクセスできるインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 エラーが発生した、新しいオブジェクトは返されませんが、ポインターのままの場合変更されていません。 
+[アウト]クラス オブジェクトの修飾子へのアクセスを許可するインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 エラーが発生した場合、新しいオブジェクトは返されず、ポインターは変更されません。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
 
-|定数  |Value  |説明  |
+|常時  |Value  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドが存在しません。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが`null`します。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドは存在しません。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | メモリ不足のため、操作を完了できません。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメータは`null`です。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数の呼び出しをラップする、 [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset)メソッド。 
+この関数は、メソッドの呼び出し[を](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset)ラップします。
 
-[IWbemQualifierSet ポインター](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)により、呼び出し元を追加、編集、またはこれらの修飾子を削除します。 このような追加、編集、または削除された修飾子は、すべてのインスタンスまたはクラス定義に適用されます。
+[IWbemQualifierSet ポインター](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)を使用すると、呼び出し元がこれらの修飾子を追加、編集、または削除できます。 このような追加、編集、または削除された修飾子は、インスタンスまたはクラス定義全体に適用されます。
 
 ## <a name="requirements"></a>必要条件  
-**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
@@ -76,4 +74,4 @@ HRESULT GetQualifierSet (
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

@@ -1,5 +1,6 @@
 ---
 title: メソッド アクセスの保護
+description: パブリックに使用することを意図していないがパブリックである必要があるメソッドに対して、メソッドアクセスをセキュリティで保護する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +11,35 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487944"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309392"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 信頼関係のない任意のコードに呼び出しを許可することが不適切なメソッドがあります。 このようなメソッドには、さまざまなリスクが発生し得る。制限された情報を提供それに渡されるすべての情報と思われる場合があります。エラーは、パラメーターのチェックを行わない可能性があります。または、誤ったのパラメーターには、誤動作したり何か問題を引き起こすこと可能性があります。 これらのケースを認識し、メソッドを保護するために役立つ措置を講じる必要があります。  
+ 信頼関係のない任意のコードに呼び出しを許可することが不適切なメソッドがあります。 このようなメソッドは、制限された情報を提供する、渡された任意の情報を信頼する、パラメーターのエラー チェックを行わない、誤ったパラメーターを受け取って正しく機能しないかなんらかの被害をもたらすなどの、いくつかの危険性をもたらします。 これらのケースを認識し、メソッドを保護するために役立つ措置を講じる必要があります。  
   
- パブリックでの使用を目的としていないメソッドをパブリックとして使用する場合は、メソッドを制限する必要があることがあります。 たとえば、独自の DLL 経由で呼び出すインターフェイスはパブリックにする必要があります。しかし、顧客がそのインターフェイスを使用したり、悪意のあるコードがコンポーネントへのエントリ ポイントとして攻略したりするのを防ぐために、そのインターフェイスをパブリックとして公開しない場合があります。 また、パブリックではあるものの、パブリック使用を想定していないメソッドを制限する一般的な理由として、非常に内部的なインターフェイスで、ドキュメントを残したり、サポートするのを避けたりする場合も考えられます。  
+ パブリックでの使用を目的としていないメソッドをパブリックとして使用する場合は、メソッドを制限する必要があることがあります。 たとえば、独自の DLL 経由で呼び出すインターフェイスはパブリックにする必要があります。しかし、顧客がそのインターフェイスを使用したり、悪意のあるコードがコンポーネントへのエントリ ポイントとして攻略したりするのを防ぐために、そのインターフェイスをパブリックとして公開しない場合があります。 パブリックに使用することを想定していないメソッドを制限するもう1つの一般的な理由は、内部インターフェイスとなる可能性のあるものをドキュメント化してサポートしないことです。  
   
- マネージ コードには、メソッド アクセスを制限するいくつかの方法があります。  
+ マネージド コードには、メソッド アクセスを制限するいくつかの方法があります。  
   
-- クラス、アセンブリ、派生クラスが信頼されている場合は、これらへのアクセシビリティのスコープを制限します。 これが、メソッド アクセスを制限する最も簡単な方法です。 派生クラスが親クラスの ID を共有することがありますが、一般的に、派生クラスは派生元のクラスよりも信頼度が低くなる可能性があります。 具体的には、キーワードの信頼を推測できません**保護**、必ずしもセキュリティ コンテキストで使用するされません。  
+- クラス、アセンブリ、派生クラスが信頼されている場合は、これらへのアクセシビリティのスコープを制限します。 これが、メソッド アクセスを制限する最も簡単な方法です。 一般に、派生クラスは、派生元のクラスよりも信頼度が低くなる場合がありますが、場合によっては親クラスの id を共有します。 特に、キーワードから信頼を推測しないでください `protected` 。これは、必ずしもセキュリティコンテキストで使用されるわけではありません。  
   
-- 指定した id の基本的には、特定の呼び出し元にメソッド アクセスを制限[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)(厳密な名前、発行者、ゾーン、およびなど) を選択します。  
+- 指定された id の呼び出し元へのメソッドアクセスを制限します。基本的には、任意の特定の[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)(厳密な名前、発行元、ゾーンなど) を選択します。  
   
 - 選択したアクセス許可を持つ呼び出し元だけにメソッド アクセスを制限します。  
   
- 同様に、宣言セキュリティを使用すると、クラスの継承を制御できます。 使用することができます**InheritanceDemand**以下を実行します。  
+ 同様に、宣言セキュリティを使用すると、クラスの継承を制御できます。 **InheritanceDemand**を使用して、次の操作を行うことができます。  
   
 - 派生したクラスに、特定の ID またはアクセス許可を要求します。  
   
 - 特定のメソッドをオーバーライドする派生クラスに、特定の ID またはアクセス許可を要求します。  
   
- 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>で、**デマンド**の厳密な名前。 厳密な名前でアセンブリに署名する方法のタスク ベースの情報を参照してください。[の作成と using strong-named Assemblies](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)します。  
+ 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 厳密な名前の**要求**でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「厳密な名前[付きアセンブリの作成と使用](../../standard/assembly/create-use-strong-named.md)」を参照してください。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -53,23 +52,23 @@ End Class
 public class Class1  
 {  
   
-}   
+}
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>クラスとメンバーを信頼関係のないコードが使用できないようにする  
- このセクションで示す宣言を使用すると、特定のクラスとメソッド、およびプロパティとイベントが部分的な信頼のコードによって使用されるのを防ぐことができます。 これらの宣言をクラスに適用すると、すべてのメソッド、プロパティ、イベントが保護されますが、フィールドへのアクセスは宣言セキュリティの影響を受けないため、注意が必要です。 また、リンク確認要求は直前の呼び出し元に対して保護できるようにするだけで、攻撃を受ける可能性が残っています。  
+ このセクションで示す宣言を使用すると、特定のクラスとメソッド、およびプロパティとイベントが部分的な信頼のコードによって使用されるのを防ぐことができます。 これらの宣言をクラスに適用することで、すべてのメソッド、プロパティ、およびイベントに保護を適用できます。 ただし、フィールドアクセスは、宣言セキュリティの影響を受けません。 また、リンク確認要求は直前の呼び出し元に対して保護できるようにするだけで、攻撃を受ける可能性が残っています。  
   
 > [!NOTE]
->  新しい透過性モデルが .NET Framework 4 で導入されました。 [透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)モデルをセキュリティで保護されたコードの識別、<xref:System.Security.SecurityCriticalAttribute>属性。 セキュリティ クリティカル コードでは、呼び出し元と継承先の両方が完全に信頼されていることが必要です。 .NET Framework の以前のバージョンのコード アクセス セキュリティ規則で実行されているアセンブリは、レベル 2 のアセンブリを呼び出すことができます。 この場合、セキュリティ クリティカル属性は、完全な信頼のためのリンク確認要求として扱われます。  
+> 新しい透過性モデルは .NET Framework 4 で導入されました。 [透過的セキュリティコード、レベル 2](security-transparent-code-level-2.md)モデルは、属性を使用してセキュリティで保護されたコードを識別し <xref:System.Security.SecurityCriticalAttribute> ます。 セキュリティ クリティカル コードでは、呼び出し元と継承先の両方が完全に信頼されていることが必要です。 .NET Framework の以前のバージョンのコード アクセス セキュリティ規則で実行されているアセンブリは、レベル 2 のアセンブリを呼び出すことができます。 この場合、セキュリティ クリティカル属性は、完全な信頼のためのリンク確認要求として扱われます。  
   
- アセンブリの厳密な名前で、 [LinkDemand](../../../docs/framework/misc/link-demands.md)すべてのパブリックにアクセスできるメソッド、プロパティ、および完全に信頼された呼び出し元への使用を制限するには、その中のイベントに適用されます。 この機能を無効にするには、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を適用する必要があります。 このため、信頼関係のない呼び出し元を除外するクラスを明示的に指定することは、署名のないアセンブリまたはこの属性を持つアセンブリだけに必要です。これらの宣言を使用して、信頼関係のない呼び出し元からの利用を想定していない型のサブセットをマークできます。  
+ 厳密な名前が付けられたアセンブリでは、すべてのパブリックにアクセスできるメソッド、プロパティ、およびイベントに[LinkDemand](link-demands.md)が適用され、完全に信頼された呼び出し元に対して使用が制限されます。 この機能を無効にするには、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を適用する必要があります。 このため、信頼関係のない呼び出し元を除外するクラスを明示的に指定することは、署名のないアセンブリまたはこの属性を持つアセンブリだけに必要です。これらの宣言を使用して、信頼関係のない呼び出し元からの利用を想定していない型のサブセットをマークできます。  
   
  クラスおよびメンバーを信頼関係のないコードによって使用されるのを防ぐ方法の例を次に示します。  
   
  パブリックの非シール クラスの場合:  
   
 ```vb  
-<System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name := "FullTrust"), _   
+<System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name := "FullTrust"), _
 System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name := "FullTrust")>  _  
 Public Class CanDeriveFromMe  
 End Class  
@@ -116,7 +115,7 @@ public abstract class CannotCreateInstanceOfMe_CanCastToMe {}
  パブリックの仮想関数の場合:  
   
 ```vb  
-Class Base1   
+Class Base1
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name:="FullTrust"), System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")> _  
     Public Overridable Sub CanOverrideOrCallMe()  
     End Sub 'CanOverrideOrCallMe  
@@ -124,7 +123,7 @@ End Class 'Base1
 ```  
   
 ```csharp  
-class Base1   
+class Base1
 {  
 [System.Security.Permissions.PermissionSetAttribute(  
 System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]  
@@ -168,9 +167,9 @@ End Class 'Derived
   
 ```csharp  
 class Derived : Base1  
-{     
-[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]      
-    public override void CanOverrideOrCallMe()   
+{
+[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
+    public override void CanOverrideOrCallMe()
     {  
         base.CanOverrideOrCallMe();  
     }  
@@ -185,15 +184,15 @@ Class Derived
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")> _  
     Public Overrides Sub CanOverrideOrCallMe()  
         MyBase.CanOverrideOrCallMe()  
-    End Sub 'CanOverrideOrCallMe   
+    End Sub 'CanOverrideOrCallMe
 End Class 'Derived  
 ```  
   
 ```csharp  
 class Derived : Base1  
-{     
-[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]      
-    public override void CanOverrideOrCallMe()   
+{
+[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]
+    public override void CanOverrideOrCallMe()
     {  
         base.CanOverrideOrCallMe();  
     }  
@@ -215,7 +214,7 @@ Class Implemented
 ```  
   
 ```csharp  
-public interface ICanCastToMe   
+public interface ICanCastToMe
 {  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name = "FullTrust")]  
@@ -234,12 +233,12 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal Overrides または Overloads Overridable Friend  
   
 > [!NOTE]
->  このセクションでは、両方のメソッドを宣言するときにセキュリティ上の問題について警告`virtual`と`internal`(`Overloads` `Overridable` `Friend` Visual Basic で)。 この警告は、.NET Framework version 1.0 および 1.1 にのみ適用されます、以降のバージョンには適用されません。  
+> このセクションでは、メソッドを `virtual` および `internal` ( `Overloads` `Overridable` `Friend` Visual Basic) の両方として宣言するときのセキュリティの問題について警告します。 この警告は .NET Framework バージョン1.0 および1.1 にのみ適用されます。これは、それ以降のバージョンには適用されません。  
   
- .NET Framework バージョン 1.0 および 1.1 では、する必要があります型システムのアクセシビリティの微妙な違いに注意してください。 コードが他のアセンブリを使用できないことを確認するときにします。 宣言されているメソッド**仮想**と**内部**(**Overloads Overridable Friend** Visual basic)、親クラスの vtable エントリを上書きできからのみ使用できます。同じアセンブリ内で内部があるためです。 ただし、オーバーライドのアクセシビリティはによって決定、**仮想**キーワード、およびそのコードがクラス自体へのアクセスを持っている限り、別のアセンブリからオーバーライドするこのことができます。 オーバーライドの可能性が問題を表している場合は、宣言セキュリティを使用して、修正するか、または削除する、**仮想**キーワードの場合、これは必須ではありません。  
+ .NET Framework バージョン1.0 および1.1 では、他のアセンブリでコードを使用できないことを確認するときに、型システムのアクセシビリティの微妙な違いに注意する必要があります。 **Virtual**および**internal**として宣言されているメソッド (Visual Basic 内のオーバーロードのオーバーライド可能な**Friend** ) は、親クラスの vtable エントリをオーバーライドできます。また、内部のため、同じアセンブリ内からのみ使用できます。 ただし、オーバーライドのアクセシビリティは**virtual**キーワードによって決定され、そのコードがクラス自体にアクセスできる限り、別のアセンブリからオーバーライドできます。 オーバーライドの可能性が問題を示している場合は、宣言セキュリティを使用して修正します。または、厳密には必要でない場合は、**仮想**キーワードを削除します。  
   
- ある言語コンパイラがコンパイル エラーによってこれらのオーバーライドを防いだとしても、他のコンパイラによって記述されたコードがオーバーライドする可能性があります。  
+ 言語コンパイラによってコンパイルエラーによってこれらのオーバーライドが回避される場合でも、他のコンパイラで記述されたコードがオーバーライドされる可能性があります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

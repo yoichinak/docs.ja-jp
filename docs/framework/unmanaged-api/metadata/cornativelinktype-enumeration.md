@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29f2401e2e3faccae05ca5249fcd7d9e89aacb46
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781726"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007612"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 列挙型
 ネイティブ コード内のリンクの種類を示す値を提供します。  
@@ -29,7 +27,7 @@ ms.locfileid: "67781726"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     nltNone       = 1,  
     nltAnsi       = 2,  
@@ -44,22 +42,22 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`nltNone`|キーワードのいずれも指定されていることを示します。|  
+|`nltNone`|キーワードが指定されていないことを示します。|  
 |`nltAnsi`|ANSI キーワードが指定されていることを示します。|  
 |`nltUnicode`|Unicode キーワードが指定されていることを示します。|  
 |`nltAuto`|Auto キーワードが指定されていることを示します。|  
 |`nltOle`|OLE キーワードが指定されていることを示します。|  
-|`nltMaxValue`|使用しません。|  
+|`nltMaxValue`|使用されていません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

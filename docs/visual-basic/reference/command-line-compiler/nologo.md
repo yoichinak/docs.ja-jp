@@ -1,5 +1,5 @@
 ---
-title: -nologo (Visual Basic)
+title: -nologo
 ms.date: 03/13/2018
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: c1824e4a086ecdd4b6a776bd6894f6e003d02867
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d1307603ebc06b4eb4c3786f1cd2fb432c0cf636
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789007"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360463"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-コンパイル時に著作権画面を表示および情報メッセージの表示を抑制します。  
+コンパイル中に著作権情報のバナーおよび情報メッセージが表示されません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -nologo  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 指定した場合`-nologo`コンパイラは著作権バナーが表示されません。 既定では、`-nologo` は無効です。  
+ `-nologo` を指定すると、コンパイラで著作権情報のバナーが表示されません。 既定では、`-nologo` は無効です。  
   
 > [!NOTE]
->  `-nologo`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> `-nologo` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`著作権バナーは表示されません。  
+ 次のコードでは `T2.vb` がコンパイルされ、著作権のバナーは表示されません。  
   
 ```console
 vbc -nologo t2.vb  
@@ -38,5 +38,5 @@ vbc -nologo t2.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

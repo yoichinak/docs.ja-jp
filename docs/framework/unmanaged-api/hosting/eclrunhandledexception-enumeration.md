@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba0c2ea7733f098b7fac95f51b5eb16d083174e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779368"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616308"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 列挙型
-ユーザー コードでハンドルされない例外を管理するためのオプションについて説明します。  
+ユーザーコードで処理されない例外を管理するために使用できるオプションについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|既定の動作が発生したことを指定します。 プロセスは破棄されます。|  
-|`eHostDeterminedPolicy`|共通言語ランタイム (CLR) はハンドルされない例外は無視され、により、さらにアクションを決定するホストを指定します。|  
+|`eRuntimeDeterminedPolicy`|既定の動作を実行することを指定します。 プロセスが破棄されます。|  
+|`eHostDeterminedPolicy`|共通言語ランタイム (CLR) が未処理の例外を無視し、ホストがそれ以上のアクションを決定できるように指定します。|  
   
-## <a name="remarks"></a>Remarks  
- CLR は、以前のバージョンのように動作を指定するには、使用、`eHostDeterminedPolicy`メンバー。  
+## <a name="remarks"></a>解説  
+ CLR が以前のバージョンと同じように動作するように指定するには、メンバーを使用し `eHostDeterminedPolicy` ます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [EClrFailure 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [EClrOperation 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [ICLRPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [SetUnhandledExceptionPolicy メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
-- [IHostPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [EClrFailure 列挙型](eclrfailure-enumeration.md)
+- [EClrOperation 列挙型](eclroperation-enumeration.md)
+- [ICLRPolicyManager インターフェイス](iclrpolicymanager-interface.md)
+- [SetUnhandledExceptionPolicy メソッド](iclrpolicymanager-setunhandledexceptionpolicy-method.md)
+- [IHostPolicyManager インターフェイス](ihostpolicymanager-interface.md)
+- [ホスティングの列挙体](hosting-enumerations.md)

@@ -2,14 +2,12 @@
 title: ICorDebugMergedAssemblyRecord::GetVersion メソッド
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bb7861e33a02b994c4c29569a811f4e2f3c44cec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cad71080c86e92beb318722db86011b09ce02e91
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762313"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207624"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion メソッド
 アセンブリのバージョン情報を取得します。  
@@ -18,9 +16,9 @@ ms.locfileid: "67762313"
   
 ```cpp  
 HRESULT GetVersion(  
-   [out] USHORT *pMajor,   
-   [out] USHORT *pMinor,   
-   [out] USHORT *pBuild,   
+   [out] USHORT *pMajor,
+   [out] USHORT *pMinor,
+   [out] USHORT *pBuild,
    [out] USHORT *pRevision  
 );  
 ```  
@@ -42,18 +40,18 @@ HRESULT GetVersion(
  アセンブリのバージョン番号については、<xref:System.Version> クラスのトピックを参照してください。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugMergedAssemblyRecord インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord インターフェイス](icordebugmergedassemblyrecord-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

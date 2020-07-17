@@ -1,27 +1,27 @@
 ---
 title: 冗語構文
-description: 詳細および軽量構文の違いについて説明します、F#プログラミング言語。
+description: F# プログラミング言語での詳細構文と軽量構文の違いについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641662"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463904"
 ---
 # <a name="verbose-syntax"></a>冗語構文
 
-多くの構成要素に使用できる 2 つの形式の構文は、F#言語:*冗語構文*と*軽量構文*します。 冗語構文は、一般的に使用されませんが、インデントを受けにくくなるという利点があります。 などの他のキーワード、軽量構文が短いとインデントを先頭と末尾、コンストラクトの使用ではなく`begin`、 `end`、`in`など。 既定の構文は、軽量構文です。 このトピックでは、軽量構文が有効でない場合、F# の構成要素の構文をについて説明します。 冗語構文はのでまま一部のコンストラクトの冗語構文を使用することができる場合でも、軽量構文を有効にすると、常に有効です。 使用して軽量構文を無効にすることができます、`#light "off"`ディレクティブ。
+F# 言語の多くの構文には、*詳細な構文*と*簡易構文*の 2 種類の構文が用意されています。 詳細な構文は、一般的には使用されませんが、インデントに対する感度が低いという利点があります。 軽量構文は短く、インデントを使用して、 `begin`、`end`などの`in`追加のキーワードではなく、コンストラクトの先頭と末尾を通知します。 既定の構文は、簡易構文です。 このトピックでは、簡易構文が有効でない場合の F# コンストラクトの構文について説明します。 詳細構文は常に有効であるため、簡易構文を有効にしても、一部の構文では詳細構文を使用できます。 ディレクティブを使用して、簡易構文を`#light "off"`無効にすることができます。
 
-## <a name="table-of-constructs"></a>テーブルの構成体
+## <a name="table-of-constructs"></a>コンストラクトの表
 
-次の表では、F# 言語コンストラクトの軽量と詳細な構文を示しますのコンテキストで 2 つの形式の違いがあります。 この表では、角度を角かっこ (&lt;&gt;) 構文のユーザーが指定した要素で囲みます。 これらのコンストラクト内で使用される構文の詳細情報の各言語構成要素は、ドキュメントを参照してください。
+次の表は、2 つの形式の間に違いがあるコンテキストでの F# 言語構成要素の軽量構文と詳細構文を示しています。 この表では、山かっこ (&lt;&gt;) でユーザーが指定した構文要素を囲みます。 これらの構文で使用される構文の詳細については、各言語構成要素のドキュメントを参照してください。
 
 <table>
 <tr>
-<th>言語構成要素</th>
+<th>言語構成</th>
 <th>軽量構文</th>
-<th>冗語構文</th>
+<th>詳細構文</th>
 </tr>
 <tr>
 <td>
@@ -30,8 +30,8 @@ ms.locfileid: "65641662"
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ ms.locfileid: "65641662"
 </tr>
 <tr><td>
 
-入れ子になった`let`バインド
+ネストされた`let`バインディング
 
 </td><td>
 
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>レコード
+<tr><td>レコード (record)
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>構造体</td><td>
+<tr><td>structure</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>判別共用体</td><td>
+<tr><td>差別化組合</td><td>
 
 ```fsharp
 type <union-name> =
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>型の拡張機能</td><td>
+<tr><td>型拡張子</td><td>
 
 ```fsharp
 type <type-name>
@@ -354,4 +354,4 @@ module <module-name> =
 
 - [F# 言語リファレンス](index.md)
 - [コンパイラ ディレクティブ](compiler-directives.md)
-- [コードのフォーマットに関するガイドライン](code-formatting-guidelines.md)
+- [コードのフォーマットに関するガイドライン](../style-guide/formatting.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ce8e96a588036297794238650af9ef84fc9aaa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39d8713b2b78047e615b6c2fdd6e95e9aacbd2ae
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750564"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008847"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile メソッド
-これに現在読み込まれてコード ベースを含むコード ベースのファイルが生成されます[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイス。  
+この[ICeeGen](iceegen-interface.md)インターフェイスに現在読み込まれているコードベースを含むコードベースファイルを生成します。  
   
- このメソッドは廃止され、使用する必要があります。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +34,17 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `GenerateCeeFile` パラメーターはありません。  
+ `GenerateCeeFile`パラメーターを受け取りません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen インターフェイス](iceegen-interface.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0b6907cdf78fc70c75ddd711cd8593427857b172
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 972a981188c36236b81f3da17c09abeeb1e32857
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756894"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212192"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue メソッド
 指定したバッファーから新しい値をコピーします。  
@@ -37,16 +35,16 @@ HRESULT SetValue (
   
 ## <a name="parameters"></a>パラメーター  
  `pFrom`  
- [in]値をコピー元のバッファーへのポインター。  
+ から値のコピー元のバッファーへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 参照型では、値は、参照、コンテンツではなくです。  
+ 参照型の場合、値は参照であり、コンテンツではありません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

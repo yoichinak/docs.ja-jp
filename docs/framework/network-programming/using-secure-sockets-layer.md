@@ -1,5 +1,6 @@
 ---
 title: Secure Sockets Layerの使用
+description: System.Net および拡張クラスで Secure Sockets Layer を使用し、.NET Framework のいくつかのネットワーク プロトコルの接続を暗号化するしくみについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 9cfa8d6a71898a1d1ea91825ffc9a37f4654ebd5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 67330962382e768849cbf67d5f412ea80f65569d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501990"
 ---
 # <a name="using-secure-sockets-layer"></a>Secure Sockets Layerの使用
 <xref:System.Net> クラスは、Secure Sockets Layer (SSL) を使用して、複数のネットワーク プロトコルの接続を暗号化します。  
@@ -64,6 +65,6 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
   
 ## <a name="see-also"></a>関連項目
 
-- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
-- [証明書の選択と検証](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+- [ネットワーク プログラミングにおけるセキュリティ](security-in-network-programming.md)
+- [.NET Framework のネットワーク プログラミング](index.md)
+- [証明書の選択と検証](certificate-selection-and-validation.md)

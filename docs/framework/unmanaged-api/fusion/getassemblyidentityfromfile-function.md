@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 581c675cfb69503e6366471a469ffed1a2d13b1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50ec5a23db4d2460480bcc3e463ecd88e7470bde
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745236"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134532"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 関数
-ポインターを取得、 `IUnknown` 、指定したオブジェクト`IID`のアセンブリにある指定したファイル パス。  
+指定したファイルパスにあるアセンブリ内の指定した `IID` を持つ `IUnknown` オブジェクトへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +38,22 @@ HRESULT GetAssemblyIdentityFromFile (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzFilePath`  
- [in]要求されたアセンブリへの有効なパス。  
+ から要求されたアセンブリへの有効なパス。  
   
  `riid`  
- [in]`IID`返すインターフェイスの。  
+ から返されるインターフェイスの `IID`。  
   
  `ppIdentity`  
- [out]返されるインターフェイス ポインター。  
+ 入出力返されたインターフェイスポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [IUnknown](/cpp/atl/iunknown)
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

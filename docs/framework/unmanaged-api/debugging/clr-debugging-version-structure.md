@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 651b916a0e3ca178432094428611f9bcc8f0fd17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132419"
 ---
-# <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 構造体
+# <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION 構造体
 デバッグのために共通言語ランタイム (CLR) の製品バージョンを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,19 +41,19 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`wStructVersion`|構造のバージョン番号|  
+|`wStructVersion`|構造体のバージョン番号|  
 |`wMajor`|メジャー バージョン番号。|  
 |`wMinor`|マイナー バージョン番号。|  
 |`wBuild`|ビルド番号。|  
 |`wRevision`|リビジョン番号。|  
   
 ## <a name="remarks"></a>Remarks  
- `CLR_DEBUGGING_VERSION`構造がただし COR_VERSION 構造体と同じでは、`CLR_DEBUGGING_VERSION`構造は追加の構造のバージョン フィールドを提供します (`wStructVersion`)。 現時点では、このフィールドは 0 に設定する必要があります。  
+ `CLR_DEBUGGING_VERSION` 構造体は COR_VERSION 構造体と同じですが、`CLR_DEBUGGING_VERSION` 構造体には、追加の構造バージョンフィールド (`wStructVersion`) が用意されています。 現在、このフィールドは0に設定する必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -63,5 +61,5 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

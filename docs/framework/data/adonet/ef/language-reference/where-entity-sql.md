@@ -2,19 +2,19 @@
 title: WHERE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: a8e1061e-0028-4a6f-8f19-b9f48e96c4b8
-ms.openlocfilehash: 939d4c0ec2c30bc71b22fb65ab36644e063f97de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: MT
+ms.openlocfilehash: b551d15d7de2cf07afc7455b7fd0a0faf6436ccf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489854"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319183"
 ---
 # <a name="where-entity-sql"></a>WHERE (Entity SQL)
-WHERE 句は、直後に適用、 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)句。  
+WHERE 句は、[FROM](from-entity-sql.md) 句の直後に適用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 [ WHERE expression ]  
 ```  
   
@@ -23,9 +23,9 @@ WHERE 句は、直後に適用、 [FROM](../../../../../../docs/framework/data/a
  ブール型です。  
   
 ## <a name="remarks"></a>Remarks  
- TRANSACT-SQL の説明に従って、WHERE 句は同じ意味を持ちます。 ソース コレクションの要素を条件を満たすものに制限することで、クエリ式によって生成されるオブジェクトを制限します。  
+ WHERE 句のセマンティクスは、Transact-SQL で記述する場合と同じです。 ソース コレクションの要素を条件を満たすものに制限することで、クエリ式によって生成されるオブジェクトを制限します。  
   
-```  
+```sql  
 select c from cs as c where e  
 ```  
   
@@ -35,5 +35,5 @@ select c from cs as c where e
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [クエリ式](query-expressions-entity-sql.md)

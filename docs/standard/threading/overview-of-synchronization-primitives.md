@@ -8,21 +8,19 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479785"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739371"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 
 .NET では、共有リソースへのアクセスを同期する場合や、スレッド相互作用を調整する場合に使用できるさまざまな型が提供されます。
 
 > [!IMPORTANT]
-> 共有リソースへのすべてのアクセスを保護するには、同じ同期プリミティブ インスタンスを使用します。 異なる同期プリミティブ インスタンスを使用してリソースへのアクセスを保護する場合や、一部のコードでリソースに直接アクセスする場合、複数のスレッドで同時にリソースにアクセスできます。
+> 共有リソースでのアクセスを保護するには、同じ同期プリミティブ インスタンスを使用します。 異なる同期プリミティブ インスタンスを使用して同じリソースを保護する場合は、同期プリミティブによって提供される保護を回避します。
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle クラスと軽量の同期型
 

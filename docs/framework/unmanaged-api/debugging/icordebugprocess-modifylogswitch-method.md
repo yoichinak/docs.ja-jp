@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c9375854b45432eafb6cc706a1a62f5424e0fee8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755451"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210489"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch メソッド
-指定したログ スイッチの重大度レベルを設定します。  
+指定されたログスイッチの重大度レベルを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,19 +35,19 @@ HRESULT ModifyLogSwitch(
   
 ## <a name="parameters"></a>パラメーター  
  `pLogSwitchName`  
- [in]Log スイッチの名前を指定する文字列へのポインター。  
+ からログスイッチの名前を指定する文字列へのポインター。  
   
  `lLevel`  
- [in]指定したログ スイッチを設定する重大度レベル。  
+ から指定されたログスイッチに設定される重大度レベル。  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドが後でのみ有効では、 [icordebugmanagedcallback::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)コールバックが発生しました。  
+ このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md)コールバックが発生しました。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

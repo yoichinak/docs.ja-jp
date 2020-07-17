@@ -8,16 +8,14 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e2459b4f91e7e189990b65fa4d7ca860ff73c51
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33b8f47813a3bf43bd69741c9febb150fa3a92e3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099907"
 ---
-# <a name="axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken 関数
+# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken 関数
 CSP PUBLICKEYBLOB 形式から厳密な名前の公開キー トークンを算出します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,4 +39,4 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
   
 ## <a name="see-also"></a>関連項目
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

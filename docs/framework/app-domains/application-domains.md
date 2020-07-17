@@ -1,5 +1,6 @@
 ---
 title: アプリケーション ドメイン
+description: .NET でセキュリティ、信頼性、バージョン管理、およびアセンブリをアンロードするためのアプリケーション間に分離の境界を提供するアプリケーション ドメインについて確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -12,14 +13,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6accd11e33c0556fdd7596b2790f4787dce7ae1
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903481"
 ---
 # <a name="application-domains"></a>アプリケーション ドメイン
 
@@ -46,7 +45,7 @@ ms.locfileid: "64607908"
 - プロセス全体を停止せずに、個々のアプリケーションを停止できます。 アプリケーション ドメインを使用すると、1 つのアプリケーション内で実行されているコードをアンロードできます。  
   
     > [!NOTE]
-    >  個々のアセンブリや型はアンロードできません。 アンロードできるのはドメイン全体だけです。  
+    > 個々のアセンブリや型はアンロードできません。 アンロードできるのはドメイン全体だけです。  
   
 - 1 つのアプリケーションで実行されているコードは、ほかのアプリケーションのコードやリソースに直接アクセスできません。 共通言語ランタイムでは、異なるアプリケーション ドメインにあるオブジェクト間での直接呼び出しを禁止することで分離を実現しています。 ドメイン間で渡されるオブジェクトは、コピーされるか、またはプロキシ経由でアクセスされます。 オブジェクトがコピーされる場合、オブジェクトの呼び出しはローカル呼び出しです。 つまり、呼び出し元と参照先オブジェクトの両方が、同じアプリケーション ドメイン内にあります。 オブジェクトがプロキシ経由でアクセスされる場合は、オブジェクトの呼び出しはリモート呼び出しです。 この場合は、呼び出し元と参照先オブジェクトが別のアプリケーション ドメイン内にあります。 ドメイン間呼び出しでは、2 つのプロセス間や 2 台のコンピューター間での呼び出しと同じリモート呼び出しインフラストラクチャが使用されます。 そのため、メソッドの呼び出しが正しく JIT コンパイルされるように、参照先オブジェクトのメタデータが両方のアプリケーション ドメインから利用できることが必要です。 呼び出し元のドメインが呼び出し先オブジェクトのメタデータにアクセスできない場合、コンパイルは <xref:System.IO.FileNotFoundException> という例外が発生して失敗する可能性があります。 詳細については、「 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))」を参照してください。 ドメイン間でオブジェクトにアクセスする方法は、アクセス対象のオブジェクトによって決まります。 詳細については、「<xref:System.MarshalByRefObject?displayProperty=nameWithType>」を参照してください。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "64607908"
   
 - アセンブリがドメインに中立として読み込まれない場合は、そのアセンブリが読み込まれる各アプリケーション ドメインで、そのアセンブリを JIT でコンパイルする必要があります。 ただし、アセンブリが読み込まれているアプリケーション ドメインをすべてアンロードすることで、プロセスからアセンブリをアンロードできます。  
   
- ランタイム ホストは、ランタイムをプロセスに読み込むときに、アセンブリをドメインに中立なアセンブリとして読み込むかどうかを決定します。 マネージド アプリケーションの場合は、<xref:System.LoaderOptimizationAttribute> 属性をプロセスのエントリ ポイント メソッドに適用し、関連付けられた <xref:System.LoaderOptimization> 列挙体から値を指定します。 共通言語ランタイムをホストするアンマネージ アプリケーションの場合は、[CorBindToRuntimeEx 関数](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)メソッドを呼び出すときに適切なフラグを指定します。  
+ ランタイム ホストは、ランタイムをプロセスに読み込むときに、アセンブリをドメインに中立なアセンブリとして読み込むかどうかを決定します。 マネージド アプリケーションの場合は、<xref:System.LoaderOptimizationAttribute> 属性をプロセスのエントリ ポイント メソッドに適用し、関連付けられた <xref:System.LoaderOptimization> 列挙体から値を指定します。 共通言語ランタイムをホストするアンマネージ アプリケーションの場合は、[CorBindToRuntimeEx 関数](../unmanaged-api/hosting/corbindtoruntimeex-function.md)メソッドを呼び出すときに適切なフラグを指定します。  
   
  アセンブリをドメインに中立として読み込むかどうかに関して、次の 3 つのオプションがあります。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "64607908"
   
  <xref:System.Reflection.Assembly.LoadFrom%2A> クラスの <xref:System.Reflection.Assembly> メソッドを使用して読み込み元を指定して読み込まれたアセンブリ、またはバイト配列を指定する <xref:System.Reflection.Assembly.Load%2A> メソッドのオーバーロードを使用してイメージから読み込まれたアセンブリについては、JIT コンパイル コードを共有できません。  
   
- [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用してネイティブ コードにコンパイルされたアセンブリは、プロセスに最初に読み込まれるときにドメインに中立として読み込まれていれば、アプリケーション ドメイン間で共有できます。  
+ [Ngen.exe (ネイティブ イメージ ジェネレーター)](../tools/ngen-exe-native-image-generator.md) を使用してネイティブ コードにコンパイルされたアセンブリは、プロセスに最初に読み込まれるときにドメインに中立として読み込まれていれば、アプリケーション ドメイン間で共有できます。  
   
  アプリケーションのエントリ ポイントを含むアセンブリの JIT コンパイル コードは、そのすべての依存関係を共有できる場合にだけ共有されます。  
   
@@ -118,21 +117,21 @@ ms.locfileid: "64607908"
 |<xref:System.AppDomain.Unload%2A>|ドメインを正常にシャットダウンします。 アプリケーション ドメインは、ドメイン内で実行されているすべてのスレッドが停止するか、またはドメイン内に存在しなくなるまで、アンロードされません。|  
   
 > [!NOTE]
->  共通言語ランタイムはグローバル メソッドのシリアル化をサポートしないため、デリゲートを使用して他のアプリケーション ドメインでグローバル メソッドを実行できません。  
+> 共通言語ランタイムはグローバル メソッドのシリアル化をサポートしないため、デリゲートを使用して他のアプリケーション ドメインでグローバル メソッドを実行できません。  
   
  共通言語ランタイムの仕様、「Hosting Interfaces」で説明されているアンマネージ インターフェイスも、アプリケーション ドメインへのアクセスを提供します。 ランタイム ホストは、アンマネージ コードのインターフェイスを使用して、プロセス内にアプリケーション ドメインを作成し、そのドメインにアクセスできます。  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 環境変数
+## <a name="the-complus_loaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 環境変数
 
  実行可能アプリケーションの既定のローダーの最適化ポリシーを設定する環境変数。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```env  
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>Remarks
 
  一般的なアプリケーションでは、アプリケーション ドメインに複数のアセンブリが読み込まれてから、それに含まれるコードが実行されます。  
   
@@ -145,13 +144,13 @@ COMPLUS_LoaderOptimization = 1
  COMPLUS_LoaderOptimization 環境フラグを 1 に設定すると、ランタイム ホストは強制的にすべてのアセンブリを SingleDomain と呼ばれるドメイン中立でない方法で読み込みます。 SingleDomain では、常にドメインに中立として読み込まれる Mscorlib を除き、どのアセンブリもドメインに中立として読み込まれません。 この設定は、ホストがプロセス内で 1 つのアプリケーションだけを実行する場合に一般的に使用されるため、シングル ドメインと呼ばれます。  
   
 > [!CAUTION]
->  COMPLUS_LoaderOptimization 環境フラグは診断およびテストのシナリオで使用するように設計されています。 このフラグをオンにすることにより、速度の大幅な低下と使用メモリの増大が発生する場合があります。  
+> COMPLUS_LoaderOptimization 環境フラグは診断およびテストのシナリオで使用するように設計されています。 このフラグをオンにすることにより、速度の大幅な低下と使用メモリの増大が発生する場合があります。  
   
 ### <a name="code-example"></a>コード例
 
  環境の HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN キーの複数文字列値に `COMPLUS_LoaderOptimization=1` を追加することにより、強制的にすべてのアセンブリを IISADMIN サービスにドメイン中立として読み込まないようにできます。  
   
-```  
+```env  
 Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN  
 Name = Environment  
 Type = REG_MULTI_SZ  

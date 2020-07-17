@@ -1,27 +1,27 @@
 ---
-title: 連結演算子 (Visual Basic)
+title: 連結演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: f22a50fc26108d879d1dcdcce02078b5c41aad4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: cd288450b0e23bf49c4db2c04008431fd1b8f1be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778574"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371545"
 ---
 # <a name="concatenation-operators-visual-basic"></a>連結演算子 (Visual Basic)
-Visual Basic で定義されている連結演算子を次に示します。  
+次に示すのは、Visual Basic で定義されている連結演算子です。  
   
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [& 演算子](concatenation-operator.md)  
   
- [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [+ 演算子](addition-operator.md)  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic の連結演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [Visual Basic の連結演算子](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

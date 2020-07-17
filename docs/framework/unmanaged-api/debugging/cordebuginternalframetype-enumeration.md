@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739860"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795834"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 列挙型
-スタック フレームの型を示します。 この列挙体を使って、 [icordebuginternalframe::getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)メソッド。  
+スタック フレームの型を示します。 この列挙体は、 [GetFrameType](icordebuginternalframe-getframetype-method.md)メソッドによって使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,27 +47,27 @@ typedef enum CorDebugInternalFrameType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|null 値。 `ICorDebugInternalFrame::GetFrameType`メソッドがこの値を返すことはありません。|  
-|`STUBFRAME_M2U`|マネージとアンマネージのスタブ フレーム。|  
-|`STUBFRAME_U2M`|スタブのアンマネージからマネージ フレームでは。|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|アプリケーション ドメイン間で遷移します。|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|軽量なメソッド呼び出し。|  
+|`STUBFRAME_NONE`|null 値です。 メソッド`ICorDebugInternalFrame::GetFrameType`は、この値を返しません。|  
+|`STUBFRAME_M2U`|アンマネージスタブフレーム。|  
+|`STUBFRAME_U2M`|アンマネージスタブフレーム。|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|アプリケーションドメイン間の移行。|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|ライトウェイトメソッド呼び出し。|  
 |`STUBFRAME_FUNC_EVAL`|関数の評価の開始。|  
-|`STUBFRAME_INTERNALCALL`|共通言語ランタイムの内部呼び出し。|  
+|`STUBFRAME_INTERNALCALL`|共通言語ランタイムへの内部呼び出し。|  
 |`STUBFRAME_CLASS_INIT`|クラスの初期化の開始。|  
 |`STUBFRAME_EXCEPTION`|スローされる例外。|  
-|`STUBFRAME_SECURITY`|コード アクセス セキュリティのために使用するフレーム。|  
-|`STUBFRAME_JIT_COMPILATION`|ランタイムは、メソッドを JIT コンパイルです。|  
+|`STUBFRAME_SECURITY`|コードアクセスセキュリティに使用されるフレーム。|  
+|`STUBFRAME_JIT_COMPILATION`|ランタイムは、メソッドを JIT コンパイルしています。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)

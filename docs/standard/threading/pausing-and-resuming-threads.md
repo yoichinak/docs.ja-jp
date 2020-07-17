@@ -1,5 +1,6 @@
 ---
 title: スレッドの一時中断および中断
+description: .NET でスレッドを一時中断および中断する方法について説明します。 Thread.Sleep や Thread.Interrupt のようなメソッドや、ThreadInterruptedException などの例外を使用する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +11,16 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644918"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769120"
 ---
 # <a name="pausing-and-interrupting-threads"></a>スレッドの一時中断および中断
 
-スレッドの活動を同期する最も一般的な方法は、スレッドのブロックと解放を行うか、コード領域またはオブジェクトをロックすることです。 ロックとブロックのしくみの詳細については、「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。  
+スレッドの活動を同期する最も一般的な方法は、スレッドのブロックと解放を行うか、コード領域またはオブジェクトをロックすることです。 ロックとブロックのしくみの詳細については、「[同期プリミティブの概要](overview-of-synchronization-primitives.md)」を参照してください。  
   
  また、スレッドそのものをスリープ状態にすることもできます。 スレッドがブロックされているかまたはスリープ状態の場合は、<xref:System.Threading.ThreadInterruptedException> を使用して待機状態を解除できます。  
   
@@ -41,19 +40,19 @@ ms.locfileid: "64644918"
  待機中のスレッドを中断するには、ブロックされているスレッドに対して <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> メソッドを呼び出して <xref:System.Threading.ThreadInterruptedException> をスローさせます。これにより、スレッドは中断され、ブロックしている呼び出しから抜け出します。 スレッドは、<xref:System.Threading.ThreadInterruptedException> をキャッチし、操作を継続するために適切な処理を行う必要があります。 スレッドがこの例外を無視した場合は、ランタイムがこの例外をキャッチし、そのスレッドを停止します。  
   
 > [!NOTE]
->  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> が呼び出されたときに対象となるスレッドがブロックされていない場合、スレッドはブロックされるまで中断されません。 スレッドがまったくブロックされない場合は、中断されることなく完了することがあります。  
+> <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> が呼び出されたときに対象となるスレッドがブロックされていない場合、スレッドはブロックされるまで中断されません。 スレッドがまったくブロックされない場合は、中断されることなく完了することがあります。  
   
  待機がマネージド待機である場合、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はどちらもすぐにスレッドを起動します。 待機がアンマネージ待機の場合 (プラットフォームが Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 関数を呼び出した場合など)、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はどちらも、スレッドがマネージド コードに戻るか、またはマネージド コードを呼び出すまで、そのスレッドを制御できません。 マネージド コードの動作は次のとおりです。  
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによって起動先のスレッドで <xref:System.Threading.ThreadInterruptedException> がスローされます。  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによってスレッドで <xref:System.Threading.ThreadAbortException> がスローされます。 詳細については、「[スレッドの破棄](../../../docs/standard/threading/destroying-threads.md)」を参照してください。  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによってスレッドで <xref:System.Threading.ThreadAbortException> がスローされます。 詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
-- [スレッド化](../../../docs/standard/threading/index.md)
-- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)
-- [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [スレッド化](index.md)
+- [スレッドの使用とスレッド処理](using-threads-and-threading.md)
+- [同期プリミティブの概要](overview-of-synchronization-primitives.md)

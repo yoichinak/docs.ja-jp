@@ -1,5 +1,6 @@
 ---
 title: '方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する'
+description: 登録を必要としないアクティベーション用の .NET ベースの COM コンポーネントを構成します。 セットアップには、Win32 スタイルのアプリケーション マニフェストと .NET コンポーネント マニフェストが必要です。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,14 +9,11 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622199"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
@@ -26,7 +24,7 @@ ms.locfileid: "64625447"
   
  このトピックでは、アプリケーション マニフェストをアプリケーションに関連付ける方法、コンポーネント マニフェストをコンポーネントに関連付ける方法、およびコンポーネント マニフェストをアセンブリに埋め込む方法について説明します。  
   
-### <a name="to-create-an-application-manifest"></a>アプリケーション マニフェストを作成するには  
+## <a name="create-an-application-manifest"></a>アプリケーション マニフェストを作成する  
   
 1. XML エディターを使用して、1 つ以上のマネージド コンポーネントと相互運用する COM アプリケーションによって所有されるアプリケーション マニフェストを作成または編集します。  
   
@@ -34,7 +32,8 @@ ms.locfileid: "64625447"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      マニフェストの要素とその属性については、「[Application Manifests](/windows/desktop/SbsCs/application-manifests)」(アプリケーション マニフェスト) をご覧ください。  
@@ -44,11 +43,12 @@ ms.locfileid: "64625447"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
-      />  
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
+      />
+    </assembly>  
     ```  
   
 4. 依存アセンブリを指定します。 `myComApp` が `myManagedComp` に依存する例を次に示します。  
@@ -56,18 +56,18 @@ ms.locfileid: "64625447"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -77,9 +77,9 @@ ms.locfileid: "64625447"
   
 5. マニフェスト ファイルに名前を付けて保存します。 アプリケーション マニフェストの名前は、アセンブリ実行可能ファイルの名前に拡張子 .manifest が付いたものです。 たとえば、myComApp.exe のアプリケーション マニフェスト ファイル名は myComApp.exe.manifest です。  
   
- アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」(side-by-side アセンブリについて) をご覧ください。  
+アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[side-by-side アセンブリについて](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」をご覧ください。  
   
-#### <a name="to-create-a-component-manifest"></a>コンポーネント マニフェストを作成するには  
+## <a name="create-a-component-manifest"></a>コンポーネント マニフェストを作成する  
   
 1. XML エディターを使用して、マネージド アセンブリを記述するコンポーネント マニフェストを作成します。  
   
@@ -87,7 +87,8 @@ ms.locfileid: "64625447"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. ファイルの所有者を指定します。 アプリケーション マニフェスト ファイル内の `<assemblyIdentity>` 要素の `<dependentAssembly>` 要素は、コンポーネント マニフェスト内の要素と一致している必要があります。 次の例では、`myManagedComp` バージョン 1.2.3.4 がマニフェスト ファイルを所有しています。  
@@ -100,7 +101,8 @@ ms.locfileid: "64625447"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. アセンブリ内の各クラスを指定します。 マネージド アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
@@ -124,7 +126,7 @@ ms.locfileid: "64625447"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -164,11 +166,9 @@ ms.locfileid: "64625447"
   
      Rc.exe は `myresource.res` リソース ファイルを生成します。  
   
-3. もう一度アセンブリのソース ファイルをコンパイルし、**/win32res** オプションを使用してリソース ファイルを指定します。  
+3. もう一度アセンブリのソース ファイルをコンパイルし、 **/win32res** オプションを使用してリソース ファイルを指定します。  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
      ここでも、`myresource.res` は埋め込むリソースを含むリソース ファイルの名前です。  
   

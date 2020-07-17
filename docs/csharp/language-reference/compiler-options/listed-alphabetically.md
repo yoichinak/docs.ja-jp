@@ -1,18 +1,18 @@
 ---
 title: アルファベット順の C# コンパイラ オプションの一覧
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - compiler options [C#], listed alphabetically
 - C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58037701"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446940"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -29,7 +29,7 @@ ms.locfileid: "58037701"
 |[-baseaddress](baseaddress-compiler-option.md)|ビルドするライブラリのベース アドレスを指定します。|
 |[-bugreport](bugreport-compiler-option.md)|"障害報告" ファイルを作成します。 -errorreport:prompt または -errorreport:send と組み合わせて使用した場合、このファイルがクラッシュ情報と共に送信されます。|
 |[/checked](checked-compiler-option.md)|オーバーフロー チェックを生成するようコンパイラに指示します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。 |
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA256 (既定) または SHA1 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。 |
 |[-codepage](codepage-compiler-option.md)|ソース ファイルを開くときに使用するコードページを指定します。|
 |[-debug](debug-compiler-option.md)|デバッグ情報を生成します。|
 |[-define](define-compiler-option.md)|条件付きコンパイル シンボルを定義します。|
@@ -60,6 +60,7 @@ ms.locfileid: "58037701"
 |[-nostdlib](nostdlib-compiler-option.md)|標準ライブラリ (mscorlib.dll) を参照しないようコンパイラに指示します。|
 |[-nowarn](nowarn-compiler-option.md)|特定の警告メッセージを無効にします。|
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|アプリケーション マニフェストを実行可能ファイルに埋め込まないようコンパイラに指定します。|
+|[-nullable](nullable-compiler-option.md)|Null 許容コンテキスト オプションを指定します。|
 |[-optimize](optimize-compiler-option.md)|最適化を有効または無効にします。|
 |[-out](out-compiler-option.md)|出力ファイル名を指定します (既定では、メイン クラスまたは最初のファイルの基本名)。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
@@ -77,7 +78,7 @@ ms.locfileid: "58037701"
 |-ruleset:\<file>|特定の診断を無効にするルールセット ファイルを指定します。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|実行可能ファイルが使用できるサブシステムの最低限のバージョンを指定します。|
 |[-target](target-compiler-option.md)|6 つのオプション ([-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)) のいずれかを使用して、出力ファイルの形式を指定します。|
-|[/unsafe](unsafe-compiler-option.md)|[アンセーフ](../../../csharp/language-reference/keywords/unsafe.md) コードを許可します。|
+|[/unsafe](unsafe-compiler-option.md)|[アンセーフ](../keywords/unsafe.md) コードを許可します。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードでコンパイラのメッセージを出力します。|
 |-version|コンパイラのバージョン番号を表示して終了します。|
 |[/warn](warn-compiler-option.md)|警告レベル (0 ～ 4) を設定します。|
@@ -90,5 +91,5 @@ ms.locfileid: "58037701"
 
 - [C# コンパイラ オプション](index.md)
 - [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)
-- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio のコマンドラインのための環境変数を設定する方法](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

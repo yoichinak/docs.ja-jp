@@ -1,5 +1,5 @@
 ---
-title: '方法: 変数 (Visual Basic) の可用性を制御します。'
+title: '方法: 変数の可用性を制御する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels, declared elements
@@ -11,71 +11,71 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 419f3eed30a5d4b35bcb9dde5242b9092ee9cb79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 0bfa7fa2bdac4746827884c1dad62734c549a48e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610500"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357388"
 ---
-# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) の可用性を制御します。
-指定することで、変数の可用性を制御するその*アクセス レベル*します。 どのようなコードは、変数に対する読み取りまたは書き込み権限を持つアクセス レベルを決定します。  
+# <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数の可用性を制御する (Visual Basic)
+変数の可用性を制御するには、その*アクセス レベル*を指定します。 アクセス レベルによって、変数への読み取りまたは書き込みのアクセス許可を持つコードが決まります。  
   
-- *メンバー変数*(モジュール レベルで、プロシージャの外に定義された) 既定でパブリック アクセスは、表示できるすべてのコードがアクセスできることを意味します。 これは、アクセス修飾子を指定することで変更できます。  
+- *メンバー変数* (モジュール レベルのプロシージャの外部で定義される) は、既定でパブリック アクセスになります。これは、それらを参照できるすべてのコードで、それらにアクセスできることを意味します。 これを変更するには、アクセス修飾子を指定します。  
   
-- *ローカル変数*(プロシージャの内部で定義されている)、プロシージャ内のコードだけがアクセスできますが、パブリック アクセスがあるとします。 ローカル変数のアクセス レベルを変更することはできませんが、それを含むプロシージャのアクセス レベルを変更できます。  
+- *ローカル変数* (プロシージャ内に定義) は、名目上パブリック アクセス権を持ちますが、それらのプロシージャ内のコードだけがそれらにアクセスできます。 ローカル変数のアクセス レベルを変更することはできませんが、それを含むプロシージャのアクセス レベルを変更することはできます。  
   
- 詳細については、[ Visual Basic のアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
+ 詳しくは、「[Visual Basic でのアクセス レベル](access-levels.md)」を参照してください。  
   
-## <a name="private-and-public-access"></a>プライベートおよびパブリックのアクセス  
+## <a name="private-and-public-access"></a>プライベート アクセスとパブリック アクセス  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>変数をそのモジュール、クラスまたは構造内からのみアクセスできるようにするには  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>変数をそのモジュール、クラス、または構造体内からのみアクセスできるようにするには  
   
-1. 場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)モジュール、クラス、または構造体の内部では、プロシージャの外部の変数。  
+1. モジュール、クラス、または構造体の内部で、ただしプロシージャの外部に、変数の [Dim ステートメント](../../../language-reference/statements/dim-statement.md)を配置します。  
   
-2. 含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。  
+2. `Dim` ステートメントに [Private](../../../language-reference/modifiers/private.md) キーワードを含めます。  
   
-     読み取りまたはからではなくが、モジュール、クラス、または構造内で任意の場所から変数への書き込みができる外です。  
+     変数の読み取りや書き込みは、モジュール、クラス、または構造体内のどこからでも行うことができますが、その外部から行うことはできません。  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>変数を参照できる任意のコードからアクセスできるようにするには  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>変数を参照できるすべてのコードから変数にアクセスできるようにするには  
   
-1. メンバー変数では、配置、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. メンバー変数の場合、変数の `Dim` ステートメントをモジュール、クラス、または構造体の内部で、ただしプロシージャの外部に配置します。  
   
-2. 含める、[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。  
+2. `Dim` ステートメントに [Public](../../../language-reference/modifiers/public.md) キーワードを含めます。  
   
-     読み取りまたはアセンブリと同時に使用する任意のコードから、変数に書き込むことができます。  
+     アセンブリと相互運用するすべてのコードから変数の読み取りや書き込みができます。  
   
- - または -  
+ \- または -  
   
-1. ローカル変数では、配置、`Dim`プロシージャ内にある変数のステートメント。  
+1. ローカル変数の場合は、プロシージャ内に変数の `Dim` ステートメントを配置します。  
   
-2. 含めないでください、`Public`キーワード、`Dim`ステートメント。  
+2. `Dim` ステートメントには `Public` キーワードを含めないでください。  
   
-     読み取りまたはからは、プロシージャ内で任意の場所から変数への書き込みができる外です。  
+     変数の読み取りや書き込みは、プロシージャ内のどこからでも行うことができますが、その外部から行うことはできません。  
   
-## <a name="protected-and-friend-access"></a>保護されているとフレンド アクセス  
- 変数をクラスおよび派生クラス、またはそのアセンブリへのアクセス レベルを制限することができます。 同じアセンブリ内の他の場所または任意の派生クラスでは、コードからアクセスを許可するこれらの制限の和集合を指定することもできます。 結合することでこの和集合を指定する、`Protected`と`Friend`同じ宣言内のキーワード。  
+## <a name="protected-and-friend-access"></a>Protected アクセスと Friend アクセス  
+ 変数のアクセス レベルは、そのクラス、任意の派生クラス、またはそのアセンブリに制限できます。 また、これらの制限の和集合を指定することもできます。これにより、任意の派生クラスまたは同じアセンブリ内の他の任意の場所のコードからアクセスできるようになります。 この和集合を指定するには、同じ宣言で `Protected` キーワードと `Friend` キーワードを組み合わせます。  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>変数をそのクラスと派生クラス内からのみアクセスできるようにするには  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>そのクラスと任意の派生クラス内からのみ変数にアクセスできるようにするには  
   
-1. 場所、`Dim`変数、クラス内では、プロシージャの外側のステートメント。  
+1. 変数の `Dim` ステートメントをクラス内、ただしプロシージャの外部に配置します。  
   
-2. 含める、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)キーワード、`Dim`ステートメント。  
+2. `Dim` ステートメントに [Protected](../../../language-reference/modifiers/protected.md) キーワードを含めます。  
   
-     読み取りまたはからではなくが、それから派生したあらゆるクラス内からだけでなく、クラス内で任意の場所から変数への書き込みができる派生チェーン内のクラス外です。  
+     変数の読み取りや書き込みは、クラス内のどこからでも、また、それから派生した任意のクラス内から行うことができますが、派生チェーン内のクラスの外部から行うことはできません。  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>変数を同じアセンブリ内からのみアクセスできるようにするには  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>同じアセンブリ内からのみ変数にアクセスできるようにするには  
   
-1. 場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. モジュール、クラス、または構造体の内部で、ただしプロシージャの外部に、変数の `Dim` ステートメントを配置します。  
   
-2. 含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)キーワード、`Dim`ステートメント。  
+2. `Dim` ステートメントに [Friend](../../../language-reference/modifiers/friend.md) キーワードを含めます。  
   
-     読み取りまたは、モジュール、クラス、または構造内で任意の場所だけでなく、コードからは、同じアセンブリ内から変数への書き込みができるアセンブリの外側です。  
+     変数の読み取りや書き込みは、モジュール、クラス、または構造体内のどこからでも、また同じアセンブリ内の任意のコードから行うことができますが、アセンブリの外部から行うことはできません。  
   
 ## <a name="example"></a>例  
- 次の例では、変数の宣言`Public`、 `Protected`、 `Friend`、 `Protected Friend`、および`Private`アクセス レベル。 その場合、`Dim`ステートメントが、アクセス レベルを指定しますを含める必要はありません、`Dim`キーワード。  
+ 次の例は、`Public`、`Protected`、`Friend`、`Protected Friend`、および `Private` アクセス レベルによる変数の宣言を示しています。 `Dim` ステートメントでアクセス レベルを指定する場合は、`Dim` キーワードを含める必要はありません。  
   
-```  
+```vb  
 Public Class classForEverybody  
 Protected Class classForMyHeirs  
 Friend stringForThisProject As String  
@@ -84,13 +84,13 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 制限の厳しいアクセス レベルで変数をその悪意のあるコードが不正に、小さい方の可能性を使用して、します。  
+ 変数のアクセス レベルの制限を強めるほど、悪意のあるコードによってそれが不正使用される可能性が低くなります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
-- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Private](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Visual Basic でのアクセス レベル](access-levels.md)
+- [Dim ステートメント](../../../language-reference/statements/dim-statement.md)
+- [Public](../../../language-reference/modifiers/public.md)
+- [Protected](../../../language-reference/modifiers/protected.md)
+- [Friend](../../../language-reference/modifiers/friend.md)
+- [Private](../../../language-reference/modifiers/private.md)

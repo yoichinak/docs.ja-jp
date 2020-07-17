@@ -1,17 +1,15 @@
 ---
-title: Icordebugmemorybuffer::getstartaddress メソッド
+title: ICorDebugMemoryBuffer::GetStartAddress メソッド
 ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9208d07b697c3bb8a99e13582eda70dcb8dd826b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 47369c744ee42fb03857a3e69063a04e4f509d0d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752774"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212348"
 ---
-# <a name="icordebugmemorybuffergetstartaddress-method"></a>Icordebugmemorybuffer::getstartaddress メソッド
+# <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer::GetStartAddress メソッド
 メモリ バッファーの開始アドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,18 +27,18 @@ HRESULT GetStartAddress(
 ## <a name="remarks"></a>Remarks  
   
 > [!WARNING]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugMemoryBuffer インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer インターフェイス](icordebugmemorybuffer-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

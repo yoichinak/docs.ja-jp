@@ -1,17 +1,16 @@
 ---
 title: ジャグ配列 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200677"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75705705"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>ジャグ配列 (C# プログラミング ガイド)
 
@@ -45,7 +44,7 @@ ms.locfileid: "57200677"
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- ジャグ配列と多次元配列を混在させることができます。 異なるサイズの 3 つの 2 次元の配列要素を含む 1 次元のジャグ配列の宣言と初期化を次に示します。 2 次元配列の詳細については、「[多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)」を参照してください。  
+ ジャグ配列と多次元配列を混在させることができます。 異なるサイズの 3 つの 2 次元の配列要素を含む 1 次元のジャグ配列の宣言と初期化を次に示します。 2 次元配列の詳細については、「[多次元配列](./multidimensional-arrays.md)」を参照してください。  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -65,10 +64,10 @@ ms.locfileid: "57200677"
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Array>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [配列](../../../csharp/programming-guide/arrays/index.md)
-- [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [C# プログラミングガイド](../index.md)
+- [配列](./index.md)
+- [1 次元配列](./single-dimensional-arrays.md)
+- [多次元配列](./multidimensional-arrays.md)

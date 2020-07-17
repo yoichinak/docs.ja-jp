@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 3f48339539f08bbc1c2c15035741375bd9ade553
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879867"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784725"
 ---
 # <a name="datarow-deletion"></a>DataRow の削除
-2 つのメソッドを使用して削除できます、<xref:System.Data.DataRow>オブジェクトから、<xref:System.Data.DataTable>オブジェクト:**削除**のメソッド、<xref:System.Data.DataRowCollection>オブジェクト、および<xref:System.Data.DataRow.Delete%2A>のメソッド、 **DataRow**オブジェクト。 一方、<xref:System.Data.DataRowCollection.Remove%2A>メソッドの削除、 **DataRow**から、 **DataRowCollection**、<xref:System.Data.DataRow.Delete%2A>メソッドは、行の削除をマークするだけです。 実際の削除は、アプリケーションを呼び出すときに発生します。、 **AcceptChanges**メソッド。 <xref:System.Data.DataRow.Delete%2A> を使用すると、行を実際に削除する前に、削除対象としてどの行がマークされているかをプログラムによってチェックできます。 削除対象としてマークされている行の <xref:System.Data.DataRow.RowState%2A> プロパティは、<xref:System.Data.DataRow.Delete%2A> に設定されています。  
+<xref:System.Data.DataTable> オブジェクトから <xref:System.Data.DataRow> オブジェクトを削除するには、<xref:System.Data.DataRowCollection> オブジェクトの **Remove** メソッドと **DataRow** オブジェクトの <xref:System.Data.DataRow.Delete%2A> メソッドの、2 つのメソッドを使用できます。 <xref:System.Data.DataRowCollection.Remove%2A> メソッドでは **DataRowCollection** から **DataRow** が削除されるのに対し、<xref:System.Data.DataRow.Delete%2A> メソッドでは削除対象の行がマークされるだけです。 実際の削除は、アプリケーションで **AcceptChanges** メソッドを呼び出すと実行されます。 <xref:System.Data.DataRow.Delete%2A> を使用すると、行を実際に削除する前に、削除対象としてどの行がマークされているかをプログラムによってチェックできます。 削除対象としてマークされている行の <xref:System.Data.DataRow.RowState%2A> プロパティは、<xref:System.Data.DataRow.Delete%2A> に設定されています。  
   
  <xref:System.Data.DataRow.Delete%2A> オブジェクトを反復処理している間は、foreach ループで <xref:System.Data.DataRowCollection.Remove%2A> も <xref:System.Data.DataRowCollection> も呼び出すことはできません。 <xref:System.Data.DataRow.Delete%2A> または <xref:System.Data.DataRowCollection.Remove%2A> はコレクションの状態を変更します。  
   
- 使用する場合、<xref:System.Data.DataSet>または**DataTable**と組み合わせて、 **DataAdapter**とリレーショナル データ ソース、使用、**削除**のメソッド、 **DataRow**行を削除します。 **削除**メソッドとしての行をマークする**Deleted**で、**データセット**または**DataTable**は削除されません。 代わりに、 **DataAdapter**としてマークされている行を検出する**Deleted**が実行されます、 **DeleteCommand**メソッドは、データ ソースで行を削除します。 行のできますし、完全に削除するを使用して、 **AcceptChanges**メソッド。 使用する場合**削除**行を削除する、行は、テーブルから完全に削除されますが、 **DataAdapter**データ ソースの行は削除されません。  
+ **DataAdapter** およびリレーショナル データ ソースに関連して <xref:System.Data.DataSet> または **DataTable** を使用するときは、**DataRow** の **Delete** メソッドを使用して行を削除します。 **Delete** メソッドでは、**DataSet** または **DataTable** の行が **Deleted** としてマークされますが、その行は削除されません。 代わりに、**DataAdapter** で **Deleted** としてマークされた行が検出されたときに、**DeleteCommand** メソッドが実行されて、データ ソースの該当する行が削除されます。 その後、**AcceptChanges** メソッドを使用して、その行を永続的に削除できます。 **Remove** を使用して行を削除すると、行はテーブルから完全に削除されますが、**DataAdapter** ではデータ ソースの行は削除されません。  
   
- **削除**のメソッド、 **DataRowCollection**は、 **DataRow**を引数としてし、次の例に示すように、コレクションから削除します。  
+ 次の例で示すように、**DataRowCollection** の **Remove** メソッドに引数として **DataRow** を渡すと、その行がコレクションから削除されます。  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
@@ -29,7 +29,7 @@ workTable.Rows.Remove(workRow)
 workTable.Rows.Remove(workRow);  
 ```  
   
- これに対し、次の例に示しますを呼び出す方法、**削除**メソッドを**DataRow**を変更するその**RowState**に**Deleted**.  
+ これに対して、次の例では、**DataRow** で **Delete** メソッドを呼び出して、その **RowState** を **Deleted** に変更する方法を示します。  
   
 ```vb  
 workRow.Delete  
@@ -39,15 +39,15 @@ workRow.Delete
 workRow.Delete();  
 ```  
   
- 行は削除対象としてマークしを呼び出す場合、 **AcceptChanges**のメソッド、 **DataTable**オブジェクトから行を削除、 **DataTable**します。 呼び出す場合とは異なり、 **RejectChanges**、 **RowState**行としてマークされる前に戻ります**Deleted**します。  
+ 行を削除対象としてマークしてから **DataTable** オブジェクトの **AcceptChanges** メソッドを呼び出すと、その行が **DataTable** から削除されます。 これに対して、**RejectChanges** を呼び出すと、行の **RowState** はその行が **Deleted** としてマークされる前の状態に戻ります。  
   
 > [!NOTE]
->  場合、 **RowState**の**DataRow**は**Added**つまりが追加された直後に、テーブルとしてマークされているし、 **Deleted**はテーブルから削除します。  
+> **DataRow** の **RowState** が **Added** である場合、つまりテーブルに行が追加された直後の状態の場合に、その行を **Deleted** としてマークすると、その行はテーブルから削除されます。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
+- [ADO.NET の概要](../ado-net-overview.md)

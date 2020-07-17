@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b44a16d143c1daea1ea6c36eb096ab9a937b272
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761202"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210047"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule メソッド
-共通言語ランタイム モジュール (DLL) がアンロードされたことをデバッガーに通知します。  
+共通言語ランタイムモジュール (DLL) がアンロードされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +36,24 @@ HRESULT UnloadModule (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]モジュールに含まれるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からモジュールを含んでいるアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pModule`  
- [in]モジュールを表す ICorDebugModule オブジェクトへのポインター。  
+ からモジュールを表す、のモジュールオブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- この呼び出しの後、モジュールを使用しない必要があります。  
+ この呼び出しの後にモジュールを使用することはできません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [LoadModule メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [LoadModule メソッド](icordebugmanagedcallback-loadmodule-method.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

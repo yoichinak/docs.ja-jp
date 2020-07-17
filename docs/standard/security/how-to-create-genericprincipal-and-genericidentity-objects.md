@@ -11,18 +11,16 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795162"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290864"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する
 
-使用することができます、<xref:System.Security.Principal.GenericIdentity>クラスと組み合わせて、 <xref:System.Security.Principal.GenericPrincipal> Windows ドメインの独立した存在する承認スキームを作成するクラス。
+クラスをクラスと共に使用して、 <xref:System.Security.Principal.GenericIdentity> <xref:System.Security.Principal.GenericPrincipal> Windows ドメインに依存しない認証スキームを作成することができます。
 
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal オブジェクトを作成するには
 
@@ -48,7 +46,7 @@ ms.locfileid: "61795162"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 次のコードを使用して、プリンシパルを現在のスレッドに結合します。 これは、プリンシパルが何回かを検証する必要がある、アプリケーションでは、実行中の他のコードで検証する必要がある必要がありますまたはで検証する必要がある必要があります、<xref:System.Security.Permissions.PrincipalPermission>オブジェクト。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)」を参照してください。
+3. 次のコードを使用して、プリンシパルを現在のスレッドに結合します。 これは、プリンシパルを複数回検証する必要がある場合、アプリケーションで実行されている他のコードによって検証する必要がある場合、またはオブジェクトによって検証する必要がある場合に役立ち <xref:System.Security.Permissions.PrincipalPermission> ます。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](replacing-a-principal-object.md)」を参照してください。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -63,7 +61,6 @@ ms.locfileid: "61795162"
 次のコード例では、**GenericPrincipal** と **GenericIdentity** のインスタンスを作成する方法を示します。 このコードは、各オブジェクトの値をコンソールに表示します。
 
 ```vb
-Imports System
 Imports System.Security.Principal
 Imports System.Threading
 
@@ -136,7 +133,7 @@ public class Class1
 
 実行されると、アプリケーションの出力は次のようになります。
 
-```
+```console
 The Name is: MyIdentity
 The IsAuthenticated is: True
 Is this a Manager? True
@@ -147,5 +144,5 @@ Is this a Manager? True
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)
-- [プリンシパル オブジェクトと ID オブジェクト](../../../docs/standard/security/principal-and-identity-objects.md)
+- [プリンシパル オブジェクトの置き換え](replacing-a-principal-object.md)
+- [プリンシパル オブジェクトと ID オブジェクト](principal-and-identity-objects.md)

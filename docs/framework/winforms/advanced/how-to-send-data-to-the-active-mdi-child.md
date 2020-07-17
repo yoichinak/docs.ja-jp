@@ -1,5 +1,5 @@
 ---
-title: '方法: アクティブな MDI 子フォームにデータを送信する'
+title: '方法 : アクティブな MDI 子フォームにデータを送信する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 563be8494cb84dc74b45985d3ba74e4b6a07eb8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966916"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182492"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>方法: アクティブな MDI 子フォームにデータを送信する
-コンテキスト内で多くの場合、[マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)ユーザーが MDI アプリケーションに、クリップボードからデータを貼り付けるときなど、アクティブな子ウィンドウにデータを送信する必要があります。  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>方法 : アクティブな MDI 子フォームにデータを送信する
+多くの場合、マルチ[ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)のコンテキスト内では、ユーザーがクリップボードから MDI アプリケーションにデータを貼り付ける場合など、アクティブな子ウィンドウにデータを送信する必要があります。  
   
 > [!NOTE]
->  どの子ウィンドウがフォーカスを確認して、その内容をクリップボードに送信する方法については、次を参照してください。[アクティブな MDI 子を決定する](how-to-determine-the-active-mdi-child.md)します。  
+> フォーカスがある子ウィンドウの確認と、その内容のクリップボードへの送信については、「[アクティブな MDI 子ウィンドウの判別](how-to-determine-the-active-mdi-child.md)」を参照してください。  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>アクティブな MDI 子ウィンドウに、クリップボードからデータを送信するには  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>クリップボードからアクティブな MDI 子ウィンドウにデータを送信するには  
   
-1. メソッド内には、アクティブな子フォームのアクティブなコントロールをクリップボードにテキストをコピーします。  
+1. メソッド内で、クリップボードのテキストをアクティブな子フォームのアクティブなコントロールにコピーします。  
   
     > [!NOTE]
-    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  
+    > この例では、`Form1`<xref:System.Windows.Forms.RichTextBox>コントロールを含む 1 つ以上の MDI 子ウィンドウを持つ MDI 親フォーム ( ) があることを前提としています。 詳細については、「 [MDI 親フォームの作成](how-to-create-mdi-parent-forms.md)」を参照してください。  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -45,7 +45,7 @@ ms.locfileid: "61966916"
              If (Not theBox Is Nothing) Then  
                 ' Create a new instance of the DataObject interface.  
                 Dim data As IDataObject = Clipboard.GetDataObject()  
-                ' If the data is text, then set the text of the   
+                ' If the data is text, then set the text of the
                 ' RichTextBox to the text in the clipboard.  
                 If (data.GetDataPresent(DataFormats.Text)) Then  
                    theBox.SelectedText = data.GetData(DataFormats.Text).ToString()  
@@ -68,22 +68,22 @@ ms.locfileid: "61966916"
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
        {  
-          try   
+          try
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
              if (theBox != null)  
              {  
                 // Create a new instance of the DataObject interface.  
                 IDataObject data = Clipboard.GetDataObject();  
-                // If the data is text, then set the text of the   
+                // If the data is text, then set the text of the
                 // RichTextBox to the text in the clipboard.  
                 if (data.GetDataPresent(DataFormats.Text))  
                 {  
-                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();                 
+                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();
                 }  
              }  
           }  
-          catch   
+          catch
           {  
              MessageBox.Show("You need to select a RichTextBox.");  
           }  
@@ -94,7 +94,7 @@ ms.locfileid: "61966916"
 ## <a name="see-also"></a>関連項目
 
 - [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
-- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)
+- [方法 : MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)
+- [方法 : MDI 子フォームを作成する](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子フォームを特定する](how-to-determine-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)

@@ -1,9 +1,0 @@
-- name: Main() とコマンド ライン引数
-  href: index.md
-  items:
-    - name: コマンド ライン引数
-      href: command-line-arguments.md
-    - name: '方法: コマンド ライン引数を表示する'
-      href: how-to-display-command-line-arguments.md
-    - name: Main() の戻り値
-      href: main-return-values.md

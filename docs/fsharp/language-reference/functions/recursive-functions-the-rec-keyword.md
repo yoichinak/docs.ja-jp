@@ -2,16 +2,16 @@
 title: 再帰関数:Rec キーワード
 description: 再帰関数の定義に 'let' キーワードを使用して、F# の 'rec' キーワードが使用される方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 86eaf1c8a5566d8b9cbc4dcb72f945e2497e5439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7edaa7206b2109c7b1a405624b9b2330968f9c52
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645298"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630656"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数:Rec キーワード
 
-`rec`と共にキーワードが使用される、`let`再帰関数を定義するキーワード。
+キーワードは、再帰関数を定義`let`するためにキーワードと共に使用されます。 `rec`
 
 ## <a name="syntax"></a>構文
 
@@ -30,24 +30,24 @@ function2-body
 
 ## <a name="remarks"></a>Remarks
 
-再帰関数は、自身を呼び出す関数は、F# 言語で明示的に識別されます。 これにより、関数のスコープで定義されている識別子を使用可能なにします。
+再帰関数は、自身を呼び出す関数は、F# 言語で明示的に識別されます。 これにより、定義されている識別子が関数のスコープで使用できるようになります。
 
-次のコードは、再帰関数を計算する、 *n*<sup>th</sup>フィボナッチ数。
+次のコードは、 *n*<sup>番目</sup>のフィボナッチ数列を計算する再帰関数を示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 > [!NOTE]
-> 実際には、上記のようなコードは、事前に計算された値の再計算するため、メモリとプロセッサ時間の浪費になります。
+> 実際には、上記のコードのようなコードでは、以前に計算された値の再計算が関係するため、メモリとプロセッサ時間が無駄になります。
 
-メソッドは、暗黙的に型内で再帰追加する必要はありません、`rec`キーワード。 クラス内の let バインドは、暗黙的に再帰的ではできません。
+メソッドは、型の中で暗黙的に再帰的になります。`rec`キーワードを追加する必要はありません。 クラス内のバインディングは暗黙的に再帰的ではありません。
 
 ## <a name="mutually-recursive-functions"></a>相互再帰関数
 
-関数は、場合によって*相互再帰*呼び出しが、1 つの関数呼び出しを呼び出して、最初の呼び出しの数に別間に、円を描くことを意味します。 1 つで、このような関数をまとめて定義する必要があります`let`を使用したバインド、`and`それらをリンクするキーワード。
+場合によっては、関数が*相互に再帰的*であることを意味します。これは、呼び出しが円を形成することを意味します。この場合、1つ目の関数はを呼び出し、その間に任意の数の呼び出しを呼び出します。 このような関数は、1つ`let`のバインディングで定義し、 `and`キーワードを使用してそれらをリンクする必要があります。
 
-次の例は、2 つを相互には再帰関数。
+次の例は、2つの相互再帰関数を示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
 ## <a name="see-also"></a>関連項目
 

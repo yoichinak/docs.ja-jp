@@ -5,43 +5,43 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032956"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035629"
 ---
 # <a name="printing-how-to-topics"></a>印刷に関する「方法」トピック
-このセクションのトピックでは、印刷を使用する方法を示します、印刷システム管理機能が付属して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]と新しい[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]印刷パス。  
+このセクションのトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] に付属する印刷および印刷システム管理機能、および新しい XML Paper Specification (XPS) の印刷パスの使用方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [印刷ダイアログ ボックスを呼び出す](how-to-invoke-a-print-dialog.md)  
- XAML マークアップを宣言するための手順を[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]ダイアログ オブジェクトとする Windows Presentation Foundation (WPF) アプリケーション内からダイアログ ボックスを呼び出すコードを使用して印刷します。  
+ Microsoft Windows の印刷ダイアログ オブジェクトを宣言する XAML マークアップと、コードを使用して Windows Presentation Foundation (WPF) アプリケーション内からダイアログを呼び出す方法について説明します。  
   
  [プリンターを複製する](how-to-clone-a-printer.md)  
- 既存のとまったく同じプロパティを持つ 2 つ目の印刷キューをインストールする方法については、キューを印刷します。  
+ 既存の印刷キューとまったく同じプロパティを持つ 2 つ目の印刷キューをインストールする方法について説明します。  
   
  [問題のある印刷ジョブを診断する](how-to-diagnose-problematic-print-job.md)  
- 印刷キュー、および印刷ジョブのプロパティを使用して、印刷されないする印刷ジョブを診断するための手順です。  
+ 印刷キューと印刷ジョブのプロパティを使用して、印刷されていない印刷ジョブを診断する方法について説明します。  
   
  [現在、印刷ジョブが印刷可能であるかどうかを検出する](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
- ジョブを印刷する印刷キュー、および印刷ジョブのプロパティを使用してプログラムでどの時間帯を決定する手順です。  
+ 印刷キューと印刷ジョブのプロパティを使用して、ジョブを印刷する時刻をプログラムで決定する方法について説明します。  
   
  [印刷キューのサブセットを列挙する](how-to-enumerate-a-subset-of-print-queues.md)  
- 特定の特性を持つプリンターの一覧を生成するための手順です。  
+ 特定の特性を持つプリンターの一覧を生成する方法について説明します。  
   
  [リフレクションを使用せずに印刷システム オブジェクトのプロパティを取得する](how-to-get-print-system-object-properties-without-reflection.md)  
- 実行時に検出する方法については、システム オブジェクトのプロパティとその型を印刷します。  
+ 実行時に印刷システム オブジェクトのプロパティとその型を検出する方法について説明します。  
   
  [XPS ファイルをプログラムにより印刷する](how-to-programmatically-print-xps-files.md)  
- 迅速な印刷のための指示[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]を必要としないファイルを[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。  
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] を必要とせずに、XML Paper Specification (XPS) ファイルを迅速に印刷する方法について説明します。  
   
  [プリンターのステータスをリモート操作で調査する](how-to-remotely-survey-the-status-of-printers.md)  
- ユーティリティを作成する方法については、紙詰まりや他の問題が発生しているものを検出するプリンターを調査します。  
+ プリンターを調査し、紙詰まりやその他の問題が発生しているプリンターを検出するユーティリティを作成する方法について説明します。  
   
  [PrintTickets を検証およびマージする](how-to-validate-and-merge-printtickets.md)  
- 印刷チケットが有効であると、要求がプリンターでサポートされていないことを確認するための手順です。  
+ 印刷チケットが有効であり、プリンターでサポートされていないものを要求していないことを確認する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 

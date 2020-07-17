@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9777d8bb-4abc-4be8-aa7c-34f853eceb9c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d56785815105e2f4b06217d3375e2d1cfdf0494c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d04c9865d8272bf8d04080f6049ddfb1d4c643bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776913"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614579"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount メソッド
 ローカル変数の数を取得します。  
@@ -37,17 +35,17 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="parameters"></a>パラメーター  
  `mdMethodToken`  
- [in]メソッドのメタデータ トークン。  
+ からメソッドのメタデータトークン。  
   
  `pcLocals`  
- [out]ポインター、`ULONG32`ローカル変数の数を格納するために必要なバッファーの文字のサイズを受け取る。  
+ 入出力`ULONG32`ローカル変数の数を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate インターフェイス](isymunmanagedencupdate-interface.md)

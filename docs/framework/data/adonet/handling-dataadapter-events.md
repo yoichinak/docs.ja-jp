@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667068"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149545"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter のイベント処理
 ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデータに対して行われた変更に応答するときに使用できる 3 つのイベントを公開します。 `DataAdapter` のイベントを次の表に示します。  
@@ -28,7 +28,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデー
   
  `Status` プロパティを使用すると、操作中にエラーが発生したかどうかを確認したり、必要に応じて現在の行および結果行に対するアクションを制御したりできます。 イベントが発生すると、`Status` プロパティは `Continue` または `ErrorsOccurred` のいずれかになります。 次の表では、更新の後続のアクションを制御するために `Status` プロパティに設定できる値を示しています。  
   
-|状態|説明|  
+|Status|説明|  
 |------------|-----------------|  
 |`Continue`|更新操作を続行します。|  
 |`ErrorsOccurred`|更新操作を中止し、例外をスローします。|  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデー
   
  `ContinueUpdateOnError` プロパティを使用して更新行に関するエラーを処理することもできます。 `DataAdapter.ContinueUpdateOnError` を `true` に設定すると、行を更新した結果、例外がスローされようとしているときに、例外のテキストをその行の `RowError` 情報の中に格納し、例外をスローせずに処理を続行できます。 これにより、`Update` が完了した時点でエラーに応答できるようになります。これに対して `RowUpdated` イベントを使用すると、エラーが発生した時点でエラーに応答できます。  
   
- イベント ハンドラーを追加および削除する方法を次のコード サンプルに示します。 `RowUpdating` イベント ハンドラーは、削除されたすべてのレコードのログをタイムスタンプと共に記録します。 `RowUpdated`イベント ハンドラーの追加エラー情報を`RowError`内の行のプロパティ、 `DataSet`、例外を抑制および処理を続行 (の動作をミラーリング`ContinueUpdateOnError`  =  `true`)。  
+ イベント ハンドラーを追加および削除する方法を次のコード サンプルに示します。 `RowUpdating` イベント ハンドラーは、削除されたすべてのレコードのログをタイムスタンプと共に記録します。 `RowUpdated` イベント ハンドラーでは、`DataSet` の行の `RowError` プロパティにエラー情報を追加し、例外をスローせずに処理を続行します (`ContinueUpdateOnError` = `true` の場合と同等の動作です)。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataSet のイベント処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [DataTable イベントの処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [イベント](../../../../docs/standard/events/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [DataSet のイベント処理](./dataset-datatable-dataview/handling-dataset-events.md)
+- [DataTable イベントの処理](./dataset-datatable-dataview/handling-datatable-events.md)
+- [イベント](../../../standard/events/index.md)
+- [ADO.NET の概要](ado-net-overview.md)

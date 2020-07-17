@@ -1,17 +1,15 @@
 ---
-title: Icordebugsymbolprovider::getinstancefieldsymbols メソッド
+title: ICorDebugSymbolProvider::GetInstanceFieldSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 02ffabfc43861d3d295a0bd2ea09213b06b6868a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ecc61ed6cac73a519f33e00cbfbfecc20ac2ebe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771408"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379640"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Icordebugsymbolprovider::getinstancefieldsymbols メソッド
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider::GetInstanceFieldSymbols メソッド
 typespec シグネチャに対応するインスタンス フィールド シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,24 +38,24 @@ HRESULT GetInstanceFieldSymbols(
  [out] メソッドによって取得されたシンボル数へのポインター。  
   
  `pSymbols`  
- [out]ポインター、 [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)要求されたインスタンス フィールド シンボルを含む配列。  
+ 入出力要求されたインスタンスフィールドシンボルが格納されている、コード例の[シンボル](icordebugstaticfieldsymbol-interface.md)配列へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetStaticFieldSymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetStaticFieldSymbols メソッド](icordebugsymbolprovider-getstaticfieldsymbols-method.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

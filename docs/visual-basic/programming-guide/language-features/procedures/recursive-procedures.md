@@ -1,5 +1,5 @@
 ---
-title: 再帰プロシージャ (Visual Basic)
+title: 再帰プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,42 +10,44 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791847"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352552"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
-A*再帰*手順は、自分自身を呼び出します。 通常、これは Visual Basic コードを記述する最も効果的な方法ではありません。  
+
+"*再帰*" プロシージャとは、自身を呼び出すプロシージャです。 一般に、これは Visual Basic コードを記述する最も効果的な方法ではありません。  
   
- 次の手順では、元の引数の階乗を計算するのに再帰を使用します。  
+ 次のプロシージャでは、再帰を使用して元の引数の階乗を計算します。  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>再帰プロシージャに関する考慮事項  
- **制限条件**します。 再帰処理を終了するには少なくとも 1 つの条件をテストする再帰的な手順を設計する必要があり、妥当な数の再帰呼び出し内でこのような条件が満たされていないケースを処理することも必要があります。 失敗せずに満たすことが少なくとも 1 つの条件がない、プロシージャを実行する可能性が高く無限ループで実行します。  
-  
- **メモリ使用状況**。 アプリケーションが、ローカル変数の領域量が制限されています。 プロシージャが、それ自体を呼び出すたびに、ローカル変数の追加のコピーの領域を使用します。 最終的と、このプロセスが無期限に解決しない場合は、<xref:System.StackOverflowException>エラー。  
-  
- **効率**します。 ほとんどの場合に、再帰はループを置き換えることができます。 ループでは、引数の受け渡し、追加のストレージを初期化し、値を返すのオーバーヘッドはありません。 パフォーマンスは、再帰的な呼び出しなしの方があります。  
-  
- **相互再帰**します。 2 つの手順では、互いを呼び出す場合、パフォーマンスが大きく低下、または、無限ループでもを確認する場合があります。 このような設計は、1 つの再帰プロシージャと同じ問題を提示しますが、検出およびデバッグが困難になることができます。  
-  
- **かっこで囲んで呼び出す**します。 ときに、`Function`プロシージャを呼び出す再帰的に、引数リストがない場合でも、プロシージャ名、かっこを従う必要があります。 関数名を取得する場合は、関数の戻り値を表すとします。  
-  
- **テスト**します。 再帰プロシージャを記述する場合はいくつかの制限の条件を満たしているかどうかを確認する非常に慎重にテストする必要があります。 再帰の呼び出しが多すぎるため、メモリ不足が実行できないということを確認する必要があります。  
-  
+## <a name="considerations-with-recursive-procedures"></a>再帰プロシージャに関する考慮事項
+
+ **制限条件**。 再帰を終了できる条件を少なくとも 1 つはテストするように、再帰プロシージャを設計する必要があります。また、妥当な回数の再帰呼び出しでそのような条件が満たされない場合の処理も必要となります。 必ず満たすことができる条件が少なくとも 1 つはないと、プロシージャが無限ループで実行されるリスクが高くなります。
+
+ **メモリ使用状況**。 アプリケーションがローカル変数に使用できる領域は限られています。 プロシージャが自身を呼び出すたびに、ローカル変数のコピーが追加され、その領域が使用されます。 このプロセスが無期限に続行されると、最終的に <xref:System.StackOverflowException> エラーが発生します。
+
+ **効率**。 ほとんどの場合、再帰の代わりにループを使用できます。 ループには、引数を渡し、追加のストレージを初期化して、値を返すというオーバーヘッドはありません。 再帰呼び出しがない場合、パフォーマンスが大幅に向上します。
+
+ **相互再帰**。 2 つのプロシージャが相互に呼び出し合うと、パフォーマンスが大幅に低下したり、無限ループが発生したりする可能性があります。 このような設計では、単一の再帰プロシージャと同じ問題が発生しますが、検出とデバッグがより困難になることがあります。
+
+ **かっこを使用した呼び出し**。 `Function` プロシージャが自身を再帰的に呼び出すときには、引数リストがない場合でも、プロシージャ名の後にかっこを使用する必要があります。 そうしないと、関数名が関数の戻り値を表していると見なされます。
+
+ **テスト**。 再帰プロシージャを作成した場合は、慎重にテストして、何らかの制限条件を常に満たしていることを確認する必要があります。 また、再帰呼び出しが多すぎるためにメモリ不足にならないようにする必要があります。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.StackOverflowException>
-- [プロシージャ](./index.md)
-- [Sub プロシージャ](./sub-procedures.md)
-- [Function プロシージャ](./function-procedures.md)
-- [Property プロシージャ](./property-procedures.md)
-- [演算子プロシージャ](./operator-procedures.md)
-- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [プロシージャのオーバーロード](./procedure-overloading.md)
-- [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
-- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [手順](index.md)
+- [Sub プロシージャ](sub-procedures.md)
+- [Function プロシージャ](function-procedures.md)
+- [Property プロシージャ](property-procedures.md)
+- [演算子プロシージャ](operator-procedures.md)
+- [プロシージャのパラメーターと引数](procedure-parameters-and-arguments.md)
+- [プロシージャのオーバーロード](procedure-overloading.md)
+- [プロシージャのトラブルシューティング](troubleshooting-procedures.md)
+- [ループ構造](../control-flow/loop-structures.md)

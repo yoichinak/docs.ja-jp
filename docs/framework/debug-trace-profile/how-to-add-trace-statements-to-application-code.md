@@ -1,5 +1,6 @@
 ---
 title: '方法: アプリケーション コードにトレース ステートメントを追加する'
+description: .NET のアプリケーションコードにトレースステートメントを追加する方法について説明します。 トレースで最も頻繁に使用されるメソッドは、出力をリスナーに書き込むためのメソッドです。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +14,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754539"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415889"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>方法: アプリケーション コードにトレース ステートメントを追加する
-トレース用に最もよく使用される方法は、リスナーに出力を書き込む方法を示します。**書き込み**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、**アサート**、および**失敗**します。 これらのメソッドは、2 つのカテゴリに分類できます。**書き込み**、 **WriteLine**、および**失敗**一方に出力を無条件に生成すべて**WriteIf**、 **WriteLineIf**、および**アサート**ブール条件のテストを記述したり、書き込みませんベースの条件の値。 **WriteIf** と **WriteLineIf** は条件が `true` の場合に出力を生成し、**Assert** は条件が `false` の場合に出力を生成します。  
+トレースで最も使用頻度の高いメソッドは、出力をリスナーに書き込むメソッドである **Write**、**WriteIf**、**WriteLine**、**WriteLineIf**、**Assert**、および **Fail** です。 これらのメソッドは、次の 2 つのカテゴリに分類できます。**Write**、**WriteLine**、および **Fail** はすべて出力を無条件に生成します。それに対して、**WriteIf**、**WriteLineIf**、および **Assert** はブール条件をテストし、条件の値に基づいて書き込みを行ったり行わなかったりします。 **WriteIf** と **WriteLineIf** は条件が `true` の場合に出力を生成し、**Assert** は条件が `false` の場合に出力を生成します。  
   
  トレースおよびデバッグの方法をデザインするときは、出力の表示方法について検討する必要があります。 関連のない情報で埋め尽くされた複数の **Write** ステートメントの場合、読みにくいログが作成されます。 その一方で、**WriteLine** を使用して関連のあるステートメントを別々の行に出力すると、どの情報が関連し合っているかを読み取るのが困難になる場合があります。 一般に、複数のソースからの情報を結合する場合には複数の **Write** ステートメントを使用して 1 つの情報メッセージを作成し、単一の完全なメッセージを作成する場合には **WriteLine** ステートメントを使用します。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "61754539"
     ```csharp  
     bool errorFlag = false;  
     System.Diagnostics.Trace.WriteLine ("Error in AppendData procedure.");  
-    System.Diagnostics.Trace.WriteLineIf(errorFlag,   
+    System.Diagnostics.Trace.WriteLineIf(errorFlag,
        "Error in AppendData procedure.");  
     ```  
   
@@ -61,7 +60,7 @@ ms.locfileid: "61754539"
   
     ```csharp  
     bool errorFlag = false;  
-    System.Diagnostics.Trace.WriteIf(errorFlag,   
+    System.Diagnostics.Trace.WriteIf(errorFlag,
        "Error in AppendData procedure.");  
     System.Diagnostics.Debug.WriteIf(errorFlag, "Transaction abandoned.");  
     Trace.Write("Invalid value for data request");  
@@ -69,7 +68,7 @@ ms.locfileid: "61754539"
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>メソッドの実行前または実行後に特定の条件が存在するかどうかを確認するには  
   
-1.  <xref:System.Diagnostics.Trace.Assert%2A> メソッドを呼び出します。  
+1. <xref:System.Diagnostics.Trace.Assert%2A> メソッドを呼び出します。  
   
     ```vb  
     Dim i As Integer = 4  
@@ -82,7 +81,7 @@ ms.locfileid: "61754539"
     ```  
   
     > [!NOTE]
-    >  **Assert** は、トレースとデバッグの両方で使用できます。 この例では、呼び出し履歴を **Listeners** コレクションのリスナーに出力しています。 詳細については、「[マネージド コードのアサーション](/visualstudio/debugger/assertions-in-managed-code)」および「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>」を参照してください。  
+    > **Assert** は、トレースとデバッグの両方で使用できます。 この例では、呼び出し履歴を **Listeners** コレクションのリスナーに出力しています。 詳細については、「[マネージド コードのアサーション](/visualstudio/debugger/assertions-in-managed-code)」および「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -90,7 +89,7 @@ ms.locfileid: "61754539"
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: 作成、初期化、およびトレース スイッチを構成します。](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [アプリケーションのトレースとインストルメント](tracing-and-instrumenting-applications.md)
+- [方法: トレース スイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)
+- [トレース スイッチ](trace-switches.md)
+- [トレース リスナー](trace-listeners.md)

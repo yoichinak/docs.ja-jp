@@ -1,5 +1,5 @@
 ---
-title: /= 演算子 (Visual Basic)
+title: /= 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb./=
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 48ae78630aa66ad804d539f88524c456cf805889
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778470"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371246"
 ---
 # <a name="-operator-visual-basic"></a>/= 演算子 (Visual Basic)
-変数またはプロパティの値式の値で除算し、浮動小数点の結果を変数またはプロパティに代入します。  
+変数またはプロパティの値を式の値で除算し、その浮動小数点の結果を変数またはプロパティに代入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 variableorproperty /= expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 任意の数値型の変数またはプロパティ。  
+ 必須です。 任意の数値変数またはプロパティ。  
   
  `expression`  
- 必須。 任意の数式。  
+ 必須です。 任意の数式。  
   
 ## <a name="remarks"></a>Remarks  
- 左側にある要素、`/=`演算子は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
+ `/=` 演算子の左側の要素には、単純なスカラー変数、プロパティ、または配列の要素を指定できます。 変数またはプロパティを [ReadOnly](../modifiers/readonly.md) にすることはできません。  
   
- `/=`演算子は、(演算子の右側にある) の式の値で変数または (演算子の左側にある) のプロパティの値を除算する最初。 演算子は、変数またはプロパティに、その操作の結果を浮動小数点を割り当てます。  
+ `/=` 演算子は、最初に (演算子の左側にある) 変数またはプロパティの値を (演算子の右側にある) 式の値で除算します。 次に、この演算子はその演算の浮動小数点の結果を変数またはプロパティに代入します。  
   
- このステートメントは、代入、`Double`変数または左のプロパティの値。 場合`Option Strict`は`On`、`variableorproperty`必要があります、`Double`します。 場合`Option Strict`は`Off`、Visual Basic の暗黙的な変換を実行します。 および、その結果の値を割り当てます`variableorproperty`、実行時に可能性のあるエラーとします。 詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。  
+ このステートメントにより、左側の変数またはプロパティに `Double` 値が代入されます。 `Option Strict` が `On` の場合、`variableorproperty` は `Double` である必要があります。 `Option Strict` が `Off` の場合、Visual Basic によって暗黙的な変換が実行され、結果の値が `variableorproperty` に代入されます。実行時にエラーが発生する可能性があります。 詳細については、「[拡大変換と縮小変換](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」および「[Option Strict ステートメント](../statements/option-strict-statement.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)できます*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`/`演算子の動作に影響、`/=`演算子。 コードで使用する場合`/=`クラスまたは構造体をオーバー ロードで`/`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [/ 演算子 (Visual Basic)](floating-point-division-operator.md) は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体でその動作を再定義できます。 `/` 演算子をオーバーロードすると、`/=` 演算子の動作に影響します。 コードで、`/` をオーバーロードするクラスまたは構造体で `/=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`/=`演算子を 1 つの分割`Integer`秒と最初の変数に商の割り当てでは、変数。  
+ 次の例では、`/=` 演算子を使用して 1 番目の `Integer` 変数を 2 番目の変数で除算し、商を 1 番目の変数に代入します。  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
-- [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
+- [/ 演算子 (Visual Basic)](floating-point-division-operator.md)
+- [\\= 演算子](integer-division-assignment-operator.md)
+- [代入演算子](assignment-operators.md)
+- [算術演算子](arithmetic-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [ステートメント](../../programming-guide/language-features/statements.md)

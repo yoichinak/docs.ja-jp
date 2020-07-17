@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30097ff0cd92253897a366a5a18f305eddb06b5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cf4d82200709971201da60d06d0cb929641a104
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763520"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501886"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken メソッド
-このモジュールのテーブルのエントリのトークンを取得します。  
+このモジュールのテーブルエントリのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>パラメーター  
  `pToken`  
- [out]ポインター、`mdModule`モジュールのメタデータを参照するトークン。  
+ 入出力`mdModule`モジュールのメタデータを参照するトークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- トークンを渡すことができます、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)、 [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)、および[IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)メタデータ インポート インターフェイス。  
+## <a name="remarks"></a>解説  
+ トークンは、 [IMetaDataImport](../metadata/imetadataimport-interface.md)、 [IMetaDataImport2](../metadata/imetadataimport2-interface.md)、および[IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md)メタデータインポートインターフェイスに渡すことができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [Metadata](../metadata/index.md)

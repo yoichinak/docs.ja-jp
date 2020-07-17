@@ -1,25 +1,27 @@
 ---
-title: Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール
+title: Windows 10、8.1、8 に .NET Framework 3.5 をインストールする
 description: Windows 10、Windows 8.1、および Windows 8 に .NET Framework 3.5 をインストールする方法について説明します
-author: rlander
-ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515196"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "76965946"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール
 
 Windows 10、Windows 8.1、および Windows 8 上でアプリケーションを実行するために、.NET Framework 3.5 が必要になることがあります。 また、さらに古いバージョンの Windows にもこれらの手順を使用することもできます。
 
+## <a name="download-the-offline-installer"></a>オフライン インストーラーをダウンロードする
+
+.NET Framework 3.5 SP1 のオフラインイン ストーラーは、[.NET Framework 3.5 SP1 ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)から入手できます。これは、Windows 10 より前の Windows バージョンで使用できます。
+
 ## <a name="install-the-net-framework-35-on-demand"></a>必要に応じて .NET Framework 3.5 をインストールする
 
-.NET Framework 3.5 が必要なアプリケーションを実行しようとすると、次の構成ダイアログが表示されることがあります。 .NET Framework 3.5 を有効にするには、**[この機能をインストールする]** を選択します。 このオプションを使用するには、インターネット接続が必要です。
+.NET Framework 3.5 が必要なアプリケーションを実行しようとすると、次の構成ダイアログが表示されることがあります。 .NET Framework 3.5 を有効にするには、 **[この機能をインストールする]** を選択します。 このオプションを使用するには、インターネット接続が必要です。
 
-![.NET Framework のインストール ダイアログ](./media/dotnet-framework-installation-dialog.jpg)
+![.NET Framework インストール ダイアログのスクリーンショット。](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>このポップアップが表示される理由
 
@@ -29,13 +31,13 @@ Windows 10、Windows 8.1、および Windows 8 上でアプリケーションを
 
 Windows のコントロール パネルを使用して .NET Framework 3.5 を有効にできます。 このオプションを使用するには、インターネット接続が必要です。
 
-1. キーボードの Windows キー ![Windows ロゴ](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) を押し、「Windows の機能」と入力して、Enter キーを押します。 **[Windows 機能の有効化または無効化]** ダイアログ ボックスが表示されます。
+1. Windows キー ![Windows キー ロゴのスクリーンショット](./media/dotnet-35-windows-10/windows-keyboard-logo.png) を押します。 キーボードで「Windows の機能」と入力し、Enter キーを押します。 **[Windows 機能の有効化または無効化]** ダイアログ ボックスが表示されます。
 
 2. **[.NET Framework 3.5 (.NET 2.0 および 3.0 を含む)]** チェック ボックスをオンにして **[OK]** を選択し、メッセージが表示された場合はコンピューターを再起動します。
 
-   ![コントロール パネルを使用した .NET のインストール](./media/dotnet-control-panel.png)
+   ![[コントロール パネル] を使用した .NET のインストールを示すスクリーンショット。](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Windows Communication Foundation (WCF) 機能が必要な開発者またはサーバー管理者でない限り、**[Windows Communication Foundation HTTP アクティブ化]** および **[Windows Communication Foundation 非 HTTP アクティブ化]** の子項目を選択する必要はありません。
+   Windows Communication Foundation (WCF) 機能が必要な開発者またはサーバー管理者でない限り、 **[Windows Communication Foundation HTTP アクティブ化]** および **[Windows Communication Foundation 非 HTTP アクティブ化]** の子項目を選択する必要はありません。
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>.NET Framework 3.5 のインストールのトラブルシューティング
 

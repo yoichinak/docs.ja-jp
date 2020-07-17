@@ -1,13 +1,13 @@
 ---
-title: 生成操作 (Visual Basic)
+title: 生成操作
 ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
-ms.openlocfilehash: cbc3de23fc8ef691c0342b318728c035db9a36b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: da1b49a8ee153419fdbc89bca1cf12eef7d65c6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927706"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398423"
 ---
 # <a name="generation-operations-visual-basic"></a>生成操作 (Visual Basic)
 生成とは、値のシーケンスを新しく作成することを意味します。  
@@ -26,4 +26,4 @@ ms.locfileid: "61927706"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)

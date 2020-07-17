@@ -5,33 +5,34 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d21ac5f366e001ea76d6eda64ed62583248796f6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644418"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454418"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>方法: LINQ クエリの結果にバインドする
-この例では、LINQ クエリを実行し、結果にバインドする方法を示します。  
-  
-## <a name="example"></a>例  
- 次の例では、2 つのリスト ボックスを作成します。 最初のリスト ボックスには、次の 3 つのリスト項目が含まれています。  
-  
- [!code-xaml[LinqExample#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml#ui)]  
-  
- 次のイベント ハンドラーを呼び出す最初のリスト ボックスから項目を選択します。 この例で`Tasks`のコレクションである`Task`オブジェクト。 `Task`クラスという名前のプロパティには`Priority`します。 このイベント ハンドラーのコレクションを返す LINQ クエリを実行する`Task`オブジェクトを選択した優先順位の値を持ちとして設定し、 <xref:System.Windows.FrameworkElement.DataContext%2A>:  
-  
- [!code-csharp[LinqExample#Using](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#using)]  
-[!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
-[!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
-  
- 2 番目のリスト ボックスがそのコレクションにバインドするため、その<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>値に設定されて`{Binding}`します。 その結果、返されるコレクションが表示されます (に基づいて、 `myTaskTemplate` <xref:System.Windows.DataTemplate>)。  
-  
+
+この例では、LINQ クエリを実行し、その結果にバインドする方法を示します。
+
+## <a name="example"></a>例
+
+次の例では、2 つのリスト ボックスを作成します。 最初のリスト ボックスには、3 つのリスト項目が含まれています。
+
+[!code-xaml[LinqExample#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml#ui)]
+
+最初のリスト ボックスで項目を選択すると、次のイベント ハンドラーが呼び出されます。 この例では、`Tasks` は `Task` オブジェクトのコレクションです。 `Task` クラスには、`Priority` という名前のプロパティがあります。 このイベント ハンドラーでは、選択した優先順位値を持つ `Task` オブジェクトのコレクションを返す LINQ クエリが実行された後、それが <xref:System.Windows.FrameworkElement.DataContext%2A> として設定されます。
+
+[!code-csharp[LinqExample#Using](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#using)]
+[!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]
+[!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]
+
+2 番目のリスト ボックスは、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 値が `{Binding}` に設定されているため、そのコレクションにバインドされます。 その結果、返されたコレクションが (`myTaskTemplate` <xref:System.Windows.DataTemplate> に基づいて) 表示されます。
+
 ## <a name="see-also"></a>関連項目
 
 - [XAML でデータをバインディング可能にする](how-to-make-data-available-for-binding-in-xaml.md)
 - [コレクションにバインドして選択に基づく情報を表示する](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [WPF Version 4.5 の新機能](../getting-started/whats-new.md)
-- [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)

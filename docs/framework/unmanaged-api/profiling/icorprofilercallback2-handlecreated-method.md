@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 772f0c00bb850e35a6f5bf7fa4df2b3052999df5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779327"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499793"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated メソッド
-ガベージ コレクション ハンドルが作成されているコード プロファイラーに通知します。  
+ガベージコレクションハンドルが作成されたことをコードプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +35,21 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>パラメーター  
  `handleId`  
- [in]ガベージ コレクション ハンドルの ID。  
+ からガベージコレクションのハンドルの ID。  
   
  `initialObjectId`  
- [in]ガベージ コレクション ハンドルが作成されたオブジェクトの ID。  
+ からガベージコレクションハンドルが作成されたオブジェクトの ID。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 インターフェイス](icorprofilercallback2-interface.md)

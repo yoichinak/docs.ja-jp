@@ -1,20 +1,20 @@
 ---
-title: 呼び出し元情報 (Visual Basic)
+title: 呼び出し元情報
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642366"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400669"
 ---
 # <a name="caller-information-visual-basic"></a>呼び出し元情報 (Visual Basic)
 呼び出し元情報の属性を使用すると、メソッドへの呼び出し元に関する情報を取得できます。 ソース コードのファイル パス、ソース コードの行番号、および呼び出し元のメンバー名を取得できます。 この情報は、トレース、デバッグ、および診断ツールの作成に役立ちます。  
   
  この情報を取得するには、省略可能なパラメーターに適用される属性を使用します。各パラメーターには既定値があります。 次の表は、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間で定義されている呼び出し元情報の属性の一覧です。  
   
-|属性|説明|型|  
+|属性|説明|種類|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|呼び出し元を含むソース ファイルのフル パスです。 これは、コンパイル時のファイル パスです。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|メソッドが呼び出されたソース ファイルの行番号。|`Integer`|  
@@ -55,7 +55,7 @@ End Sub
   
  省略可能な引数を明示的に指定して、呼び出し元情報を制御したり、非表示にしたりできます。  
   
-### <a name="MEMBERNAMES"></a>メンバー名  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a>メンバー名  
  `CallerMemberName` 属性を使用して、呼び出されたメソッドにメンバー名を `String` 引数として指定することを回避できます。 この方法を使用すると、**リファクタリングの名前の変更**で `String` 値が変更されないという問題が発生しなくなります。 この利点は、次のタスクで役立ちます。  
   
 - トレース ルーチンと診断ルーチンの使用。  
@@ -76,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>関連項目
 
-- [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [一般的な属性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
-- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [属性 (Visual Basic)](../../language-reference/attributes.md)
+- [一般的な属性 (Visual Basic)](attributes/common-attributes.md)
+- [省略可能なパラメーター](../language-features/procedures/optional-parameters.md)
+- [プログラミングの概念 (Visual Basic)](index.md)

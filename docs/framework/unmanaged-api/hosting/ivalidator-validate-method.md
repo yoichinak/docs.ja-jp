@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768593"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008548"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate メソッド
-指定したポータブル実行可能 (PE) または Microsoft intermediate language (MSIL) ファイルを検証します。  
+指定された移植可能な実行可能 (PE) ファイルまたは MSIL (Microsoft 中間言語) ファイルを検証します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,34 +42,34 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>パラメーター  
  `veh`  
- [in]ポインター、`IVEHandler`検証エラーを処理するインスタンス。  
+ から`IVEHandler`検証エラーを処理するインスタンスへのポインター。  
   
  `pAppDomain`  
- [in]ファイルが読み込まれているアプリケーション ドメインへのポインター。  
+ からファイルが読み込まれるアプリケーションドメインへのポインター。  
   
  `ulFlags`  
- [in]ビットごとの組み合わせ[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)実行される検証を示す値。  
+ から実行する必要のある検証を示す、 [Validatorflags](validatorflags-enumeration.md)値のビットごとの組み合わせ。  
   
  `ulMaxError`  
- [in]検証を終了する前に許可されるエラーの最大数。  
+ から検証を終了するまでに許容されるエラーの最大数。  
   
  `token`  
- [in]使用されません。  
+ から使用しません。  
   
  `fileName`  
- [in]検証するファイルの名前を指定する文字列。  
+ から検証するファイルの名前を指定する文字列。  
   
  `pe`  
- [in]ファイルが格納されているメモリ バッファーへのポインター。  
+ からファイルが格納されているメモリバッファーへのポインター。  
   
  `ulSize`  
- [in]検証するファイルのバイト単位のサイズ。  
+ から検証するファイルのサイズ (バイト単位)。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** IValidator.idl, IValidator.h  
+ **ヘッダー:** IValidator、IValidator  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

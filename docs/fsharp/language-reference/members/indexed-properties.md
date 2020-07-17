@@ -1,17 +1,17 @@
 ---
 title: インデックス付きプロパティ
-description: インデックス付きプロパティについて説明しますF#、順序付けられたデータを配列に似たアクセスを許可します。
-ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+description: のF#インデックス付きプロパティについて説明します。これにより、順序付けられたデータへの配列に似たアクセスが可能になります。
+ms.date: 11/04/2019
+ms.openlocfilehash: f6cf3bfa737d2bf458e379594be5884696cee3e1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489479"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976612"
 ---
 # <a name="indexed-properties"></a>インデックス付きプロパティ
 
-順序付けられたデータを抽象化するクラスを定義するときに基になる実装を公開することがなく、そのデータにインデックス付きのアクセスを提供する便利なあることができます。 これは、`Item`メンバー。
+順序付けされたデータを抽象化するクラスを定義する場合、基になる実装を公開せずに、そのデータへのインデックス付きアクセスを提供すると役立つことがあります。 これは `Item` メンバーによって行われます。
 
 ## <a name="syntax"></a>構文
 
@@ -36,19 +36,19 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Remarks
 
-前の構文のフォームは、両方があるインデックス付きプロパティを定義する方法を示して、`get`と`set`メソッドが、`get`メソッドのみかが、`set`メソッドのみ。 取得のみと set のみに対して表示される構文に示す構文を組み合わせてまたを get と set の両方を持つプロパティを生成します。 この後者の形式を使用すると、get に異なるアクセシビリティ修飾子と属性を配置し、メソッドを設定できます。
+前の構文の形式は、`get` と `set` メソッドの両方を持つインデックス付きプロパティを定義する方法、`get` メソッドのみを持つもの、または `set` メソッドのみを持つインデックス付きプロパティを定義する方法を示しています。 Get のみに表示される構文と、set のみに表示される構文の両方を組み合わせて、get と set の両方を持つプロパティを生成することもできます。 この2番目の形式では、get メソッドと set メソッドに異なるアクセシビリティ修飾子と属性を配置できます。
 
-名前を使用して`Item`コンパイラは、既定のインデックス付きプロパティとしてプロパティを扱います。 A*既定のインデックス付きプロパティ*オブジェクト インスタンスの配列に似た構文を使用してアクセスできるプロパティです。 たとえば場合、`o`構文は、このプロパティを定義する型のオブジェクトである`o.[index]`プロパティにアクセスするために使用します。
+名前 `Item`を使用すると、コンパイラはプロパティを既定のインデックス付きプロパティとして扱います。 *既定のインデックス付きプロパティ*は、オブジェクトインスタンスで配列に似た構文を使用してアクセスできるプロパティです。 たとえば、`o` がこのプロパティを定義する型のオブジェクトである場合、プロパティにアクセスするために `o.[index]` 構文が使用されます。
 
-既定以外のインデックス付きプロパティにアクセスするための構文は、プロパティと、通常のメンバーと同様、かっこ内のインデックスの名前を提供します。 たとえば場合のプロパティ`o`が呼び出されます`Ordinal`、記述する`o.Ordinal(index)`へのアクセスします。
+既定以外のインデックス付きプロパティにアクセスするための構文では、通常のメンバーと同じように、プロパティの名前とインデックスをかっこで囲んで指定します。 たとえば、`o` のプロパティが `Ordinal`として呼び出された場合は、それにアクセスするための `o.Ordinal(index)` を記述します。
 
-使用する形式に関係なく、インデックス付きプロパティの set メソッドのカリー化されたフォームを常に使用する必要があります。 カリー化関数については、次を参照してください。[関数](../functions/index.md)します。
+使用するフォームに関係なく、インデックス付きプロパティの set メソッドには、常にカリー化された形式を使用する必要があります。 カリー化関数の詳細については、「[関数](../functions/index.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次のコード例では、定義と使用の既定と既定以外のインデックス付きプロパティ get し、set メソッドを示しています。
+次のコード例は、get メソッドと set メソッドを持つ既定のインデックス付きプロパティと既定以外のインデックス付きプロパティの定義と使用方法を示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
 ## <a name="output"></a>出力
 
@@ -58,11 +58,11 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-values"></a>複数のインデックス値を含むインデックス付きプロパティ
+## <a name="indexed-properties-with-multiple-index-values"></a>複数のインデックス値を持つインデックス付きプロパティ
 
-インデックス付きプロパティには、1 つ以上のインデックス値を持つことができます。 その場合は、プロパティを使用する場合に、値はコンマで区切られます。 このようなプロパティの set メソッドには、キーを含むタプル 1 つ目は、2 番目の値を設定するは 2 つのカリー化された引数が必要です。
+インデックス付きプロパティには、複数のインデックス値を指定できます。 この場合、プロパティが使用されるときに、値はコンマで区切られます。 このようなプロパティの set メソッドには、2つのカリー化引数が必要です。最初の引数はキーを含むタプルで、2番目の引数は設定する値です。
 
-次のコードでは、複数のインデックス値を含むインデックス付きプロパティの使用を示します。
+次のコードは、複数のインデックス値を持つインデックス付きプロパティの使用方法を示しています。
 
 ```fsharp
 open System.Collections.Generic
@@ -70,7 +70,7 @@ open System.Collections.Generic
 /// Basic implementation of a sparse matrix based on a dictionary
 type SparseMatrix() =
     let table = new Dictionary<(int * int), float>()
-    member __.Item
+    member _.Item
         // Because the key is comprised of two values, 'get' has two index values
         with get(key1, key2) = table.[(key1, key2)]
 

@@ -1,6 +1,5 @@
 ---
 title: extern 修飾子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - extern_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755891"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75713538"
 ---
 # <a name="extern-c-reference"></a>extern (C# リファレンス)
 
@@ -80,7 +79,7 @@ extern キーワードの C# での用法は、C++ の場合よりも制限さ�
 
 5. `cm.exe` を実行します。 `SampleMethod` メソッドは、DLL ファイルに値 5 を渡します。DLL は 10 で乗算した値を返します。  このプログラムの出力は、次のようになります。
 
-    ```
+    ```output
     SampleMethod() returns 50.
     ```
 
@@ -88,10 +87,10 @@ extern キーワードの C# での用法は、C++ の場合よりも制限さ�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)

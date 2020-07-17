@@ -1,15 +1,15 @@
 ---
-title: サンプル XML ファイル:名前空間内の一般的な購買発注書 1
+title: 'サンプル XML ファイル : 名前空間内の一般的な購買発注書'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: f47761409a0a174317259eea9b2d3a16c9fb2396
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 001a12210c2252d9718425d0d4013bdbdf25b996
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487201"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167965"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>サンプル XML ファイル:名前空間内の一般的な購買発注書
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>サンプル XML ファイル : 名前空間内の一般的な購買発注書
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルは、一般的な購買発注書です。 XML は名前空間に含まれています。  
   
 ## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
@@ -53,4 +53,3 @@ ms.locfileid: "66487201"
   </aw:Items>  
 </aw:PurchaseOrder>  
 ```  
- 

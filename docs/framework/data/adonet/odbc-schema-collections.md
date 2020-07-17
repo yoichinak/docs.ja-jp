@@ -2,12 +2,12 @@
 title: ODBC スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772048"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794719"
 ---
 # <a name="odbc-schema-collections"></a>ODBC スキーマ コレクション
 
@@ -15,7 +15,7 @@ ms.locfileid: "61772048"
 
 ## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server ODBC Driver
 
-Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクションに加えて次の特定のスキーマ コレクションがサポートされています。
+Microsoft SQL Server ODBC Driver では、共通のスキーマ コレクションに加えて次のスキーマ コレクションがサポートされています。
 
 - [テーブル]
 
@@ -23,7 +23,7 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 
 - 列
 
-- 手順
+- プロシージャ
 
 - ProcedureColumns
 
@@ -87,7 +87,7 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 |SS_TYPE_SCHEMA|String|
 |SS_DATA_TYPE|Byte|
 
-### <a name="procedures"></a>手順
+### <a name="procedures"></a>プロシージャ
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -156,13 +156,13 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 
 ## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC Driver
 
-Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コレクションに加えて次の特定のスキーマ コレクションをサポートしています。
+Microsoft SQL Server Oracle ODBC Driver では、共通のスキーマ コレクションに加えて次のスキーマ コレクションがサポートされています。
 
 - [テーブル]
 
 - 列
 
-- 手順
+- プロシージャ
 
 - ProcedureColumns
 
@@ -200,7 +200,7 @@ Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コ�
 |REMARKS|String|
 |ORDINAL_POSITION|Int32|
 
-### <a name="procedures"></a>手順
+### <a name="procedures"></a>プロシージャ
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -243,7 +243,7 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 
 - 列
 
-- 手順
+- プロシージャ
 
 - ProcedureColumns
 
@@ -279,7 +279,7 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 |REMARKS|String|
 |ORDINAL_POSITION|Int32|
 
-### <a name="procedures"></a>手順
+### <a name="procedures"></a>プロシージャ
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -338,4 +338,4 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

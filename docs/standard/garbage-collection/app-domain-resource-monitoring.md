@@ -8,14 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c7b9d7c2297fe30b02dc9782002413e9f38dc98
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751538"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286094"
 ---
 # <a name="application-domain-resource-monitoring"></a>アプリケーション ドメインのリソース監視
 
@@ -31,9 +29,9 @@ ARM を有効にする方法は 4 つあります。共通言語ランタイム 
 
 ARM が有効になるとすぐに、プロセスのすべてのアプリケーション ドメイン上でデータの収集が開始されます。ARM が有効になる前にアプリケーション ドメインが作成された場合、アプリケーション ドメインの作成時ではなく、ARM が有効になったときに累積データが開始されます。ARM を有効にした後に無効にすることはできません。
 
-- CLR 起動時に ARM を有効にするには、[\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 要素を構成ファイルに追加し、`enabled` 属性を `true` に設定します。 `false` の値 (既定) は、起動時に ARM は有効ではないことのみを意味します。他のアクティブ化メカニズムのいずれかを使用して、後で有効にすることができます。
+- CLR 起動時に ARM を有効にするには、[\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 要素を構成ファイルに追加し、`enabled` 属性を `true` に設定します。 `false` の値 (既定) は、起動時に ARM は有効ではないことのみを意味します。他のアクティブ化メカニズムのいずれかを使用して、後で有効にすることができます。
 
-- ホストは、[ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) ホスティング インターフェイスを要求することで ARM を有効にすることができます。 このインターフェイスが正常に取得されると、ARM が有効になります。
+- ホストは、[ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) ホスティング インターフェイスを要求することで ARM を有効にすることができます。 このインターフェイスが正常に取得されると、ARM が有効になります。
 
 - マネージド コードでは、static (Visual Basic では `Shared`) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> プロパティを `true` に設定して ARM を有効にすることができます。 プロパティが設定されるとすぐに、ARM が有効になります。
 
@@ -43,35 +41,35 @@ ARM が有効になるとすぐに、プロセスのすべてのアプリケー�
 
 ARM は、アプリケーション ドメインに使用される合計プロセッサ時間と、メモリ使用に関する 3 種類の情報を提供します。
 
-- **アプリケーション ドメインの合計プロセッサ時間 (秒単位)**: アプリケーション ドメインの有効期間中に実行されていたすべてのスレッドについて、オペレーティング システムから報告されたスレッド時間を合計して計算されます。 ブロックされているスレッドまたはスリープ状態のスレッドは、プロセッサ時間を使用しません。 スレッドがネイティブ コードを呼び出すときに、スレッドがネイティブ コードに費やす時間は、呼び出しが行われたアプリケーション ドメインの計算に含まれます。
+- **アプリケーション ドメインの合計プロセッサ時間 (秒単位)** : アプリケーション ドメインの有効期間中に実行されていたすべてのスレッドについて、オペレーティング システムから報告されたスレッド時間を合計して計算されます。 ブロックされているスレッドまたはスリープ状態のスレッドは、プロセッサ時間を使用しません。 スレッドがネイティブ コードを呼び出すときに、スレッドがネイティブ コードに費やす時間は、呼び出しが行われたアプリケーション ドメインの計算に含まれます。
 
   - マネージド API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> プロパティ。
 
-  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) メソッド。
+  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) メソッド。
 
-  - ETW イベント: `ThreadCreated`、`ThreadAppDomainEnter`、および `ThreadTerminated` イベント プロバイダーとキーワードの詳細については、「[CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)」の「AppDomain Resource Monitoring Events」(AppDomain リソース監視イベント) を参照してください。
+  - ETW イベント: `ThreadCreated`、`ThreadAppDomainEnter`、および `ThreadTerminated` イベント プロバイダーとキーワードの詳細については、「[CLR ETW イベント](../../framework/performance/clr-etw-events.md)」の「AppDomain Resource Monitoring Events」(AppDomain リソース監視イベント) を参照してください。
 
-- **有効期間中にアプリケーション ドメインによって行われたマネージドされた割り当ての合計 (バイト単位)**: 割り当てられたオブジェクトの有効期間は短いことがあるので、割り当ての合計にアプリケーション ドメインによるメモリ使用量が反映されない場合もあります。 ただし、アプリケーションが膨大な数のオブジェクトを割り当ててから解放すると、割り当てのコストが大幅に高くなる可能性があります。
+- **有効期間中にアプリケーション ドメインによって行われたマネージドされた割り当ての合計 (バイト単位)** : 割り当てられたオブジェクトの有効期間は短いことがあるので、割り当ての合計にアプリケーション ドメインによるメモリ使用量が反映されない場合もあります。 ただし、アプリケーションが膨大な数のオブジェクトを割り当ててから解放すると、割り当てのコストが大幅に高くなる可能性があります。
 
   - マネージド API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> プロパティ。
 
-  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) メソッド。
+  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) メソッド。
 
   - ETW イベント: `AppDomainMemAllocated` イベント、`Allocated` フィールド。
 
-- **アプリケーション ドメインによって参照され、最新の完全なブロッキング コレクションの後に残っているマネージド メモリ (バイト単位)**: この数値は完全なブロッキング コレクションの後にのみ正確になります。 (これは、バックグラウンドで発生し、アプリケーションをブロックしない同時コレクションとは対照的です)。たとえば、<xref:System.GC.Collect?displayProperty=nameWithType> メソッドのオーバーロードによって、完全なブロッキング コレクションが実行されます。
+- **アプリケーション ドメインによって参照され、最新の完全なブロッキング コレクションの後に残っているマネージド メモリ (バイト単位)** : この数値は完全なブロッキング コレクションの後にのみ正確になります。 (これは、バックグラウンドで発生し、アプリケーションをブロックしない同時コレクションとは対照的です)。たとえば、<xref:System.GC.Collect?displayProperty=nameWithType> メソッドのオーバーロードによって、完全なブロッキング コレクションが実行されます。
 
   - マネージド API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> プロパティ。
 
-  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) メソッド、`pAppDomainBytesSurvived` パラメーター。
+  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) メソッド、`pAppDomainBytesSurvived` パラメーター。
 
   - ETW イベント: `AppDomainMemSurvived` イベント、`Survived` フィールド。
 
-- **プロセスによって参照され、最新の完全なブロッキング コレクションの後に残っている合計マネージド メモリ (バイト単位)**: 個々のアプリケーション ドメインに残っている​​メモリをこの数値と比較できます。
+- **プロセスによって参照され、最新の完全なブロッキング コレクションの後に残っている合計マネージド メモリ (バイト単位)** : 個々のアプリケーション ドメインに残っている​​メモリをこの数値と比較できます。
 
   - マネージド API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> プロパティ。
 
-  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) メソッド、`pTotalBytesSurvived` パラメーター。
+  - ホスティング API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) メソッド、`pTotalBytesSurvived` パラメーター。
 
   - ETW イベント: `AppDomainMemSurvived` イベント、`ProcessSurvived` フィールド。
 
@@ -87,11 +85,11 @@ ARM は、アプリケーション ドメインに使用される合計プロセ
 
 #### <a name="hosting-api"></a>ホスティング API
 
-アンマネージ ホスティング API を使用する場合、ホストは CLR に [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) インターフェイスの実装を渡す必要があります。 コレクションの実行中に中断されたスレッドの実行を再開すると、CLR は [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) メソッドを呼び出します。 CLR は、完全なコレクションの生成をメソッドのパラメーターとして渡します。そのため、ホストはコレクションが完全か部分的かを判断できます。 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) メソッドを実装すると、残っているメモリのクエリを実行して、カウントが更新された場合にすぐに取得することができます。
+アンマネージ ホスティング API を使用する場合、ホストは CLR に [IHostGCManager](../../framework/unmanaged-api/hosting/ihostgcmanager-interface.md) インターフェイスの実装を渡す必要があります。 コレクションの実行中に中断されたスレッドの実行を再開すると、CLR は [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) メソッドを呼び出します。 CLR は、完全なコレクションの生成をメソッドのパラメーターとして渡します。そのため、ホストはコレクションが完全か部分的かを判断できます。 [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) メソッドを実装すると、残っているメモリのクエリを実行して、カウントが更新された場合にすぐに取得することができます。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [ICLRAppDomainResourceMonitor インターフェイス](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [ICLRAppDomainResourceMonitor インターフェイス](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [CLR ETW イベント](../../framework/performance/clr-etw-events.md)

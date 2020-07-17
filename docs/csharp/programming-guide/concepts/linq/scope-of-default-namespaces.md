@@ -1,13 +1,13 @@
 ---
-title: C# での既定の名前空間のスコープ 1
+title: C# での既定の名前空間のスコープ
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 2eee1b0c79f585710962d8e84fe584bca6b8228b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483604"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "70253046"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# での既定の名前空間のスコープ
 XML ツリーで表される既定の名前空間は、クエリのスコープ内にありません。 既定の名前空間に含まれる XML が存在する場合は、<xref:System.Xml.Linq.XNamespace> 変数を宣言し、この変数をローカル名と組み合わせて作成した修飾名をクエリで使用する必要があります。  
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>コメント  
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -80,7 +80,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>コメント  
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 1  
 2  
@@ -88,6 +88,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)

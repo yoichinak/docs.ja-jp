@@ -1,5 +1,6 @@
 ---
 title: .NET での文字列の埋め込み
+description: .NET で文字列を埋め込む方法について学習します。 先頭または末尾の文字を追加して指定した合計の長さを得るには、String.PadLeft と String.PadRight メソッドを使用します。
 ms.date: 03/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +14,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f58e1c3a9e42f48ecc219a2db1649051f9ca20b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5bf7023a3429e932a44ad0a0bd3409012f77cbf9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594531"
 ---
 # <a name="padding-strings-in-net"></a>.NET での文字列の埋め込み
 
@@ -51,4 +50,4 @@ ms.locfileid: "43890728"
   
 ## <a name="see-also"></a>関連項目
 
-- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)
+- [基本的な文字列操作](basic-string-operations.md)

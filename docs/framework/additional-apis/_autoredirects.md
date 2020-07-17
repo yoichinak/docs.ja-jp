@@ -1,5 +1,6 @@
 ---
-title: HttpWebRequest._AutoRedirects フィールド
+title: _AutoRedirects HttpWebRequest フィールド
+description: .NET の _AutoRedirects HttpWebRequest フィールドについて確認します。 このフィールドは、HTTP web 要求に対して行われたリダイレクトの数を反映する Int32 値です。
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-author: rpetrusha
-ms.author: mairaw
-ms.openlocfilehash: 2dde9cdeeca1cc8cca13322747d625b505e7f453
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 62c765a26424a5c0a96f291aae0a6ccdf0546d46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989972"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest します。\_AutoRedirects フィールド
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest。 \_AutoRedirects フィールド
 
-`HttpWebRequest._AutoRedirects` <xref:System.Int32>これに対するリダイレクトの数を反映する<xref:System.Net.HttpWebRequest>します。
+`HttpWebRequest._AutoRedirects`は、 <xref:System.Int32> このに対して行われたリダイレクトの数を反映するです <xref:System.Net.HttpWebRequest> 。
 
 ## <a name="syntax"></a>構文  
   
@@ -30,14 +29,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects`フィールドは、内部であり、コード内で直接使用するものではありません。
-> 
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> `HttpWebRequest._AutoRedirects`フィールドは内部であり、コードで直接使用するためのものではありません。
+>
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:** (System.dll) のシステム
+**アセンブリ:** システム (System.dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

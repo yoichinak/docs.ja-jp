@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3680721c70ab69776c973913d929f7bdd9db3909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a1440be7011130b16d7112ae15026eb74856190
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779449"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501595"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies メソッド
-インターフェイス ポインターを取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)ホストは、共通言語ランタイム (CLR) を読み込むアセンブリの一覧を表します。  
+ホストが読み込みのために共通言語ランタイム (CLR) を必要とするアセンブリのリストを表す[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)へのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,47 +35,47 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>パラメーター  
  `ppReferenceList`  
- [out]アドレスへのポインター、`ICLRAssemblyReferenceList`ホストが CLR をロードを必要とするアセンブリへの参照の一覧を格納しています。  
+ 入出力`ICLRAssemblyReferenceList`ホストが CLR を読み込むことを想定しているアセンブリへの参照の一覧を含むのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`GetNonHostStoreAssemblies`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|E_OUTOFMEMORY|メモリが不足していますが、要求された参照の一覧を作成できませんでした。`ICLRAssemblyReferenceList`します。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|E_OUTOFMEMORY|要求されたの参照の一覧を作成するのに十分なメモリがありませんでした `ICLRAssemblyReferenceList` 。|  
   
-## <a name="remarks"></a>Remarks  
- CLR は、次のガイドラインのセットを使用して参照を解決します。  
+## <a name="remarks"></a>解説  
+ CLR は、次の一連のガイドラインを使用して参照を解決します。  
   
-- によって返されるアセンブリ参照の一覧を参照して、最初に、`GetNonHostStoreAssemblies`します。  
+- まず、によって返されるアセンブリ参照の一覧を参照し `GetNonHostStoreAssemblies` ます。  
   
-- アセンブリが一覧に表示された場合、CLR は通常どおりにバインドします。  
+- アセンブリが一覧に表示されている場合、CLR は通常どおりにバインドします。  
   
-- アセンブリが一覧に表示されないと、ホストでの実装が提供されている場合[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)、CLR 呼び出し[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)を指定するホストを許可するのにはバインドするアセンブリ。  
+- アセンブリが一覧に表示されず、ホストが[IHostAssemblyStore](ihostassemblystore-interface.md)の実装を提供した場合、CLR は[IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md)を呼び出して、バインド先のアセンブリをホストが指定できるようにします。  
   
-- それ以外の場合、CLR は、アセンブリのバインドに失敗します。  
+- それ以外の場合、CLR はアセンブリへのバインドに失敗します。  
   
- ホストが設定されている場合`ppReferenceList`、グローバル アセンブリ キャッシュの呼び出しを null に CLR の最初のプローブ`ProvideAssembly`とし、アセンブリ参照を解決するのには、アプリケーション ベースをプローブします。  
+ ホストが null に設定されている場合、 `ppReferenceList` CLR はまずグローバルアセンブリキャッシュをプローブし、 `ProvideAssembly` を呼び出してから、アプリケーションベースをプローブしてアセンブリ参照を解決します。  
   
 > [!NOTE]
->  初期化時に、CLR は呼び出し`GetNonHostStoreAssemblies`1 回だけです。 メソッドは、もう一度呼び出されません。  
+> 初期化時に、CLR は `GetNonHostStoreAssemblies` 1 回だけを呼び出します。 メソッドが再度呼び出されていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [ICLRAssemblyReferenceList インターフェイス](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager インターフェイス](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore インターフェイス](ihostassemblystore-interface.md)

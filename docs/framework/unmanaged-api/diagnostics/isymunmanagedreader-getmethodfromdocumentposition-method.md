@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8015056b110fe8a5b5122b1bc81143980b780047
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776975"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614982"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition メソッド
-ドキュメント内の指定位置にブレークポイントを含むメソッドを返します。  
+ドキュメント内の指定された位置にあるブレークポイントを含むメソッドを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +37,23 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in]指定されたドキュメントです。  
+ から指定されたドキュメント。  
   
  `line`  
- [in]指定されたドキュメントの行。  
+ から指定したドキュメントの行。  
   
  `column`  
- [in]指定されたドキュメントの列です。  
+ から指定されたドキュメントの列。  
   
  `pRetVal`  
- [out]アドレスへのポインターを[ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)ブレークポイントを含むメソッドを表すオブジェクト。  
+ 入出力ブレークポイントを含むメソッドを表す[ISymUnmanagedMethod Interface](isymunmanagedmethod-interface.md)オブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader インターフェイス](isymunmanagedreader-interface.md)

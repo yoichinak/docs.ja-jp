@@ -1,21 +1,21 @@
 ---
-title: '方法: コントロールの Namespace プレフィックス (Visual Basic) (LINQ to XML)'
+title: '方法: 名前空間プレフィックスを制御する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855401"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348382"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>方法: コントロールの Namespace プレフィックス (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>方法: 名前空間プレフィックスを制御する (Visual Basic) (LINQ to XML)
 このトピックでは、名前空間プレフィックスを制御する方法について説明します。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- この例では、2 つの名前空間を宣言します。 指定します、`http://www.adventure-works.com`名前空間のプレフィックス`aw`、および、`www.fourthcoffee.com`名前空間のプレフィックスを持つ`fc`します。  
+ この例では、2 つの名前空間を宣言します。 `http://www.adventure-works.com` 名前空間のプレフィックスを `aw` と指定し、`www.fourthcoffee.com` 名前空間のプレフィックスを `fc` と指定します。  
   
 ### <a name="code"></a>コード  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

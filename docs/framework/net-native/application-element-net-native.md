@@ -1,21 +1,19 @@
 ---
-title: <Application> 要素 (.NET ネイティブ)
+title: <Application>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657186"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73128521"
 ---
-# <a name="application-element-net-native"></a>\<Application > 要素 (.NET ネイティブ)
+# <a name="application-element-net-native"></a>\<Application>要素 (.NET ネイティブ)
 実行時にリフレクションに使用可能なメタデータを持つアプリケーション全体の型と型のメンバーのコンテナーとして機能し、アプリ内のすべてのプログラム要素にランタイム リフレクション ポリシーを適用します。  
   
  \<Directives> 要素  
-\<Application> 要素 (rd.xml)  
+\<Application>要素 (rd .xml)  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +35,7 @@ ms.locfileid: "64657186"
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|説明|  
+|属性|属性の型|Description|  
 |---------------|--------------------|-----------------|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
 |`Browse`|リフレクション|省略可能な属性です。 型に関する情報の照会や型の列挙を制御しますが、実行時の動的アクセスは有効にしません。|  
@@ -52,42 +50,42 @@ ms.locfileid: "64657186"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|*policy_setting*|アプリで型に適用する、このポリシーの設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
+|*policy_setting*|アプリで型に適用する、このポリシーの設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素を使用して `List<String>` 型のポリシーを定義できます。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|特定の型のメソッドにポリシーを適用します。|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|構築されたジェネリック メソッドにポリシーを適用します。|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|特定の型のプロパティにポリシーを適用します。|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|特定の型のフィールドにポリシーを適用します。|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|特定の型のイベントにポリシーを適用します。|  
+|[\<Assembly>](assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
+|[\<Namespace>](namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、要素を [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 使用して、型のポリシーを定義することができ `List<String>` ます。|  
+|[\<Method>](method-element-net-native.md)|特定の型のメソッドにポリシーを適用します。|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|構築されたジェネリック メソッドにポリシーを適用します。|  
+|[\<Property>](property-element-net-native.md)|特定の型のプロパティにポリシーを適用します。|  
+|[\<Field>](field-element-net-native.md)|特定の型のフィールドにポリシーを適用します。|  
+|[\<Event>](event-element-net-native.md)|特定の型のイベントにポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
+|[\<Directives>](directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
   
-## <a name="remarks"></a>Remarks  
- [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 要素には、0 または 1 個の `<Application>` 要素を含めることができます。 1 つのリフレクション ディレクティブ ファイルに複数の `<Application>` 要素を含めることはサポートされていません。  
+## <a name="remarks"></a>解説  
+ 要素には、 [\<Directives>](directives-element-net-native.md) 0 個または1個の要素を含めることができ `<Application>` ます。 1 つのリフレクション ディレクティブ ファイルに複数の `<Application>` 要素を含めることはサポートされていません。  
   
  `<Application>` 要素は、次の 2 とおりの方法で使用できます。  
   
-- 実行時に必要なメタデータを持つプログラム要素を定義するためのコンテナーとして。 この場合、`<Application>` 要素に属性は必要ありません。 コンパイル時に、コンパイラ ツールは、.NET Framework コア ライブラリを含むすべてのライブラリで、`<Application>` 要素の子要素により示されるプログラム要素を検索します。 一方、[\<Library>](../../../docs/framework/net-native/library-element-net-native.md) の子要素により示されるプログラム要素を検索する場合、コンパイラ ツールは [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により指定されたライブラリのみを検索します。  
+- 実行時に必要なメタデータを持つプログラム要素を定義するためのコンテナーとして。 この場合、`<Application>` 要素に属性は必要ありません。 コンパイル時に、コンパイラ ツールは、.NET Framework コア ライブラリを含むすべてのライブラリで、`<Application>` 要素の子要素により示されるプログラム要素を検索します。 これに対し、コンパイラツールは、要素によって指定されたライブラリのみを検索して、 [\<Library>](library-element-net-native.md) の子要素によって識別されるプログラム要素を検索 [\<Library>](library-element-net-native.md) します。  
   
-- リフレクション、シリアル化、および相互運用に関するアプリケーション全体のポリシーを設定する要素として。 `<Application>` 要素の属性はアプリケーション全体のポリシーを定義します。このポリシーは、`<Application>` 要素または [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により定義される子要素によってオーバーライドできます。  
+- リフレクション、シリアル化、および相互運用に関するアプリケーション全体のポリシーを設定する要素として。 要素の属性は、 `<Application>` アプリケーション全体のポリシーを定義します。これは、 `<Application>` 要素または要素によって定義される子要素によってオーバーライドされる可能性があり [\<Library>](library-element-net-native.md) ます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [\<ライブラリ > 要素](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<ディレクティブ > 要素](../../../docs/framework/net-native/directives-element-net-native.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Library>Element](library-element-net-native.md)
+- [\<Directives>Element](directives-element-net-native.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)

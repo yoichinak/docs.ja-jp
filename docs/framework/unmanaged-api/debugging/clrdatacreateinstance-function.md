@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c24963a6e56adfb9f763c6521027744db82cc357
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740998"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179363"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 関数
 指定したターゲット項目のインターフェイス オブジェクトを作成します。  
@@ -31,29 +29,29 @@ ms.locfileid: "67740998"
   
 ```cpp  
 HRESULT CLRDataCreateInstance (  
-    [in]  REFIID           iid,   
-    [in]  ICLRDataTarget  *target,   
+    [in]  REFIID           iid,
+    [in]  ICLRDataTarget  *target,
     [out] void           **iface  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `iid`  
- [in]インスタンス化するインターフェイスの識別子。  
+ [in]インスタンス化されるインターフェイスの識別子。  
   
  `target`  
- [in]ユーザー実装へのポインター [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)インターフェイス オブジェクトを作成する対象のターゲット項目を表すオブジェクト。  
+ [in]インターフェイス オブジェクトを作成する対象の項目を表す、ユーザーが実装する[ICLRDataTarget](iclrdatatarget-interface.md)オブジェクトへのポインター。  
   
  `iface`  
- [out]返されたインターフェイス オブジェクトのアドレスへのポインター。  
+ [アウト]返されたインターフェイス オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `ICLRDataTarget`オブジェクトがデバッグ アプリケーションの作成者によって実装されます。 実装は、表されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリ ダンプ、リモート コンピューター、およびなどがあります。  
+## <a name="remarks"></a>解説  
+ オブジェクト`ICLRDataTarget`は、デバッグ アプリケーションのライターによって実装されます。 実装は、表されるターゲット項目の型によって異なります。 ターゲット項目は、プロセス、メモリ ダンプ、リモート コンピューターなどです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl  
+ **ヘッダー:** を使用します。  
   
  **ライブラリ:** CorGuids.lib  
   
@@ -61,4 +59,4 @@ HRESULT CLRDataCreateInstance (
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [デバッグ グローバル静的関数](debugging-global-static-functions.md)

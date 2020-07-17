@@ -1,16 +1,15 @@
 ---
 title: ジェネリック メソッド - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5f066ca39c97b70554886e423c37c4ee47d49158
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170252"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "75712196"
 ---
 # <a name="generic-methods-c-programming-guide"></a>ジェネリック メソッド (C# プログラミング ガイド)
 ジェネリック メソッドは、次のように型パラメーターで宣言されるメソッドです。  
@@ -46,9 +45,9 @@ ms.locfileid: "67170252"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  詳細については、「[C# 言語の仕様](~/_csharplang/spec/classes.md#methods)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [C# プログラミングガイド](../index.md)
+- [ジェネリックの概要](./index.md)
+- [メソッド](../classes-and-structs/methods.md)

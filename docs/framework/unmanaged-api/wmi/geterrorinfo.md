@@ -1,6 +1,6 @@
 ---
-title: GetErrorInfo 関数 (アンマネージ API リファレンス)
-description: GetErrorInfo 関数は、前の関数呼び出しからエラー情報を取得します。
+title: 関数を取得します (アンマネージ API リファレンス)
+description: 関数は、前の関数呼び出しからエラー情報を取得します。
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 802ee66a5be213ac7a599b193ec6de589773ea17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746539"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176813"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo 関数
 前の関数呼び出しからエラー情報が取得されます。  
@@ -31,24 +29,24 @@ ms.locfileid: "67746539"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-IErrorInfo* GetErrorInfo(); 
+IErrorInfo* GetErrorInfo();
 ```  
 
 ## <a name="return-value"></a>戻り値
 
-ポインターを[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)関数呼び出しが成功すると、オブジェクトまたは`null`失敗した場合。
+関数呼び出しが成功した場合、または`null`失敗した場合は[、IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)オブジェクトへのポインター。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数の呼び出しをラップする、 [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)メソッド。
+この関数は、メソッドの呼び出し[を](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)ラップします。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.def  
+ **ヘッダー:** WMINet_Utilsデフ  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

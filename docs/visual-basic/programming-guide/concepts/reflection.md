@@ -1,13 +1,13 @@
 ---
-title: リフレクション (Visual Basic)
+title: リフレクション
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 8a784f3b8647a74e21299e84e04eb7bda60b9cb6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627457"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413181"
 ---
 # <a name="reflection-visual-basic"></a>リフレクション (Visual Basic)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../standard/attributes/index.md)」を参照してください。  
@@ -63,5 +63,5 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
-- [共通言語ランタイムのアセンブリ](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Visual Basic プログラミング ガイド](../index.md)
+- [.NET のアセンブリ](../../../standard/assembly/index.md)

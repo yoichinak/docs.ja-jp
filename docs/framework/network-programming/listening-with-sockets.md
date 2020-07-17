@@ -1,5 +1,6 @@
 ---
 title: リッスン (ソケットで)
+description: サーバー ソケットでネットワーク上のポートを開き、クライアントがそのポートに接続するのを待つリモート サービスを作成する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109955"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502315"
 ---
 # <a name="listening-with-sockets"></a>リッスン (ソケットで)
 リスナーまたはサーバー ソケットは、ネットワーク上のポートを開き、クライアントがそのポートに接続するまで待機します。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、TCP/IP ネットワーク用のリモート サービスを作成する方法を説明します。  
@@ -30,13 +31,13 @@ ms.locfileid: "59109955"
  次の例では、ホスト コンピューターの **Dns** から返される最初の IP アドレスと、登録されているポート番号範囲から選択されたポート番号を組み合わせて、サーバーの <xref:System.Net.IPEndPoint> を作成しています。  
   
 ```vb  
-Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
 Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
 Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
 ```  
   
 ```csharp  
-IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
 ```  
@@ -45,7 +46,7 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  
-    SocketType.Stream, ProtocolType.Tcp) 
+    SocketType.Stream, ProtocolType.Tcp)
 listener.Bind(localEndPoint)  
 listener.Listen(100)  
 ```  
@@ -61,8 +62,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>関連項目
 
-- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)
-- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+- [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)
+- [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
+- [クライアント ソケットの使用](using-client-sockets.md)
+- [方法: ソケットを作成する](how-to-create-a-socket.md)
+- [ソケット](sockets.md)

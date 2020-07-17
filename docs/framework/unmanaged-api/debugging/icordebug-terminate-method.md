@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44bb98f54debb129f951cc388fea81ca0f17b20c
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738069"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895318"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate メソッド
-終了、`ICorDebug`オブジェクト。  
+オブジェクトを`ICorDebug`終了します。  
   
 > [!NOTE]
->  `Terminate` まで呼び出すことはできません、 [icordebugmanagedcallback::exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)デバッグ中のすべてのプロセスのコールバックを受け取りました。  
+> `Terminate`デバッグされているすべてのプロセスに対して、 [ExitProcess Callback callback::](icordebugmanagedcallback-exitprocess-method.md) callback が受信されるまでは呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,18 +34,18 @@ ms.locfileid: "67738069"
 HRESULT Terminate ();  
 ```  
   
-## <a name="remarks"></a>Remarks  
- `Terminate` ときに呼び出す必要があります、`ICorDebug`オブジェクトが不要です。  
+## <a name="remarks"></a>解説  
+ `Terminate`オブジェクトが不要になっ`ICorDebug`た場合は、を呼び出す必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)

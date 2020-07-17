@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc91ff0676fcec5d614f9d6fa4850eb2c81086b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8300daf0d39745ceda80f6c56da7e3c459a97468
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779498"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805116"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding メソッド
-ランタイムがガベージ コレクションまたはその他の中断の後のスレッドを再開することをホストに通知します。  
+ランタイムがガベージコレクションまたはその他の中断後にスレッドを再開していることをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>パラメーター  
  `Generation`  
- [in]ガベージ コレクションが実行されて生成されます。  
+ からガベージコレクションが実行された生成。  
   
-## <a name="remarks"></a>Remarks  
- 中にすべてのスレッドを再スケジュールしないで、`SuspensionEnding`コールバック。  
+## <a name="remarks"></a>解説  
+ コールバック中にスレッドを再スケジュールしないでください `SuspensionEnding` 。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IGCThreadControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+- [IGCThreadControl インターフェイス](igcthreadcontrol-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: a9488e484aad7ba3df23c33b2cb5b79f234b758e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d38a40aa1e6e3db769aedfc440077721cdfaf06d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088367"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180754"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする
 この例では、WebRequest を型キャストしてプロトコル固有のプロパティにアクセスできるようにする方法を説明します。  
@@ -18,7 +18,7 @@ ms.locfileid: "59088367"
 ## <a name="example"></a>例  
   
 ```csharp  
-HttpWebRequest httpreq =   
+HttpWebRequest httpreq =
    (HttpWebRequest) WebRequest.Create("http://www.contoso.com/");  
 ```  
   
@@ -27,6 +27,6 @@ Dim httpreq As HttpWebRequest = _
    CType(WebRequest.Create("http://www.contoso.com/"), HttpWebRequest)  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [プラグ可能なプロトコルのプログラミング](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [プラグ可能なプロトコルのプログラミング](programming-pluggable-protocols.md)

@@ -1,5 +1,6 @@
 ---
-title: '方法: Windows フォームで印刷プレビューを使用して印刷する'
+title: 印刷プレビューを使用して印刷する
+description: Windows フォーム Printpreview ダイアログコントロールを使用して、アプリケーションに印刷プレビューサービスを追加する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: d803c9bec180f45c80e362af49c8eaa12bb9d985
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: abcf77db40f648df1a0cd49922bb49e5c9407811
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621614"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>方法: Windows フォームで印刷プレビューを使用して印刷する
 Windows フォームのプログラミングでは、印刷サービスに加えて印刷プレビューを提供することは非常に一般的です。 印刷プレビューのサービスをアプリケーションに追加する簡単な方法は、ファイルの印刷に <xref:System.Windows.Forms.PrintPreviewDialog> コントロールを <xref:System.Drawing.Printing.PrintDocument.PrintPage> イベント処理ロジックと組み合わせて使用することです。  
@@ -34,7 +35,7 @@ Windows フォームのプログラミングでは、印刷サービスに加え
 3. ドキュメントの印刷の場合と同様、 <xref:System.Drawing.Printing.PrintDocument.PrintPage> イベント ハンドラーで <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> クラスの <xref:System.Drawing.Printing.PrintPageEventArgs> プロパティと、ファイルの内容を使用して、1 ページあたりの行数を計算し、ドキュメントの内容を表示します。 各ページを描画した後で、最後のページかどうかを確認し、 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> の <xref:System.Drawing.Printing.PrintPageEventArgs> プロパティを適切に設定します。 <xref:System.Drawing.Printing.PrintDocument.PrintPage> が <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> になるまで `false`イベントが発生します。 ドキュメントの表示が完了したら、表示される文字列をリセットします。 また、 <xref:System.Drawing.Printing.PrintDocument.PrintPage> イベントがイベント処理メソッドに関連付けられていることを確認します。  
   
     > [!NOTE]
-    >  アプリケーションに印刷を実装した場合は、既に手順 2 および 3 を完了している可能性があります。  
+    > アプリケーションに印刷を実装した場合は、既に手順 2 および 3 を完了している可能性があります。  
   
      次のコード例では、イベント ハンドラーが、フォームで使用されているものと同じフォントで "testPage.txt" ファイルの内容を印刷するために使用されます。  
   
@@ -64,6 +65,6 @@ Windows フォームのプログラミングでは、印刷サービスに加え
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Windows フォームで複数ページのテキスト ファイルを印刷します。](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [方法: Windows フォームで複数ページのテキスト ファイルを印刷する](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)
 - [Windows フォームでのより安全な印刷](../more-secure-printing-in-windows-forms.md)

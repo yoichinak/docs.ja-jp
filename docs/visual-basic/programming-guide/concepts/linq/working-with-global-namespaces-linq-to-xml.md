@@ -1,16 +1,16 @@
 ---
-title: グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
+title: グローバル名前空間の使用 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908012"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350996"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
-使用して XML 名前空間を宣言する機能は、Visual Basic で XML リテラルの主な機能の 1 つ、`Imports`ステートメント。 この機能を使用することで、プレフィックスを使用する XML 名前空間または既定の XML 名前空間を宣言できます。  
+Visual Basic での XML リテラルの重要な機能の 1 つは、`Imports` ステートメントを使用して XML 名前空間を宣言できることです。 この機能を使用することで、プレフィックスを使用する XML 名前空間または既定の XML 名前空間を宣言できます。  
   
  この機能は 2 つの状況で役立ちます。 1 つは、XML リテラルで宣言された名前空間が組み込み式に引き継がれない場合です。 グローバル名前空間を宣言すると、名前空間を伴う組み込み式を使用する必要がある場合の作業が軽減されます。 もう 1 つは、名前空間と XML プロパティを併用するためにグローバル名前空間を宣言する必要がある場合です。  
   
@@ -134,7 +134,7 @@ Console.WriteLine(root.<Child>.Count())
   
  この例は `Child` 要素が存在しないことを示しています。 生成される出力は次のとおりです。  
   
-```  
+```console  
 0  
 ```  
   
@@ -156,7 +156,7 @@ End Module
   
  この例は、`Child` 要素が 1 つ存在することを示しています。 生成される出力は次のとおりです。  
   
-```  
+```console  
 1  
 ```  
   
@@ -193,10 +193,10 @@ End Module
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 http://www.adventure-works.com  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

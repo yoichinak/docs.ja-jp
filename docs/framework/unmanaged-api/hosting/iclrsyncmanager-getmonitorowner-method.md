@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1c986de068cd79ae3662c82ed24906d42bf2780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77debe047f5b379237022f44ef8f9d96718b227d
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759039"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762501"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner メソッド
-取得、 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)指定したクッキーで識別されるモニターを所有するインスタンス。  
+指定したクッキーによって識別されるモニターを所有する[IHostTask](ihosttask-interface.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,40 +36,40 @@ HRESULT GetMonitorOwner (
   
 ## <a name="parameters"></a>パラメーター  
  `cookie`  
- [in]モニターに関連付けられているクッキー。  
+ からモニターに関連付けられているクッキー。  
   
  `ppOwnerHostTask`  
- [out]ポインター、`IHostTask`現在所有しているモニター、または null タスクには、所有権があるない場合。  
+ 入出力`IHostTask`現在モニターを所有しているへのポインター。タスクに所有権がない場合は null。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`GetMonitorOwner` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`GetMonitorOwner`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>Remarks  
- ホストは`GetMonitorOwner`デッドロック検出メカニズムの一部として。 呼び出しを使用して作成する場合は、cookie がモニターを使用して関連付けられている[ihostsyncmanager::createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)します。  
+## <a name="remarks"></a>解説  
+ ホストは通常、 `GetMonitorOwner` デッドロック検出メカニズムの一部としてを呼び出します。 クッキーは、 [IHostSyncManager:: CreateMonitorEvent](ihostsyncmanager-createmonitorevent-method.md)の呼び出しを使用して作成されるときに、モニターに関連付けられます。  
   
 > [!NOTE]
->  モニターを基になるイベントを解放する呼び出しがブロックされる可能性、デッドロックは発生しませんが、-このメソッドの呼び出しがそのモニターに関連付けられている cookie で現在有効である場合。 このモニターの取得を試みる場合、その他のタスクがブロックもあります。  
+> モニターの基になるイベントを解放する呼び出しはブロックされる可能性がありますが、このメソッドの呼び出しが、そのモニターに関連付けられているクッキーで現在有効である場合、デッドロックは発生しません。 他のタスクも、このモニタを取得しようとするとブロックされることがあります。  
   
- `GetMonitorOwner` 常にすぐを返し、呼び出しの後にいつでも呼び出すことができます`CreateMonitorEvent`します。 ホストは、タスクがイベントで待機するまで待機する必要はありません。  
+ `GetMonitorOwner`は常にを直ちに返します。を呼び出した後、いつでも呼び出すことができ `CreateMonitorEvent` ます。 ホストは、タスクがイベントを待機するまで待機する必要はありません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager インターフェイス](iclrsyncmanager-interface.md)
+- [IHostSyncManager インターフェイス](ihostsyncmanager-interface.md)

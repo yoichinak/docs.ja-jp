@@ -15,78 +15,76 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772673"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009068"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps メソッド
-指定したメタデータ シグネチャを持つアセンブリ参照のプロパティのセットを取得します。  
+指定されたメタデータシグネチャを持つアセンブリ参照のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
-    [in]  mdAssemblyRef        mdar,   
-    [out] const void          **ppbPublicKeyOrToken,   
-    [out] ULONG                *pcbPublicKeyOrToken,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] ASSEMBLYMETADATA     *pMetaData,   
-    [out] const void           **ppbHashValue,   
-    [out] ULONG                *pcbHashValue,   
+    [in]  mdAssemblyRef        mdar,
+    [out] const void          **ppbPublicKeyOrToken,
+    [out] ULONG                *pcbPublicKeyOrToken,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] ASSEMBLYMETADATA     *pMetaData,
+    [out] const void           **ppbHashValue,
+    [out] ULONG                *pcbHashValue,
     [out] DWORD                *pdwAssemblyRefFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `mdar`  
- [in]`mdAssemblyRef`プロパティを取得する対象のアセンブリ参照を表すメタデータ トークン。  
+ から`mdAssemblyRef`プロパティを取得する対象のアセンブリ参照を表すメタデータトークン。  
   
  `ppbPublicKeyOrToken`  
- [out]公開キーまたはメタデータ トークンへのポインター。  
+ 入出力公開キーまたはメタデータトークンへのポインター。  
   
  `pcbPublicKeyOrToken`  
- [out]返される公開キー、またはトークンのバイト数。  
+ 入出力返される公開キーまたはトークン内のバイト数。  
   
  `szName`  
- [out]アセンブリの簡易名。  
+ 入出力アセンブリの簡易名。  
   
  `cchName`  
- [in]ワイド文字単位のサイズの`szName`します。  
+ からのサイズ (ワイド文字数) `szName` 。  
   
  `pchName`  
- [out]実際に返されるワイド文字数へのポインター`szName`します。  
+ 入出力実際にで返されるワイド文字数へのポインター `szName` 。  
   
  `pMetaData`  
- [out]アセンブリのメタデータを含む ASSEMBLYMETADATA 構造体へのポインター。  
+ 入出力アセンブリメタデータを格納している ASSEMBLYMETADATA 構造体へのポインター。  
   
  `ppbHashValue`  
- [out]ハッシュ値へのポインター。 これは、sha-1 アルゴリズムを使用して、ハッシュ、 `PublicKey` 、arfFullOriginator のフラグを設定しない限り、参照されるアセンブリのプロパティ、 [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)列挙型を設定します。  
+ 入出力ハッシュ値へのポインター。 これは、参照されるアセンブリのプロパティの SHA-1 アルゴリズムを使用するハッシュです `PublicKey` 。 [Assemblyrefflags](assemblyrefflags-enumeration.md)の列挙の arfFullOriginator フラグが設定されている場合を除きます。  
   
  `pcbHashValue`  
- [out]返されたハッシュ値のワイド文字の数。  
+ 入出力返されたハッシュ値のワイド文字の数。  
   
  `pdwAssemblyRefFlags`  
- [out]アセンブリに適用されるメタデータを記述するフラグをへのポインター。 フラグの値は、1 つ以上の組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値。  
+ 入出力アセンブリに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の[Corassemblyflags](corassemblyflags-enumeration.md)値を組み合わせたものです。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、成功の場合は S_OK を返します。それ以外の場合、Winerror.h ヘッダー ファイルで定義されているエラー コードのいずれかを返します。  
+ 成功した場合、このメソッドは S_OK を返します。それ以外の場合は、Winerror.h ヘッダーファイルで定義されているエラーコードの1つを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)

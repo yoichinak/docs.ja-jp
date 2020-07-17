@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea144784f82c192f41f68394eb2ccdf443db54c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd164008098c053e7d6506a6eef7d3bc8e4274b6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782551"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503704"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings メソッド
 現在のメタデータ スコープ内にあるハードコーディングされた文字列を表す String トークンを列挙します。  
@@ -40,37 +38,37 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `rStrings`  
- [out]文字列トークンを格納するために使用する配列。  
+ 入出力文字列トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rStrings` 配列の最大サイズ。  
   
  `pcStrings`  
- [out]文字列のトークンで返される数`rStrings`します。  
+ 入出力で返された文字列トークンの数 `rStrings` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcStrings`は 0 です。|  
+|`S_OK`|`EnumUserStrings`正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、 `pcStrings` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- 文字列トークンがによって作成された、 [imetadataemit::defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)メソッド。 このメソッドは、コンパイラではなくメタデータ ブラウザーで使用する設計されています。  
+## <a name="remarks"></a>解説  
+ 文字列トークンは、 [IMetaDataEmit::D efineUserString](imetadataemit-defineuserstring-method.md)メソッドによって作成されます。 このメソッドは、コンパイラではなく、メタデータブラウザーによって使用されるように設計されています。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

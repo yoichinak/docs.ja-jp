@@ -1,5 +1,6 @@
 ---
 title: 例外の推奨事項 - .NET
+description: try/catch/finally の使用、例外のない一般的な条件の処理、事前定義済みの .NET の例外の種類の使用など、例外に対するベスト プラクティスについて説明します。
 ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690660"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447096"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
@@ -30,15 +31,15 @@ ms.locfileid: "66690660"
 
 発生する可能性があり、例外をトリガーする可能性がある状態に対し、例外を回避する方法で処理することを検討します。 たとえば、既に終了している接続を終了しようとすると、`InvalidOperationException` を受け取ります。 `if` ステートメントを使用して、終了しようとする前に接続状態を確認することで、これを回避することができます。
 
-[!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
-[!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
+[!code-cpp[Conceptual.Exception.Handling#2](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
+[!code-csharp[Conceptual.Exception.Handling#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
+[!code-vb[Conceptual.Exception.Handling#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 終了する前に接続状態を確認しない場合は、`InvalidOperationException` 例外をキャッチする可能性があります。
 
-[!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
-[!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
+[!code-cpp[Conceptual.Exception.Handling#3](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
+[!code-csharp[Conceptual.Exception.Handling#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
+[!code-vb[Conceptual.Exception.Handling#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 選択するメソッドは、予期されるイベント発生頻度によって決まります。
 
@@ -50,13 +51,13 @@ ms.locfileid: "66690660"
 
 クラスは、例外をトリガーする呼び出しを行うことを回避できるようにするメソッドとプロパティを提供できます。 たとえば、<xref:System.IO.FileStream> クラスには、ファイルの終端に到達したかどうかを判別するために役立つメソッドが用意されています。 これらは、ファイルの終端を越えて読み取りを実行しようとした場合にも例外がスローされないようにするために使用できます。 次の例では、例外をトリガーすることなく、ファイルの末尾まで読み取る方法を示します。
 
-[!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
-[!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
+[!code-cpp[Conceptual.Exception.Handling#5](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
+[!code-csharp[Conceptual.Exception.Handling#5](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
+[!code-vb[Conceptual.Exception.Handling#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
 例外が返されるのを回避するもう 1 つの方法は、非常に一般的なエラーの場合に、例外をスローする代わりに null (または既定値) を返すことです。 非常に一般的なエラーは、通常の制御の流れと見なすことができます。 このような場合は、null (または既定値) を返すことによって、アプリケーションのパフォーマンスへの影響を最小限に抑えることができます。
 
-値の型の場合、`Nullable<T>` または既定値をエラー インジケーターとして使用するかどうかを特定のアプリに関して検討します。 `Nullable<Guid>` を使用すると、`default` は `Guid.Empty` ではなく `null` になります。 `Nullable<T>` を追加すると、値があるときとないときがはっきりすることがあります。 `Nullable<T>` を追加すると、不要な確認事項が増え、潜在的なエラーの原因にしかならないこともあります。 
+値の型の場合、`Nullable<T>` または既定値をエラー インジケーターとして使用するかどうかを特定のアプリに関して検討します。 `Nullable<Guid>` を使用すると、`default` は `Guid.Empty` ではなく `null` になります。 `Nullable<T>` を追加すると、値があるときとないときがはっきりすることがあります。 `Nullable<T>` を追加すると、不要な確認事項が増え、潜在的なエラーの原因にしかならないこともあります。
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>エラー コードを返す代わりに、例外をスローする
 
@@ -74,19 +75,19 @@ ms.locfileid: "66690660"
 
 カスタム例外が必要な場合は、適切に名前を付け、<xref:System.Exception> クラスから派生させます。 次に例を示します。
 
-[!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
-[!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
+[!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
+[!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
+[!code-vb[Conceptual.Exception.Handling#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>カスタム例外クラスに 3 つのコンストラクターを含める
 
-独自の例外クラスを作成するときに、少なくとも 3 つの共通コンストラクターを使用します。それらは、既定のコンストラクター、文字列メッセージを受け取るコンストラクター、および文字列メッセージと内部例外を受け取るコンストラクターです。
+独自の例外クラスを作成するときに、少なくとも 3 つの共通コンストラクターを使用します。それらは、パラメーターなしのコンストラクター、文字列メッセージを受け取るコンストラクター、および文字列メッセージと内部例外を受け取るコンストラクターです。
 
-* 既定の値を使用する <xref:System.Exception.%23ctor>。
+- 既定の値を使用する <xref:System.Exception.%23ctor>。
 
-* 文字列メッセージを受け取る <xref:System.Exception.%23ctor%28System.String%29>。
+- 文字列メッセージを受け取る <xref:System.Exception.%23ctor%28System.String%29>。
 
-* 文字列メッセージと内部例外を受け取る <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>。
+- 文字列メッセージと内部例外を受け取る <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>。
 
 例については、「[方法: ユーザー定義の例外を作成する](how-to-create-user-defined-exceptions.md)」をご覧ください。
 
@@ -110,7 +111,11 @@ ms.locfileid: "66690660"
 
 ユーザーに対して表示されるエラー メッセージは、例外クラスの名前ではなく、スローされた例外の <xref:System.Exception.Message?displayProperty=nameWithType> プロパティから派生されます。 通常は、メッセージ文字列を[例外コンストラクター](xref:System.Exception.%23ctor%2A)の `message` 引数に渡すことで、<xref:System.Exception.Message?displayProperty=nameWithType> プロパティに値を割り当てます。
 
-ローカライズされたアプリケーションの場合は、アプリケーションがスローできるすべての例外に、ローカライズされたメッセージ文字列を指定する必要があります。 ローカライズされたエラー メッセージを指定するには、リソース ファイルを使用します。 アプリケーションのローカライズと、ローカライズされた文字列の取得の詳細については、[デスクトップ アプリケーションのリソース](../../framework/resources/index.md)と <xref:System.Resources.ResourceManager?displayProperty=nameWithType>に関するページを参照してください。
+ローカライズされたアプリケーションの場合は、アプリケーションがスローできるすべての例外に、ローカライズされたメッセージ文字列を指定する必要があります。 ローカライズされたエラー メッセージを指定するには、リソース ファイルを使用します。 アプリケーションのローカライズとローカライズされた文字列の取得の詳細については、次の記事を参照してください。
+
+- [方法: ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する](how-to-create-localized-exception-messages.md)
+- [デスクトップ アプリケーションのリソース](../../framework/resources/index.md)
+- <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>カスタム例外で、必要に応じて追加のプロパティを提供する
 
@@ -124,9 +129,9 @@ ms.locfileid: "66690660"
 
 一般に、クラスはクラス実装内の複数の位置で同一の例外をスローします。 コードが長くなることを防ぐため、例外を作成して返すヘルパー メソッドを使用します。 次に例を示します。
 
-[!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
-[!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+[!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
+[!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
+[!code-vb[Conceptual.Exception.Handling#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
 
 場合によっては、例外のコンストラクターを使用して例外を作成する方が適切な場合もあります。 <xref:System.ArgumentException> などのグローバル例外クラスはその一例です。
 
@@ -141,6 +146,14 @@ public void TransferFunds(Account from, Account to, decimal amount)
     // If the deposit fails, the withdrawal shouldn't remain in effect.
     to.Deposit(amount);
 }
+```
+
+```vb
+Public Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    from.Withdrawal(amount)
+    ' If the deposit fails, the withdrawal shouldn't remain in effect.
+    [to].Deposit(amount)
+End Sub
 ```
 
 上記のメソッドでは例外は直接スローされませんが、預金操作が失敗した場合、引き出しが取り消されるよう、安全性を優先して記述する必要があります。
@@ -163,19 +176,43 @@ private static void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    Dim withdrawalTrxID As String = from.Withdrawal(amount)
+    Try
+        [to].Deposit(amount)
+    Catch
+        from.RollbackTransaction(withdrawalTrxID)
+        Throw
+    End Try
+End Sub
+```
+
 この例では、`throw` を使用して、元の例外を再スローすることを示しています。これにより、呼び出し元が <xref:System.Exception.InnerException> プロパティを確認することなく、問題の本当の原因を容易に確認できるようになります。 別の方法は、新しい例外をスローして元の例外を内部例外として含めることです。
 
 ```csharp
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    throw new TransferFundsException("Withdrawal failed.", innerException: ex)
     {
         From = from,
         To = to,
         Amount = amount
     };
 }
+```
+
+```vb
+Catch ex As Exception
+    from.RollbackTransaction(withdrawalTrxID)
+    Throw New TransferFundsException("Withdrawal failed.", innerException:=ex) With
+    {
+        .From = from,
+        .[To] = [to],
+        .Amount = amount
+    }
+End Try
 ```
 
 ## <a name="see-also"></a>関連項目

@@ -10,20 +10,18 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586006"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180502"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>方法: リフレクションを使用してデリゲートをフックする
-リフレクションを使用して、アセンブリを読み込んで実行する場合、C# の `+=` 演算子や Visual Basic の [AddHandler ステートメント](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)のような言語機能を使用してイベントをフックすることはできません。 次の手順では、必要なすべての型をリフレクションによって取得することで、既存のメソッドをイベントにフックする方法と、リフレクション出力を使用して動的メソッドを作成し、それをイベントにフックする方法を示します。  
+リフレクションを使用して、アセンブリを読み込んで実行する場合、C# の `+=` 演算子や Visual Basic の [AddHandler ステートメント](../../visual-basic/language-reference/statements/addhandler-statement.md)のような言語機能を使用してイベントをフックすることはできません。 次の手順では、必要なすべての型をリフレクションによって取得することで、既存のメソッドをイベントにフックする方法と、リフレクション出力を使用して動的メソッドを作成し、それをイベントにフックする方法を示します。  
   
 > [!NOTE]
->  イベント処理デリゲートをフックするもう 1 つの方法については、<xref:System.Reflection.EventInfo.AddEventHandler%2A> クラスの <xref:System.Reflection.EventInfo> メソッドのコード例を参照してください。  
+> イベント処理デリゲートをフックするもう 1 つの方法については、<xref:System.Reflection.EventInfo.AddEventHandler%2A> クラスの <xref:System.Reflection.EventInfo> メソッドのコード例を参照してください。  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>リフレクションを使用してデリゲートをフックするには  
   
@@ -33,7 +31,7 @@ ms.locfileid: "65586006"
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. 型を表す <xref:System.Type> オブジェクトを取得し、型のインスタンスを作成します。 このフォームは既定のコンストラクターを持つため、次のコードでは <xref:System.Activator.CreateInstance%28System.Type%29> メソッドを使用します。 作成する型が既定のコンストラクターを持たない場合に使用できる <xref:System.Activator.CreateInstance%2A> メソッドの他のオーバーロードが複数あります。 アセンブリについては何もわからないという架空の状態を保つために、新しいインスタンスは <xref:System.Object> 型として格納されます  (リフレクションを使用すると、事前に型名がわからなくてもアセンブリ内の型を取得できます)。  
+2. 型を表す <xref:System.Type> オブジェクトを取得し、型のインスタンスを作成します。 このフォームはパラメーターなしのコンストラクターを持つため、次のコードでは <xref:System.Activator.CreateInstance%28System.Type%29> メソッドを使用します。 作成する型がパラメーターなしのコンストラクターを持たない場合に使用できる、<xref:System.Activator.CreateInstance%2A> メソッドのその他のオーバーロードがいくつかあります。 アセンブリについては何もわからないという架空の状態を保つために、新しいインスタンスは <xref:System.Object> 型として格納されます (リフレクションを使用すると、事前に型名がわからなくてもアセンブリ内の型を取得できます)。  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]
@@ -57,7 +55,7 @@ ms.locfileid: "65586006"
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. `add` アクセサー メソッドを取得し、このメソッドを呼び出してイベントをフックします。 すべてのイベントに、`add` アクセサーと `remove` アクセサーがあります。これらのアクセサーは高水準言語の構文によって隠ぺいされます。 たとえば、C# では `+=` 演算子を使用してイベントをフックし、Visual Basic では [AddHandler ステートメント](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)を使用します。 次のコードでは、`add` イベントの <xref:System.Windows.Forms.Control.Click> アクセサーを取得し、遅延バインディングによってこれを呼び出して、デリゲート インスタンスに渡します。 引数は配列として渡す必要があります。  
+6. `add` アクセサー メソッドを取得し、このメソッドを呼び出してイベントをフックします。 すべてのイベントに、`add` アクセサーと `remove` アクセサーがあります。これらのアクセサーは高水準言語の構文によって隠ぺいされます。 たとえば、C# では `+=` 演算子を使用してイベントをフックし、Visual Basic では [AddHandler ステートメント](../../visual-basic/language-reference/statements/addhandler-statement.md)を使用します。 次のコードでは、`add` イベントの <xref:System.Windows.Forms.Control.Click> アクセサーを取得し、遅延バインディングによってこれを呼び出して、デリゲート インスタンスに渡します。 引数は配列として渡す必要があります。  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]
@@ -69,7 +67,7 @@ ms.locfileid: "65586006"
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-<a name="procedureSection1"></a>   
+<a name="procedureSection1"></a>
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>動的メソッドを使用して実行時にイベント ハンドラーを生成するには  
   
 1. 軽量の動的メソッドとリフレクション出力を使用して、イベント ハンドラーのメソッドを実行時に生成できます。 イベント ハンドラーを作成するには、デリゲートの戻り値の型とパラメーターの型が必要です。 これらは、デリゲートの `Invoke` メソッドを調べることによって入手できます。 次のコードでは、`GetDelegateReturnType` メソッドと `GetDelegateParameterTypes` メソッドを使用して、この情報を取得します。 これらのメソッドのコードは、このトピックで後ほど示す「使用例」セクションにあります。  
@@ -80,7 +78,7 @@ ms.locfileid: "65586006"
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. メソッド本体を生成します。 このメソッドは文字列を読み込み、文字列を受け取る <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> メソッドのオーバーロードを呼び出します。次に、戻り値をスタックからポップし (ハンドラーには戻り値の型がないため)、返されます。 動的メソッドの出力の詳細については、「[方法: 動的メソッドを定義および実行する](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」を参照してください。  
+2. メソッド本体を生成します。 このメソッドは文字列を読み込み、文字列を受け取る <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> メソッドのオーバーロードを呼び出します。次に、戻り値をスタックからポップし (ハンドラーには戻り値の型がないため)、返されます。 動的メソッドの出力の詳細については、「[方法: 動的メソッドを定義および実行する](how-to-define-and-execute-dynamic-methods.md)」を参照してください。  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -111,5 +109,5 @@ ms.locfileid: "65586006"
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [方法: 動的メソッドを定義および実行する](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [方法: 動的メソッドを定義および実行する](how-to-define-and-execute-dynamic-methods.md)
+- [リフレクション](reflection.md)

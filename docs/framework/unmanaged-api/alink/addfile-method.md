@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742383"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446687"
 ---
 # <a name="addfile-method"></a>AddFile メソッド
-アセンブリには、ファイルを追加します。 非バインド モジュールの作成にも使用できます。  
+アセンブリにファイルを追加します。 は、バインドされていないモジュールを作成するためにも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,28 +39,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- 追加する対象のアセンブリの一意の ID。  
+ 補強するアセンブリの一意の ID。  
   
  `pszFilename`  
  追加するファイルの完全修飾名。  
   
  `dwFlags`  
- COM + FileDef フラグなど`ffContainsNoMetaData`と`ffWriteable`します。 `dwFlags` 渡される[DefineFile メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)します。  
+ `ffContainsNoMetaData` や `ffWriteable`などの COM + FileDef フラグ。 `dwFlags` は、の[メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
   
  `pEmitter`  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)メタデータを出力するために必要な場合に使用するインターフェイス。  
+ 必要に応じて、メタデータを出力するために使用される[IMetaDataEmit インターフェイス](../metadata/imetadataemit-interface.md)インターフェイス。  
   
  `pFileToken`  
- 追加されたファイルの一意の ID を格納する場所へのポインター。  
+ 追加されたファイルの一意の ID が格納される場所へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

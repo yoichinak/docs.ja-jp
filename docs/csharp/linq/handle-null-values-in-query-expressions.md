@@ -3,12 +3,12 @@ title: クエリ式の null 値の処理 (C# での LINQ)
 description: C# の LINQ クエリ式で null 値を処理する方法について説明します。
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 14609aee2bbd1fbb487589bb41683a1f3cad1362
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 3da490b72bd518df7be8c14b34655af8c6f84929
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857568"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249306"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>クエリ式の null 値の処理
 
@@ -24,7 +24,7 @@ ms.locfileid: "54857568"
 
 ## <a name="example"></a>例
 
-join 句で、比較キーの一方だけが null 許容値型である場合、クエリ式でもう一方のキーを null 許容型にキャストできます。 次の例では、`EmployeeID` は `int?` 型の値を含む列であるとします。
+join 句で、比較キーの一方だけが null 許容値型である場合、クエリ式でもう一方のキーを null 許容値型にキャストできます。 次の例では、`EmployeeID` は `int?` 型の値を含む列であるとします。
 
 [!code-csharp[csProgGuideLINQ#83](~/samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]
 
@@ -32,4 +32,4 @@ join 句で、比較キーの一方だけが null 許容値型である場合、
 
 - <xref:System.Nullable%601>
 - [統合言語クエリ (LINQ)](index.md)
-- [Null 許容型](../programming-guide/nullable-types/index.md)
+- [null 許容値型](../language-reference/builtin-types/nullable-value-types.md)

@@ -15,46 +15,44 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8ac12d5b6bc2911e3bd879285a9a12f65c426f0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745854"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008197"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map メソッド
-メタデータ署名を使用して、アセンブリ間のリレーションシップをマップします。  
+メタデータシグネチャを使用して、アセンブリ間のリレーションシップをマップします。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Map (  
-    [in]  mdToken tkImp,   
+    [in]  mdToken tkImp,
     [in]  mdToken tkEmit  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `tkImp`  
- [in]コードをインポート オブジェクトを表すメタデータ トークンです。  
+ からインポートされたコードオブジェクトを表すメタデータトークン。  
   
  `tkEmit`  
- [in]出力コード オブジェクトを表すメタデータ トークンです。  
+ から出力されたコードオブジェクトを表すメタデータトークン。  
   
-## <a name="remarks"></a>Remarks  
- トークンの再マップは、マージ中が発生、インポートされた (ソース) のメタデータ スコープ内に元のトークンがスコープ設定し、出力 (ターゲット) のメタデータ スコープに新しいトークンがスコープ設定します。  
+## <a name="remarks"></a>コメント  
+ マージ中にトークンの再マップが行われると、元のトークンはインポートされた (ソース) メタデータスコープ内でスコープが設定され、新しいトークンのスコープは、出力された (ターゲット) メタデータスコープに設定されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMapToken インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [IMapToken インターフェイス](imaptoken-interface.md)

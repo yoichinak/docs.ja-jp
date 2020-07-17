@@ -8,26 +8,26 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed28ae4a52085cbfa781b4baf2ee1eafbeff6eb4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674490"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79154830"
 ---
 # <a name="module-element-network-settings"></a>\<module> 要素 (ネットワーク設定)
 新しいプロキシ モジュールをアプリケーションに追加します。  
-  
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<module>  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<module>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<module   
-  type="type_fullname, assembly_fullname"   
+<module
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
@@ -38,7 +38,7 @@ ms.locfileid: "61674490"
   
 |**属性**|**説明**|  
 |-------------------|---------------------|  
-|`type`|完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、プロキシを実装する、コンマで区切られました。|  
+|`type`|プロキシを実装する、(プロパティによって示される) 完全修飾型名 <xref:System.Type.FullName%2A> と、コンマで区切られたアセンブリ名 (プロパティによって示され <xref:System.Reflection.Assembly.FullName%2A> ます)。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -47,18 +47,18 @@ ms.locfileid: "61674490"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
   
-## <a name="remarks"></a>Remarks  
- `module`要素を実装するプロキシ クラスの登録、<xref:System.Net.IWebProxy>インターフェイス。 プロキシ クラスを登録した後`module`サポートされているプロキシを使用して情報を要求するために使用できます。  
+## <a name="remarks"></a>解説  
+ 要素は、 `module` インターフェイスを実装するプロキシクラスを登録し <xref:System.Net.IWebProxy> ます。 プロキシクラスを登録した後、を `module` 使用して、サポートされているプロキシ経由で情報を要求できます。  
   
- 値、`type`属性がモジュールのクラス名と名前の対応するダイナミック リンク ライブラリ (DLL) にする必要があります。  
+ 属性の値は、 `type` モジュールのクラス名と、対応するダイナミックリンクライブラリ (DLL) の名前にする必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、カスタムのプロキシ クラスを登録します。  
+ 次の例では、カスタムプロキシクラスを登録します。  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ ms.locfileid: "61674490"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

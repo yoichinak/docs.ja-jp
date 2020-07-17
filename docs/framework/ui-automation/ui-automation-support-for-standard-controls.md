@@ -5,28 +5,28 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 36028d589e98177f6a0e83092edd656860b1a8d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802118"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179851"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI オートメーションによる標準コントロールのサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
- このトピックでは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]、および [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]フレームワーク向けに開発されたアプリケーションの標準コントロールに対する [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] サポートについて説明します。  
+ このトピックでは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 Win32 、 Windows[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]フォーム の各フレームワーク用に開発されたアプリケーションでの標準コントロールのサポートについて説明します。  
   
-<a name="Windows_Presentation_Foundation_Controls"></a>   
+<a name="Windows_Presentation_Foundation_Controls"></a>
 ## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation コントロール  
  ユーザー操作に関する情報やサポートを提供するすべての [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロール要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を全面的にネイティブ サポートしています。 パネルなどのその他の要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]からは認識できません。  
   
-<a name="Win32_Controls"></a>   
+<a name="Win32_Controls"></a>
 ## <a name="win32-controls"></a>Win32 コントロール  
- ほとんどの [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コントロールは、UIAutomationClientsideProviders.dll のクライアント側プロバイダーによって [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] に公開されています。 このアセンブリは、UI オートメーション クライアント アプリケーションで使用するために、自動的に登録されます。  
+ ほとんどの Win32 コントロールは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]クライアント側プロバイダーを通じて公開されます。 このアセンブリは、UI オートメーション クライアント アプリケーションで使用するために、自動的に登録されます。  
   
- 完全なサポートは、ComCtrl32.dll のバージョン 6 ( [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] 以降で使用可能) のコントロールに対してのみ提供されています。  
+ 完全サポートは、バージョン 6 の*ComCtrl32.dll*のコントロールに対してのみ提供されます。  
   
  次のコントロールがサポートされています。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "67802118"
 |----------------|------------------|  
 |ボタン|ボタン|  
 |ボタン|RadioButton|  
-|ボタン|グループ化|  
+|ボタン|グループ|  
 |ボタン|CheckBox|  
 |ボタン|ハイパーリンク|  
 |ボタン|SplitButton|  
 |ボタン|CheckBox|  
-|ComboBoxEx32|ComboBox|  
-|ComboBox|ComboBox|  
-|編集|ドキュメント|  
-|編集|編集|  
+|ComboBoxEx32|コンボ ボックス|  
+|コンボ ボックス|コンボ ボックス|  
+|[編集]|ドキュメント|  
+|[編集]|[編集]|  
 |SysLink|ハイパーリンク|  
-|スタティック|テキスト|  
-|スタティック|イメージ|  
-|SysIPAddress32|カスタム|  
+|静的|Text|  
+|静的|Image|  
+|SysIPAddress32|Custom|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|List|  
@@ -55,7 +55,7 @@ ms.locfileid: "67802118"
 |#32768|メニュー|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|ドキュメント。 注を参照。|  
+|RichEdit|ドキュメントです。 注を参照。|  
 |RichEdit20A|ドキュメント|  
 |RichEdit20W|ドキュメント|  
 |RichEdit50W|ドキュメント|  
@@ -63,7 +63,7 @@ ms.locfileid: "67802118"
 |msctls_trackbar32|スライダー|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tab|  
+|SysTabControl32|タブ|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -77,40 +77,40 @@ ms.locfileid: "67802118"
 |SysTreeView32|ツリー|  
 |SysTreeView32|TreeItem|  
   
- **注** RichEdit コントロールは、 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] に付属するバージョン (RichEd20.dll バージョン 3.1 以降、および MsftEdit.dll バージョン 4.1 以降) に対してのみサポートされます。  
+ **注**コントロールは、Windows Vista に同梱されているバージョン (リッチエディット 3.1 以降、および MsftEdit.dll バージョン 4.1 以降) でのみサポートされます。  
   
  次のコントロールはサポートされていません。  
   
 |クラス名|コントロール型|  
 |----------------|------------------|  
-|SysAnimate32|イメージ|  
+|SysAnimate32|Image|  
 |SysPager|Spinner|  
-|SysDateTimePick32|カスタム|  
-|SysMonthCal32|予定表|  
-|MS_WINNOTE|ヒント|  
-|VBBubble|ヒント|  
+|SysDateTimePick32|Custom|  
+|SysMonthCal32|Calendar|  
+|MS_WINNOTE|[ツールヒント]|  
+|VBBubble|[ツールヒント]|  
 |ScrollBar (スタンドアロン コントロールとして使用される場合)|スライダー|  
-|SuperGrid|カスタム|  
+|SuperGrid|Custom|  
   
-<a name="Windows_Forms_Controls"></a>   
+<a name="Windows_Forms_Controls"></a>
 ## <a name="windows-forms-controls"></a>Windows フォーム コントロール  
- Windows フォーム コントロールに公開[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]UIAutomationClientsideProviders.dll のクライアント側プロバイダーを経由します。 このアセンブリは、UI オートメーション クライアント アプリケーションで使用するために、自動的に登録されます。  
+ Windows フォーム コントロールは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]クライアント側プロバイダーを通じて公開されます。 このアセンブリは、UI オートメーション クライアント アプリケーションで使用するために、自動的に登録されます。  
   
- 通常、Windows フォーム コントロール用のマネージ ラッパー[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]で一般的なコントロールがサポートされる[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]します。 次のコントロールがサポートされています。  
+ 通常、Win32 コモン コントロールのマネージ ラッパーである Windows フォーム[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]コントロールは、 でサポートされます。 次のコントロールがサポートされています。  
   
-|クラス名|  
+|Class Name (クラス名)|  
 |----------------|  
 |ボタン|  
 |CheckBox|  
 |CheckedListBox|  
 |ColorDialog|  
-|ComboBox|  
+|コンボ ボックス|  
 |FolderBrowser|  
 |FontDialog|  
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|group1|  
+|Label|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -128,15 +128,15 @@ ms.locfileid: "67802118"
 |StatusBar|  
 |TabControl/TabPage|  
 |TextBox|  
-|タイマー|  
-|ToolBar|  
+|Timer|  
+|ツール バー|  
 |ヒント|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |Web ブラウザー|  
   
- 次のコントロールに公開[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]Microsoft Active Accessibility のサポートによってのみです。 一部の機能が使用できないことがあります。  
+ 次のコントロールは、Microsoft[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]のアクティブ なユーザー補助機能のサポートを通じてのみ公開されます。 一部の機能が使用できないことがあります。  
   
 |コントロール名|  
 |------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "67802118"
 |DomainUpDown|  
 |ErrorProvider|  
 |FlowLayoutPanel|  
-|フォーム|  
+|Form|  
 |LinkLabel|  
 |HelpProvider|  
 |MaskedTextBox|  
@@ -169,4 +169,4 @@ ms.locfileid: "67802118"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+- [UI オートメーション コントロール型](ui-automation-control-types.md)

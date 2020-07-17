@@ -1,5 +1,5 @@
 ---
-title: New 演算子 (Visual Basic)
+title: new 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.new
@@ -11,46 +11,46 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 27b5b4516ef729045036c36fedc24b6c576a4f61
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936631"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348314"
 ---
 # <a name="new-operator-visual-basic"></a>New 演算子 (Visual Basic)
-導入されています、 `New` 、新しいオブジェクト インスタンスを作成する句が、型パラメーターにコンス トラクター制約を指定または識別、`Sub`クラスのコンス トラクターと手順。  
-  
-## <a name="remarks"></a>Remarks  
- 代入ステートメントの宣言で、`New`句は、定義済みクラスのインスタンスを作成できますを指定する必要があります。 つまり、クラスが呼び出し元のコードにアクセスできる 1 つまたは複数のコンス トラクターを公開する必要があります。  
-  
- 使用することができます、`New`宣言ステートメントまたは代入ステートメントの句。 ステートメントを実行すると、指定した引数を渡さず、指定したクラスの適切なコンス トラクターを呼び出します。 次の例では、これを示しますのインスタンスを作成、`Customer`を 2 つのコンス トラクターを持つクラス、もう 1 つはパラメーターはとらず文字列パラメーターを受け取る。  
-  
- [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
-  
- 配列は、クラスであるため`New`次の例に示すように、配列の新しいインスタンスを作成することができます。  
-  
- [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
-  
- 共通言語ランタイム (CLR) がスローされます、<xref:System.OutOfMemoryException>エラーの新しいインスタンスを作成する十分なメモリがある場合。  
-  
+
+新しいオブジェクト インスタンスを作成するための `New` 句の導入、型パラメーターでのコンストラクター制約の指定、またはクラス コンストラクターとして `Sub` プロシージャの指定を行います。
+
+## <a name="remarks"></a>Remarks
+
+宣言または代入ステートメントで、`New` 句によって、インスタンスの作成元として使用できる定義済みのクラスを指定する必要があります。 つまり、このクラスによって、呼び出し元のコードがアクセスできる 1 つ以上のコンストラクターが公開されなければなりません。
+
+`New` 句は、宣言ステートメントまたは代入ステートメントで使用できます。 このステートメントが実行されると、指定したクラスの適切なコンストラクターが呼び出され、指定した引数が渡されます。 これを示す例を次に紹介します。2 つのコンストラクターがある `Customer` クラスのインスタンスを作成し、コンストラクターの 1 つはパラメーターを受け取らず、もう 1 つは文字列パラメーターを受け取ります。
+
+[!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
+
+配列はクラスであるため、次の例に示すように、`New` によって新しい配列インスタンスを作成できます。
+
+[!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
+
+新しいインスタンスを作成するためのメモリが不足している場合、共通言語ランタイム (CLR) は <xref:System.OutOfMemoryException> エラーをスローします。
+
 > [!NOTE]
->  `New`キーワードが指定された型が、アクセス可能なパラメーターなしのコンス トラクターを公開する必要がありますを指定する型パラメーター リストで使用もします。 型パラメーターや制約の詳細については、次を参照してください。[型リスト](../../../visual-basic/language-reference/statements/type-list.md)します。  
-  
- クラスのコンス トラクターのプロシージャを作成するには、設定の名前、`Sub`する手順、`New`キーワード。 詳細については、次を参照してください。[オブジェクトの有効期間。オブジェクトの作成し、破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)します。  
-  
- キーワード `New` は次のコンテキストで使用できます。  
-  
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
-  
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+> `New` キーワードを型パラメーター リストで使用して、指定した型が、アクセス可能なパラメーターなしのコンストラクターを公開する必要があること指定することもできます。 型パラメーターと制約の詳細については、「[型リスト](../statements/type-list.md)」を参照してください。
+
+クラスのコンストラクター プロシージャを作成するには、`Sub` プロシージャの名前を `New` キーワードに設定します。 詳細については、以下をご覧ください: [オブジェクトの有効期間: オブジェクトの作成と破棄](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+
+キーワード `New` は次のコンテキストで使用できます。
+
+- [Dim ステートメント](../statements/dim-statement.md)
+- [Of](../statements/of-clause.md)
+- [Sub ステートメント](../statements/sub-statement.md)
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.OutOfMemoryException>
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [オブジェクトの有効期間:オブジェクトを作成および破棄する方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [キーワード](../keywords/index.md)
+- [型リスト](../statements/type-list.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [オブジェクトの有効期間: オブジェクトの作成と破棄](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

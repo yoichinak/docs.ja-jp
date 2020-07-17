@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e64e39d10d20f63430ffe9d2c4df8643e286a677
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994826"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210036"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly メソッド
 
-指定したメタデータ トークンによって参照されるアセンブリを解決します。
+指定したメタデータトークンによって参照されるアセンブリを解決します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,21 +38,21 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>パラメーター
 
 `tkAssemblyRef`\
-[in]`mdToken`アセンブリを参照する値。
+から`mdToken`アセンブリを参照する値。
 
 `ppAssembly`\
-[out]アセンブリを表す ICorDebugAssembly オブジェクトのアドレスへのポインター。
+入出力アセンブリを表す、オブジェクトのアドレスへのポインター。
 
 ## <a name="remarks"></a>Remarks
 
-場合は、アセンブリが既に読み込まれていない場合に`ResolveAssembly`が呼び出され、HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY の値が返されます。
+が呼び出されたときにアセンブリがまだ読み込まれていない場合は `ResolveAssembly` 、CORDBG_E_CANNOT_RESOLVE_ASSEMBLY の HRESULT 値が返されます。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
 **ヘッダー:** CorDebug.idl、CorDebug.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

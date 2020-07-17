@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2::GetSymbolProviderForImage メソッド
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 817103e4aa5b3f56d0601382bbc268b969a919e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7800630be0ed9afb321d607046be308088781388
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750036"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976448"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>ICorDebugDataTarget2::GetSymbolProviderForImage メソッド
 モジュールのベース アドレスからそのモジュールのシンボル プロバイダーを返します。  
@@ -18,33 +16,33 @@ ms.locfileid: "67750036"
   
 ```cpp  
 HRESULT GetSymbolProviderForImage(  
-    [in] CORDB_ADDRESS imageBaseAddress,   
+    [in] CORDB_ADDRESS imageBaseAddress,
     [out] ICorDebugSymbolProvider **ppSymProvider  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `imageBaseAddress`  
- [in]A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)モジュールのベース アドレスを表す値です。  
+ からモジュールのベースアドレスを表す[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)値。  
   
  `ppSymProvider`  
- [out]アドレスへのポインター、 [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)オブジェクト。  
+ 入出力ツール[プロバイダー](icordebugsymbolprovider-interface.md)オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget2 インターフェイス](icordebugdatatarget2-interface.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

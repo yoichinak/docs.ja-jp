@@ -2,24 +2,24 @@
 title: Entity SQL クイック リファレンス
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: fc7cf8f8f692f9dc4230569d5f575b6d5fad19fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785256"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150351"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL クイック リファレンス
-このトピックでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリのクイック リファレンスを提供します。 このトピック内のクエリは、AdventureWorks Sales model に基づいています。  
+このトピックでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリのクイック リファレンスを提供します。 このトピックのクエリでは、AdventureWorks Sales Model が使用されています。  
   
 ## <a name="literals"></a>リテラル  
   
 ### <a name="string"></a>String  
- Unicode と非 Unicode の文字列リテラルがあります。 Unicode 文字列の先頭 n. にはたとえば、`N'hello'`します。  
+ Unicode と非 Unicode の文字列リテラルがあります。 Unicode 文字列は先頭に N が付きます。たとえば、`N'hello'` のようになります。  
   
  非 Unicode 文字列リテラルの例を次に示します。  
   
-```  
+```sql  
 'hello'  
 --same as  
 "hello"  
@@ -36,8 +36,8 @@ ms.locfileid: "61785256"
   
  例:  
   
-```  
-DATETIME '2006-12-25 01:01:00.000'   
+```sql  
+DATETIME '2006-12-25 01:01:00.000'
 --same as  
 DATETIME '2006-12-25 01:01'  
 ```  
@@ -53,7 +53,7 @@ DATETIME '2006-12-25 01:01'
   
  例:  
   
-```  
+```sql  
 --a collection of integers  
 {1, 2, 3}  
 ```  
@@ -72,13 +72,13 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>型コンストラクター  
   
 ### <a name="row"></a>ROW  
- [行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)としての匿名の構造的に型指定された (レコード) 値を作成します。 `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [ROW](row-entity-sql.md) では、`ROW(1 AS myNumber, ‘Name’ AS myName).` のように、構造的に型付けされた匿名のレコード値が作成されます。  
   
  例:  
   
-```  
-SELECT VALUE row (product.ProductID as ProductID, product.Name   
-    as ProductName) FROM AdventureWorksEntities.Product AS product  
+```sql  
+SELECT VALUE row (product.ProductID AS ProductID, product.Name
+    AS ProductName) FROM AdventureWorksEntities.Product AS product
 ```  
   
  Output:  
@@ -91,13 +91,13 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
 |...|...|  
   
 ### <a name="multiset"></a>MULTISET  
- [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)など、コレクションを構築します。  
+ [MULTISET](multiset-entity-sql.md) では、次のようなコレクションが作成されます。  
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
  例:  
   
-```  
+```sql  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
 ```  
   
@@ -108,14 +108,14 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- [という名前の型コンス トラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)など、ユーザー定義の (名前付き) のオブジェクトを構築します`person("abc", 12)`します。  
+ [名前付きの型コンストラクター](named-type-constructor-entity-sql.md)では、`person("abc", 12)` のように、名前付きのユーザー定義オブジェクトが作成されます。  
   
  例:  
   
-```  
-SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,   
-o.ProductID, o.SpecialOfferID, o.UnitPrice, o.UnitPriceDiscount,   
-o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail   
+```sql  
+SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,
+o.ProductID, o.SpecialOfferID, o.UnitPrice, o.UnitPriceDiscount,
+o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail
 AS o  
 ```  
   
@@ -127,12 +127,12 @@ AS o
 |2|4911-403C-98|3|777|...|  
 |...|...|...|...|...|  
   
-## <a name="references"></a>参照  
+## <a name="references"></a>関連項目  
   
 ### <a name="ref"></a>REF  
- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)エンティティ型のインスタンスへの参照を作成します。 たとえば、次のクエリは、Orders エンティティ セットの各 Order エンティティへの参照を返します。  
+ [REF](ref-entity-sql.md) では、エンティティ型のインスタンスへの参照が作成されます。 たとえば、次のクエリは、Orders エンティティ セットの各 Order エンティティへの参照を返します。  
   
-```  
+```sql  
 SELECT REF(o) AS OrderID FROM Orders AS o  
 ```  
   
@@ -149,9 +149,9 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  例:  
   
-```  
-SELECT VALUE REF(p).Name FROM   
-    AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE REF(p).Name FROM
+    AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -164,13 +164,13 @@ SELECT VALUE REF(p).Name FROM
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)参照値とその結果が逆参照を生成を逆参照します。 たとえば、次のクエリは、`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` のように、Orders エンティティ セットの各 Order について Order エンティティを生成します。  
+ [DEREF](deref-entity-sql.md) では、参照値が逆参照されて、その逆参照の結果が生成されます。 たとえば、次のクエリは、`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` のように、Orders エンティティ セットの各 Order について Order エンティティを生成します。  
   
  例:  
   
-```  
-SELECT VALUE DEREF(REF(p)).Name FROM   
-    AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE DEREF(REF(p)).Name FROM
+    AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -183,13 +183,13 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 |...|  
   
 ### <a name="createref-and-key"></a>CREATEREF と KEY  
- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)キーを渡す参照を作成します。 [キー](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)型参照を持つ式のキー部分を抽出します。  
+ [CREATEREF](createref-entity-sql.md) では、キーを渡す参照が作成されます。 [KEY](key-entity-sql.md) では、型参照を持つ式のキー部分が抽出されます。  
   
  例:  
   
-```  
-SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))   
-    FROM AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
+    FROM AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -204,13 +204,13 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>関数  
   
 ### <a name="canonical"></a>正規  
- 名前空間を[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)としてでは、Edm では、`Edm.Length("string")`します。 正規関数と同じ名前の関数を含んでいる別の名前空間がインポートされない限り、名前空間を指定する必要はありません。 2 つの名前空間に同じ関数が存在する場合は、完全な名前を指定する必要があります。  
+ [正規関数](canonical-functions.md)の名前空間は Edm で、`Edm.Length("string")` のように使用されます。 正規関数と同じ名前の関数を含んでいる別の名前空間がインポートされない限り、名前空間を指定する必要はありません。 2 つの名前空間に同じ関数が存在する場合は、完全な名前を指定する必要があります。  
   
  例:  
   
-```  
-SELECT Length(c. FirstName) As NameLen FROM   
-    AdventureWorksEntities.Contact AS c   
+```sql  
+SELECT Length(c. FirstName) AS NameLen FROM
+    AdventureWorksEntities.Contact AS c
     WHERE c.ContactID BETWEEN 10 AND 12  
 ```  
   
@@ -223,13 +223,13 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Microsoft プロバイダー固有  
- [Microsoft プロバイダー固有の関数](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)では、`SqlServer`名前空間。  
+ [Microsoft プロバイダー固有の関数](../sqlclient-for-ef-functions.md)は、`SqlServer` 名前空間にあります。  
   
  例:  
   
-```  
-SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM   
-    AdventureWorksEntities.Contact AS c WHERE   
+```sql  
+SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
+    AdventureWorksEntities.Contact AS c WHERE
     c.ContactID BETWEEN 10 AND 12  
 ```  
   
@@ -242,11 +242,11 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 |26|  
   
 ## <a name="namespaces"></a>名前空間  
- [使用して](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md)クエリ式で使用される名前空間を指定します。  
+ [USING](using-entity-sql.md) では、クエリ式で使用する名前空間を指定します。  
   
  例:  
   
-```  
+```sql  
 using SqlServer; LOWER('AA');  
 ```  
   
@@ -257,12 +257,12 @@ using SqlServer; LOWER('AA');
 |aa|  
   
 ## <a name="paging"></a>ページング  
- ページングを宣言することで表すことができます、[スキップ](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)と[制限](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)サブ句を[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)句。  
+ ページングは、[ORDER BY](order-by-entity-sql.md) 句に対して [SKIP](skip-entity-sql.md) および [LIMIT](limit-entity-sql.md) サブ句を宣言することによって表すことができます。  
   
  例:  
   
-```  
-SELECT c.ContactID as ID, c.LastName as Name FROM   
+```sql  
+SELECT c.ContactID as ID, c.LastName AS Name FROM
     AdventureWorks.Contact AS c ORDER BY c.ContactID SKIP 9 LIMIT 3;  
 ```  
   
@@ -275,12 +275,12 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
 |12|Aguilar|  
   
 ## <a name="grouping"></a>グループ化  
- [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)クエリによって返されるオブジェクトにグループを指定します ([選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 式を配置するのには。  
+ [GROUPING BY](group-by-entity-sql.md) では、クエリ ([SELECT](select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
   
  例:  
   
-```  
-SELECT VALUE name FROM AdventureWorksEntities.Product as P   
+```sql  
+SELECT VALUE name FROM AdventureWorksEntities.Product AS P
     GROUP BY P.Name HAVING MAX(P.ListPrice) > 5  
 ```  
   
@@ -294,13 +294,13 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>ナビゲーション  
- リレーションシップ ナビゲーション操作を使用すると、開始側のエンティティと終了側のエンティティ間のリレーションシップをナビゲートできます。 [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)として修飾されるリレーションシップ型では\<名前空間 >.\<リレーションシップ型の名前 >。 移動 Ref を返します\<T > 場合のカーディナリティ、終了するは 1 です。 場合のカーディナリティの終了が n、コレクション < Ref\<T >> が返されます。  
+ リレーションシップ ナビゲーション操作を使用すると、開始側のエンティティと終了側のエンティティ間のリレーションシップをナビゲートできます。 [NAVIGATE](navigate-entity-sql.md) では、\<名前空間>.\<リレーションシップ型名> として修飾されるリレーションシップ型が取得されます。 終了側のカーディナリティが 1 の場合、Ref\<T> が返されます。 終了側のカーディナリティが n の場合、Collection<Ref\<T>> が返されます。  
   
  例:  
   
-```  
-SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM   
-    NAVIGATE(a, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS v)   
+```sql  
+SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
+    NAVIGATE(a, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS v)
     FROM AdventureWorksEntities.Address AS a  
 ```  
   
@@ -316,12 +316,12 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE AND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 場合、このような句を使用して、SELECT 句内の項目に row ラッパーは構築されず、および、必要な構造のコレクションの作成例:`SELECT VALUE a`します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 このような句を使用した場合、SELECT 句内の項目には row ラッパーは構築されず、`SELECT VALUE a` などの目的の構造を持つコレクションを作成できます。  
   
  例:  
   
-```  
-SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -348,11 +348,11 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|...|  
   
 ## <a name="case-expression"></a>CASE 式  
- [Case 式](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)一連の結果を決定するブール式を評価します。  
+ [CASE 式](case-entity-sql.md)では、一連のブール式が評価されて結果が判定されます。  
   
  例:  
   
-```  
+```sql  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
 ```  
   
@@ -364,5 +364,5 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [Entity SQL の概要](entity-sql-overview.md)

@@ -14,45 +14,43 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988677"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209787"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue インターフェイス
 
-すべての値に適用される"ICorDebugValue"のサブクラスです。 このインターフェイスは、値に対して Get メソッドと Set メソッドを提供します。  
+すべての値に適用される "ICorDebugValue" のサブクラス。 このインターフェイスは、値に対して Get メソッドと Set メソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|指定されたバッファーに値をコピーします。|  
-|[SetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|指定したバッファーから新しい値をコピーします。|  
+|[GetValue メソッド](icordebuggenericvalue-getvalue-method.md)|指定したバッファーに値をコピーします。|  
+|[SetValue メソッド](icordebuggenericvalue-setvalue-method.md)|指定したバッファーから新しい値をコピーします。|  
   
 ## <a name="remarks"></a>Remarks  
- `ICorDebugGenericValue` 不可能であるサブ インターフェイスです。  
+ `ICorDebugGenericValue`は、リモート処理が不可能なため、サブインターフェイスです。  
   
- 参照型、値は、参照の内容ではなく、参照です。  
+ 参照型の場合、値は参照の内容ではなく参照です。  
   
  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

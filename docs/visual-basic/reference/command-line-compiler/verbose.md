@@ -1,39 +1,39 @@
 ---
-title: -詳細
+title: -verbose
 ms.date: 03/13/2018
 helpviewer_keywords:
 - verbose compiler option [Visual Basic]
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: f6d896fb0d41a8fa3ed613d29bc3fca2bd14cc5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 405b557568a736de3ddc3b51e265261222613131
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796092"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403032"
 ---
-# <a name="-verbose"></a>-詳細
-詳細なステータスおよびエラー メッセージを生成するためにコンパイラ ボックスをオンにします。  
+# <a name="-verbose"></a>-verbose
+コンパイラによって詳細なステータス メッセージとエラー メッセージが生成されるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -verbose[+ | -]  
 ```  
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 任意。 指定する`-verbose`は指定した場合と同じ`-verbose+`、これにより、コンパイラから詳細なメッセージを出力します。 このオプションの既定値は`-verbose-`します。  
+ 任意。 `-verbose` を指定することは、`-verbose+` を指定することと同じです。これにより、コンパイラで詳細なメッセージが出力されます。 このオプションの既定値は `-verbose-` です。  
   
 ## <a name="remarks"></a>Remarks  
- `-verbose`オプションについては、コンパイラによって発行されたエラーの総数が表示されます、アセンブリ、モジュールから読み込んでいるおよびファイルがコンパイルされている現在が表示されます。  
+ `-verbose` オプションでは、コンパイラによって発行されたエラーの合計数に関する情報を表示し、どのアセンブリがモジュールに読み込まれているかを報告します。また、どのファイルが現在コンパイルされているかを表示します。  
   
 > [!NOTE]
->  `-verbose`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> `-verbose` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`In.vb`し、詳細なステータス情報を表示することをコンパイラに指示します。  
+ 次のコードでは `In.vb` がコンパイルされ、詳細情報を表示するようにコンパイラに指示されます。  
   
 ```console  
 vbc -verbose in.vb  
@@ -41,5 +41,5 @@ vbc -verbose in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

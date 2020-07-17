@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627297"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636212"
 ---
 # <a name="controls-by-category"></a>カテゴリ別のコントロール
-Windows Presentation Foundation (WPF) コントロールは、いくつかのカテゴリに論理的にグループ化することができます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  
+Windows Presentation Foundation (WPF) コントロールは、論理的にいくつかのカテゴリにグループ化できます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  
   
 ## <a name="layout"></a>レイアウト  
  レイアウト コントロールを使用して、子要素のサイズ、ディメンション、位置、および配置を制御します。  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>ボタン  
- ボタンは、最も基本的なユーザー インターフェイス コントロールの 1 つです。 アプリケーションの通常のタスクを実行、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントに、ユーザーがクリックしたときにします。  
+ ボタンは、最も基本的なユーザー インターフェイス コントロールの 1 つです。 通常、アプリケーションによって <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントの何らかのタスクが実行されるのは、ユーザーがそれらをクリックしたときです。  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>ドキュメント  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、ドキュメントの表示に特化したコントロールがいくつかあります。 これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。  
+ WPF には、ドキュメントの表示に特化したコントロールがいくつかあります。 これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -161,8 +161,8 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>メディア  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、最も一般的なイメージ形式の [コーデック] と共に、オーディオ コンテンツとビデオ コンテンツのホストを統合的にサポートします。  
+## <a name="media"></a>Media  
+ WPF は、最も一般的なイメージ形式の [コーデック] と共に、オーディオ コンテンツとビデオ コンテンツのホストを統合的にサポートします。  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -171,7 +171,7 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>デジタル インク  
- デジタル インク コントロールは、インク表示やインク入力などの [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 機能を統合的にサポートします。  
+ デジタル インク コントロールは、インク表示やインク入力などのタブレット PC 機能を統合的にサポートします。  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

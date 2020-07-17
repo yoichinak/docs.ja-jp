@@ -1,5 +1,5 @@
 ---
-title: オブジェクト変数の値 (Visual Basic)
+title: オブジェクト変数の値
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], values
@@ -7,37 +7,37 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 1dd3e8cd68086fe116daf0678a1a19881f1ae9c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054186"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410349"
 ---
 # <a name="object-variable-values-visual-basic"></a>オブジェクト変数の値 (Visual Basic)
-変数、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)任意の型のデータを参照できます。 格納した値、`Object`変数が保持される別の場所をメモリに一方変数自体は、データへのポインターを保持します。  
+[Object データ型](../../../language-reference/data-types/object-data-type.md)の変数は、任意の型のデータを参照できます。 `Object` 変数に格納した値はメモリ内のどこかに保持されますが、変数自体にはデータへのポインターが保持されます。  
   
-## <a name="object-classifier-functions"></a>オブジェクトの分類子関数  
- Visual Basic についての情報を返す関数を提供する、`Object`変数は、次の表に示すように参照します。  
+## <a name="object-classifier-functions"></a>オブジェクト分類子関数  
+ Visual Basic には、次の表に示すように、`Object` 変数の参照先に関する情報を返す関数が用意されています。  
   
-|関数|オブジェクト変数を参照する場合は True を返します|  
+|関数|オブジェクト変数が参照している場合に True を返す|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|1 つの値ではなく、値の配列|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date データ型](../../../../visual-basic/language-reference/data-types/date-data-type.md)値、または日付と時刻の値として解釈される文字列|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|型のオブジェクト<xref:System.DBNull>、または存在しないデータを表す|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|派生した例外オブジェクト <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[何も](../../../../visual-basic/language-reference/nothing.md)は、オブジェクトが現在割り当てられていない変数|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|数値、または数値として解釈される文字列|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|参照型 (文字列、配列、デリゲート、クラス型など)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|単一の値ではなく、値の配列|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|[Date データ型](../../../language-reference/data-types/date-data-type.md)値、または日付と時刻の値として解釈できる文字列|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|欠落しているデータまたは存在しないデータを表す <xref:System.DBNull> 型のオブジェクト|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|<xref:System.Exception> から派生する例外オブジェクト|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../language-reference/nothing.md)、つまり、現在、変数に割り当てられているオブジェクトがない|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|数値、または数値として解釈できる文字列|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|参照型 (文字列、配列、デリゲート、またはクラス型など)|  
   
- これらの関数は、無効な値を操作またはプロシージャの送信を回避するために使用できます。  
+ これらの関数を使用すると、操作やプロシージャに無効な値が送信されるのを回避できます。  
   
 ## <a name="typeof-operator"></a>TypeOf 演算子  
- 使用することも、 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)をオブジェクト変数が現在特定のデータ型を参照しているかどうかを判断します。 `TypeOf`.`Is`式に評価される`True`場合は、オペランドの実行時の型から派生した、または指定の型を実装します。  
+ また、[TypeOf 演算子](../../../language-reference/operators/typeof-operator.md)を使用すると、オブジェクト変数が現在、特定のデータ型を参照しているかどうかを判断することもできます。 オペランドのランタイム型が指定された型から派生しているか、または指定された型を実装している場合、`TypeOf`...`Is` 式の結果は `True` になります。  
   
- 次の例では`TypeOf`オブジェクト変数の値と参照型を参照します。  
+ 次の例では、値型と参照型を参照するオブジェクト変数に対して `TypeOf` を使用しています。  
   
-```  
+```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
 Dim num As Object = 10  
 ' The following statement puts a reference type (Form) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- 上記の例では、次の行を**デバッグ**ウィンドウ。  
+ 上記の例では、次の行が **[デバッグ]** ウィンドウに書き込まれます。  
   
  `num is Integer`  
   
@@ -61,18 +61,18 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- オブジェクト変数`num`型のデータを指す`Integer`、および`frm`クラスのオブジェクトを指す<xref:System.Windows.Forms.Form>します。  
+ オブジェクト変数 `num` は `Integer` 型のデータを参照し、`frm` はクラス <xref:System.Windows.Forms.Form> のオブジェクトを参照します。  
   
 ## <a name="object-arrays"></a>オブジェクトの配列  
- 配列を宣言および使用する`Object`変数。 これは、機能は、さまざまなデータ型とオブジェクト クラスを処理する必要がある場合に便利です。 同じ宣言されたデータ型、配列内のすべての要素が必要です。 このデータ型として宣言する`Object`オブジェクトを格納し、クラス、配列内の他のデータ型と共にインスタンスできます。  
+ `Object` 変数の配列を宣言して使用することができます。 これは、さまざまなデータ型とオブジェクト クラスを処理する必要がある場合に便利です。 配列内のすべての要素が、宣言されたデータ型と同じである必要があります。 このデータ型を `Object` として宣言すると、オブジェクトとクラス インスタンスを配列内の他のデータ型と共に格納できます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [オブジェクト変数の代入](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [方法: オブジェクトの現在のインスタンスを参照してください。](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [方法: オブジェクト変数が指す型を確認します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
-- [方法: 2 つのオブジェクトが関連するかどうかを判断します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [方法: 2 つのオブジェクトが同一かどうかを判断します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [オブジェクト変数](object-variables.md)
+- [オブジェクト変数の宣言](object-variable-declaration.md)
+- [オブジェクト変数の代入](object-variable-assignment.md)
+- [方法: オブジェクトの現在のインスタンスを参照する](how-to-refer-to-the-current-instance-of-an-object.md)
+- [方法: オブジェクト変数で参照している型を確認する](how-to-determine-what-type-an-object-variable-refers-to.md)
+- [方法: 2 つのオブジェクトが関連しているかどうかを判別する](how-to-determine-whether-two-objects-are-related.md)
+- [方法: 2 つのオブジェクトが同一であるかどうかを判別する](how-to-determine-whether-two-objects-are-identical.md)
+- [データの種類](../data-types/index.md)

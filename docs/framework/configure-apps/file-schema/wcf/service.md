@@ -2,19 +2,20 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c12f57d68de870123d92c8a101e2999c24bb988f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670400"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70855022"
 ---
-# <a name="service"></a>\<service>
+# \<service>
 `service` 要素には Windows Communication Foundation (WCF) サービスの設定が含まれます。 また、サービスを公開するエンドポイントも含まれます。  
   
- \<system.ServiceModel >  
-\<services>  
-\<service>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<services>**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<service>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,18 +37,18 @@ ms.locfileid: "61670400"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|このサービスを公開する `endpoint` 要素のコレクション。|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|このサービス インスタンスのホストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HostElement> 型です。|  
+|[\<endpoint>](endpoint-element.md)|このサービスを公開する `endpoint` 要素のコレクション。|  
+|[\<host>](host.md)|このサービス インスタンスのホストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HostElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|すべての WCF 構成要素のルート要素です。|  
+|[\<services>](services.md)|すべての WCF 構成要素のルート要素です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービスは、設定ファイルの `services` セクションで定義されます。 アセンブリには、任意の数のサービスを含めることができます。 各サービスには、独自の `service` 設定セクションがあります。 このセクションとその内容は、サービス コントラクト、動作、および特定のサービスのエンドポイントを定義します。  
   
  `behaviorConfiguration` 要素も省略可能です。 サービスが使用する動作を識別します。 この属性で指定された動作は、同じ設定ファイルの範囲にある動作にリンクしている必要があります。  
@@ -71,4 +72,4 @@ ms.locfileid: "61670400"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [サービスの構成](../../../../../docs/framework/wcf/configuring-services.md)
+- [サービスの構成](../../../wcf/configuring-services.md)

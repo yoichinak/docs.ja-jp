@@ -1,5 +1,6 @@
 ---
 title: スレッドを作成し、開始時にデータを渡す
+description: スレッドを作成し、.NET でのオペレーティング システム プロセスの開始時にデータを渡す方法について理解します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +12,12 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716040"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661915"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>スレッドを作成し、開始時にデータを渡す
 

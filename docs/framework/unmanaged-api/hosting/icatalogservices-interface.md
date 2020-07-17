@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985388"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617036"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices インターフェイス
-カタログ サービスのメソッドを提供します。  
+サービスのカタログ化を行うためのメソッドを提供します。  
   
  このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
@@ -32,9 +30,9 @@ ms.locfileid: "61985388"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Autodone メソッド](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|内部使用専用に予約されています。|  
-|[NotAutodone メソッド](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|内部使用専用に予約されています。|  
+|[Autodone メソッド](icatalogservices-autodone-method.md)|内部使用専用に予約されています。|  
+|[NotAutodone メソッド](icatalogservices-notautodone-method.md)|内部使用専用に予約されています。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ホスト インターフェイス](hosting-interfaces.md)

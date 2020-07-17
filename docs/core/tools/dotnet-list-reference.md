@@ -1,39 +1,39 @@
 ---
 title: dotnet list reference コマンド
 description: dotnet list 参照コマンドは、プロジェクト間参照を列挙する便利なオプションを提供します。
-ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.date: 02/14/2020
+ms.openlocfilehash: b9b34c17102c6218f3d99f6e2620e99f70140284
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421839"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802763"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet list reference` - プロジェクト間参照を列挙します。
 
 ## <a name="synopsis"></a>構文
 
-`dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
+```dotnetcli
+dotnet list [<PROJECT>] reference
+
+dotnet list -h|--help
+```
 
 ## <a name="description"></a>説明
 
-`dotnet list reference` コマンドは、特定のプロジェクトまたはソリューションのプロジェクト参照を列挙する便利なオプションを提供します。
+`dotnet list reference` コマンドは、特定のプロジェクトのプロジェクト参照を列挙する便利なオプションを提供します。
 
 ## <a name="arguments"></a>引数
 
-* **`PROJECT | SOLUTION`**
+* **`PROJECT`**
 
-  参照の一覧取得に使うプロジェクトまたはソリューション ファイルを指定します。 指定されていない場合、コマンドではプロジェクト ファイルを現在のディレクトリで検索します。
+  操作するプロジェクト ファイル。 ファイルを指定しない場合、コマンドによって現在のディレクトリから検索されます。
 
 ## <a name="options"></a>オプション
 
@@ -45,12 +45,12 @@ ms.locfileid: "67421839"
 
 * 指定したプロジェクトのプロジェクト参照を列挙する:
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
 * 現在のディレクトリ内のプロジェクトのプロジェクト参照を列挙する:
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```

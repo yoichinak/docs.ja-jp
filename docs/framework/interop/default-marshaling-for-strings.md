@@ -1,5 +1,6 @@
 ---
 title: 文字列に対する既定のマーシャリング
+description: .NET でのインターフェイス、プラットフォーム呼び出し、構造体、固定長文字列バッファーの文字列に対する既定のマーシャリング動作について確認します。
 ms.date: 03/20/2019
 dev_langs:
 - csharp
@@ -8,14 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452387"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904118"
 ---
 # <a name="default-marshaling-for-strings"></a>文字列に対する既定のマーシャリング
 

@@ -2,21 +2,21 @@
 title: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c28815d1d208d3e91785a13d95e03c09c0f02ed9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586624"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596995"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
-このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 基にして、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。  
+このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 これは、[自己ホスト](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)のサンプルに基づいています。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>既存の自己ホスト サービス サンプルを探索用に構成するには  
   
-1. Visual Studio 2012 では、自己ホスト ソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
+1. Visual Studio 2012 でセルフホストソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
   
-2. `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係のいずれかの [...]、プロジェクトで指定されている .NET Framework の以降のバージョンが必要です"ソリューション エクスプ ローラーでプロジェクトを右クリックして、このメッセージを表示する場合**プロパティ**します。 **プロジェクトのプロパティ**ウィンドウで、ことを確認、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
+2. `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "システム" というエラーメッセージが表示される場合があります。 ServiceModel またはその依存関係の1つには、プロジェクトで指定されているものより新しいバージョンの .NET Framework が必要です。 "このメッセージが表示された場合は、ソリューションエクスプローラーでプロジェクトを右クリックし、[**プロパティ**] を選択します。 プロジェクトの**プロパティ**ウィンドウで、**ターゲットフレームワーク**がになっていることを確認し [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ます。  
   
 3. Service.cs ファイルを開き、次の `using` ステートメントを追加します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65586624"
         using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
         {  
             // Add a ServiceDiscoveryBehavior  
-            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
+            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
   
             // ...  
         }  
@@ -60,7 +60,7 @@ ms.locfileid: "65586624"
   
 2. `System.ServiceModel.dll` および `System.ServiceModel.Discovery.dll` への参照を追加します。  
   
-3. GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、内のファイルを右クリックし、**ソリューション エクスプ ローラー**を選択します**コピー**を選び、 **DiscoveryClientApp** のプロジェクトを右クリックし、**貼り付け**します。  
+3. GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、**ソリューションエクスプローラー**内のファイルを右クリックし、[**コピー**] を選択します。次に、 **DiscoveryClientApp**プロジェクトを選択して右クリックし、[**貼り付け**] を選択します。  
   
 4. Program.cs を開きます。  
   
@@ -92,12 +92,12 @@ ms.locfileid: "65586624"
     }  
     ```  
   
-     これを WCF に指示する、<xref:System.ServiceModel.Discovery.DiscoveryClient>クラスは、標準の UDP 探索エンドポイントを使用して探索メッセージを送受信する必要があります。  
+     これにより、クラスは、 <xref:System.ServiceModel.Discovery.DiscoveryClient> 標準の UDP 探索エンドポイントを使用して探索メッセージの送受信を行う必要があることが WCF に通知されます。  
   
 8. 次の行では、<xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> メソッドを呼び出し、検索対象のサービス コントラクトを含む <xref:System.ServiceModel.Discovery.FindCriteria> インスタンスを指定します。 ここでは、`ICalculator` を指定します。  
   
     ```csharp  
-    // Find ICalculatorService endpoints              
+    // Find ICalculatorService endpoints
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
@@ -124,7 +124,7 @@ ms.locfileid: "65586624"
   
      このメソッドは、`FindCalculatorServiceAddress` から返されたエンドポイント アドレスを使用して、電卓サービスを呼び出します。  
   
-11. `InvokeCalculatorService` メソッド内で、`CalculatorServiceClient` クラスのインスタンスを作成します。 このクラスは、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。 これは、Svcutil.exe を使用して生成されました。  
+11. `InvokeCalculatorService` メソッド内で、`CalculatorServiceClient` クラスのインスタンスを作成します。 このクラスは、[自己ホスト](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)のサンプルで定義されています。 これは、Svcutil.exe を使用して生成されました。  
   
     ```csharp  
     // Create a client  
@@ -196,7 +196,7 @@ ms.locfileid: "65586624"
   
 3. Service.exe からの出力は次のようになります。  
   
-    ```Output  
+    ```output  
     Received Add(100,15.99)  
     Return: 115.99  
     Received Subtract(100,15.99)  
@@ -209,7 +209,7 @@ ms.locfileid: "65586624"
   
 4. Discoveryclientapp.exe からの出力は次のようになります。  
   
-    ```Output  
+    ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
     Add(100,15.99) = 115.99  
     Subtract(100,15.99) = 84.01  
@@ -220,7 +220,7 @@ ms.locfileid: "65586624"
     ```  
   
 ## <a name="example"></a>例  
- このサンプルで使用されているコード全体の一覧を次に示します。 このコードが基づいているため、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルに変更されるファイルの一覧が表示されます。 自己ホスト サンプルの詳細については、次を参照してください。[セットアップ手順](https://go.microsoft.com/fwlink/?LinkId=145522)します。  
+ このサンプルで使用されているコード全体の一覧を次に示します。 このコードは[自己ホスト](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)のサンプルに基づいているため、変更されたファイルのみが一覧表示されます。 自己ホストのサンプルの詳細については、「[セットアップ手順](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)」を参照してください。  
   
 ```csharp  
 // Service.cs  
@@ -277,7 +277,7 @@ namespace DiscoveryClientApp
             // Create DiscoveryClient  
             DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-            // Find ICalculatorService endpoints              
+            // Find ICalculatorService endpoints
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
   
             if (findResponse.Endpoints.Count > 0)  
@@ -342,5 +342,5 @@ namespace DiscoveryClientApp
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF Discovery オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [WCF Discovery の概要](wcf-discovery-overview.md)
+- [WCF Discovery オブジェクト モデル](wcf-discovery-object-model.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741625"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445680"
 ---
 # <a name="importtypes-method"></a>ImportTypes メソッド
-使用してインポートする各スコープの種類のインポートを開始する[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)します。  
+[Importfile メソッド](importfile-method.md)を使用してインポートされた各スコープからの型のインポートを開始します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,28 +42,28 @@ HRESULT ImportTypes(
  インポート先のアセンブリの ID。  
   
  `FileToken`  
- インポートするファイルの ID。  
+ インポート元のファイルの ID。  
   
  `dwScope`  
- インポートする 0 から始まるスコープです。  
+ インポートする0から始まるスコープ。  
   
  `phEnum`  
- このスコープの種類の列挙子のハンドルを受け取ります。  
+ このスコープ内の型の列挙子ハンドルを受け取ります。  
   
  `ppImportScope`  
- 必要に応じて受信[IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)インターフェイス。  
+ 必要に応じて、 [IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
   
  `pdwCountOfTypes`  
- 必要に応じて指定のスコープ内の種類の数を受け取ります。  
+ 必要に応じて、指定されたスコープ内の型の数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

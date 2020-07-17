@@ -1,46 +1,46 @@
 ---
-title: 列挙型を使用する状況 (Visual Basic)
+title: 列挙型を使用する状況
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: a43c55d4ad6a895957b53ae18c3641c5383a24ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: ba69249e16b8c0ee06d57d06d192874a283b295e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585076"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403538"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>列挙型を使用する状況 (Visual Basic)
-列挙体は、関連する定数のセットを操作する簡単な方法を提供します。 列挙型で、または`Enum`一連の値のシンボリック名です。 列挙体は、データ型として扱われ、それらを使用して、変数とプロパティを使用するための定数のセットを作成することができます。  
+列挙型を使用すると、一連の関連する定数を簡単に操作できます。 列挙型 (`Enum`) は、一連の値のシンボリック名です。 列挙型はデータ型扱いであり、これを使用することで、変数やプロパティと共に使用する一連の定数を作成することができます。  
   
 ## <a name="when-to-use-an-enumeration"></a>列挙型を使用する状況  
- プロシージャが限られた一連の変数を受け取ったときは、列挙体の使用を検討します。 列挙体は、わかりやすい名前を使用する場合に特にわかりやすく読みやすいコードのこと。  
+ プロシージャで受け取れる変数の個数が限られている場合には、必ず列挙型の使用を検討してください。 列挙型を使用すると、コードの明瞭さと読みやすさが増します。わかりやすい名前を使用すると特に効果的です。  
   
- 列挙体を使用する利点は次のとおりです。  
+ 列挙型を使用する利点は次のとおりです。  
   
-- 置き換えや数値の入力ミスによって発生したエラーを軽減します。  
+- 数の入れ替えや入力間違いによるエラーを減らせます。  
   
-- 簡単に、将来の値を変更します。  
+- 値を後で変更しやすくなります。  
   
-- により、コードを読みやすくするので、そこにエラーが生じる可能性がある可能性が低くなります。  
+- コードが読みやすくなり、コードにエラーが紛れ込む可能性を抑えられます。  
   
-- 前方の互換性を確保します。 列挙型をコードがメンバー名に対応する値が、今後だれかが変更された場合に失敗する可能性を低減します。  
+- 上位互換性を確保できます。 列挙型を使用すると、今後メンバー名に対応する値が変更された場合に、コードでエラーが発生する確率が小さくなります。  
   
-## <a name="naming-enumerations"></a>名前付けの列挙型  
- 列挙型メンバーの名前付け規則を使用します。 Visual Basic では、列挙体のメンバー名が検出されると、他の参照先のタイプ ライブラリには、同じ名前が含まれている場合に例外がスローする可能性があります。 アプリケーションまたはコンポーネントの値を識別する一意のプレフィックスを使用します。  
+## <a name="naming-enumerations"></a>列挙型に名前を付ける  
+ 列挙型メンバーにはなんらかの名前付け規則を適用してください。 Visual Basic で列挙型メンバーを検出した場合、参照対象の別の型ライブラリに同じ名前が含まれていると、例外がスローされます。 アプリケーションまたはコンポーネントの値を特定できる、一意の接頭辞を使用してください。  
   
- 列挙体のメンバーを指すときにする必要があります、列挙名でメンバー名を修飾を使用してください、`Imports`ステートメント。 詳細については、次を参照してください。[列挙型と名前修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)します。  
+ 列挙型のメンバーを参照する場合は、列挙型名でメンバー名を修飾するか、`Imports` ステートメントを使用する必要があります。 詳細については、[列挙型と名前の修飾](enumerations-and-name-qualification.md)に関するページを参照してください。  
   
 ## <a name="predefined-enumerations"></a>定義済みの列挙型  
- Visual Basic では、多数の定義済みの列挙など`FirstDayOfWeek`と`MsgBoxResult`コードを容易にします。 これらの一覧については、次を参照してください。[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)します。  
+ Visual Basic には、コードを作成しやすいように定義済みの列挙型が多数用意されています (`FirstDayOfWeek` や `MsgBoxResult` など)。 これらの一覧については、[定数と列挙型](../../../language-reference/constants-and-enumerations.md)に関するページを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 列挙体を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [方法: 列挙体のメンバーを参照してください。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [方法: Visual Basic で列挙型を反復処理します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [方法: 列挙値に関連付けられている文字列を確認します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [方法: 列挙型を宣言する](how-to-declare-enumerations.md)
+- [方法: 列挙型のメンバーを参照する](how-to-refer-to-an-enumeration-member.md)
+- [列挙型と名前の修飾](enumerations-and-name-qualification.md)
+- [方法: Visual Basic で列挙型を反復処理する](how-to-iterate-through-an-enumeration.md)
+- [方法: 列挙値に関連付けられている文字列を確認する](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Enum ステートメント](../../../language-reference/statements/enum-statement.md)
+- [定数と列挙体](../../../language-reference/constants-and-enumerations.md)

@@ -2,22 +2,23 @@
 title: <transport> の <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49b31a889d192d190125214e89ba09305114eb7f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788324"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73735978"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<トランスポート > の\<netPeerTcpBinding >
-使用する場合は、トランスポート レベルのセキュリティの設定を指定、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)します。  
+# <a name="transport-of-netpeertcpbinding"></a>\<transport> の \<netPeerTcpBinding>
+を使用する場合のトランスポートレベルのセキュリティ設定を指定し [\<netPeerTcpBinding>](netpeertcpbinding.md) ます。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netPeerTcpBinding>  
-\<binding>  
-\<セキュリティ >  
-\<transport>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netPeerTcpBinding>**](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +39,23 @@ ms.locfileid: "61788324"
   
 |属性|説明|  
 |---------------|-----------------|  
-|credentialType|省略可能です。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
+|credentialType|省略可能。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|[値]|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|証明書|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
-|[Password]|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
+|Certificate|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
+|Password|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|セキュリティ設定を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)します。|  
+|[\<security>](security-of-netpeerbinding.md)|のセキュリティ設定を定義し [\<netPeerTcpBinding>](netpeertcpbinding.md) ます。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -62,8 +63,8 @@ ms.locfileid: "61788324"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインド](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](bindings.md)

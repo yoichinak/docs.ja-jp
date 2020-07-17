@@ -1,20 +1,19 @@
 ---
-title: '方法: イベント サブスクリプションとサブスクリプションの解除 - C# プログラミング ガイド'
-ms.custom: seodec18
+title: イベントのサブスクリプションとサブスクリプション解除を行う方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301038"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240669"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法: イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>イベントのサブスクリプションとサブスクリプション解除を行う方法 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE を使ってイベントをサブスクライブするには  
@@ -58,19 +57,18 @@ ms.locfileid: "66301038"
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     イベント ハンドラーは、ラムダ式を使って追加することもできます。  
+     また、[ラムダ式](../statements-expressions-operators/lambda-expressions.md)を使用してイベント ハンドラーを指定することもできます。
   
     ```csharp
     public Form1()  
     {  
         InitializeComponent();  
-        // Use a lambda expression to define an event handler.  
-        this.Click += (s,e) => { MessageBox.Show(  
-           ((MouseEventArgs)e).Location.ToString());};  
+        this.Click += (s,e) =>
+            {
+                MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+            };
     }  
     ```  
-  
-     詳細については、「[方法 :LINQ 以外でラムダ式を使用する](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)」をご覧ください。  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>匿名メソッドを使ってイベントをサブスクライブするには  
   
@@ -84,7 +82,7 @@ ms.locfileid: "66301038"
     };  
     ```  
   
-     匿名関数を使ってイベントをサブスクライブした場合、簡単にはイベントのサブスクリプションを解除できないことに注意することが重要です。 このシナリオでサブスクリプションを解除するには、イベントをサブスクライブするコードに戻り、匿名メソッドをデリゲート変数に格納して、イベントにデリゲートを追加する必要があります。 一般に、後のコードでイベントのサブスクリプションを解除する必要がある場合は、イベントのサブスクライブに匿名関数を使わないことをお勧めします。 匿名関数について詳しくは、「[匿名関数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)」をご覧ください。  
+     匿名関数を使ってイベントをサブスクライブした場合、簡単にはイベントのサブスクリプションを解除できないことに注意することが重要です。 このシナリオでサブスクリプションを解除するには、イベントをサブスクライブするコードに戻り、匿名メソッドをデリゲート変数に格納して、イベントにデリゲートを追加する必要があります。 一般に、後のコードでイベントのサブスクリプションを解除する必要がある場合は、イベントのサブスクライブに匿名関数を使わないことをお勧めします。 匿名関数について詳しくは、「[匿名関数](../statements-expressions-operators/anonymous-functions.md)」をご覧ください。  
   
 ## <a name="unsubscribing"></a>サブスクリプションの解除  
  イベントが発生したときにイベント ハンドラーが呼び出されないようにするには、イベントからサブスクリプションを解除します。 リソースのリークを防ぐには、サブスクライバー オブジェクトを破棄する前に、イベントのサブスクリプションを解除する必要があります。 イベントのサブスクリプションを解除するまで、パブリッシュ側オブジェクトでイベントの基盤になっているマルチキャスト デリゲートは、サブスクライバーのイベント ハンドラーをカプセル化するデリゲートへの参照を保持しています。 パブリッシュ側オブジェクトがその参照を保持している限り、ガベージ コレクションはサブスクライバー オブジェクトを削除しません。  
@@ -101,8 +99,8 @@ ms.locfileid: "66301038"
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [方法: .NET Framework ガイドラインに準拠したイベントを発行する](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [イベント](./index.md)
+- [event](../../language-reference/keywords/event.md)
+- [.NET ガイドラインに準拠したイベントを発行する方法](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- および -= 演算子](../../language-reference/operators/subtraction-operator.md)
 - [+ および += 演算子](../../language-reference/operators/addition-operator.md)

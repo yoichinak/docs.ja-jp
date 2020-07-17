@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fa7dfe101b07ae6eb8d58daad85954f0ce29b02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8734fa9c9418b818cbe14ebe87ce2af6fa59c078
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747054"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499845"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition メソッド
-アンマネージ コードからマネージ コードへの移行が発生したことをプロファイラーに通知します。  
+アンマネージコードからマネージコードへの遷移が発生したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,28 +35,28 @@ HRESULT UnmanagedToManagedTransition(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]呼び出される関数の ID。  
+ から呼び出される関数の ID。  
   
  `reason`  
- [in]値、 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 、アンマネージ コードからマネージ コードへの呼び出しによって、または管理対象の 1 つによって呼び出される非管理対象の関数の戻り値のために、移行が発生したかどうかを示す列挙体。  
+ からアンマネージコードからのマネージコードの呼び出しによって移行が発生したかどうか、またはマネージ関数によって呼び出されたアンマネージ関数からの戻りが原因で発生したかどうかを示す[COR_PRF_TRANSITION_REASON](cor-prf-transition-reason-enumeration.md)列挙体の値。  
   
-## <a name="remarks"></a>Remarks  
- 場合の値`reason`は COR_PRF_TRANSITION_RETURN と`functionId`が null でない ID が非管理対象の関数とは決してがコンパイルされました - イン タイム (JIT) コンパイラを使用して関数。 アンマネージ関数では、名前といくつかのメタデータなど、それに関連付けられているいくつかの基本的な情報があります。  
+## <a name="remarks"></a>解説  
+ の値 `reason` が COR_PRF_TRANSITION_RETURN であり、 `functionId` が null でない場合、関数 ID はアンマネージ関数の ID であり、JUST-IN-TIME (JIT) コンパイラを使用してコンパイルされることはありません。 アンマネージ関数には、名前やメタデータなど、いくつかの基本的な情報が関連付けられています。  
   
- 場合の値`reason`COR_PRF_TRANSITION_CALL には、呼び出された関数 (つまり、マネージ関数) されていない JIT コンパイルされる可能性があります。  
+ の値が COR_PRF_TRANSITION_CALL 場合は、呼び出された `reason` 関数 (つまり、マネージ関数) がまだ JIT でコンパイルされていない可能性があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ManagedToUnmanagedTransition メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
-- [C++ での明示的な PInvoke (DllImport 属性) の使用方法](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ManagedToUnmanagedTransition メソッド](icorprofilercallback-managedtounmanagedtransition-method.md)
+- [C++ での明示的な PInvoke の使用 (DllImport 属性)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
 - [C++ Interop (暗黙の PInvoke) の使用](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)

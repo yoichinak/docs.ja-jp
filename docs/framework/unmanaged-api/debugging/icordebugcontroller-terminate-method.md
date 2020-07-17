@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eade3fd5d946c44ae4a77c571f762709de3cef40
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750064"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976565"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate メソッド
-指定した終了コードを使用して、プロセスを終了します。  
+指定された終了コードを使用してプロセスを終了します。  
   
 > [!NOTE]
->  このメソッドは、win32 ラッパー`TerminateProcess`関数。 したがって、`Terminate`終了コードを使用して、同じ方法、Win32`TerminateProcess`関数では使用します。  
+> このメソッドは、Win32 `TerminateProcess`関数のラッパーです。 したがって`Terminate` 、は、Win32 `TerminateProcess`関数が使用するのと同じ方法で終了コードを使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,21 +38,21 @@ HRESULT Terminate (
   
 ## <a name="parameters"></a>パラメーター  
  `exitCode`  
- [in]終了コードを示す数値。 有効な数値の値は、Winbase.h で定義されます。  
+ から終了コードを表す数値。 有効な数値は、Winbase. h で定義されています。  
   
 ## <a name="remarks"></a>Remarks  
- プロセスが停止している場合`Terminate`が呼び出されると、プロセスを続行するかを使用して、 [icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)メソッド、デバッガーを使用して、終了の確認を受信するように、 [Icordebugmanagedcallback::exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)または[icordebugmanagedcallback::exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)コールバック。  
+ が呼び出されたときに`Terminate`プロセスが停止された場合は、このプロセスを続行する必要があります。これを行うに[は、デバッガー](icordebugcontroller-continue-method.md)が、" [ExitProcess](icordebugmanagedcallback-exitprocess-method.md) " または " [managedcallback:: exitappdomain](icordebugmanagedcallback-exitappdomain-method.md) callback" を使用して終了の確認を受け取るようにします。  
   
 > [!NOTE]
->  このメソッドは、アプリケーション ドメインによって実装されていません。 実装されていない、つまり、<xref:System.AppDomain>レベル。  
+> このメソッドは、アプリケーションドメインによって実装されていません。 つまり、 <xref:System.AppDomain>レベルでは実装されていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目

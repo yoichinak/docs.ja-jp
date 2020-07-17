@@ -1,30 +1,30 @@
 ---
 title: セキュリティとパブリックの読み取り専用配列フィールド
+description: アプリケーションの境界動作またはセキュリティを定義するために、読み取り専用のパブリック配列フィールドの使用を避ける必要がある理由をお読みください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a6a82c2c88fe61bd34c0accb831f018cf8702fc
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869747"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281434"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>セキュリティとパブリックの読み取り専用配列フィールド
-パブリックの読み取り専用の配列フィールドを変更できるため、境界の動作またはアプリケーションのセキュリティを定義するのに、マネージ ライブラリからパブリック読み取り専用の配列フィールドを使用しないでください。  
+読み取り専用のパブリック配列フィールドを変更できるため、マネージライブラリから読み取り専用パブリック配列フィールドを使用して、アプリケーションの境界動作またはセキュリティを定義しないでください。  
   
-## <a name="remarks"></a>Remarks  
- .NET framework の一部のクラスには、プラットフォーム固有の境界パラメーターが含まれている読み取り専用のパブリック フィールドが含まれます。  たとえば、<xref:System.IO.Path.InvalidPathChars>フィールドは、ファイル パスの文字列で許可されていない文字を記述する配列。  .NET Framework 全体で多くの同じフィールドが存在します。  
+## <a name="remarks"></a>解説  
+
+一部の .NET クラスには、プラットフォーム固有の境界パラメーターを含む読み取り専用のパブリックフィールドが含まれています。 たとえば、 <xref:System.IO.Path.InvalidPathChars> フィールドは、ファイルパス文字列で許可されていない文字を記述する配列です。 多くの同様のフィールドが .NET 全体に存在します。  
   
- パブリックの読み取り専用フィールドの値などの<xref:System.IO.Path.InvalidPathChars>コードや、コードのアプリケーション ドメインを共有するコードで変更できます。  アプリケーションの境界の動作を定義するのに次のような読み取り専用のパブリックの配列フィールドを使用しないでください。  場合は、悪意のあるコードは、境界の定義を変更し、予期しない方法でコードを使用します。  
+ のようなパブリック読み取り専用フィールドの値は、コード <xref:System.IO.Path.InvalidPathChars> またはコードのアプリケーションドメインを共有するコードによって変更できます。  アプリケーションの境界動作を定義するには、このような読み取り専用パブリック配列フィールドを使用しないでください。  そうすると、悪意のあるコードが境界の定義を変更し、予期しない方法でコードを使用できるようになります。  
   
- 2.0 と .NET Framework の以降のバージョンでは、パブリックの配列フィールドを使用する代わりに新しい配列を返すメソッドを使用してください。  使用する代わりに、たとえば、<xref:System.IO.Path.InvalidPathChars>フィールドを使用する必要がある、<xref:System.IO.Path.GetInvalidPathChars%2A>メソッド。  
+ .NET Framework のバージョン2.0 以降では、パブリック配列フィールドを使用する代わりに、新しい配列を返すメソッドを使用する必要があります。  たとえば、フィールドを使用する代わりに、 <xref:System.IO.Path.InvalidPathChars> メソッドを使用する必要があり <xref:System.IO.Path.GetInvalidPathChars%2A> ます。  
   
- .NET Framework の型が内部での境界の種類を定義するパブリック フィールドを使用しないことに注意してください。  代わりに、.NET Framework では、別のプライベート フィールドを使用します。  これらのパブリック フィールドの値を変更しても、.NET Framework 型の動作は変わりません。  
+ .NET Framework 型では、内部的に境界の種類を定義するためにパブリックフィールドが使用されないことに注意してください。  代わりに、.NET Framework は個別のプライベートフィールドを使用します。  これらのパブリックフィールドの値を変更しても、.NET Framework 型の動作は変更されません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

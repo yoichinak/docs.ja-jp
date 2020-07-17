@@ -1,5 +1,6 @@
 ---
 title: コピーと固定
+description: 相互運用マーシャラーで、マーシャリングされているデータがコピーまたは固定される方法を確認します。 データをコピーすると、あるメモリ位置から別の位置にデータのコピーが配置されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -7,14 +8,11 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618780"
 ---
 # <a name="copying-and-pinning"></a>コピーと固定
 

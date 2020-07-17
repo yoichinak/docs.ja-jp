@@ -6,60 +6,58 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: a524c0b0e01fbde95ce2341874511960b3e5738e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170434"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616854"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 および 4.5 で追加された CLR ホスト インターフェイス
-アンマネージ インターフェイスについて説明をアプリケーションに .NET Framework 4、.NET Framework 4.5、およびそれ以降のバージョンでホストを共通言語ランタイム (CLR) 統合を使用できます。 これらのインターフェイスは、ホストを構成し、ランタイムをプロセスに読み込むのためのメソッドを提供します。  
+ここでは、アンマネージホストが .NET Framework 4、.NET Framework 4.5、およびそれ以降のバージョンの共通言語ランタイム (CLR) をアプリケーションに統合するために使用できるインターフェイスについて説明します。 これらのインターフェイスは、ホストがランタイムを構成してプロセスに読み込むためのメソッドを提供します。  
   
- 以降、.NET Framework 4 では、すべてのホスト インターフェイスを使うと、次の特性があります。  
+ .NET Framework 4 以降では、すべてのホストインターフェイスに次の特性があります。  
   
-- 有効期間管理を使用して、(`AddRef`と`Release`)、(暗黙のコンテキスト) をカプセル化し、 `QueryInterface` COM から  
+- これらは、有効期間管理 ( `AddRef` および `Release` )、カプセル化 (暗黙的なコンテキスト)、および `QueryInterface` COM からの使用を行います。  
   
-- COM 型をなど、使用しない`BSTR`、 `SAFEARRAY`、または`VARIANT`します。  
+- これらの型は `BSTR` 、、、などの COM 型を使用しません `SAFEARRAY` `VARIANT` 。  
   
-- アパートメント モデル、集計、またはレジストリのアクティブ化を使用するがない、 [CoCreateInstance 関数](https://go.microsoft.com/fwlink/?LinkId=142894)します。  
+- [CoCreateInstance 関数](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)を使用するアパートメントモデル、集計、またはレジストリのアクティブ化はありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ICLRAppDomainResourceMonitor インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- アプリケーション ドメインのメモリと CPU 使用率を確認するメソッドを提供します。  
+ [ICLRAppDomainResourceMonitor インターフェイス](iclrappdomainresourcemonitor-interface.md)  
+ アプリケーションドメインのメモリおよび CPU 使用率を検査するメソッドを提供します。  
   
- [ICLRDomainManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- 初期化プロパティを指定して、既定のアプリケーション ドメインを初期化するために使用されるアプリケーション ドメイン マネージャーを指定するホストを有効にします。  
+ [ICLRDomainManager インターフェイス](iclrdomainmanager-interface.md)  
+ 既定のアプリケーションドメインを初期化し、初期化プロパティを指定するために使用されるアプリケーションドメインマネージャーをホストが指定できるようにします。  
   
- [ICLRGCManager2 インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)  
- 提供、 [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)メソッドで、ホストがガベージ コレクション セグメントのサイズと、ガベージ コレクション システムのジェネレーション 0 の最大サイズの値より大きいに設定できるように`DWORD`します。  
+ [ICLRGCManager2 インターフェイス](iclrgcmanager2-interface.md)  
+ [SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md)メソッドを提供します。これにより、ホストはガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズをより大きい値に設定でき `DWORD` ます。  
   
- [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- CLR の特定のバージョンを返す、インストールされている Clr のすべてを一覧表示、すべてのプロセス内ランタイムを一覧表示、アクティブ化のインターフェイスを返す、アセンブリをコンパイルするために使用する CLR のバージョンを検出するメソッドを提供します。  
+ [ICLRMetaHost インターフェイス](iclrmetahost-interface.md)  
+ 特定のバージョンの CLR を返し、インストールされているすべての CLRs の一覧を取得し、すべてのインプロセスランタイムを一覧表示し、アクティベーションインターフェイスを返し、アセンブリをコンパイルするために使用される CLR バージョンを検出するメソッドを提供します。  
   
- [ICLRMetaHostPolicy インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- 提供、 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) CLR インターフェイスを提供する方法、ポリシーの条件、マネージ アセンブリ、バージョン、および構成ファイルに基づいています。  
+ [ICLRMetaHostPolicy インターフェイス](iclrmetahostpolicy-interface.md)  
+ ポリシー条件、マネージアセンブリ、バージョン、および構成ファイルに基づいて CLR インターフェイスを提供する[Getrequestedruntime](iclrmetahostpolicy-getrequestedruntime-method.md)メソッドを提供します。  
   
- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- バージョン、ディレクトリ、および負荷の状態を含む、特定のランタイムに関する情報を返すメソッドを提供します。  
+ [ICLRRuntimeInfo インターフェイス](iclrruntimeinfo-interface.md)  
+ バージョン、ディレクトリ、読み込みステータスなど、特定のランタイムに関する情報を返すメソッドを提供します。  
   
- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- 厳密な名前を持つアセンブリに署名するための基本的なグローバル静的関数を提供します。 すべての[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)メソッドは、標準の COM Hresult を返します。  
+ [ICLRStrongName インターフェイス](iclrstrongname-interface.md)  
+ 厳密な名前でアセンブリに署名するための基本的なグローバル静的関数を提供します。 すべての[ICLRStrongName](iclrstrongname-interface.md)メソッドは、標準 COM hresult を返します。  
   
- [ICLRStrongName2 インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname2-interface.md)  
- Sha-2 (sha-256、sha-384、および sha-512) のハッシュ アルゴリズムをセキュリティで保護グループを使用する厳密な名前を作成する機能を提供します。  
+ [ICLRStrongName2 インターフェイス](iclrstrongname2-interface.md)  
+ セキュリティで保護されたハッシュアルゴリズム (SHA-256、SHA-384、および SHA-512) の SHA-1 グループを使用して、厳密な名前を作成する機能を提供します。  
   
- [ICLRTask2 インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)  
- すべての機能を提供、 [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)。 さらに、現在のスレッドが遅延するスレッドの中止を許可するメソッドを提供します。  
+ [ICLRTask2 インターフェイス](iclrtask2-interface.md)  
+ には、 [ICLRTask インターフェイス](iclrtask-interface.md)のすべての機能が用意されています。また、には、現在のスレッドでスレッドの中止を遅延させることができるメソッドが用意されています。  
   
 ## <a name="related-sections"></a>関連項目  
- [非推奨の CLR のホスト インターフェイスおよびコクラス](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- .NET Framework version 1.0 および 1.1 で提供されるホスティング インターフェイスをについて説明します。  
+ [非推奨の CLR のホスト インターフェイスおよびコクラス](deprecated-clr-hosting-interfaces-and-coclasses.md)  
+ .NET Framework バージョン1.0 および1.1 で提供されるホストインターフェイスについて説明します。  
   
- [CLR ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- .NET Framework バージョン 2.0、3.0、および 3.5 で提供されるホスティング インターフェイスについて説明します。  
+ [CLR ホスト インターフェイス](clr-hosting-interfaces.md)  
+ .NET Framework バージョン2.0、3.0、および3.5 で提供されるホストインターフェイスについて説明します。  
   
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)  
+ [ホスティング](index.md)  
  .NET Framework でのホスティングについて説明します。

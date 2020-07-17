@@ -12,13 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 644ccf5951e9d2556fc697d2fd763f026fd0ebdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d463eb2a8d598dc5ba9b2fb51a6fc08c563e6fe4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617227"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739491"
 ---
 # <a name="timers"></a>タイマー
 

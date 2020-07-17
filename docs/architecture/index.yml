@@ -1,0 +1,63 @@
+### YamlMime:Landing
+title: .NET アプリケーション アーキテクチャのドキュメント
+summary: 運用環境対応の .NET アプリを構築する方法、または既存のアプリをクラウドに移行する方法について説明します。
+metadata:
+  title: .NET アプリケーション アーキテクチャのドキュメント
+  description: .NET アプリの設計、構築、移行について推奨される方法について説明します。
+  ms.topic: landing-page
+  ms.date: 03/19/2020
+  ms.openlocfilehash: 664edba616c962a6599e6bf5395ece44b0e817db
+  ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/10/2020
+  ms.locfileid: "84662759"
+landingContent:
+- title: ASP.NET Core MVC アプリの開発
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ASP.NET Core と Azure で最新の Web アプリを設計する
+      url: modern-web-apps-azure/index.md
+    - text: ASP.NET Web Forms 開発者向け Blazor (プレビュー)
+      url: blazor-for-web-forms-developers/index.md
+    - text: WCF 開発者向け ASP.NET Core gRPC
+      url: grpc-for-wcf-developers/index.md
+- title: Azure 用のクラウド ネイティブ .NET アプリを開発する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure 向けクラウド ネイティブ .NET アプリの設計
+      url: cloud-native/index.md
+    - text: 'サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装'
+      url: serverless/index.md
+    - text: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ'
+      url: microservices/index.md
+  - linkListType: learn
+    links:
+    - text: Hello World マイクロサービスのチュートリアル
+      url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
+    - text: クラウドネイティブの ASP.NET Core マイクロサービスを作成してデプロイする
+      url: https://docs.microsoft.com/learn/modules/microservices-aspnet-core
+- title: .NET アプリを Azure に移行する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリを最新化する
+      url: modernize-with-azure-containers/index.md
+    - text: .NET アプリを Azure に移行する
+      url: https://dotnet.microsoft.com/apps/cloud/migrate-to-azure
+- title: DevOps for .NET の概要
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Microsoft プラットフォームとツールでのコンテナー化された Docker アプリケーションのライフサイクル
+      url: containerized-lifecycle/index.md
+    - text: Azure での ASP.NET Core DevOps
+      url: /aspnet/core/azure/devops/
+- title: デスクトップ アプリを最新化する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: .NET Core 3.1 を使用した Windows 10 でのデスクトップ アプリ最新化
+      url: modernize-desktop/index.md

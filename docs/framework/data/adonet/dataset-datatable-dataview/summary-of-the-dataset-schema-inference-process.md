@@ -2,12 +2,12 @@
 title: DataSet スキーマの推論プロセスの概要
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 3c43b834f7a85f43cefd29a1ceba2260145e7d1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 35e9b67d2d0a47aa69eabdb4b7e94f95b0b9589f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607079"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833978"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet スキーマの推論プロセスの概要
 推論プロセスでは、まず、テーブルとして推論する XML ドキュメントの要素を決定します。 XML ドキュメントの残りの要素から、それらのテーブルの列が推論によって決定されます。 入れ子状のテーブルの場合は、入れ子になった <xref:System.Data.DataRelation> オブジェクトと <xref:System.Data.ForeignKeyConstraint> オブジェクトが生成されます。  
@@ -26,15 +26,15 @@ ms.locfileid: "64607079"
   
 - 属性または子要素を持たず、繰り返し出現することもない要素は、列として推論されます。  
   
-- 推論されたその他の要素内で入れ子になったテーブルとして推論される要素のテーブルとして、入れ子になった**DataRelation** 2 つのテーブルが作成されます。 新しいプライマリ キーの列が名前付き**TableName_Id**が両方のテーブルに追加されで使用される、 **DataRelation**します。 A **ForeignKeyConstraint**を使用して 2 つのテーブル間に作成、 **TableName_Id**列。  
+- テーブルとして推論される要素が、同じくテーブルとして推論される他の要素の内部に入れ子になっている場合は、その 2 つのテーブル間に入れ子になった **DataRelation** が作成されます。 その場合、**TableName_Id** という名前の新しい主キー列がその両方のテーブルに追加され、**DataRelation** によって使用されます。 この **TableName_Id** 列を使用して、この 2 つのテーブル間に **ForeignKeyConstraint** が作成されます。  
   
-- 新しい列がという名前のテーブルとして推論されると、テキストは含まれていない子要素を持つ要素の**TableName_Text**の各要素のテキストが作成されます。 テーブルとして推論される要素にテキストだけでなく、子要素もある場合、テキストは無視されます。  
+- テーブルとして推論される要素に、テキストは含まれているが子要素は含まれていない場合は、**TableName_Text** という名前の新しい列が各要素のテキストに作成されます。 テーブルとして推論される要素にテキストだけでなく、子要素もある場合、テキストは無視されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)
+- [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)
+- [XML の DataSet スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)
+- [DataSet での XML の使用](using-xml-in-a-dataset.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

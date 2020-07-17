@@ -1,33 +1,31 @@
 ---
 title: 文字列補間 - C# チュートリアル
 description: このチュートリアルでは、C# で文字列補間機能を使用して、大きい文字列で書式設定された計算式の結果を含める方法を示します。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796055"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>文字列補間を使用し、書式設定された文字列を作成する
 
 このチュートリアルでは、C# で[文字列補間](../../language-reference/tokens/interpolated.md)を使用して、単一の結果の文字列に値を挿入する方法を説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、値を文字列に挿入し、それらの値の書式をさまざまな方法で設定する方法を示す、一連のレッスンが含まれています。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 また、使用しているブラウザーでこのチュートリアルの[対話型バージョン](interpolated-strings.yml)を完了することもできます。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 また、使用しているブラウザーでこのチュートリアルの[対話型バージョン](interpolated-strings.yml)を完了することもできます。
 
 ## <a name="create-an-interpolated-string"></a>挿入文字列を作成する
 
-**interpolated** という名前のディレクトリを作成します。 それを現在のディレクトリにして、コンソール ウィンドウから次のコマンドを実行します。
+*interpolated* という名前のディレクトリを作成します。 それを現在のディレクトリにして、コンソール ウィンドウから次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
 
-お好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。`<name>` は自分の名前に置き換えてください。
+お好みのエディターで *Program.cs* を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。`<name>` は自分の名前に置き換えてください。
 
 ```csharp
 var name = "<name>";
@@ -48,7 +46,7 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 前のセクションでは、文字列補間を使用して、1 つの文字列内に別の文字列を挿入しましたが、 補間式の結果を任意のデータ型にすることもできます。 挿入文字列にさまざまなデータ型の値を含めてみましょう。
 
-次の例では、最初に、`Name` [プロパティ](../../properties.md)と `ToString` [メソッド](../../methods.md)を持つ[クラス](../../programming-guide/classes-and-structs/classes.md) データ型 `Vegetable` を定義します。このメソッドは、<xref:System.Object.ToString?displayProperty=nameWithType> メソッドの動作を[オーバーライド](../../language-reference/keywords/override.md)します。 [`public` アクセス修飾子](../../language-reference/keywords/public.md)により、そのメソッドは、すべてのクライアント コードで `Vegetable` インスタンスの文字列表現を取得するために使用できるようになります。 この例の `Vegetable.ToString` メソッドでは、`Vegetable` [コンストラクター](../../programming-guide/classes-and-structs/constructors.md)で初期化される `Name` プロパティの値を返します。
+次の例では、最初に、`Name` [プロパティ](../../properties.md)と `ToString` [メソッド](../../methods.md)を持つ[クラス](../../programming-guide/classes-and-structs/classes.md) データ型 `Vegetable` を定義します。このメソッドは、<xref:System.Object.ToString?displayProperty=nameWithType> メソッドのビヘイビアーを[オーバーライド](../../language-reference/keywords/override.md)します。 [`public` アクセス修飾子](../../language-reference/keywords/public.md)により、そのメソッドは、すべてのクライアント コードで `Vegetable` インスタンスの文字列表現を取得するために使用できるようになります。 この例の `Vegetable.ToString` メソッドでは、`Vegetable` [コンストラクター](../../programming-guide/classes-and-structs/constructors.md)で初期化される `Name` プロパティの値を返します。
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -60,7 +58,7 @@ public Vegetable(string name) => Name = name;
 var item = new Vegetable("eggplant");
 ```
 
-最後に、`item` 変数を挿入文字列に含めます。ここには、<xref:System.DateTime> 値、<xref:System.Decimal> 値、`Unit` [列挙](../../programming-guide/enumeration-types.md)値も含まれます。 エディターのすべての C# コードを以下のコードに置き換えてから、`dotnet run` コマンドを使用して実行します。
+最後に、`item` 変数を挿入文字列に含めます。ここには、<xref:System.DateTime> 値、<xref:System.Decimal> 値、`Unit` [列挙](../../language-reference/builtin-types/enum.md)値も含まれます。 エディターのすべての C# コードを以下のコードに置き換えてから、`dotnet run` コマンドを使用して実行します。
 
 ```csharp
 using System;
@@ -68,9 +66,9 @@ using System;
 public class Vegetable
 {
    public Vegetable(string name) => Name = name;
-   
+
    public string Name { get; }
-   
+
    public override string ToString() => Name;
 }
 
@@ -107,7 +105,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 コロン (":") と書式指定文字列を持つ補間式に従って、書式指定文字列を指定します。 "d" は、短い日付形式を表す[標準の日時書式設定文字列](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)です。 "C2" は、小数点以下が 2 桁の通貨値として数値を表す[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)です。
 
-.NET ライブラリの多くの型で、定義済みの書式指定文字列セットがサポートされています。 これらには、数値型と日時型がすべて含まれます。 書式指定文字列をサポートする型の完全なリストについては、「[.Net 型の書式設定](../../../standard/base-types/formatting-types.md)」記事の「[.NET クラス ライブラリの型および書式指定文字列](../../../standard/base-types/formatting-types.md#stringRef)」を参照してください。
+.NET ライブラリの多くの型で、定義済みの書式指定文字列セットがサポートされています。 これらには、数値型と日時型がすべて含まれます。 書式指定文字列をサポートする型の完全なリストについては、「[.Net 型の書式設定](../../../standard/base-types/formatting-types.md)」記事の「[.NET クラス ライブラリの型および書式指定文字列](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)」を参照してください。
 
 テキスト エディターで書式指定文字列を変更してみて、変更するたびにプログラムを再実行し、変更が日時と数値の書式設定にどのように影響するかを確認します。 `{date:d}` の "d" を "t" (短い時刻形式を表示する)、"y" (年と月を表示する)、"yyyy" (4 桁の数字として年を表示する) に変更します。 `{price:C2}` "C2" を "e" (指数表記の場合) と "F3" (小数点以下が 3 桁の数値の場合) に変更します。
 
@@ -167,4 +165,4 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 
 文字列補間のチュートリアルはこれで終了です。
 
-詳細については、[文字列補間](../../language-reference/tokens/interpolated.md)に関するトピックと「[C# における文字列補間](../../tutorials/string-interpolation.md)」チュートリアルを参照してください。
+詳細については、[文字列補間](../../language-reference/tokens/interpolated.md)に関するトピックと「[C# における文字列補間](../string-interpolation.md)」チュートリアルを参照してください。

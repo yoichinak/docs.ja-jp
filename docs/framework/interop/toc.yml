@@ -19,10 +19,6 @@
     - name: COM への .NET Framework コンポーネントの公開
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: 相互運用のための .NET 型の要件
-          href: qualifying-net-types-for-interoperation.md
-        - name: 相互運用固有の属性の適用
-          href: applying-interop-attributes.md
         - name: COM 用のアセンブリのパッケージ化
           href: packaging-an-assembly-for-com.md
         - name: COM へのアセンブリの登録
@@ -94,15 +90,8 @@
               href: how-to-migrate-managed-code-dcom-to-wcf.md
     - name: '方法: HRESULT に例外を割り当てる'
       href: how-to-map-hresults-and-exceptions.md
-    - name: COM ラッパー
-      href: com-wrappers.md
-      items:
-        - name: ランタイム呼び出し可能ラッパー
-          href: runtime-callable-wrapper.md
-        - name: COM 呼び出し可能ラッパー
-          href: com-callable-wrapper.md
-        - name: '方法: COM ラッパーを作成する'
-          href: how-to-create-com-wrappers.md
+    - name: '方法: COM ラッパーを作成する'
+      href: how-to-create-com-wrappers.md
     - name: 型の等価性と埋め込まれた相互運用機能型
       href: type-equivalence-and-embedded-interop-types.md
     - name: '方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する'

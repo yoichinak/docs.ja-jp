@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132693"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 関数
 指定したフラグを使用して、キャッシュされたアセンブリへのパスを取得します。  
@@ -40,22 +38,22 @@ HRESULT GetCachePath (
   
 ## <a name="parameters"></a>パラメーター  
  `dwCacheFlags`  
- [in][ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)キャッシュされたアセンブリのソースを示す値。  
+ からキャッシュされたアセンブリのソースを示す[ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)値です。  
   
  `pwzCachePath`  
- [out]パスに返されるポインター。  
+ 入出力パスへの返されたポインター。  
   
  `pcchPath`  
- [入力、出力]要求の最大長の`pwzCachePath`、関数が戻るとき、実際の長さと`pwzCachePath`します。  
+ [入力、出力]要求された最大長 `pwzCachePath`、戻り値は `pwzCachePath`の実際の長さ。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ASM_CACHE_FLAGS 列挙型](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [ASM_CACHE_FLAGS 列挙型](asm-cache-flags-enumeration.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

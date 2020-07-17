@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9290fd70b17b5a6456d85cb4b037ebbc62e028f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002f4177f19c2aae99e91e3fe1029b81e17481dc
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763979"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805014"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule メソッド
-アセンブリまたは、リンクされた (ただし、埋め込まれたされません) 内のモジュールのリソース ファイルを解決します。  
+アセンブリ内のモジュール、またはリンクされている (埋め込みではない) リソースファイル内のモジュールを解決します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,44 +38,44 @@ HRESULT ProvideModule (
   
 ## <a name="parameters"></a>パラメーター  
  `pBindInfo`  
- [in]ポインターを[ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) 、要求されたモジュールを記述するインスタンス<xref:System.AppDomain>アセンブリとモジュール名。  
+ から要求されたモジュールの、アセンブリ、およびモジュール名を記述する[Modulebindinfo](modulebindinfo-structure.md)インスタンスへのポインター <xref:System.AppDomain> 。  
   
  `pdwModuleId`  
- [out]一意の識別子へのポインター、`IStream`読み込まれたモジュールを格納しています。  
+ 入出力読み込まれたモジュールを格納しているの一意の識別子へのポインター `IStream` 。  
   
  `ppStmModuleImage`  
- [out]アドレスへのポインター、`IStream`を読み込む、ポータブル実行可能 (PE) イメージを含むオブジェクト。 または、モジュールが見つからなかった場合は null です。  
+ 入出力読み込み対象の `IStream` ポータブル実行可能 (PE) イメージを格納しているオブジェクトのアドレスへのポインター。モジュールが見つからなかった場合は null。  
   
  `ppStmPDB`  
- [out]アドレスへのポインター、 `IStream` 、要求されたモジュールのプログラムのデバッグ (PDB) の情報が含まれるオブジェクト。 または、.pdb ファイルが見つかりませんでした場合は null です。  
+ 入出力`IStream`要求されたモジュールのプログラムデバッグ (PDB) 情報を格納しているオブジェクトのアドレスへのポインター、または .pdb ファイルが見つからなかった場合は null。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ProvideModule` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`ProvideModule`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|COR_E_FILENOTFOUND (0x80070002)|要求されたアセンブリまたはリンクされたリソースを配置できませんでした。|  
-|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` ホストを返す必要がある識別子を格納するのに十分な大きさがありません。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|COR_E_FILENOTFOUND (0x80070002)|要求されたアセンブリまたはリンクされたリソースが見つかりませんでした。|  
+|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId`は、ホストが返す識別子を格納するのに十分な大きさではありません。|  
   
-## <a name="remarks"></a>Remarks  
- Id 値が返される`pdwModuleId`ホストによって指定されます。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR では、関連付けられているストリームの一意識別子としてこの値を使用します。 値に対して各値をチェック`pAssemblyId`への呼び出しによって返される[ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)の値に対して、`pdwModuleId`するその他の呼び出しによって返される`ProvideModule`します。 別のホストが同じ識別子の値を返す場合`IStream`CLR は、そのストリームの内容が既にマップされているかどうかを確認します。 そうである場合、CLR は、新しいものをマップする代わりに、イメージの既存のコピーを読み込みます。 そのため、識別子も重複してはなりませんから返されたアセンブリ識別子を持つ`ProvideAssembly`します。  
+## <a name="remarks"></a>解説  
+ に対して返される id 値 `pdwModuleId` は、ホストによって指定されます。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR は、この値を、関連付けられているストリームの一意の識別子として使用します。 これは、各値を、の `pAssemblyId` 呼び出しによって返された値と比較し[、の](ihostassemblystore-provideassembly-method.md) `pdwModuleId` 他の呼び出しによって返された値と比較して確認 `ProvideModule` します。 ホストが別のと同じ識別子の値を返した場合、 `IStream` CLR は、そのストリームの内容が既にマップされているかどうかを確認します。 その場合、CLR は新しいイメージをマップするのではなく、イメージの既存のコピーを読み込みます。 したがって、識別子も、から返されるアセンブリ識別子と重複しないようにする必要があり `ProvideAssembly` ます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [ICLRAssemblyReferenceList インターフェイス](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager インターフェイス](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore インターフェイス](ihostassemblystore-interface.md)

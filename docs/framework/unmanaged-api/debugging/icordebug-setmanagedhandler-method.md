@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a197d260c55d24f906da7d7f2768bb7ba1ad751f
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738122"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895347"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler メソッド
-管理対象のイベントのイベント ハンドラー オブジェクトを指定します。  
+マネージイベントのイベントハンドラーオブジェクトを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,22 +35,22 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>パラメーター  
  `pCallback`  
- [in]ポインター、 [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)イベント ハンドラー オブジェクトであるオブジェクト。  
+ からイベントハンドラーオブジェクトである、ツール[コールバック](icordebugmanagedcallback-interface.md)オブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `SetManagedHandler` 作成時に呼び出す必要があります。  
+## <a name="remarks"></a>解説  
+ `SetManagedHandler`作成時にを呼び出す必要があります。  
   
- 場合、`ICorDebugManagedCallback`実装には、デバッグ中、アプリケーションのデバッグ イベントを処理するための十分なインターフェイスが含まれていない`SetManagedHandler`HRESULT の E_NOINTERFACE を返します。  
+ の`ICorDebugManagedCallback`実装に、デバッグ対象のアプリケーションのデバッグイベントを処理するための十分なインターフェイスが`SetManagedHandler`含まれていない場合は、E_NOINTERFACE の HRESULT が返されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)

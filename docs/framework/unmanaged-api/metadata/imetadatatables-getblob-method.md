@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff97e419c5309fa7cb820cb7e82db96fee34f30c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781563"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501275"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob メソッド
-指定した列のインデックス位置にあるバイナリ ラージ オブジェクト (BLOB) へのポインターを取得します。  
+指定した列インデックスにあるバイナリラージオブジェクト (BLOB) へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,24 +37,24 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>パラメーター  
  `ixBlob`  
- [in]取得元のメモリ アドレス`ppData`します。  
+ から取得するメモリアドレス `ppData` 。  
   
  `pcbData`  
- [out]サイズ (バイト単位) へのポインターの`ppData`します。  
+ 入出力のサイズ (バイト単位) へのポインター `ppData` 。  
   
  `ppData`  
- [out]バイナリ データへのポインターへのポインターを取得します。  
+ 入出力取得したバイナリデータへのポインターへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables インターフェイス](imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](imetadatatables2-interface.md)

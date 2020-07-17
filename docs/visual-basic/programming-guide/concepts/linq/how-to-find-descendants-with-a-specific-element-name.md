@@ -1,15 +1,15 @@
 ---
-title: '方法: 特定の要素の名前 (Visual Basic) を持つ子孫を検索します。'
+title: '方法: 特定の要素名を持つ子孫を検索する'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 19e0807f3bb7e83061b2076a177107eec126e717
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780498"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405210"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>方法: 特定の要素の名前 (Visual Basic) を持つ子孫を検索します。
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>方法: 特定の要素名を持つ子孫を検索する (Visual Basic)
 特定の名前を持つ子孫をすべて検索しなければならない場合があります。 すべての子孫を反復処理するコードを記述することもできますが、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用する方が簡単です。  
   
 ## <a name="example"></a>例  
@@ -49,12 +49,12 @@ Console.WriteLine(str)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -96,11 +96,11 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

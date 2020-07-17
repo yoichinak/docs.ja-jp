@@ -2,38 +2,38 @@
 title: '方法: WorkflowServiceHost を使用して追跡を構成する'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54594a8f464e77062c658606db6bc941e319f71d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039365"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599101"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用して追跡を構成する
 このトピックでは、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] でホストされている <xref:System.ServiceModel.Activities.WorkflowServiceHost> ワークフロー サービスの追跡を構成する方法について説明します。 これは、Web.config ファイルにサービスの動作を指定することによって指定します。  
   
 ### <a name="configure-tracking-in-configuration"></a>構成での追跡の構成  
   
-1. 次の例に示すように、<<xref:System.Activities.Tracking.EtwTrackingParticipant>> 要素を構成ファイルで使用し、`behavior` を追加します。  
+1. 次の <xref:System.Activities.Tracking.EtwTrackingParticipant> `behavior` 例に示すように、構成ファイルに <> 要素を使用してを追加します。  
   
     ```xml  
     <behaviors>  
        <serviceBehaviors>  
          <behavior>  
            <etwTracking profileName="Sample Tracking Profile" />  
-         </behavior>              
+         </behavior>
        </serviceBehaviors>  
-    <behaviors>  
+    </behaviors>  
     ```  
   
     > [!NOTE]
-    >  前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、次を参照してください。 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)します。  
+    > 前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、「簡略化された[構成](../simplified-configuration.md)」を参照してください。  
   
-     前の構成サンプルでは、<xref:System.Activities.Tracking.EtwTrackingParticipant> を追加し、追跡プロファイル名を指定します。 追跡プロファイルは、<`trackingProfile`> 要素内の <`tracking`> 要素で作成されます。 追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。 追跡プロファイルを作成する方法を次の例に示します。  
+     前の構成サンプルでは、<xref:System.Activities.Tracking.EtwTrackingParticipant> を追加し、追跡プロファイル名を指定します。 追跡プロファイルは `trackingProfile` <> 要素内の <> 要素に作成され `tracking` ます。 追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。 追跡プロファイルを作成する方法を次の例に示します。  
   
     ```xml  
     <system.serviceModel>  
-        <tracking>   
+        <tracking>
          <trackingProfile name="Sample Tracking Profile">  
             <workflow activityDefinitionId="*">  
                <workflowInstanceQueries>  
@@ -45,14 +45,14 @@ ms.locfileid: "62039365"
                 </workflowInstanceQuery>  
              </workflowInstanceQueries>  
            </workflow>  
-         </trackingProfile>   
+         </trackingProfile>
        </tracking>  
     </system.serviceModel>  
     ```  
   
-     追跡プロファイルの詳細については、次を参照してください。[追跡プロファイル](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
+     追跡プロファイルの詳細については、「[追跡プロファイル](../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
-     追跡全般の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)します。  
+     一般的な追跡の詳細については、「[ワークフローの追跡とトレース](../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」を参照してください。  
   
 ### <a name="configure-tracking-in-code"></a>コードでの追跡の構成  
   
@@ -62,14 +62,14 @@ ms.locfileid: "62039365"
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     前のコード サンプルでは、<xref:System.Activities.Tracking.EtwTrackingParticipant> を追加し、追跡プロファイル名を指定します。 追跡プロファイルは、前のセクションで説明したように <`trackingProfile`> 要素内の <`tracking`> 要素で作成されます。  
+     前のコード サンプルでは、<xref:System.Activities.Tracking.EtwTrackingParticipant> を追加し、追跡プロファイル名を指定します。 追跡プロファイルは、 `trackingProfile` `tracking` 前のセクションで示したように、<> 要素内の <> 要素に作成されます。  
   
-     追跡プロファイルの詳細については、次を参照してください。[追跡プロファイル](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
+     追跡プロファイルの詳細については、「[追跡プロファイル](../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
-     追跡全般の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)します。 プログラムによる追跡を構成する例を参照してください。[ワークフローの追跡を構成する](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。  
+     一般的な追跡の詳細については、「[ワークフローの追跡とトレース](../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」を参照してください。 プログラムによって追跡を構成する例については[、「ワークフローの追跡の構成](../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF サービスの簡略化された構成](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
-- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [追跡プロファイル](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [WCF サービスの簡略化された構成](../samples/simplified-configuration-for-wcf-services.md)
+- [ワークフロー サービス](workflow-services.md)
+- [追跡プロファイル](../../windows-workflow-foundation/tracking-profiles.md)

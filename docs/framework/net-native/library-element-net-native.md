@@ -1,17 +1,15 @@
 ---
-title: <Library> 要素 (.NET ネイティブ)
+title: <Library>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422535"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73128364"
 ---
-# <a name="library-element-net-native"></a>\<ライブラリ > 要素 (.NET ネイティブ)
+# <a name="library-element-net-native"></a>\<Library>要素 (.NET ネイティブ)
 実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。  
   
  \<Directives> 要素  
@@ -34,31 +32,31 @@ ms.locfileid: "67422535"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |*assembly_name*|ファイル拡張子のないアセンブリの簡易名です。 この属性は、<xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> プロパティに対応します。 たとえば、Extensions.dll というアセンブリの名前は "Extensions" です。 アセンブリのメタデータの条件付きインクルードをサポートする特殊な形式の *assembly_name* については、「解説」セクションを参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素を使用して `List<String>` 型のポリシーを定義できます。|  
+|[\<Assembly>](assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
+|[\<Namespace>](namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、要素を [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 使用して、型のポリシーを定義することができ `List<String>` ます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
+|[\<Directives>](directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
   
-## <a name="remarks"></a>Remarks  
- [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 要素には、0 個以上の `<Library>` 要素を含めることができます。  
+## <a name="remarks"></a>解説  
+ 要素には、 [\<Directives>](directives-element-net-native.md) 0 個以上の要素を含めることができ `<Library>` ます。  
   
- `<Library>` 要素は、実行時に必要なメタデータを持つプログラム要素を定義するためのコンテナーとして機能します。この要素はポリシーを表しません。 コンパイル時に、コンパイラ ツールは `<Library>` 要素により指定されたライブラリでのみ、その子要素により示されるプログラム要素を検索します。 一方、[\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 要素の子要素により示されるプログラム要素を検索する場合、コンパイラ ツールは .NET Framework コア ライブラリを含むすべてのライブラリを検索します。  
+ `<Library>` 要素は、実行時に必要なメタデータを持つプログラム要素を定義するためのコンテナーとして機能します。この要素はポリシーを表しません。 コンパイル時に、コンパイラ ツールは `<Library>` 要素により指定されたライブラリでのみ、その子要素により示されるプログラム要素を検索します。 これに対して、コンパイラツールは、要素の子要素によって識別されるプログラム要素のすべてのライブラリ (including.NET Framework core ライブラリ) を検索し [\<Application>](application-element-net-native.md) ます。  
   
- `<Library>` ディレクティブは、条件付きで使用される場合があります。 場合の名前、`<Library>`要素が起動し、末尾がアスタリスク (\*)、`<Library>`ディレクティブでは、アスタリスクの間に指定したアセンブリがアプリによって参照されている場合にのみ効果があります。 たとえば、次のランタイム ディレクティブは、Utilities.dll アセンブリがアプリによって参照されている場合にのみ適用されます。  
+ `<Library>` ディレクティブは、条件付きで使用される場合があります。 要素の名前の `<Library>` 先頭と末尾がアスタリスク () の場合 \* 、このディレクティブは、 `<Library>` アスタリスクによって指定されたアセンブリがアプリによって参照されている場合にのみ効果があります。 たとえば、次のランタイムディレクティブは、ユーティリティ .dll アセンブリがアプリによって参照されている場合にのみ適用されます。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -70,7 +68,7 @@ ms.locfileid: "67422535"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Application > 要素](../../../docs/framework/net-native/application-element-net-native.md)
-- [\<ディレクティブ > 要素](../../../docs/framework/net-native/directives-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Application>Element](application-element-net-native.md)
+- [\<Directives>Element](directives-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)

@@ -1,41 +1,42 @@
 ---
 title: Windows Workflow Foundation の機能仕様
+description: この記事では、.NET Framework 4 が Windows Workflow Foundation に追加される新機能と、機能が役立つ可能性があるシナリオについて説明します。
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 063d2472443431423cea9b164831cd1e7a669408
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb490b3dd368710bf2ed98f7c53b7b184fa15b0b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753721"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419955"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation の機能仕様
 
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] は、Windows Workflow Foundation にいくつかの機能を追加します。 このドキュメントでは、いくつかの新機能について説明し、役に立つ可能性のあるシナリオの詳細を示します。
+.NET Framework 4 は、Windows Workflow Foundation にいくつかの機能を追加します。 このドキュメントでは、いくつかの新機能について説明し、役に立つ可能性のあるシナリオの詳細を示します。
 
 ## <a name="messaging-activities"></a>メッセージング アクティビティ
 
-メッセージング アクティビティ (<xref:System.ServiceModel.Activities.Receive>、 <xref:System.ServiceModel.Activities.SendReply>、 <xref:System.ServiceModel.Activities.Send>、 <xref:System.ServiceModel.Activities.ReceiveReply>)、ワークフローから WCF メッセージを送受信するために使用します。 <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply>アクティビティが標準の WCF web サービスと同様に、WSDL 経由で公開される Windows Communication Foundation (WCF) サービスの操作を形成するために使用されます。 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> WCF のような web サービスを使用するために使用<xref:System.ServiceModel.ChannelFactory>は**サービス参照の追加**エクスペリエンスは、事前構成済みのアクティビティを生成する Workflow Foundation にも存在します。
+メッセージングアクティビティ ( <xref:System.ServiceModel.Activities.Receive> 、、 <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.Send> 、 <xref:System.ServiceModel.Activities.ReceiveReply> ) は、ワークフローから WCF メッセージを送受信するために使用されます。 <xref:System.ServiceModel.Activities.Receive>および <xref:System.ServiceModel.Activities.SendReply> アクティビティは、標準の wcf web サービスと同様に、WSDL 経由で公開される Windows Communication Foundation (wcf) サービス操作を形成するために使用されます。 <xref:System.ServiceModel.Activities.Send>と <xref:System.ServiceModel.Activities.ReceiveReply> は、WCF と同様に web サービスを使用するために使用されます。 <xref:System.ServiceModel.ChannelFactory> 事前に構成されたアクティビティを生成する Workflow Foundation の**サービス参照の追加**エクスペリエンスもあります。
 
 ### <a name="getting-started-with-messaging-activities"></a>メッセージング アクティビティの概要
 
-- Visual Studio 2012 では、WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアがキャンバスに配置されます。
+- Visual Studio 2012 で、WCF ワークフローサービスアプリケーションプロジェクトを作成します。 <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアがキャンバスに配置されます。
 
-- クリックし、プロジェクトを右クリックして**サービス参照の追加**します。 既存の web サービス WSDL をポイントしてクリックして**OK**します。 生成されたアクティビティを表示するプロジェクトをビルド (を使用して実装<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>)、ツールボックスにします。
+- プロジェクトを右クリックし、[**サービス参照の追加**] を選択します。 既存の web サービス WSDL をポイントし、[ **OK]** をクリックします。 プロジェクトをビルドして、生成されたアクティビティ (およびを使用して実装 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> ) をツールボックスに表示します。
 
-- [ワークフロー サービスのドキュメント](../wcf/feature-details/workflow-services.md)
+- [ワークフローサービスのドキュメント](../wcf/feature-details/workflow-services.md)
 
 ### <a name="messaging-activities-example-scenario"></a>メッセージング アクティビティのシナリオ例
 
-A`BestPriceFinder`サービスは、複数の航空会社サービスを特定のルートの最良チケット価格を検索します。 このシナリオを実装するには、メッセージ アクティビティを使用して、価格要求を受信、バックエンド サービスから価格を取得し、価格要求に最良価格で応答することが必要ですが。 最適な価格を計算するためのビジネス ロジックを作成する他の既定のアクティビティを使用する必要も出ています。
+サービスは、 `BestPriceFinder` 複数の航空会社サービスを呼び出して、特定のルートに最適なチケット価格を検索します。 このシナリオを実装するには、メッセージアクティビティを使用して価格要求を受信し、バックエンドサービスから価格を取得し、価格要求に最高価格で返信する必要があります。 また、その他の既定のアクティビティを使用して、最適な価格を計算するためのビジネスロジックを作成する必要があります。
 
 ## <a name="workflowservicehost"></a>WorkflowServiceHost
 
-<xref:System.ServiceModel.WorkflowServiceHost> (ただし、ワークフローがホストされるためにメッセージングを使用する必要はありません)、複数のインスタンス、構成、および WCF メッセージングをサポートする既定のワークフロー ホストです。 また、一連のサービス動作を介して永続性、追跡、およびインスタンス コントロールを統合します。 WCF のと同様に<xref:System.ServiceModel.ServiceHost>、<xref:System.ServiceModel.WorkflowServiceHost>コンソール/WinForms と WPF アプリケーションまたは Windows サービスで自己ホストしたり、web ホスト (.xamlx ファイル) として IIS または WAS でします。
+<xref:System.ServiceModel.WorkflowServiceHost>は、複数のインスタンス、構成、および WCF メッセージングをサポートする、標準のワークフローホストです (ただし、ワークフローは、ホストするためにメッセージングを使用する必要はありません)。 また、一連のサービス動作を介して永続性、追跡、およびインスタンス コントロールを統合します。 WCF の場合と同様に <xref:System.ServiceModel.ServiceHost> 、は、 <xref:System.ServiceModel.WorkflowServiceHost> コンソール、WINFORMS、WPF アプリケーション、Windows サービス、または IIS または WAS の web ホスト (.xamlx ファイル) で自己ホストされます。
 
 ### <a name="getting-started-with-workflow-service-host"></a>ワークフロー サービス ホストの概要
 
-- Visual Studio 2010 で WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 を使用するようこのプロジェクトに設定されます<xref:System.ServiceModel.WorkflowServiceHost>web ホスト環境でします。
+- Visual Studio 2010 で、WCF ワークフローサービスアプリケーションプロジェクトを作成します。このプロジェクトは、 <xref:System.ServiceModel.WorkflowServiceHost> web ホスト環境で使用するように設定されます。
 
 - 非メッセージング ワークフローをホストするには、メッセージに基づいてインスタンスを作成するカスタム <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> を追加します。
 
@@ -45,15 +46,15 @@ A`BestPriceFinder`サービスは、複数の航空会社サービスを特定�
 
   - [実行](./samples/execution.md)
 
-  - アプリケーションの場合:[中断されたインスタンスの管理](./samples/suspended-instance-management.md)
+  - アプリケーション:[中断](./samples/suspended-instance-management.md)されたインスタンスの管理
 
-- [ワークフロー サービスのホストの概要](../wcf/feature-details/hosting-workflow-services-overview.md)
+- [ワークフローサービスのホスティングの概要](../wcf/feature-details/hosting-workflow-services-overview.md)
 
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost のシナリオ
 
-BestPriceFinder サービスは、複数の航空会社サービスを特定のルートの最良チケット価格を検索します。 このシナリオを実装する必要にワークフローをホスト<xref:System.ServiceModel.WorkflowServiceHost>します。 メッセージ アクティビティを使用しても、価格要求を受信、バックエンド サービスから価格を取得および価格要求に最良価格で応答するには。
+BestPriceFinder サービスは、複数の航空会社サービスを呼び出して、特定のルートに最適なチケット価格を探します。 このシナリオを実装するには、でワークフローをホストする必要があり <xref:System.ServiceModel.WorkflowServiceHost> ます。 また、メッセージアクティビティを使用して、価格要求を受信し、バックエンドサービスから価格を取得し、価格要求に最高価格で応答します。
 
-## <a name="correlation"></a>相関関係
+## <a name="correlation"></a>Correlation
 
 相関関係は次の 2 つのいずれかです。
 
@@ -61,53 +62,53 @@ BestPriceFinder サービスは、複数の航空会社サービスを特定の�
 
 - サービス インスタンスにデータの一部をマッピングする方法。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
 - 相関を開始するには、Visual Studio で新規プロジェクトを作成します。 <xref:System.ServiceModel.Activities.CorrelationHandle> 型の変数を作成します。
 
 - メッセージのグループ化に使用する相関関係の例は、メッセージをグループ化する要求/応答の相関関係です。
 
-  - <xref:System.ServiceModel.Activities.Receive>アクティビティをクリックして、<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>プロパティを追加し、<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>上記の最初の手順で作成された、CorrelationHandle を使用して。
+  - アクティビティで、プロパティをクリックし、 <xref:System.ServiceModel.Activities.Receive> 上の <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> 最初の <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 手順で作成した CorrelationHandle を使用してを追加します。
 
-  - 作成、<xref:System.ServiceModel.Activities.SendReply>アクティビティを右クリックし、 <xref:System.ServiceModel.Activities.Receive> "SendReply の作成" をクリックします。 これをワークフローの <xref:System.ServiceModel.Activities.Receive> アクティビティの後に貼り付けます。
+  - アクティビティを作成するに <xref:System.ServiceModel.Activities.SendReply> は、を右クリックし、[ <xref:System.ServiceModel.Activities.Receive> SendReply の作成] をクリックします。 これをワークフローの <xref:System.ServiceModel.Activities.Receive> アクティビティの後に貼り付けます。
 
 - データの一部をサービス インスタンスにマッピングする例は、データの一部 (オーダー ID など) を特定のワークフロー インスタンスにマップするコンテンツ ベースの相関関係です。
 
   - 任意のメッセージング アクティビティで、`CorrelationInitializers` プロパティをクリックし、上記で作成した <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 変数を使用して <xref:System.ServiceModel.Activities.CorrelationHandle> を追加します。 ドロップダウン メニューで、メッセージ上の目的のプロパティ (OrderID など) をダブルクリックします。 `CorrelatesWith` プロパティを上記で使用した <xref:System.ServiceModel.Activities.CorrelationHandle> 変数に設定します。
 
-- [相関関係の概念に関するドキュメント](../wcf/feature-details/correlation.md)
+- [相関関係の概念説明ドキュメント](../wcf/feature-details/correlation.md)
 
 ### <a name="correlation-scenario"></a>相関関係のシナリオ
 
-注文処理ワークフローを使用して、新規注文の作成とプロセス内にある既存の注文の更新を処理します。 このシナリオを実装する必要にワークフローをホスト<xref:System.ServiceModel.WorkflowServiceHost>とメッセージング アクティビティを使用します。 基づく相関関係が必要になることも、`orderId`に適切なワークフローに更新が行われることを確認します。
+注文処理ワークフローは、新しい注文の作成や、処理中の既存の注文の更新を処理するために使用されます。 このシナリオを実装するには、でワークフローをホストし、メッセージングアクティビティを使用する必要があり <xref:System.ServiceModel.WorkflowServiceHost> ます。 また、 `orderId` 適切なワークフローに更新が行われるように、に基づく相関関係も必要です。
 
 ## <a name="simplified-configuration"></a>簡略化された構成
 
-WCF 構成スキーマは複雑であり、機能を検索するハードの多くのユーザーを提供します。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]、WCF ユーザーが次の機能が、サービスを構成する際に役立つを中心に説明しました。
+WCF 構成スキーマは複雑であり、ユーザーはさまざまな機能を見つけることができます。 では [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 、WCF ユーザーが次の機能を使用してサービスを構成する方法について重点的に説明しました。
 
-- サービスごとの明示的な構成の必要性をなくします。 いずれかを構成しなかった場合\<service > 要素に、サービスと、サービスに任意のエンドポイントをプログラムで定義されていませんし、サービス コントラクトおよびサービスのベース アドレスごとに 1 つに、一連のエンドポイントが自動的に追加します。サービスによって実装されます。
+- サービスごとの明示的な構成の必要性をなくします。 サービスに対してサービス> 要素を構成せず、サービスがプログラムを使用して \< エンドポイントを定義していない場合、エンドポイントのセットがサービスに自動的に追加されます。サービスによって実装されるサービスベースアドレスとコントラクトごとに、一連のエンドポイントが自動的に追加されます。
 
 - 明示的な構成のないサービスに適用される WCF バインディングおよび動作の既定値をユーザーが定義できるようにします。
 
 - 標準のエンドポイントは、事前に構成された再利用可能なエンドポイントを定義します。このエンドポイントは、1 つ以上のエンドポイント プロパティ (アドレス、バインド、およびコントラクト) に対して固定値を持ち、カスタム プロパティを定義できるようにします。
 
-- 最後に、 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF クライアントの構成、構成が選択されているまたはアプリケーション ドメインの読み込み時間後に変更のシナリオで役に立ちますの集中管理することができます。
+- 最後に、を <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 使用すると、アプリケーションドメインの読み込み時間の後に構成が選択または変更された場合に役立つ、WCF クライアント構成の中央管理を行うことができます。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- [Wcf 4.0 開発者ガイド](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [WCF 4.0 開発者ガイド](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [構成チャネル ファクトリ](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [構成チャネル ファクトリ](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [標準エンドポイント要素](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [標準エンドポイント要素](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 では、サービス構成の機能強化](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4 のサービス構成の機能強化](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4 での一般的なユーザーの誤り:WF と WCF サービスの構成名の入力ミス](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [.NET 4 でよくあるユーザーの誤り: WF/WCF サービス構成名の入力ミス](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>簡略化された構成のシナリオ
 
-- 経験豊富な ASMX 開発者が WCF の使用を開始しようとするとします。 ただし、WCF は複雑すぎるようです。 構成ファイルに書き込む必要のある情報は何ですか。 .NET 4 では、構成ファイルをまったく使用しないこともできます。
+- 経験豊富な ASMX 開発者は、WCF の使用を開始したいと考えています。 しかし、WCF はあまり複雑ではないように思えます。 構成ファイルに書き込む必要のある情報は何ですか。 .NET 4 では、構成ファイルをまったく使用しないこともできます。
 
 - 既存の WCF サービスのセットは構成とメンテナンスが非常に困難です。 構成ファイルには、変更するのが非常に危険な XML コードが何千行もあります。 コード量を管理しやすい量に減らすための支援が必要です。
 
@@ -121,13 +122,13 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - ユーザーは、ネットワーク上のシリアル化インスタンスのサイズを小さくするなど、ネットワーク上に出現する xsi:type を指定できませんでした。
 
-[DataContractResolver](../wcf/samples/datacontractresolver.md) .NET 4.5 でこれらの問題を解決します。
+[DataContractResolver](../wcf/samples/datacontractresolver.md)は、これらの問題を .net 4.5 で解決します。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- [データ コントラクト リゾルバー API のドキュメント](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [データ コントラクト リゾルバー API のドキュメント](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [データ コントラクト リゾルバーの概要](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [データ コントラクト リゾルバーの概要](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - サンプル:
 
@@ -143,11 +144,11 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 ## <a name="flowchart"></a>フローチャート
 
-フローチャートは、ドメインの問題を視覚的に表すための既知のパラダイムです。 これは .NET の 4 で導入される新しい制御フロー スタイルです。 フローチャートの主な特性は、一度に 1 つのアクティビティのみ実行されることです。 フローチャートはループと代替結果を表すことができますが、その性質上、複数ノードの同時実行を表すことはできません。
+フローチャートは、ドメインの問題を視覚的に表すための既知のパラダイムです。 これは、.NET 4 で導入されている新しい制御フロースタイルです。 フローチャートの主な特性は、一度に 1 つのアクティビティのみ実行されることです。 フローチャートはループと代替結果を表すことができますが、その性質上、複数ノードの同時実行を表すことはできません。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーにフローチャートを追加します。
+- Visual Studio 2012 で、ワークフローコンソールアプリケーションを作成します。 ワークフロー デザイナーにフローチャートを追加します。
 
 - フローチャート機能では、次のクラスを使用します。
 
@@ -169,11 +170,11 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - デザイナー ドキュメント:
 
-  - [フローチャート アクティビティ デザイナー](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [フローチャートアクティビティデザイナー](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>フローチャートのシナリオ
 
-フローチャート アクティビティを使用して推測ゲームを実装できます。 推測ゲームは非常に単純です。コンピューターによってランダムな数値が選択され、プレーヤーはその数値を推測する必要があります。 プレーヤーが推測を送信するとき、コンピューターが表示されます (つまり"試行数が小さい) ヒント。 プレーヤーが 6 回以下で数値を見つけた場合は、特別な祝福のメッセージが表示されます。 このゲームは、次の手続き型アクティビティの組み合わせで実装できます。
+フローチャート アクティビティを使用して推測ゲームを実装できます。 推測ゲームは非常に単純です。コンピューターによってランダムな数値が選択され、プレーヤーはその数値を推測する必要があります。 プレーヤーが各推測を送信すると、コンピューターにヒントが表示されます ("小さい数値を試す" など)。 プレーヤーが7回未満で数値を検出した場合、コンピューターから特別な祝福を受け取ります。 このゲームは、次の手続き型アクティビティの組み合わせで実装できます。
 
 - <xref:System.Activities.Statements.Sequence>
 
@@ -189,11 +190,11 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>手続き型アクティビティ (Sequence、If、ForEach、Switch、Assign、DoWhile、While)
 
-手続き型アクティビティは、プログラマになじみのある概念を使用してシーケンシャル制御フローをモデル化するメカニズムを提供します。 これらのアクティビティにより、従来の構造型プログラミング言語構成要素が有効になり、該当する場合には C#/VB などの一般的な手続き型言語と同等の言語が提供されます。
+手続き型アクティビティは、プログラマになじみのある概念を使用してシーケンシャル制御フローをモデル化するメカニズムを提供します。 これらのアクティビティは、従来の構造化プログラミング言語構成要素を有効にします。また、必要に応じて、C# や Visual Basic などの一般的な手続き型言語と言語の同等性を提供します。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで、手続き型アクティビティを追加します。
+- Visual Studio 2012 で、ワークフローコンソールアプリケーションを作成します。 ワークフロー デザイナーで、手続き型アクティビティを追加します。
 
 - サンプル:
 
@@ -205,23 +206,23 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
   - [Parallel アクティビティ デザイナー](/visualstudio/workflow-designer/parallel-activity-designer)
 
-  - [ParallelForEach\<T > アクティビティ デザイナー](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach \< T> アクティビティデザイナー](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>手続き型アクティビティのシナリオ
 
-- <xref:System.Activities.Statements.Parallel>:イントラネット ドキュメント管理システムでは、ドキュメント承認ワークフローが。 ドキュメントは、イントラネットに公開する前に、複数の部門の担当者によって承認する必要があります。 承認; の確立された注文がないです。「承認保留」フェーズで、ドキュメントには、いつでもが発生することができます。 ユーザーがレビューのためにドキュメントを送信した場合は、直属のマネージャー、イントラネット管理者、および内部コミュニケーション マネージャーがそのドキュメントを承認する必要があります。
+- <xref:System.Activities.Statements.Parallel>: イントラネットドキュメント管理システムには、ドキュメント承認ワークフローがあります。 ドキュメントは、イントラネットに公開する前に、複数の部門の担当者によって承認する必要があります。 承認の順序が確立されていません。ドキュメントが "承認の保留中" フェーズにある間はいつでも発生する可能性があります。 ユーザーがドキュメントをレビュー用に送信する場合、そのドキュメントは、直属の上司、イントラネット管理者、および内部通信マネージャーによって承認されている必要があります。
 
-- <xref:System.Activities.Statements.ParallelForEach%601>:WF アプリケーションでは、大企業内の企業購買を管理します。 企業の規則では、購買作業を計画する前に 3 社の異なるベンダーを評価する必要があると規定されています。 購買部門の従業員は、企業のベンダー リストから 3 社のベンダーを選択します。 これらのベンダーを選択し、通知した後で、企業は経済提案書を待ちます。 提案書は任意の順序で到着します。 WF でこのシナリオを実装するには、ベンダーのコレクションを反復処理して経済提案書を求める <xref:System.Activities.Statements.ParallelForEach%601> を使用します。 すべての提案が収集された後で、最良の提案が選択されて表示されます。
+- <xref:System.Activities.Statements.ParallelForEach%601>: WF アプリケーションは、大規模企業内での企業購買を管理します。 企業の規則では、購買作業を計画する前に 3 社の異なるベンダーを評価する必要があると規定されています。 購入部署の従業員は、会社の仕入先リストから3つの仕入先を選択します。 これらのベンダーを選択し、通知した後で、企業は経済提案書を待ちます。 提案書は任意の順序で到着します。 WF でこのシナリオを実装するには、ベンダーのコレクションを反復処理して経済提案書を求める <xref:System.Activities.Statements.ParallelForEach%601> を使用します。 すべての提案が収集された後で、最良の提案が選択されて表示されます。
 
 ## <a name="invokemethod"></a>InvokeMethod
 
 <xref:System.Activities.Statements.InvokeMethod> アクティビティでは、オブジェクト内のパブリック メソッドまたはスコープ内の型を呼び出すことができます。 パラメーター付きまたはパラメーターなし (パラメーター配列を含む) でのインスタンス メソッドおよび静的メソッドの呼び出し、および汎用メソッドの呼び出しがサポートされます。 メソッドを同期および非同期で実行することもできます。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーに <xref:System.Activities.Statements.InvokeMethod> アクティビティを追加し、そこに静的メソッドとインスタンス メソッドを構成します。
+- Visual Studio 2012 で、ワークフローコンソールアプリケーションを作成します。 ワークフロー デザイナーに <xref:System.Activities.Statements.InvokeMethod> アクティビティを追加し、そこに静的メソッドとインスタンス メソッドを構成します。
 
-- デザイナー ドキュメント:[InvokeMethod アクティビティ デザイナー](/visualstudio/workflow-designer/invokemethod-activity-designer)
+- デザイナードキュメント: [InvokeMethod アクティビティデザイナー](/visualstudio/workflow-designer/invokemethod-activity-designer)
 
 ### <a name="invokemethod-scenarios"></a>InvokeMethod のシナリオ
 
@@ -231,15 +232,15 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 ## <a name="error-handling-activities"></a>エラー処理アクティビティ
 
-<xref:System.Activities.Statements.TryCatch> アクティビティには、含まれるアクティビティのセットの実行中に発生する例外をキャッチするメカニズムが用意されています (C#/VB の Try/Catch コンストラクトに類似)。 <xref:System.Activities.Statements.TryCatch> はワークフロー レベルの例外処理を提供します。 ハンドルされていない例外がスローされると、ワークフローが中止され、Finally ブロックは実行されません。 この動作は C# と一貫性があります。
+アクティビティは、 <xref:System.Activities.Statements.TryCatch> 含まれているアクティビティのセットの実行中に発生した例外をキャッチするためのメカニズムを提供します (C# の Try/Catch コンストラクトや Visual Basic)。 <xref:System.Activities.Statements.TryCatch> はワークフロー レベルの例外処理を提供します。 未処理の例外がスローされると、ワークフローは中止され、Finally ブロックは実行されません。 この動作は C# と一貫性があります。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.TryCatch> アクティビティを追加します。
+- Visual Studio 2012 で、ワークフローコンソールアプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.TryCatch> アクティビティを追加します。
 
-- サンプル:[TryCatch を使用した Flowchart アクティビティでのエラー処理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- サンプル: [TryCatch を使用した Flowchart アクティビティでのエラー処理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-- デザイナー ドキュメント:[エラー処理アクティビティ デザイナー](/visualstudio/workflow-designer/error-handling-activity-designers)
+- デザイナードキュメント:[エラー処理アクティビティデザイナー](/visualstudio/workflow-designer/error-handling-activity-designers)
 
 ### <a name="error-handling-scenarios"></a>エラー処理のシナリオ
 
@@ -249,21 +250,21 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 <xref:System.Activities.Statements.Pick> アクティビティは、WF でイベント ベースの制御フロー モデリングを提供します。 <xref:System.Activities.Statements.Pick> には、多数の分岐が含まれています。各分岐は、特定のイベントが発生すると実行されます。 この設定では、<xref:System.Activities.Statements.Pick> は、アクティビティがリッスンしているイベント セットの 1 つのみを実行する <xref:System.Activities.Statements.Switch%601> と同様に動作します。 各分岐はイベント ドリブンなので、発生したイベントが対応する分岐を実行します。 他のすべての分岐は、イベントのリッスンをキャンセルし、停止します。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.Pick> アクティビティを追加します。
+- Visual Studio 2012 で、ワークフローコンソールアプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.Pick> アクティビティを追加します。
 
-- サンプル:[Pick アクティビティの使用](./samples/using-the-pick-activity.md)
+- サンプル: [Pick アクティビティの使用](./samples/using-the-pick-activity.md)
 
-- デザイナー ドキュメント:[Pick アクティビティ デザイナー](/visualstudio/workflow-designer/pick-activity-designer)
+- デザイナードキュメント: [Pick アクティビティデザイナー](/visualstudio/workflow-designer/pick-activity-designer)
 
 ### <a name="pick-scenario"></a>Pick のシナリオ
 
-ユーザーに入力を求めるプロンプトを表示する必要があります。 通常の状況下では、開発者は <xref:System.Console.ReadLine%2A> のようなメソッド呼び出しを使用してユーザーの入力を求めます。 この設定の問題は、ユーザーが何か入力するまでプログラムが待機することです。 このシナリオでは、ブロッキング アクティビティのブロックを解除するためにタイムアウトが必要です。 一般的なシナリオでは、特定の期間内にタスクが完了する必要があります。 ブロッキング アクティビティのタイムアウトは、Pick が大量の値を追加するシナリオです。
+ユーザーに入力を求めるプロンプトを表示する必要があります。 通常の状況では、開発者はのようなメソッド呼び出しを使用し <xref:System.Console.ReadLine%2A> て、ユーザーの入力を要求します。 この設定の問題は、ユーザーが何か入力するまでプログラムが待機することです。 このシナリオでは、ブロッキング アクティビティのブロックを解除するためにタイムアウトが必要です。 一般的なシナリオでは、特定の期間内にタスクが完了する必要があります。 ブロッキング アクティビティのタイムアウトは、Pick が大量の値を追加するシナリオです。
 
 ## <a name="wcf-routing-service"></a>WCF ルーティング サービス
 
-ルーティング サービスは一般的なソフトウェア ルーター、クライアントとサービス間の WCF メッセージのフローを制御するために設計されています。 ルーティング サービスできます、サービスからクライアントを分離するために、構成の観点からさらに多くの自由を提供するサービスをホストする方法を検討する場合がある場合、柔軟性をサポートすることができます。 .NET 3.5 では、クライアントとサービスが密接に結び付いています。クライアントは、すべてのサービスとの対話に必要し、していた場所について知っておく必要があります。 さらに、.NET Framework 3.5 の WCF では、次の制限事項がありました。
+ルーティングサービスは、WCF メッセージがクライアントとサービスの間でどのように流れるかを制御できる汎用的なソフトウェアルーターとして設計されています。 ルーティングサービスを使用すると、サービスからクライアントを切り離すことができます。これにより、サポート可能な構成と、サービスをホストする方法を検討する際の柔軟性が大幅に向上します。 .NET 3.5 では、クライアントとサービスが緊密に結合されていました。クライアントは、通信に必要なすべてのサービスとその場所を把握している必要がありました。 さらに、.NET Framework 3.5 の WCF には次の制限がありました。
 
 - ロジックをクライアントにハードコーディングする必要があったため、エラー処理が複雑でした。
 
@@ -271,23 +272,23 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - サービスが適切に分類されていることはほとんどありませんでした。複数のサービス間で選択するよりも、クライアントがすべてを実装する 1 つのサービスと対話する方が簡単です。
 
-.NET 4 では、ルーティング サービスは、これらの問題を解決するために簡単に設計されています。 新しいルーティング サービスには次の機能があります。
+.NET 4 のルーティングサービスは、これらの問題を解決しやすくするように設計されています。 新しいルーティング サービスには次の機能があります。
 
 1. コンテント ベースのルーティング (<xref:System.ServiceModel.Dispatcher.MessageFilter> オブジェクトがメッセージを調べて送信先を判断します。)
 
-2. プロトコル ブリッジ (トランスポートとメッセージ)
+2. プロトコルブリッジング (トランスポート & メッセージ)
 
 3. エラー処理 (ルーターは、通信例外をキャッチし、バックアップ エンドポイントにフェールオーバーします)
 
 4. <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> およびルーティング構成の動的 (メモリ内) 更新。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
 1. ドキュメント:[ルーティング](../wcf/feature-details/routing.md)
 
-2. サンプル:[ルーティング サービス&#91;WCF サンプル&#93;](../wcf/samples/routing-services.md)
+2. サンプル:[ルーティングサービス &#91;WCF サンプル&#93;](../wcf/samples/routing-services.md)
 
-3. ブログ:[ルーティング規則。](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. ブログ:[ルーティングルール](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>ルーティング シナリオ
 
@@ -305,21 +306,21 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 ## <a name="wcf-discovery"></a>WCF Discovery
 
-WCF Discovery に、アプリケーションのインフラストラクチャに探索メカニズムを組み込むことができるフレームワーク テクノロジです。 これを使用して、サービスを探索可能にし、サービスを検索するようにクライアントを構成できます。 クライアントはエンドポイントでハードコーディングする必要がなくなるため、アプリケーションはより堅牢になりフォールト トレランスが向上します。 探索は、アプリケーションに自動構成機能をビルドするための最適なプラットフォームです。
+WCF Discovery は、アプリケーションインフラストラクチャに検出メカニズムを組み込むことができるフレームワークテクノロジです。 これを使用して、サービスを探索可能にし、サービスを検索するようにクライアントを構成できます。 クライアントはエンドポイントでハードコーディングする必要がなくなるため、アプリケーションはより堅牢になりフォールト トレランスが向上します。 探索は、アプリケーションに自動構成機能をビルドするための最適なプラットフォームです。
 
-製品は、WS-Discovery 標準の上に構築されます。 相互運用可能、拡張可能、および汎用的になるように設計されています。 製品では 2 つの操作モードがサポートされます。
+製品は、WS-Discovery 標準の上に構築されます。 これは、相互運用、拡張、および汎用になるように設計されています。 製品では 2 つの操作モードがサポートされます。
 
 1. マネージド: 既存のサービスに関する知識を持つエンティティがネットワーク上にあり、クライアントは情報を直接クエリします。 これは Active Directory に類似しています。
 
 2. アドホック: クライアントはマルチキャスト メッセージを使用してサービスを特定します。
 
-さらに、探索メッセージはネットワーク プロトコルに依存しません。モード要件をサポートする任意のプロトコル上でこれらを使用できます。 たとえば、探索マルチキャスト メッセージを UDP チャネルまたはマルチキャスト メッセージングをサポートするその他のネットワークを介して送信されることができます。 これらの設計ポイント機能の柔軟性と組み合わせて、ソリューションに探索を適応させることができます。
+さらに、探索メッセージはネットワーク プロトコルに依存しません。モード要件をサポートする任意のプロトコル上でこれらを使用できます。 たとえば、検出マルチキャストメッセージは、UDP チャネルまたはマルチキャストメッセージングをサポートするその他のネットワーク経由で送信できます。 これらの設計ポイントと機能の柔軟性を組み合わせることにより、ソリューションに対する検出を具体的に適合させることができます。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-- ドキュメント:[WCF Discovery](../wcf/feature-details/wcf-discovery.md)
+- ドキュメント: [WCF 検出](../wcf/feature-details/wcf-discovery.md)
 
-- サンプル:[探索 (サンプル)](../wcf/samples/discovery-samples.md)
+- サンプル:[検出 (サンプル)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>探索のシナリオ
 
@@ -327,9 +328,9 @@ WCF Discovery に、アプリケーションのインフラストラクチャに
 
 ## <a name="tracking"></a>追跡
 
-ワークフロー追跡では、ワークフロー インスタンスの実行に関する洞察を提供します。 追跡イベントは、ワークフロー インスタンス レベルで、ワークフロー内のアクティビティの実行時にワークフローから出力されます。 追跡レコードを定期受信するにはワークフロー追跡参加要素をワークフロー ホストに追加する必要があります。 追跡レコードは、追跡プロファイルを使用してフィルター処理されます。 .NET Framework は ETW (Windows のイベント トレース) 追跡参加要素を示し、machine.config ファイルで、基本的なプロファイルがインストールされています。
+ワークフロー追跡は、ワークフローインスタンスの実行に関する洞察を提供します。 追跡イベントは、ワークフローインスタンスレベルでワークフローから生成され、ワークフロー内のアクティビティが実行されます。 追跡レコードを定期受信するにはワークフロー追跡参加要素をワークフロー ホストに追加する必要があります。 追跡レコードは、追跡プロファイルを使用してフィルター処理されます。 .NET Framework には ETW (Windows イベントトレーシング) 追跡参加要素が用意されており、基本プロファイルは machine.config ファイルにインストールされます。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
 1. Visual Studio 2010 で、WCF ワークフロー サービス アプリケーション プロジェクトを作成します。 開始するキャンバスに <xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> のペアが配置されます。
 
@@ -337,7 +338,7 @@ WCF Discovery に、アプリケーションのインフラストラクチャに
 
     1. 既定のプロファイルが使用されます。
 
-    2. イベント ビューアーを開き、次のノードで分析チャネルを有効にします。**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーション サーバー-アプリケーション**. 右クリック**分析**選択**ログの有効化**します。
+    2. イベントビューアーを開き、[**イベントビューアー**]、[**アプリケーションとサービスログ**]、[ **Microsoft**]、[ **Windows**]、[**アプリケーションサーバー-アプリケーション**] の各ノードで分析チャネルを有効にします。 [**分析**] を右クリックし、[**ログを有効にする**] を選択します。
 
     3. ワークフロー サービスを実行します。
 
@@ -351,10 +352,10 @@ WCF Discovery に、アプリケーションのインフラストラクチャに
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> は、SQL Server ベースのインスタンス ストアの実装です。 インスタンス ストアは、実行中のインスタンスの状態を、そのインスタンスの読み込みと再開に必要なすべてのデータと共に格納します。 サービス ホストは、ワークフローが永続的な場合にインスタンス状態を保存するようインスタンス ストアに指示し、そのインスタンスのメッセージが到着するか遅延アクティビティが期限切れになったときにインスタンス状態を読み込むようインスタンス ストアに指示します。
 
-### <a name="getting-started"></a>作業の開始
+### <a name="getting-started"></a>はじめに
 
-1. Visual Studio 2012 で、暗黙的または明示的なを含むワークフロー作成<xref:System.Activities.Statements.Persist>アクティビティ。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 動作をワークフロー サービス ホストに追加します。 これはコードまたはアプリケーション構成ファイルで行うことができます。
+1. Visual Studio 2012 で、暗黙的または明示的なアクティビティを含むワークフローを作成し <xref:System.Activities.Statements.Persist> ます。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 動作をワークフロー サービス ホストに追加します。 これはコードまたはアプリケーション構成ファイルで行うことができます。
 
-2. サンプル:[永続性](./samples/persistence.md)
+2. サンプル:[永続](/previous-versions/dotnet/netframework-4.0/dd699769(v%3dvs.100))化
 
-3. 概念説明のドキュメント:[SQL Workflow Instance Store](sql-workflow-instance-store.md)します。
+3. 概念説明のドキュメント: [SQL Workflow Instance Store](sql-workflow-instance-store.md)。

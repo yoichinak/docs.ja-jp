@@ -2,19 +2,19 @@
 title: '方法: MEX 以外のバインディングを介してメタデータを取得する'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a006795c87a2ae845d03db90dce296692c4339fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766780"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186447"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>方法: MEX 以外のバインディングを介してメタデータを取得する
-ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。 このサンプルでコードがに基づいて、[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)サンプル。  
+ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。 このサンプルのコードは、[カスタム セキュリティで保護されたメタデータ エンドポイント](../samples/custom-secure-metadata-endpoint.md)のサンプルに基づいています。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX 以外のバインディングを介してメタデータを取得するには  
   
-1. MEX エンドポイントで使用されているバインディングを特定します。 Windows Communication Foundation (WCF) サービスの場合に、サービスの構成ファイルにアクセスすることで MEX バインディングを指定できます。 この場合、MEX バインディングは、次のサービス構成で定義されています。  
+1. MEX エンドポイントで使用されているバインディングを特定します。 WCF (WCF) サービスの場合は、サービスの構成ファイルにアクセスして MEX バインディングを決定できます。 この場合、MEX バインディングは、次のサービス構成で定義されています。  
   
     ```xml  
     <services>  
@@ -79,13 +79,13 @@ ms.locfileid: "61766780"
             </clientCredentials>  
           </behavior>  
         </endpointBehaviors>  
-      </behaviors>    
+      </behaviors>
     </system.serviceModel>  
     ```  
   
 3. `MetadataExchangeClient` を作成して `GetMetadata` を呼び出します。 これを行うには、次の例に示すように、構成でカスタム バインドを指定する方法と、コードでカスタム バインドを指定する方法の 2 つの方法があります。  
   
-    ```  
+    ```csharp
     // The custom binding is specified in configuration.  
     EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/Service/mex");  
   
@@ -116,13 +116,13 @@ ms.locfileid: "61766780"
   
 4. 次のコードに示すように、`WsdlImporter` を作成して `ImportAllEndpoints` を呼び出します。  
   
-    ```  
+    ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. この時点で、サービス エンドポイントのコレクションが取得されます。 メタデータのインポートに関する詳細については、次を参照してください。[方法。サービス エンドポイントにメタデータをインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)します。  
+5. この時点で、サービス エンドポイントのコレクションが取得されます。 メタデータのインポートの詳細については、「[方法 : サービス エンドポイントにメタデータをインポート](../feature-details/how-to-import-metadata-into-service-endpoints.md)する 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [メタデータ](../feature-details/metadata.md)

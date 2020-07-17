@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Flush メソッド (System.Data.SqlTypes)
+title: SqlStreamChars. Flush メソッド (SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634331"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395623"
 ---
-# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush メソッド
+# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars. Flush メソッド
 
-派生クラスによってオーバーライドされた場合は、ストリームに対応するすべてのバッファーをクリアし、バッファー内のデータを基になるデバイスに書き込みます。 このメソッドを含むアセンブリには、SQLAccess.dll で友人関係があります。 SQL Server で使用するものでは。 その他のデータベースには、そのデータベースによって提供されるホスティング メカニズムを使用します。
+派生クラスによってオーバーライドされた場合は、ストリームに対応するすべてのバッファーをクリアし、バッファー内のデータを基になるデバイスに書き込みます。 このメソッドを含むアセンブリには、SQLAccess .dll とのフレンド関係があります。 SQL Server での使用を目的としています。 他のデータベースの場合は、そのデータベースによって提供されるホスティングメカニズムを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,14 +32,14 @@ public abstract void Flush ();
 ## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `SqlStreamChars.Flush`メソッドはプライベートであり、コード内で直接使用するものではありません。
+> @No__t-0 メソッドはプライベートであり、コード内で直接使用するためのものではありません。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでこの方法を使用することはサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **名前空間:** <xref:System.Data.SqlTypes>
 
-**アセンブリ:** System.Data (system.data.dll 内)
+**アセンブリ:** System.string (System. Data. .dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

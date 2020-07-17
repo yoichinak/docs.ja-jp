@@ -1,5 +1,6 @@
 ---
 title: プロキシを介したインターネットへのアクセス
+description: .NET Framework アプリケーションが Web プロキシと通信できるように、プロキシ インスタンスを構成する方法について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -12,27 +13,27 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77f46cdcedbeb9b1809621d64f239a6681e82590
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649533"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502744"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>プロキシを介したインターネットへのアクセス
 サイトでプロキシを使用してインターネットへのアクセスを提供する場合、アプリケーションが Web プロキシと通信できるようにプロキシ インスタンスを構成する必要があります。  
   
  ここでは、次のトピックについて説明します。  
   
-- [プロキシ構成](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [プロキシ構成](proxy-configuration.md)  
   
-- [自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [自動プロキシ検出](automatic-proxy-detection.md)  
   
-- [方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [方法: グローバル プロキシの選択をオーバーライドする](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [方法: グローバル プロキシの選択をオーバーライドする](how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)
+- [.NET Framework のネットワーク プログラミング](index.md)

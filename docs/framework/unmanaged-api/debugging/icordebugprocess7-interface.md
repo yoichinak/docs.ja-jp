@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f0d73da04242bfe5a4958a62d2a48b609b474309
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a819ca33df962774e69dac0609df1fff2fbdecd3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987676"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213661"
 ---
 # <a name="icordebugprocess7-interface"></a>ICorDebugProcess7 インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -28,20 +26,20 @@ ms.locfileid: "61987676"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[SetWriteableMetadataUpdateMode メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)|デバッガーがメモリ内のメタデータ更新をターゲット プロセスでどのように処理するかを決定する値を設定します。|  
+|[SetWriteableMetadataUpdateMode メソッド](icordebugprocess7-setwriteablemetadataupdatemode-method.md)|デバッガーがメモリ内のメタデータ更新をターゲット プロセスでどのように処理するかを決定する値を設定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

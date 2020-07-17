@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da473ed176ab6c69ed974d5f28b22fc8eb30c6af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52efebf8a2786afaabe87b96b35a13c5fa1eb578
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762519"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379777"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain メソッド
-この ICorDebugThread を現在実行しているアプリケーション ドメインにインターフェイス ポインターを取得します。  
+このスレッドが現在実行されているアプリケーションドメインへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>パラメーター  
  `ppAppDomain`  
- [out]このスレッドを現在実行しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ 入出力このスレッドが現在実行されているアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

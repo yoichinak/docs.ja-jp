@@ -1,5 +1,5 @@
 ---
-title: If...Then...Else ステートメント (Visual Basic)
+title: If...Then...Else ステートメント
 ms.date: 04/16/2018
 f1_keywords:
 - vb.ElseIf
@@ -21,112 +21,116 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: d91a913d515f36a6b974850bc30079b000a919b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0884b71c24742286e695e720add9d00dd4bfe52b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637755"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404590"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else ステートメント (Visual Basic)
-式の値に応じてステートメント グループを条件付きで実行します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-' Multiline syntax:  
-If condition [ Then ]  
-    [ statements ]  
-[ ElseIf elseifcondition [ Then ]  
-    [ elseifstatements ] ]  
-[ Else  
-    [ elsestatements ] ]  
-End If  
-  
-' Single-line syntax:  
-If condition Then [ statements ] [ Else [ elsestatements ] ]  
-```  
+
+式の値に応じてステートメント グループを条件付きで実行します。
+
+## <a name="syntax"></a>構文
+
+```vb
+' Multiline syntax:
+If condition [ Then ]
+    [ statements ]
+[ ElseIf elseifcondition [ Then ]
+    [ elseifstatements ] ]
+[ Else
+    [ elsestatements ] ]
+End If
+
+' Single-line syntax:
+If condition Then [ statements ] [ Else [ elsestatements ] ]
+```
 
 ## <a name="quick-links-to-example-code"></a>コード例へのクイック リンク
 
-この記事には、使用方法を示すいくつかの例が含まれています、 `If`.`Then`...`Else`ステートメント。
+この記事には、`If`...`Then`...`Else` ステートメントの使用方法を示す例がいくつか含まれています。
 
-* [複数行の構文例](#multi-line)
-* [入れ子になった構文の例](#nested)
-* [単一行の構文例](#single-line)
+- [複数行構文の例](#multi-line)
+- [入れ子になった構文の例](#nested)
+- [単一行構文の例](#single-line)
 
-## <a name="parts"></a>指定項目  
- `condition`  
- 必須。 式。 評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。  
-  
- 式の場合、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)、式の場合と、条件が扱われます`False`と`Else`ブロックが実行されます。  
-  
- `Then`  
- は単一行の構文で必要複数行の構文では省略可能です。  
-  
- `statements`  
- 任意。 1 つまたは複数のステートメントの次`If`.`Then`場合に実行されている`condition`に評価される`True`します。  
-  
- `elseifcondition`  
- 場合に、必ず`ElseIf`が存在します。 式。 評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。  
-  
- `elseifstatements`  
- 任意。 1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。  
-  
- `elsestatements`  
- 省略可能です。 ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。  
-  
- `End If`  
- 複数行のバージョンを終了する`If`.`Then`...`Else`ブロックします。  
-  
-## <a name="remarks"></a>Remarks  
-  
-### <a name="multiline-syntax"></a>複数行の構文  
- ときに、 `If`.`Then`...`Else`ステートメントが検出された`condition`をテストします。 場合`condition`は`True`、次のステートメント`Then`実行されます。 場合`condition`は`False`、それぞれ`ElseIf`ステートメント (存在する) 場合は、順番に評価します。 ときに、 `True` `elseifcondition`が見つかると、すぐに関連付けられている次のステートメント`ElseIf`実行されます。 ない場合は`elseifcondition`に評価される`True`がある場合、またはなし`ElseIf`ステートメント、次のステートメント`Else`実行されます。 次のステートメントを実行した後`Then`、 `ElseIf`、または`Else`、ステートメントに次の実行が続行されます`End If`します。  
-  
- `ElseIf`と`Else`句は、どちらもオプションです。 多くすることが`ElseIf`としてする句が必要、 `If`.`Then`...`Else`ステートメントでは、ただし`ElseIf`後句、`Else`句。 `If`...`Then`...`Else`ステートメントは互いに入れ子にすることができます。  
-  
- 複数行の構文では、`If`ステートメントは、最初の行での唯一のステートメントである必要があります。 `ElseIf`、 `Else`、および`End If`ステートメントのみで、行ラベルを付けることができます。 `If`.`Then`...`Else`ブロックの最後に使用する必要があります、`End If`ステートメント。  
-  
+## <a name="parts"></a>指定項目
+
+`condition` \
+必須です。 式。 `True` または `False`、または `Boolean` に暗黙的に変換できるデータ型に評価される必要があります。
+
+式が [Nothing](../nothing.md) に評価される [Nullable](../../programming-guide/language-features/data-types/nullable-value-types.md) の `Boolean` 変数の場合、条件は、式が `False` であるかのように処理され、`ElseIf` ブロックが存在する場合は評価されます。存在しない場合は、`Else` ブロックが実行されます (存在する場合)。
+
+`Then` \
+単一行の構文では必須です。複数行の構文では省略可能です。
+
+`statements` \
+任意。 `condition` が `True` に評価された場合に実行される `If`...`Then` の後に続く 1 つ以上のステートメント。
+
+`elseifcondition` \
+`ElseIf` が存在する場合は必須です。 式。 `True` または `False`、または `Boolean` に暗黙的に変換できるデータ型に評価される必要があります。
+
+`elseifstatements` \
+任意。 `elseifcondition` が `True` に評価された場合に実行される `ElseIf`...`Then` の後に続く 1 つ以上のステートメント。
+
+`elsestatements` \
+任意。 前の `condition` または `elseifcondition` 式が `True` に評価されなかった場合に実行される 1 つ以上のステートメント。
+
+`End If` \
+複数行バージョンの `If`...`Then`...`Else` ブロックを終了します。
+
+## <a name="remarks"></a>Remarks
+
+### <a name="multiline-syntax"></a>複数行の構文
+
+`If`...`Then`...`Else` ステートメントが検出されると、`condition` がテストされます。 `condition` が `True` の場合、`Then` に続くステートメントが実行されます。 `condition` が `False` の場合は、各 `ElseIf` ステートメント (存在する場合) が順番に評価されます。 `True` になる `elseifcondition` が見つかると、関連付けられた `ElseIf` の直後にあるステートメントが実行されます。 `True` に評価される `elseifcondition` がない場合、または `ElseIf` ステートメントが存在しない場合は、`Else` に続くステートメントが実行されます。 `Then`、`ElseIf`、または `Else` の後に続くステートメントが実行されると、`End If` に続くステートメントが引き続き実行されます。
+
+`ElseIf` と `Else` の句は省略可能です。 `If`...`Then`...`Else` ステートメントには、必要な数の `ElseIf` 句を指定できますが、`Else` 句の後に `ElseIf` 句を指定することはできません。 `If`...`Then`...`Else` ステートメントは、入れ子にすることができます。
+
+複数行の構文では、`If` ステートメントが 1 行目の唯一のステートメントである必要があります。 `ElseIf`、`Else`、および `End If` ステートメントの前には、行ラベルのみを付けることができます。 `If`...`Then`...`Else` ブロックは、`End If` ステートメントで終了する必要があります。
+
 > [!TIP]
->  [を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)をいくつかの値を持つ 1 つの式を評価するときにさらに便利な場合があります。  
-  
-### <a name="single-line-syntax"></a>単一行の構文  
- True の場合に実行するコードを 1 つの条件の単一行構文を使用できます。 ただし、複数行の構文は、詳細の構造と柔軟性を提供、読み取り、保守、およびデバッグする方が簡単です。  
-  
- どのような次のように、`Then`ステートメントが単一行であるかどうかを決定するキーワードが調べられる`If`します。 後にコメント以外のものが表示された場合`Then`、同じ行には、ステートメントは単一行として扱われます`If`ステートメント。 場合`Then`が存在しない場合は、複数行の開始する必要があります`If`.`Then`...`Else`.  
-  
- 単一行の構文では、複数のステートメントの結果として実行することが、 `If`.`Then`意思決定します。 すべてのステートメントでは、同じ行に配置する必要があり、コロンで区切っています。  
+> [Select...Case ステートメント](select-case-statement.md)は、複数の値が結果として得られる可能性がある単一の式を評価する場合に便利です。
 
-## <a name="multiline-syntax-example"></a>複数行の構文例
+### <a name="single-line-syntax"></a>単一行の構文
+
+単一行の構文は、単一の条件の場合に使用することができ、True の場合に実行するコードを指定します。 ただし、複数行の構文では、より多くの構造と柔軟性が提供され、読み取り、保守、デバッグが簡単になります。
+
+ステートメントが単一行の `If` であるかどうかを判別するために、`Then` キーワードの後に続くものが検査されます。 同じ行の `Then` の後にコメント以外のものがある場合、そのステートメントは単一行の `If` ステートメントとして扱われます。 `Then` がない場合は、複数行の `If`...`Then`...`Else` が開始されたと見なされます。
+
+単一行の構文では、`If`...`Then` の判断の結果として複数のステートメントを実行できます。 すべてのステートメントは、同じ行にあり、コロンで区切られている必要があります。
+
+## <a name="multiline-syntax-example"></a>複数行構文の例
 
 <a name="multi-line"></a>
- 
- 次の例では、複数行の構文の使用、 `If`.`Then`...`Else`ステートメント。  
-  
- [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
+
+次の例では、`If`...`Then`...`Else` ステートメントの複数行構文の使用方法を示します。
+
+[!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
 ## <a name="nested-syntax-example"></a>入れ子になった構文の例
 
 <a name="nested"></a>
 
- 次の例を含む入れ子になった`If`.`Then`...`Else`ステートメント。  
-  
- [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
+次の例には、入れ子になった `If`...`Then`...`Else` ステートメントが含まれています。
 
-## <a name="single-line-syntax-example"></a>単一行の構文例
-  
-<a name="single-line"></a> 次の例は、単一行の構文の使用を示しています。  
-  
- [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
-  
+[!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
+
+## <a name="single-line-syntax-example"></a>単一行構文の例
+
+<a name="single-line"></a> 単一行構文の使用例を次に示します。
+
+[!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
-- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)
-- [入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [条件判断構造](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Visual Basic での論理とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [If 演算子](../../../visual-basic/language-reference/operators/if-operator.md)
+- [#If...Then...#Else ディレクティブ](../directives/if-then-else-directives.md)
+- [Select...Case ステートメント](select-case-statement.md)
+- [入れ子になった制御構造](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [条件判断構造](../../programming-guide/language-features/control-flow/decision-structures.md)
+- [Visual Basic の論理演算子とビット処理演算子](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [If 演算子](../operators/if-operator.md)

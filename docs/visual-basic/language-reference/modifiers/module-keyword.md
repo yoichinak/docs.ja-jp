@@ -1,5 +1,5 @@
 ---
-title: Module <keyword> (Visual Basic)
+title: Module <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 0cb009c22dada7b92956e113d33505923a92f2b3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920706"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362425"
 ---
-# <a name="module-keyword-visual-basic"></a>モジュール\<キーワード > (Visual Basic)
-ソース ファイルの先頭にある属性は、現在のアセンブリ モジュールに適用されることを指定します。  
+# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
+ソース ファイルの先頭の属性が現在のアセンブリ モジュールに適用されることを指定します。  
   
-## <a name="remarks"></a>コメント  
- 多くの属性は、クラスやプロパティなどの個別のプログラミング要素に適用されます。 山かっこ内で、属性ブロックを接続することによってこのような属性を適用する (`< >`)、宣言ステートメントに直接します。  
+## <a name="remarks"></a>Remarks  
+ 個々のプログラミング要素には、クラスやプロパティなどの多くの属性が関連しています。 そのような属性を適用するには、山かっこ (`< >`) 内の属性ブロックを宣言ステートメントに直接アタッチします。  
   
- 属性ブロックをソース ファイルの先頭に配置しを持つ属性を特定するだけでなく、次の要素を現在のアセンブリ モジュールに属性が関係している場合、`Module`キーワード。 アセンブリ全体に適用される場合に使用する、[アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)キーワード。  
+ 属性が次の要素だけでなく、現在のアセンブリ モジュールに関連する場合は、属性ブロックをソース ファイルの先頭に配置し、`Module` キーワードで属性を識別します。 それをアセンブリ全体に適用する場合は、[Assembly](assembly.md) キーワードを使用します。  
   
- `Module`修飾子と同じではない、[Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)です。  
+ `Module` 修飾子は、[Module ステートメント](../statements/module-statement.md)と同じではありません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)
-- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Assembly](assembly.md)
+- [Module ステートメント](../statements/module-statement.md)
+- [属性の概要](../../programming-guide/concepts/attributes/index.md)

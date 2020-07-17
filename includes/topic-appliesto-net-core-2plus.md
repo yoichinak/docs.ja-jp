@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 6f089b863f384e717e60ee10e09b39be329b3a89
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d7ff6717f03b7a5f5a4efddee6ea46df0c4887e3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631980"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76508611"
 ---
-**このトピックの対象: ✓** .NET Core 2.0 SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 2.x SDK

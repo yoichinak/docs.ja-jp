@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 704c69ba-77bc-40d7-8c0c-400061686321
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 712eca7f3f9fec9c81e638802f5a664ec6469d53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05d4451e8fb75829b22e0a1b9c9afcb0607eb8b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797483"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610172"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable インターフェイス
-パラメーター、ローカル変数またはフィールドなどの変数を表します。  
+パラメーター、ローカル変数、フィールドなどの変数を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetAddressField1 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)|この変数の最初のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。|  
-|[GetAddressField2 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)|この変数の 2 番目のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。|  
-|[GetAddressField3 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)|この変数の 3 番目のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。|  
-|[GetAddressKind メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)|この変数のアドレスの種類を取得します。|  
-|[GetAttributes メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getattributes-method.md)|この変数の属性フラグを取得します。|  
-|[GetEndOffSet メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)|親内でこの変数の終了オフセットを取得します。|  
-|[GetName メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getname-method.md)|この変数の名前を取得します。|  
-|[GetSignature メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getsignature-method.md)|この変数のシグネチャを取得します。|  
-|[GetStartOffSet メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)|この変数の親内の開始オフセットを取得します。|  
+|[GetAddressField1 メソッド](isymunmanagedvariable-getaddressfield1-method.md)|この変数の最初のアドレスフィールドを取得します。 その意味は、アドレスの種類によって異なります。|  
+|[GetAddressField2 メソッド](isymunmanagedvariable-getaddressfield2-method.md)|この変数の2番目のアドレスフィールドを取得します。 その意味は、アドレスの種類によって異なります。|  
+|[GetAddressField3 メソッド](isymunmanagedvariable-getaddressfield3-method.md)|この変数の3番目のアドレスフィールドを取得します。 その意味は、アドレスの種類によって異なります。|  
+|[GetAddressKind メソッド](isymunmanagedvariable-getaddresskind-method.md)|この変数のアドレスの種類を取得します。|  
+|[GetAttributes メソッド](isymunmanagedvariable-getattributes-method.md)|この変数の属性フラグを取得します。|  
+|[GetEndOffset メソッド](isymunmanagedvariable-getendoffset-method.md)|親内のこの変数の終了オフセットを取得します。|  
+|[GetName メソッド](isymunmanagedvariable-getname-method.md)|この変数の名前を取得します。|  
+|[GetSignature メソッド](isymunmanagedvariable-getsignature-method.md)|この変数のシグネチャを取得します。|  
+|[GetStartOffSet メソッド](isymunmanagedvariable-getstartoffset-method.md)|親内のこの変数の開始オフセットを取得します。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [シンボル ストア診断インターフェイス](diagnostics-symbol-store-interfaces.md)

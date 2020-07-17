@@ -1,5 +1,5 @@
 ---
-title: システム指定のバインド
+title: システム指定のバインディング
 description: すべてのシステム指定の Windows Communication Foundation (WCF) バインドについて説明します。
 ms.date: 06/05/2018
 helpviewer_keywords:
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61791509"
 ---
-# <a name="system-provided-bindings"></a>システム指定のバインド
+# <a name="system-provided-bindings"></a>システム指定のバインディング
 
 バインディングにより、エンドポイントとの通信で使用する通信メカニズムが指定され、エンドポイントへの接続方法が示されます。 バインディングには次の要素が含まれます。
 

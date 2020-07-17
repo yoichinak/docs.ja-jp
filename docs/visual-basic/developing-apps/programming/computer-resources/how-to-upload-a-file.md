@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Basic でファイルをアップロードする'
+title: '方法 : ファイルをアップロードする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: b2c313078e3438c84068b6cc54d787b567a768b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cee6811d6b6d295c28eb683c5d2f7bcbb5fe94ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662696"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401811"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>方法: Visual Basic でファイルをアップロードする
+
 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> メソッドを利用してファイルをアップロードし、離れた場所に格納できます。 `ShowUI` パラメーターを `True` に設定した場合、アップロードの進行状況を示すダイアログ ボックスが表示され、ユーザーが操作をキャンセルできます。  
   
 ### <a name="to-upload-a-file"></a>ファイルをアップロードするには  
@@ -37,6 +38,7 @@ ms.locfileid: "64662696"
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
+
  次の条件を満たす場合は、例外がスローされる可能性があります。  
   
 - ローカル ファイル パスが有効ではありません (<xref:System.ArgumentException>)。  
@@ -45,9 +47,9 @@ ms.locfileid: "64662696"
   
 - 接続がタイムアウトしました (<xref:System.TimeoutException>)。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [方法: ファイルをダウンロードする](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-- [方法: ファイル パスを解析する](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [方法 : ファイルをダウンロードする](how-to-download-a-file.md)
+- [方法: ファイル パスを解析する](../drives-directories-files/how-to-parse-file-paths.md)

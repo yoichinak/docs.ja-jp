@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 0e56b97ad7b375c69184e0f1928183612abfef42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034451"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151482"
 ---
 # <a name="childviews-and-relations"></a>ChildView とリレーション
-<xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。 たとえば、次のコードが表示されます**カテゴリ**とその関連**製品**で並べ替えられた順序はアルファベット順で**CategoryName**と**ProductName**.  
+<xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。 たとえば、次のコードでは、**CategoryName** と **ProductName** によってデータをアルファベット順に並べ替えられた **Categories** およびこのテーブルに関連する **Products** が表示されます。  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -50,12 +50,12 @@ DataTable catTable = catDS.Tables["Categories"];
 DataTable prodTable = catDS.Tables["Products"];  
   
 // Create a relation between the Categories and Products tables.  
-DataRelation relation = catDS.Relations.Add("CatProdRel",   
+DataRelation relation = catDS.Relations.Add("CatProdRel",
   catTable.Columns["CategoryID"],  
                                                             prodTable.Columns["CategoryID"]);  
   
 // Create DataViews for the Categories and Products tables.  
-DataView catView = new DataView(catTable, "", "CategoryName",   
+DataView catView = new DataView(catTable, "", "CategoryName",
   DataViewRowState.CurrentRows);  
 DataView prodView;  
   
@@ -78,5 +78,5 @@ foreach (DataRowView catDRV in catView)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET の概要](../ado-net-overview.md)

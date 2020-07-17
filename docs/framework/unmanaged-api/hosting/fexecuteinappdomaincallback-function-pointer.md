@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6fd7a19d9fc77b43bbceb1b5e5399a455429e700
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760243"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616152"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 関数ポインター
-マネージ コードを実行する共通言語ランタイム (CLR) によって呼び出される関数を指します。  
+マネージコードを実行するために共通言語ランタイム (CLR) によって呼び出される関数を指します。  
   
- この関数ポインターは、.NET Framework 4 では廃止されました。  
+ この関数ポインターは .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +36,19 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>パラメーター  
  `cookie`  
- [in]実行されるマネージ コードを含む非透過の呼び出し元が割り当てたメモリへのポインター。  
+ から実行されるマネージコードを含む、非透過的な呼び出し元割り当てメモリへのポインター。  
   
- 割り当てとメモリの有効期間は、呼び出し元の (つまり、CLR) によって制御されます。 これは、CLR のマネージ ヒープ メモリではありません。  
+ このメモリの割り当てと有効期間は、呼び出し元 (つまり CLR) によって制御されます。 これは CLR マネージヒープメモリではありません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorWks.dll  
+ **ライブラリ:** Mscorwks.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

@@ -2,21 +2,22 @@
 title: <security> の <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d1ac85073c44f683fe0c054737c5ec7ed1cbf52
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670483"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "73738662"
 ---
-# <a name="security-of-netpeerbinding"></a>\<セキュリティ > の\<netPeerBinding >
-セキュリティ設定を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)メッセージ トランスポートで使用されるセキュリティ、認証の種類などを使用します。  
+# <a name="security-of-netpeerbinding"></a>\<security> の \<netPeerBinding>
+[\<netPeerTcpBinding>](netpeertcpbinding.md)使用される認証の種類とメッセージトランスポートに使用されるセキュリティを含む、のセキュリティ設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netPeerBinding>  
-\<binding>  
-\<セキュリティ >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netPeerTcpBinding>**](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,30 +38,30 @@ ms.locfileid: "61670483"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|省略可能です。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|mode|省略可能。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|[値]|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|メッセージ|SOAP セキュリティにより、認証、整合性、および機密性が実現します。|  
+|Message|SOAP セキュリティにより、認証、整合性、および機密性が実現します。|  
 |なし|セキュリティを無効にします。|  
-|Transport|セキュリティは、HTTPS を使用して確保されます。|  
+|トランスポート|セキュリティは、HTTPS を使用して確保されます。|  
 |TransportWithMessageCredential|HTTPS により、認証および機密性が実現します。 SOAP メッセージには、豊富な資格情報の種類が用意されています。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|このバインディングで構成されたピアが送信するセキュリティで保護されたメッセージのトランスポートの型を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement> 型です。|  
+|[\<transport>](transport-of-netpeertcpbinding.md)|このバインディングで構成されたピアが送信するセキュリティで保護されたメッセージのトランスポートの型を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|すべてのバインド機能を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)します。|  
+|[\<binding>](bindings.md)|のすべてのバインディング機能を定義 [\<netPeerTcpBinding>](netpeertcpbinding.md) します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  セキュリティは、メッセージ固有にすることも、トランスポート固有にすることもできます。  
   
 ## <a name="see-also"></a>関連項目
@@ -69,9 +70,9 @@ ms.locfileid: "61670483"
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.PeerSecuritySettings>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [資格情報の種類の選択](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [バインド](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](bindings.md)

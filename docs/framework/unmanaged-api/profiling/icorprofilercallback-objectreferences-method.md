@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4141c79502dae89ec228e4e39da121615f292786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12a0792e8fafc73b480de6bacc86f98470dfedf7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782969"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503290"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences メソッド
-指定したオブジェクトによって参照されているメモリ内のオブジェクトをプロファイラーに通知します。  
+指定したオブジェクトによって参照されているメモリ内のオブジェクトに関する情報をプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,35 +37,35 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in]オブジェクトを参照しているオブジェクトの ID。  
+ からオブジェクトを参照しているオブジェクトの ID。  
   
  `classId`  
- [in]指定したオブジェクトのインスタンスでは、クラスの ID。  
+ から指定したオブジェクトがインスタンスであるクラスの ID。  
   
  `cObjectRefs`  
- [in]指定したオブジェクトによって参照されるオブジェクトの数 (つまり、内の要素の数、`objectRefIds`配列)。  
+ から指定したオブジェクトによって参照されるオブジェクトの数 (つまり、配列内の要素の数 `objectRefIds` )。  
   
  `objectRefIds`  
- [in]によって参照されるオブジェクトの Id の配列`objectId`します。  
+ からによって参照されているオブジェクトの Id の配列 `objectId` 。  
   
-## <a name="remarks"></a>Remarks  
- `ObjectReferences`ガベージ コレクションが完了した後のヒープの残りの各オブジェクトのメソッドが呼び出されます。 プロファイラーがこのコールバックからエラーを返した場合、プロファイリング サービスは、次のガベージ コレクションされるまでこのコールバックの呼び出しを中止します。  
+## <a name="remarks"></a>解説  
+ `ObjectReferences`メソッドは、ガベージコレクションが完了した後にヒープ内の残りのオブジェクトに対して呼び出されます。 プロファイラーがこのコールバックからエラーを返すと、プロファイリングサービスは、次のガベージコレクションまでこのコールバックの呼び出しを中止します。  
   
- `ObjectReferences`コールバックを組み合わせて使用することができます、 [icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)ランタイムの完全なオブジェクト参照グラフを作成するコールバック。 共通言語ランタイム (CLR) により、それぞれのオブジェクト参照を一度だけ報告、`ObjectReferences`メソッド。  
+ コールバックは、 `ObjectReferences` [ICorProfilerCallback:: rootreferences](icorprofilercallback-rootreferences-method.md)コールバックと共に使用して、ランタイムの完全なオブジェクト参照グラフを作成できます。 共通言語ランタイム (CLR) では、各オブジェクト参照がメソッドによって1回だけ報告され `ObjectReferences` ます。  
   
- によって返されるオブジェクト Id`ObjectReferences`コールバック自体の中に無効なため、オブジェクトを移動中にガベージ コレクションがある可能性があります。 そのため、プロファイラーは、中にオブジェクトを検査する試行する必要がありますいないを`ObjectReferences`呼び出します。 ときに[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)を呼び出すと、ガベージ コレクションが完了し、検査を安全に行うことができます。  
+ によって返されるオブジェクト Id `ObjectReferences` は、オブジェクトの移動中にガベージコレクションが発生する可能性があるため、コールバック自体では無効です。 そのため、呼び出し中にプロファイラーがオブジェクトの検査を試行することはできません `ObjectReferences` 。 [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)が呼び出されると、ガベージコレクションが完了し、検査を安全に行うことができます。  
   
- Null`ClassId`ことを示します`objectId`型をアンロードしていますがあります。  
+ Null は、が `ClassId` `objectId` アンロード中の型を持つことを示します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

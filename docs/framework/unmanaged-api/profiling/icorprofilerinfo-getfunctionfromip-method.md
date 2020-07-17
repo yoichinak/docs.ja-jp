@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a9f6e63a1f24043ac502d139f735cada599df4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 339c5db1610a3cf087085ce19fc663436d9c4ec1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780666"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498311"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP メソッド
-マネージ コードの命令ポインターのマップを`FunctionID`します。  
+マネージコード命令ポインターをにマップ `FunctionID` します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,22 +33,25 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `ip`  
- [in]マネージ コードで命令ポインター。  
+## <a name="parameters"></a>パラメーター
+
+- `ip`
+
+  \[in) マネージコード内の命令ポインター。
+
+- `pFunctionId`
+
+  \[out] 返された関数 ID。
+
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- `pFunctionId`  
- [out]返される関数の id。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

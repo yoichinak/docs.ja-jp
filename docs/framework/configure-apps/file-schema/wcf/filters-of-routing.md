@@ -2,20 +2,20 @@
 title: <filters> の <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bc3a2c379e14d8cf687676a3ec40702d150e1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701035"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70855235"
 ---
-# <a name="filters-of-routing"></a>\<フィルター > の\<ルーティング >
+# <a name="filters-of-routing"></a>\<filters> の \<routing>
 
-Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクションを表します。<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージを評価するときに使用されます。
+<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージを評価するときに使用する Windows Communication Foundation (WCF) の種類を決定する一連のルーティングフィルターを定義するための構成セクションを表します。
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;[**\<ルーティング >**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**
+[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,15 +42,15 @@ Windows Communication Foundation (WCF) の種類を指定するルーティン�
 
 ### <a name="child-elements"></a>子要素
 
-|     | 説明 |
+|     | Description |
 | --- | ----------- |
-| [**\<フィルター >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Windows Communication Foundation (WCF) の種類を決定するルーティング フィルターを含む<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価時に使用されます。 |
+| [**\<filter>**](filter.md) | <xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージを評価するときに使用される Windows Communication Foundation (WCF) の種類を決定するルーティングフィルターを格納します。 |
 
 ### <a name="parent-elements"></a>親要素
 
-|     | 説明 |
+|     | Description |
 | --- | ----------- |
-| [**\<ルーティング >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクションを表します<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価とルーティング テーブルをするターゲット エンドポイントを定義するときに使用される。フィルターが一致したときにメッセージを送信します。 |
+| [**\<routing>**](routing.md) | 一連のルーティングフィルターを定義するための構成セクションを表します。これにより、受信メッセージを評価するときに使用される Windows Communication Foundation (WCF) の種類、 <xref:System.ServiceModel.Dispatcher.MessageFilter> およびフィルターが一致したときにメッセージを送信するターゲットエンドポイントを定義するルーティングテーブルが決定されます。 |
 
 ## <a name="see-also"></a>関連項目
 

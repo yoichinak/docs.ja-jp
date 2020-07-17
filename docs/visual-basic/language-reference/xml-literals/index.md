@@ -1,5 +1,5 @@
 ---
-title: XML リテラル (Visual Basic)
+title: XML リテラル
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring XML literals [Visual Basic]
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d7826c48629ee919344ec1982d3a698e6df9ef7f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649804"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "85503789"
 ---
 # <a name="xml-literals-visual-basic"></a>XML リテラル (Visual Basic)
-このセクションのトピックでは、Visual Basic で XML リテラルの構文を文書化します。 XML リテラルの構文を使用すると、コード内に直接 XML を組み込むことができます。  
+このセクションのトピックでは、Visual Basic の XML リテラルの構文を示します。 XML リテラルの構文を使用すると、コード内に直接 XML を組み込むことができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|<xref:System.Xml.Linq.XElement> オブジェクトを表すリテラルの構文を説明します。|  
-|[XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|<xref:System.Xml.Linq.XDocument> オブジェクトを表すリテラルの構文を説明します。|  
-|[XML CDATA リテラル](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|<xref:System.Xml.Linq.XCData> オブジェクトを表すリテラルの構文を説明します。|  
-|[XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> オブジェクトを表すリテラルの構文を説明します。|  
-|[XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> オブジェクトを表すリテラルの構文を説明します。|  
+|[XML 要素リテラル](xml-element-literal.md)|<xref:System.Xml.Linq.XElement> オブジェクトを表すリテラルの構文を説明します。|  
+|[XML ドキュメント リテラル](xml-document-literal.md)|<xref:System.Xml.Linq.XDocument> オブジェクトを表すリテラルの構文を説明します。|  
+|[XML CDATA リテラル](xml-cdata-literal.md)|<xref:System.Xml.Linq.XCData> オブジェクトを表すリテラルの構文を説明します。|  
+|[XML コメント リテラル](xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> オブジェクトを表すリテラルの構文を説明します。|  
+|[XML 処理命令リテラル](xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> オブジェクトを表すリテラルの構文を説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

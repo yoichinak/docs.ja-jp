@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca2d00611a7530dfb0d1c2a27123947bdf69820d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740812"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179350"
 ---
-# <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 構造体
+# <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 構造体
 メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +32,10 @@ typedef struct COR_ARRAY_LAYOUT {
     CorElementType componentType;  
     ULONG32 firstElementOffset;  
     ULONG32 elementSize;  
-    ULONG32 countOffset;   
-    ULONG32 rankSize;   
-    ULONG32 numRanks;   
-    ULONG32 rankOffset;   
+    ULONG32 countOffset;
+    ULONG32 rankSize;
+    ULONG32 numRanks;
+    ULONG32 rankOffset;
 } COR_ARRAY_LAYOUT;  
 ```  
   
@@ -45,22 +43,22 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`componentID`|配列が含まれているオブジェクトの種類の識別子。|  
-|`componentType`|コンポーネントがガベージ コレクションの参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
-|`firstElementOffset`|配列の最初の要素のオフセット。|  
+|`componentID`|配列に含まれるオブジェクトの型の識別子。|  
+|`componentType`|コンポーネントがガベージ コレクション参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
+|`firstElementOffset`|配列の最初の要素へのオフセット。|  
 |`elementSize`|各要素のサイズ。|  
-|`countOffset`|配列内の要素の数にオフセットします。|  
-|`rankSize`|(バイト単位)、ランクのサイズ。|  
-|`numRanks`|配列のランクの数。|  
+|`countOffset`|配列内の要素数のオフセット。|  
+|`rankSize`|ランクのサイズ (バイト単位)。|  
+|`numRanks`|配列内のランクの数。|  
 |`rankOffset`|ランクの開始位置のオフセット。|  
   
-## <a name="remarks"></a>Remarks  
- `rankSize`フィールドは、多次元配列のランクのサイズを指定します。 1 次元の配列も正確になります。  
+## <a name="remarks"></a>解説  
+ この`rankSize`フィールドは、多次元配列のランクのサイズを指定します。 これは、単一次元配列でも正確です。  
   
- 値`numRanks`は 1 次元配列の 1 と`N`の多次元配列の`N`ディメンション。  
+ 1 次元`numRanks`配列の場合は 1、次元`N`の多次元配列の`N`場合は、値は 1 です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -70,5 +68,5 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

@@ -14,43 +14,41 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3fb1bf3f61c78f4eb157b93363b1c06b25bee04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b98302985d9d54599ea8ea2e01dc2503c468d58
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987949"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210229"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2 インターフェイス
 
-ICorDebugModule インターフェイスを論理的に拡張として機能します。  
+モジュールインターフェイスの論理拡張機能として機能します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ApplyChanges メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|実行中のプロセスにメタデータの変更と Microsoft intermediate language (MSIL) コードの変更を適用します。|  
-|[GetJITCompilerFlags メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|この・ イン タイム (JIT) コンパイルを制御するフラグを取得`ICorDebugModule2`します。|  
-|[ResolveAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|指定したメタデータ トークンによって参照されるアセンブリを解決します。|  
-|[SetJITCompilerFlags メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|この JIT コンパイルを制御するフラグを設定して`ICorDebugModule2`します。|  
-|[SetJMCStatus メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|これですべてのクラスのすべてのメソッドのだけマイ コードのみ (JMC) 状態を設定`ICorDebugModule2`を除く、指定した値を`pTokens`配列で、逆の値に設定します。|  
+|[ApplyChanges メソッド](icordebugmodule2-applychanges-method.md)|メタデータの変更と、Microsoft 中間言語 (MSIL) コードの変更を実行中のプロセスに適用します。|  
+|[GetJITCompilerFlags メソッド](icordebugmodule2-getjitcompilerflags-method.md)|このの just-in-time (JIT) コンパイルを制御するフラグを取得し `ICorDebugModule2` ます。|  
+|[ResolveAssembly メソッド](icordebugmodule2-resolveassembly-method.md)|指定したメタデータトークンによって参照されるアセンブリを解決します。|  
+|[SetJITCompilerFlags メソッド](icordebugmodule2-setjitcompilerflags-method.md)|このの JIT コンパイルを制御するフラグを設定 `ICorDebugModule2` します。|  
+|[SetJMCStatus メソッド](icordebugmodule2-setjmcstatus-method.md)|こののすべてのクラスのすべてのメソッドのマイコードのみ (JMC) の状態を、 `ICorDebugModule2` 指定した値に設定し `pTokens` ます。ただし、逆の値に設定されている配列内のすべてのメソッドを除きます。|  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

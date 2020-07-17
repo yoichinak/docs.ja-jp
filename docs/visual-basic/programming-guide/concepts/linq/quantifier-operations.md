@@ -1,13 +1,13 @@
 ---
-title: 量指定子操作 (Visual Basic)
+title: 量指定子操作
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: e871a77caf0b7cfe361f11462085180c17bf2057
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 9a2e35e0511915cb17b99550a8bf382bd9d46526
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766556"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396312"
 ---
 # <a name="quantifier-operations-visual-basic"></a>量指定子操作 (Visual Basic)
 量指定子操作は、シーケンス内の要素の一部またはすべてが条件を満たしているかどうかを示す <xref:System.Boolean> 値を返します。  
@@ -27,19 +27,19 @@ ms.locfileid: "61766556"
 |内容|指定した要素がシーケンスに格納されているかどうかを調べます。|該当なし。|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>クエリ式の構文例  
- これらの例を使用して、 `Aggregate` LINQ クエリでフィルター条件の一部として Visual Basic での句。  
+ これらの例では、LINQ クエリのフィルタリング条件の一部に Visual Basic の `Aggregate` 句を使用しています。  
   
- 次の例では、`Aggregate`句と<xref:System.Linq.Enumerable.All%2A>を持つペットは、指定した期限よりも古いすべての人をコレクションから返す拡張メソッド。  
+ 次の例では、`Aggregate` 句と <xref:System.Linq.Enumerable.All%2A> 拡張メソッドを使用して、飼っているすべてのペットが特定の年齢を超えている人をコレクションから取得します。  
   
  [!code-vb[CsLINQAnyAll#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#1)]  
   
- 次の例では、`Aggregate`句と<xref:System.Linq.Enumerable.Any%2A>を少なくとも 1 つを持っている人が pet をコレクションから返す拡張メソッドは、指定した期限よりも古い。  
+ 次の例では、`Aggregate` 句と <xref:System.Linq.Enumerable.Any%2A> 拡張メソッドを使用して、飼っているペットの少なくとも 1 匹が特定の年齢を超えている人をコレクションから取得します。  
   
  [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [方法: 指定された単語 (LINQ) (Visual Basic) のセットを含む文章を照会します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Aggregate 句](../../../language-reference/queries/aggregate-clause.md)
+- [方法: 指定された単語のセットを含む文章を照会する (LINQ) (Visual Basic)](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)

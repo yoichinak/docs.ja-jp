@@ -14,37 +14,35 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a24939ac0b0808546ef3615fae4909c6c3cf8a2e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599456"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804993"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent インターフェイス
-ホストの自動リセット イベントの実装の表現を提供します。  
+自動リセットイベントのホストの実装の表現を提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Set メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|現在の設定`IHostAutoEvent`インスタンスがシグナル状態にします。|  
-|[Wait メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|現在`IHostAutoEvent`イベントを所有するまで待機するインスタンスまたは一定の時間が経過するとします。|  
+|[Set メソッド](ihostautoevent-set-method.md)|現在の `IHostAutoEvent` インスタンスをシグナル状態に設定します。|  
+|[Wait メソッド](ihostautoevent-wait-method.md)|`IHostAutoEvent`イベントが所有されるか、指定した時間が経過するまで、現在のインスタンスを待機させます。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostManualEvent インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRSyncManager インターフェイス](iclrsyncmanager-interface.md)
+- [IHostManualEvent インターフェイス](ihostmanualevent-interface.md)
+- [IHostSyncManager インターフェイス](ihostsyncmanager-interface.md)
+- [ホスト インターフェイス](hosting-interfaces.md)

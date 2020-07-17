@@ -3,20 +3,21 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a46e9129bd27319abb4d7519444568af622170fc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667224"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "70252067"
 ---
-# <a name="claimtype"></a>\<claimType>
-受け取ったセキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。  
+# \<claimType>
+入力方向のセキュリティトークンに対して1つの省略可能なクレームまたは必須の要求を指定します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimTypeRequired>  
-\<claimType>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequired>**](claimtyperequired.md)\  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimType>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +39,14 @@ ms.locfileid: "61667224"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|要求の種類。 通常は URI です。 必須。|  
-|optional|要求の種類が省略可能かどうかを指定するブール値。 任意。|  
+|type|クレームの種類。 通常は URI です。 必須。|  
+|省略可能|要求の種類が省略可能かどうかを指定するブール値です。 省略可能。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|必要な受信セキュリティ トークンのクレームのセットを指定します。|
+|[\<claimTypeRequired>](claimtyperequired.md)|受信セキュリティトークンに必要な要求のセットを指定します。|

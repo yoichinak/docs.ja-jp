@@ -1,69 +1,75 @@
 ---
-title: Visual Studio での F# の概要します。
-description: Visual Studio で F# を使用する方法について説明します。
-ms.date: 07/03/2018
-ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+title: Visual Studioで F# を使い始める
+description: Visual Studio でをF#使用する方法について説明します。
+ms.date: 12/20/2019
+ms.openlocfilehash: 9bf47fb08ea3df0aa0d5064043d94f030d45d568
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754867"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337341"
 ---
-# <a name="get-started-with-f-in-visual-studio"></a>Visual Studio での F# の概要します。
+# <a name="get-started-with-f-in-visual-studio"></a>Visual Studioで F# を使い始める
 
-F# および Visual F# ツールは、Visual Studio IDE でサポートされます。
+F#また、visual F# Studio 統合開発環境 (IDE: integrated development environment) では、ビジュアルツールがサポートされています。
 
-作業を開始できることを確認します。 [Visual Studio をインストール F#](install-fsharp.md#install-f-with-visual-studio)します。
+まず、 [Visual Studio がサポートと共F#にインストールされ](install-fsharp.md#install-f-with-visual-studio)ていることを確認します。
 
-## <a name="creating-a-console-application"></a>コンソール アプリケーションを作成します。
+## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-Visual Studio で最も基本的なプロジェクトの 1 つは、コンソール アプリケーションです。  これを行う方法を次に示します。  Visual Studio が開くです。
+Visual Studio の最も基本的なプロジェクトの1つは、コンソールアプリです。 作成手順は次のとおりです。
 
-1. **ファイル**メニューで、**新規**を選び、**プロジェクト**します。
+1. Visual Studio 2019 を開きます。
 
-2. [プロジェクト] ダイアログで、新規で**テンプレート**、はず**Visual F#** します。  選択すると、表示、F#テンプレート。
+2. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。
 
-3. いずれかを選択 **.NET Core コンソール アプリ**または**コンソール アプリ**します。
+3. **[新しいプロジェクトの作成]** ページで、 **F#** [言語] ボックスの一覧からを選択します。
 
-4. 選択、**わかりました**F# プロジェクトを作成するボタン。  ソリューション エクスプ ローラーで F# プロジェクトが表示されます。
+4. **[コンソールアプリ (.Net Core)]** テンプレートを選択し、 **[次へ]** をクリックします。
 
-## <a name="writing-your-code"></a>コードの記述
+5. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに名前を入力します。 次に、 **[作成]** を選択します。
 
-最初にいくつかのコードを記述することで開始しましょう。  必ず、`Program.fs`ファイルを開くとを次の内容を置き換えます。
+   新しいF#プロジェクトが作成されます。 これは、[ソリューションエクスプローラー] ウィンドウで確認できます。
 
-[!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
+## <a name="write-the-code"></a>コードを記述する
 
-上記のコード サンプルは、関数で`square`という名前の入力を受け取るが定義されている`x`単独で乗算します。  F#使用[型の推定](../language-reference/type-inference.md)の型`x`を指定する必要はありません。  F#コンパイラを選択し、乗算が有効な場合は、型を認識する型が割り当てられます`x`方法に基づいて`square`が呼び出されます。  ポインターを合わせる場合`square`次を参照する必要があります。
+まず、コードを記述してみましょう。 `Program.fs` ファイルが開いていることを確認し、その内容を次のものに置き換えます。
+
+[!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
+
+前のコードサンプルでは、`x` という名前の入力を受け取り、それをそれ自体に乗算する `square` という名前の関数を定義しています。 でF#は[型の推定](../language-reference/type-inference.md)が使用されるため、`x` の型を指定する必要はありません。 コンパイラF#は、乗算が有効な型を認識し、`square` の呼び出し方法に基づいて `x` に型を割り当てます。 マウスポインターを`square`に合わせると、次のように表示されます。
 
 ```fsharp
 val square: x:int -> int
 ```
 
-これは、関数の型のシグネチャと呼ばれるものです。  次のように読み取ることができます。"正方形をという名前の整数を受け取る関数は、x と整数が生成されます"。  コンパイラが付けた注`square`、`int`型今のところ、これは、乗算の間でジェネリックがないためには*すべて*型の場合ではなくジェネリック型の間では、します。  選択、F# コンパイラ`int`このポイントが調整されます型シグネチャを呼び出す場合`square`入力の種類などを変える、`float`します。
+これは、関数の型シグネチャと呼ばれるものです。 これは、次のように読み取ることができます。 "Square は、x という整数を受け取り、整数を生成する関数です。" コンパイラは現時点で `int` 型を `square` しました。これは、*すべて*の型ではなく、型の閉じられたセットで乗算がジェネリックではないためです。 `float`F#などの別の入力型を使用して `square` を呼び出すと、コンパイラは型シグネチャを調整します。
 
-別の関数`main`が定義されているで装飾するが、 `EntryPoint` F# コンパイラにそのプログラムの実行を指示する属性を開始する必要がありますがあります。  その他の場合と同じ規則に従って[C スタイルのプログラミング言語](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)コマンドライン引数は、この関数に渡すことができます、整数コードが返されます (通常`0`)。
+`EntryPoint` 属性で修飾された別の関数 `main`が定義されています。 この属性は、 F#プログラムの実行を開始する必要があることをコンパイラに指示します。 他の [C スタイルのプログラミング言語](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)と同じ規則に従い、コマンド ライン引数をこの関数に渡し、整数値 (通常は `0`) を返す事ができます。
 
-このために呼び出される関数では、`square`関数の引数を持つ`12`します。  F#コンパイラの型が割り当てられます`square`する`int -> int`(を受け取る関数は、`int`を生成し、 `int`)。  呼び出し`printfn`を C スタイル プログラミング言語で、書式指定文字列で指定されている対応するパラメーターのような形式の文字列を使用して書式設定された印刷機能は、結果と、新しい行を出力します。
+これは、エントリポイント関数 `main`で、`12`の引数を使用して `square` 関数を呼び出します。 次F#に、コンパイラは、`int -> int` する `square` の型 (つまり、`int` を受け取り、`int`を生成する関数) を割り当てます。 `printfn` の呼び出しは、書式指定文字列を使用して結果 (と改行) を出力する書式設定された印刷関数です。 書式指定文字列は、C スタイルのプログラミング言語と同様に、渡される引数 (この場合は `12` と `(square 12)`) に対応するパラメーター (`%d`) を持っています。
 
-## <a name="running-your-code"></a>コードの実行
+## <a name="run-the-code"></a>コードの実行
 
-コードを実行してキーを押して、結果を参照してください**Ctrl**+**F5**します。  これにより、デバッグを行わずにプログラムを実行し、結果を確認することができます。  または、選択することができます、**デバッグ**トップレベル メニューの Visual Studio 内の項目し、選択**デバッグなしで開始**します。
+コードを実行し、F5 キーを押して結果を確認することができます **。+** **F5**キーを押します。 または、トップレベルのメニューバーから [デバッグ > 開始] を選択**して** **デバッグなしで開始**することもできます。 これにより、デバッグなしでプログラムが実行されます。
 
-次の Visual Studio のポップアップをコンソール ウィンドウに出力が表示されます。
+次の出力は、Visual Studio が開いたコンソールウィンドウに出力されます。
 
+```console
+12 squared is: 144!
 ```
-12 squared is 144!
-```
 
-おめでとうございます!  Visual Studio での初めての F# プロジェクトの作成、F# の関数は、この関数の呼び出しの結果を印刷を記述してプロジェクトを実行し、いくつかの結果を参照してください。
+おめでとうございます! Visual Studio で最初F#のプロジェクトを作成し、値をF#計算して出力する関数を記述し、プロジェクトを実行して結果を確認しました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
-まだインストールしていない場合はチェック アウト、 [F# のツアー](../tour.md)、F# 言語のコア機能の一部が含まれています。  一部の F# の機能の概要が表示され Visual Studio にコピーして実行できる十分なコード サンプルを提供します。  使用できますが、いくつかの優れた外部リソースがあるの紹介、 [F# ガイド](../index.md)します。
+まだインストールしていない場合は、F# 言語のコア機能の一部をカバーする[F# のツアー](../tour.md) をご覧ください。 ここでは、Visual Studio にコピーしてF#実行できる、のいくつかの機能と十分なコードサンプルの概要について説明します。
+
+> [!div class="nextstepaction"]
+> [F# のツアー](../tour.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [F# のツアー](../tour.md)
 - [F#言語リファレンス](../language-reference/index.md)
-- [型の推論](../language-reference/type-inference.md)
+- [型推論](../language-reference/type-inference.md)
 - [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)

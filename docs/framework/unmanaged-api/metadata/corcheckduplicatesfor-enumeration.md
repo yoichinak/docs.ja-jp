@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767017"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007903"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列挙型
-重複のチェックとメタデータ トークンを指定します。  
+重複をチェックするメタデータトークンを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,8 +57,8 @@ typedef enum CorCheckDuplicatesFor {
   
     MDDupAssembly               = 0x10000000,  
   
-    MDDupDefault =   
-        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |   
+    MDDupDefault =
+        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |
         MDDupSignature | MDDupTypeSpec | MDDupMethodSpec  
   
 } CorCheckDuplicatesFor;  
@@ -70,41 +68,41 @@ typedef enum CorCheckDuplicatesFor {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDDupAll`|すべてのメタデータ トークンの重複を確認します。|  
-|`MDDupENC`|使用しません。|  
-|`MDNoDupChecks`|メタデータ トークンの重複をチェックしません。|  
-|`MDDupTypeDef`|重複をチェック`mdTypeDef`トークンです。|  
-|`MDDupInterfaceImpl`|重複をチェック`mdInterfaceImpl`トークンです。|  
-|`MDDupMethodDef`|重複をチェック`mdMethodDef`トークンです。|  
-|`MDDupTypeRef`|重複をチェック`mdTypeRef`トークンです。|  
-|`MDDupMemberRef`|重複をチェック`mdMemberRef`トークンです。|  
-|`MDDupCustomAttribute`|重複をチェック`mdCustomAttribute`トークンです。|  
-|`MDDupParamDef`|重複をチェック`mdParamDef`トークンです。|  
-|`MDDupPermission`|重複をチェック`mdPermission`トークンです。|  
-|`MDDupProperty`|重複をチェック`mdProperty`トークンです。|  
-|`MDDupEvent`|重複をチェック`mdEvent`トークンです。|  
-|`MDDupFieldDef`|重複をチェック`mdFieldDef`トークンです。|  
-|`MDDupSignature`|重複をチェック`mdSignature`トークンです。|  
-|`MDDupModuleRef`|重複をチェック`mdModuleRef`トークンです。|  
-|`MDDupTypeSpec`|重複をチェック`mdTypeSpec`トークンです。|  
-|`MDDupImplMap`|重複をチェック`mdImplMap`トークンです。|  
-|`MDDupAssemblyRef`|重複をチェック`mdAssemblyRef`トークンです。|  
-|`MDDupFile`|重複をチェック`mdFile`トークンです。|  
-|`MDDupExportedType`|重複をチェック`mdExportedType`トークンです。|  
-|`MDDupManifestResource`|重複をチェック`mdManifestResource`トークンです。|  
-|`MDDupGenericParam`|重複をチェック`mdGenericParam`トークンです。|  
-|`MDDupMethodSpec`|重複をチェック`mdMethodSpec`トークンです。|  
-|`MDDupGenericParamConstraint`|重複をチェック`mdGenericParamConstraint`トークンです。|  
-|`MDDupAssembly`|重複をチェック`mdAssembly`トークンです。|  
-|`MDDupDefault`|重複をチェック`mdMemberRef`、 `mdTypeRef`、 `mdSignature`、 `mdTypeSpec`、および`mdMethodSpec`トークンです。|  
+|`MDDupAll`|すべてのメタデータトークンの重複を確認します。|  
+|`MDDupENC`|使用されていません。|  
+|`MDNoDupChecks`|メタデータトークンの重複をチェックしないでください。|  
+|`MDDupTypeDef`|トークンの重複を確認 `mdTypeDef` します。|  
+|`MDDupInterfaceImpl`|トークンの重複を確認 `mdInterfaceImpl` します。|  
+|`MDDupMethodDef`|トークンの重複を確認 `mdMethodDef` します。|  
+|`MDDupTypeRef`|トークンの重複を確認 `mdTypeRef` します。|  
+|`MDDupMemberRef`|トークンの重複を確認 `mdMemberRef` します。|  
+|`MDDupCustomAttribute`|トークンの重複を確認 `mdCustomAttribute` します。|  
+|`MDDupParamDef`|トークンの重複を確認 `mdParamDef` します。|  
+|`MDDupPermission`|トークンの重複を確認 `mdPermission` します。|  
+|`MDDupProperty`|トークンの重複を確認 `mdProperty` します。|  
+|`MDDupEvent`|トークンの重複を確認 `mdEvent` します。|  
+|`MDDupFieldDef`|トークンの重複を確認 `mdFieldDef` します。|  
+|`MDDupSignature`|トークンの重複を確認 `mdSignature` します。|  
+|`MDDupModuleRef`|トークンの重複を確認 `mdModuleRef` します。|  
+|`MDDupTypeSpec`|トークンの重複を確認 `mdTypeSpec` します。|  
+|`MDDupImplMap`|トークンの重複を確認 `mdImplMap` します。|  
+|`MDDupAssemblyRef`|トークンの重複を確認 `mdAssemblyRef` します。|  
+|`MDDupFile`|トークンの重複を確認 `mdFile` します。|  
+|`MDDupExportedType`|トークンの重複を確認 `mdExportedType` します。|  
+|`MDDupManifestResource`|トークンの重複を確認 `mdManifestResource` します。|  
+|`MDDupGenericParam`|トークンの重複を確認 `mdGenericParam` します。|  
+|`MDDupMethodSpec`|トークンの重複を確認 `mdMethodSpec` します。|  
+|`MDDupGenericParamConstraint`|トークンの重複を確認 `mdGenericParamConstraint` します。|  
+|`MDDupAssembly`|トークンの重複を確認 `mdAssembly` します。|  
+|`MDDupDefault`|、、、、およびの各トークンの重複を確認 `mdMemberRef` `mdTypeRef` `mdSignature` `mdTypeSpec` `mdMethodSpec` します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

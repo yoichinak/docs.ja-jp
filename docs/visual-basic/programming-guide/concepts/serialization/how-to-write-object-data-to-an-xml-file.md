@@ -1,15 +1,15 @@
 ---
-title: '方法: オブジェクトのデータを書き込む XML ファイル (Visual Basic)'
+title: '方法: XML ファイルにオブジェクト データを書き込む'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 17f8463a4b905028d37a2e005562867f87f4bd2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9608a48cb8b3fac1c71affa7a0a17e9789f94b18
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624357"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413155"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>方法: オブジェクトのデータを書き込む XML ファイル (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>方法: XML ファイルにオブジェクト データを書き込む (Visual Basic)
 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  
   
 ## <a name="example"></a>例  
@@ -37,7 +37,7 @@ Public Module XMLWrite
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードのコンパイル  
  クラスには、パラメーターのないパブリック コンストラクターが必要です。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
@@ -57,5 +57,5 @@ End Module
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
-- [方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [シリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [方法: XML ファイルからオブジェクト データを読み込む (Visual Basic)](how-to-read-object-data-from-an-xml-file.md)
+- [シリアル化 (Visual Basic)](index.md)

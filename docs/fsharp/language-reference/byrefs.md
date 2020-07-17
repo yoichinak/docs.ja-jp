@@ -1,20 +1,20 @@
 ---
-title: Byref
-description: Byref と F# での低レベルのプログラミングに使用される byref のような種類について説明します。
-ms.date: 09/02/2018
-ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: Byrefs
+description: 低レベルプログラミングに使用される f# で byref 型と byref 型について説明します。
+ms.date: 11/04/2019
+ms.openlocfilehash: 527f465ee87fe153a2deae1306b6730531dc4123
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703193"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187048"
 ---
-# <a name="byrefs"></a>Byref
+# <a name="byrefs"></a>Byrefs
 
-F#低レベルのプログラミングの領域で処理する 2 つの主要な機能領域があります。
+F# には、低レベルプログラミングの領域を扱う主な機能が 2 つ用意されています。
 
-* `byref` / `inref` / `outref`マネージ ポインターである型。 使用量に制限があるできるように、実行時に無効なプログラムをコンパイルすることはできません。
-* A `byref`-これは構造体のように、[構造](structures.md)のようなセマンティクスと同じコンパイル時の制限を持つ`byref<'T>`します。 1 つの例は、<xref:System.Span%601>します。
+* `byref`/マネージ`outref`ポインターである型。 `inref` / これらのプログラムには使用法に制限があるため、実行時に無効なプログラムをコンパイルすることはできません。
+* 類似`byref`のセマンティクスとコンパイル時の制限を持つ[構造体](structures.md)である -like 構造体 。 `byref<'T>` その一例<xref:System.Span%601>が です。
 
 ## <a name="syntax"></a>構文
 
@@ -37,32 +37,32 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-## <a name="byref-inref-and-outref"></a>Byref、inref、および outref
+## <a name="byref-inref-and-outref"></a>バイレフ、インレフ、およびアウトレフ
 
-3 つの形式がある`byref`:
+の 3 つの`byref`形式があります。
 
-* `inref<'T>`、基になる値を読み取るためのマネージ ポインター。
-* `outref<'T>`、基になる値を書き込むためのマネージ ポインター。
-* `byref<'T>`、基になる値の読み取りと書き込み用のマネージ ポインター。
+* `inref<'T>`基になる値を読み取るためのマネージ ポインター。
+* `outref<'T>`の基になる値に書き込むマネージ ポインター。
+* `byref<'T>`の読み取りと書き込みのマネージ ポインター。
 
-A`byref<'T>`を渡すことができます、`inref<'T>`が必要です。 同様に、`byref<'T>`を渡すことができます、`outref<'T>`が必要です。
+が`byref<'T>`期待されるところで`inref<'T>`渡すことができます。 同様に、`byref<'T>`が必要な場所`outref<'T>`に a を渡すことができます。
 
-## <a name="using-byrefs"></a>Byref を使用します。
+## <a name="using-byrefs"></a>参照の使用
 
-使用する、 `inref<'T>`、ポインター値を取得する必要がある`&`:
+を`inref<'T>`使用するには、 を使用してポインター値を取得`&`する必要があります。
 
 ```fsharp
 open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-    
+
 let usage =
     let dt = DateTime.Now
     f &dt // Pass a pointer to 'dt'
 ```
 
-使用して、ポインターに書き込む、`outref<'T>`または`byref<'T>`へのポインターを取得する値を行う必要があります`mutable`します。
+または を使用してポインターに書き込むには、 へのポインターを取得する値を`mutable`作成する必要もあります。 `byref<'T>` `outref<'T>`
 
 ```fsharp
 open System
@@ -78,63 +78,63 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-読み取りではなくポインターのみを記述する場合は、使用を検討して`outref<'T>`の代わりに`byref<'T>`します。
+ポインタを読む代わりに書くだけの場合は、`outref<'T>``byref<'T>`の代わりに を使用することを検討してください。
 
-### <a name="inref-semantics"></a>Inref セマンティクス
+### <a name="inref-semantics"></a>インレフセマンティクス
 
-次のコードがあるとします。
+次のコードについて考えてみましょう。
 
 ```fsharp
 let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
-意味は次の意味としては。
+意味的には、これは次の意味を意味します。
 
-* 所有者、`x`ポインターにのみ使用できますが、値の読み取り。
-* ポインターが取得される`struct`内で入れ子になったフィールド`SomeStruct`型を指定して、`inref<_>`します。
+* ポインターのホルダーは`x`、値の読み取りにのみ使用できます。
+* 内`struct``SomeStruct`にネストされたフィールドに取得されたポインタには、 `inref<_>`type が与えられます。
 
-次に示します。 また場合は true。
+次のことも当てはまります。
 
-* ない暗黙的の他のスレッドまたはエイリアスへの書き込みアクセスはありません。`x`します。
-* 意味はありませんが`SomeStruct`して不変`x`されている、 `inref`。
+* 他のスレッドまたはエイリアスに対する`x`書き込みアクセス権が与えないことを意味するわけではありません。
+* あるというのは、`SomeStruct`不変の`x`意味はありません`inref`。
 
-ただし、F# のある値型**は**、変更できない、`this`ポインターは、推論、`inref`します。
+ただし、不**変の**F# 値型の`this`場合、ポインターは`inref`.
 
-一緒にこれらのルールのすべてからの所有者といって、`inref`ポインターは、即時に示されるメモリの内容を変更できません。
+これらの規則はすべて、`inref`ポインタの所有者が、指しているメモリの直接の内容を変更しないことを意味します。
 
-### <a name="outref-semantics"></a>Outref セマンティクス
+### <a name="outref-semantics"></a>アウトレフセマンティクス
 
-目的は、`outref<'T>`をからポインターを読み取るだけことを示すことです。 予期せず、`outref<'T>`名前とは異なり値の読み取り、基になることができます。 これは、互換性のため。 意味としては、`outref<'T>`は変わりません`byref<'T>`します。
+の目的`outref<'T>`は、ポインタの書き込みのみを指示することです。 予期せず、`outref<'T>`その名前にもかかわらず、基になる値を読み取ることができます。 これは互換性を目的としています。 意味的には`outref<'T>`、 と`byref<'T>`同じではありません。
 
-### <a name="interop-with-c"></a>C との相互運用\#
+### <a name="interop-with-c"></a>C との相互運用性\#
 
-C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を返します。 次の表は、F# を解釈する方法と C# は出力を示しています。
+C# では`in ref`、`out ref`および キーワードをサポート`ref`し、さらに、リターンもサポートします。 次の表は、F# が C# の出力を解釈する方法を示しています。
 
-|コンス トラクター (C#)|F#推論|
+|C# コンストラクト|F# の推論|
 |------------|---------|
-|`ref` 戻り値|`outref<'T>`|
-|`ref readonly` 戻り値|`inref<'T>`|
+|`ref`戻り値|`outref<'T>`|
+|`ref readonly`戻り値|`inref<'T>`|
 |`in ref` パラメーター|`inref<'T>`|
 |`out ref` パラメーター|`outref<'T>`|
 
-次の表では、どのような F# は出力を示します。
+次の表は、F# の出力を示しています。
 
-|F#コンス トラクター|生成されたコンス トラクター|
+|F# コンストラクト|放出されたコンストラクト|
 |------------|-----------------|
-|`inref<'T>` 引数|`[In]` 引数の属性|
-|`inref<'T>` 戻り値|`modreq` 値の属性|
-|`inref<'T>` 抽象スロットまたは実装|`modreq` 引数または戻り値|
-|`outref<'T>` 引数|`[Out]` 引数の属性|
+|`inref<'T>` 引数|`[In]`引数の属性|
+|`inref<'T>`返す|`modreq`値の属性|
+|`inref<'T>`抽象的なスロットまたは実装で|`modreq`引数または戻り値の場合|
+|`outref<'T>` 引数|`[Out]`引数の属性|
 
-### <a name="type-inference-and-overloading-rules"></a>型の推定とオーバー ロードの規則
+### <a name="type-inference-and-overloading-rules"></a>型の推論とオーバーロードの規則
 
-`inref<'T>`型は、次の場合に F# コンパイラによって推論されます。
+型`inref<'T>`は、次の場合に F# コンパイラによって推論されます。
 
-1. .NET パラメーターまたは戻り値型を持つ、`IsReadOnly`属性。
-2. `this`変更可能なフィールドを持たない構造体の型のポインター。
-3. メモリの場所のアドレスが別の派生`inref<_>`ポインター。
+1. 属性を持つ .NET パラメータまたは`IsReadOnly`戻り値の型。
+2. 変更`this`可能なフィールドを持たない構造体型のポインター。
+3. 別`inref<_>`のポインターから派生したメモリ位置のアドレス。
 
-暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例えば:
+の暗黙のアドレスを`inref`取る場合、型の引数を持つオーバーロードは`SomeType`、 type の引数を持つオーバーロード`inref<SomeType>`より優先されます。 次に例を示します。
 
 ```fsharp
 type C() =
@@ -148,11 +148,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-どちらを取るオーバー ロード`System.DateTime`を取るオーバー ロードではなく解決`inref<System.DateTime>`します。
+どちらの場合も、オーバーロードを取るのではなく`System.DateTime`、オーバーロードを取る代わりに、`inref<System.DateTime>`取るオーバーロードが解決されます。
 
-## <a name="byref-like-structs"></a>Byref のような構造体
+## <a name="byref-like-structs"></a>バイレフのような構造体
 
-加え、 `byref` / `inref` / `outref`の 3 つに従うことができます独自の構造体を定義する`byref`-などのセマンティクスです。 これは、<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>属性。
+`byref`/`inref`トリオ/に`outref`加えて、-like セマンティクスに従うことができる独自の構造体を`byref`定義できます。 これは<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>属性で行われます。
 
 ```fsharp
 open System
@@ -164,45 +164,51 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike` 限りません`Struct`します。 両方は、型に存在する必要があります。
+`IsByRefLike`は を`Struct`意味しません。 両方とも型に存在する必要があります。
 
-A"`byref`のような"F# の構造体はスタック バインド値の型。 マネージ ヒープに割り当てられることはありません。 A `byref`-と同様に、強力な確認については、有効期間と非キャプチャのセットをそのポリシーが適用されて、構造体です、高性能なプログラミングに便利です。 規則は次のとおりです。
+F#`byref`の "-like" 構造体は、スタックにバインドされた値型です。 マネージ ヒープには割り当てが行きまとい。 `byref`-like 構造体は、有効期間と非キャプチャに関する強力なチェックのセットで実施される、高性能プログラミングに役立ちます。 ルールは次のとおりです。
 
-* メソッドを返します関数パラメーター、メソッド パラメーター、ローカル変数を使用ができます。
-* 静的またはインスタンス クラスまたは構造体を通常のメンバーができません。
-* 任意のクロージャ コンストラクトをキャプチャできない (`async`メソッドまたはラムダ式)。
-* これらは、ジェネリック パラメーターとして使用できません。
+* 関数パラメーター、メソッドパラメーター、ローカル変数、メソッドの戻り値として使用できます。
+* クラスの静的メンバーまたはインスタンス メンバー、または通常の構造体にはできません。
+* これらの関数は、どのクロージャ構造`async`(メソッドまたはラムダ式) でもキャプチャできません。
+* ジェネリック パラメーターとして使用することはできません。
 
-この最後の点が F# パイプライン スタイル プログラミングでは、非常に重要として`|>`はその入力の型をパラメーター化されるジェネリック関数です。 この制限を緩和することがあります`|>`今後は、インライン、本体内にインライン展開の非ジェネリック関数への呼び出しを行いません。
+この最後のポイントは、F# パイプライン スタイルのプログラミングでは`|>`重要です。 この制限は、インラインであり`|>`、その本体のインライン化されていないジェネリック関数を呼び出さないため、将来的には緩和される可能性があります。
 
-これらの規則は、使用状況を制限する非常に強く、それによって、安全な方法でのハイ パフォーマンス コンピューティングの約束を実行するためにします。
+これらの規則は使用を強く制限しますが、安全な方法で高性能コンピューティングの約束を果たすために行います。
 
-## <a name="byref-returns"></a>Byref 戻り値します。
+## <a name="byref-returns"></a>バイレフが戻る
 
-Byref 返しますF#関数またはメンバーを生成および使用されます。 使用するときに、 `byref`-メソッドを返すには、値が暗黙的に逆参照します。 例:
+F# 関数またはメンバーからの Byref 戻り値を生成して使用できます。 戻り値`byref`を使用する場合、値は暗黙的に逆参照されます。 次に例を示します。
 
 ```fsharp
-let safeSum(bytes: Span<byte>) =
-    let mutable sum = 0
-    for i in 0 .. bytes.Length - 1 do
-        sum <- sum + int bytes.[i]
-    sum
-
-let sum = safeSum(mySpanOfBytes)
-printfn "%d" sum // 'sum' is of type 'int'
+let squareAndPrint (data : byref<int>) =
+    let squared = data*data    // data is implicitly dereferenced
+    printfn "%d" squared
 ```
 
-複数の連鎖呼び出しを使って参照を渡すなど、暗黙の型の逆参照を回避するために使用`&x`(場所`x`値です)。
+値 byref を返すためには、値を含む変数は現在のスコープよりも長く存在する必要があります。
+また、byref を返すために`&value`は、使用します (値は現在のスコープよりも長く存在する変数です)。
 
-戻り値を割り当てることができますも直接`byref`します。 次の (非常に命令的) プログラムを検討してください。
+```fsharp
+let mutable sum = 0
+let safeSum (bytes: Span<byte>) =
+    for i in 0 .. bytes.Length - 1 do
+        sum <- sum + int bytes.[i]
+    &sum  // sum lives longer than the scope of this function.
+```
+
+複数の連鎖呼び出しを通じて参照を渡すなど、暗黙的な逆`&x`参照を`x`回避するには、(値は場所) を使用します。
+
+また、直接戻り . `byref` 次の (非常に命令的な) プログラムを検討してください。
 
 ```fsharp
 type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
-    override __.ToString() = String.Join(' ', nums)
+    override _.ToString() = String.Join(' ', nums)
 
-    member __.FindLargestSmallerThan(target: int) =
+    member _.FindLargestSmallerThan(target: int) =
         let mutable ctr = nums.Length - 1
 
         while ctr > 0 && nums.[ctr] >= target do ctr <- ctr - 1
@@ -230,9 +236,9 @@ Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a>Byref の範囲の設定
+## <a name="scoping-for-byrefs"></a>バイ参照のスコープ指定
 
-A `let`-バインドされた値の参照が定義された範囲を超えることはできません。 たとえば、次は許可されません。
+バインド`let`された値は、その参照が定義されているスコープを超えることはできません。 たとえば、次の項目は許可されません。
 
 ```fsharp
 let test2 () =
@@ -246,4 +252,4 @@ let test () =
     ()
 ```
 
-こうと、最適化をオンまたはオフをコンパイルする場合に応じて異なる結果を取得します。
+これにより、最適化を使用してコンパイルするかどうかによって、異なる結果が得られるのを防ぐことができます。

@@ -5,58 +5,58 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4b7972c281786a4e36d0e9c1e455776a293423ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034360"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151287"
 ---
 # <a name="datatable-constraints"></a>DataTable の制約
-制約を使用すると、データの整合性を維持するために <xref:System.Data.DataTable> のデータを強制的に制限できます。 制約は、1 つの列または関連付けられた複数の列に対して自動的に適用される規則であり、行の値がなんらかの方法で変更されたときに実行されるアクションを決定します。 制約はときに、`System.Data.DataSet.EnforceConstraints`のプロパティ、<xref:System.Data.DataSet>は**true**します。 `EnforceConstraints` プロパティの設定方法のコード例については、<xref:System.Data.DataSet.EnforceConstraints%2A> のリファレンス トピックを参照してください。  
+制約を使用すると、データの整合性を維持するために <xref:System.Data.DataTable> のデータを強制的に制限できます。 制約は、1 つの列または関連付けられた複数の列に対して自動的に適用される規則であり、行の値がなんらかの方法で変更されたときに実行されるアクションを決定します。 制約は、<xref:System.Data.DataSet> の `System.Data.DataSet.EnforceConstraints` プロパティを **true** に設定したときに適用されます。 `EnforceConstraints` プロパティの設定方法のコード例については、<xref:System.Data.DataSet.EnforceConstraints%2A> のリファレンス トピックを参照してください。  
   
- ADO.NET には、<xref:System.Data.ForeignKeyConstraint> と <xref:System.Data.UniqueConstraint> の 2 種類の制約があります。 既定では、両方の制約が自動的に作成を追加して 2 つ以上のテーブル間のリレーションシップを作成するときに、<xref:System.Data.DataRelation>を**データセット**します。 指定することでこの動作を無効にするただし、 **createConstraints** = **false**リレーションシップを作成するときにします。  
+ ADO.NET には、<xref:System.Data.ForeignKeyConstraint> と <xref:System.Data.UniqueConstraint> の 2 種類の制約があります。 既定では、<xref:System.Data.DataRelation> を **DataSet** に追加して複数のテーブル間のリレーションシップを作成すると、この 2 種類の制約が両方とも自動的に作成されます。 ただし、リレーションの作成時に **createConstraints** = **false** と指定することにより、この動作を無効にできます。  
   
 ## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
- A **ForeignKeyConstraint**更新プログラムと関連テーブルの削除を反映する方法に関する規則を適用します。 たとえば、1 つのテーブルの行の値を更新または削除すると同じ値が 1 つの使用も、またはその他の関連テーブル、 **ForeignKeyConstraint**関連テーブルの動作を決定します。  
+ **ForeignKeyConstraint** では、関連付けられているテーブルに更新や削除を反映させる方法についての規則が適用されます。 たとえば、あるテーブルの行の値が更新または削除され、その同じ値が、関連付けられている別のテーブルでも使用されている場合、関連付けられているテーブル内で実行されるアクションは **ForeignKeyConstraint** によって決定されます。  
   
- <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A>と<xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>のプロパティ、 **ForeignKeyConstraint**ユーザーが削除または関連テーブルの行を更新しようとしたときに実行されるアクションを定義します。 次の表に、使用できるさまざまな設定、 **DeleteRule**と**UpdateRule**のプロパティ、 **ForeignKeyConstraint**します。  
+ **ForeignKeyConstraint** の <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> プロパティおよび <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> プロパティでは、ユーザーが関連付けられているテーブルの行を削除または更新しようとしたときに実行されるアクションが定義されます。 **ForeignKeyConstraint** の **DeleteRule** プロパティおよび **UpdateRule** プロパティに使用できるさまざまな設定の説明を次の表に示します。  
   
 |規則の設定|説明|  
 |------------------|-----------------|  
 |**Cascade**|関連付けられている行を削除または更新します。|  
-|**SetNull**|関連付けられている行の値を設定**DBNull**します。|  
+|**SetNull**|関連付けられている行の値を **DBNull** に設定します。|  
 |**SetDefault**|関連付けられている行の値を既定値に設定します。|  
 |**None**|関連付けられている行に対してアクションは実行しません。 既定値です。|  
   
- A **ForeignKeyConstraint**制限することができますも反映されるまでへの変更が関連する列。 設定されたプロパティに応じて、 **ForeignKeyConstraint** 、列の場合、 **EnforceConstraints**のプロパティ、**データセット**は**true**、親の行に対して操作を実行する、例外が発生します。 たとえば場合、 **DeleteRule**のプロパティ、 **ForeignKeyConstraint**は**None**、子の行がある場合、親の行を削除できません。  
+ **ForeignKeyConstraint** は、関連付けられている行への変更を制限したり、反映させたりできます。 列の **ForeignKeyConstraint** に対して設定されたプロパティによっては、**DataSet** の **EnforceConstraints** プロパティが **true** である場合に親の行に対して操作を実行すると、例外が発生することがあります。 たとえば、**ForeignKeyConstraint** の **DeleteRule** プロパティが **None** の場合、子の行を持っている親の行は削除できません。  
   
- 1 つの列間または配列を使用して列の間の外部キー制約を作成することができます、 **ForeignKeyConstraint**コンス トラクター。 結果を渡す**ForeignKeyConstraint**オブジェクトを**追加**メソッド テーブルの**制約**であるプロパティを**ConstraintCollection**. いくつかのオーバー ロードにコンス トラクターの引数を渡すことができますも、**追加**のメソッド、 **ConstraintCollection**を作成する、 **ForeignKeyConstraint**します。  
+ **ForeignKeyConstraint** コンストラクターを使用すると、単一列間または列配列間の外部キー制約を作成できます。 **ConstraintCollection** の 1 つである、テーブルの **Constraints** プロパティの **Add** メソッドに結果の **ForeignKeyConstraint** オブジェクトを渡します。 コンストラクター引数を **ConstraintCollection** の **Add** メソッドのいくつかのオーバーロードに渡すことにより、**ForeignKeyConstraint** を作成することもできます。  
   
- 作成するときに、 **ForeignKeyConstraint**を渡すことができます、 **DeleteRule**と**UpdateRule**するか、引数としてコンス トラクターに値としてのプロパティとして設定できます、次の例 (場所、 **DeleteRule**値に設定されて**None**)。  
+ **ForeignKeyConstraint** を作成するときに、**DeleteRule** の値と **UpdateRule** の値を引数としてコンストラクターに渡したり、それらの値を次の例に示すようにプロパティとして設定したりできます。この例では、**DeleteRule** の値が **None** に設定されています。  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
   custDS.Tables("CustTable").Columns("CustomerID"), _  
   custDS.Tables("OrdersTable").Columns("CustomerID"))  
-custOrderFK.DeleteRule = Rule.None    
+custOrderFK.DeleteRule = Rule.None
 ' Cannot delete a customer value that has associated existing orders.  
 custDS.Tables("OrdersTable").Constraints.Add(custOrderFK)  
 ```  
   
 ```csharp  
 ForeignKeyConstraint custOrderFK = new ForeignKeyConstraint("CustOrderFK",  
-  custDS.Tables["CustTable"].Columns["CustomerID"],   
+  custDS.Tables["CustTable"].Columns["CustomerID"],
   custDS.Tables["OrdersTable"].Columns["CustomerID"]);  
-custOrderFK.DeleteRule = Rule.None;    
+custOrderFK.DeleteRule = Rule.None;
 // Cannot delete a customer value that has associated existing orders.  
 custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);  
 ```  
   
 ### <a name="acceptrejectrule"></a>AcceptRejectRule  
- 使用して行への変更を受け入れることができます、 **AcceptChanges**メソッドまたは取り消しを使用して、 **RejectChanges**のメソッド、**データセット**、 **DataTable**、または**DataRow**します。 ときに、**データセット**が含まれています**ForeignKeyConstraints**呼び出すと、 **AcceptChanges**または**RejectChanges**メソッド、を強制します。**AcceptRejectRule**します。 **AcceptRejectRule**のプロパティ、 **ForeignKeyConstraint**子に対して実行されるアクションを決定するときに行**AcceptChanges**または**RejectChanges**は親の行に対して呼び出されます。  
+ 行への変更は、**AcceptChanges** メソッドを使用して受け入れることができ、**DataSet**、**DataTable**、または **DataRow** の **RejectChanges** メソッドを使用してキャンセルできます。 **DataSet** に **ForeignKeyConstraints** が含まれている場合は、**AcceptChanges** メソッドまたは **RejectChanges** メソッドを呼び出すと、**AcceptRejectRule** が強制適用されます。 **ForeignKeyConstraint** の **AcceptRejectRule** プロパティは、親の行に対して **AcceptChanges** または **RejectChanges** が呼び出されたときに、子の行に対して実行されるアクションを決定します。  
   
- 次の表に、利用可能な設定、 **AcceptRejectRule**します。  
+ **AcceptRejectRule** に使用できる設定の一覧を次の表に示します。  
   
 |規則の設定|説明|  
 |------------------|-----------------|  
@@ -70,11 +70,11 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
 ## <a name="uniqueconstraint"></a>UniqueConstraint  
- **UniqueConstraint**オブジェクトは、1 つの列または列の配列のいずれかに割り当てることができます、 **DataTable**、指定された列または列のすべてのデータが行ごとに一意です。 使用して、列または列の配列に対する unique 制約を作成することができます、 **UniqueConstraint**コンス トラクター。 結果を渡す**UniqueConstraint**オブジェクトを**追加**メソッド テーブルの**制約**であるプロパティを**ConstraintCollection**. いくつかのオーバー ロードにコンス トラクターの引数を渡すことができますも、**追加**のメソッド、 **ConstraintCollection**を作成する、 **UniqueConstraint**します。 作成するときに、 **UniqueConstraint**または複数の列のことができます必要に応じて指定するかどうか、または複数の列が主キー。  
+ **UniqueConstraint** オブジェクトは、**DataTable** 内の 1 つの列または列の配列に対して割り当てることができ、指定された列内のすべてのデータが行ごとに一意になるようにします。 **UniqueConstraint** コンストラクターを使用して、1 つの列または列の配列に対する UNIQUE 制約を作成できます。 **ConstraintCollection** の 1 つである、テーブルの **Constraints** プロパティの **Add** メソッドに結果の **UniqueConstraint** オブジェクトを渡します。 コンストラクター引数を **ConstraintCollection** の **Add** メソッドのいくつかのオーバーロードに渡すことにより、**UniqueConstraint** を作成することもできます。 1 つの列または複数の列に対して **UniqueConstraint** を作成するときは、オプションで、その列または複数の列を主キーにするかどうかを指定できます。  
   
- 設定して、列の unique 制約を作成することも、 **Unique**プロパティには、列の**true**します。 または、設定、 **Unique**プロパティを 1 つの列の**false**可能性のある任意の unique 制約を削除します。 1 つの列 (または複数の列) をテーブルの主キーとして定義すると、指定した列 (または複数の列) の UNIQUE 制約が自動的に作成されます。 列を削除する場合、 **PrimaryKey**のプロパティを**DataTable**、 **UniqueConstraint**が削除されます。  
+ 列の **Unique** プロパティを **true** に設定することにより、1 つの列に対する一意制約を作成することもできます。 また、1 つの列の **Unique** プロパティを **false** に設定することにより、既存の一意制約を削除できます。 1 つの列 (または複数の列) をテーブルの主キーとして定義すると、指定した列 (または複数の列) の UNIQUE 制約が自動的に作成されます。 **DataTable** の **PrimaryKey** プロパティから列を削除すると、**UniqueConstraint** が削除されます。  
   
- 次の例では、作成、 **UniqueConstraint**の 2 つの列に、 **DataTable**します。  
+ **DataTable** の 2 つの列の **UniqueConstraint** を作成する例を次に示します。  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -86,8 +86,8 @@ custDS.Tables("Customers").Constraints.Add(custUnique)
   
 ```csharp  
 DataTable custTable = custDS.Tables["Customers"];  
-UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]   
-    {custTable.Columns["CustomerID"],   
+UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
+    {custTable.Columns["CustomerID"],
     custTable.Columns["CompanyName"]});  
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
@@ -98,6 +98,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
-- [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable スキーマの定義](datatable-schema-definition.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

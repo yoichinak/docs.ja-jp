@@ -1,5 +1,5 @@
 ---
-title: GoTo ステートメント (Visual Basic)
+title: GoTo ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,61 +13,61 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: c4dd249620ba1bf445642ce4600498f6beb30461
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: eb6f48d04b7d14591003e340464451da7df45cd6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637967"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404616"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
 プロシージャ内の指定した行に無条件に分岐します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 GoTo line  
 ```  
   
 ## <a name="part"></a>パーツ  
  `line`  
- 必須。 任意の行のラベル。  
+ 必須です。 任意の行ラベル。  
   
 ## <a name="remarks"></a>Remarks  
- `GoTo`のみが表示されるプロシージャ内の行にステートメントを分岐できます。 ラベルを 1 行が必要`GoTo`を参照できます。 詳細については、「[方法 :ステートメントにラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)します。  
+ `GoTo` ステートメントでは、それが存在するプロシージャ内の行にのみ分岐できます。 行には、`GoTo` で参照できる行ラベルが必要です。 詳細については、「[方法:ステートメントへのラベル付け](../../programming-guide/program-structure/how-to-label-statements.md)」を参照してください。  
   
 > [!NOTE]
->  `GoTo` ステートメントすると、コードが読み取りおよびメンテナンスを困難になります。 可能であれば、制御構造を使用します。 詳細については、次を参照してください。[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)します。  
+> `GoTo` ステートメントによって、コードの読み取りと保守が困難になる場合があります。 可能な限り、代わりに制御構造を使用してください。 詳細については、「 [Control Flow](../../programming-guide/language-features/control-flow/index.md)」を参照してください。  
   
- 使用することはできません、`GoTo`外からの分岐にステートメントを`For`.`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、または`Using`.`End Using`内のラベルに構築します。  
+ `GoTo` ステートメントを使用して、`For`...`Next`、`For Each`...`Next`、`SyncLock`...`End SyncLock`、`Try`...`Catch`...`Finally`、`With`...`End With`、または `Using`...`End Using` コンストラクションの外部から、内部のラベルに分岐することはできません。  
   
-## <a name="branching-and-try-constructions"></a>分岐と構築をお試しください  
- 内で、 `Try`.`Catch`...`Finally`で分岐に、構築、次の規則の適用、`GoTo`ステートメント。  
+## <a name="branching-and-try-constructions"></a>分岐と Try コンストラクション  
+ `Try`...`Catch``Finally` コンストラクション内では、`GoTo` ステートメントによる分岐に、次のルールが適用されます。  
   
-|ブロックまたは地域|外部からへの分岐|外部への分岐からの内部|  
+|ブロックまたは領域|外部からの分岐|内部からの分岐|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` ブロック|のみ、`Catch`同じ構築ブロック<sup>1</sup>|のみ、全体の構造の外部|  
-|`Catch` ブロック|許可しません。|のみ、全体の構造の外部にまたは、`Try`同じ構築ブロック<sup>1</sup>|  
-|`Finally` ブロック|許可しません。|許可しません。|  
+|`Try` ブロック|同じコンストラクションの `Catch` ブロックからのみ <sup>1</sup>|コンストラクション全体の外部へのみ|  
+|`Catch` ブロック|許可されない|コンストラクション全体の外部、または同じコンストラクションの `Try` ブロックへのみ <sup>1</sup>|  
+|`Finally` ブロック|許可されない|許可されない|  
   
- <sup>1</sup>場合`Try`.`Catch`...`Finally`構築が、別の入れ子になった、`Catch`ブロックに分岐、`Try`ブロックの他にコピーせずに、独自の入れ子のレベルにある`Try`ブロックします。 入れ子になった`Try`.`Catch`...`Finally`構築を完全に含める必要があります、`Try`または`Catch`ブロックを入れ子になってを作成します。  
+ <sup>1</sup> 1 つの `Try`...`Catch`...`Finally` コンストラクションが別のコンストラクション内に入れ子になっている場合、`Catch` ブロックは自身の入れ子レベルにある `Try` ブロックに分岐できますが、他の `Try` ブロックには分岐できません。 入れ子になった `Try`...`Catch`...`Finally` コンストラクションは、それが中で入れ子になっているコンストラクションの `Try` または `Catch` ブロックに完全に含まれている必要があります。  
   
- 次の図では 1 つ`Try`別内で入れ子になった構築します。 2 つの構築ブロック間でさまざまな分岐は、有効または無効と表示されています。  
+ 次の図は、別のコンストラクション内に入れ子になっている `Try` コンストラクションを示しています。 2 つのコンストラクションのブロック間のさまざまな分岐は、有効または無効として示されます。  
   
  ![Try 構造内の分岐のグラフィック ダイアグラム](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>例  
- 次の例では、`GoTo`ステートメントをプロシージャ内の行ラベルに分岐します。  
+ 次の例では、`GoTo` ステートメントを使用して、プロシージャ内の行ラベルに分岐します。  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)
-- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [With...End With ステートメント](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [Do...Loop ステートメント](do-loop-statement.md)
+- [For...Next ステートメント](for-next-statement.md)
+- [For Each...Next ステートメント](for-each-next-statement.md)
+- [If...Then...Else ステートメント](if-then-else-statement.md)
+- [Select...Case ステートメント](select-case-statement.md)
+- [Try...Catch...Finally ステートメント](try-catch-finally-statement.md)
+- [While...End While ステートメント](while-end-while-statement.md)
+- [With...End With ステートメント](with-end-with-statement.md)

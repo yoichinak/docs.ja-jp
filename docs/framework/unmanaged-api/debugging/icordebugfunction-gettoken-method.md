@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4613e11896a34ed1a7fe91d4767fb38ac75aab8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e542145e888049231a6c5e4cccbb4ee96c62f98b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754520"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213258"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken メソッド
-この関数のメタデータ トークンを取得します。  
+この関数のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>パラメーター  
  `pMethodDef`  
- [out]ポインター、`mdMethodDef`この関数のメタデータを参照するトークン。  
+ 入出力`mdMethodDef`この関数のメタデータを参照するトークンへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751533"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107982"
 ---
-# <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 構造体
-メタデータ属性について説明する[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)インスタンス。  
+# <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE 構造体
+[IDefinitionIdentity](idefinitionidentity-interface.md)インスタンスに関するメタデータ属性情報を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,24 +38,24 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pszNamespace`|属性はで、名前空間を含む null で終わる文字列へのポインター。|  
+|`pszNamespace`|属性が含まれている名前空間を含む null で終わる文字列へのポインター。|  
 |`pszName`|属性の名前を含む null で終わる文字列へのポインター。|  
-|`pszValue`|属性の値を含む null で終わる文字列へのポインター。|  
+|`pszValue`|属性の値を格納している null で終わる文字列へのポインター。|  
   
 ## <a name="remarks"></a>Remarks  
- `IDENTITY_ATTRIBUTE`構造体が null で終わる文字列への 3 つのポインターが含まれています。 これら 3 つの文字列には、1 つの属性について説明します。  
+ `IDENTITY_ATTRIBUTE` 構造体には、null で終わる文字列への3つのポインターが含まれています。 これら3つの文字列は、1つの属性を表します。  
   
- インスタンス、`IDENTITY_ATTRIBUTE`構造のインスタンスに関連付け、 [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)構造体。 `IDENTITY_ATTRIBUTE`実際の文字列と、対応する構造に含まれる`IDENTITY_ATTRIBUTE_BLOB`構造で表示されている 3 つの文字列にオフセットを一覧表示、`IDENTITY_ATTRIBUTE`構造体。  
+ `IDENTITY_ATTRIBUTE` 構造体のインスタンスは、 [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md)構造体のインスタンスに関連付けられています。 `IDENTITY_ATTRIBUTE` 構造体には実際の文字列が含まれ、対応する `IDENTITY_ATTRIBUTE_BLOB` 構造体には、`IDENTITY_ATTRIBUTE` 構造体に示されている3つの文字列へのオフセットが一覧表示されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IDefinitionIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
-- [IDENTITY_ATTRIBUTE_BLOB 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
-- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IDefinitionIdentity インターフェイス](idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB 構造体](identity-attribute-blob-structure.md)
+- [Fusion 構造体](fusion-structures.md)

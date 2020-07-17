@@ -2,24 +2,24 @@
 title: MessageQueueDuplicatedPipeLeak
 ms.date: 03/30/2017
 ms.assetid: 743db7f1-32cc-4a3b-8d1a-5d1cf25e439c
-ms.openlocfilehash: a3dcd32cc79cc073021c1fb4c3c4bdc52029b385
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f657a54d5e18077e6174a0c3bd785b2adf81d226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999293"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797711"
 ---
 # <a name="messagequeueduplicatedpipeleak"></a>MessageQueueDuplicatedPipeLeak
 Id:166  
   
- 重大度:Error  
+ 順Error  
   
- カテゴリ:SMSvcHost  
+ [カテゴリ]:Smsvchost.exe  
   
 ## <a name="description"></a>説明  
  このイベントは、複製された名前付きパイプのディスパッチ中にエラーが発生したことを示します。 このハンドルは現在プロセスでリークされています。 イベントには、ソース、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

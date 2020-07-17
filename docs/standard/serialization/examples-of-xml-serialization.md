@@ -1,5 +1,6 @@
 ---
 title: XML シリアル化の例
+description: これらのコード例は、XML シリアル化を使用して XML スキーマ ドキュメントに準拠する XML ストリームを生成する方法など、高度なシナリオを示します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 98cc4a983c9703e6c5ab132f6110a327c6081b6c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922526"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289630"
 ---
 # <a name="examples-of-xml-serialization"></a>XML シリアル化の例
 
-XML シリアル化は、単純な形式から複雑な形式に至るまで、さまざまな形で実行できます。 たとえば、「[XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)」に示すように、パブリック フィールドとパブリック プロパティだけで構成されるクラスをシリアル化できます。 次の例では、XML シリアル化を使用して特定の XML スキーマ (XSD) ドキュメントに準拠する XML ストリームを生成する方法など、各種の高度なシナリオに対応するコード例を示します。
+XML シリアル化は、単純な形式から複雑な形式に至るまで、さまざまな形で実行できます。 たとえば、「[XML シリアル化の概要](introducing-xml-serialization.md)」に示すように、パブリック フィールドとパブリック プロパティだけで構成されるクラスをシリアル化できます。 次の例では、XML シリアル化を使用して特定の XML スキーマ (XSD) ドキュメントに準拠する XML ストリームを生成する方法など、各種の高度なシナリオに対応するコード例を示します。
 
 ## <a name="serializing-a-dataset"></a>データセットのシリアル化
 
@@ -74,7 +75,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>XmlElement および XmlNode のシリアル化
 
-インスタンスをシリアル化することも、<xref:System.Xml.XmlElement>または<xref:System.Xml.XmlNode>クラスに、次のコード例に示すようにします。
+次のコード例に示すように、<xref:System.Xml.XmlElement> クラスまたは <xref:System.Xml.XmlNode> クラスのインスタンスもシリアル化できます。
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -192,11 +193,11 @@ public class Item
         <Item>
             <ItemID>aaa111</ItemID>
             <ItemPrice>34.22</ItemPrice>
-        <Item>
+        </Item>
         <Item>
             <ItemID>bbb222</ItemID>
             <ItemPrice>2.89</ItemPrice>
-        <Item>
+        </Item>
     </ItemsOrders>
 </PurchaseOrder>
 ```
@@ -206,9 +207,8 @@ public class Item
 <xref:System.Collections.ICollection> インターフェイスを実装して独自のコレクション クラスを作成し、<xref:System.Xml.Serialization.XmlSerializer> を使用して、これらのクラスのインスタンスをシリアル化できます。 クラスが <xref:System.Collections.ICollection> インターフェイスを実装する場合、そのクラスに含まれているコレクションだけがシリアル化されます。 このクラスに追加されたパブリック プロパティやパブリック フィールドはシリアル化されません。 シリアル化するには、クラスに **Add** メソッドと **Item** プロパティ (C# の場合はインデクサー) を含める必要があります。
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +298,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -370,13 +370,12 @@ public class Employee {
 
 `CreatePO` メソッドは、`PurchaseOrder`、`Address`、`OrderedItem` の各クラス オブジェクトを作成し、それらのパブリック フィールドの値を設定します。 このメソッドは、<xref:System.Xml.Serialization.XmlSerializer> のシリアル化および逆シリアル化に使用される `PurchaseOrder` クラスのインスタンスも生成します。 このコードは、シリアル化されるクラスの型をコンストラクターに渡します。 さらに、XML ストリームを XML ドキュメントに書き込むために使用する `FileStream` も作成します。
 
-`ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。
+`ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 `CreatePo` メソッドの場合と同様に、まず、逆シリアル化の対象となるクラスの型をコンストラクターに渡して、<xref:System.Xml.Serialization.XmlSerializer> を生成する必要があります。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +552,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -771,9 +770,9 @@ XML 出力は、次のようになります。
 
 ## <a name="see-also"></a>関連項目
 
-- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [属性を使用した XML シリアル化の制御](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [XML シリアル化の概要](introducing-xml-serialization.md)
+- [属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)
+- [XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)
 - [XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
-- [方法: オブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [方法: オブジェクトを逆シリアル化します。](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [方法: オブジェクトをシリアル化する](how-to-serialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)

@@ -1,5 +1,6 @@
 ---
 title: reportAvOnComRelease MDA
+description: ReportAvOnComRelease マネージデバッグアシスタント (MDA) を確認します。これは、.NET のアクセス違反とメモリの破損によってアクティブ化される可能性があります。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), reference counting errors
@@ -11,25 +12,23 @@ helpviewer_keywords:
 - report access violation on Com release
 - reference counting errors
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f0ecb05dba70dc9c8aba7f04928fd0ab49c900c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9ba343060cb4d16de5909a5b619353546aca8ca
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803611"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease MDA
 COM 相互運用を実行していて、COM の生呼び出しと組み合わせた `reportAvOnComRelease` または <xref:System.Runtime.InteropServices.Marshal.Release%2A> メソッドを使用しているときに、ユーザー参照カウントのエラーが原因で例外がスローされると、<xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> マネージド デバッグ アシスタント (MDA) がアクティブ化されます。  
   
-## <a name="symptoms"></a>症状  
+## <a name="symptoms"></a>現象  
  アクセス違反およびメモリ破損が発生します。  
   
 ## <a name="cause"></a>原因  
  COM 相互運用を実行していて、生の COM 呼び出しと組み合わせた <xref:System.Runtime.InteropServices.Marshal.Release%2A> または <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> メソッドを使用しているときに、ユーザー参照カウントのエラーが原因で例外がスローされることがあります。 通常、この例外は破棄されます。これは、破棄しないと CLR でアクセス違反が発生し、ダウンしてしまうためです。 このアシスタントが有効な場合は、そのような例外を単に破棄するのではなく、検出して報告できます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  参照カウントのコードを調べてエラーを探します。また、オブジェクトのネイティブ クライアントに参照カウントのエラーがないかどうかも調べます。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -51,5 +50,5 @@ COM 相互運用を実行していて、COM の生呼び出しと組み合わせ
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

@@ -14,82 +14,80 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2c2512abc28f0140fc261c5136c7e1255db96de
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043824"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009214"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit インターフェイス
-作成、変更、および現在定義されているスコープ内で、アセンブリに関するメタデータを保存するメソッドを提供します。 メタデータをメモリに格納されているか、ディスクに保存します。  
+現在定義されているスコープ内のアセンブリに関するメタデータを作成、変更、および保存するためのメソッドを提供します。 メタデータは、メモリに格納することも、ディスクに保存することもできます。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ApplyEditAndContinue メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)|現在のアセンブリのスコープを指定したで行われた変更で更新`pImport`します。|  
-|[DefineCustomAttribute メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)|指定したオブジェクトに接続する、指定したメタデータ シグネチャを持つカスタム属性の定義を作成し、そのカスタム属性定義トークンを取得します。|  
-|[DefineEvent メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)|指定したメタデータ シグネチャを持つイベントの定義を作成し、そのイベント定義トークンを取得します。|  
-|[DefineField メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definefield-method.md)|指定したメタデータ シグネチャを持つフィールドの定義を作成し、そのフィールド定義トークンを取得します。|  
-|[DefineImportMember メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)|現在のスコープ外にあるモジュールで定義され、その参照の定義のトークンを取得する型のメンバーの定義を作成します。|  
-|[DefineImportType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)|現在のスコープ外にあるモジュールで定義され、その参照定義トークンを取得する型への参照の定義を作成します。|  
-|[DefineMemberRef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)|現在のスコープ外にあるモジュールのメンバーへの参照の定義を作成し、その参照を定義するためのトークンを取得します。|  
-|[DefineMethod メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)|指定したシグネチャを持つメソッドの定義を作成し、そのメソッドの定義にトークンを返します。|  
-|[DefineMethodImpl メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethodimpl-method.md)|インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッドの実装定義にトークンを返します。|  
-|[DefineModuleRef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)|指定した名前のモジュールのメタデータ署名を作成します。|  
-|[DefineNestedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definenestedtype-method.md)|型定義のメタデータ署名を作成し、返します、`mdTypeDef`さらに、定義された型によって参照される型のメンバーであることを指定する、その型のトークン`tdEncloser`します。|  
-|[DefineParam メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)|指定したトークンによって参照されるメソッドの指定したシグネチャを持つパラメーターの定義を作成し、そのパラメーターの定義のトークンを取得します。|  
-|[DefinePermissionSet メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)|指定したメタデータ シグネチャを持つ設定アクセス許可の定義を作成し、そのアクセス許可セットの定義にトークンを取得します。|  
-|[DefinePinvokeMap メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)|指定したトークンによって参照されるメソッドの PInvoke 署名の機能を設定します。|  
-|[DefineProperty メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)|指定して、指定した型のプロパティの定義を作成します。`get`と`set`メソッド アクセサー、およびそのプロパティの定義にトークンを取得します。|  
-|[DefineSecurityAttributeSet メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definesecurityattributeset-method.md)|指定したトークンによって参照されるオブジェクトにアタッチするセキュリティ権限のセットを作成します。|  
-|[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)|共通言語ランタイム型では、型定義を作成し、その型定義のメタデータ トークンを取得します。|  
-|[DefineTypeRefByName メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)|現在のスコープ外の別のモジュールで定義されている型のメタデータ トークンを取得します。|  
-|[DefineUserString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)|指定されたリテラル文字列のメタデータ トークンを取得します。|  
-|[DeleteClassLayout メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deleteclasslayout-method.md)|指定したトークンによって参照される型のクラス レイアウト メタデータ シグネチャを破棄します。|  
-|[DeleteFieldMarshal メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletefieldmarshal-method.md)|指定したトークンによって参照されるオブジェクトのメタデータ シグネチャのマーシャ リング PInvoke を破棄します。|  
-|[DeletePinvokeMap メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletepinvokemap-method.md)|指定したトークンによって参照されるオブジェクトの PInvoke マッピング メタデータを破棄します。|  
-|[DeleteToken メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-deletetoken-method.md)|現在のメタデータ スコープから指定したトークンを削除します。|  
-|[GetSaveSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-getsavesize-method.md)|現在のスコープ内には、アセンブリの推定のバイナリのサイズを取得します。|  
-|[GetTokenFromSig メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)|指定されたメタデータ署名のトークンを取得します。|  
-|[GetTokenFromTypeSpec メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)|指定したメタデータ シグネチャを持つ型のメタデータ トークンを取得します。|  
-|[Merge メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|指定されたインポートされたスコープをマージするスコープの一覧に追加します。|  
-|[MergeEnd メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)|マージを現在のスコープを 1 つまたは複数の前の呼び出しで指定されたすべてのメタデータ スコープ`IMetaDataEmit::Merge`します。|  
-|[Save メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-save-method.md)|指定したアドレスにあるファイルに現在のスコープ内のすべてのメタデータを保存します。|  
-|[SaveToMemory メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)|メモリの指定された領域を現在のスコープ内のすべてのメタデータを保存します。|  
-|[SaveToStream メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)|指定した現在のスコープ内のすべてのメタデータの保存`IStream`します。|  
-|[SetClassLayout メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)|前回の呼び出しによって定義された型のクラス レイアウトのシグネチャの更新を設定または`IMetaDataEmit::DefineTypeDef`します。|  
-|[SetCustomAttributeValue メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setcustomattributevalue-method.md)|設定または前回の呼び出しによって定義されたカスタム属性の値を更新`IMetaDataEmit::DefineCustomAttribute`します。|  
-|[SetEventProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-seteventprops-method.md)|前回の呼び出しで定義されたイベントの指定した機能の更新を設定または`IMetaDataEmit::DefineEvent`します。|  
-|[SetFieldMarshal メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldmarshal-method.md)|指定したトークンによって参照されるフィールド、メソッドの戻り値、またはメソッドのパラメーターのマーシャ リング情報 PInvoke を設定します。|  
-|[SetFieldProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldprops-method.md)|設定または指定したフィールドのトークンによって参照されるフィールドの既定値を更新します。|  
-|[SetFieldRVA メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setfieldrva-method.md)|指定したトークンによって参照されるフィールドの相対仮想アドレスのグローバル変数の値を設定します。|  
-|[SetHandler メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)|指定したによって参照されるメソッドを設定`IUnknown`トークンを再マップの通知コールバックとしてのポインター。|  
-|[SetMethodImplFlags メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)|設定または指定したトークンによって参照されている継承されたメソッドの実装のメタデータ シグネチャを更新します。|  
-|[SetMethodProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodprops-method.md)|設定または更新、機能は、指定の相対仮想アドレス、前回の呼び出しによって定義されたメソッドに格納されている、`IMetaDataEmit::DefineMethod`します。|  
-|[SetModuleProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)|前回の呼び出しで定義されているモジュールへの参照を更新`IMetaDataEmit::DefineModuleRef`します。|  
-|[SetParamProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)|前回の呼び出しで定義されているメソッドのパラメーターの機能の変更を設定または`IMetaDataEmit::DefineParam`します。|  
-|[SetParent メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparent-method.md)|確立する前回の呼び出しで定義されている、指定されたメンバー `IMetaDataEmit::DefineMemberRef`、前回の呼び出しで定義されている、指定した型のメンバーである`IMetaDataEmit::DefineTypeDef`します。|  
-|[SetPermissionSetProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpermissionsetprops-method.md)|設定または前回の呼び出しで定義されたアクセス許可セットのメタデータ署名の機能を更新`IMetaDataEmit::DefinePermissionSet`します。|  
-|[SetPinvokeMap メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpinvokemap-method.md)|前回の呼び出しで定義されているメソッドの PInvoke の署名の機能の変更を設定または`IMetaDataEmit::DefinePinvokeMap`します。|  
-|[SetPropertyProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setpropertyprops-method.md)|前回の呼び出しによって定義されるプロパティのメタデータに格納されている機能の設定`IMetaDataEmit::DefineProperty`します。|  
-|[SetRVA メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)|指定したメソッドの相対仮想アドレスを設定します。|  
-|[SetTypeDefProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-settypedefprops-method.md)|前回の呼び出しによって定義された型の機能を設定`IMetaDataEmit::DefineTypeDef`します。|  
-|[TranslateSigWithScope メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-translatesigwithscope-method.md)|現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータ シグネチャを取得します。|  
+|[ApplyEditAndContinue メソッド](imetadataemit-applyeditandcontinue-method.md)|指定したに加えられた変更を使用して、現在のアセンブリスコープを更新し `pImport` ます。|  
+|[DefineCustomAttribute メソッド](imetadataemit-definecustomattribute-method.md)|指定したメタデータシグネチャを使用して、指定したオブジェクトにアタッチするカスタム属性の定義を作成し、そのカスタム属性定義へのトークンを取得します。|  
+|[DefineEvent メソッド](imetadataemit-defineevent-method.md)|指定したメタデータシグネチャを持つイベントの定義を作成し、そのイベント定義へのトークンを取得します。|  
+|[DefineField メソッド](imetadataemit-definefield-method.md)|指定したメタデータシグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。|  
+|[DefineImportMember メソッド](imetadataemit-defineimportmember-method.md)|現在のスコープ外のモジュールで定義されている型のメンバーの定義を作成し、その参照定義のトークンを取得します。|  
+|[DefineImportType メソッド](imetadataemit-defineimporttype-method.md)|現在のスコープ外のモジュールで定義されている型への参照の定義を作成し、その参照定義へのトークンを取得します。|  
+|[DefineMemberRef メソッド](imetadataemit-definememberref-method.md)|現在のスコープ外のモジュールのメンバーへの参照の定義を作成し、その参照定義へのトークンを取得します。|  
+|[DefineMethod メソッド](imetadataemit-definemethod-method.md)|指定したシグネチャを使用してメソッドの定義を作成し、そのメソッド定義に対するトークンを返します。|  
+|[DefineMethodImpl メソッド](imetadataemit-definemethodimpl-method.md)|インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッド実装定義にトークンを返します。|  
+|[DefineModuleRef メソッド](imetadataemit-definemoduleref-method.md)|指定された名前を持つモジュールのメタデータシグネチャを作成します。|  
+|[DefineNestedType メソッド](imetadataemit-definenestedtype-method.md)|型定義のメタデータシグネチャを作成し、 `mdTypeDef` その型のトークンを返します。さらに、定義された型がによって参照される型のメンバーであることを指定し `tdEncloser` ます。|  
+|[DefineParam メソッド](imetadataemit-defineparam-method.md)|指定したトークンによって参照されるメソッドに対して、指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。|  
+|[DefinePermissionSet メソッド](imetadataemit-definepermissionset-method.md)|指定したメタデータシグネチャを持つアクセス許可セットの定義を作成し、そのアクセス許可セットの定義に対するトークンを取得します。|  
+|[DefinePinvokeMap メソッド](imetadataemit-definepinvokemap-method.md)|指定したトークンによって参照されるメソッドの PInvoke 署名の特徴を設定します。|  
+|[DefineProperty メソッド](imetadataemit-defineproperty-method.md)|指定したアクセサーとメソッドアクセサーを使用して、指定した型のプロパティ定義を作成 `get` `set` し、そのプロパティ定義へのトークンを取得します。|  
+|[DefineSecurityAttributeSet メソッド](imetadataemit-definesecurityattributeset-method.md)|指定したトークンによって参照されるオブジェクトにアタッチするセキュリティアクセス許可のセットを作成します。|  
+|[DefineTypeDef メソッド](imetadataemit-definetypedef-method.md)|共通言語ランタイム型の型定義を作成し、その型定義へのメタデータトークンを取得します。|  
+|[DefineTypeRefByName メソッド](imetadataemit-definetyperefbyname-method.md)|現在のスコープ外の別のモジュールで定義されている型のメタデータトークンを取得します。|  
+|[DefineUserString メソッド](imetadataemit-defineuserstring-method.md)|指定されたリテラル文字列のメタデータトークンを取得します。|  
+|[DeleteClassLayout メソッド](imetadataemit-deleteclasslayout-method.md)|指定したトークンによって参照される型のクラスレイアウトメタデータシグネチャを破棄します。|  
+|[DeleteFieldMarshal メソッド](imetadataemit-deletefieldmarshal-method.md)|指定したトークンによって参照されるオブジェクトの PInvoke マーシャリングメタデータ署名を破棄します。|  
+|[DeletePinvokeMap メソッド](imetadataemit-deletepinvokemap-method.md)|指定したトークンによって参照されるオブジェクトの PInvoke マッピングメタデータを破棄します。|  
+|[DeleteToken メソッド](imetadataemit-deletetoken-method.md)|現在のメタデータスコープから指定されたトークンを削除します。|  
+|[GetSaveSize メソッド](imetadataemit-getsavesize-method.md)|現在のスコープ内のアセンブリの推定バイナリサイズを取得します。|  
+|[GetTokenFromSig メソッド](imetadataemit-gettokenfromsig-method.md)|指定したメタデータシグネチャのトークンを取得します。|  
+|[GetTokenFromTypeSpec メソッド](imetadataemit-gettokenfromtypespec-method.md)|指定したメタデータシグネチャを持つ型のメタデータトークンを取得します。|  
+|[Merge メソッド](imetadataemit-merge-method.md)|マージするスコープの一覧に、指定したインポートされたスコープを追加します。|  
+|[MergeEnd メソッド](imetadataemit-mergeend-method.md)|の1つ以上の前の呼び出しで指定されたすべてのメタデータスコープを現在のスコープにマージ `IMetaDataEmit::Merge` します。|  
+|[Save メソッド](imetadataemit-save-method.md)|現在のスコープ内のすべてのメタデータを、指定したアドレスにあるファイルに保存します。|  
+|[SaveToMemory メソッド](imetadataemit-savetomemory-method.md)|現在のスコープ内のすべてのメタデータを、指定したメモリ領域に保存します。|  
+|[SaveToStream メソッド](imetadataemit-savetostream-method.md)|現在のスコープ内のすべてのメタデータを、指定したに保存し `IStream` ます。|  
+|[SetClassLayout メソッド](imetadataemit-setclasslayout-method.md)|の前の呼び出しで定義された型のクラスレイアウト署名を設定または更新し `IMetaDataEmit::DefineTypeDef` ます。|  
+|[SetCustomAttributeValue メソッド](imetadataemit-setcustomattributevalue-method.md)|の前の呼び出しで定義されたカスタム属性の値を設定または更新し `IMetaDataEmit::DefineCustomAttribute` ます。|  
+|[SetEventProps メソッド](imetadataemit-seteventprops-method.md)|の前の呼び出しで定義されたイベントの指定された機能を設定または更新し `IMetaDataEmit::DefineEvent` ます。|  
+|[SetFieldMarshal メソッド](imetadataemit-setfieldmarshal-method.md)|指定したトークンによって参照されるフィールド、メソッドの戻り値、またはメソッドパラメーターの PInvoke マーシャリング情報を設定します。|  
+|[SetFieldProps メソッド](imetadataemit-setfieldprops-method.md)|指定したフィールドトークンによって参照されるフィールドの既定値を設定または更新します。|  
+|[SetFieldRVA メソッド](imetadataemit-setfieldrva-method.md)|指定したトークンによって参照されるフィールドの相対仮想アドレスのグローバル変数値を設定します。|  
+|[SetHandler メソッド](imetadataemit-sethandler-method.md)|指定したポインターによって参照されるメソッドを、 `IUnknown` トークンリマップの通知コールバックとして設定します。|  
+|[SetMethodImplFlags メソッド](imetadataemit-setmethodimplflags-method.md)|指定したトークンによって参照される、継承されたメソッドの実装のメタデータシグネチャを設定または更新します。|  
+|[SetMethodProps メソッド](imetadataemit-setmethodprops-method.md)|の前の呼び出しで定義されたメソッドの、指定した相対仮想アドレスに格納されている機能を設定または更新し `IMetaDataEmit::DefineMethod` ます。|  
+|[SetModuleProps メソッド](imetadataemit-setmoduleprops-method.md)|の前の呼び出しで定義されているモジュールへの参照を更新 `IMetaDataEmit::DefineModuleRef` します。|  
+|[SetParamProps メソッド](imetadataemit-setparamprops-method.md)|の前の呼び出しで定義されたメソッドパラメーターの機能を設定または変更 `IMetaDataEmit::DefineParam` します。|  
+|[SetParent メソッド](imetadataemit-setparent-method.md)|の前の呼び出しで定義されているように、指定したメンバーが、の前の呼び出しで定義されている、指定した型のメンバーであることを確立し `IMetaDataEmit::DefineMemberRef` `IMetaDataEmit::DefineTypeDef` ます。|  
+|[SetPermissionSetProps メソッド](imetadataemit-setpermissionsetprops-method.md)|の前の呼び出しで定義されたアクセス許可セットのメタデータ署名の機能を設定または更新 `IMetaDataEmit::DefinePermissionSet` します。|  
+|[SetPinvokeMap メソッド](imetadataemit-setpinvokemap-method.md)|の前の呼び出しで定義されているように、メソッドの PInvoke 署名の機能を設定または変更し `IMetaDataEmit::DefinePinvokeMap` ます。|  
+|[SetPropertyProps メソッド](imetadataemit-setpropertyprops-method.md)|の前の呼び出しで定義されたプロパティのメタデータに格納されている機能を設定し `IMetaDataEmit::DefineProperty` ます。|  
+|[SetRVA メソッド](imetadataemit-setrva-method.md)|指定したメソッドの相対仮想アドレスを設定します。|  
+|[SetTypeDefProps メソッド](imetadataemit-settypedefprops-method.md)|の前の呼び出しで定義された型の機能を設定 `IMetaDataEmit::DefineTypeDef` します。|  
+|[TranslateSigWithScope メソッド](imetadataemit-translatesigwithscope-method.md)|現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータシグネチャを取得します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [メタデータ インターフェイス](metadata-interfaces.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12787382686cc056c157ed7a6e8e4984ab93588f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17bf4c92b1e1347a8fe790c8df5937de0f95df4d
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737617"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895084"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next メソッド
-現在のカーソル位置から、コレクションから指定されたアプリケーション ドメイン数を取得します。  
+現在のカーソル位置から開始して、指定した数のアプリケーションドメインをコレクションから取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]取得するアプリケーション ドメインの数。  
+ から取得するアプリケーションドメインの数。  
   
  `values`  
- [out]アプリケーション ドメインを表す ICorDebugAppDomain オブジェクトを指す各ポインターの配列。  
+ 入出力ポインターの配列。各ポインターは、アプリケーションドメインを表す、の各オブジェクトを指します。  
   
  `pceltFetched`  
- [out]実際に返されるアプリケーション ドメインの数へのポインター。 この値は null になる場合`celt`は 1 つです。  
+ 入出力実際に返されたアプリケーションドメインの数へのポインター。 が1の場合`celt` 、この値は null になります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

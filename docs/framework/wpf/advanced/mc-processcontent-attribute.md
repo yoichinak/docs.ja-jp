@@ -5,19 +5,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: 865b1a3ccc30ff5efab4b08956bf7ba2bba4769c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: bcf55668bdc70902e346c401549a88f6ccb9072e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017894"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095126"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 属性
-指定します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]要素もコンテンツがある、関連する親要素によって処理によって直接の親要素が無視される場合でも、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を指定するためのプロセッサ[mc: Ignorable 属性](mc-ignorable-attribute.md). `mc:ProcessContent`属性は、カスタムの名前空間のマッピングとのマークアップの互換性をサポートしている[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]バージョン管理します。  
+[mc:Ignorable 属性](mc-ignorable-attribute.md)を指定することで直接の親要素が [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサによって無視される場合でも、関連する親要素によってコンテンツが処理される必要がある [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 要素を指定します。 `mc:ProcessContent` 属性は、カスタムの名前空間マッピングと [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のバージョン管理の両方で、マークアップ互換性をサポートします。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -34,19 +34,19 @@ ms.locfileid: "62017894"
   
 |||  
 |-|-|  
-|*ignorablePrefix*|有効なプレフィックスは、任意の文字列、XML 1.0 仕様に準拠します。|  
-|*ignorableUri*|XML 1.0 仕様の名前空間を指定する有効な URI です。|  
-|*ThisElementCanBeIgnored*|要素を無視できる[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]プロセッサの実装を基になる型を解決できない場合。|  
-|*[コンテンツ]*|*ThisElementCanBeIgnored* ignorable にマークされます。 プロセッサが、その要素を無視する場合は *[コンテンツ]* によって処理される*オブジェクト*します。|  
+|*ignorablePrefix*|XML 1.0 仕様に従う有効なプレフィックス文字列。|  
+|*ignorableUri*|XML 1.0 仕様に従う、名前空間を指定するための有効な URI。|  
+|*ThisElementCanBeIgnored*|基になる型を解決できない場合に、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] プロセッサ実装によって無視できる要素。|  
+|*[content]*|*ThisElementCanBeIgnored* は無視可能とマークされています。 プロセッサによってその要素が無視された場合、 *[content]* は *object* によって処理されます。|  
   
 ## <a name="remarks"></a>Remarks  
- 既定で、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサは、無視された要素内のコンテンツを無視します。 特定の要素を指定する`mc:ProcessContent`、および[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサが無視された要素内のコンテンツの処理を続行します。 これは通常、使用、コンテンツがうち少なくとも 1 つは無視でき、うち少なくとも 1 つは無視のいくつかのタグ内で入れ子になった場合。  
+ 既定で [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサでは、無視された要素内のコンテンツは無視されます。 `mc:ProcessContent` を使用して特定の要素を指定すると、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサでは、無視された要素内のコンテンツが引き続き処理されます。 通常、これは、コンテンツが複数のタグ内に入れ子にされ、少なくとも 1 つのタグが無視可能で、少なくとも 1 つは無視可能ではない場合に使用されます。ません。  
   
- たとえば、領域の区切り記号を使用して、属性で複数のプレフィックスを指定する場合があります:`mc:ProcessContent="ignore:Element1 ignore:Element2"`します。  
+ スペース区切りを使用して、属性に複数のプレフィックスを指定できます (例: `mc:ProcessContent="ignore:Element1 ignore:Element2"`)。  
   
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]名前空間は、他の要素とのこの領域内に記載されていない属性を定義、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]します。 詳細については、次を参照してください。 [XML マークアップ互換性仕様](https://go.microsoft.com/fwlink/?LinkId=73824)します。  
+ `http://schemas.openxmlformats.org/markup-compatibility/2006` 名前空間には、SDK のこの領域ではドキュメント化されていない他の要素と属性を定義します。 詳細については、[XML マークアップ互換性仕様](https://docs.microsoft.com/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)に関するページを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [mc:Ignorable 属性](mc-ignorable-attribute.md)
-- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

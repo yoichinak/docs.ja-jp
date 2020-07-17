@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42f7020212dd2db793b7c7d20a15c129157e7261
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739001"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860766"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 関数
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 関数
 指定したオブジェクト ポインターとフィールド名を使用して、オブジェクトの先頭からフィールドまでのオフセットとフィールドの値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,32 +38,32 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `Client`  
- [in]デバッグ クライアントへのポインター。  
+ からデバッグクライアントへのポインター。  
   
  `objAddr`  
- [in]マネージ オブジェクトのポインター。  
+ からマネージオブジェクトポインター。  
   
  szFieldName  
- [in]フィールド名にマネージ オブジェクトのポインター。  
+ からフィールド名へのマネージオブジェクトポインター。  
   
  `pValue`  
- [out]フィールドの値。 このパラメーターには、null を指定できます。  
+ 入出力フィールド値。 このパラメーターには、null を指定できます。  
   
  `pOffset`  
- [out]オフセット`objAddr`フィールドにします。 このパラメーターには、null を指定できます。  
+ 入出力から`objAddr`フィールドへのオフセット。 このパラメーターには、null を指定できます。  
   
-## <a name="remarks"></a>Remarks  
- オフセットが 0 の場合は、オフセットは書き込まれません。  
+## <a name="remarks"></a>解説  
+ オフセットが0の場合、オフセットは書き込まれません。  
   
- ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。  
+ 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 でエラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace.h  
+ **ヘッダー:** SOS_Stacktrace  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [デバッグ グローバル静的関数](debugging-global-static-functions.md)

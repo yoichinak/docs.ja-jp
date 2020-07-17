@@ -8,26 +8,26 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674780"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79155247"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses > 要素
-[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses> 要素
+要素内の表示名へのマッピングを持つ暗号化クラスの一覧が含まれてい [\<nameEntry>](nameentry-element.md) ます。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings >  
-\<cryptoNameMapping>  
-\<cryptoClasses >  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoClasses>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<cryptoClasses>   
+<cryptoClasses>
 </cryptoClasses>  
 ```  
   
@@ -41,7 +41,7 @@ ms.locfileid: "61674780"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|**\<nameEntry>** 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。|  
+|[\<cryptoClass>](cryptoclass-element.md)|要素内のフレンドリ名へのマッピングを持つ暗号化クラスを格納 **\<nameEntry>** します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -50,10 +50,10 @@ ms.locfileid: "61674780"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
 |`cryptoNameMapping`|表示名へのクラスのマッピングを含みます。|  
-|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
+|`mscorlib`|要素が含まれてい `cryptographySettings` ます。|  
   
 ## <a name="example"></a>例  
- 次の例では、  **\<cryptoClass >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例は、要素を使用して暗号化クラスを参照し、ランタイムを構成する方法を示して **\<cryptoClass>** います。 その後、文字列 "RSA" をメソッドに渡し <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 、メソッドを使用して <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> オブジェクトを返すことができ `MyCryptoRSAClass` ます。  
   
 ```xml  
 <configuration>  
@@ -79,8 +79,8 @@ ms.locfileid: "61674780"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Cryptography>
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号設定スキーマ](index.md)
+- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [CryptoConfig. CreateFromName のようになります。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)

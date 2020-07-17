@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 16f6d7bf6fa1730d50cfe81526817e492a453dad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fec049297bfa12d86cb2a7f7950e84ae540832b1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781981"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007435"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 列挙型
 メタデータの生成順序が不適切である場合にエラー メッセージが生成される条件を示すフラグ値が格納されます。  
@@ -47,22 +45,22 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|エラー メッセージを生成しない既定の動作を示します。|  
-|`MDErrorOutOfOrderNone`|コンパイラがエラー メッセージを生成しないことを示します。|  
-|`MDErrorOutOfOrderAll`|フィールド、プロパティ、イベント、メソッド、ときに、コンパイラはエラー メッセージを生成する必要がありますか、パラメーターの生成が誤順序のことを示します。|  
-|`MDMethodOutOfOrder`|メソッドの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDFieldOutOfOrder`|フィールドの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDParamOutOfOrder`|パラメーターの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDPropertyOutOfOrder`|プロパティの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDEventOutOfOrder`|コンパイラが順不同のイベントの生成がエラー メッセージを生成することを示します。|  
+|`MDErrorOutOfOrderDefault`|エラーメッセージを生成しない既定の動作を示します。|  
+|`MDErrorOutOfOrderNone`|コンパイラがエラーメッセージを生成しないことを示します。|  
+|`MDErrorOutOfOrderAll`|フィールド、プロパティ、イベント、メソッド、またはパラメーターが順序どおりに生成されない場合に、コンパイラがエラーメッセージを生成することを示します。|  
+|`MDMethodOutOfOrder`|メソッドが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDFieldOutOfOrder`|フィールドが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDParamOutOfOrder`|パラメーターが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDPropertyOutOfOrder`|プロパティが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDEventOutOfOrder`|イベントが順序どおりに生成されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

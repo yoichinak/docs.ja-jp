@@ -5,30 +5,28 @@ helpviewer_keywords:
 - .NET Framework, dynamic programming
 - dynamic programming [.NET Framework]
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a190e238992313e498e28217587029041f386040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 687f077cb609a2185fcb044c33bce5c636522381
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793108"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "73130094"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework の動的プログラミング
 このセクションでは、.NET Framework での動的プログラミングについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ [リフレクション](reflection.md)  
  リフレクションを使用して実行時にオブジェクトを操作する方法について説明します。  
   
- [動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ [動的メソッドおよびアセンブリの出力](emitting-dynamic-methods-and-assemblies.md)  
  Reflection.Emit を使用して実行時にメソッドとアセンブリを作成する方法について説明します。  
   
- [動的言語ランタイムの概要](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ [動的言語ランタイムの概要](dynamic-language-runtime-overview.md)  
  動的言語ランタイムの機能について説明します。  
   
- [動的なソース コードの生成とコンパイル](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [動的なソース コードの生成とコンパイル](dynamic-source-code-generation-and-compilation.md)  
  動的ソース コードを生成およびコンパイルする方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [開発ガイド](../../../docs/framework/development-guide.md)  
+ [開発ガイド](../development-guide.md)  

@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c56b0168df6e4aee69b5d3e5fbbe027ca2c8974a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e54027806cef07fad4740c3bf5226fd26c72570
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108774"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum 関数
-ポインターを取得、 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)インスタンスの指定したアセンブリ内のオブジェクトを列挙できる[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)します。  
+指定された[IAssemblyName](iassemblyname-interface.md)を持つアセンブリ内のオブジェクトを列挙できる[iassemblyenum](iassemblyenum-interface.md)インスタンスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,34 +40,34 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>パラメーター  
  `pEnum`  
- [out]含む、要求されたメモリ位置へのポインター`IAssemblyEnum`ポインター。  
+ 入出力要求された `IAssemblyEnum` ポインターを格納しているメモリ位置へのポインター。  
   
  `pUnkReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `pUnkReserved` null 参照である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `pUnkReserved` は null 参照である必要があります。  
   
  `pName`  
- [in]`IAssemblyName`の要求されたアセンブリ。 この名前は、列挙型をフィルター処理に使用されます。 グローバル アセンブリ キャッシュ内のすべてのアセンブリを列挙する場合は null になります。  
+ から要求されたアセンブリの `IAssemblyName`。 この名前は、列挙をフィルター処理するために使用されます。 グローバルアセンブリキャッシュ内のすべてのアセンブリを列挙するには null を指定できます。  
   
  `dwFlags`  
- [in]列挙子の動作を変更するためのフラグ。 このパラメーターには正確に 1 ビットが含まれています、 [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)列挙体。  
+ から列挙子の動作を変更するためのフラグ。 このパラメーターには、 [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)列挙体とのビットが1つだけ含まれます。  
   
  `pvReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` は null 参照である必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- `dwFlags`パラメーターにはから厳密に 1 ビットが含まれています、`ASM_CACHE_FLAGS`列挙体。  
+ `dwFlags` パラメーターには、`ASM_CACHE_FLAGS` 列挙体とは1ビットだけが含まれます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyEnum インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyEnum インターフェイス](iassemblyenum-interface.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

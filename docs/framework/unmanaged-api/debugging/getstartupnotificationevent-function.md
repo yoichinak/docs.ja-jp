@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3377dcd5d45ca8e31a57a75bd81366d41837c12c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738891"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860717"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 関数
 指定された対象プロセスに読み込まれている任意の共通言語ランタイム (CLR: Common Language Runtime) によって通知されるイベント ハンドルを作成または開きます。  
@@ -55,16 +53,16 @@ HRESULT GetStartupNotificationEvent
  E_FAIL (またはその他の E_ リターン コード)  
  スタートアップ通知イベントに対するハンドルを取得できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Windows オペレーティング システムでは、`debuggeePID` がプロセス識別子に対応づけられます。  
   
  イベントは、通知元の CLR によってマネージド コードが実行される前に通知されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** dbgshim.h  
+ **ヘッダー:** dbgshim. h  
   
- **ライブラリ:** dbgshim.dll  
+ **ライブラリ:** dbgshim .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

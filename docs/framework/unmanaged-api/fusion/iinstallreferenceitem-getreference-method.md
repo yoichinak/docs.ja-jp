@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8960332f-c98a-405a-ba92-7003de0c1187
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 014bd4f2b12c84790065f76a67765aaf35e8b2d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773949"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131677"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference メソッド
-ポインターを取得、 [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)構造体によって表される[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)オブジェクト。  
+この[Iinstallreferenceitem](iinstallreferenceitem-interface.md)オブジェクトによって表される[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)構造体へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT GetReference (
   
 ## <a name="parameters"></a>パラメーター  
  `ppRefData`  
- [out]返された`FUSION_INSTALL_REFERENCE`ポインター。  
+ 入出力返された `FUSION_INSTALL_REFERENCE` ポインター。  
   
  `dwFlags`  
- [入力] 将来の機能拡張に備えて予約されています。 `dwFlags` 0 (ゼロ) である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `dwFlags` は 0 (ゼロ) にする必要があります。  
   
  `pvReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` は null 参照である必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IInstallReferenceItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [FUSION_INSTALL_REFERENCE 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [IInstallReferenceItem インターフェイス](iinstallreferenceitem-interface.md)
+- [FUSION_INSTALL_REFERENCE 構造体](fusion-install-reference-structure.md)

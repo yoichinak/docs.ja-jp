@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8e62499a813419ecc30924624da553ca9f2c7b2
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759895"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213401"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint メソッド
-ブレークポイントが発生した場合に、デバッガーに通知します。  
+ブレークポイントが検出されたときにデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +37,23 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ブレークポイントを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からブレークポイントを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]ブレークポイントを含むスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からブレークポイントを含むスレッドを表す、スレッドオブジェクトへのポインター。  
   
  `pBreakpoint`  
- [in]ブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
+ からブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)
