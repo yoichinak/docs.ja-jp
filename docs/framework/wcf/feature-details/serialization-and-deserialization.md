@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244908"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444496"
 ---
 # <a name="serialization-and-deserialization"></a>シリアル化と逆シリアル化
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジン、が含まれてい <xref:System.Runtime.Serialization.DataContractSerializer> ます。 は、 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework のオブジェクトと XML を双方向に変換します。 ここでは、シリアライザーのしくみについて説明します。  
@@ -20,7 +20,13 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  XML を逆シリアル化するときに、シリアライザーは <xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスを使用します。 また、 <xref:System.Xml.XmlDictionaryReader> <xref:System.Xml.XmlDictionaryWriter> WCF バイナリ XML 形式を使用する場合など、場合によっては、最適化された xml を生成できるように、クラスおよびクラスもサポートします。  
   
- また、WCF には、コンパニオンシリアライザーであるも含まれてい <xref:System.Runtime.Serialization.NetDataContractSerializer> ます。 は、 <xref:System.Runtime.Serialization.NetDataContractSerializer> シリアル化された <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> データの一部として .NET Framework 型名も出力するため、とのシリアライザーに似ています。 このシリアライザーは、シリアル化と逆シリアル化の終了時に、同じ型を共有する場合に使用します。 <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.NetDataContractSerializer> は、共通の基本クラスである <xref:System.Runtime.Serialization.XmlObjectSerializer>から派生します。  
+ また、WCF には、コンパニオンシリアライザーであるも含まれてい <xref:System.Runtime.Serialization.NetDataContractSerializer> ます。 <xref:System.Runtime.Serialization.NetDataContractSerializer>:
+
+* セキュリティで保護され***ていません***。 詳細については、「 [Binaryformatter セキュリティガイド](/dotnet/standard/serialization/binaryformatter-security-guide)」を参照してください。
+* は <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 、シリアル化された <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> データの一部として .NET Framework 型名も出力するため、とのシリアライザーに似ています。
+* は、シリアル化で同じ型が共有され、逆シリアル化が終了するときに使用されます。
+
+ <xref:System.Runtime.Serialization.DataContractSerializer>とはどちらも <xref:System.Runtime.Serialization.NetDataContractSerializer> 、共通の基底クラスから派生 <xref:System.Runtime.Serialization.XmlObjectSerializer> します。  
   
 > [!WARNING]
 > <xref:System.Runtime.Serialization.DataContractSerializer> は、20 未満の 16 進数値と制御文字を含む文字列を XML エンティティとしてシリアル化します。 このため、WCF サービスにそのようなデータを送信するときに、WCF 以外のクライアントに問題が発生する可能性があります。  
