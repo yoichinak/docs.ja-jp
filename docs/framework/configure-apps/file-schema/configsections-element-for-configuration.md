@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155350"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441688"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configuration> の \<configSections> 要素
 
@@ -32,12 +32,10 @@ ms.locfileid: "79155350"
 
 ## <a name="child-elements"></a>子要素
 
-|     | Description |
+|     | 説明 |
 | --- | ----------- |
 | [**\<section>**](section-element.md) | 構成セクションの宣言が含まれています。 |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
-| [**\<remove>**](remove-element-for-configsections.md) | 定義済みセクションまたはセクショングループを削除します。 |
-| [**\<clear>**](clear-element-for-configsections.md) | 以前に定義したセクションとセクショングループをすべて消去します。 |
 
 ## <a name="remarks"></a>解説
 
@@ -61,7 +59,7 @@ ms.locfileid: "79155350"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル*Web.config*で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

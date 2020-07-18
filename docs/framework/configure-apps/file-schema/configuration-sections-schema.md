@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], custom settings in configuration files
 - elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-ms.openlocfilehash: 28f936e6fd7c9e7f6f895396df8e8b8d36ab9139
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc43a9c32ba33629b6e89120cf57f6d212ab3a56
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155324"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441662"
 ---
 # <a name="configuration-sections-schema"></a>構成セクションのスキーマ
 
@@ -22,16 +22,20 @@ ms.locfileid: "79155324"
 
 [**\<configuration>**](configuration-element.md)
 [**\<configSections>**](configsections-element-for-configuration.md)
-[**\<clear>**](clear-element-for-configsections.md)
-[**\<remove>**](remove-element-for-configsections.md)
 [**\<section>**](section-element.md)
 [**\<sectionGroup>**](sectiongroup-element-for-configsections.md)
 
-|     | Description |
+|     | 説明 |
 | --- | ----------- |
-| [**\<clear>** の**\<configSections>**](clear-element-for-configsections.md) | 以前に定義したセクションとセクショングループをすべて消去します。 |
-| [**\<clear>**](clear-element-for-configsections.md) | 以前に定義したセクションとセクショングループをすべて消去します。 |
 | [**\<configSections>**](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
-| [**\<remove>** の**\<configSections>**](remove-element-for-configsections.md) | 定義済みセクションまたはセクショングループを削除します。 |
 | [**\<section>** およびの場合 **\<configSections>****\<sectionGroup>**](section-element.md) | 構成セクションの宣言が含まれています。 |
 | [**\<sectionGroup>** の**\<configSections>**](sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
+
+<a name="dep"></a>
+
+## <a name="unimplemented-elements"></a>未実装の要素
+
+次の要素は影響を与えないため、使用しないでください。
+
+* **\<clear>**
+* **\<remove>**

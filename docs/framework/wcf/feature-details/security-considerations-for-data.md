@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601063"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441818"
 ---
 # <a name="security-considerations-for-data"></a>セキュリティに関するデータの考慮事項
 
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) インフラストラクチャのさま�
 
 ## <a name="preventing-denial-of-service-attacks"></a>サービス拒否攻撃の防止
 
-### <a name="quotas"></a>Quotas (クォータ)
+### <a name="quotas"></a>クォータ
 
 受信側で大量のメモリ割り当てが発生した場合、サービス拒否攻撃の可能性があります。 ここでは、主に大きいメッセージが原因で起こるメモリ消費の問題について説明しますが、攻撃には他の種類もあります。 たとえば、メッセージに過度の処理時間が使用される場合があります。
 
@@ -236,7 +236,7 @@ WCF でサポートされるバイナリ XML エンコーディングには、*�
 
 これらのメカニズムを使用すると、デシリアライザーが読み込むことのできる型が追加されるので、攻撃を受け得る表面積は拡大します。 既知の型リストに、悪質な型または意図しない型が追加されることのないように、これらのメカニズムを制御する必要があります。
 
-型が既知の型リストに追加されると、コントラクトでその型の使用が禁止されている場合でも、その型をいつでも読み込むことができ、その型のインスタンスを作成できるようになります。 たとえば、前述のメカニズムのいずれかを使用して "MyDangerousType" という型が既知の型のリストに追加されるとします。 これによって、次のことが起こります。
+型が既知の型リストに追加されると、コントラクトでその型の使用が禁止されている場合でも、その型をいつでも読み込むことができ、その型のインスタンスを作成できるようになります。 たとえば、前述のメカニズムのいずれかを使用して "MyDangerousType" という型が既知の型のリストに追加されるとします。 これは、次のことを意味します。
 
 - `MyDangerousType` が読み込まれ、そのクラス コンストラクターが実行されます。
 
@@ -284,7 +284,7 @@ WCF でサポートされるバイナリ XML エンコーディングには、*�
 
 <xref:System.Runtime.Serialization.NetDataContractSerializer> は、型に対して密結合を使用するシリアル化エンジンです。 これは、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>に類似しています。 つまり、受信データから .NET Framework アセンブリと型名を読み取って、インスタンス化する型を決定します。 これは WCF の一部ですが、このシリアル化エンジンにプラグインする方法は用意されていません。カスタムコードを記述する必要があります。 は、 `NetDataContractSerializer` 主に .NET Framework リモート処理から WCF への移行を容易にするために用意されています。 詳細については、「[シリアル化と逆シリアル化](serialization-and-deserialization.md)」の関連セクションを参照してください。
 
-読み込むことができる型はメッセージ自身が示すことができるため、 <xref:System.Runtime.Serialization.NetDataContractSerializer> のメカニズムは本質的にセキュリティで保護されていません。このエンジンでは、信頼されたデータだけを使用してください。 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> プロパティを使用して、セキュリティで保護され、型を限定する型バインダーを記述して、安全な型の読み込みだけを許可することによって、このエンジンをセキュリティで保護された状態にすることができます。
+読み込むことができる型はメッセージ自身が示すことができるため、 <xref:System.Runtime.Serialization.NetDataContractSerializer> のメカニズムは本質的にセキュリティで保護されていません。このエンジンでは、信頼されたデータだけを使用してください。 詳細については、「 [Binaryformatter セキュリティガイド](/dotnet/standard/serialization/binaryformatter-security-guide)」を参照してください。
 
 信頼されたデータを使用している場合でも、特に <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> プロパティが <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>に設定されている場合は、読み込む型が受信データで適切に指定されないことがあります。 アプリケーションのディレクトリまたはグローバル アセンブリ キャッシュにアクセスできればだれにでも、読み込むべき型の代わりに、悪質な型を配置することができます。 アクセス許可を適切に設定することによって、アプリケーション ディレクトリとグローバル アセンブリ キャッシュのセキュリティを必ず確保してください。
 
