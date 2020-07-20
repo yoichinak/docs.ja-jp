@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200055"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416074"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発と配置
 
@@ -70,7 +70,7 @@ Visual Studio 2015 を使用して WCF Data Services を ASP.NET アプリケー
 
 3. **Azure 開発環境**
 
-     Azure Tools for Visual Studio には、Visual Studio 内で Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューター上でデータ サービスをテストすることができます。 Visual Studio を使用して Azure プラットフォーム上で実行されるデータ サービスを開発する場合は、これらのツールを使用してください。 ツールのインストールの詳細については、「[Azure tools for Visual Studio 2015](../../../azure/sdk/vs2015-install.md)」を参照してください。 Azure 上で実行されるデータ サービスの開発の詳細については、「[Azure での OData サービスの配置](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の記事を参照してください。
+     Azure Tools for Visual Studio には、Visual Studio 内で Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューター上でデータ サービスをテストすることができます。 Visual Studio を使用して Azure プラットフォーム上で実行されるデータ サービスを開発する場合は、これらのツールを使用してください。 ツールのインストールの詳細については、「[Azure tools for Visual Studio 2015](../../../azure/vs2015-install.md)」を参照してください。 Azure 上で実行されるデータ サービスの開発の詳細については、「[Azure での OData サービスの配置](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の記事を参照してください。
 
 ### <a name="development-tips"></a>開発のヒント
 
@@ -115,7 +115,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 - **Azure**
 
-     [Azure Tools for Visual Studio](../../../azure/sdk/vs2015-install.md) を使用して、データ サービスを Azure に配置できます。 Azure へのデータ サービスの配置の詳細については、「[Azure での OData サービスの配置](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
+     [Azure Tools for Visual Studio](../../../azure/vs2015-install.md) を使用して、データ サービスを Azure に配置できます。 Azure へのデータ サービスの配置の詳細については、「[Azure での OData サービスの配置](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
 
 ### <a name="deployment-considerations"></a>配置に関する注意事項
 

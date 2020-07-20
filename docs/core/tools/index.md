@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI とその機能に関する概要です。
 ms.date: 02/13/2020
-ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110842"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415961"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI の概要
 
@@ -16,7 +16,7 @@ ms.locfileid: "80110842"
 
 .NET Core コマンド ライン インターフェイス (CLI) は、.NET Core アプリケーションを開発、ビルド、実行、発行するためのクロスプラットフォーム ツールチェーンです。
 
-.NET Core CLI は、[.NET Core SDK](../sdk.md) に含まれています。 .NET Core SDK をインストールする方法については、「[.NET Core SDK をインストールする](../install/sdk.md)」をご覧ください。
+.NET Core CLI は、[.NET Core SDK](../sdk.md) に含まれています。 .NET Core SDK をインストールする方法については、[.NET Core のインストール](../install/windows.md)に関する記事をご覧ください。
 
 ## <a name="cli-commands"></a>CLI コマンド
 
@@ -104,4 +104,4 @@ dotnet build
 ## <a name="see-also"></a>関連項目
 
 - [dotnet/sdk GitHub リポジトリ](https://github.com/dotnet/sdk/)
-- [.NET Core のインストール ガイド](../install/sdk.md)
+- [.NET Core のインストール ガイド](../install/windows.md)

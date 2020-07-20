@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507430"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417334"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -87,9 +87,9 @@ ms.locfileid: "82507430"
 
 このチュートリアルでは、Visual Studio for Mac を使用した、簡単な .NET Core コンソール アプリを構築する方法を示します。
 
-**[Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Visual Studio for Mac を使用して macOS で .NET Standard ライブラリを作成する](../core/tutorials/library-with-visual-studio-mac.md)**
 
-このチュートリアルでは、再利用可能なライブラリと単体テストを含む完全な .NET Core ソリューションを構築する方法を示します。
+このチュートリアルでは、Visual Studio for Mac を使用して .NET Standard ライブラリを構築する方法について説明します。
 
 **[プラグインをサポートする .NET Core アプリケーションの作成](../core/tutorials/creating-app-with-plugin-support.md)**
 

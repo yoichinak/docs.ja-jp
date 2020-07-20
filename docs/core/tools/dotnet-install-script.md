@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324433"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415922"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -82,7 +82,7 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `-NoPath|--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。 スクリプトでは、`DOTNET_ROOT` 環境変数は設定されません。
 
-スクリプトを実行する前に、必要な[依存関係](../install/dependencies.md)をすべてインストールします。
+スクリプトを実行する前に、必要な[依存関係](../install/windows.md#dependencies)をすべてインストールします。
 
 `-Version|--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンには 3 つの部分からなるバージョン番号 (`2.1.0` など) を指定する必要があります。 バージョンが指定されていない場合、スクリプトでは `latest` バージョンがインストールされます。
 
