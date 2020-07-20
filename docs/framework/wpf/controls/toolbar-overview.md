@@ -37,7 +37,7 @@ ms.locfileid: "79186609"
   
  <xref:System.Windows.Controls.ToolBar> では、その <xref:System.Windows.Controls.ControlTemplate> で <xref:System.Windows.Controls.Primitives.ToolBarPanel> と <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> を使用します。  <xref:System.Windows.Controls.Primitives.ToolBarPanel> では、ツールバー上の項目のレイアウトが行われます。  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> では、<xref:System.Windows.Controls.ToolBar> に収まらない項目のレイアウトが行われます。 <xref:System.Windows.Controls.ToolBar> に対する <xref:System.Windows.Controls.ControlTemplate> の例については、  
   
- [ツール バーのスタイルとテンプレート](toolbar-styles-and-templates.md)  
+ 「[ToolBar のスタイルとテンプレート](toolbar-styles-and-templates.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
