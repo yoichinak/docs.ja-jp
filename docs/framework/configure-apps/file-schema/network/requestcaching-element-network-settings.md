@@ -8,19 +8,19 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697826"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74802129"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> 要素 (ネットワーク設定)
 ネットワーク要求のキャッシュメカニズムを制御します。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requestcaching >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requestCaching>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,27 +29,27 @@ ms.locfileid: "71697826"
   isPrivateCache ="true|false"  
   disableAllCaching="true|false"  
   defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss">  
+  unspecifiedMaximumAge= "d.hh:mm:ss">  
     <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
     <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
 </requestCaching>
 ```  
   
-## <a name="attributes-and-elements"></a>属性と要素  
- 次のセクションでは、属性、子要素、親要素について説明します。  
+## <a name="attributes-and-elements"></a>属性および要素  
+ 以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`isPrivateCache`|キャッシュがさまざまなユーザーの情報の分離を提供するかどうかを指定します。 既定値は `true` です。 この値は、中間層アプリケーションで `false` する必要があります。|  
+|`isPrivateCache`|キャッシュがさまざまなユーザーの情報の分離を提供するかどうかを指定します。 既定値は `true` です。 中間層アプリケーションの場合は、この値をにする必要があり `false` ます。|  
 |`disableAllCaching`|すべての Web 応答に対してキャッシュを無効にし、プログラムでオーバーライドすることはできないことを指定します。|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列挙値の値の 1 つ。 既定値は `BypassCache` です。|  
 |`unspecifiedMaximumAge`|コンテンツが期限切れとしてマークされるまでの既定の時間を指定します。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |`Default`|リソースが最新で、コンテンツの長さが正確で、有効期限、変更、およびコンテンツの長さの属性が存在する場合、キャッシュされたリソースを返します。|  
 |`BypassCache`|サーバーからリソースを返します。|  
@@ -62,14 +62,14 @@ ms.locfileid: "71697826"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> HTTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。|  
-|[\<defaultFtpCachePolicy> 要素 (ネットワーク設定](defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。|  
+|[\<defaultFtpCachePolicy>要素 (ネットワーク設定)](defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71697826"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](index.md)

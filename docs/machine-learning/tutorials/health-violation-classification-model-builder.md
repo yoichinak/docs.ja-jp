@@ -3,15 +3,15 @@ title: 'チュートリアル: モデル ビルダーを使用した保健衛生
 description: このチュートリアルでは、サンフランシスコでのレストランの保健衛生違反の重大度を分類するために、ML.NET モデル ビルダーを使用して多クラス分類モデルを構築する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977206"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438184"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>チュートリアル: モデル ビルダーを使用してレストランの保健衛生の重大度を分類する
 
@@ -41,7 +41,7 @@ ms.locfileid: "73977206"
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. "RestaurantViolations" という名前の **C# .NET Core コンソール アプリケーション** を作成します。
+1. "RestaurantViolations" という名前の **C# .NET Core コンソール アプリケーション** を作成します。 **[ソリューションとプロジェクトを同じディレクトリに配置する]** を**オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を**オン**にします (VS 2017)。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
@@ -150,6 +150,6 @@ ms.locfileid: "73977206"
 
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 
-- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
+- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenario)
 - [多クラス分類](../resources/glossary.md#multiclass-classification)
-- [多クラス分類モデル メトリック](../resources/metrics.md#metrics-for-multi-class-classification)
+- [多クラス分類モデル メトリック](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

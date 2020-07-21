@@ -3,15 +3,15 @@ title: 'チュートリアル: モデル ビルダーで回帰を使用して価
 description: このチュートリアルでは、ML.NET モデル ビルダーを使用して、価格 (具体的にはニューヨーク市のタクシー運賃) を予測する回帰モデルを構築する方法を示します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: 750738f8e3c65363e9996667feeccd1b84391f9f
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977355"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438244"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>チュートリアル: モデル ビルダーで回帰を使用して価格を予測する
 
@@ -38,7 +38,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. "TaxiFarePrediction" という名前の **.NET Core コンソール アプリケーション**を作成します。
+1. "TaxiFarePrediction" という名前の **C# .NET Core コンソール アプリケーション**を作成します。 **[ソリューションとプロジェクトを同じディレクトリに配置する]** を**オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を**オン**にします (VS 2017)。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
@@ -177,7 +177,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 
-- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
+- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenario)
 - [回帰](../resources/glossary.md#regression)
-- [回帰モデルのメトリック](../resources/metrics.md#metrics-for-regression)
+- [回帰モデルのメトリック](../resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)
 - [NYC TLC Taxi Trip データ セット](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

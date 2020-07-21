@@ -1,37 +1,38 @@
 ---
 title: '方法: WCF アクティブ化コンポーネントをインストールして設定する'
+description: Windows Vista で Windows プロセスアクティブ化サービス (WAS) をセットアップして、HTTP では通信しない WCF サービスをホストする方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972182"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246884"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>方法: WCF アクティブ化コンポーネントをインストールして設定する
 
-このトピックでは、で[!INCLUDE[wv](../../../../includes/wv-md.md)] Windows プロセスアクティブ化サービス (WAS) をに設定して、HTTP ネットワークプロトコルでは通信しない Windows Communication Foundation (WCF) サービスをホストするために必要な手順について説明します。 以降の各セクションで、この構成に関する手順について概説します。
+このトピックでは、windows Vista で Windows プロセスアクティブ化サービス (WAS) をセットアップして、HTTP ネットワークプロトコルでは通信しない Windows Communication Foundation (WCF) サービスをホストするために必要な手順について説明します。 以降の各セクションで、この構成に関する手順について概説します。
 
 - WCF アクティブ化コンポーネントをインストール (または、のインストールを確認) します。
 
-- 非 HTTP プロトコルをサポートようにする WAS を構成します。 次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。
+- 非 HTTP プロトコルをサポートようにする WAS を構成します。 次の手順では、TCP ライセンス認証用に Windows Vista を構成します。
 
-WAS をインストールして構成し[た後、「」を参照してください。Was で](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) wcf サービスをホストする手順では、was を使用する非 HTTP エンドポイントを公開する wcf サービスを作成します。
+WAS をインストールして構成した後、「 [How to: Host a Wcf service IN was](how-to-host-a-wcf-service-in-was.md) 」を参照して、was を使用する非 HTTP エンドポイントを公開する wcf サービスを作成する手順を参照してください。
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>WCF 非 HTTP アクティブ化コンポーネントをインストールするには
 
-1. をクリックして、**開始**ボタンをクリックし、をクリックし、 **コントロール パネルの** します。
+1. **[スタート]** ボタンをクリックし、**[コントロール パネル]** をクリックします。
 
-2. **[プログラム]** をクリックし、 **[プログラムと機能]** をクリックします。
+2. [**プログラム**] をクリックし、[**プログラムと機能**] をクリックします。
 
-3. **[タスク]** メニューの **[Windows の機能の有効化または無効化]** をクリックします。
+3. [**タスク**] メニューの [ **Windows の機能の有効化または無効化**] をクリックします。
 
 4. WinFX ノードを見つけて、それを選択して展開します。
 
-5. **[WCF 非 Http アクティブ化コンポーネント]** チェックボックスをオンにして、設定を保存します。
+5. [ **WCF 非 Http アクティブ化コンポーネント**] チェックボックスをオンにして、設定を保存します。
 
 ## <a name="to-configure-the-was-to-support-tcp-activation"></a>TCP アクティベーションをサポートするように WAS を構成するには
 
@@ -52,7 +53,7 @@ WAS をインストールして構成し[た後、「」を参照してくださ
     ```
 
     > [!NOTE]
-    > このコマンドはテキスト 1 行です。 このコマンドにより、\<と`net.tcp://localhost/<WCF Application>`の両方`http://localhost/<WCF Application>`を使用して、/*WCF アプリケーション*> アプリケーションにアクセスできるようになります。
+    > このコマンドはテキスト 1 行です。 このコマンドは、 \<*WCF Application*> との両方を使用して、/アプリケーションにアクセスできるようにし `http://localhost/<WCF Application>` `net.tcp://localhost/<WCF Application>` ます。
 
      このサンプル用に追加した net.tcp サイト バインディングを削除します。
 
@@ -103,7 +104,7 @@ WAS をインストールして構成し[た後、「」を参照してくださ
 
 ## <a name="see-also"></a>関連項目
 
-- [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [MSMQ アクティベーション](../../../../docs/framework/wcf/samples/msmq-activation.md)
-- [NamedPipe アクティベーション](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
-- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [TCP アクティベーション](../samples/tcp-activation.md)
+- [MSMQ アクティベーション](../samples/msmq-activation.md)
+- [NamedPipe アクティベーション](../samples/namedpipe-activation.md)
+- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

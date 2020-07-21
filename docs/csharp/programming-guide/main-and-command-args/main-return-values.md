@@ -1,16 +1,15 @@
 ---
 title: Main() の戻り値 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a3e29903448c3eb5e0b7dda027677d1785a445e7
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588888"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416288"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -26,7 +25,7 @@ ms.locfileid: "69588888"
 
 ## <a name="example"></a>例
 
-この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/using-with-xplat-cli.md)を参照してください。
+この例では、[.NET Core](../../../core/index.yml) コマンドライン ツールを使用します。 .NET Core コマンドライン ツールに慣れていない場合は、この[概要の記事](../../../core/tutorials/with-visual-studio-code.md)を参照してください。
 
 *program.cs* の `Main` メソッドを次のように変更します。
 
@@ -40,8 +39,11 @@ ms.locfileid: "69588888"
 
 コードがゼロを返すため、バッチ ファイルで成功が報告されます。 ただし、MainReturnValTest.cs が 0 以外の値を返すように変更して、プログラムを再コンパイルする場合、PowerShell スクリプトの後続の実行では失敗が報告されます。
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -81,7 +83,7 @@ private static async Task<int> AsyncConsoleWork()
 
 新しい構文を使用すると、コンパイラから常に正しいコードが生成されるという利点があります。
 
-## <a name="compiler-generated-code"></a>コンパイラから生成されるコード
+## <a name="compiler-generated-code"></a>コンパイラで生成されたコード
 
 アプリケーションのエントリ ポイントから `Task` または `Task<int>` が返されると、コンパイラによって、アプリケーション コードで宣言されたエントリ ポイント メソッドを呼び出す新しいエントリ ポイントが生成されます。 このエントリ ポイント名が `$GeneratedMain` だとすると、これらのエントリ ポイントについて次のコードが生成されます。
 
@@ -98,4 +100,4 @@ private static async Task<int> AsyncConsoleWork()
 - [C# プログラミング ガイド](../index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
-- [方法: コマンド ライン引数を表示する](./how-to-display-command-line-arguments.md)
+- [コマンド ライン引数を表示する方法](./how-to-display-command-line-arguments.md)

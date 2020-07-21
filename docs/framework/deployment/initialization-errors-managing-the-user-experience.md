@@ -1,19 +1,17 @@
 ---
 title: .NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
+description: アクティブ化システムで、読み込む適切な CLR バージョンを検出できない場合など、.NET 初期化エラーが発生したときのユーザー エクスペリエンスを制御します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: HT
+ms.openlocfilehash: 6db68b43381dfe275c93cae5610386e10a6f09ae
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619690"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
 
@@ -73,23 +71,23 @@ CLR にはさまざまなシナリオ向けの一連のホストが含まれて�
 
 |CLR ホスト|説明|エラー メッセージ ポリシー|エラー メッセージを無効にできるか|
 |--------------|-----------------|--------------------------|------------------------------------|
-|マネージド EXE ホスト|マネージド EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|×|
+|マネージド EXE ホスト|マネージド EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|いいえ|
 |マネージド COM ホスト|マネージド COM コンポーネントをプロセスに読み込みます。|.NET Framework のバージョンが見つからない場合に表示される|はい (SEM_FAILCRITICALERRORS フラグを設定すると可能)|
 |ClickOnce ホスト|ClickOnce アプリケーションを起動します。|.NET Framework 4.5 以降で、.NET Framework のバージョンが見つからない場合に表示される|いいえ|
 |XBAP ホスト|WPF XBAP アプリケーションを起動します。|.NET Framework 4.5 以降で、.NET Framework のバージョンが見つからない場合に表示される|いいえ|
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 の動作と UI
 
-CLR アクティベーション システムでは、他のバージョンの Windows オペレーティング システムで提供しているのと同じ動作と UI を [!INCLUDE[win8](../../../includes/win8-md.md)] でも提供しています。ただし、CLR 2.0 を読み込む際に問題が発生する場合は除きます。 [!INCLUDE[win8](../../../includes/win8-md.md)] には、CLR 4.5 を使用する .NET Framework 4.5 が含まれています。 ただし、[!INCLUDE[win8](../../../includes/win8-md.md)] には CLR 2.0 を使用する .NET Framework 2.0、3.0、3.5 のいずれも含まれていません。 その結果、既定では、CLR 2.0 に依存するアプリケーションが [!INCLUDE[win8](../../../includes/win8-md.md)] で実行されません。 代わりに、ユーザーが .NET Framework 3.5 をインストールできるように、次のダイアログ ボックスが表示されます。 ユーザーは、コントロール パネルで .NET Framework 3.5 を有効にすることもできます。 両方のオプションの説明については、「[Windows 10、Windows 8.1、および Windows 8 への .NET Framework 3.5 のインストール](../install/dotnet-35-windows-10.md)」を参照してください。
+CLR アクティベーション システムでは、他のバージョンの Windows オペレーティング システムで提供しているのと同じ動作と UI を Windows 8 でも提供しています。ただし、CLR 2.0 を読み込む際に問題が発生する場合は除きます。 Windows 8 には、CLR 4.5 を使用する .NET Framework 4.5 が含まれています。 ただし、Windows 8 には CLR 2.0 を使用する .NET Framework 2.0、3.0、3.5 のいずれも含まれていません。 その結果、既定では、CLR 2.0 に依存するアプリケーションを Windows 8 上で実行することはできません。 代わりに、ユーザーが .NET Framework 3.5 をインストールできるように、次のダイアログ ボックスが表示されます。 ユーザーは、コントロール パネルで .NET Framework 3.5 を有効にすることもできます。 両方のオプションの説明については、「[Windows 10、Windows 8.1、および Windows 8 への .NET Framework 3.5 のインストール](../install/dotnet-35-windows-10.md)」を参照してください。
 
 ![Windows 8 に 3.5 をインストールするためのダイアログ ボックス](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "必要に応じた .NET Framework 3.5 のインストール時のプロンプト")
 
 > [!NOTE]
-> .NET Framework 4.5 によって、ユーザーのコンピューターの .NET Framework 4 (CLR 4) が置き換えられます。 したがって、[!INCLUDE[win8](../../../includes/win8-md.md)] では、.NET Framework 4 アプリケーションはこのダイアログ ボックスを表示せずにシームレスに実行されます。
+> .NET Framework 4.5 によって、ユーザーのコンピューターの .NET Framework 4 (CLR 4) が置き換えられます。 したがって、Windows 8 上では、.NET Framework 4 アプリケーションはこのダイアログ ボックスを表示せずにシームレスに実行されます。
 
-.NET Framework 3.5 がインストールされている場合、ユーザーは [!INCLUDE[win8](../../../includes/win8-md.md)] コンピューターで .NET Framework 2.0、3.0、または 3.5 に依存するアプリケーションを実行できます。 また、アプリケーションが .NET Framework 1.0 または 1.1 でのみ実行するように明示的に構成されていなければ、.NET Framework 1.0 および 1.1 のアプリケーションを実行することもできます。 「[.NET Framework 1.1 からの移行](../migration-guide/migrating-from-the-net-framework-1-1.md)」をご覧ください。
+.NET Framework 3.5 がインストールされている場合、ユーザーは Windows 8 コンピューター上で .NET Framework 2.0、3.0、または 3.5 に依存するアプリケーションを実行できます。 また、アプリケーションが .NET Framework 1.0 または 1.1 でのみ実行するように明示的に構成されていなければ、.NET Framework 1.0 および 1.1 のアプリケーションを実行することもできます。 「[.NET Framework 1.1 からの移行](../migration-guide/migrating-from-the-net-framework-1-1.md)」をご覧ください。
 
-.NET Framework 4.5 以降では、CLR アクティベーション ログは、初期化エラー メッセージが表示された日時とその理由を記録するログ エントリを含むように強化されています。 詳細については、[CLR のアクティブ化に関する問題をデバッグする](how-to-debug-clr-activation-issues.md)」で説明されているように、CLR のアクティベーションに関する問題のデバッグに役立つログ インフラストラクチャが用意されています。
+.NET Framework 4.5 以降では、CLR アクティベーション ログは、初期化エラー メッセージが表示された日時とその理由を記録するログ エントリを含むように強化されています。 詳細については、「[方法:CLR のアクティブ化に関する問題をデバッグする](how-to-debug-clr-activation-issues.md)」で説明されているように、CLR のアクティベーションに関する問題のデバッグに役立つログ インフラストラクチャが用意されています。
 
 ## <a name="see-also"></a>関連項目
 

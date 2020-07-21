@@ -5,31 +5,29 @@ helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-ms.openlocfilehash: 6a0c1d1df42b9db7cbc47ef32c88101115a62a4f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: 513d301f4f6bf89b66718620733b5c26234f6e04
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348075"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "85503811"
 ---
 # <a name="functions-visual-basic"></a>関数 (Visual Basic)
 このセクションのトピックには、Visual Basic ランタイムのメンバー関数のテーブルが含まれています。  
   
 > [!NOTE]
-> 関数を作成して呼び出すこともできます。 詳細については、「[関数ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」および「[方法 : 値を返すプロシージャを作成する](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)」を参照してください。  
+> 関数を作成して呼び出すこともできます。 詳細については、「[Function ステートメント](../statements/function-statement.md)」と「[方法: 値を返すプロシージャを作成する](../../programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [変換関数](conversion-functions.md)  
   
- [数値演算関数](../../../visual-basic/language-reference/functions/math-functions.md)  
+ [数値演算関数](math-functions.md)  
   
- [文字列関数](../../../visual-basic/language-reference/functions/string-functions.md)  
+ [文字列関数](string-functions.md)  
   
- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [データ型変換関数](type-conversion-functions.md)  
   
- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [CType 関数](ctype-function.md)  
   
-## <a name="related-sections"></a>関連セクション  
- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)
+## <a name="related-sections"></a>関連項目  
+ [Visual Basic の言語リファレンス](../index.md)  

@@ -1,5 +1,6 @@
 ---
 title: ファイルおよびストリーム入出力 - .NET
+description: .NET でストレージ メディアとの間でデータを転送する、ファイルとストリームの I/O の基本について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,14 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204795"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662720"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 
@@ -143,11 +142,11 @@ ms.locfileid: "74204795"
 
 ## <a name="io-operations-in-windows-store-apps"></a>Windows ストア アプリの I/O 操作
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] には、ストリームの読み取りと書き込みを行うための型の多くが含まれています。ただし、このセットにすべての .NET Framework I/O 型が含まれているわけではありません。
+Windows 8.x ストア アプリ用 .NET には、ストリームの読み取りと書き込みを行う型が多数あります。ただし、.NET Framework のすべての I/O 型がこのセットに含まれているわけではありません。
 
 次に、I/O 操作を Windows 8.x ストア アプリで使用する場合に注意する必要がある重要な違いを示します。
 
-- <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、Windows ランタイムの名前空間 <xref:Windows.Storage?displayProperty=nameWithType> の型 (<xref:Windows.Storage.StorageFile> や <xref:Windows.Storage.StorageFolder> など) を使用します。
+- <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、Windows 8.x ストア アプリ用 .NET には含まれていません。 代わりに、Windows ランタイムの名前空間 <xref:Windows.Storage?displayProperty=nameWithType> の型 (<xref:Windows.Storage.StorageFile> や <xref:Windows.Storage.StorageFolder> など) を使用します。
 
 - 分離ストレージは使用できません。代わりに、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 
@@ -155,13 +154,13 @@ ms.locfileid: "74204795"
 
 - パス ベース圧縮の型 <xref:System.IO.Compression.ZipFile> と <xref:System.IO.Compression.ZipFileExtensions> は使用できません。 代わりに、名前空間 <xref:Windows.Storage.Compression?displayProperty=nameWithType> の型を使用します。
 
-必要に応じて、.NET Framework ストリームと Windows ランタイム ストリームを変換できます。 詳細については、[.NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](how-to-convert-between-dotnet-streams-and-winrt-streams.md)」または <xref:System.IO.WindowsRuntimeStreamExtensions> を参照してください。
+必要に応じて、.NET Framework ストリームと Windows ランタイム ストリームを変換できます。 詳細については、「[方法:.NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](how-to-convert-between-dotnet-streams-and-winrt-streams.md)」または <xref:System.IO.WindowsRuntimeStreamExtensions> を参照してください。
 
 Windows 8.x ストア アプリでの I/O 操作の詳細については、「[Quickstart: Reading and writing files](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。
 
 ## <a name="io-and-security"></a>I/O とセキュリティ
 
-<xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用する場合、アクセス制御リスト (ACL: Access Control List) などのオペレーティング システムのセキュリティ要件に従い、ファイルとディレクトリへのアクセスを制御する必要があります。 この要件の他にも、<xref:System.Security.Permissions.FileIOPermission> で指定されている要件を満たす必要があります。 ACL はプログラムで管理できます。 詳細については、[ アクセス制御リスト エントリを追加または削除する](how-to-add-or-remove-access-control-list-entries.md)」を参照してください。
+<xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用する場合、アクセス制御リスト (ACL: Access Control List) などのオペレーティング システムのセキュリティ要件に従い、ファイルとディレクトリへのアクセスを制御する必要があります。 この要件の他にも、<xref:System.Security.Permissions.FileIOPermission> で指定されている要件を満たす必要があります。 ACL はプログラムで管理できます。 詳細については、「[方法: アクセス制御リスト エントリを追加または削除する](how-to-add-or-remove-access-control-list-entries.md)」を参照してください。
 
 既定のセキュリティ ポリシーでは、インターネットまたはイントラネットのアプリケーションはユーザーのコンピューターのファイルにアクセスできません。 したがって、インターネットまたはイントラネットを経由してダウンロードされるコードを記述する場合に、物理ファイル パスを必要とする I/O クラスを使用しないでください。 代わりに、従来の .NET Framework アプリケーション用の[分離ストレージ](isolated-storage.md)を使用するか、Windows 8.x ストア アプリ用の[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 

@@ -1,5 +1,6 @@
 ---
 title: pInvokeStackImbalance MDA
+description: プラットフォーム呼び出しの実行時または実行時にアクセス違反またはメモリの破損が発生したときにアクティブ化される可能性がある PInvokeStackImbalance MDA を確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -10,25 +11,23 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 89afd3fce3f2a8bffe88d45991ceeb59fc5e5b76
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803665"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-マネージデバッグアシスタント (MDA) は、プラットフォーム呼び出しの後のスタックの深さが、予想されるスタックの深さと一致しないことを CLR が検出したときに<xref:System.Runtime.InteropServices.DllImportAttribute>アクティブ化されます。これには、属性で指定した呼び出し規約と、 `PInvokeStackImbalance`マネージシグネチャ内のパラメーターの宣言。
+`PInvokeStackImbalance`マネージデバッグアシスタント (MDA) は、プラットフォーム呼び出しの後のスタックの深さが、予想されるスタックの深さと一致しないことを CLR が検出したときにアクティブ化されます。これには、属性で指定された呼び出し規則 <xref:System.Runtime.InteropServices.DllImportAttribute> とマネージシグネチャのパラメーターの宣言が含まれます。
 
 `PInvokeStackImbalance` MDA は 32 ビット x86 プラットフォームに対してのみ実装されています。
 
 > [!NOTE]
-> MDA `PInvokeStackImbalance`は、既定では無効になっています。 Visual Studio 2017 では、 `PInvokeStackImbalance` **[例外設定]** ダイアログボックスの **[マネージデバッグアシスタント]** の一覧に MDA が表示されます > ([**Windows**  >  **のデバッグ] を選択すると表示されます)。例外設定**)。 ただし、[スローされ**たときに中断**する] チェックボックスをオンまたはオフにしても、MDA は有効または無効になりません。MDA がアクティブになったときに Visual Studio が例外をスローするかどうかのみを制御します。
+> `PInvokeStackImbalance`MDA は、既定では無効になっています。 Visual Studio 2017 以降のバージョンでは、 `PInvokeStackImbalance` [**例外設定**] ダイアログボックスの [**マネージデバッグアシスタント**] の一覧に MDA が表示されます ([Windows 例外設定の**デバッグ**] を選択した場合に表示され  >  **Windows**  >  **Exception Settings**ます)。 ただし、[スローされ**たときに中断**する] チェックボックスをオンまたはオフにしても、MDA は有効または無効になりません。MDA がアクティブになったときに Visual Studio が例外をスローするかどうかのみを制御します。
 
-## <a name="symptoms"></a>症状
+## <a name="symptoms"></a>現象
 
 プラットフォーム呼び出しの実行時または実行後に、アプリケーションでアクセス違反またはメモリ破損が発生します。
 

@@ -1,17 +1,17 @@
 ---
 title: 'チュートリアル: センチメントの分析 - 二項分類'
 description: このチュートリアルでは、Web サイトのコメントのセンチメントを分類して適切なアクションを実行する Razor Pages アプリケーションの作成方法について説明します。 この二項センチメント分類子では、Visual Studio の C# を使用します。
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278952"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>チュートリアル: ML.NET モデル ビルダーを使用して Web アプリケーションで Web サイトのコメントのセンチメントを分析する
 
@@ -48,7 +48,7 @@ ms.locfileid: "73974793"
     1. [新しいプロジェクト] ダイアログで、 **[Visual C#]** ノードを選択し、 **[Web]** ノードを選択します。
     1. 次に、 **[ASP.NET Core Web アプリケーション]** プロジェクト テンプレートを選択します。
     1. **[名前]** テキスト ボックスに「SentimentRazor」と入力します。
-    1. **[ソリューションのディレクトリの作成]** チェックボックスは、既定でオンになっています。 オンになっていない場合は、オンにします。
+    1. **[ソリューションとプロジェクトを同じディレクトリに配置する]** を**オフ** (VS 2019) にします。または、 **[ソリューションのディレクトリの作成]** を**オン**にします (VS 2017)。
     1. **[OK]** ボタンを選択します。
     1. さまざまな種類の ASP.NET Core プロジェクトが表示されているウィンドウで、 **[Web アプリケーション]** を選択し、 **[OK]** ボタンを選択します。
 
@@ -103,7 +103,7 @@ ms.locfileid: "73974793"
 
 ## <a name="evaluate-the-model"></a>モデルを評価する
 
-トレーニングの手順の結果が、最良のパフォーマンスだった 1 つのモデルになります。 モデル ビルダー ツールの評価の手順の出力セクションには、 **[Best Model]\(最良のモデル\)** エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、 **[Best Model Accuracy]\(最良のモデル精度\)** のメトリックが含まれます。 また、概要テーブルには上位 5 つのモデルとそのメトリックが含まれています。
+トレーニングの手順の結果が、最良のパフォーマンスだった 1 つのモデルになります。 モデル ビルダー ツールの評価の手順の出力セクションには、 **[Best Model]\(最良のモデル\)** エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、 **[Best Model Accuracy]\(最良のモデル精度\)** のメトリックが含まれます。 また、上位 5 つのモデルとそのメトリックを含む概要テーブルが表示されます。
 
 精度のメトリックに不満がある場合、モデルのトレーニング時間を増やすか、さらに多くのデータを使用すると、モデルの精度を簡単に高めることができます。 それ以外の場合、 **[コード]** リンクを選択して、モデル ビルダー ツールの最後の手順に進みます。
 
@@ -124,7 +124,7 @@ ms.locfileid: "73974793"
 
 ### <a name="configure-the-predictionengine-pool"></a>PredictionEngine プールの構成
 
-1 つの予測を作成するには、[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を作成する必要があります。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 さらに、アプリケーション内で必要なすべての場所にそのインスタンスを作成する必要があります。 アプリケーションの規模が拡大すると、このプロセスが管理不能になる可能性があります。 パフォーマンスとスレッド セーフを向上させるには、依存性の挿入と `PredictionEnginePool` サービスを組み合わせて使用します。これにより、アプリケーション全体で使用する [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。
+1 つの予測を作成するには、<xref:Microsoft.ML.PredictionEngine%602> を作成する必要があります。 <xref:Microsoft.ML.PredictionEngine%602> はスレッド セーフではありません。 さらに、アプリケーション内で必要なすべての場所にそのインスタンスを作成する必要があります。 アプリケーションの規模が拡大すると、このプロセスが管理不能になる可能性があります。 パフォーマンスとスレッド セーフを向上させるには、依存性の挿入と `PredictionEnginePool` サービスを組み合わせて使用します。これにより、アプリケーション全体で使用する <xref:Microsoft.ML.PredictionEngine%602> オブジェクトの <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> が作成されます。
 
 1. *Microsoft.Extensions.ML* NuGet パッケージをインストールします。
 
@@ -302,6 +302,6 @@ ms.locfileid: "73974793"
 
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 
-- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
+- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenario)
 - [二項分類](../resources/glossary.md#binary-classification)
-- [二項分類モデル メトリック](../resources/metrics.md#metrics-for-binary-classification)
+- [二項分類モデル メトリック](../resources/metrics.md#evaluation-metrics-for-binary-classification)

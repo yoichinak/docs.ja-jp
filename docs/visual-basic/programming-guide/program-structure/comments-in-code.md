@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346171"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403318"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
-コード例にはコメント記号 (`'`) がしばしば見られます。 This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*. コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
+コード例にはコメント記号 (`'`) がしばしば見られます。 この記号は、後続のテキスト ("*コメント*") を無視するように Visual Basic コンパイラに指示します。 コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
   
  プロシージャの先頭に、そのプロシージャの機能の特性 (何を実行するか) について説明する簡単なコメントを常に配置するのは、推奨されるプログラミング方法です。 コードを作成した本人にとっても、コードを調べる他人にとっても、この説明は役に立ちます。 実装の詳細 (プロシージャの実行手順) は、機能の特性を説明するコメントとは別に記述する必要があります。 実装の詳細を記述に入れる場合は、関数を更新するときにその説明も更新してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74346171"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>コメントのガイドライン  
- 次の表は、どの種類のコメントをコードのセクションの前に配置できるかに関する一般的なガイドラインを示しています。 These are suggestions; Visual Basic does not enforce rules for adding comments. コードの作成者自身およびコードを読む他のユーザーに最適な内容を記述してください。  
+ 次の表は、どの種類のコメントをコードのセクションの前に配置できるかに関する一般的なガイドラインを示しています。 これらは推奨事項です。Visual Basic にはコメントの追加に関する規則はありません。 コードの作成者自身およびコードを読む他のユーザーに最適な内容を記述してください。  
   
 |||  
 |---|---|  
@@ -54,15 +54,15 @@ ms.locfileid: "74346171"
   
 - 同じ行の行連結シーケンスの後にコメントを付けることはできません。  
   
- You can add or remove comment symbols for a block of code by selecting one or more lines of code and choosing the **Comment** (![The Visual Basic Comment button in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) and **Uncomment** (![The Visual Basic Uncomment button in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) buttons on the **Edit** toolbar.  
+ コード ブロックのコメント記号を追加または削除するには、1 行以上のコードを選択し、 **[編集]** ツールバーの **[コメント]** (![Visual Studio の Visual Basic の [コメント] ボタン](./media/comments-in-code/visual-basic-comment-button.gif)) および **[コメント解除]** (![Visual Studio の Visual Basic の [コメント解除] ボタン](./media/comments-in-code/visual-basic-uncomment-button.gif)) ボタンを選択します。  
   
 > [!NOTE]
-> テキストの前に `REM` キーワードを付けて、コードにコメントを追加することもできます。 However, the `'` symbol and the **Comment**/**Uncomment** buttons are easier to use and require less space and memory.  
+> テキストの前に `REM` キーワードを付けて、コードにコメントを追加することもできます。 ただし、`'` 記号および **[コメント]** / **[コメント解除]** ボタンの方が使いやすく、必要なスペースとメモリが少なくて済みます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Basic Instincts - Documenting Your Code With XML Comments](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
-- [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
-- [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM ステートメント](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [基本的な機能 - XML コメントによるコードの文書化](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [方法: XML ドキュメントを作成する](how-to-create-xml-documentation.md)
+- [XML のコメント用タグ](../../language-reference/xmldoc/index.md)
+- [プログラム構造とコード規則](program-structure-and-code-conventions.md)
+- [REM ステートメント](../../language-reference/statements/rem-statement.md)

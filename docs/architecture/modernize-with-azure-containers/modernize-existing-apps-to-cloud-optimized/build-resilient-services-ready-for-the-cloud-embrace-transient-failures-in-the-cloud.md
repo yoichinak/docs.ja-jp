@@ -2,12 +2,12 @@
 title: クラウドの準備が整っている回復力のあるサービスを構築する。 クラウド内の一時的な障害を受け入れる
 description: Azure Cloud と Windows コンテナーを使って既存の .NET アプリケーションを最新化する | クラウドに対応する回復力のあるサービスを構築する。 クラウド内の一時的な障害を受け入れる
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739393"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144253"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
 
@@ -27,7 +27,7 @@ HTTP サービスを使用するアプリでも、同様のシナリオが発生
 
 図 4-9 に示すような回復性があるアプリケーションでは、"エクスポネンシャル バックオフを伴う再試行" などの手法を実装して、リソースの一時的な障害を処理する機会をアプリケーションに与える必要があります。 また、アプリケーションには "サーキット ブレーカー" も使用することをお勧めします。 サーキット ブレーカーを使うと、実際には長期的な障害の場合に、アプリケーションによるリソースへのアクセスを防ぎます。 アプリケーションにサーキット ブレーカーを使用することで、アプリケーション自体へのサービス拒否攻撃の発生が回避されます。
 
-![エクスポネンシャル バックオフによる再試行によって処理される部分的な障害の図。](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![エクスポネンシャル バックオフによる再試行によって処理される部分的な障害の図。](./media/retry-partial-failures.png)
 
 **図 4-9** エクスポネンシャル バックオフを使用した再試行によって処理される部分的な障害
 
@@ -55,7 +55,7 @@ HTTP 再試行とサーキット ブレーカーを実装する場合、.NET の
 
 - **回復性の高い HTTP 通信のためのライブラリ**
 
-    https://github.com/App-vNext/Polly
+    <https://github.com/App-vNext/Polly>
 
 >[!div class="step-by-step"]
 >[前へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
