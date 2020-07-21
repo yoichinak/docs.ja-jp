@@ -1,5 +1,6 @@
 ---
-title: '方法 : データ保護を使用する'
+title: '方法: データ保護の使用'
+description: .NET でデータ保護 API (DPAPI) にアクセスしてデータ保護を使用する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - decryption
 - data [.NET Framework], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 0efd677f11189b28b8efc184c04b30a047ab942b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c7f88105727dfd33c87a815054aa317ac2052e83
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598594"
 ---
-# <a name="how-to-use-data-protection"></a>方法 : データ保護を使用する
+# <a name="how-to-use-data-protection"></a>方法: データ保護の使用
 .NET Framework では、データ保護 API (DPAPI) へのアクセスを提供しています。DPAPI を使用すると、現在のユーザー アカウントまたはコンピューターからの情報を使用してデータを暗号化できます。  DPAPI を使用すると、暗号化キーを明示的に生成および格納するという困難な問題を軽減できます。  
   
  <xref:System.Security.Cryptography.ProtectedMemory> クラスを使用すると、メモリ内のバイト配列を暗号化できます。  この機能は、Microsoft Windows XP 以降のオペレーティング システムで使用できます。  現在のプロセスによって暗号化されるメモリは、現在のプロセスのみ、すべてのプロセス、または同じユーザーのコンテキストによって復号化されることを指定できます。  <xref:System.Security.Cryptography.ProtectedMemory> オプションの詳しい説明については、「<xref:System.Security.Cryptography.MemoryProtectionScope> 列挙型」を参照してください。  
@@ -52,13 +53,13 @@ ms.locfileid: "75706033"
   
 2. 復号化するバイト配列およびデータ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> メソッドを呼び出します。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次のコード例は、暗号化と復号化の 2 つの形式を示しています。  最初に、コード例では、メモリ内のバイト配列を暗号化してから復号化します。  次に、コード例では、バイト配列のコピーを暗号化し、ファイルに保存して、そのファイルからデータを読み込み、その後データを復号化しています。  例では、元のデータ、暗号化されたデータ、および復号化されたデータが表示されます。  
   
  [!code-csharp[DPAPI-HowTO#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DPAPI-HowTO/cs/sample.cs#1)]
  [!code-vb[DPAPI-HowTO#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DPAPI-HowTO/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
   
 - `System.Security.dll` への参照を含めます。  
   

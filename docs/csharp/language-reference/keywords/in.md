@@ -6,16 +6,16 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9edbd76e7b7a249743a201adccb5659bee6e5980
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713453"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441350"
 ---
 # <a name="in-c-reference"></a>in (C# リファレンス)
 
-`in` キーワードは、次の 4 つのコンテキストで使用されます。  
+`in` キーワードは、次のコンテキストで使用されます。  
   
 - ジェネリック インターフェイスとデリゲートの[ジェネリック型パラメーター](in-generic-modifier.md)
 - [パラメーター修飾子](in-parameter-modifier.md)として。この場合、値ではなく参照で、メソッドに引数を渡すことができます。

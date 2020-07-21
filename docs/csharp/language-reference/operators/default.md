@@ -1,25 +1,30 @@
 ---
-title: default 演算子 - C# リファレンス
-description: 型の既定値を生成するには、default 演算子を使います
-ms.date: 08/01/2019
+title: 既定値式 - C# リファレンス
+description: 既定値式を使用して、型の既定値を取得します
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712716"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507179"
 ---
-# <a name="default-operator-c-reference"></a>default 演算子 (C# リファレンス)
+# <a name="default-value-expressions-c-reference"></a>既定値式 (C# リファレンス)
 
-`default` 演算子では、型の[既定値](../keywords/default-values-table.md)が生成されます。 `default` 演算子への引数では、型または型パラメーターの名前を指定する必要があります。
-
-`default` 演算子の使い方を次の例に示します。
-
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+既定値式を使用すると、型の[既定値](../builtin-types/default-values.md)が生成されます。 既定値式には、次の 2 種類があります: [default 演算子](#default-operator)の呼び出しと、[default リテラル](#default-literal)です。
 
 また、[`switch` ステートメント](../keywords/switch.md)内の既定の case ラベルとして、`default` キーワードを使うこともできます。
+
+## <a name="default-operator"></a>default 演算子
+
+`default` 演算子への引数では、次の例で示すように、型または型パラメーターの名前を指定する必要があります。
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>default リテラル
 
@@ -32,7 +37,7 @@ C# 7.1 以降では、`default` リテラルを使って、コンパイラが式
 
 `default` リテラルの使い方の例を次に示します。
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -44,5 +49,5 @@ C# 7.1 以降では、`default` リテラルを使って、コンパイラが式
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
-- [既定値の一覧表](../keywords/default-values-table.md)
+- [C# 型の既定値](../builtin-types/default-values.md)
 - [.NET のジェネリック](../../../standard/generics/index.md)

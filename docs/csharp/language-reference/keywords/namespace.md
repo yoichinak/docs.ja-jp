@@ -8,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713367"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "77625801"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 
@@ -21,7 +21,7 @@ ms.locfileid: "75713367"
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 名前空間内では、以下の型を 0 個以上宣言できます。
 
@@ -31,7 +31,7 @@ ms.locfileid: "75713367"
 
 - [interface](interface.md)
 
-- [struct](struct.md)
+- [struct](../builtin-types/struct.md)
 
 - [enum](../builtin-types/enum.md)
 
@@ -55,7 +55,7 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関する記事の「[名前空間](~/_csharplang/spec/namespaces.md)」に関するセクションを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [C# キーワード](index.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: aa6feb1b07f491a90a78684e254910d387b9bccd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714851"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>コピー コンストラクターを記述する方法 (C# プログラミング ガイド)
@@ -20,10 +20,10 @@ C# では、オブジェクトのコピー コンストラクターが提供さ�
   
  [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ICloneable>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [クラスと構造体](./index.md)
 - [コンストラクター](./constructors.md)
 - [ファイナライザー](./destructors.md)

@@ -1,19 +1,20 @@
 ---
 title: メッセージ キュー (MSMQ) のインストール
+description: 1回限りのセットアップ手順の一部として、WFC サンプルで使用するメッセージキュー4.0 とメッセージキュー3.0 をインストールする方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0d0cb87b40b1cb11eb7692c2fa1e890ec815b13d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344747"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244466"
 ---
 # <a name="installing-message-queuing-msmq"></a>メッセージ キュー (MSMQ) のインストール
 メッセージ キュー 4.0 およびメッセージ キュー 3.0 をインストールする方法を次の手順に示します。  
   
 > [!NOTE]
-> [!INCLUDE[wxp](../../../../includes/wxp-md.md)] および Windows Server 2003 では、メッセージキュー4.0 は使用できません。  
+> Windows XP および Windows Server 2003 では、メッセージキュー4.0 は使用できません。  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Windows Server 2008 または Windows Server 2008 R2 にメッセージ キュー 4.0 をインストールするには  
   
@@ -41,7 +42,7 @@ ms.locfileid: "75344747"
   
     - [MSMQ HTTP サポート]  
   
-4. [ **OK**] をクリックします。  
+4. **[OK]** をクリックします。  
   
 5. コンピューターの再起動を求めるメッセージが表示されたら、[ **OK** ] をクリックしてインストールを完了します。  
   
@@ -64,4 +65,4 @@ ms.locfileid: "75344747"
   
 ## <a name="see-also"></a>関連項目
 
-- [セットアップ手順](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [セットアップ手順](set-up-instructions.md)

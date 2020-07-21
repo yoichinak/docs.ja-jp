@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705406"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "77452020"
 ---
 # <a name="using-properties-c-programming-guide"></a>プロパティの使用 (C# プログラミング ガイド)
 
@@ -53,7 +53,7 @@ ms.locfileid: "75705406"
 
 ## <a name="the-set-accessor"></a>set アクセサー
 
-`set` アクセサーは、戻り値の型が [void](../../language-reference/keywords/void.md) のメソッドと似ています。 型がプロパティの型の `value` と呼ばれる暗黙のパラメーターを使用します。 次の例では、`set` アクセサーが `Name` プロパティに追加されます。
+`set` アクセサーは、戻り値の型が [void](../../language-reference/builtin-types/void.md) のメソッドと似ています。 型がプロパティの型の `value` と呼ばれる暗黙のパラメーターを使用します。 次の例では、`set` アクセサーが `Name` プロパティに追加されます。
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
@@ -63,7 +63,7 @@ ms.locfileid: "75705406"
 
 `set` アクセサーでローカル変数の宣言に暗黙のパラメーター名 `value` を使用すると、エラーになります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 プロパティは `public`、`private`、`protected`、`internal`、`protected internal`、`private protected` のいずれかでマークできます。 これらのアクセス修飾子により、クラスのユーザーがプロパティにアクセスできる方法が定義されます。 同じプロパティの `get` と `set` アクセサーは、異なるアクセス修飾子を持つことができます。 たとえば、`get` を `public` にして、型の外部からの読み取り専用アクセスを許可して、`set` を `private` または `protected` にすることができます。 詳細については、「[アクセス修飾子](./access-modifiers.md)」を参照してください。
 
@@ -106,9 +106,9 @@ ms.locfileid: "75705406"
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
-- [プロパティ](properties.md)
+- [C# プログラミングガイド](../index.md)
+- [Properties](properties.md)
 - [インターフェイスのプロパティ](interface-properties.md)
 - [自動実装プロパティ](auto-implemented-properties.md)

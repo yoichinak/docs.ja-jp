@@ -2,12 +2,12 @@
 title: 概要
 ms.date: 12/13/2019
 description: Microsoft.Data.Sqlite の概要
-ms.openlocfilehash: a5dc1366cc0ddfcd5501e26bf2a994456bcd5d98
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75353467"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "77543600"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Microsoft.Data.Sqlite 概要
 
@@ -17,13 +17,13 @@ Microsoft.Data.Sqlite は SQLite の軽量 [ADO.NET](../../../framework/data/ado
 
 最新の安定バージョンを [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite) で入手できます。
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite
@@ -40,5 +40,5 @@ Install-Package Microsoft.Data.Sqlite
 ## <a name="see-also"></a>関連項目
 
 * [接続文字列](connection-strings.md)
-* [API リファレンス](/dotnet/api/?view=msdata-sqlite-3.0.0)
+* [API リファレンス](/dotnet/api/?view=msdata-sqlite-3.0)
 * [SQL 構文](https://www.sqlite.org/lang.html)

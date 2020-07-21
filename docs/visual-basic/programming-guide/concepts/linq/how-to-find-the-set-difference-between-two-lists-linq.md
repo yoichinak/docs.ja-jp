@@ -1,22 +1,22 @@
 ---
-title: '方法 : 2 つのリストの差集合を見つける (LINQ)'
+title: '方法: 2 つのリストの差集合を見つける (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.openlocfilehash: f533b63b40325b34c5881c1e2f14aa4e576191c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347507"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396598"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>方法: 2 つのリストの差集合を検索する (LINQ) (Visual Basic)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>方法: 2 つのリストの差集合を見つける (LINQ) (Visual Basic)
 この例では、LINQ を使用して、2 つの文字列リストを比較し、names2.txt ではなく names1.txt でそれらの行を出力する方法を示します。  
   
 ### <a name="to-create-the-data-files"></a>データ ファイルを作成するには  
   
-1. [「方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)」に示されているように、ソリューションフォルダーに names1.txt と names2.txt をコピーします。  
+1. 「[方法:文字列コレクションを結合および比較する (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md)」に示されているように、ソリューション フォルダーに names1.txt と names2.txt をコピーします。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>、<xref:System.Linq.Enumerable.Concat%2A>など、Visual Basic の一部の種類のクエリ操作は、メソッドベースの構文でのみ表すことができます。  
+ <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>、および <xref:System.Linq.Enumerable.Concat%2A> など、Visual Basic のいくつかの種類のクエリ操作は、メソッドベースの構文でのみ表すことができます。  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
-System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
+System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)

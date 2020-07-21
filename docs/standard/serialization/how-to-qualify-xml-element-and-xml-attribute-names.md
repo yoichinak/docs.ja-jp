@@ -1,5 +1,6 @@
 ---
-title: XML 要素と XML 属性の名前を修飾する方法
+title: XML 要素名および XML 属性名を修飾する方法
+description: この記事では、XML ドキュメント内の XML 要素と XML 属性の名前を修飾する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 383dc7687e67e183b86598857067801c950b0312
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: MT
+ms.openlocfilehash: 6c29e03d9ce28e5b0abc68a5d7e8d82f4485ac93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545089"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378410"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML 要素と XML 属性の名前を修飾する方法
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML 要素名および XML 属性名を修飾する方法
 
-<xref:System.Xml.Serialization.XmlSerializerNamespaces> クラスのインスタンスに含まれる XML 名前空間は、 [xml の名前空間](https://www.w3.org/TR/REC-xml-names/)と呼ばれる WORLD WIDE WEB コンソーシアム (W3C) の仕様に準拠している必要があります。
+<xref:System.Xml.Serialization.XmlSerializerNamespaces> クラスのインスタンスに格納される XML 名前空間は、World Wide Web コンソーシアム (W3C) の仕様『[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)』に準拠する必要があります。
 
 XML 名前空間を使用すると、XML ドキュメント内の XML 要素および XML 属性の名前を修飾できます。 修飾名は、プレフィックスとローカル名がコロンで区切られた構成になっています。 プレフィックスはプレースホルダーとしてのみ機能し、名前空間を指定する URI に割り当てられます。 汎用的に管理される URI 名前空間とローカル名を組み合わせることにより、生成される名前は、必ず汎用的に一意になります。
 
@@ -38,7 +39,7 @@ XML 名前空間を使用すると、XML ドキュメント内の XML 要素お�
 
 5. `XmlSerializerNamespaces` を `Serialize` の `XmlSerializer` メソッドに渡します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 `XmlSerializerNamespaces` を作成し、このオブジェクトにプレフィックスと名前空間のペアを 2 つ追加する例を次に示します。 このコードでは、`XmlSerializer` クラスのインスタンスをシリアル化するために使用される `Books` を作成します。 また、`Serialize` を使用して `XmlSerializerNamespaces` メソッドを呼び出し、XML にプレフィックス付き名前空間を含めることができるようにします。
 
@@ -111,7 +112,7 @@ public class Program
     {
         SerializeObject("XmlNamespaces.xml");
     }
-    
+
     public static void SerializeObject(string filename)
     {
         var mySerializer = new XmlSerializer(typeof(Books));
@@ -169,6 +170,6 @@ public class Price
 - [XML シリアル化の概要](introducing-xml-serialization.md)
 - [XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
 - [XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)
-- [方法 : XML ストリームの代替要素名を指定する](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)
-- [方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)
+- [方法: XML ストリームの代替要素名を指定する](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [方法: オブジェクトをシリアル化する](how-to-serialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)

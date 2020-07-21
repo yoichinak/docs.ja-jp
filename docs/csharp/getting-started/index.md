@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: baa21908b85130f8a0dd992b10cdc95c6e42912e
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713927"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415912"
 ---
 # <a name="get-started-with-c"></a>C\# 入門
 
@@ -30,7 +30,7 @@ ms.locfileid: "75713927"
 
 - [Visual Studio で C# および .NET Standard を使用してクラス ライブラリを作成する](../../core/tutorials/library-with-visual-studio.md)
 
-   クラス ライブラリを使用して、別のアプリケーションから呼び出すことができる型と型のメンバーを定義できます。 このトピックでは、文字列が大文字で始まるかどうかを決定する単一のメソッドがあるクラス ライブラリを作成できます。 ライブラリの構築が完了したら、[単体テスト](../../core/tutorials/testing-library-with-visual-studio.md)を開発して、それが期待どおりに動作することを確認した後、[そのライブラリを使用したいアプリケーション](../../core/tutorials/consuming-library-with-visual-studio.md)で使用できるようにします。
+   クラス ライブラリを使用して、別のアプリケーションから呼び出すことができる型と型のメンバーを定義できます。 このトピックでは、文字列が大文字で始まるかどうかを決定する単一のメソッドがあるクラス ライブラリを作成できます。 ライブラリの構築が完了したら、[単体テスト](../../core/tutorials/testing-library-with-visual-studio.md)を開発して、それが期待どおりに動作することを確認した後、[そのライブラリを使用したいアプリケーション](/nuget/quickstart/install-and-use-a-package-in-visual-studio)で使用できるようにします。
 
 - [C# および Visual Studio Code の使用を開始する](../../core/tutorials/with-visual-studio-code.md)
 

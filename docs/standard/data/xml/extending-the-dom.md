@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 41b6959843e866b89da46a9cedfb54a2f5ed001a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 4a1a7af0e841601542a30c7bd3f71395faa6cb57
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710883"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287793"
 ---
 # <a name="extending-the-dom"></a>DOM の拡張
 
@@ -42,9 +42,9 @@ End Class 'LineInfoDocument
 ```
 
 ```csharp
-class LineInfoDocument : XmlDocument 
+class LineInfoDocument : XmlDocument
 {
-    public override XmlElement CreateElement(string prefix, string localname, string nsURI) 
+    public override XmlElement CreateElement(string prefix, string localname, string nsURI)
     {
         LineInfoElement elem = new LineInfoElement(prefix, localname, nsURI, this);
         return elem;
@@ -120,7 +120,7 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.
 ```
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 XML ドキュメントの要素数を数える例を次に示します。
 
@@ -220,7 +220,7 @@ public class Test {
 }
 ```
 
-#### <a name="input"></a>[入力]
+#### <a name="input"></a>入力
 
 book.xml
 
@@ -232,7 +232,7 @@ book.xml
 </book>
 ```
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>Output
 
 ```console
 Number of elements in book.xml: 3
@@ -244,7 +244,7 @@ Number of elements in book.xml: 3
 
 イベント処理プロセスは、派生クラスでも、元の DOM クラスとまったく同じように動作します。
 
-ノード イベント処理については、「[イベント](../../../../docs/standard/events/index.md)」と「<xref:System.Xml.XmlNodeChangedEventHandler>」を参照してください。
+ノード イベント処理については、「[イベント](../../events/index.md)」と「<xref:System.Xml.XmlNodeChangedEventHandler>」を参照してください。
 
 ## <a name="default-attributes-and-the-createelement-method"></a>既定の属性と CreateElement メソッド
 

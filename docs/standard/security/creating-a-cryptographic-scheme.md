@@ -6,12 +6,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1478873c1c2dc73ca31c9078e39a3902966bf674
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706293"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288421"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>暗号スキームの作成
 .NET Framework の暗号化コンポーネントを組み合わせて、データの暗号化と復号化を行うさまざまなスキームを作成することができます。  
@@ -32,4 +32,4 @@ ms.locfileid: "75706293"
   
 ## <a name="see-also"></a>関連項目
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [暗号化サービス](cryptographic-services.md)

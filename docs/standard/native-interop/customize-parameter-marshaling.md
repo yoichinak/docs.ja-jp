@@ -2,12 +2,12 @@
 title: パラメーターのマーシャリングのカスタマイズ - .NET
 description: .NET でパラメーターをネイティブ表現にマーシャリングする方法をカスタマイズする手順について説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 1999cad057875f15b283421f87f485c2e5ca2306
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706362"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374313"
 ---
 # <a name="customizing-parameter-marshaling"></a>パラメーターのマーシャリングのカスタマイズ
 
@@ -21,10 +21,10 @@ ms.locfileid: "75706362"
 
 これらの各形式では、null で終わる文字列をネイティブ コードに渡します。 これらはネイティブ文字列のエンコードが異なります。
 
-| `System.Runtime.InteropServices.UnmanagedType` 値 | Encoding |
+| `System.Runtime.InteropServices.UnmanagedType` の値 | エンコード |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 
@@ -40,7 +40,7 @@ WinRT API とやり取りしている場合は、<xref:System.Runtime.InteropSer
 
 .NET には、配列パラメーターをマーシャリングする方法が複数用意されています。 C スタイルの配列を受け取る API を呼び出す場合は、<xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> アンマネージド型を使用します。 配列内の値にカスタマイズされたマーシャリングが必要な場合は、そのために `[MarshalAs]` 属性に対して <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> フィールドを使用できます。
 
-COM API を使用している場合は、おそらく配列パラメーターを `SAFEARRAY*` としてマーシャリングする必要があります。 そのためには、<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> アンマネージド型を使用できます。 `SAFEARRAY` の要素の既定の種類については、[`object` フィールドのカスタマイズ](./customize-struct-marshaling.md#marshaling-systemobjects)の表を参照してください。 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> および <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> フィールドを使用すると、`SAFEARRAY` の正確な要素の種類をカスタマイズできます。
+COM API を使用している場合は、おそらく配列パラメーターを `SAFEARRAY*` としてマーシャリングする必要があります。 そのためには、<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> アンマネージド型を使用できます。 `SAFEARRAY` の要素の既定の種類については、[`object` フィールドのカスタマイズ](./customize-struct-marshaling.md#marshal-systemobject)の表を参照してください。 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> および <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> フィールドを使用すると、`SAFEARRAY` の正確な要素の種類をカスタマイズできます。
 
 ## <a name="customizing-boolean-or-decimal-parameters"></a>ブールまたは 10 進数パラメーターのカスタマイズ
 
@@ -62,7 +62,7 @@ API が COM オブジェクトへのポインターを受け取る場合、`obje
 
 ### <a name="marshaling-to-a-variant"></a>`VARIANT` へのマーシャリング
 
-ネイティブ API が Win32 `VARIANT` を受け取る場合、`object` パラメーターに <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 形式を使用してオブジェクトを `VARIANT` としてマーシャリングすることができます。 .NET 型と `VARIANT` 型の間のマッピングについては、[`object` フィールドのカスタマイズ](customize-struct-marshaling.md#marshaling-systemobjects)に関するドキュメントを参照してください。
+ネイティブ API が Win32 `VARIANT` を受け取る場合、`object` パラメーターに <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 形式を使用してオブジェクトを `VARIANT` としてマーシャリングすることができます。 .NET 型と `VARIANT` 型の間のマッピングについては、[`object` フィールドのカスタマイズ](customize-struct-marshaling.md#marshal-systemobject)に関するドキュメントを参照してください。
 
 ### <a name="custom-marshalers"></a>カスタム マーシャラー
 

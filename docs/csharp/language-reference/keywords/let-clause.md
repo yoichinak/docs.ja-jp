@@ -8,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 32bb5d2138c0b86bf58d26015aa208f655229129
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6eee9a23fa28b78343e6479106eaa24ecf4caa6
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715223"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795366"
 ---
 # <a name="let-clause-c-reference"></a>let 句 (C# リファレンス)
 
@@ -31,8 +31,8 @@ ms.locfileid: "75715223"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
+- [C# リファレンス](../index.md)
 - [クエリ キーワード (LINQ)](query-keywords.md)
-- [統合言語クエリ (LINQ)](../../linq/index.md)
-- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)
+- [C# での LINQ](../../linq/index.md)
+- [統合言語クエリ (LINQ)](../../programming-guide/concepts/linq/index.md)
 - [クエリ式の例外の処理](../../linq/handle-exceptions-in-query-expressions.md)

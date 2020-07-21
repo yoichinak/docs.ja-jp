@@ -1,15 +1,16 @@
 ---
 title: HTTP および HTTPS の構成
+description: HTTP/HTTPS を構成して、WCF サービスとクライアントが通信できるようにする方法について説明します。 Netsh.exe を使用して、URL 登録とファイアウォールの例外を構成します。
 ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: f7fd2bad6ced09b638cc1bb5d539fab1b9ce7d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fbff78ff8e2c5c4fa73a56a3fdc15163596aa985
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336699"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245142"
 ---
 # <a name="configuring-http-and-https"></a>HTTP および HTTPS の構成
 
@@ -19,7 +20,7 @@ WCF サービスと WCF クライアントは、HTTP および HTTPS を介し�
 
 ## <a name="configuring-namespace-reservations"></a>名前空間予約の構成
 
-名前空間予約では、HTTP URL 名前空間の一部に対する権限を特定のユーザー グループに割り当てます。 予約により、これらのユーザーには名前空間のその部分をリッスンするサービスを作成する権利が与えられます。 予約は、予約パスのすべてのサブパスを対象とする URL プレフィックスです。 名前空間予約では、2 つの方法でワイルドカードを使用できます。 HTTP Server API ドキュメントでは、[ワイルドカードを含む名前空間クレーム間の解決の順序](/windows/desktop/Http/routing-incoming-requests)について説明します。
+名前空間予約では、HTTP URL 名前空間の一部に対する権限を特定のユーザー グループに割り当てます。 予約によって、名前空間のその部分でリッスンするサービスを作成する権限をユーザーに与えます。 予約は、予約パスのすべてのサブパスを対象とする URL プレフィックスです。 名前空間予約では、2 つの方法でワイルドカードを使用できます。 HTTP Server API ドキュメントでは、[ワイルドカードを含む名前空間クレーム間の解決の順序](/windows/desktop/Http/routing-incoming-requests)について説明します。
 
 実行中のアプリケーションは、同様の要求を作成して、名前空間登録を追加できます。 名前空間の同じ部分について、登録と予約の間で競合が発生します。 [ワイルドカードを含む名前空間クレーム間の解決](/windows/desktop/Http/routing-incoming-requests)順序に従って、予約が優先順位に従って、登録より優先される場合があります。 この場合、実行中のアプリケーションがクレームを受信する動作が、予約によってブロックされます。
 
@@ -29,7 +30,7 @@ WCF サービスと WCF クライアントは、HTTP および HTTPS を介し�
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ```
 
-このコマンドは、DOMAIN\user アカウントの指定した URL 名前空間の URL 予約を追加します。 Netsh コマンドの使用方法の詳細については、コマンドプロンプトで「`netsh http add urlacl /?`」と入力し、Enter キーを押します。
+このコマンドは、DOMAIN\user アカウントの指定した URL 名前空間の URL 予約を追加します。 Netsh コマンドの使用方法の詳細については、 `netsh http add urlacl /?` コマンドプロンプトで「」と入力し、enter キーを押します。
 
 ## <a name="configuring-a-firewall-exception"></a>ファイアウォールの例外の構成
 
@@ -57,9 +58,9 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 <xref:System.ServiceModel.WSDualHttpBinding> を使用すると、クライアント接続では、名前空間予約と Windows ファイアウォールに対応できる既定値が使用されます。 双方向接続のクライアント ベース アドレスをカスタマイズする場合、クライアント上で HTTP 設定を行い、新しいアドレスに一致させる必要があります。
 
-HTTP サーバー API には、Httpcfg.exe では利用できない高度な構成設定がいくつかあります。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定の詳細については、「 [IIS の http.sys レジストリ設定](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)」を参照してください。 ほとんどのユーザーは、これらの設定を変更する必要はありません。
+HTTP サーバー API には、Httpcfg.exe では利用できない高度な構成設定がいくつかあります。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定の詳細については、「 [Http.sys IIS のレジストリ設定](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)」を参照してください。 ほとんどのユーザーは、これらの設定を変更する必要はありません。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [方法 : SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)

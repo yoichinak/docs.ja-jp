@@ -3,19 +3,19 @@ title: デバッグとプロファイルの構成設定
 description: .NET Core アプリのデバッグとプロファイルを構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: c57cfa7233f48def890ded3c9d589b7f268147df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998859"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761994"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>デバッグとプロファイルのランタイム構成オプション
 
 ## <a name="enable-diagnostics"></a>診断を有効化する
 
 - デバッガー、プロファイラー、EventPipe 診断を有効にするか、または無効にするかを構成します。
-- 既定:有効 (`1`)。
+- この設定を省略すると、診断は有効になります。 これは、値を `1` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |
@@ -25,7 +25,7 @@ ms.locfileid: "74998859"
 ## <a name="enable-profiling"></a>プロファイルを有効にする
 
 - 現在実行中のプロセスに対してプロファイルを有効にするかどうかを構成します。
-- 既定:無効 (`0`)。
+- この設定を省略すると、プロファイルは無効になります。 これは、値を `0` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |
@@ -56,7 +56,7 @@ ms.locfileid: "74998859"
 ## <a name="write-perf-map"></a>パフォーマンス マップの作成
 
 - Linux システムでの */tmp/perf-$pid.map* の作成を有効または無効にします。
-- 既定:無効 (`0`)。
+- この設定を省略すると、パフォーマンス マップの作成は無効になります。 これは、値を `0` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |
@@ -65,10 +65,13 @@ ms.locfileid: "74998859"
 
 ## <a name="perf-log-markers"></a>パフォーマンス ログのマーカー
 
-- `COMPlus_PerfMapEnabled` が `1` に設定されている場合、指定されたシグナルを有効または無効にして、パフォーマンス ログのマーカーとして受け入れて無視します。
-- 既定:無効 (`0`)。
+- 指定したシグナルのパフォーマンス ログでのマーカーとしての受け入れおよび無視を有効または無効にします。
+- この設定を省略すると、指定したシグナルは無視されません。 これは、値を `0` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |
 | **runtimeconfig.json** | N/A | N/A |
 | **環境変数** | `COMPlus_PerfMapIgnoreSignal` | `0` - 無効<br/>`1` - 有効 |
+
+> [!NOTE]
+> この設定は、[COMPlus_PerfMapEnabled](#write-perf-map) が省略されるか、または `0` (無効) に設定されている場合は、無視されます。

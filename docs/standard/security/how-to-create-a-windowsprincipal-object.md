@@ -1,5 +1,5 @@
 ---
-title: '方法 : WindowsPrincipal プロジェクトを作成する'
+title: '方法: WindowsPrincipal プロジェクトを作成する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706163"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284430"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>方法 : WindowsPrincipal プロジェクトを作成する
+# <a name="how-to-create-a-windowsprincipal-object"></a>方法: WindowsPrincipal プロジェクトを作成する
 コードが役割ベースの検証を繰り返し実行する必要があるか、1 回だけ実行する必要があるかによって、<xref:System.Security.Principal.WindowsPrincipal> オブジェクトを作成する方法は 2 つあります。  
   
  コードが役割ベースの検証を繰り返し実行する必要がある場合、次の最初の手順のほうが、生成されるオーバーヘッドが少なくなります。 コードが役割ベースの検証を 1 回だけ実行する必要がある場合、次の 2 番目の手順を使用して <xref:System.Security.Principal.WindowsPrincipal> オブジェクトを作成できます。  
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>繰り返し検証で WindowsPrincipal オブジェクトを作成するには  
   
-1. 静的な <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> プロパティによって返される <xref:System.AppDomain> オブジェクトの <xref:System.AppDomain.SetPrincipalPolicy%2A> メソッドを呼び出し、新しいポリシーの内容を示す <xref:System.Security.Principal.PrincipalPolicy> 列挙値があるメソッドに渡します。 サポートされる値は <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>、<xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>、および <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal> です。 次のコードは、このメソッドの呼び出しを示しています。  
+1. 静的な <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> プロパティによって返される <xref:System.AppDomain> オブジェクトの <xref:System.AppDomain.SetPrincipalPolicy%2A> メソッドを呼び出し、新しいポリシーの内容を示す <xref:System.Security.Principal.PrincipalPolicy> 列挙値があるメソッドに渡します。 サポートされている値は、<xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>、<xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>、および <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal> です。 次のコードは、このメソッドの呼び出しを示しています。  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -40,13 +40,13 @@ ms.locfileid: "75706163"
 2. ポリシーの設定により、静的な <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティを使用して、現在の Windows ユーザーをカプセル化するプリンシパルを取得します。 プロパティの戻り値の型は <xref:System.Security.Principal.IPrincipal> であるため、結果を <xref:System.Security.Principal.WindowsPrincipal> 型にキャストする必要があります。 次のコードは、新しい <xref:System.Security.Principal.WindowsPrincipal> オブジェクトを、現在のスレッドに関連付けられたプリンシパルの値に初期化します。  
   
     ```csharp  
-    WindowsPrincipal myPrincipal =   
+    WindowsPrincipal myPrincipal =
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
     Dim myPrincipal As WindowsPrincipal = _  
-        CType(Thread.CurrentPrincipal, WindowsPrincipal)   
+        CType(Thread.CurrentPrincipal, WindowsPrincipal)
     ```  
   
 3. プリンシパル オブジェクトが作成されると、いくつかのメソッドのいずれかを使用して検証できます。  
@@ -77,4 +77,4 @@ ms.locfileid: "75706163"
   
 ## <a name="see-also"></a>関連項目
 
-- [プリンシパル オブジェクトと ID オブジェクト](../../../docs/standard/security/principal-and-identity-objects.md)
+- [プリンシパル オブジェクトと ID オブジェクト](principal-and-identity-objects.md)

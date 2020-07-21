@@ -1,16 +1,17 @@
 ---
 title: アプリケーション ドメインのリソース監視 (ARM) ETW イベント
+description: ThreadCreated、AppDomainMemAllocated、AppDomainMemSurvived など、.NET でのアプリケーションドメインリソース監視 (ARM) ETW イベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d118b3196b019a804df5399464cb86f7492c61b0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716225"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309782"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>アプリケーション ドメインのリソース監視 (ARM) ETW イベント
 
@@ -35,11 +36,11 @@ ms.locfileid: "75716225"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|作成されたスレッドの ID。|
 |AppDomainID|win:UInt64|スレッドのアクティビティの報告対象のアプリケーション ドメインの識別子。|
-|フラグ|win:UInt32|スレッドの作成フラグ|
+|Flags|win:UInt32|スレッドの作成フラグ|
 |ManagedThreadIndex|win:UInt32|作成されたスレッドのマネージド インデックス。|
 |OSThreadID|win:UInt32|作成されたスレッドのオペレーティング システム ID。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
@@ -60,7 +61,7 @@ ms.locfileid: "75716225"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|リソースの使用状況の報告対象のアプリケーション ドメインの識別子。|
 |Allocated|win:UInt64|アプリケーション ドメインが作成されてから、このアプリケーション ドメインに割り当てられたバイトの合計数 (解放されたメモリの量は引かれない)。|
@@ -82,7 +83,7 @@ ms.locfileid: "75716225"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|リソースの使用状況の報告対象のドメインの識別子。|
 |Survived|win:UInt64|最後のコレクションの実行後に残され、このアプリケーション ドメインによって保持されることが判明しているバイト数。 この数は、完全なコレクションの後では正確で完全ですが、短期コレクションの後では完全ではない可能性があります。|
@@ -106,9 +107,9 @@ ms.locfileid: "75716225"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
-|ThreadID|win:UInt64|スレッド ID です|
+|ThreadID|win:UInt64|スレッド識別子です。|
 |AppDomainID|win:UInt64|アプリケーション ドメインの識別子。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
@@ -129,9 +130,9 @@ ms.locfileid: "75716225"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
-|ThreadID|win:UInt64|スレッド ID です|
+|ThreadID|win:UInt64|スレッド識別子です。|
 |AppDomainID|win:UInt64|アプリケーション ドメインの識別子。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 

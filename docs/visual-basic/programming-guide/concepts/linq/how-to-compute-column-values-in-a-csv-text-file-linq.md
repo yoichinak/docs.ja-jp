@@ -2,14 +2,14 @@
 title: '方法: CSV テキスト ファイルの列値を計算する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338501"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357505"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>方法: CSV テキストファイルの列値を計算する (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>方法: CSV テキスト ファイルの列値を計算する (LINQ) (Visual Basic)
 
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。
 
@@ -32,7 +32,7 @@ ms.locfileid: "75338501"
     122, 94, 92, 91, 91
     ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```vb
 Class SumColumns
@@ -145,9 +145,9 @@ End Class
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
+System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

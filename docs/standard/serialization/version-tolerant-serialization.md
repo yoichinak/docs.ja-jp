@@ -1,5 +1,6 @@
 ---
 title: バージョン トレラントなシリアル化
+description: .NET Framework 2.0 では、シリアル化可能な型を簡単に変更できるようにする機能のセットであるバージョン トレラントなシリアル化が導入されました。
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348431"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762592"
 ---
 # <a name="version-tolerant-serialization"></a>バージョン トレラントなシリアル化
 
@@ -27,7 +28,7 @@ ms.locfileid: "75348431"
 - 以前のバージョンのアプリケーションは、古い型の新しいバージョンを逆シリアル化するように要求すると例外をスローする。
 - 新しいバージョンのアプリケーションは、データが欠落している以前のバージョンの型を逆シリアル化すると例外をスローする。
 
-バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、.NET Framework 2.0 で導入された機能セットで、シリアル化可能な型を、長期にわたって簡単に変更できるようにします。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。 動作するサンプル アプリケーションについては、「[Version Tolerant Serialization Technology Sample](version-tolerant-serialization-technology-sample.md)」(バージョン トレラントなシリアル化テクノロジのサンプル) を参照してください。
+バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、.NET Framework 2.0 で導入された機能セットで、シリアル化可能な型を、長期にわたって簡単に変更できるようにします。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。 動作するサンプル アプリケーションについては、「[Version Tolerant Serialization Technology Sample](basic-serialization-technology-sample.md)」(バージョン トレラントなシリアル化テクノロジのサンプル) を参照してください。
 
 VTS 機能は、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> を使用する場合に有効になります。 また、<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> を使用する場合は、外部データの複数バージョン対応機能を除くすべての機能が有効になります。 シリアル化でこれらのクラスを使用する方法の詳細については、「[バイナリ シリアル化](binary-serialization.md)」を参照してください。
 
@@ -43,7 +44,7 @@ VTS 機能は、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryForma
 
 さらに、オプション フィールドが新たに追加されたときに宣言を生成する機能があります。 これは、<xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 属性の <xref:System.Runtime.Serialization.OptionalFieldAttribute> プロパティです。
 
-これらの機能については、以降のセクションで詳しく説明します。
+これらの機能については、以下のセクションでさらに詳しく説明します。
 
 ### <a name="tolerance-of-extraneous-or-unexpected-data"></a>外部データまたは予期しないデータの複数バージョン対応
 
@@ -132,7 +133,7 @@ End Class
 
 #### <a name="using-callbacks"></a>コールバックの使用
 
-コールバックを使用するには、<xref:System.Runtime.Serialization.StreamingContext> パラメーターを受け取るメソッドに、適切な属性を適用します。 各属性でマークできるのは、クラスごとに 1 つのメソッドだけです。 例:
+コールバックを使用するには、<xref:System.Runtime.Serialization.StreamingContext> パラメーターを受け取るメソッドに、適切な属性を適用します。 各属性でマークできるのは、クラスごとに 1 つのメソッドだけです。 次に例を示します。
 
 ```csharp
 [OnDeserializing]
@@ -151,7 +152,7 @@ End Sub
 
 これらのメソッドの使用目的は、バージョン管理です。 オプション フィールドにデータがない場合、逆シリアル化の実行中に、このフィールドが正しく初期化されないことがあります。 この問題を解決するには、正しい値を割り当てるメソッドを作成してから、このメソッドに **OnDeserializingAttribute** 属性または **OnDeserializedAttribute** 属性のいずれかを適用します。
 
-型のコンテキストで使用されるメソッドを次に示します。 以前のバージョンのアプリケーションが新しいバージョンのアプリケーションに `Address` クラスのインスタンスを送信すると、`CountryField` フィールドのデータが欠落します。 ただし、逆シリアル化の後、フィールドは既定値の "日本" に設定されます。
+型のコンテキストで使用されるメソッドを次に示します。 以前のバージョンのアプリケーションが新しいバージョンのアプリケーションに `Address` クラスのインスタンスを送信すると、`CountryField` フィールドのデータが欠落します。 しかし、逆シリアル化を行うと、このフィールドは既定値である "Japan" に設定されます。
 
 ```csharp
 [Serializable]
@@ -262,7 +263,7 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-サーバー上とクライアント上では異なるバージョンのクラスが必要なため、ユーザーによっては、シリアル化するクラスと逆シリアル化するクラスを制御することが必要になる場合があります。 <xref:System.Runtime.Serialization.SerializationBinder> は、シリアル化中および逆シリアル化中に使用される実際の型を制御するために使用される抽象クラスです。 このクラスを使用するには、クラスを <xref:System.Runtime.Serialization.SerializationBinder> から派生させ、<xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> メソッドと <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> メソッドをオーバーライドします。 詳細については、「 [SerializationBinder によるシリアル化と逆シリアル](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)化の制御」を参照してください。
+サーバー上とクライアント上では異なるバージョンのクラスが必要なため、ユーザーによっては、シリアル化するクラスと逆シリアル化するクラスを制御することが必要になる場合があります。 <xref:System.Runtime.Serialization.SerializationBinder> は、シリアル化中および逆シリアル化中に使用される実際の型を制御するために使用される抽象クラスです。 このクラスを使用するには、クラスを <xref:System.Runtime.Serialization.SerializationBinder> から派生させ、<xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> メソッドと <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> メソッドをオーバーライドします。 詳細については、「[SerializationBinder を使用したシリアル化および逆シリアル化の制御](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)」を参照してください。
 
 ## <a name="best-practices"></a>ベスト プラクティス
 

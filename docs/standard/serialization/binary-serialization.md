@@ -1,5 +1,6 @@
 ---
 title: バイナリ シリアル化
+description: この記事では、バイナリ シリアル化と .NET Core でそれがサポートされている型について説明します。 バイナリ シリアル化の危険性とその代替手段に注意してください。
 ms.date: 01/02/2018
 helpviewer_keywords:
 - binary serialization
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
-ms.translationtype: MT
+ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901050"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289695"
 ---
 # <a name="binary-serialization"></a>バイナリ シリアル化
 
@@ -28,16 +29,16 @@ ms.locfileid: "75901050"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-バイナリシリアル化を使用すると、オブジェクト内のプライベートメンバーを変更し、その状態を変更できます。 このため、パブリック API サーフェイスで動作する他のシリアル化フレームワーク (<xref:System.Text.Json?displayProperty=fullName>など) をお勧めします。
+バイナリ シリアル化を使用すると、オブジェクト内のプライベート メンバーを変更することで、その状態を変更できます。 このため、パブリック API サーフェイスで動作する他のシリアル化フレームワーク (<xref:System.Text.Json?displayProperty=fullName> など) をお勧めします。
 
 ## <a name="net-core"></a>.NET Core
 
-.NET Core では、型のサブセットのバイナリシリアル化がサポートされています。 サポートされている型の一覧については、次の「 [Serializable 型](#serializable-types)」を参照してください。 表示される型は、.NET Framework 4.5.1 以降のバージョンと .NET Core 2.0 以降のバージョン間でシリアル化可能であることが保証されます。 Mono などのその他の .NET 実装は公式にはサポートされていませんが、機能する必要もあります。
+.NET Core では、型のサブセットに対してバイナリ シリアル化がサポートされています。 サポートされている型の一覧は、以下の「[シリアル化可能な型](#serializable-types)」セクションで確認できます。 一覧表示されている型は、.NET Framework 4.5.1 以降のバージョン間と .NET Core 2.0 以降のバージョン間でシリアル化できることが保証されていいます。 Mono などのその他の .NET 実装は公式にサポートされていませんが、同じく機能するはずです。
 
 ### <a name="serializable-types"></a>シリアル化可能な型
 
 > [!div class="mx-tdCol2BreakAll"]
-> | の型 | メモ |
+> | 種類 | メモ |
 > | - | - |
 > | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
@@ -106,13 +107,13 @@ ms.locfileid: "75901050"
 > | <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.ContextMarshalException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DBNull?displayProperty=nameWithType> | .NET Core 2.0.2 以降のバージョンから開始します。 |
+> | <xref:System.DBNull?displayProperty=nameWithType> | .NET Core 2.0.2 以降のバージョンから。 |
 > | <xref:System.Data.Common.DbException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Data.ConstraintException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Data.DataException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | `RemotingFormat` を `SerializationFormat.Binary`に設定すると、.NET Core 2.1 以降のバージョンとのみ交換できます。 |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | `RemotingFormat` を `SerializationFormat.Binary` に設定する場合は、.NET Core 2.1 以降のバージョンとのみ交換できます。 |
 > | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
@@ -278,7 +279,7 @@ ms.locfileid: "75901050"
 > | <xref:System.Security.HostProtectionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.SecurityException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。<br/>限定されたシリアル化データ。 |
+> | <xref:System.Security.SecurityException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。<br/>シリアル化データが制限されます。 |
 > | <xref:System.Security.VerificationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
 > | <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
@@ -343,14 +344,14 @@ ms.locfileid: "75901050"
 - <xref:System.Runtime.Serialization>\
 オブジェクトのシリアル化と逆シリアル化に使用できるクラスが含まれています。
 
-- [XML シリアル化および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)\
 共通言語ランタイムに付属している XML シリアル化機構について説明します。
 
-- [セキュリティとシリアル化の](../../../docs/framework/misc/security-and-serialization.md)\
+- [セキュリティとシリアル化](../../framework/misc/security-and-serialization.md)\
 シリアル化を実行するコードを記述する際に従う必要がある、安全なコーディングのガイドラインについて説明します。
 
-- [.Net リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-リモート通信のために .NET Framework で開始されるさまざまな方法について説明します。
+- [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+.NET Framework で開始されたリモート通信のためのさまざまな方法について説明します。
 
-- [ASP.NET と Xml Web サービスクライアントを使用して作成された Xml Web サービス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
-ASP.NET を使用して作成された XML Web サービスをプログラミングする方法について説明した記事です。
+- [ASP.NET と XML Web サービス クライアントを使用して作成した XML Web サービス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+ASP.NET を使用して作成する XML Web サービスのプログラミング方法について説明した記事です。

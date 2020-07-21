@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 99b6b3b6959abf4c8adc313364ad641249bd9bc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: d5e7074fc8c68a0a0243ea4ad237e713e0a729b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710168"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289058"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator を使用した XML データの選択
 <xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.Xml.XPath.XPathDocument> オブジェクトまたは <xref:System.Xml.XmlDocument> オブジェクト内で XPath 式を使用してノード セットを選択するための一連のメソッドを提供します。 選択した後、選択されたノード セットに対して反復して処理を行うことができます。  
@@ -65,9 +65,9 @@ while(nodes.MoveNext())
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [XPathNavigator による XPath 式の評価](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [XPathNavigator によるノードの一致](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [XPath クエリで認識されるノード型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [XPath クエリおよび名前空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [コンパイルされた XPath 式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [XPath データ モデルを使用した XML データの処理](process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator による XPath 式の評価](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [XPathNavigator によるノードの一致](matching-nodes-using-xpathnavigator.md)
+- [XPath クエリで認識されるノード型](node-types-recognized-with-xpath-queries.md)
+- [XPath クエリおよび名前空間](xpath-queries-and-namespaces.md)
+- [コンパイルされた XPath 式](compiled-xpath-expressions.md)

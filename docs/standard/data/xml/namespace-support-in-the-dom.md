@@ -3,12 +3,12 @@ title: DOM における名前空間のサポート
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: 7efe03f25fde0681ebd9e3c7c8ea81f6686a8ec1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 6fefce961c2ff91530a9110f5563fd921a7838a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710610"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288798"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM における名前空間のサポート
 XML ドキュメント オブジェクト モデル (DOM) は名前空間に完全に対応しています。 名前空間に対応している XML ドキュメントだけがサポートされます。 W3C (World Wide Web Consortium) の仕様によれば、DOM Level 1 を実装する DOM アプリケーションは名前空間に対応していなくてもかまいませんが、DOM Level 2 の機能は名前空間に対応しています。 ただし、メソッドが DOM 勧告の Level 1 または Level 2 のどちらに準拠しているかに関係なく、XML DOM のすべての機能は名前空間に対応しています。  
@@ -25,4 +25,4 @@ XML ドキュメント オブジェクト モデル (DOM) は名前空間に完�
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

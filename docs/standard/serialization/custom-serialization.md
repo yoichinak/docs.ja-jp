@@ -1,5 +1,6 @@
 ---
 title: カスタムのシリアル化
+description: カスタムのシリアル化とは、型のシリアル化と逆シリアル化を制御することです。 シリアル化を制御することで、シリアル化の互換性を確保できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 60fdc0317975d94433401e3214953b77d0970f60
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741062"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289656"
 ---
 # <a name="custom-serialization"></a>カスタムのシリアル化
 カスタムのシリアル化は、型のシリアル化と逆シリアル化を制御するプロセスです。 シリアル化を制御することで、シリアル化の互換性を保証できます。つまり、型のコア機能を損なうことなく、1 つの型の複数のバージョン間でシリアル化および逆シリアル化を行うことができます。 たとえば、最初のバージョンの型では、フィールドが 2 つだけあるとします。 新しいバージョンでは、これにいくつかのフィールドが追加されています。 この場合、2 番目のバージョンのアプリケーションでは、両方の型をシリアル化および逆シリアル化できる必要があります。 以下のセクションでは、シリアル化の制御方法について説明します。
@@ -183,4 +184,4 @@ End Class
 
 - [バイナリ シリアル化](binary-serialization.md)
 - [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
-- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)
+- [セキュリティとシリアル化](../../framework/misc/security-and-serialization.md)

@@ -2,12 +2,12 @@
 title: ワークフローサービスの概要
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: cb013dd419d09af61eaff290709164427b1b655f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594869"
 ---
 # <a name="workflow-services-overview"></a>ワークフローサービスの概要
 
@@ -21,7 +21,7 @@ ms.locfileid: "75347859"
 
 WCF サービスを実装する場合は、サービスと、そのサービスが送受信するデータを記述する多くのコントラクトを定義します。 データは、データ コントラクトとメッセージ コントラクトで表されます。 WCF サービスもワークフロー サービスも、サービスの説明の一環として、データ コントラクトとメッセージ コントラクトの定義を使用します。 サービス自体は、(WSDL の形で) メタデータを公開して、サービスの操作を説明します。 WCF では、サービス コントラクトと操作コントラクトによって、サービス、およびサービスがサポートする操作を定義します。 ただし、ワークフロー サービスでは、これらのコントラクトはビジネス プロセス自体の一部です。 これらは、コントラクト推論と呼ばれるプロセスによってメタデータとして公開されます。 ワークフロー サービスが <xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用してホストされている場合は、ワークフローで見つかった一連のメッセージ アクティビティに基づいて、ワークフロー定義が確認され、コントラクトが生成されます。 具体的には、次のアクティビティとプロパティが、コントラクトの生成に使用されます。
 
-<xref:System.ServiceModel.Activities.Receive> アクティビティ
+<xref:System.ServiceModel.Activities.Receive> の利用状況
 
 - <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>
 
@@ -29,11 +29,11 @@ WCF サービスを実装する場合は、サービスと、そのサービス�
 
 - <xref:System.ServiceModel.Activities.Receive.Action%2A>
 
-<xref:System.ServiceModel.Activities.SendReply> アクティビティ
+<xref:System.ServiceModel.Activities.SendReply> の利用状況
 
 - <xref:System.ServiceModel.Activities.SendReply.Action%2A>
 
-<xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティ
+<xref:System.ServiceModel.Activities.TransactedReceiveScope> の利用状況
 
 コントラクト推論の最終的な結果は、WCF サービスと操作コントラクトと同じデータ構造を使用するサービスの説明です。 この情報を使用して、ワークフロー サービス用に WSDL が公開されます。
 
@@ -46,7 +46,7 @@ WCF は、2 つの MSMQ ベースのバインディングである <xref:System.
 
 ## <a name="hosting-a-workflow-service"></a>ワークフローサービスのホスト
 
-WCF サービスと同様に、ワークフローサービスをホストする必要があります。 WCF サービスは、<xref:System.ServiceModel.ServiceHost> クラスを使用してサービスとワークフローサービスをホストし、<xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用してサービスをホストします。 WCF サービスと同様に、ワークフローサービスはさまざまな方法でホストできます。次に例を示します。
+WCF サービスと同様に、ワークフローサービスをホストする必要があります。 WCF サービスでは、クラスを使用してサービスをホスト <xref:System.ServiceModel.ServiceHost> し、ワークフローサービスを使用して <xref:System.ServiceModel.Activities.WorkflowServiceHost> サービスをホストします。 WCF サービスと同様に、ワークフローサービスはさまざまな方法でホストできます。次に例を示します。
 
 - マネージ .NET Framework アプリケーションの場合。
 
@@ -56,9 +56,9 @@ WCF サービスと同様に、ワークフローサービスをホストする�
 
 - マネージド Windows サービス。
 
-マネージ .NET Framework アプリケーションまたはマネージ Windows サービスでホストされるワークフローサービスは、<xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスのインスタンスを作成し、<xref:System.ServiceModel.Activities.WorkflowService.Body%2A> プロパティ内にワークフロー定義を含む <xref:System.ServiceModel.Activities.WorkflowService> のインスタンスを渡します。 メッセージ アクティビティを格納するワークフロー定義は、ワークフロー サービスとして公開されます。
+マネージ .NET Framework アプリケーションまたはマネージ Windows サービスでホストされるワークフローサービスは、クラスのインスタンスを作成 <xref:System.ServiceModel.Activities.WorkflowServiceHost> し、プロパティ内にワークフロー定義を含むのインスタンスを渡し <xref:System.ServiceModel.Activities.WorkflowService> <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> ます。 メッセージ アクティビティを格納するワークフロー定義は、ワークフロー サービスとして公開されます。
 
-ワークフロー サービスを IIS または WAS でホストするには、ワークフロー サービス定義を格納する .xamlx ファイルを仮想ディレクトリに配置します。 既定のエンドポイント (<xref:System.ServiceModel.BasicHttpBinding>を使用) は自動的に作成されます。詳細については、「簡略化された[構成](../../../../docs/framework/wcf/simplified-configuration.md)」を参照してください。 また、Web.config ファイルを仮想ディレクトリに配置し、独自のエンドポイントを指定することもできます。 ワークフロー定義がアセンブリ内にある場合は、.svc ファイルを仮想ディレクトリに配置し、ワークフロー アセンブリを App_Code ディレクトリに配置できます。 この .svc ファイルには、サービス ホスト ファクトリと、ワークフロー サービスを実装するクラスを指定する必要があります。 次の例に、サービス ホスト ファクトリを指定し、ワークフロー サービスを実装するクラスを指定する方法を示します。
+ワークフロー サービスを IIS または WAS でホストするには、ワークフロー サービス定義を格納する .xamlx ファイルを仮想ディレクトリに配置します。 既定のエンドポイント (を使用 <xref:System.ServiceModel.BasicHttpBinding> ) は自動的に作成されます。詳細については、「簡略化された[構成](../simplified-configuration.md)」を参照してください。 また、Web.config ファイルを仮想ディレクトリに配置し、独自のエンドポイントを指定することもできます。 ワークフロー定義がアセンブリ内にある場合は、.svc ファイルを仮想ディレクトリに配置し、ワークフロー アセンブリを App_Code ディレクトリに配置できます。 この .svc ファイルには、サービス ホスト ファクトリと、ワークフロー サービスを実装するクラスを指定する必要があります。 次の例に、サービス ホスト ファクトリを指定し、ワークフロー サービスを実装するクラスを指定する方法を示します。
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

@@ -2,16 +2,16 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901271"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921157"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 
-Windows Communication Foundation (WCF) では、さまざまな理由により、特定のセキュリティシナリオがサポートされていません。 たとえば、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition では SSPI または Kerberos 認証プロトコルが実装されていないため、WCF では、そのプラットフォームで Windows 認証を使用してサービスを実行することはサポートされていません。 Windows XP Home Edition で WCF を実行する場合は、ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムがサポートされます。
+Windows Communication Foundation (WCF) では、さまざまな理由により、特定のセキュリティシナリオがサポートされていません。 たとえば、Windows XP Home Edition では SSPI または Kerberos 認証プロトコルが実装されていないため、WCF では、そのプラットフォームで Windows 認証を使用したサービスの実行はサポートされていません。 Windows XP Home Edition で WCF を実行する場合は、ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムがサポートされます。
 
 ## <a name="impersonation-scenarios"></a>権限借用のシナリオ
 
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) では、さまざまな理由により�
 
 WCF では偽装がサポートされていないため、次の条件に該当する場合は <xref:System.InvalidOperationException> がスローされます。
 
-- オペレーティング システムが [!INCLUDE[wxp](../../../../includes/wxp-md.md)] である。
+- オペレーティングシステムは Windows XP です。
 
 - 認証モードで Windows ID が生成された。
 
@@ -35,7 +35,7 @@ WCF では偽装がサポートされていないため、次の条件に該当�
  または、構成において、<`customBinding`> を作成し、<`security`> 要素を追加して `authenticationMode` 属性に SecureConversation および `requireSecurityContextCancellation` 属性に `true` を設定することによってもトークンが有効になります。
 
 > [!NOTE]
-> 上記の要件は限定的です。 たとえば、<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> は Windows ID を生成するバインド要素を作成しますが、SCT を確立しません。 したがって、`Required` で [!INCLUDE[wxp](../../../../includes/wxp-md.md)] オプションと共に使用できます。
+> 上記の要件は限定的です。 たとえば、<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> は Windows ID を生成するバインド要素を作成しますが、SCT を確立しません。 そのため、Windows XP の `Required` オプションと共に使用できます。
 
 ### <a name="possible-aspnet-conflict"></a>考えられる ASP.NET の競合
 

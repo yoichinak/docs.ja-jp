@@ -1,5 +1,5 @@
 ---
-title: ランタイムライブラリのメンバー
+title: ランタイム ライブラリのメンバー
 ms.date: 07/20/2015
 f1_keywords:
 - VisualBasic
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349614"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359491"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic ランタイム ライブラリのメンバー
 
-`Microsoft.VisualBasic` 名前空間には、Visual Basic ランタイムライブラリを構成するクラス、モジュール、定数、および列挙が含まれています。 これらのライブラリメンバーには、コードで使用できるプロシージャ、プロパティ、および定数値が用意されています。 各モジュールおよびクラスは、特定のカテゴリの機能を表します。  
+`Microsoft.VisualBasic` 名前空間には、Visual Basic ランタイム ライブラリを構成するクラス、モジュール、定数、列挙型が含まれています。 これらのライブラリ メンバーは、コードで使用できるプロシージャ、プロパティ、定数値を提供します。 各モジュールおよびクラスは、特定のカテゴリの機能を表します。  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection クラス  
   
@@ -191,11 +191,11 @@ ms.locfileid: "74349614"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic の定数と列挙型  
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 定数と列挙型  
 
- `Microsoft.VisualBasic` 名前空間は、Visual Basic ランタイムライブラリの一部として定数と列挙を提供します。 これらの定数値は、コード内で使用できます。 各列挙は、特定の機能のカテゴリを表します。 詳細については、「[定数と列挙型](../../visual-basic/language-reference/constants-and-enumerations.md)」を参照してください。  
+ `Microsoft.VisualBasic` 名前空間は、Visual Basic ランタイム ライブラリの一部として定数と列挙型を提供します。 これらの定数値はコード内で使用できます。 各列挙型は特定のカテゴリの機能を表します。 詳細については、[定数と列挙型](constants-and-enumerations.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [定数と列挙型](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [キーワード](../../visual-basic/language-reference/keywords/index.md)
+- [定数と列挙体](constants-and-enumerations.md)
+- [キーワード](keywords/index.md)

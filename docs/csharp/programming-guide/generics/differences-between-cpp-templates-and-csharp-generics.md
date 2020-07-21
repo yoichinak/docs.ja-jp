@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
 ms.openlocfilehash: e44f67353410c58c406620109270972df17f9f86
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75703534"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ テンプレートと C# ジェネリックの違い (C# プログラミング ガイド)
@@ -32,8 +32,8 @@ C# ジェネリックと C++ テンプレートのいずれも、パラメータ
   
 - C++ では、テンプレート内のすべての型パラメーターに対して有効でない可能性のあるコードを使用できます。このようなコードは、型パラメーターとして使用されている特定の型に対してチェックされます。 C# では、制約を満たすすべての型で正常に動作するようにクラスのコードを記述する必要があります。 たとえば、C++ では、型パラメーターのオブジェクトで算術演算子 `+` および `-` を使用し、これらの演算子をサポートしない型を使ってテンプレートをインスタンス化するとエラーを生成する関数を記述できます。 C# では、このような関数は許可されません。許可される言語構成要素は、制約から推定できるものだけに限られます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ジェネリックの概要](./index.md)
 - [テンプレート](/cpp/cpp/templates-cpp)

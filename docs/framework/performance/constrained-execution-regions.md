@@ -1,20 +1,24 @@
 ---
 title: 制約された実行領域
+description: 信頼できるマネージコードを作成するためのメカニズムの一部である、制約された実行領域 (CER) を使用して作業を開始します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d928c9357af4a02e389d9ffd5df4ad0195edab06
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716172"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309613"
 ---
 # <a name="constrained-execution-regions"></a>制約された実行領域
 制約された実行領域 (CER) は、信頼性のあるマネージド コードを作成するための機構の一部です。 CER は、領域内のコードが領域全体で実行されるのを防ぐ帯域外の例外を、共通言語ランタイム (CLR) がスローすることが制約された領域を定義します。 その領域内では、ユーザー コードは、帯域外の例外がスローされることになるコードの実行を制約されます。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> メソッドは `try` ブロックの直前にある必要があります。このメソッドによって、`catch`、`finally`、`fault` の各ブロックが制約された実行領域としてマークされます。 制約された領域としてマークされると、コードは信頼性の高いコントラクトでのみ他のコードを呼び出す必要があります。また、コードは、エラーを処理する準備ができている場合を除き、準備されていないメソッドや信頼性のないメソッドの割り当てや仮想呼び出しを行うことはできません。 CLR は、CER で実行されるコードのスレッドの中止を遅らせます。  
-  
+
+> [!IMPORTANT]
+> CER は、.NET Framework でのみサポートされています。 この記事は、.NET Core または .NET 5 以降には適用されません。
+
  制約された実行領域は、注釈付きの `try` ブロックだけでなく、特に <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> クラスから派生したクラス、および <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> メソッドを使用して実行されるコードで実行するクリティカル ファイナライザーなど、CLR のさまざまな形式で使用されます。  
   
 ## <a name="cer-advance-preparation"></a>CER の事前準備  
@@ -102,7 +106,7 @@ ms.locfileid: "75716172"
   
 - <xref:System.Threading.Monitor.Enter%2A> または <xref:System.IO.FileStream.Lock%2A>。  
   
-- セキュリティ チェック。 要求は実行しないでください (リンク確認要求のみ)。  
+- セキュリティのチェック。 要求は実行しないでください (リンク確認要求のみ)。  
   
 - COM オブジェクトおよびプロキシの <xref:System.Reflection.Emit.OpCodes.Isinst> と <xref:System.Reflection.Emit.OpCodes.Castclass>。  
   

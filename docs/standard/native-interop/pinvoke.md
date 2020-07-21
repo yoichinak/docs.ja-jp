@@ -4,7 +4,7 @@ description: .NET で P/Invoke を介してネイティブ関数を呼び出す�
 ms.date: 01/18/2019
 ms.openlocfilehash: fa8b43edfba50fbc620f257c4e7caf1673f83235
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75706306"

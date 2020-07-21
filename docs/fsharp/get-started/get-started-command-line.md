@@ -2,18 +2,18 @@
 title: コマンドラインツールF#を使って作業を開始する
 description: 任意のオペレーティングシステム (Windows、macOS、またはF# Linux) で .NET Core CLI を使用することにより、シンプルなマルチプロジェクトソリューションを構築する方法について説明します。
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559488"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504145"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI のF#使用を開始する
 
 この記事では、.NET Core CLI を使用しF#て、任意のオペレーティングシステム (Windows、macOS、または Linux) でを開始する方法について説明します。 コンソールアプリケーションによって呼び出されるクラスライブラリを使用して、複数のプロジェクトから成るソリューションを構築します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
 まず、最新の[.NET Core SDK](https://dotnet.microsoft.com/download)をインストールする必要があります。
 
@@ -135,7 +135,7 @@ NuGet の依存関係を復元し、`dotnet restore` `dotnet build` 実行して
 
 ディレクトリを `src/App` コンソールプロジェクトに変更し、`Hello World` を引数として渡してプロジェクトを実行します。
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```
@@ -149,6 +149,6 @@ I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次の手順
 
 次に、さまざまなF#機能の詳細については、「」[のF#ツアー](../tour.md)をご覧ください。

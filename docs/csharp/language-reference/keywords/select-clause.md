@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713093"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173511"
 ---
 # <a name="select-clause-c-reference"></a>select 句 (C# リファレンス)
 
@@ -33,11 +33,11 @@ ms.locfileid: "75713093"
 
 前の例の `studentQuery8` に示すように、返されるシーケンスの要素にソース要素のプロパティのサブセットのみを含めることもできます。 返されるシーケンスをできるだけ小さく維持することで、メモリ要件を減らし、クエリの実行の速度を向上させることができます。 これを行うには、`select` 句で匿名型を作成し、オブジェクト初期化子を使用して、ソース要素からの適切なプロパティで初期化します。 これを行う方法の例については、「[オブジェクト初期化子とコレクション初期化子](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 コンパイル時に、`select` 句は、<xref:System.Linq.Enumerable.Select%2A> 標準クエリ演算子へのメソッドの呼び出しに変換されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [クエリ キーワード (LINQ)](query-keywords.md)
@@ -45,4 +45,4 @@ ms.locfileid: "75713093"
 - [partial (メソッド) (C# リファレンス)](partial-method.md)
 - [匿名型](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [C# での LINQ](../../linq/index.md)
-- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)
+- [統合言語クエリ (LINQ)](../../programming-guide/concepts/linq/index.md)

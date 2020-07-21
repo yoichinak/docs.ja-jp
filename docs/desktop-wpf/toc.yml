@@ -1,7 +1,9 @@
 - name: .NET Core の Windows Presentation Foundation
-  href: overview/index.md
+  href: index.yml
 - name: 作業開始
   items:
+    - name: 概要
+      href: overview/index.md
     - name: WPF アプリケーションを作成する
       href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
 - name: 移行

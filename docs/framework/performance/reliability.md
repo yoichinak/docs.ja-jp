@@ -1,5 +1,6 @@
 ---
 title: 信頼性
+description: .NET の信頼性について理解する。 SQL Server など、.NET で実行されているホストの非同期例外から保護します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-ms.openlocfilehash: 2d6601c4cbad32f768ff16301307083f35d986a0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ce9ffbb7f58c2f5dc016c56c0e2ce13b45c30f26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715963"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474255"
 ---
 # <a name="reliability"></a>信頼性
 SQL Server などのサーバー環境で実行するコードは、非同期例外から保護することが重要です。 ここで説明するように、信頼性とは、SQL Server に限ったことではなく、.NET Framework バージョン 2.0 の環境で実行するホスト用に信頼性の高いコードを書くことです。 ただし、SQL Server はバージョン 2.0 の新しい信頼性機能を広範に使う初めてのサービスなので、例として使います。  
@@ -30,7 +31,7 @@ SQL Server などのサーバー環境で実行するコードは、非同期例
  [制約された実行領域](constrained-execution-regions.md)  
  制約された実行領域 (CER) の機能と動作について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Security.Permissions.HostProtectionAttribute>  
   
  <xref:System.Security.Permissions.HostProtectionResource>

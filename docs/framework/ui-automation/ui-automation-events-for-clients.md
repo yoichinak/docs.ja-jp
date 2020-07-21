@@ -1,20 +1,21 @@
 ---
 title: クライアントの UI オートメーション イベント
+description: .NET の UI オートメーションクライアントが Microsoft UI オートメーションイベントを使用する方法について説明します。 UI オートメーションを使用すると、クライアントは対象のイベントをサブスクライブできます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903741"
 ---
 # <a name="ui-automation-events-for-clients"></a>クライアントの UI オートメーション イベント
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このトピックでは、UI オートメーション クライアントでの [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] イベントの使用方法について説明します。  
   
@@ -23,11 +24,11 @@ ms.locfileid: "75741309"
  また、定義されたスコープ内のイベントだけをリッスンできるため、効率性も向上します。 たとえば、クライアントはツリー内のすべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素のフォーカス変更イベントをリッスンすることも、1 つの要素とその子孫のフォーカス変更イベントだけをリッスンすることもできます。  
   
 > [!NOTE]
-> あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティの変更によって、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] および Win32 コントロールの標準プロキシプロバイダーによってイベントが発生するとは限りません。  
+> あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティの変更によって、Windows フォームおよび Win32 コントロールの標準プロキシプロバイダーによってイベントが発生するとは限りません。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントの詳細なビューについては、「 [UI Automation イベントの概要](ui-automation-events-overview.md)」を参照してください。  
+ イベントの詳細なビューについ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI Automation イベントの概要](ui-automation-events-overview.md)」を参照してください。  
   
-<a name="Subscribing_to_Events"></a>   
+<a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>イベントのサブスクライブ  
  クライアント アプリケーションは特定の種類のイベントをサブスクライブするために、次のいずれかのメソッドを使用してイベント ハンドラーを登録します。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "75741309"
   
  コード例については、「 [UI オートメーションイベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)
 - [UI オートメーション イベントの概要](ui-automation-events-overview.md)

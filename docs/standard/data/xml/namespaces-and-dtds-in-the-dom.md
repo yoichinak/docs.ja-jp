@@ -3,12 +3,12 @@ title: DOM における名前空間と DTD
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 748be66c255aa018fb3e1ed541c6e5a92775408c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710597"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288785"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM における名前空間と DTD
 ドキュメント型定義 (DTD) によって名前空間のサポートは複雑になります。 たとえば、次の XML では、既定の属性の名前にコロンが含まれています。  
@@ -33,4 +33,4 @@ ms.locfileid: "75710597"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

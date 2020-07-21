@@ -9,34 +9,34 @@ helpviewer_keywords:
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 ms.openlocfilehash: c445f0d6117abfd1ac7a5153f8f80d55051a3f5a
 ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2020
 ms.locfileid: "75900928"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>方法: データ サービス要求のクライアント資格情報を指定する (WCF Data Services)
-既定では、クライアントライブラリは、OData サービスに要求を送信するときに資格情報を提供しません。 ただし、<xref:System.Net.NetworkCredential> の <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> プロパティに <xref:System.Data.Services.Client.DataServiceContext> を設定することで、データ サービスへの要求を認証するために資格情報を送信するように指定できます。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md)」を参照してください。 このトピックの例では、データサービスからデータを要求するときに、WCF Data Services クライアントによって使用される資格情報を明示的に指定する方法を示します。  
+既定では、OData サービスに要求を送信するとき、クライアント ライブラリから資格情報は提供されません。 ただし、<xref:System.Net.NetworkCredential> の <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> プロパティに <xref:System.Data.Services.Client.DataServiceContext> を設定することで、データ サービスへの要求を認証するために資格情報を送信するように指定できます。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md)」を参照してください。 このトピックの例では、データ サービスのデータを要求するときに WCF Data Services クライアントで使用する資格情報を明示的に提供する方法を示します。  
   
- このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアントデータクラスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。 OData Web サイトで公開されている[Northwind サンプルデータサービス](https://services.odata.org/Northwind/Northwind.svc/)を使用することもできます。このサンプルデータサービスは読み取り専用であるため、変更を保存しようとするとエラーが返されます。 OData Web サイトのサンプルデータサービスでは、匿名認証が許可されています。  
+ このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスは、「[WCF Data Services クイックスタート](quickstart-wcf-data-services.md)」を完了すると作成されます。 OData の Web サイトで公開されている [Northwind サンプル データ サービス](https://services.odata.org/Northwind/Northwind.svc/)を使用することもできます。このサンプル データ サービスは読み取り専用で、変更を保存しようとするとエラーが返されます。 OData の Web サイトのサンプル データ サービスでは、匿名認証が許可されます。  
   
-## <a name="example"></a>使用例  
- 次の例は、Windows Presentation Framework アプリケーションのメインページである Extensible Application Markup Language (XAML) ファイルの分離コードページからのものです。 この例では、`LoginWindow` インスタンスを表示してユーザーから認証資格情報を収集し、データ サービスへの要求を行うときにこれらの資格情報を使用します。  
+## <a name="example"></a>例  
+ 次の例は、Windows Presentation Framework アプリケーションのメイン ページである Extensible Application Markup Language (XAML) ファイルの分離コード ページからの抜粋です。 この例では、`LoginWindow` インスタンスを表示してユーザーから認証資格情報を収集し、データ サービスへの要求を行うときにこれらの資格情報を使用します。  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次の XAML は、WPF アプリケーションのメイン ページを定義します。  
   
  [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次の例は、データ サービスへの要求を行う前にユーザーから認証資格情報を収集するために使用するウィンドウの分離コード ページからの抜粋です。  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
  [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次の XAML は、WPF アプリケーションのログインを定義します。  
   
  [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  

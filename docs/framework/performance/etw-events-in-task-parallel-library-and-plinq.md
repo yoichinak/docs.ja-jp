@@ -1,15 +1,16 @@
 ---
 title: タスク並列ライブラリおよび PLINQ での ETW イベント
+description: タスク並列ライブラリおよび PLINQ での ETW イベントについて説明します。 これらのイベントを使用して、アプリケーションのプロファイリングとトラブルシューティングを行います。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716094"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309639"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>タスク並列ライブラリおよび PLINQ での ETW イベント
 
@@ -29,7 +30,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**名前**|**型**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -45,7 +46,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**名前**|**型**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -59,7 +60,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**名前**|**型**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -75,7 +76,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**名前**|**型**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -93,7 +94,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**名前**|**型**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -106,7 +107,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**名前**|**型**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -116,4 +117,4 @@ EVENT_DESCRIPTOR.Id = 1
 
 - [.NET Framework の ETW イベント](etw-events.md)
 - [タスク並列ライブラリ (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Parallel LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../standard/parallel-programming/introduction-to-plinq.md)

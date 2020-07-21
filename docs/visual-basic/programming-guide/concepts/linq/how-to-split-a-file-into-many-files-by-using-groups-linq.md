@@ -2,12 +2,12 @@
 title: '方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348025"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397714"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)
 
@@ -30,7 +30,7 @@ ms.locfileid: "75348025"
     Garcia, Debra
     ```
 
-2. 以下の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。いくつかの名前は両方のファイルに共通して存在することに注意してください。
+2. 次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "75348025"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```vb
 Class SplitWithGroups
@@ -118,9 +118,9 @@ End Class
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
+System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

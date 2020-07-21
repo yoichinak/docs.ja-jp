@@ -1,16 +1,17 @@
 ---
 title: スレッド プール ETW イベント
+description: スレッドプールの ETW イベントを確認します。これは、.NET のスレッドに関する情報を収集します。 スレッドプールイベントは、ワーカースレッドプールイベントまたは i/o スレッドプールイベントです。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715900"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475204"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
 これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
@@ -27,7 +28,7 @@ ms.locfileid: "75715900"
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart および ThreadPoolWorkerThreadStop  
  次の表に、これらのイベントのキーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -42,7 +43,7 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|作業の処理に使用可能なワーカー スレッド (既に作業の処理中のもの含む) の数。|  
 |RetiredWorkerThreadCount|win:UInt32|作業の処理に使用できないものの、後にさらに多くのスレッドが必要になった場合に備えて予約されているワーカー スレッドの数。|  
@@ -54,7 +55,7 @@ ms.locfileid: "75715900"
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -66,7 +67,7 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |スループット|win:Double|時間の単位あたりの入力候補の数です。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
@@ -74,7 +75,7 @@ ms.locfileid: "75715900"
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -86,7 +87,7 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|計測のサンプルの平均のスループット。|  
 |NewWorkerThreadCount|win:UInt32|新しいアクティブなワーカー スレッド数。|  
@@ -96,7 +97,7 @@ ms.locfileid: "75715900"
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -108,16 +109,16 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
-|継続期間|win:Double|これらの統計情報が収集される時間数 (秒)。|  
+|Duration|win:Double|これらの統計情報が収集される時間数 (秒)。|  
 |スループット|win:Double|この間隔中の 1 秒あたりの入力候補の平均数。|  
-|ThreadWave|win:Double|内部使用のために予約済みです。|  
-|ThroughputWave|win:Double|内部使用のために予約済みです。|  
-|ThroughputErrorEstimate|win:Double|内部使用のために予約済みです。|  
-|AverageThroughputErrorEstimate|win:Double|内部使用のために予約済みです。|  
+|ThreadWave|win:Double|内部使用のために予約されています。|  
+|ThroughputWave|win:Double|内部使用のために予約されています。|  
+|ThroughputErrorEstimate|win:Double|内部使用のために予約されています。|  
+|AverageThroughputErrorEstimate|win:Double|内部使用のために予約されています。|  
 |ThroughputRatio|win:Double|この間隔中にアクティブなワーカー スレッドの数の変動によって引き起こされる、スループットの相対的な向上。|  
-|信頼度|win:Double|ThroughputRatio フィールドの有効性の測定結果。|  
+|Confidence|win:Double|ThroughputRatio フィールドの有効性の測定結果。|  
 |NewcontrolSetting|win:Double|アクティブなスレッド数の将来のバリエーションのベースラインとして使用するアクティブなワーカー スレッドの数。|  
 |NewThreadWaveMagnitude|Win:UInt16|アクティブなスレッド数の、将来のバリエーションの大きさを指定します。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
@@ -128,7 +129,7 @@ ms.locfileid: "75715900"
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -140,16 +141,16 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
-|[カウント]|win:UInt64|新しく作成されたスレッドを含む、I/O のスレッドの数です。|  
+|Count|win:UInt64|新しく作成されたスレッドを含む、I/O のスレッドの数です。|  
 |NumRetired|win:UInt64|提供終了になったワーカー スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -161,16 +162,16 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
-|[カウント]|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
+|Count|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -182,16 +183,16 @@ ms.locfileid: "75715900"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
-|[カウント]|win:UInt64|これを含む、スレッド プール内の I/O スレッドの数。|  
+|Count|win:UInt64|これを含む、スレッド プール内の I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|  
   
@@ -199,13 +200,13 @@ ms.locfileid: "75715900"
   
 |Event|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|I/O スレッドがスレッド プールに作成された。|  
+|`IOThreadTerminate`|45|スレッドプールで i/o スレッドが終了します。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
-|[カウント]|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
+|Count|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   

@@ -2,12 +2,12 @@
 title: サポートされている展開シナリオ
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 6898ec33564a526d0e444502ebb6ed7f142f1856
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5be9ab3d300da2095a45846d334512382b4067f6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347980"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743454"
 ---
 # <a name="supported-deployment-scenarios"></a>サポートされている展開シナリオ
 
@@ -35,17 +35,17 @@ ASP.NET Web アプリケーションホスティングサービスの多くの�
 
 ワークフロー サービスは完全信頼のアクセス許可を必要とし、部分的に信頼されたアプリケーションでは使用できません。
 
-詳細については、「[方法: ASP.NET 2.0 で中程度の信頼を使用する](https://go.microsoft.com/fwlink/?LinkId=84603)」を参照してください。
+詳細については、「[方法: ASP.NET 2.0 で中程度の信頼を使用する](https://docs.microsoft.com/previous-versions/msp-n-p/ff648344(v=pandp.10))」を参照してください。
 
 ## <a name="partial-trust-on-the-client"></a>クライアントでの部分信頼
 
 信頼されていないインターネット サイトからコードをダウンロードして実行する場合、ある程度のセキュリティ対策が必要です。 [ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)と WPF の XAML ブラウザーアプリケーション (XBAP) テクノロジはどちらも、部分信頼を使用して、信頼されていないコードに制限付きのアクセス許可 (インターネットゾーン) を付与します。
 
-WCF を使用すると、 [ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または XBAP によって配置された部分信頼アプリケーション内からリモートサーバーと通信できます。 インターネット ゾーン アクセス許可のセットが含まれる<xref:System.Net.WebPermission>で説明されている、サポートされている WCF バインドのいずれかを使用して、配信元サーバーとの通信にこれらのアプリケーションの元のホスト用できる[部分信頼機能の互換性](partial-trust-feature-compatibility.md).
+WCF を使用すると、 [ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または XBAP によって配置された部分信頼アプリケーション内からリモートサーバーと通信できます。 インターネットゾーンのアクセス許可セットには、元のホストの <xref:System.Net.WebPermission> が含まれています。これにより、これらのアプリケーションは、「[部分信頼機能の互換性](partial-trust-feature-compatibility.md)」で説明されているサポート対象の WCF バインディングを使用して、配信元サーバーと通信できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [コード アクセス セキュリティ](../../misc/code-access-security.md)
-- [WPF XAML ブラウザー アプリケーションの概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [ブラウザーでホストされるアプリケーションの Windows Presentation Foundation の概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
 - [部分信頼](partial-trust.md)
 - [ASP.NET の信頼レベルとポリシーファイル](https://docs.microsoft.com/previous-versions/wyts434y(v=vs.140))

@@ -2,12 +2,12 @@
 title: .NET での COM 相互運用
 description: .NET で COM ライブラリを相互運用する方法について説明します。
 ms.date: 07/11/2019
-ms.openlocfilehash: 4ea5c2330f8f90d676bfe7003a7307fc38822edf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 63205ae5c09d6c3929da13788eb781cd975ca814
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706375"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627375"
 ---
 # <a name="com-interop-in-net"></a>.NET での COM 相互運用
 

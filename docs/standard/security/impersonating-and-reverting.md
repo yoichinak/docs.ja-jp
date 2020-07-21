@@ -10,19 +10,19 @@ helpviewer_keywords:
 - security [.NET Framework], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-ms.openlocfilehash: 14b01ec3ac800abd795e87b641a442df100f102b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dbfd71830ace1eb8af9f55f06c9ce35c32d592bb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706020"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288018"
 ---
 # <a name="impersonating-and-reverting"></a>偽装と復帰
 場合によっては、Windows アカウント トークンを取得して、Windows アカウントを偽装する必要があります。 たとえば、ASP.NET ベースのアプリケーションが、時間によって複数のユーザーの代わりに操作しなければならない場合があります。 その場合、アプリケーションはインターネット インフォメーション サービス (IIS) から管理者を表すトークンを受け入れて、そのユーザーを偽装し、操作を実行してから前の ID に戻ります。 続いて、IIS から管理者より権限が少ないユーザーを表すトークンを受け入れ、操作を実行してから、また元に戻ります。  
   
  アプリケーションが、IIS によって現在のスレッドにアタッチされていない Windows アカウントを偽装しなければならない場合は、そのアカウントのトークンを取得し、そのトークンを使用してアカウントをアクティブ化する必要があります。 それには、次のタスクを実行します。  
   
-1. アンマネージ **LogonUser** メソッドを呼び出すことによって、特定のユーザーのアカウント トークンを取得します。 このメソッドは、.NET Framework の基底クラス ライブラリには含まれていませんが、アンマネージ **advapi32.dll** 内にあります。 アンマネージ コード内のメソッドへのアクセスは高度な操作であり、ここでは説明しません。 詳細については、「[アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)」を参照してください。 **LogonUser** メソッドと **advapi32.dll** の詳細については、プラットフォーム SDK ドキュメントを参照してください。  
+1. アンマネージ **LogonUser** メソッドを呼び出すことによって、特定のユーザーのアカウント トークンを取得します。 このメソッドは、.NET Framework の基底クラス ライブラリには含まれていませんが、アンマネージ **advapi32.dll** 内にあります。 アンマネージ コード内のメソッドへのアクセスは高度な操作であり、ここでは説明しません。 詳細については、「[アンマネージ コードとの相互運用](../../framework/interop/index.md)」を参照してください。 **LogonUser** メソッドと **advapi32.dll** の詳細については、プラットフォーム SDK ドキュメントを参照してください。  
   
 2. **WindowsIdentity** クラスの新しいインスタンスを作成し、トークンを渡します。 次のコードに、この呼び出しを示します。ここで、`hToken` は Windows トークンを表します。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "75706020"
     myImpersonation.Undo()  
     ```  
   
- 信頼されたコードが既に <xref:System.Security.Principal.WindowsPrincipal> オブジェクトをスレッドにアタッチしている場合は、アカウントトークンを取らないインスタンスメソッド**Impersonate**を呼び出すことができます。 この方法が役立つのは、スレッドで **WindowsPrincipal** オブジェクトが表しているユーザーが、現在プロセスが実行されているユーザーではない場合のみです。 このような状態は、たとえば、Windows 認証を有効にして、偽装を無効にした ASP.NET を使用している場合に発生することがあります。 その場合、プロセスはインターネット インフォメーション サービス (IIS) で構成されたアカウントで実行されますが、現在のプリンシパルは、ページにアクセスしている Windows ユーザーを表しています。  
+ 信頼されたコードが既にオブジェクトをスレッドにアタッチしている場合は、 <xref:System.Security.Principal.WindowsPrincipal> アカウントトークンを受け取らないインスタンスメソッド**Impersonate**を呼び出すことができます。 この方法が役立つのは、スレッドで **WindowsPrincipal** オブジェクトが表しているユーザーが、現在プロセスが実行されているユーザーではない場合のみです。 このような状態は、たとえば、Windows 認証を有効にして、偽装を無効にした ASP.NET を使用している場合に発生することがあります。 その場合、プロセスはインターネット インフォメーション サービス (IIS) で構成されたアカウントで実行されますが、現在のプリンシパルは、ページにアクセスしている Windows ユーザーを表しています。  
   
- **Impersonate**も**Undo**も、現在の呼び出しコンテキストに関連付けられている**プリンシパル**オブジェクト (<xref:System.Security.Principal.IPrincipal>) を変更しないことに注意してください。 偽装と元に戻す操作によって変更されるのは、現在のオペレーティング システム プロセスに関連付けたトークンです。  
+ **Impersonate**も**Undo**も、現在の**Principal** <xref:System.Security.Principal.IPrincipal> 呼び出しコンテキストに関連付けられているプリンシパルオブジェクト () を変更しないことに注意してください。 偽装と元に戻す操作によって変更されるのは、現在のオペレーティング システム プロセスに関連付けたトークンです。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Principal.WindowsIdentity>
 - <xref:System.Security.Principal.WindowsImpersonationContext>
-- [プリンシパル オブジェクトと ID オブジェクト](../../../docs/standard/security/principal-and-identity-objects.md)
-- [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)
+- [プリンシパル オブジェクトと ID オブジェクト](principal-and-identity-objects.md)
+- [アンマネージ コードとの相互運用](../../framework/interop/index.md)

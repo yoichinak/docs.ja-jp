@@ -10,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712677"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507127"
 ---
 # <a name="-operator-c-reference"></a>:: 演算子 (C# リファレンス)
 
@@ -56,7 +56,7 @@ ms.locfileid: "75712677"
   > [!NOTE]
   > `global` キーワードは、`::` 修飾子の左側の識別子に指定した場合にのみ、グローバル名前空間エイリアスとなります。
 
-また、[メンバー アクセス `.` 演算子](member-access-operators.md#member-access-operator-) を使ってエイリアスが設定された名前空間のメンバーにアクセスすることもできます。 ただし、`.` 演算子は型のメンバーにアクセスするためにも使用されます。 `::` 修飾子を使う場合、その左側の識別子は、同じ名前を持つ型または名前空間が存在したとしても、常に名前空間エイリアスを参照することが保証されます。
+また、[`.` トークン](member-access-operators.md#member-access-expression-)を使って、エイリアスが設定された名前空間のメンバーにアクセスすることもできます。 ただし、`.` トークンは型のメンバーにアクセスするためにも使用されます。 `::` 修飾子を使う場合、その左側の識別子は、同じ名前を持つ型または名前空間が存在したとしても、常に名前空間エイリアスを参照することが保証されます。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

@@ -1,5 +1,6 @@
 ---
 title: .NET でのセキュリティ
+description: .NET でのセキュリティについて説明します。 主要なセキュリティの概念、ロールベースのセキュリティ、暗号化モデル、および安全なコーディングのガイドラインについて説明するリンクに従ってください。
 ms.date: 06/04/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security [.NET Framework]
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 2e4c289d7049fb587cdc9a4928f98852483fde5f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 21511b580a4f922d2aef04cc79f5d551f0406b45
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705994"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767820"
 ---
 # <a name="security-in-net"></a>.NET でのセキュリティ
 

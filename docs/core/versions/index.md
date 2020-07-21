@@ -1,13 +1,13 @@
 ---
 title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
-ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.date: 06/24/2020
+ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619755"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -103,11 +103,14 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.1       | 最大 2.0     |
 | 2.2       | 最大 2.0     |
 | 3.0       | 最大 2.1     |
+| 3.1       | 最大 2.1     |
+
+.NET Standard のバージョンの対話型テーブルと、それらが .NET 実装にどのように対応しているのかについては、「[.NET Standard のバージョン](https://dotnet.microsoft.com/platform/dotnet-standard#versions)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [ターゲット フレームワーク](../../standard/frameworks.md)
-- [.NET Core の配布パッケージ](../build/distribution-packaging.md)
+- [.NET Core の配布パッケージ](../distribution-packaging.md)
 - [.NET Core サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
 - [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)

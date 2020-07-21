@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: adc1a10bb9acb14ee88589c13e28c49773e42100
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711143"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291592"
 ---
 # <a name="building-xml-schemas"></a>XML スキーマの作成
 <xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間のクラスは、W3C (World Wide Web Consortium) 勧告『XML Schema』で定義された構造に割り当てられ、メモリ内に XML スキーマを作成する場合に使用できます。  
@@ -88,10 +88,10 @@ ms.locfileid: "75711143"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML スキーマ オブジェクト モデルの概要](xml-schema-object-model-overview.md)
+- [XML スキーマの読み取りと書き込み](reading-and-writing-xml-schemas.md)
+- [XML スキーマの走査](traversing-xml-schemas.md)
+- [XML スキーマの編集](editing-xml-schemas.md)
+- [XML スキーマのインクルードまたはインポート](including-or-importing-xml-schemas.md)
+- [スキーマをコンパイルするための XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [スキーマのコンパイル後の情報セット](post-schema-compilation-infoset.md)

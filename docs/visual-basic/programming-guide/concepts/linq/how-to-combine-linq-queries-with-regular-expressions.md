@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75337557"
@@ -13,7 +13,7 @@ ms.locfileid: "75337557"
 
 この例では、<xref:System.Text.RegularExpressions.Regex> クラスを使用して正規表現を作成し、テキスト文字列内の複雑な一致を取得する方法を示します。 LINQ クエリを使用すると、正規表現で検索する必要のあるファイルだけをフィルターで抽出したり、結果の形式を指定したりするのが簡単になります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```vb
 Imports System.IO
@@ -86,7 +86,7 @@ End Class
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-Visual Basic コンソールアプリケーションプロジェクトを作成し、コードサンプルをコピーして貼り付け、プロジェクトプロパティのスタートアップオブジェクトの値を調整します。
+Visual Basic のコンソール アプリケーション プロジェクトを作成し、コード サンプルをコピーして貼り付け、プロジェクトのプロパティでスタートアップ オブジェクトの値を調整します。
 
 ## <a name="see-also"></a>関連項目
 

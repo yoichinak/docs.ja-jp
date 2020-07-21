@@ -1,13 +1,14 @@
 ---
 title: WCF サービスと ASP.NET
+description: WCF サービスを ASP.NET とサイドバイサイドでホストし、ASP.NET 互換モードでホストする方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 0a64e277d3465b77a2553d6b9c3901f09a6e1a52
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544741"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246416"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 
@@ -25,19 +26,19 @@ ASP.NET HTTP ランタイムは ASP.NET 要求を処理しますが、これら�
 
 - ASP.NET と WCF サービスは AppDomain の状態を共有できます。 2つのフレームワークは同じ AppDomain に共存できるため、WCF は AppDomain の状態を ASP.NET (静的変数、イベントなど) と共有することもできます。
 
-- WCF サービスは、ホスティング環境やトランスポートとは関係なく、一貫して動作します。 ASP.NET HTTP ランタイムは意図的に、IIS/ASP.NET ホスティング環境や HTTP 通信と強く結合する形で設計されています。 逆に、WCF はホスト環境全体で一貫して動作するように設計されています (WCF は IIS の内部と外部の両方で一貫して動作します)。また、IIS 7.0 以降でホストされているサービスは、公開しているすべてのエンドポイントで一貫した動作をします。これらのエンドポイントの中には、HTTP 以外のプロトコルを使用するものもあります。
+- WCF サービスは、ホスティング環境やトランスポートとは関係なく、一貫して動作します。 ASP.NET HTTP ランタイムは意図的に、IIS/ASP.NET ホスティング環境や HTTP 通信と強く結合する形で設計されています。 逆に、WCF は、ホスト環境間で一貫して動作するように設計されています (WCF は IIS の内部と外部の両方で一貫して動作します)。また、これらのエンドポイントの一部で HTTP 以外のプロトコルを使用している場合でも、IIS 7.0 以降でホストされるすべてのエンドポイントで一貫した動作
 
 - AppDomain 内では、HTTP ランタイムによって実装される機能は ASP.NET コンテンツに適用されますが、WCF には適用されません。 ASP.NET アプリケーションプラットフォームの HTTP 固有の多くの機能は、ASP.NET コンテンツを含む AppDomain 内部でホストされる WCF サービスには適用されません。 このような機能の例を次に示します。
 
-  - HttpContext: WCF サービス内からアクセスした場合、<xref:System.Web.HttpContext.Current%2A> は常に `null` ます。 代わりに、 <xref:System.ServiceModel.Channels.RequestContext> を使用してください。
+  - HttpContext: <xref:System.Web.HttpContext.Current%2A> `null` WCF サービス内からアクセスする場合は常にです。 代わりに、<xref:System.ServiceModel.Channels.RequestContext> を使用してください。
 
   - ファイルベースの承認: WCF セキュリティモデルでは、サービス要求が承認されているかどうかを判断するときに、サービスの .svc ファイルに適用されるアクセス制御リスト (ACL) を許可しません。
 
-  - 構成ベースの URL 承認: 同様に、WCF セキュリティモデルは、System.web の \<authorization > configuration 要素で指定された URL ベースの承認規則に準拠していません。 サービスが ASP によってセキュリティ保護された URL 空間に存在する場合、WCF 要求ではこれらの設定は無視されます。NET の URL 承認規則。
+  - 構成ベースの URL 承認: 同様に、WCF セキュリティモデルは、System.web の構成要素で指定されている URL ベースの承認規則に準拠していません \<authorization> 。 サービスが ASP によってセキュリティ保護された URL 空間に存在する場合、WCF 要求ではこれらの設定は無視されます。NET の URL 承認規則。
 
-  - HttpModule 機能拡張: WCF ホスティングインフラストラクチャは、<xref:System.Web.HttpApplication.PostAuthenticateRequest> イベントが発生したときに WCF 要求をインターセプトし、ASP.NET HTTP パイプラインに処理を返しません。 パイプラインの後の段階で要求をインターセプトするようにコード化されたモジュールは、WCF 要求をインターセプトしません。
+  - HttpModule 機能拡張: WCF ホスティングインフラストラクチャは、イベントが発生したときに WCF 要求 <xref:System.Web.HttpApplication.PostAuthenticateRequest> をインターセプトし、ASP.NET HTTP パイプラインに処理を返しません。 パイプラインの後の段階で要求をインターセプトするようにコード化されたモジュールは、WCF 要求をインターセプトしません。
 
-  - ASP.NET impersonation: 既定では、ASP.NET が System.web の \<identity impersonate = "true"/> 構成オプションを使用して偽装を有効にするように設定されている場合でも、WCF 要求は常に IIS プロセス id として実行されます。
+  - ASP.NET impersonation: 既定では、ASP.NET が System.web の構成オプションを使用して偽装を有効にするように設定されている場合でも、WCF 要求は常に IIS プロセス id として実行され \<identity impersonate="true" /> ます。
 
 これらの制限は、IIS アプリケーションでホストされる WCF サービスにのみ適用されます。 ASP.NET コンテンツの動作は、WCF の存在による影響を受けません。
 
@@ -57,19 +58,19 @@ ASP.NET HTTP ランタイムは ASP.NET 要求を処理しますが、これら�
 
 WCF モデルは、ホスティング環境やトランスポート間で一貫して動作するように設計されていますが、多くの場合、アプリケーションでこのような柔軟性が必要になることはありません。 WCF の ASP.NET 互換モードは、IIS の外部でホストする機能や、HTTP 以外のプロトコルを使用して通信することを必要としないが、ASP.NET Web アプリケーションプラットフォームのすべての機能を使用するシナリオに適しています。
 
-Wcf ホスティングインフラストラクチャが WCF メッセージをインターセプトして HTTP パイプラインからルーティングする既定のサイドバイサイド構成とは異なり、ASP.NET 互換モードで実行されている WCF サービスは、ASP.NET HTTP 要求ライフサイクルに完全に参加します。 互換モードでは、WCF サービスは <xref:System.Web.IHttpHandler> の実装によって HTTP パイプラインを使用します。これは、ASPX ページおよび ASMX Web サービスの要求の処理方法と同様です。 その結果、WCF は、次の ASP.NET 機能に関して ASMX と同じように動作します。
+Wcf ホスティングインフラストラクチャが WCF メッセージをインターセプトして HTTP パイプラインからルーティングする既定のサイドバイサイド構成とは異なり、ASP.NET 互換モードで実行されている WCF サービスは、ASP.NET HTTP 要求ライフサイクルに完全に参加します。 互換モードでは、WCF サービスは実装を介して HTTP パイプラインを使用し <xref:System.Web.IHttpHandler> ます。これは、ASPX ページおよび ASMX Web サービスの要求の処理方法と同様です。 その結果、WCF は、次の ASP.NET 機能に関して ASMX と同じように動作します。
 
-- <xref:System.Web.HttpContext>: ASP.NET 互換モードで実行されている WCF サービスは、<xref:System.Web.HttpContext.Current%2A> とそれに関連付けられた状態にアクセスできます。
+- <xref:System.Web.HttpContext>: ASP.NET 互換モードで実行されている WCF サービスは <xref:System.Web.HttpContext.Current%2A> 、とそれに関連付けられた状態にアクセスできます。
 
 - ファイルベースの承認: ASP.NET 互換モードで実行されている WCF サービスは、ファイルシステムのアクセス制御リスト (Acl) をサービスの .svc ファイルにアタッチすることによって、セキュリティで保護することができます。
 
 - 構成可能な URL 承認: ASP。Wcf サービスが ASP.NET 互換モードで実行されている場合、WCF 要求に対しては、NET の URL 承認規則が適用されます。
 
-- <xref:System.Web.HttpModuleCollection> 機能拡張: ASP.NET 互換モードで実行されている WCF サービスは、ASP.NET HTTP 要求ライフサイクルに完全に参加するため、HTTP パイプラインで構成されている HTTP モジュールは、サービス呼び出しの前と後の両方で WCF 要求に対して動作できます。
+- <xref:System.Web.HttpModuleCollection>拡張性: ASP.NET 互換モードで実行される WCF サービスは、ASP.NET HTTP 要求ライフサイクルに完全に参加するため、HTTP パイプラインで構成された HTTP モジュールは、サービス呼び出しの前後に WCF 要求を処理できます。
 
 - ASP.NET Impersonation: WCF サービスは、ASP.NET 偽装スレッドの現在の id を使用して実行されます。これは、アプリケーションに対して ASP.NET Impersonation が有効になっている場合、IIS プロセス id とは異なる場合があります。 ASP.NET impersonation と WCF impersonation の両方が特定のサービス操作に対して有効になっている場合、サービス実装は最終的に WCF から取得した id を使用して実行されます。
 
-WCF の ASP.NET 互換モードは、アプリケーションの Web.config ファイルにある次の構成を通じて、アプリケーションレベルで有効になります。
+WCF の ASP.NET 互換モードは、アプリケーションレベルで次の構成 (アプリケーションの Web.config ファイルにあります) によって有効になります。
 
 ```xml
 <system.serviceModel>
@@ -77,9 +78,9 @@ WCF の ASP.NET 互換モードは、アプリケーションの Web.config フ�
 </system.serviceModel>
 ```
 
-この値が指定されていない場合、既定値は `false` です。 `false` の値は、アプリケーションで実行されているすべての WCF サービスが ASP.NET 互換モードで動作しないことを示します。
+この値が `false` 指定されていない場合、既定値はになります。 の値は、 `false` アプリケーションで実行されているすべての WCF サービスが ASP.NET 互換モードで動作しないことを示します。
 
-ASP.NET 互換モードは、WCF の既定とは基本的に異なる要求の処理セマンティクスを意味します。個々のサービスの実装では、ASP.NET を使用するアプリケーション内で実行するかどうかを制御できます。互換モードが有効になっています。 各サービスは、ASP.NET 互換モードをサポートするかどうかを、<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> で示すことができます。 この属性の既定値は <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> です。
+ASP.NET 互換モードは、WCF の既定とは基本的に異なる要求の処理セマンティクスを意味するため、個々のサービスの実装では、ASP.NET 互換モードが有効になっているアプリケーション内で実行するかどうかを制御できます。 各サービスは、ASP.NET 互換モードをサポートするかどうかを、<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> で示すことができます。 この属性の既定値は <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> です。
 
 ```csharp
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
@@ -89,19 +90,19 @@ public class CalculatorService : ICalculatorSession
 
 アプリケーション全体を互換モードにしたとき、個々のサービスのサポート レベルがどうなるかを表に示します。
 
-|アプリケーション全体の互換モード設定|AspNetCompatibilityRequirementsMode<br /><br /> 設定|実際の動作|
+|アプリケーション全体の互換モード設定|AspNetCompatibilityRequirementsMode <br /><br /> 設定|実際の動作|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|サービスは正常に動作します。|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|サービスは正常に動作します。|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|サービスがメッセージを受信した時点でアクティベーション エラーが発生します。|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|サービスがメッセージを受信した時点でアクティベーション エラーが発生します。|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|サービスは正常に動作します。|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|サービスは正常に動作します。|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|サービスは正常に動作します。|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|サービスは正常に動作します。|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|サービスがメッセージを受信した時点でアクティベーション エラーが発生します。|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|サービスがメッセージを受信した時点でアクティベーション エラーが発生します。|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|サービスは正常に動作します。|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|サービスは正常に動作します。|
 
 > [!NOTE]
 > IIS 7.0 および WAS では、WCF サービスは、HTTP 以外のプロトコルを介して通信を行うことができます。 ただし、ASP.NET 互換モードが有効になっているアプリケーションで実行されている WCF サービスでは、非 HTTP エンドポイントの公開は許可されていません。 最初のメッセージを受信した時点で、アクティベーション例外が発生します。
 
-WCF サービスの ASP.NET 互換モードを有効にする方法の詳細については、「」および「 [ASP.NET compatibility](../samples/aspnet-compatibility.md) sample」を参照して <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> ください。
+WCF サービスの ASP.NET 互換モードを有効にする方法の詳細については、「」 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> および[ASP.NET の互換性](../samples/aspnet-compatibility.md)のサンプルを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

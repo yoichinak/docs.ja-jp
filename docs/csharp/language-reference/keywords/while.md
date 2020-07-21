@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: af616c2381b993f86296cbfa43a01ba2f9e000c2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712794"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401863"
 ---
 # <a name="while-c-reference"></a>while (C# リファレンス)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75712794"
 
 `while` ステートメントの使用方法を次の例に示します。 **[実行]** を選択して、コード例を実行します。 その後に、コードを変更し、もう一度実行することができます。
 
-[!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
+[!code-csharp-interactive[while loop example](snippets/IterationKeywordsExamples.cs#3)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

@@ -1,22 +1,24 @@
-- name: 'C# 関連のドキュメント'
+- name: C# 関連のドキュメント
   href: index.yml
-- name: はじめに
+- name: 作業開始
   items:
     - name: 概要
+      displayName: get started
       href: getting-started/index.md
-    - name: 'C# 言語と .NET Framework の概要'
+    - name: C# 言語と .NET Framework の概要
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: チュートリアル
   items:
     - name: 概要
+      displayName: tutorials
       href: tutorials/index.md
-    - name: 'C# によるプログラミングの入門'
+    - name: C# によるプログラミングの入門
       items:
         - name: 最初のレッスンを選択する
           href: tutorials/intro-to-csharp/index.md
         - name: Hello world
           href: tutorials/intro-to-csharp/hello-world.yml
-        - name: 'C# の数値'
+        - name: C# の数値
           href: tutorials/intro-to-csharp/numbers-in-csharp.yml
         - name: 分岐とループ
           href: tutorials/intro-to-csharp/branches-and-loops.yml
@@ -26,7 +28,7 @@
           items:
             - name: 環境を設定する
               href: tutorials/intro-to-csharp/local-environment.md
-            - name: 'C# の数値'
+            - name: C# の数値
               href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
             - name: 分岐とループ
               href: tutorials/intro-to-csharp/branches-and-loops-local.md
@@ -34,7 +36,7 @@
               href: tutorials/intro-to-csharp/arrays-and-collections.md
             - name: クラスの概要
               href: tutorials/intro-to-csharp/introduction-to-classes.md
-    - name: 'C# 6 を詳しく学習する'
+    - name: C# 6 を詳しく学習する
       href: tutorials/exploration/csharp-6.yml
     - name: 文字列補間を詳しく学習する - 対話形式
       href: tutorials/exploration/interpolated-strings.yml
@@ -60,13 +62,13 @@
       href: tutorials/console-teleprompter.md
     - name: REST クライアント
       href: tutorials/console-webapiclient.md
-    - name: 'C# と .NET での継承'
+    - name: C# と .NET での継承
       href: tutorials/inheritance.md
     - name: LINQ の使用
       href: tutorials/working-with-linq.md
     - name: 属性の使用
       href: tutorials/attributes.md
-- name: 'C# のツアー'
+- name: C# のツアー
   items:
     - name: はじめに
       href: tour-of-csharp/index.md
@@ -80,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: クラスとオブジェクト
       href: tour-of-csharp/classes-and-objects.md
-    - name: 構造体
-      href: tour-of-csharp/structs.md
     - name: 配列
       href: tour-of-csharp/arrays.md
     - name: インターフェイス
@@ -90,46 +90,43 @@
       href: tour-of-csharp/delegates.md
     - name: 属性
       href: tour-of-csharp/attributes.md
-- name: 'C# の新機能'
+- name: C# の新機能
   items:
-    - name: 'C# 8.0'
+    - name: C# 8.0
+      displayName: what's new
       href: whats-new/csharp-8.md
-    - name: 'C# 7.3'
+    - name: C# 7.3
       href: whats-new/csharp-7-3.md
-    - name: 'C# 7.2'
+    - name: C# 7.2
       href: whats-new/csharp-7-2.md
-    - name: 'C# 7.1'
+    - name: C# 7.1
       href: whats-new/csharp-7-1.md
-    - name: 'C# 7.0'
+    - name: C# 7.0
       href: whats-new/csharp-7.md
-    - name: 'C# 6'
+    - name: C# 6
       href: whats-new/csharp-6.md
     - name: コンパイラでの破壊的変更
       href: whats-new/breaking-changes.md
-    - name: 'C# バージョン履歴'
+    - name: C# バージョン履歴
       href: whats-new/csharp-version-history.md
     - name: 言語とフレームワークの関係
       href: whats-new/relationships-between-language-and-library.md
     - name: バージョンと更新に関する考慮事項
       href: whats-new/version-update-considerations.md
-- name: 'C# の概念'
+- name: C# の概念
   items:
-    - name: 'C# の型システム'
+    - name: C# 型システム
       href: programming-guide/types/index.md
     - name: null 許容参照型
       href: nullable-references.md
-    - name: 属性と制約を使用した null 許容 API の記述
-      href: nullable-attributes.md
+    - name: null 許容参照型を有効にするための方法を選択する
+      href: nullable-migration-strategies.md
     - name: 名前空間
       href: programming-guide/namespaces/index.md
     - name: 基本型
       href: basic-types.md
     - name: クラス
       href: programming-guide/classes-and-structs/classes.md
-    - name: 構造体
-      href: structs.md
-    - name: タプル
-      href: tuples.md
     - name: タプルとその他の型の分解
       href: deconstruct.md
     - name: インターフェイス
@@ -172,9 +169,9 @@
           href: linq/index.md
         - name: クエリ式の基本
           href: linq/query-expression-basics.md
-        - name: 'LINQ (C#)'
+        - name: LINQ (C#)
           href: linq/linq-in-csharp.md
-        - name: 'C# での LINQ クエリの作成'
+        - name: C# での LINQ クエリの作成
           href: linq/write-linq-queries.md
         - name: オブジェクトのコレクションの照会
           href: linq/query-a-collection-of-objects.md
@@ -238,9 +235,10 @@
       href: codedoc.md
     - name: バージョン管理
       href: versioning.md
-- name: 'C# に関するトピック'
+- name: 操作方法に関する C# の記事
   items:
-    - name: トピックのインデックス
+    - name: 記事のインデックス
+      displayName: how to's
       href: how-to/index.md
     - name: '`String.Split` を使用して文字列を解析する'
       href: how-to/parse-strings-using-split.md
@@ -282,25 +280,27 @@
       items:
         - name: 最初のアナライザーとコード修正を作成する
           href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
-- name: 'C# プログラミング ガイド'
+- name: C# プログラミング ガイド
   items:
     - name: 概要
+      displayName: programming guide
       href: programming-guide/index.md
-    - name: 'インサイド C# プログラム'
+    - name: インサイド C# プログラム
       items:
-        - name: 'インサイド C# プログラムとは'
+        - name: C# プログラム内の内容
           href: programming-guide/inside-a-program/index.md
         - name: Hello World -- 最初のプログラム
           href: programming-guide/inside-a-program/hello-world-your-first-program.md
-        - name: 'C# プログラムの一般構造'
+        - name: C# プログラムの一般構造
           href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
         - name: 識別子名
           href: programming-guide/inside-a-program/identifier-names.md
-        - name: 'C# のコーディング規則'
+        - name: C# のコーディング規則
           href: programming-guide/inside-a-program/coding-conventions.md
     - name: Main() とコマンド ライン引数
       items:
         - name: 概要
+          displayName: main method
           href: programming-guide/main-and-command-args/index.md
         - name: コマンド ライン引数
           href: programming-guide/main-and-command-args/command-line-arguments.md
@@ -311,10 +311,12 @@
     - name: プログラミングの概念
       items:
         - name: 概要
+          displayName: programming concepts
           href: programming-guide/concepts/index.md
-        - name: Async および Await を使用した非同期プログラミング
+        - name: async および await を使用した非同期プログラミング
           items:
             - name: 概要
+              displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: 非同期プログラミング モデル
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
@@ -347,42 +349,39 @@
         - name: 属性
           items:
             - name: 概要
+              displayName: attributes
               href: programming-guide/concepts/attributes/index.md
             - name: カスタム属性の作成
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: AttributeUsage
-              href: programming-guide/concepts/attributes/attributeusage.md
             - name: リフレクションを使用した属性へのアクセス
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
             - name: 属性を使用して C/C++ の共用体を作成する方法
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-            - name: 共通の属性
-              href: programming-guide/concepts/attributes/common-attributes.md
-        - name: 呼び出し元情報
-          href: programming-guide/concepts/caller-information.md
         - name: コレクション
           href: programming-guide/concepts/collections.md
         - name: 共変性と反変性
           items:
             - name: 概要
+              displayName: covariance and contravariance
               href: programming-guide/concepts/covariance-contravariance/index.md
-            - name: ジェネリック インターフェイスの変性
+            - name: ジェネリック インターフェイスの分散
               href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
               items:
                 - name: バリアント ジェネリック インターフェイスの作成
                   href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
-                - name: ジェネリック コレクションに対するインターフェイスでの変性の使用
+                - name: ジェネリック コレクションに対するインターフェイスでの分散の使用
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
-            - name: デリゲートの変性
+            - name: デリゲートの分散
               href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
               items:
-                - name: デリゲートの変性の使用
+                - name: デリゲートでの分散の使用
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
                 - name: Func および Action 汎用デリゲートでの分散の使用
                   href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
         - name: 式ツリー
           items:
             - name: 概要
+              displayName: expression trees
               href: programming-guide/concepts/expression-trees/index.md
             - name: 式ツリーを実行する方法
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
@@ -399,8 +398,9 @@
         - name: '統合言語クエリ (LINQ: Language-Integrated Query)'
           items:
             - name: 概要
+              displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
-            - name: 'C# の LINQ の概要'
+            - name: C# の LINQ の概要
               items:
                 - name: LINQ クエリの概要
                   href: programming-guide/concepts/linq/introduction-to-linq-queries.md
@@ -414,7 +414,7 @@
                   href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
                 - name: LINQ でのクエリ構文とメソッド構文
                   href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
-                - name: 'LINQ をサポートする C# の機能'
+                - name: LINQ をサポートする C# の機能
                   href: programming-guide/concepts/linq/features-that-support-linq.md
                 - name: 'チュートリアル: C# でのクエリの作成 (LINQ)'
                   href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
@@ -487,7 +487,7 @@
                     - name: CSV テキスト ファイルの列値を計算する方法 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ とリフレクション
-                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: リフレクションを使用してアセンブリのメタデータを照会する方法 (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ とファイル ディレクトリ
@@ -542,7 +542,7 @@
                       items:
                         - name: 関数型構築 (LINQ to XML)
                           href: programming-guide/concepts/linq/functional-construction-linq-to-xml.md
-                        - name: 'C# での XML ツリーの作成 (LINQ to XML)'
+                        - name: C# での XML ツリーの作成 (LINQ to XML)
                           href: programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md
                         - name: XML の解析
                           items:
@@ -572,7 +572,7 @@
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
                         - name: 名前空間プレフィックスを制御する方法 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
-                        - name: 'C# での既定の名前空間のスコープ'
+                        - name: C# での既定の名前空間のスコープ
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
                         - name: 名前空間内の XML に対するクエリを記述する方法
                           href: programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md
@@ -738,18 +738,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: 標準クエリ演算子の連結
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'チュートリアル: クエリの連結'
-                              items:
-                                - name: LINQ to XML における遅延実行とレイジー評価
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: 遅延実行の例
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: クエリの連結の例
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: 中間結果の具体化
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: 標準クエリ演算子の連結
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作'
                               items:
                                 - name: WordprocessingML ドキュメントの構造
@@ -870,9 +858,10 @@
           href: programming-guide/concepts/object-oriented-programming.md
         - name: リフレクション
           href: programming-guide/concepts/reflection.md
-        - name: 'シリアル化 (C#)'
+        - name: シリアル化 (C#)
           items:
             - name: 概要
+              displayName: serialization
               href: programming-guide/concepts/serialization/index.md
             - name: XML ファイルにオブジェクト データを書き込む方法
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
@@ -883,6 +872,7 @@
     - name: ステートメント、式、および演算子
       items:
         - name: 概要
+          displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
         - name: ステートメント
           href: programming-guide/statements-expressions-operators/statements.md
@@ -927,22 +917,18 @@
     - name: クラスと構造体
       items:
         - name: 概要
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: クラス
           href: programming-guide/classes-and-structs/classes.md
         - name: オブジェクト
           href: programming-guide/classes-and-structs/objects.md
-        - name: 構造体
-          items:
-            - name: 概要
-              href: programming-guide/classes-and-structs/structs.md
-            - name: 構造体の使用
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: 継承
           href: programming-guide/classes-and-structs/inheritance.md
         - name: ポリモーフィズム
           items:
             - name: 概要
+              displayName: polymorphism
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Override キーワードと New キーワードによるバージョン管理
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
@@ -966,7 +952,7 @@
               href: programming-guide/classes-and-structs/constants.md
             - name: 抽象プロパティを定義する方法
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: 'C# で定数を定義する方法'
+            - name: C# で定数を定義する方法
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: プロパティ
           items:
@@ -1049,6 +1035,7 @@
     - name: インターフェイス
       items:
         - name: 概要
+          displayName: interfaces
           href: programming-guide/interfaces/index.md
         - name: 明示的なインターフェイスの実装
           href: programming-guide/interfaces/explicit-interface-implementation.md
@@ -1059,18 +1046,20 @@
     - name: デリゲート
       items:
         - name: 概要
+          displayName: delegates
           href: programming-guide/delegates/index.md
         - name: デリゲートの使用
           href: programming-guide/delegates/using-delegates.md
         - name: 名前付きメソッドを使用したデリゲートと匿名メソッド
           href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: 'デリゲートを結合する方法 (マルチキャスト デリゲート) (C# プログラミング ガイド)'
+        - name: デリゲートを結合する方法 (マルチキャスト デリゲート) (C# プログラミング ガイド)
           href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
         - name: デリゲートを宣言し、インスタンス化して使用する方法
           href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
     - name: 配列
       items:
         - name: 概要
+          displayName: arrays
           href: programming-guide/arrays/index.md
         - name: オブジェクトとしての配列
           href: programming-guide/arrays/arrays-as-objects.md
@@ -1095,6 +1084,7 @@
     - name: インデクサー
       items:
         - name: 概要
+          displayName: indexers
           href: programming-guide/indexers/index.md
         - name: インデクサーの使用
           href: programming-guide/indexers/using-indexers.md
@@ -1105,6 +1095,7 @@
     - name: イベント
       items:
         - name: 概要
+          displayName: events
           href: programming-guide/events/index.md
         - name: イベントのサブスクリプションとサブスクリプション解除を行う方法
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
@@ -1119,6 +1110,7 @@
     - name: ジェネリック
       items:
         - name: 概要
+          displayName: generics
           href: programming-guide/generics/index.md
         - name: ジェネリック型の型パラメーター
           href: programming-guide/generics/generic-type-parameters.md
@@ -1134,7 +1126,7 @@
           href: programming-guide/generics/generics-and-arrays.md
         - name: 汎用デリゲート
           href: programming-guide/generics/generic-delegates.md
-        - name: 'C++ テンプレートと C# ジェネリックの違い'
+        - name: C++ テンプレートと C# ジェネリックの違い
           href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
         - name: ランタイムのジェネリック
           href: programming-guide/generics/generics-in-the-run-time.md
@@ -1145,6 +1137,7 @@
     - name: 名前空間
       items:
         - name: 概要
+          displayName: namespaces
           href: programming-guide/namespaces/index.md
         - name: 名前空間の使用
           href: programming-guide/namespaces/using-namespaces.md
@@ -1153,22 +1146,25 @@
     - name: unsafe コードとポインター
       items:
         - name: 概要と制限事項
+          displayName: unsafe code pointers
           href: programming-guide/unsafe-code-pointers/index.md
         - name: 固定サイズ バッファー
           href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
         - name: ポインター型
           items:
             - name: 概要
+              displayName: pointer types
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: ポインター変換
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
             - name: ポインターを使用してバイトの配列をコピーする方法
               href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
-    - name: XML ドキュメントのコメント
+    - name: XML ドキュメント コメント
       items:
         - name: 概要
+          displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
-        - name: ドキュメント コメントとして推奨されるタグ
+        - name: ドキュメント コメント用の推奨タグ
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
         - name: XML ファイルの処理
           href: programming-guide/xmldoc/processing-the-xml-file.md
@@ -1190,6 +1186,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>
@@ -1219,6 +1217,7 @@
     - name: 例外と例外処理
       items:
         - name: 概要
+          displayName: exceptions
           href: programming-guide/exceptions/index.md
         - name: 例外の使用
           href: programming-guide/exceptions/using-exceptions.md
@@ -1237,6 +1236,7 @@
     - name: ファイル システムとレジストリ
       items:
         - name: 概要
+          displayName: file system registry
           href: programming-guide/file-system/index.md
         - name: ディレクトリ ツリーを反復処理する方法
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
@@ -1262,7 +1262,7 @@
           href: programming-guide/interop/index.md
         - name: 相互運用性の概要
           href: programming-guide/interop/interoperability-overview.md
-        - name: 'C# の機能を使用して Office 相互運用オブジェクトにアクセスする方法'
+        - name: C# の機能を使用して Office 相互運用オブジェクトにアクセスする方法
           href: programming-guide/interop/how-to-access-office-onterop-objects.md
         - name: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する方法
           href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
@@ -1275,25 +1275,28 @@
 - name: 言語リファレンス
   items:
     - name: 概要
+      displayName: language reference
       href: language-reference/index.md
     - name: 言語バージョンの構成
       href: language-reference/configure-language-version.md
-    - name: 'C# のキーワード'
+    - name: C# のキーワード
       items:
         - name: 概要
+          displayName: keywords
           href: language-reference/keywords/index.md
-        - name: 組み込み型
+        - name: 型
           items:
             - name: 値型
               items:
-                - name: 値型の機能
-                  href: language-reference/keywords/value-types.md
+                - name: 概要
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: 整数数値型
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: 浮動小数点数値型
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: 組み込みの数値変換
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1305,8 +1308,12 @@
                 - name: 列挙型
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struct
-                  href: language-reference/keywords/struct.md
+                - name: 構造体型
+                  href: language-reference/builtin-types/struct.md
+                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
+                - name: タプル型
+                  href: language-reference/builtin-types/value-tuples.md
+                  displayName: 'value tuples, ValueTuple'
                 - name: null 許容値型
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
@@ -1321,22 +1328,19 @@
                   href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
+                - name: null 許容参照型
+                  href: language-reference/builtin-types/nullable-reference-types.md
+                  displayName: '? token, ? symbol'
             - name: void
-              href: language-reference/keywords/void.md
+              href: language-reference/builtin-types/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: 組み込み型
+              href: language-reference/builtin-types/built-in-types.md
             - name: アンマネージ型
               href: language-reference/builtin-types/unmanaged-types.md
-            - name: 型のリファレンス表
-              items:
-                - name: 組み込み型の一覧表
-                  href: language-reference/keywords/built-in-types-table.md
-                - name: 値型の一覧表
-                  href: language-reference/keywords/value-types-table.md
-                - name: 既定値の一覧表
-                  href: language-reference/keywords/default-values-table.md
-                - name: 数値結果テーブルの書式設定
-                  href: language-reference/keywords/formatting-numeric-results-table.md
+            - name: 既定の値
+              href: language-reference/builtin-types/default-values.md
         - name: 修飾子
           items:
             - name: アクセス修飾子
@@ -1435,6 +1439,7 @@
             - name: Checked と Unchecked
               items:
                 - name: 概要
+                  displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
                 - name: checked
                   href: language-reference/keywords/checked.md
@@ -1499,6 +1504,7 @@
         - name: コンテキスト キーワード
           items:
             - name: クイック リファレンス
+              displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
             - name: add
               href: language-reference/keywords/add.md
@@ -1510,17 +1516,18 @@
               href: language-reference/keywords/partial-method.md
             - name: remove
               href: language-reference/keywords/remove.md
-            - name: 設定
+            - name: set
               href: language-reference/keywords/set.md
             - name: when (フィルター条件)
               href: language-reference/keywords/when.md
-            - name: 値
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
         - name: クエリ キーワード
           items:
             - name: クイック リファレンス
+              displayName: query keywords
               href: language-reference/keywords/query-keywords.md
             - name: from 句
               href: language-reference/keywords/from-clause.md
@@ -1548,9 +1555,9 @@
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: の
+            - name: in
               href: language-reference/keywords/in.md
-    - name: 'C# 演算子'
+    - name: C# の演算子と式
       items:
         - name: 概要
           href: language-reference/operators/index.md
@@ -1570,10 +1577,10 @@
         - name: 比較演算子
           href: language-reference/operators/comparison-operators.md
           displayName: '>, <, >=, <=, greater, less'
-        - name: メンバー アクセス演算子
+        - name: メンバー アクセス演算子と式
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: 型テストとキャスト演算子
+        - name: 型のテスト演算子とキャスト式
           href: language-reference/operators/type-testing-and-cast.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: ユーザー定義の変換演算子
@@ -1600,7 +1607,7 @@
         - name: '?? および ??= 演算子'
           href: language-reference/operators/null-coalescing-operator.md
           displayName: 'null-coalescing, assignment'
-        - name: => 演算子
+        - name: '=> 演算子'
           href: language-reference/operators/lambda-operator.md
           displayName: 'lambda, expression body definition'
         - name: ':: 演算子'
@@ -1609,36 +1616,57 @@
         - name: await 演算子
           href: language-reference/operators/await.md
           displayName: async
-        - name: 既定の演算子
+        - name: 既定値式
           href: language-reference/operators/default.md
-          displayName: 'default value, default literal, type default'
+          displayName: 'default value, default operator, default literal, type default'
         - name: delegate 演算子
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
-        - name: nameof 演算子
+        - name: nameof 式
           href: language-reference/operators/nameof.md
+          displayName: nameof operator
         - name: new 演算子
           href: language-reference/operators/new-operator.md
           displayName: constructor
         - name: sizeof 演算子
           href: language-reference/operators/sizeof.md
-        - name: stackalloc 演算子
+        - name: stackalloc 式
           href: language-reference/operators/stackalloc.md
+          displayName: 'stack allocation, span, stackalloc operator'
+        - name: switch 式
+          href: language-reference/operators/switch-expression.md
+          displayName: 'switch, pattern matching, patterns'
         - name: true および false 演算子
           href: language-reference/operators/true-false-operators.md
         - name: 演算子のオーバーロード
           href: language-reference/operators/operator-overloading.md
-    - name: 'C# 特殊文字'
+    - name: C# 特殊文字
       items:
         - name: 概要
+          displayName: special characters
           href: language-reference/tokens/index.md
         - name: $ -- 文字列補間
           href: language-reference/tokens/interpolated.md
         - name: '@ -- 逐語的識別子'
           href: language-reference/tokens/verbatim.md
-    - name: 'C# プリプロセッサ ディレクティブ'
+    - name: コンパイラによって読み込まれる属性
+      items:
+        - name: グローバル属性
+          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+          href: language-reference/attributes/global.md
+        - name: 全般
+          displayName: 'Conditional, Obsolete, AttributeUsage'
+          href: language-reference/attributes/general.md
+        - name: 呼び出し元情報
+          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+          href: language-reference/attributes/caller-information.md
+        - name: Null 許容のスタティック分析
+          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+          href: language-reference/attributes/nullable-analysis.md
+    - name: C# プリプロセッサ ディレクティブ
       items:
         - name: 概要
+          displayName: preprocessor directives
           href: language-reference/preprocessor-directives/index.md
         - name: '#if'
           href: language-reference/preprocessor-directives/preprocessor-if.md
@@ -1668,17 +1696,18 @@
           href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
         - name: '#pragma checksum'
           href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
-    - name: 'C# コンパイラ オプション'
+    - name: C# コンパイラ オプション
       items:
         - name: 概要
+          displayName: compiler options
           href: language-reference/compiler-options/index.md
         - name: csc.exe を使用したコマンド ラインからのビルド
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
         - name: Visual Studio のコマンドラインのための環境変数を設定する方法
           href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
-        - name: 'カテゴリ別の C# コンパイラ オプションの一覧'
+        - name: カテゴリ別の C# コンパイラ オプションの一覧
           href: language-reference/compiler-options/listed-by-category.md
-        - name: 'アルファベット順の C# コンパイラ オプションの一覧'
+        - name: アルファベット順の C# コンパイラ オプションの一覧
           href: language-reference/compiler-options/listed-alphabetically.md
           items:
             - name: '@'
@@ -1741,6 +1770,8 @@
               href: language-reference/compiler-options/nowarn-compiler-option.md
             - name: '-nowin32manifest'
               href: language-reference/compiler-options/nowin32manifest-compiler-option.md
+            - name: '-nullable'
+              href: language-reference/compiler-options/nullable-compiler-option.md
             - name: '-optimize'
               href: language-reference/compiler-options/optimize-compiler-option.md
             - name: '-out'
@@ -1796,11 +1827,11 @@
               href: language-reference/compiler-options/win32manifest-compiler-option.md
             - name: '-win32res'
               href: language-reference/compiler-options/win32res-compiler-option.md
-    - name: 'C# コンパイラ エラー'
+    - name: C# コンパイラ エラー
       href: language-reference/compiler-messages/index.md
-    - name: 'C# 6.0 のドラフト仕様'
+    - name: C# 6.0 のドラフト仕様
       href: language-reference/specification/
-    - name: 'C# 7.0 - 8.0 の提案'
+    - name: C# 7.0 - 8.0 の提案
       href: language-reference/proposals/
 - name: チュートリアル
   href: walkthroughs.md

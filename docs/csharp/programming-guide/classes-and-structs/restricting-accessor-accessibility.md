@@ -10,10 +10,10 @@ helpviewer_keywords:
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
 ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714692"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>アクセサーのアクセシビリティの制限 (C# プログラミング ガイド)
@@ -63,9 +63,9 @@ ms.locfileid: "75714692"
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
-- [プロパティ](./properties.md)
+- [C# プログラミングガイド](../index.md)
+- [Properties](./properties.md)
 - [インデクサー](../indexers/index.md)
 - [アクセス修飾子](./access-modifiers.md)

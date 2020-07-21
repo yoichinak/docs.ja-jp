@@ -1,17 +1,18 @@
 ---
 title: .NET Framework の暗号モデル
+description: .NET での通常の暗号化アルゴリズムの実装を確認します。 オブジェクトの継承、ストリームのデザイン、& 構成の拡張可能な暗号化モデルについて説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11af4c15c8b291df898a3c2416faa15875eab70b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706228"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596320"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
 
@@ -33,19 +34,15 @@ ms.locfileid: "75706228"
 
 アルゴリズムに使用できるさまざまな実装例として、対称アルゴリズムを検討します。 すべての対称アルゴリズムのベースは <xref:System.Security.Cryptography.SymmetricAlgorithm> であり、次のアルゴリズムによって継承されます。
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> は、<xref:System.Security.Cryptography.AesCryptoServiceProvider> と <xref:System.Security.Cryptography.AesManaged> の 2 つのクラスによって継承されます。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> クラスは Aes の Windows 暗号化 API (CAPI) 実装のラッパーですが、<xref:System.Security.Cryptography.AesManaged> クラスは全体がマネージド コードで書かれています。 さらに、マネージド実装と CAPI 実装に加え、3 つ目の実装、Cryptography Next Generation (CNG) もあります。 CNG アルゴリズムの例が <xref:System.Security.Cryptography.ECDiffieHellmanCng> です。 CNG アルゴリズムは、Windows Vista 以降のバージョンで利用可能です。
 
-ご自身にとって最適な実装を選択できます。  マネージド実装は、.NET Framework をサポートするすべてのプラットフォームで利用できます。  CAPI 実装は、以前のオペレーティング システムで使用可能ですが、開発中止となっています。 CNG はまさに最新の実装であり、新しい開発が行われます。 ただし、マネージド実装は連邦情報処理規格 (FIPS: Federal Information Processing Standard) に認定されておらず、ラッパー クラスよりも低速である場合があります。
+ご自身にとって最適な実装を選択できます。 マネージ実装は、.NET Framework をサポートするすべてのプラットフォームで使用できます。 CAPI 実装は、以前のオペレーティングシステムで使用でき、開発されなくなりました。 CNG は、新しい開発が行われる最新の実装です。 ただし、マネージド実装は連邦情報処理規格 (FIPS: Federal Information Processing Standard) に認定されておらず、ラッパー クラスよりも低速である場合があります。
 
 ## <a name="stream-design"></a>ストリーム デザイン
 
@@ -53,7 +50,7 @@ ms.locfileid: "75706228"
 
 ## <a name="cryptographic-configuration"></a>暗号化の構成
 
-暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号化の構成の詳細については、「[暗号化クラスの構成](../../../docs/framework/configure-apps/configure-cryptography-classes.md)」を参照してください。
+暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号化の構成の詳細については、「[暗号化クラスの構成](../../framework/configure-apps/configure-cryptography-classes.md)」を参照してください。
 
 ## <a name="choosing-an-algorithm"></a>アルゴリズムの選択
 
@@ -61,36 +58,23 @@ ms.locfileid: "75706228"
 
 アプリケーションで推奨されるアルゴリズムの一覧を示します。
 
-- データのプライバシー :
-
+- データのプライバシー : 
   - <xref:System.Security.Cryptography.Aes>
-
-- データの整合性 :
-
+- データの整合性 : 
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
-- デジタル署名:
-
+- デジタル署名 : 
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
-- キー交換 :
-
+- キー交換 : 
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
-- 乱数生成 :
-
+- 乱数生成 : 
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
-- パスワードからのキー生成 :
-
+- パスワードからのキー生成 :  
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>関連項目
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [暗号化サービス](cryptographic-services.md)
+- [C での暗号化プロトコル、アルゴリズム、およびソースコードの適用 (Schneier)](https://www.schneier.com/books/applied_cryptography/)

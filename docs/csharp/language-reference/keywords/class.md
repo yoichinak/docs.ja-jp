@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713693"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "77673096"
 ---
 # <a name="class-c-reference"></a>class (C# リファレンス)
 
@@ -33,9 +33,9 @@ C# では、単一継承のみを使用できます。 つまり、クラスは 
 |継承|例|
 |-----------------|-------------|
 |None|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|なし。2 つのインターフェイスを実装|`class ImplClass: IFace1, IFace2 { }`|
-|1 つ。1 つのインターフェイスを実装|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|なし。2 つのインターフェイスを実装|`class ImplClass : IFace1, IFace2 { }`|
+|1 つ。1 つのインターフェイスを実装|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 名前空間内で直接宣言され、他のクラスに入れ子にされていないクラスは、[public](./public.md) または [internal](./internal.md) のいずれかです。 クラスは既定で `internal` です。
 
@@ -71,7 +71,7 @@ C# では、単一継承のみを使用できます。 つまり、クラスは 
 
 - [インターフェイス](../../programming-guide/interfaces/index.md)
 
-- [構造体](../../programming-guide/classes-and-structs/structs.md)
+- [構造体型](../builtin-types/struct.md)
 
 - [列挙型](../builtin-types/enum.md)
 

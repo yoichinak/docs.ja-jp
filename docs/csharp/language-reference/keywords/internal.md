@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713424"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173602"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
-`internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](./access-modifiers.md)です。 
+`internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](./access-modifiers.md)です。
   
  > このページでは、`internal` アクセスについて説明します。 `internal` キーワードも [`protected internal`](./protected-internal.md) アクセス修飾子に含まれます。
   
 internal 型またはメンバーは、次の例のように、同じアセンブリ内のファイルでのみアクセスできます。  
   
 ```csharp  
-public class BaseClass   
+public class BaseClass
 {  
     // Only accessible within the same assembly.
     internal static int x = 0;
@@ -43,7 +43,7 @@ public class BaseClass
 ```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
-internal class BaseClass   
+internal class BaseClass
 {  
    public static int intM = 0;  
 }  
@@ -52,9 +52,9 @@ internal class BaseClass
 ```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
-class TestAccess   
+class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // CS0122  
    }  
@@ -67,7 +67,7 @@ class TestAccess
 ```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
-public class BaseClass   
+public class BaseClass
 {  
    internal static int intM = 0;  
 }  
@@ -76,9 +76,9 @@ public class BaseClass
 ```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly2.dll  
-public class TestAccess   
+public class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
@@ -90,10 +90,10 @@ public class TestAccess
 
 詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [アクセス修飾子](./access-modifiers.md)
 - [アクセシビリティ レベル](./accessibility-levels.md)

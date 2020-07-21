@@ -8,10 +8,10 @@ helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
 ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713699"
 ---
 # <a name="checked-c-reference"></a>checked (C# リファレンス)
@@ -40,10 +40,10 @@ ms.locfileid: "75713699"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [Checked と Unchecked](./checked-and-unchecked.md)
 - [unchecked](./unchecked.md)

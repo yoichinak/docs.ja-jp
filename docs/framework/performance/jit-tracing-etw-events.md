@@ -1,16 +1,17 @@
 ---
 title: JIT トレース ETW イベント
+description: Just-in-time (JIT) トレース ETW イベントについて説明します。 これらのイベントは、JIT インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716004"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474463"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT トレース ETW イベント
 これらのイベントは、Just-in-time (JIT) インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。
@@ -20,7 +21,7 @@ ms.locfileid: "75716004"
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed イベント
  次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
@@ -32,7 +33,7 @@ ms.locfileid: "75716004"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|コンパイルされるメソッドの名前空間。|  
 |MethodBeingCompiledName|win:UnicodeString|コンパイルされるメソッドの名前。|  
@@ -50,7 +51,7 @@ ms.locfileid: "75716004"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded イベント  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
@@ -62,7 +63,7 @@ ms.locfileid: "75716004"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|コンパイルされるメソッドの名前空間。|  
 |MethodBeingCompiledName|win:UnicodeString|コンパイルされるメソッドの名前。|  
@@ -80,7 +81,7 @@ ms.locfileid: "75716004"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed イベント  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
@@ -92,7 +93,7 @@ ms.locfileid: "75716004"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|コンパイルされるメソッドの名前空間。|  
 |MethodBeingCompiledName|win:UnicodeString|コンパイルされるメソッドの名前。|  
@@ -110,7 +111,7 @@ ms.locfileid: "75716004"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded イベント  
  次の表に、キーワードとレベルを示します。  
   
-|イベントを発生させるキーワード|レベル|  
+|イベントを発生させるキーワード|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細 (5)|  
   
@@ -122,7 +123,7 @@ ms.locfileid: "75716004"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|[データ型]|説明|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|コンパイルされるメソッドの名前空間。|  
 |MethodBeingCompiledName|win:UnicodeString|コンパイルされるメソッドの名前。|  

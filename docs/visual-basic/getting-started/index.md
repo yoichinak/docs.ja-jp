@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559886"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243194"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入門
 
@@ -30,11 +30,11 @@ ms.locfileid: "75559886"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic の取得](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019): Visual Basic のサポートを含む Visual Studio のバージョン (無料版など) のダウンロード リンクを提供します。
+- [Visual Basic の取得](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019): Visual Basic のサポートが付属する Visual Studio のバージョン (無料版など) のダウンロード リンクを提供します。
 
 - [オブジェクト指向プログラミング](../programming-guide/concepts/object-oriented-programming.md): オブジェクト指向プログラミングの概要、独自のオブジェクトの作成方法、およびオブジェクトを使用してコーディングを簡潔にする方法を説明するページへのリンクを示します。
 
-- [サンプル](https://github.com/dotnet/samples/tree/master/snippets/visualbasic): Visual Basic によるサンプル コードへのリンクを示します。
+- [サンプル](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic): Visual Basic によるサンプル コードへのリンクを示します。
 
 - [チュートリアル](../walkthroughs.md): Visual Basic 言語のさまざまな面を説明するヘルプ ページの一覧を示します。
 

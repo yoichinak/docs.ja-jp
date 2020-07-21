@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
 ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712573"
 ---
 # <a name="elif-c-reference"></a>#elif (C# リファレンス)
@@ -28,7 +28,7 @@ ms.locfileid: "75712573"
   
  複数のシンボルを評価するときには、`==` (等値)、`!=` (非等値)、`&&` (AND)、および `||` (OR) の演算子を使用できます。 シンボルと演算子は、かっこを使用してグループ化できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `#elif` では、次のように記述した場合と同じ結果が得られます。  
   
 ```csharp
@@ -40,8 +40,8 @@ ms.locfileid: "75712573"
   
  `#elif` の使用例については、「[#if](./preprocessor-if.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](./index.md)

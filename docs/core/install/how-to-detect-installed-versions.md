@@ -1,17 +1,16 @@
 ---
 title: Windows、Linux、および macOS にインストールされた .NET Core バージョンを確認する - .NET Core
 description: コンピューターにインストールされている .NET Core のバージョンを一覧表示する方法について説明します。 これには .NET Core ランタイムと SDK が含まれます。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 8ce2710d71c56f182e936f898e25539bc50d3827
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802989"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core が既にインストールされていることを確認する方法
 
@@ -19,17 +18,21 @@ ms.locfileid: "75341349"
 
 SDK をインストールすると、対応するランタイムがインストールされます。
 
-この記事のいずれかのコマンドが失敗した場合は、ランタイムまたは SDK がインストールされていません。 詳細については、「[.NET Core のダウンロードとインストール](index.md)」を参照してください。
+この記事のいずれかのコマンドが失敗した場合は、ランタイムまたは SDK がインストールされていません。 詳細については、[Windows](windows.md)、[macOS](macos.md)、または [Linux](linux.md) のインストールに関する記事を参照してください。
 
 ## <a name="check-sdk-versions"></a>SDK バージョンを確認する
 
-現在インストールされている .NET Core SDK のバージョンをターミナルで確認できます。 ターミナルを開き、`dotnet --list-sdks` コマンドを実行します。
+現在インストールされている .NET Core SDK のバージョンをターミナルで確認できます。 ターミナルを開き、次のコマンドを実行します。
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+次のような出力が得られます。
 
 ::: zone pivot="os-windows"
 
 ```console
-dotnet --list-sdks
-
 2.1.500 [C:\program files\dotnet\sdk]
 2.1.502 [C:\program files\dotnet\sdk]
 2.1.504 [C:\program files\dotnet\sdk]
@@ -45,8 +48,6 @@ dotnet --list-sdks
 ::: zone pivot="os-linux"
 
 ```bash
-dotnet --list-sdks
-
 2.1.500 [/home/user/dotnet/sdk]
 2.1.502 [/home/user/dotnet/sdk]
 2.1.504 [/home/user/dotnet/sdk]
@@ -62,8 +63,6 @@ dotnet --list-sdks
 ::: zone pivot="os-macos"
 
 ```bash
-dotnet --list-sdks
-
 2.1.500 [/usr/local/share/dotnet/sdk]
 2.1.502 [/usr/local/share/dotnet/sdk]
 2.1.504 [/usr/local/share/dotnet/sdk]
@@ -78,13 +77,17 @@ dotnet --list-sdks
 
 ## <a name="check-runtime-versions"></a>ランタイムのバージョンを確認する
 
-`dotnet --list-runtimes` コマンドを使用して、現在インストールされている .NET Core ランタイムのバージョンを確認できます。
+次のコマンドで、現在インストールされている .NET Core ランタイムのバージョンを確認できます。
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+次のような出力が得られます。
 
 ::: zone pivot="os-windows"
 
 ```console
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -113,8 +116,6 @@ Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.Win
 ::: zone pivot="os-linux"
 
 ```bash
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
@@ -141,8 +142,6 @@ Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ::: zone pivot="os-macos"
 
 ```bash
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -163,6 +162,51 @@ Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
+
+::: zone-end
+
+## <a name="check-for-install-folders"></a>インストール フォルダーを確認する
+
+.NET Core がインストールされていても、オペレーティング システムまたはユーザー プロファイルの `PATH` 変数に追加されていない可能性があります。 前のセクションのコマンドを実行しても、機能しない場合があります。 別の方法として、.NET Core のインストール フォルダーが存在することを確認できます。
+
+インストーラーまたはスクリプトから .NET Core をインストールすると、標準のフォルダーにインストールされます。 通常、.NET Core のインストールに使用するインストーラーまたはスクリプトには、別のフォルダーにインストールするためのオプションがあります。 別のフォルダーにインストールする場合は、フォルダー パスの先頭を調整します。
+
+::: zone pivot="os-windows"
+
+- **dotnet 実行可能ファイル**\
+_C:\\program files\\dotnet\\dotnet.exe_
+
+- **.NET SDK**\
+_C:\\program files\\dotnet\\sdk\\<バージョン>\\_
+
+- **.NET ランタイム**\
+_C:\\program files\\dotnet\\shared\\<ランタイムの種類>\\<バージョン>\\_
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- **dotnet 実行可能ファイル**\
+_/home/user/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/home/user/share/dotnet/sdk/<バージョン>/_
+
+- **.NET ランタイム**\
+_/home/user/share/dotnet/shared/<ランタイムの種類>/<バージョン>/_
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- **dotnet 実行可能ファイル**\
+_/usr/local/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/usr/local/share/dotnet/sdk/<バージョン>/_
+
+- **.NET ランタイム**\
+_/usr/local/share/dotnet/shared/<ランタイムの種類>/<バージョン>/_
 
 ::: zone-end
 

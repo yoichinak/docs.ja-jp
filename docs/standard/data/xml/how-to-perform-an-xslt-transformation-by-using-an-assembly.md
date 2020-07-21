@@ -1,19 +1,19 @@
 ---
-title: '方法 : アセンブリを使用して XSLT 変換を実行する'
+title: '方法: アセンブリを使用して XSLT 変換を実行する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 623f997d1c11bc643ea4605614cac147b6069be5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710831"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287728"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>方法 : アセンブリを使用して XSLT 変換を実行する
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>方法: アセンブリを使用して XSLT 変換を実行する
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML ファイルと XSLT ファイルをローカル コンピューターにコピーするには  
@@ -171,17 +171,17 @@ XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパ�
 xslt.Load(typeof(Transform));  
 ```  
   
-を使用する場合  
+代入  
   
-```csharp 
+```csharp
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
-``` 
+```
   
-に置き換えます。 アセンブリの読み込み方法の詳細については、「<xref:System.Reflection.Assembly.Load%2A>」を参照してください。  
+に置き換えます。 Assembly.Load メソッドの詳細については、「<xref:System.Reflection.Assembly.Load%2A>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XSLT コンパイラ (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT コンパイラ (xsltc.exe)](xslt-compiler-xsltc-exe.md)
+- [XSLT 変換](xslt-transformations.md)
 - [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

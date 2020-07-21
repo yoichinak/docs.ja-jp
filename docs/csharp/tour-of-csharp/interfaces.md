@@ -1,14 +1,14 @@
 ---
 title: C# インターフェイス - C# 言語のツアー
 description: C# の型によって実装されるコントラクトを定義するインターフェイス
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 62d94462fa481379cf70d63a598deb7f36be204f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346841"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78159131"
 ---
 # <a name="interfaces"></a>インターフェイス
 

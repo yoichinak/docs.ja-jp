@@ -2,19 +2,19 @@
 layout: ApiBrowserPage
 hide_bc: true
 title: .NET API ブラウザー
-quickFilterColumn1: netframework-4.8,netcore-3.1,netstandard-2.1
-quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
-quickFilterColumn3: azure-dotnet,aspnetcore-3.1,ml-dotnet
+quickFilterColumn1: net-5.0,netcore-3.1,netstandard-2.1,netframework-4.8
+quickFilterColumn2: xamarin-forms,aspnetcore-3.1,efcore-3.1,roslyn-dotnet
+quickFilterColumn3: azure-dotnet,ml-dotnet,spark-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
-ms.date: 12/12/2019
-ms.openlocfilehash: d2729597dfdca51ab32e8877ea510b81dadd909e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/24/2020
+ms.openlocfilehash: b1781d0dddbcb368e0e26bd41f51eeaeeba809e0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337182"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308859"
 ---
 # <a name="net-api-browser"></a>.NET API ブラウザー
 
-.NET API ブラウザーへようこそ。ここは、Microsoft から提供される .NET ベースの API がすべて手に入るワンストップ ショップです。 下のボックスに入力すると、マネージド API の検索を始めることができます。 API ブラウザーの詳細については、[こちらのブログ投稿](https://aka.ms/apibrowser)をご覧ください。 フィードバックがあれば、[GitHub での MicrosoftDocs/フィードバック レポート](https://github.com/MicrosoftDocs/feedback/issues)で新しい問題を作成します。
+.NET API ブラウザーへようこそ。Microsoft から提供される .NET ベースの API がすべてここで揃います。 下のボックスに入力すると、マネージド API の検索を始めることができます。 API ブラウザーの詳細については、[こちらのブログ投稿](https://aka.ms/apibrowser)をご覧ください。 フィードバックがあれば、[GitHub の MicrosoftDocs/feedback リポジトリ](https://github.com/MicrosoftDocs/feedback/issues)で新しい問題を作成してください。

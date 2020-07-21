@@ -2,12 +2,12 @@
 title: Windows Communication Foundation へのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 08ab6468ed638b4e9f1ca2fdbac1c55076eafe99
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82e71afc911bff2504be15f7f9f2e736d943972b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584962"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation へのメッセージ キュー
 
@@ -115,23 +115,23 @@ Console.ReadLine();
 
 ## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する
 
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
 
 2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
     1. Visual Studio 2012 でサーバーマネージャーを開きます。
 
-    2. **[機能]** タブを展開します。
+    2. [**機能**] タブを展開します。
 
-    3. **[プライベートメッセージキュー]** を右クリックし、 **[新規]** 、 **[プライベートキュー]** の順に選択します。
+    3. [**プライベートメッセージキュー**] を右クリックし、[**新規**]、[**プライベートキュー**] の順に選択します。
 
-    4. **[トランザクション]** ボックスをオンにします。
+    4. [**トランザクション**] ボックスをオンにします。
 
-    5. 新しいキューの名前として `ServiceModelSamplesTransacted` を入力します。
+    5. `ServiceModelSamplesTransacted`新しいキューの名前として「」と入力します。
 
-3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。
 
-4. 1台のコンピューター構成でサンプルを実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。
+4. 1台のコンピューター構成でサンプルを実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。
 
 ## <a name="run-the-sample-across-computers"></a>コンピューター間でサンプルを実行する
 
@@ -150,12 +150,12 @@ Console.ReadLine();
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [方法 : WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [メッセージキュー](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [WCF のキュー](../feature-details/queues-in-wcf.md)
+- [方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [メッセージ キューイング (Message Queuing)](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

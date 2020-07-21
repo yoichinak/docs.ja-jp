@@ -1,17 +1,18 @@
 ---
 title: XPath ナビゲーションによるノードの選択
+description: .NET で XML ノードを選択する方法について説明します。 XML Path Language (XPath) ナビゲーションを使用して DOM 情報を照会できる、ドキュメント オブジェクト モデル (DOM) メソッドを使用します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: 8f4136683f13a52b84ab9e8bfd69f30c8914e029
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710181"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662512"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath ナビゲーションによるノードの選択
 XML ドキュメント オブジェクト モデル (DOM) には、DOM 内の情報を照会するための XPath (XML Path Language) ナビゲーションに使用できるメソッドが含まれています。 XPath を使用すると、特定の単一ノードを見つけたり、条件に一致するすべてのノードを検索したりできます。  
@@ -30,7 +31,7 @@ Dim root As XmlNode = doc.DocumentElement
 Dim nsmgr As New XmlNamespaceManager(doc.NameTable)  
 nsmgr.AddNamespace("bk", "urn:newbooks-schema")  
   
-' Select and display the first node in which the author's   
+' Select and display the first node in which the author's
 ' last name is Kingsolver.  
 Dim node As XmlNode = root.SelectSingleNode( _  
      "descendant::bk:book[bk:author/bk:last-name='Kingsolver']", nsmgr)  
@@ -47,7 +48,7 @@ XmlNode root = doc.DocumentElement;
 XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
 nsmgr.AddNamespace("bk", "urn:newbooks-schema");  
   
-// Select and display the first node in which the author's   
+// Select and display the first node in which the author's
 // last name is Kingsolver.  
 XmlNode node = root.SelectSingleNode(  
     "descendant::bk:book[bk:author/bk:last-name='Kingsolver']", nsmgr);  
@@ -162,4 +163,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

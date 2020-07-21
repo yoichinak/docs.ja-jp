@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-ms.openlocfilehash: 1a17aea66be7f9d35336434408c49bae8046b7e7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: b6e18fe02a828ae307ac7ade15650d3303f2600c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710909"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287806"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator による Xpath 式の評価
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XPath 式を評価する <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> メソッドを提供します。 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> メソッドは XPath 式を受け取って評価し、XPath 式の結果に基づいて W3C XPath 型のブール値、数字、文字列、またはノード セットを返します。  
@@ -49,9 +49,9 @@ Console.WriteLine(total);
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [XPathNavigator を使用した XML データの選択](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [XPathNavigator によるノードの一致](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [XPath クエリで認識されるノード型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [XPath クエリおよび名前空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [コンパイルされた XPath 式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [XPath データ モデルを使用した XML データの処理](process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator を使用した XML データの選択](select-xml-data-using-xpathnavigator.md)
+- [XPathNavigator によるノードの一致](matching-nodes-using-xpathnavigator.md)
+- [XPath クエリで認識されるノード型](node-types-recognized-with-xpath-queries.md)
+- [XPath クエリおよび名前空間](xpath-queries-and-namespaces.md)
+- [コンパイルされた XPath 式](compiled-xpath-expressions.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 6847f3c5d233b720f8f4c41cfc52ac663e5e810f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710077"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288629"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>名前またはインデックスによる順序付けられていないノードの取得
 W3C (World Wide Web Consortium) 仕様で NamedNodeMap として定義されている **XmlNamedNodeMap** は、名前またはインデックスでノードを参照する機能を持っており、順序付けられていないノード セットを処理する必要があります。 **XmlNamedNodeMap** にアクセスできるのは、メソッドまたはプロパティから **XmlNamedNodeMap** が返されたときだけです。 **XmlNamedNodeMap** を返すメソッドやプロパティには、次の 3 つがあります。  
@@ -87,7 +87,7 @@ class test {
         // Print out the number of attributes and their names.  
         Console.WriteLine( "Number of Attributes: "+ac.Count );  
         for( int i = 0; i < ac.Count; i++ )  
-            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );   
+            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );
   
         // Get the 'attr1' from child1.  
         XmlAttribute attr = doc.DocumentElement.ChildNodes[0].Attributes[0];  
@@ -97,9 +97,9 @@ class test {
   
         // 'attr1' will be removed from 'child1' and added to 'child2'.  
         // Print out the number of attributes and their names.  
-        Console.WriteLine( "Number of Attributes: "+ac.Count );          
+        Console.WriteLine( "Number of Attributes: "+ac.Count );
         for( int i = 0; i < ac.Count; i++ )  
-            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );   
+            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );
   
         // Create a new attribute and add to the collection.  
         XmlAttribute attr2 = doc.CreateAttribute( "attr4" );  
@@ -107,16 +107,16 @@ class test {
         ac.SetNamedItem( attr2 );  
   
         // Print out the number of attributes and their names.  
-        Console.WriteLine( "Number of Attributes: "+ac.Count );          
+        Console.WriteLine( "Number of Attributes: "+ac.Count );
         for( int i = 0; i < ac.Count; i++ )  
-            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );           
+            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );
   
     }  
 }  
 ```  
   
- **AttributeCollection** から属性を削除するコード サンプルについては、「[XmlNamedNodeMap.RemoveNamedItem メソッド](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)」を参照してください。 メソッドとプロパティの詳細については、「[XmlNamedNodeMap メンバー](AllMembers.T:System.Xml.XmlNamedNodeMap)」を参照してください。  
+ **AttributeCollection** から属性を削除するコード サンプルについては、「[XmlNamedNodeMap.RemoveNamedItem メソッド](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)」を参照してください。 メソッドとプロパティの詳細については、「[XmlNamedNodeMap メンバー](xref:System.Xml.XmlNamedNodeMap)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

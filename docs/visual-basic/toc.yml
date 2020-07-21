@@ -29,7 +29,7 @@
         - name: Accessing Application Settings
           href: developing-apps/programming/app-settings/index.md
         - name: ドライブ、ディレクトリ、およびファイルの処理
-          href: developing-apps/programming/drives-directories-files/processing.md
+          href: developing-apps/programming/drives-directories-files/index.md
     - name: My による開発
       href: developing-apps/development-with-my/index.md
       items:
@@ -212,7 +212,7 @@
       href: programming-guide/language-features/objects-and-classes/index.md
     - name: 演算子および式
       href: programming-guide/language-features/operators-and-expressions/index.md
-    - name: 手順
+    - name: プロシージャ
       href: programming-guide/language-features/procedures/index.md
     - name: ステートメント
       href: programming-guide/language-features/statements.md
@@ -399,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: 省略可能
+        - name: Optional
           href: language-reference/modifiers/optional.md
         - name: Out (ジェネリック修飾子)
           href: language-reference/modifiers/out-generic-modifier.md
@@ -807,7 +807,7 @@
           href: language-reference/statements/attribute-list.md
         - name: パラメーター リスト
           href: language-reference/statements/parameter-list.md
-        - name: Type List
+        - name: 型リスト
           href: language-reference/statements/type-list.md
     - name: XML のコメント用タグ
       href: language-reference/xmldoc/index.md
@@ -1414,6 +1414,6 @@
     - name: 言語仕様
       href: reference/language-specification/
 - name: サンプル アプリケーション
-  href: sample-applications.md
+  href: 'https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic'
 - name: チュートリアル
   href: walkthroughs.md

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711052"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289227"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>文字列の .NET Framework データ型への変換
 文字列を .NET Framework データ型に変換するには、アプリケーションの要件に適合する **XmlConvert** メソッドを使用します。 **XmlConvert** クラスで利用可能なすべての変換メソッドの一覧については、「<xref:System.Xml.XmlConvert>」を参照してください。  
@@ -22,7 +22,7 @@ ms.locfileid: "75711052"
   
 |.NET Framework 型|返される文字列|  
 |-------------------------|---------------------|  
-|Boolean|"true"、"false"|  
+|ブール型|"true"、"false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -33,7 +33,7 @@ ms.locfileid: "75711052"
 > [!NOTE]
 > 表中の .NET Framework 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
   
- **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 例:  
+ **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -49,7 +49,7 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
   
  **出力**  
   
- `<Date>2001-08-04T00:00:00</Date>`.  
+ `<Date>2001-08-04T00:00:00</Date>`。  
   
  整数を文字列に変換するコードを次に示します。  
   
@@ -76,9 +76,9 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |有効な文字列入力パラメーター|出力される .NET Framework 型|  
 |----------------------------------|--------------------------------|  
-|"TRUE"|Boolean.True|  
+|"true"|Boolean.True|  
 |"1"|Boolean.True|  
-|"FALSE"|Boolean.False|  
+|"false"|Boolean.False|  
 |"0"|Boolean.False|  
   
  たとえば、次のような XML があるとします。  
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  いずれも次のコードによって解釈することができ、**bvalue** は **System.Boolean.True** になります。  
@@ -133,5 +133,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>関連項目
 
-- [XML データ型の変換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [.NET Framework 型の文字列への変換](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [XML データ型の変換](conversion-of-xml-data-types.md)
+- [.NET Framework 型の文字列への変換](converting-dotnet-types-to-strings.md)

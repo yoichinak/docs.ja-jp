@@ -1,23 +1,23 @@
 ---
-title: System.string との比較
+title: System.Data.SQLite との比較
 ms.date: 12/13/2019
-description: Sqlite ライブラリと system.string ライブラリの違いの一部について説明します。
+description: Microsoft.Data.Sqlite と System.Data.SQLite のライブラリーの相違点をいくつか紹介します。
 ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
 ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2020
 ms.locfileid: "75900711"
 ---
-# <a name="comparison-to-systemdatasqlite"></a>System.string との比較
+# <a name="comparison-to-systemdatasqlite"></a>System.Data.SQLite との比較
 
-2005では、Robert Simpson は ADO.NET 2.0 用の SQLite プロバイダーであるを作成しました。 2010では、SQLite チームはプロジェクトのメンテナンスと開発を引き継ぎました。 Mono チームは2007のコードを Mono としてフォークしたことにも注意してください。 SQLite には長い歴史があり、Visual Studio ツールを使用して完全な機能を備えた安定した ADO.NET プロバイダーに進化しました。 新しいリリースでは、.NET Framework のすべてのバージョンと互換性のあるアセンブリを、バージョン2.0 および 3.5 .NET Compact Framework に戻すことができます。
+2005 年に、Robert Simpson は ADO.NET 2.0 用の SQLite プロバイダーである System.Data.SQLite を作成しました。 2010 年に、SQLite チームがプロジェクトのメンテナンスと開発を引き継ぎました。 また、2007 年に Mono チームがコードを Mono.Data.Sqlite としてフォークしたことも注目すべき点です。 System.Data.SQLite には長い歴史があり、Visual Studio ツールを備えた、安定したフル機能の ADO.NET プロバイダーに進化してきました。 新しいリリースでは引き続き、.NET Framework のすべてのバージョン (バージョン 2.0 や、.NET Compact Framework 3.5 も含む) と互換性のあるアセンブリが提供されています。
 
-.NET Core の最初のバージョン (2016 でリリース) は、.NET の単一、軽量、最新、およびクロスプラットフォームの実装でした。 古くなった Api と Api は、意図的に削除されています。 ADO.NET には、データセット Api (DataTable および DataAdapter を含む) は含まれていませんでした。
+.NET Core の最初のバージョン (2016 年にリリース) は、軽量で最新、かつクロスプラットフォームの .NET の 1 つの実装でした。 古くなった API や、代わりとなる新しいものがある API は、意図的に削除されています。 ADO.NET には DataSet API (DataTable と DataAdapter を含む) は含まれていませんでした。
 
-Entity Framework チームは、システムのデータコードベースについてよく理解していました。 EF チームのメンバーである brice Lambson は、以前は SQLite チームが Entity Framework バージョン5および6のサポートを追加しました。 また、.NET Core が計画されていたときと同じように、他のユーザーが SQLite ADO.NET プロバイダーの実装を試しています。 詳しい説明を終えた後、Entity Framework チームは Brice のプロトタイプに基づいて、Microsoft のデータを作成することにしました。 これにより、.NET Core の目標に合わせて、新しい軽量で最新の実装を作成できます。
+Entity Framework チームは、System.Data.SQLite コードベースについてある程度熟知していました。 EF チームのメンバーである Brice Lambson は、過去に SQLite チームが Entity Framework バージョン 5 と 6 のサポートを追加する作業を補助していました。 また Brice は、.NET Core が計画されていたときと同時期に、SQLite ADO.NET プロバイダーの独自の実装を実験していました。 長期にわたる話し合いの後、Entity Framework チームは、Brice のプロトタイプに基づいて Microsoft.Data.Sqlite を作成することを決定しました。 これにより、.NET Core の目標に沿った、軽量で最新の新たな実装を作成できるようになりました。
 
-ここでは、最新の例として、[ユーザー定義関数](user-defined-functions.md)を作成するためのコードを、次のコードに示します。
+最新が意味するものを表す例として、以下に、System.Data.SQLite と Microsoft.Data.Sqlite の両方で[ユーザー定義関数](user-defined-functions.md)を作成するコードを示します。
 
 ```csharp
 // System.Data.SQLite
@@ -32,46 +32,46 @@ connection.CreateFunction(
     (double arg) => Math.Ceiling(arg));
 ```
 
-2017では、.NET Core 2.0 の戦略が変更されました。 .NET Core を成功させるには、.NET Framework との互換性が不可欠であると判断されました。 データセット Api など、削除された Api の多くが再び追加されました。 他の多くの場合と同様に、このブロックが解除されたことにより、そのデータを .NET Core に移植することもできます。 ただし、現在のところ、軽量で最新の Microsoft. Data. Sqlite の目標は残っています。 ADO.NET によって実装されていない ADO.NET Api の詳細については、「[制限事項](adonet-limitations.md)」を参照してください。
+2017 年に、.NET Core 2.0 の戦略が変更されました。 .NET Core の成功には .NET Framework との互換性が不可欠であると判断したのです。 DataSet API など、削除されていた API の多くが再び追加されました。 他の多くのものと同様に、これによって System.Data.SQLite の障害となっていた要素が取り除かれ、.NET Core にも移植できるようになりました。 ただし、Microsoft.Data.Sqlite の当初の目標である軽量で最新という点も引き続き維持されています。 Microsoft.Data.Sqlite で実装されていない ADO.NET API の詳細については、「[ADO.NET の制限事項](adonet-limitations.md)」を参照してください。
 
-新しい機能が追加されたときに、データ sqlite の設計が考慮されます。 2つの間の変更を最小限に抑えるために、可能な場合は、これらの間の変更を最小限に抑えることをお試しください。
+Microsoft.Data.Sqlite に新機能が追加されるときは、System.Data.SQLite の設計が考慮されます。 Microsoft では、この 2 つの切り替えを容易にするため、できる限り、これらの間で行う変更を最小限に抑えるように努力しています。
 
 ## <a name="data-types"></a>データの種類
 
-Microsoft のデータ sqlite と system.string の最大の違いは、データ型の処理方法です。 「[データ型](types.md)」で説明されているように、quirkiness は、任意の文字列を列の型として指定できるようにする sqlite の基になるを非表示にしません。また、整数、実数、テキスト、BLOB の4つのプリミティブ型のみを持ちます。
+Microsoft.Data.Sqlite と System.Data.SQLite の最も大きな違いはデータ型の処理方法です。 「[データ型](types.md)」で説明しているように、Microsoft.Data.Sqlite では SQLite の根本にある特異な点、つまり、すべての任意文字列を列の型として指定でき、そのプリミティブ型は、INTEGER、REAL、TEXT、および BLOB の 4 つだけあるということを明らかにしています。
 
-データ SQLite は、列の型を .NET 型に直接マップするために、追加のセマンティクスを適用します。 これにより、プロバイダーはより厳密に型指定された感覚を持つことになりますが、いくつかの大まかな境界があります。 たとえば、SELECT ステートメントで式の列の型を指定するために、新しい SQL ステートメント (型) を導入する必要がありました。
+System.Data.SQLite では、追加のセマンティクスが列の型に適用され、それらが直接 .NET 型にマップされます。 これにより、このプロバイダーはより厳密に型指定されている印象を与えますが、改善が必要な点もあります。 たとえば、SELECT ステートメントで式の列の型を指定するために、新しい SQL ステートメント (TYPES) を導入する必要がありました。
 
 ## <a name="connection-strings"></a>接続文字列
 
-Microsoft Data Sqlite には、[接続文字列](connection-strings.md)キーワードがより多く含まれています。 次の表に、代わりに使用できる代替方法を示します。
+Microsoft.Data.Sqlite の方が、[接続文字列](connection-strings.md)キーワードの数が大幅に少なくなります。 次の表に、使用できる代替手段を示します。
 
 | キーワード          | 代替                                         |
 | ---------------- | --------------------------------------------------- |
-| キャッシュのサイズ       | `PRAGMA cache_size = <pages>` の送信                  |
-| 既定のタイムアウト  | SqliteConnection で DefaultTimeout プロパティを使用する |
-| FailIfMissing    | `Mode=ReadWrite` を使用してください。                                |
-| FullUri          | Data Source キーワードを使用する                         |
-| ジャーナルモード     | `PRAGMA journal_mode = <mode>` の送信                 |
-| レガシ形式    | `PRAGMA legacy_file_format = 1` の送信                |
-| 最大ページ数   | `PRAGMA max_page_count = <pages>` の送信              |
-| ページ サイズ        | `PRAGMA page_size = <bytes>` の送信                   |
-| 読み取り専用        | `Mode=ReadOnly` を使用してください。                                 |
-| Synchronous      | `PRAGMA synchronous = <mode>` の送信                  |
-| URI              | Data Source キーワードを使用する                         |
-| UseUTF16Encoding | `PRAGMA encoding = 'UTF-16'` の送信                   |
+| Cache Size       | `PRAGMA cache_size = <pages>` を送信します                  |
+| [Default Timeout]\(既定のタイムアウト\)  | SqliteConnection の DefaultTimeout プロパティを使用します |
+| FailIfMissing    | `Mode=ReadWrite` を使用します                                |
+| FullUri          | データ ソース キーワードを使用します                         |
+| Journal Mode     | `PRAGMA journal_mode = <mode>` を送信します                 |
+| Legacy Format    | `PRAGMA legacy_file_format = 1` を送信します                |
+| Max Page Count   | `PRAGMA max_page_count = <pages>` を送信します              |
+| Page Size        | `PRAGMA page_size = <bytes>` を送信します                   |
+| [読み取り専用]        | `Mode=ReadOnly` を使用します                                 |
+| 同期      | `PRAGMA synchronous = <mode>` を送信します                  |
+| URI              | データ ソース キーワードを使用します                         |
+| UseUTF16Encoding | `PRAGMA encoding = 'UTF-16'` を送信します                   |
 
-## <a name="authorization"></a>認証
+## <a name="authorization"></a>承認
 
-Sqlite の認証コールバックを公開する API がありません。 この機能に関するフィードバックを提供するには、問題[#13835](https://github.com/dotnet/efcore/issues/13835)を使用します。
+Microsoft.Data.Sqlite には、SQLite の認証コールバックを公開する API がありません。 この機能に関するフィードバックを送信するには、問題 [#13835](https://github.com/dotnet/efcore/issues/13835) を使用してください。
 
 ## <a name="data-change-notifications"></a>データ変更通知
 
-Sqlite のデータ変更通知を公開する API がありません。 この機能に関するフィードバックを提供するには、問題[#13827](https://github.com/dotnet/efcore/issues/13827)を使用します。
+Microsoft.Data.Sqlite には、SQLite のデータ変更通知を公開する API がありません。 この機能に関するフィードバックを送信するには、問題 [#13827](https://github.com/dotnet/efcore/issues/13827) を使用してください。
 
-## <a name="virtual-table-modules"></a>仮想テーブルモジュール
+## <a name="virtual-table-modules"></a>仮想テーブル モジュール
 
-Microsoft Data Sqlite には、仮想テーブルモジュールを作成するための API がありません。 この機能に関するフィードバックを提供するには、問題[#13823](https://github.com/dotnet/efcore/issues/13823)を使用します。
+Microsoft Data Sqlite には、仮想テーブル モジュールを作成するための API がありません。 この機能に関するフィードバックを送信するには、問題 [#13823](https://github.com/dotnet/efcore/issues/13823) を使用してください。
 
 ## <a name="see-also"></a>関連項目
 

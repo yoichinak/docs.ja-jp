@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 16e7cdc624979f9a35e287ea5274bd9398c83132
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715177"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "76744516"
 ---
 # <a name="reference-types-c-reference"></a>参照型 (C# リファレンス)
 
@@ -35,10 +35,9 @@ C# では、参照型と値型という 2 種類の型をサポートしてい�
 
 - [string](../builtin-types/reference-types.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [値型](value-types.md)
+- [値型](../builtin-types/value-types.md)

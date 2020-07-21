@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 529d77b0a66a8a3cedfe7a400af0fb34dd653322
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713342"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795171"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾子 (C# リファレンス)
 
@@ -59,7 +59,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
+- [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [修飾子](index.md)

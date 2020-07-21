@@ -10,10 +10,10 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75698639"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>ステートメント、式、および演算子 (C# プログラミング ガイド)
@@ -36,7 +36,7 @@ ms.locfileid: "75698639"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [キャストと型変換](../types/casting-and-type-conversions.md)

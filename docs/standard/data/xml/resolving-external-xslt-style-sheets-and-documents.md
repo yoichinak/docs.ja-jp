@@ -3,12 +3,12 @@ title: 外部の XSLT スタイル シートとドキュメントの解決
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: 8e7f66d67f2520b47c30307a98ed2f3fb08455df
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710298"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291475"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>外部の XSLT スタイル シートとドキュメントの解決
 変換中には、外部リソースの解決が必要になるときがあります。  
@@ -43,15 +43,15 @@ ms.locfileid: "75710298"
   
 ## <a name="see-also"></a>関連項目
 
-- [XslTransform クラスを使用した XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [XslTransform クラスによる XSLT プロセッサの実装](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
-- [XslTransform からの出力](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)
-- [異なるストアでの XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)
-- [スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
-- [\<msxsl:script> を使用した XSLT スタイルシートのスクリプト](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
-- [msxsl:node-set() 関数のサポート](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)
-- [変換における XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [変換における XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [XslTransform への XPathDocument の入力](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [XslTransform への XmlDataDocument の入力](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [XslTransform への XmlDocument の入力](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [XslTransform クラスを使用した XSLT 変換](xslt-transformations-with-the-xsltransform-class.md)
+- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform からの出力](outputs-from-an-xsltransform.md)
+- [異なるストアでの XSLT 変換](xslt-transformations-over-different-stores.md)
+- [スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
+- [\<msxsl:script> を使用した XSLT スタイルシートのスクリプト](xslt-stylesheet-scripting-using-msxsl-script.md)
+- [msxsl:node-set() 関数のサポート](support-for-the-msxsl-node-set-function.md)
+- [変換における XPathNavigator](xpathnavigator-in-transformations.md)
+- [変換における XPathNodeIterator](xpathnodeiterator-in-transformations.md)
+- [XslTransform への XPathDocument の入力](xpathdocument-input-to-xsltransform.md)
+- [XslTransform への XmlDataDocument の入力](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform への XmlDocument の入力](xmldocument-input-to-xsltransform.md)

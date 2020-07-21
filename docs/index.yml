@@ -10,15 +10,18 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 12/19/2019
-  ms.openlocfilehash: e416292663cb72404ea0c9bbb3dceccacd9faf32
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.date: 07/10/2020
+  ms.openlocfilehash: aa4090f5de075015aae7fdbd85905ec5ace2e757
+  ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/25/2019
-  ms.locfileid: "75353455"
+  ms.lasthandoff: 07/13/2020
+  ms.locfileid: "86281655"
 highlightedContent:
   items:
+  - title: .NET をダウンロードする
+    itemType: download
+    url: https://dotnet.microsoft.com/download
   - title: C# の概要。 クイック インタラクティブ スタート。
     itemType: get-started
     url: csharp/tutorials/intro-to-csharp/hello-world.yml
@@ -31,14 +34,17 @@ highlightedContent:
   - title: .NET の新機能に関するドキュメント
     itemType: whats-new
     url: whats-new/index.yml
+  - title: .NET 開発者向けの Azure
+    itemType: overview
+    url: azure/index.yml
 conceptualContent:
-  title: '.NET: 空き。 クロスプラットフォームである。 オープンソース。'
+  title: '.NET: フリー。 クロス プラットフォーム。 オープン ソース。'
   summary: Web、モバイル、デスクトップ、ゲーム、IoT など、あらゆるアプリを構築するための開発者用プラットフォームです。 Windows、Linux、macOS でサポートされています。
   items:
   - title: オープンソースの .NET
     summary: .NET Core について学習する
     links:
-    - url: core/index.md
+    - url: core/index.yml
       itemType: overview
       text: .NET Core の概要
     - url: core/whats-new/dotnet-core-3-1.md
@@ -56,13 +62,19 @@ conceptualContent:
     - url: core/tutorials/index.md
       itemType: tutorial
       text: チュートリアル
+    - url: https://dotnet.microsoft.com/platform/community
+      itemType: whats-new
+      text: コミュニティ
+    - url: https://dotnetfoundation.org/
+      itemType: overview
+      text: .NET Foundation
   - title: .NET の概念
     summary: .NET の基本的な概念について学習する
     links:
     - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
       itemType: video
       text: .NET とは何ですか?
-    - url: standard/index.md
+    - url: standard/index.yml
       itemType: overview
       text: .NET の概要
     - url: standard/net-standard.md
@@ -80,7 +92,7 @@ conceptualContent:
     - url: standard/components.md
       itemType: concept
       text: .NET アーキテクチャ コンポーネント
-    - url: framework/index.md
+    - url: framework/index.yml
       itemType: overview
       text: .NET Framework (Windows) アプリ
   - title: .NET アプリを開発する
@@ -174,11 +186,13 @@ additionalContent:
         text: Xamarin.Android
       - url: /xamarin/xamarin-forms
         text: Xamarin.Forms
+      - url: /azure/developer/mobile-apps
+        text: Azure での Xamarin アプリの開発
     - title: デスクトップ
       links:
       - url: /uwp
         text: ユニバーサル Windows アプリ
-      - url: desktop-wpf/index.md
+      - url: desktop-wpf/index.yml
         text: Windows Presentation Foundation (.NET Core)
       - url: framework/wpf/index.md
         text: Windows Presentation Foundation (.NET Framework)
@@ -216,8 +230,8 @@ additionalContent:
         text: .NET Core の IoT ライブラリ
       - url: https://www.nuget.org/packages/System.Device.Gpio
         text: System.Device.Gpio NuGet パッケージ
-  - title: API リファレンス セクション
-    summary: 目的に応じて、.NET API のリファレンス ドキュメントを検索します。
+  - title: API と言語リファレンス
+    summary: .NET API および言語リファレンスのドキュメントを検索します。
     items:
     - title: .NET Core API リファレンス
       summary: .NET Core の API リファレンス ドキュメント
@@ -225,6 +239,9 @@ additionalContent:
     - title: .NET Framework API リファレンス
       summary: .NET Framework の API リファレンス ドキュメント
       url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+    - title: ASP.NET Core API リファレンス
+      summary: ASP.NET Core の API リファレンス ドキュメント
+      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
     - title: ML.NET API リファレンス
       summary: ML.NET の API リファレンス ドキュメント
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
@@ -240,4 +257,4 @@ additionalContent:
     - title: Visual Basic の言語リファレンス
       summary: Visual Basic 言語のリファレンスと仕様
       url: visual-basic/language-reference/index.md
-  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md)をお読みください。
+  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)をお読みください。

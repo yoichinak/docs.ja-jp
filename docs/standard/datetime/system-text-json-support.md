@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344650"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867348"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>TimeOffset support in での DateTime と DateTimeOffset のサポート
 
@@ -136,7 +136,7 @@ System.string ライブラリは、ISO 8601:-2019 拡張プロファイルに従
 | 部分的な時間    | "HH ': ' mm ': ' ss [FFFFFFF]"     | UTC オフセット情報なしの時間                                             |
 | 完全な日付       | "yyyy'-'mm'-'dd't'hh-' MM'-' dd"            | カレンダーの日付                                                                   |
 | フルタイム       | "Partial time'K"           | 現地時刻と UTC の時差を使用した日の UTC または現地時刻 |
-| 日時       | "' 完全な日付 ' ' ' ' ' ' ' は完全な時刻 '" になります。 | カレンダーの日付と時刻。例: 2019-07-26T16:59:57-05:00                   |
+| 日付/時刻       | "' 完全な日付 ' ' ' ' ' ' ' は完全な時刻 '" になります。 | カレンダーの日付と時刻。例: 2019-07-26T16:59:57-05:00                   |
 
 ### <a name="support-for-parsing"></a>解析のサポート
 
@@ -199,4 +199,12 @@ System.string ライブラリは、ISO 8601:-2019 拡張プロファイルに従
 
         秒の小数部とローカルオフセットを使用して、<xref:System.DateTime> または <xref:System.DateTimeOffset> の書式を設定するために使用します。
 
-存在する場合は、最大7桁の小数部が書き込まれます。 これは、この解決に限定される <xref:System.DateTime> の実装と一致します。
+<xref:System.DateTime> または <xref:System.DateTimeOffset> インスタンスの[ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現の秒の小数部に後続のゼロがある場合、<xref:System.Text.Json.JsonSerializer> と <xref:System.Text.Json.Utf8JsonWriter> では、後続のゼロを指定せずにインスタンスの表現を書式設定します。
+たとえば、[ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現が `2019-04-24T14:50:17.1010000Z`である <xref:System.DateTime> インスタンスは、<xref:System.Text.Json.JsonSerializer> および <xref:System.Text.Json.Utf8JsonWriter>によって `2019-04-24T14:50:17.101Z` として書式設定されます。
+
+<xref:System.DateTime> または <xref:System.DateTimeOffset> インスタンスの[ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現の秒の小数部にゼロが含まれている場合、<xref:System.Text.Json.JsonSerializer> と <xref:System.Text.Json.Utf8JsonWriter> は秒の小数部なしでインスタンスの表現を書式設定します。
+たとえば、[ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現が `2019-04-24T14:50:17.0000000+02:00`である <xref:System.DateTime> インスタンスは、<xref:System.Text.Json.JsonSerializer> および <xref:System.Text.Json.Utf8JsonWriter>によって `2019-04-24T14:50:17+02:00` として書式設定されます。
+
+秒の小数点以下桁数で0を切り捨てた場合、書き込まれるラウンドトリップに関する情報を保持するために必要な最小の出力が可能になります。
+
+最大7桁の小数点以下桁数が書き込まれます。 これは、この解決に限定される <xref:System.DateTime> の実装と一致します。

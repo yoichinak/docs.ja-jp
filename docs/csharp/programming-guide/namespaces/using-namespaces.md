@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75700199"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241930"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
 
-C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET Framework クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
+C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
   
 ## <a name="accessing-namespaces"></a>名前空間へのアクセス
 
@@ -42,7 +42,7 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
 ## <a name="using-namespaces-to-control-scope"></a>名前空間を用いたスコープの制御
 
- `namespace` キーワードを使用して、スコープを宣言します。 プロジェクト内でスコープを作成すると、コードの編成が容易になり、グローバルに一意の型を作成できます。 次の例では、入れ子関係にある 2 つの名前空間で `SampleClass` というクラスを定義します。 [メンバー アクセス `.` 演算子](../../language-reference/operators/member-access-operators.md#member-access-operator-)は、呼び出されるメソッドを区別するために使用されます。  
+ `namespace` キーワードを使用して、スコープを宣言します。 プロジェクト内でスコープを作成すると、コードの編成が容易になり、グローバルに一意の型を作成できます。 次の例では、入れ子関係にある 2 つの名前空間で `SampleClass` というクラスを定義します。 [`.` トークン](../../language-reference/operators/member-access-operators.md#member-access-expression-)を使用して、呼び出されるメソッドを区別します。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -94,6 +94,6 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
 
 - [C# プログラミング ガイド](../index.md)
 - [名前空間](./index.md)
-- [演算子 .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [メンバー アクセス式](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: 演算子](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern エイリアス](../../language-reference/keywords/extern-alias.md)

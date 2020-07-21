@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342696"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846446"
 ---
 # <a name="bool-c-reference"></a>bool (C# リファレンス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75342696"
 
 `true` および `false` リテラルを使用して、`bool` 変数を初期化したり、`bool` 値を渡したりすることができます。
 
-[!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>3 値ブール型ロジック
 
@@ -35,7 +35,7 @@ ms.locfileid: "75342696"
 
 null 許容値型の詳細については、「[null 許容値型](nullable-value-types.md)」を参照してください。
 
-## <a name="conversions"></a>変換
+## <a name="conversions"></a>コンバージョン
 
 C# には、`bool` 型が関係する変換が 2 つのみ用意されています。 対応する null 許容型の `bool?` への暗黙的な変換と、`bool?` 型からの明示的な変換です。 ただし、.NET には、`bool` 型との間の変換に使用できる追加のメソッドが用意されています。 詳細については、<xref:System.Boolean?displayProperty=nameWithType> API リファレンス ページの「[ブール値との間の変換](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)」セクションを参照してください。
 
@@ -43,8 +43,8 @@ C# には、`bool` 型が関係する変換が 2 つのみ用意されていま�
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[Bool 型](~/_csharplang/spec/types.md#the-bool-type)」セクションを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [組み込み型の一覧表](../keywords/built-in-types-table.md)
+- [値型](value-types.md)
 - [True および False 演算子](../operators/true-false-operators.md)

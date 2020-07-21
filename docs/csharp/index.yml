@@ -6,12 +6,12 @@ metadata:
   description: C# プログラミングを学ぶ - ビギナー開発者、C# を初めて使用する開発者、および C# / .NET の上級開発者向け
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/25/2019
-  ms.locfileid: "75339170"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102724"
 landingContent:
 - title: C# によるプログラミングの学習
   linkLists:
@@ -77,8 +77,8 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: null 値を許容するように API に注釈を付ける
-      url: nullable-attributes.md
+    - text: null 許容移行の方法を選択する
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: 非同期ストリームの使用と生成
