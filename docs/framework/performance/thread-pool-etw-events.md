@@ -1,16 +1,17 @@
 ---
 title: スレッド プール ETW イベント
+description: スレッドプールの ETW イベントを確認します。これは、.NET のスレッドに関する情報を収集します。 スレッドプールイベントは、ワーカースレッドプールイベントまたは i/o スレッドプールイベントです。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240494"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475204"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
 これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
@@ -42,7 +43,7 @@ ms.locfileid: "78240494"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|作業の処理に使用可能なワーカー スレッド (既に作業の処理中のもの含む) の数。|  
 |RetiredWorkerThreadCount|win:UInt32|作業の処理に使用できないものの、後にさらに多くのスレッドが必要になった場合に備えて予約されているワーカー スレッドの数。|  
@@ -60,13 +61,13 @@ ms.locfileid: "78240494"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|Description|  
+|Event|イベント ID|説明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|1 つのサンプルの情報のコレクションを参照します。つまり、特定のコンカレンシー レベルの特定の時刻におけるスループットの測定値です。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |スループット|win:Double|時間の単位あたりの入力候補の数です。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
@@ -80,13 +81,13 @@ ms.locfileid: "78240494"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|Description|  
+|Event|イベント ID|説明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|スレッドの挿入 (山登り法) アルゴリズムが、コンカレンシー レベルに変更があったと判断した場合に、コントロールの変更を記録します。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|計測のサンプルの平均のスループット。|  
 |NewWorkerThreadCount|win:UInt32|新しいアクティブなワーカー スレッド数。|  
@@ -102,13 +103,13 @@ ms.locfileid: "78240494"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|Description|  
+|Event|イベント ID|説明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|スレッド プールに関するデータを収集します。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |Duration|win:Double|これらの統計情報が収集される時間数 (秒)。|  
 |スループット|win:Double|この間隔中の 1 秒あたりの入力候補の平均数。|  
@@ -140,7 +141,7 @@ ms.locfileid: "78240494"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |Count|win:UInt64|新しく作成されたスレッドを含む、I/O のスレッドの数です。|  
 |NumRetired|win:UInt64|提供終了になったワーカー スレッドの数。|  
@@ -161,7 +162,7 @@ ms.locfileid: "78240494"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |Count|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
@@ -182,7 +183,7 @@ ms.locfileid: "78240494"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |Count|win:UInt64|これを含む、スレッド プール内の I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
@@ -203,12 +204,12 @@ ms.locfileid: "78240494"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データ型|Description|  
+|フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |Count|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CLR ETW イベント](clr-etw-events.md)

@@ -1,16 +1,17 @@
 ---
 title: メソッド ETW イベント
+description: 「CLR メソッドイベント」、「clr メソッドマーカー」、「CLR メソッドの詳細イベント」、「MethodJittingStarted」など、メソッドに固有の情報を収集する ETW イベントを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f48867a0aef417ad0b19a15d78e0c0f01a7c30a1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715995"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474320"
 ---
 # <a name="method-etw-events"></a>メソッド ETW イベント
 
@@ -24,7 +25,7 @@ ms.locfileid: "75715995"
 
 次の表に、キーワードとレベルを示します。 詳細については、「 [CLR ETW のキーワードとレベル](clr-etw-keywords-and-levels.md)」を参照してください。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) ランタイム プロバイダー|情報提供 (4)|
 |`NGenKeyword` (0x20) ランタイム プロバイダー|情報提供 (4)|
@@ -42,7 +43,7 @@ ms.locfileid: "75715995"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|メソッドの一意の識別子。 JIT ヘルパー メソッドの場合、これはメソッドの開始アドレスに設定されます。|
 |ModuleID|win:UInt64|このメソッドが属するモジュールの識別子 (JIT ヘルパーの場合は 0)。|
@@ -58,7 +59,7 @@ ms.locfileid: "75715995"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) ランダウン プロバイダー|情報提供 (4)|
 |`JitRundownKeyword` (0x10) ランダウン プロバイダー|情報提供 (4)|
@@ -75,7 +76,7 @@ ms.locfileid: "75715995"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
@@ -83,7 +84,7 @@ ms.locfileid: "75715995"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) ランタイム プロバイダー|詳細 (5)|
 |`NGenKeyword` (0x20) ランタイム プロバイダー|詳細 (5)|
@@ -101,7 +102,7 @@ ms.locfileid: "75715995"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|メソッドの一意の識別子。 JIT ヘルパー メソッドの場合は、メソッドの開始アドレスに設定されます。|
 |ModuleID|win:UInt64|このメソッドが属するモジュールの識別子 (JIT ヘルパーの場合は 0)。|
@@ -118,7 +119,7 @@ ms.locfileid: "75715995"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) ランタイム プロバイダー|詳細 (5)|
 |`NGenKeyword` (0x20) ランタイム プロバイダー|詳細 (5)|
@@ -133,14 +134,14 @@ ms.locfileid: "75715995"
 
 次の表に、イベント データを示します。
 
-|フィールド名|[データ型]|説明|
+|フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|メソッドの一意の識別子。|
 |ModuleID|win:UInt64|このメソッドが属するモジュールの識別子。|
 |MethodToken|win:UInt32|動的メソッドおよび JIT ヘルパーの場合は 0。|
 |MethodILSize|win:UInt32|JIT コンパイルされているメソッドの Microsoft intermediate language (MSIL) のサイズ。|
 |MethodNameSpace|win:UnicodeString|メソッドに関連付けられた完全クラス名。|
-|MethodName|win:UnicodeString|メソッドの名前。|
+|MethodName|win:UnicodeString|メソッドの名前です。|
 |MethodSignature|win:UnicodeString|メソッドのシグネチャ (型名のコンマ区切りリスト)。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 

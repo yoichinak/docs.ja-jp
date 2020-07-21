@@ -1,16 +1,17 @@
 ---
 title: ローダー ETW イベント
+description: アプリケーションドメインイベント、CLR ローダーアセンブリイベント、モジュールイベント、CLR ドメインモジュールイベント、モジュール範囲イベントなどのローダー ETW イベントを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 0f8f96cf73882ef6556e5b9e64cf9adf389a2318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180560"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474359"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
 これらのイベントは、アプリケーションのドメイン、アセンブリ、およびモジュールのロードとアンロードに関連する情報を収集します。  
