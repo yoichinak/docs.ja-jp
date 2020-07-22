@@ -1,20 +1,21 @@
 ---
 title: 配列 - C# プログラミング ガイド
+description: C# の配列データ構造に、同じ型の複数の変数を格納します。 配列を宣言するには、型を指定するか、任意の型を格納する場合は Object を指定します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715057"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474736"
 ---
 # <a name="arrays-c-programming-guide"></a>配列 (C# プログラミング ガイド)
 
-配列データ構造体には、同じ型の複数の変数を格納できます。 配列は、要素の型を指定することで宣言します。 配列に任意の型の要素を格納する場合は、その型として `object` を指定できます。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値型) が、直接または間接的に <xref:System.Object> を継承します。
+配列データ構造体には、同じ型の複数の変数を格納できます。 配列は、要素の型を指定することで宣言します。 配列に任意の型の要素を格納する場合は、その型として `object` を指定できます。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値の型) が、直接または間接的に <xref:System.Object> を継承します。
 
 ```csharp
 type[] arrayName;
@@ -48,7 +49,7 @@ type[] arrayName;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [コレクション](../concepts/collections.md)

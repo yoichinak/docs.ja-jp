@@ -1,5 +1,6 @@
 ---
 title: C# プログラミング ガイド
+description: これらのリソースを使用して、C# 言語の重要な機能と、.NET 経由でアクセスできる C# の機能に関する詳細を確認してください。
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241657"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473878"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 
-このセクションでは、C# 言語の重要な機能に関する詳細と、.NET 経由でアクセスできる C# の機能について説明します。  
+このセクションでは、C# 言語の重要な機能と、.NET 経由でアクセスできる C# の機能の詳細について説明します。  
   
- このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。 プログラミングや C# のまったくの初心者の方は、[C# チュートリアルの概要](../tutorials/intro-to-csharp/index.md) に関するページや [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)(ブラウザーでの .NET のチュートリアル) を参照してください。プログラミングの予備知識は必要ありません。  
+ このセクションの大部分では、お客様が C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提としています。 プログラミングや C# についてまったくの初心者の方は、プログラミングの予備知識が必要ない [C# の概要に関するチュートリアル](../tutorials/intro-to-csharp/index.md)や「[ブラウザーでの .NET のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)」を参照することをお勧めします。  
   
- 特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。 C# 言語の仕様については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」を参照してください。  
+ 特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。 C# 言語の仕様については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関する記事をご覧ください。  
   
-## <a name="program-sections"></a>プログラムのセクション
+## <a name="program-sections"></a>プログラム セクション
 
 [インサイド C# プログラム](./inside-a-program/index.md)  
   
