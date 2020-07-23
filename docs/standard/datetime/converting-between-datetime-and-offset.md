@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cf55db7c22ad2495bdbeb3202fcefb89bae42d69
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768678"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924904"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime と DateTimeOffset 間の変換
 
@@ -105,7 +105,7 @@ UTC 値とローカル <xref:System.DateTime> 値の場合、 <xref:System.DateT
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-<xref:System.DateTime>プロパティを使用して値を取得すると <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 、プロパティのアクセサーは、 `get` 最初に値を <xref:System.DateTimeOffset> UTC に変換してから、メソッドを呼び出して現地時刻に変換し <xref:System.DateTimeOffset.ToLocalTime%2A> ます。 これは、プロパティから値を取得して、型変換を実行するときと同時にタイムゾーン変換を実行できることを意味し <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> ます。 また、変換の実行にローカル タイム ゾーンの調整規則が適用されることも意味します。 次のコードは、プロパティを使用して、 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 型とタイムゾーン変換の両方を実行する方法を示しています。
+<xref:System.DateTime>プロパティを使用して値を取得すると <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 、プロパティのアクセサーは、 `get` 最初に値を <xref:System.DateTimeOffset> UTC に変換してから、メソッドを呼び出して現地時刻に変換し <xref:System.DateTimeOffset.ToLocalTime%2A> ます。 これは、プロパティから値を取得して、型変換を実行するときと同時にタイムゾーン変換を実行できることを意味し <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> ます。 また、変換の実行にローカル タイム ゾーンの調整規則が適用されることも意味します。 次のコードは、プロパティを使用して、 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 型とタイムゾーン変換の両方を実行する方法を示しています。 このサンプル出力は、太平洋標準時ゾーン (米国およびカナダ) に設定されているマシン用です。 11月の日付は、太平洋標準時 (UTC-8) で、6月の日付は夏時間 (UTC-7) です。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]

@@ -1,16 +1,17 @@
 ---
 title: UI オートメーション ツリーの概要
+description: UI オートメーションツリーの概要を参照してください。 未加工ビュー、コントロールビュー、コンテンツビューなど、UI オートメーションツリーのさまざまなビューについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ffe4b4e6157f5bff3284d6978e0ec28641cf72d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179445"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924553"
 ---
 # <a name="ui-automation-tree-overview"></a>UI オートメーション ツリーの概要
 > [!NOTE]
@@ -18,7 +19,7 @@ ms.locfileid: "79179445"
   
  支援技術製品とテスト スクリプトは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーを移動して [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] とその要素に関する情報を収集します。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリー内には、現在のデスクトップを表<xref:System.Windows.Automation.AutomationElement.RootElement%2A>すルート要素 ( ) があり、その子要素はアプリケーション ウィンドウを表します。 これらの子要素のそれぞれに、メニュー、ボタン、ツールバー、リスト ボックスなどの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の構成部分を表す要素を含めることができます。 さらに、これらの要素には、リスト項目などの要素を含めることができます。  
+ ツリー内に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、現在のデスクトップを表すルート要素 () があり、その <xref:System.Windows.Automation.AutomationElement.RootElement%2A> 子要素はアプリケーションウィンドウを表します。 これらの子要素のそれぞれに、メニュー、ボタン、ツールバー、リスト ボックスなどの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の構成部分を表す要素を含めることができます。 さらに、これらの要素には、リスト項目などの要素を含めることができます。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは、固定された構造体ではなく、数千もの要素が含まれる場合もあるため、その全体像を見ることはほとんどありません。 その一部は必要に応じてビルドされ、要素の追加、移動、削除に伴って変更されます。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "79179445"
   
 <a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>列ビュー  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの未加工ビューは、デスクトップをルートとする <xref:System.Windows.Automation.AutomationElement> オブジェクトの完全なツリーです。 未加工ビューは、アプリケーションのネイティブ プログラムによる構造に忠実に従っているため、使用できるビューの中では最も詳細なビューです。 また、ツリーの他のビューは、未加工ビューに基づいて構築されます。 このビューは基になる[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]フレームワークに依存するため、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]ボタンの未加工ビューは、Win32 ボタンとは異なる未加工のビューを持つことになります。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの未加工ビューは、デスクトップをルートとする <xref:System.Windows.Automation.AutomationElement> オブジェクトの完全なツリーです。 未加工ビューは、アプリケーションのネイティブ プログラムによる構造に忠実に従っているため、使用できるビューの中では最も詳細なビューです。 また、ツリーの他のビューは、未加工ビューに基づいて構築されます。 このビューは基になるフレームワークに依存しているため [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 、ボタンの未加工ビューには [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Win32 ボタンとは異なる未加工のビューがあります。  
   
  未加工ビューを取得するには、プロパティを指定せずに要素を検索するか、<xref:System.Windows.Automation.TreeWalker.RawViewWalker> を使用してツリーを移動します。  
   

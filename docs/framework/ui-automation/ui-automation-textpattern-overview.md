@@ -1,29 +1,30 @@
 ---
 title: UI オートメーション TextPattern の概要
+description: UI オートメーションでの TextPattern コントロールパターンの概要について説明します。 このコントロールパターンは、書式とスタイルを含む、コントロールのテキストコンテンツを公開します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 986b601bbd212582c09c559a9bb22983ba59fa17
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741418"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924670"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI オートメーション TextPattern の概要
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。
 
-この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] を使用して、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でサポートされているプラットフォームのテキスト コントロールのテキストの内容 (書式とスタイルの属性など) を公開する方法について説明します。 これらのコントロールには、Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> と <xref:System.Windows.Controls.RichTextBox> だけでなく、Win32 に相当するものが含まれます。
+この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] を使用して、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でサポートされているプラットフォームのテキスト コントロールのテキストの内容 (書式とスタイルの属性など) を公開する方法について説明します。 これらのコントロールには、Microsoft .NET Framework、および Win32 に相当するものが含まれますが、これらに限定されるわけではありません <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.RichTextBox> 。
 
 コントロールのテキストの内容は、 <xref:System.Windows.Automation.TextPattern> コントロール パターンを使用することで公開できます。コントロール パターンは、テキスト コンテナーの内容をテキスト ストリームとして表したものです。 さらに、 <xref:System.Windows.Automation.TextPattern> は、書式とスタイルの属性を公開する <xref:System.Windows.Automation.Text.TextPatternRange> クラスをサポートする必要があります。 <xref:System.Windows.Automation.Text.TextPatternRange> は、 <xref:System.Windows.Automation.TextPattern> および <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> エンドポイントのコレクションがあるテキスト コンテナーに、連続する、または複数の非結合テキスト範囲を表すことで <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> をサポートします。 <xref:System.Windows.Automation.Text.TextPatternRange> は、選択、比較、取得、トラバースなどの機能をサポートしています。
 
 > [!NOTE]
-> <xref:System.Windows.Automation.TextPattern> クラスには、テキストを挿入または変更する手段がありません。 ただし、コントロールによっては、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> または直接キーボード入力によって行われることがあります。 例については、「 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 」をご覧ください。
+> <xref:System.Windows.Automation.TextPattern> クラスには、テキストを挿入または変更する手段がありません。 ただし、コントロールによって [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> は、またはを使用して直接キーボード入力を行うことができます。 例については、「 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 」をご覧ください。
 
 この概要で説明されている機能は、支援技術ベンダーとそのエンドユーザーにとって重要です。 支援技術は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用してユーザー向けに完全なテキストの書式設定情報を収集するとともに、プログラムによるナビゲーションと、 <xref:System.Windows.Automation.Text.TextUnit> によるテキストの選択 (文字、単語、行、または段落) を行います。
 
@@ -33,15 +34,15 @@ ms.locfileid: "75741418"
 
 テキストサービスフレームワーク (TSF) は、デスクトップおよびアプリケーション内で自然言語サービスと高度なテキスト入力を可能にする、シンプルでスケーラブルなシステムフレームワークです。 アプリケーションのテキスト ストアを公開するインターフェイスをアプリケーションに提供するだけでなく、そのテキスト ストアのメタデータもサポートします。
 
-ただし、TSF は、コンテキストに対応したシナリオに入力を挿入する必要があるアプリケーション向けに設計されていましたが、<xref:System.Windows.Automation.TextPattern> は読み取り専用のソリューションです (前述の制限付きの回避策を使用します)。これは、スクリーンリーダーと点字デバイスのテキストストアへのアクセスを最適化することを目的としています。
+ただし、TSF は、コンテキストに対応したシナリオに入力を挿入する必要があるアプリケーション向けに設計されていますが、 <xref:System.Windows.Automation.TextPattern> は読み取り専用のソリューションです (前述の制限付きの回避策を使用します)。これは、スクリーンリーダーと点字デバイスのテキストストアへのアクセスを最適化することを目的としています。
 
-つまり、テキストストアへの読み取り専用アクセスを必要とするアクセス可能なテクノロジは <xref:System.Windows.Automation.TextPattern>を使用できますが、コンテキストに対応した入力については、TSF のより複雑な機能が必要になります。
+つまり、テキストストアへの読み取り専用アクセスを必要とするアクセス可能なテクノロジではを使用できます <xref:System.Windows.Automation.TextPattern> が、コンテキストに対応した入力を行うには、TSF のより複雑な機能が必要になります。
 
 <a name="Control_Types"></a>
 
 ## <a name="control-types"></a>コントロールの種類
 
-### <a name="text"></a>テキスト
+### <a name="text"></a>Text
 
 テキスト コントロールは、画面上のテキストの一部を表す基本要素です。
 
@@ -50,7 +51,7 @@ ms.locfileid: "75741418"
 > [!NOTE]
 > テキスト コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに表示されないことがあります (「 [UI Automation Tree Overview](ui-automation-tree-overview.md)」をご覧ください)。 これは、テキスト コントロールが別のコントロールの Name プロパティを通じて表示されることがよくあるためです。 たとえば、エディット コントロールのラベルに使用するテキストは、エディット コントロールの Name プロパティを通じて公開されます。 エディット コントロールが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに存在するので、テキスト要素自体は [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの対象のビューに存在する必要はありません。 コンテンツ ビューに表示されるテキストは、冗長な情報ではないテキストのみです。 これにより、支援テクノロジは、ユーザーが必要とする情報のみをすばやくフィルター処理できるようになります。
 
-### <a name="edit"></a>[編集]
+### <a name="edit"></a>編集
 
 エディット コントロールを使用すると、ユーザーは 1 行のテキストを表示および編集できます。
 
@@ -96,7 +97,7 @@ ms.locfileid: "75741418"
 
 ## <a name="security"></a>セキュリティ
 
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] アーキテクチャは、セキュリティを考慮して設計されています (「 [UI オートメーションのセキュリティの概要](ui-automation-security-overview.md)」を参照してください)。 ただし、この概要で説明する TextPattern クラスにはいくつか特定のセキュリティの考慮事項が必要です。
+アーキテクチャは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] セキュリティを考慮して設計されています (「 [UI オートメーションのセキュリティの概要](ui-automation-security-overview.md)」を参照してください)。 ただし、この概要で説明する TextPattern クラスにはいくつか特定のセキュリティの考慮事項が必要です。
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] テキスト プロバイダーは、読み取り専用のインターフェイスを提供しますが、コントロールにある既存のテキストを変更する機能はありません。
 
@@ -125,16 +126,16 @@ TextPattern はその機能のほとんどでプロセス間の呼び出しに�
 **属性**\
 テキスト範囲の書式設定特性 ( <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> または <xref:System.Windows.Automation.TextPattern.FontNameAttribute>など)。
 
-**低次元テキスト範囲**の\
-低次元テキスト範囲は、空または 0 文字のテキスト範囲です。 TextPattern コントロール パターンの目的から、テキスト挿入ポイント (またはシステム キャレット) は低次元テキスト範囲と見なされます。 テキストが選択されていない場合、 <xref:System.Windows.Automation.TextPattern.GetSelection%2A> は、テキスト挿入ポイントで低次元テキスト範囲を返し、 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> は、開始エンドポイントとして低次元テキスト範囲を返します。 テキスト プロバイダーで指定された条件に一致するテキスト範囲が見つからない場合、<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> および <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> は低次元テキスト範囲を返す可能性があります。 この低次元テキスト範囲は、テキスト プロバイダー内の開始エンドポイントとして使用できます。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> と <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> は、検出された範囲と低次元テキスト範囲との混同を避けるために、null 参照 (Microsoft Visual Basic .NET では`Nothing`) を返します。
+**低次元テキスト範囲**\
+低次元テキスト範囲は、空または 0 文字のテキスト範囲です。 TextPattern コントロール パターンの目的から、テキスト挿入ポイント (またはシステム キャレット) は低次元テキスト範囲と見なされます。 テキストが選択されていない場合、 <xref:System.Windows.Automation.TextPattern.GetSelection%2A> は、テキスト挿入ポイントで低次元テキスト範囲を返し、 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> は、開始エンドポイントとして低次元テキスト範囲を返します。 テキスト プロバイダーで指定された条件に一致するテキスト範囲が見つからない場合、<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> および <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> は低次元テキスト範囲を返す可能性があります。 この低次元テキスト範囲は、テキスト プロバイダー内の開始エンドポイントとして使用できます。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A>とは、 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> `Nothing` 検出された範囲と低次元テキスト範囲との混同を避けるために、(Microsoft Visual Basic .net では) null 参照を返します。
 
 **埋め込みオブジェクト**\
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] テキスト モデルには、2 種類の埋め込みオブジェクトがあります。 これらは、ハイパーリンクやテーブルなどのテキスト ベースのコンテンツ要素、およびイメージとボタンなどのコントロール要素で構成しています。 詳しくは、「 [Access Embedded Objects Using UI Automation](access-embedded-objects-using-ui-automation.md)」をご覧ください。
 
-**エンドポイント**\
+**終点**\
 テキスト コンテナー内のテキスト範囲の <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> または <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> の絶対ポイント。
 
-![Textpattern Rangeendpoints &#40;の開始と&#41;終了。](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
+![Textpattern Rangeendpoints &#40;開始および終了&#41;。](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
 始点と終点のセットを次に示します。
 
 **TextRange**\
@@ -146,8 +147,8 @@ TextPattern はその機能のほとんどでプロセス間の呼び出しに�
 ## <a name="see-also"></a>関連項目
 
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
-- [UI Automation ツリーの概要](ui-automation-tree-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [UI オートメーション クライアントのコントロール パターン マッピング](control-pattern-mapping-for-ui-automation-clients.md)
