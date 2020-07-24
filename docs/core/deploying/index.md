@@ -2,12 +2,12 @@
 title: アプリケーションの発行
 description: .NET Core アプリケーションを発行する方法について説明します。 .NET Core では、プラットフォーム固有の、またはクロスプラットフォームのアプリを発行できます。 アプリは、自己完結型として、またはランタイム依存として発行できます。 各モードは、お客様のアプリをユーザーが実行する方法に影響を与えます。
 ms.date: 04/01/2020
-ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
-ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
+ms.openlocfilehash: 201363ad314373ec3be44eb8496f92a8e0c8e418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665539"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164941"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core アプリケーションの発行の概要
 
@@ -152,6 +152,5 @@ dotnet publish -r win-x64
 
 - [.NET Core CLI を使用して .NET Core アプリを展開する](deploy-with-cli.md)
 - [Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)
-- [パッケージ、メタパッケージ、フレームワーク](../packages.md)
 - [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
 - [使用する .NET Core のバージョンを選択する](../versions/selection.md)
