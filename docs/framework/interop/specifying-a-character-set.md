@@ -1,5 +1,6 @@
 ---
 title: 文字セットの指定
+description: ナロー (ANSI) またはワイド (Unicode) エンコードを使用する文字セットを指定する方法について説明します。 あるいは、自動ランタイム選択を指定できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125174"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309795"
 ---
-# <a name="specifying-a-character-set"></a>文字セットの指定
+# <a name="specify-a-character-set"></a>文字セットを指定する
+
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは文字列のマーシャリングを制御し、DLL の関数名をプラットフォーム呼び出しが見つけるしくみを決定します。 このトピックでは、両方の動作について説明します。  
   
  一部の API は、文字列引数、ナロー (ANSI) とワイド (Unicode) を受け取る 2 種類の関数をエクスポートします。 たとえば、Windows API には、**MessageBox** 関数の次のエントリ ポイント名が含まれています。  
@@ -61,11 +63,12 @@ ms.locfileid: "73125174"
   
 - プラットフォーム呼び出しは、対象プラットフォームに基づき、ANSI 形式または Unicode 形式を選択します。  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Visual Basic で文字セットを指定する  
- 次の例では **MessageBox** 関数を 3 回宣言しています。宣言のたびに文字セット動作が変わっています。 Visual Basic では、文字セット動作を指定できます。宣言ステートメントにキーワードとして **Ansi**、**Unicode**、**Auto** を追加します。  
-  
- 最初の宣言ステートメントのように、文字セット キーワードを省略した場合、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは既定で ANSI 文字セットに設定されます。 例の 2 番目と 3 番目のステートメントは、キーワードで文字セットを明示的に指定しています。  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Visual Basic で文字セットを指定する
+
+Visual Basic では、文字セット動作を指定できます。宣言ステートメントにキーワードとして `Ansi`、`Unicode`、`Auto` を追加します。 文字セット キーワードを省略した場合、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは既定で ANSI 文字セットに設定されます。
+
+次の例では **MessageBox** 関数を 3 回宣言しています。宣言のたびに文字セット動作が変わっています。 最初のステートメントでは文字セット キーワードが省略され、文字セットは既定で ANSI に設定されます。 2 番目と 3 番目のステートメントは、キーワードで文字セットを明示的に指定しています。
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -88,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>C# と C++ で文字セットを指定する  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは、基礎となる文字セットとして ANSI または Unicode を識別します。 この文字セットは、メソッドの文字列引数をマーシャリングする方法を制御します。 次の形式の 1 つを使用し、文字セットを指示します。  
+## <a name="specify-a-character-set-in-c-and-c"></a>C# と C++ で文字セットを指定する
+
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは、基礎となる文字セットとして ANSI または Unicode を識別します。 この文字セットは、メソッドの文字列引数をマーシャリングする方法を制御します。 次の形式の 1 つを使用し、文字セットを指示します。  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

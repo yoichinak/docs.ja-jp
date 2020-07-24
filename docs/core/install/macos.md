@@ -4,11 +4,12 @@ description: .NET Core をインストールできる macOS のバージョン�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804453"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308924"
 ---
 # <a name="install-net-core-on-macos"></a>macOS に .NET Core をインストールする
 
@@ -22,7 +23,8 @@ ms.locfileid: "85804453"
 
 .NET Core の最新バージョンは 3.1 です。
 
-[.NET Core をダウンロードする。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>サポートされているリリース
 
@@ -58,13 +60,15 @@ ASP.NET Core アプリを実行します。 .NET Core ランタイムが含ま�
 *.NET Core ランタイム*\
 このランタイムは最も単純なランタイムであり、他のランタイムは含まれていません。 .NET Core アプリとの互換性を最善にするには、"*ASP.NET Core ランタイム*" をインストールすることを強くお勧めします。
 
-[.NET Core ランタイムをダウンロードする。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK に関する情報
 
 SDK は、.NET Core アプリとライブラリを作成して公開するために使用されます。 SDK のインストールには、次の両方の[ランタイム](#runtime-information)が含まれます: ASP.NET Core と .NET Core。
 
-[.NET Core SDK をダウンロードする。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK をダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>依存関係
 

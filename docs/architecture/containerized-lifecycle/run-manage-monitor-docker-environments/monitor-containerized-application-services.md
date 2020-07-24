@@ -2,12 +2,12 @@
 title: コンテナー化アプリケーションのサービスを監視する
 description: コンテナー アーキテクチャのモニターに関する重要な側面をいくつか説明します
 ms.date: 02/15/2019
-ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e41df53ad94784436442c3cf7defed3fab510455
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673459"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374443"
 ---
 # <a name="monitor-containerized-application-services"></a>コンテナー化アプリケーションのサービスを監視する
 
@@ -17,7 +17,7 @@ ms.locfileid: "68673459"
 
 [Azure Monitor](https://azure.microsoft.com/services/monitor/) は、ライブ アプリケーションを監視する拡張可能な分析サービスです。 パフォーマンスの問題の検出と診断や、ユーザーがアプリを使用して実際に実行する操作の理解に役立ちます。 開発者向けに設計されており、サービスやアプリケーションのパフォーマンスと使いやすさを継続的に向上させることを目的としています。 Azure Monitor は、オンプレミスまたはクラウドでホストされている .NET、Java、Node.js などのさまざまなプラットフォーム上で、Web/サービスとスタンドアロン アプリの両方と連携します。
 
-### <a name="additional-resources"></a>その他のリソース
+### <a name="additional-resources"></a>その他の技術情報
 
 - **Azure Monitor の概要** \
   <https://docs.microsoft.com/azure/azure-monitor/overview>
@@ -47,7 +47,7 @@ Azure には、クラウドおよびオンプレミス リソースの両方の 
   - バックアップ データを転送中および保存中に暗号化します。
   - 不正使用を防ぐために、多要素認証に基づくアクセスを確保します。
 
-- **オンプレミスのリソース**。 [本当に一貫性が高いハイブリッド クラウド](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/)を使用します。
+- **オンプレミスのリソース**。 [ハイブリッド クラウド ソリューション](https://azure.microsoft.com/solutions/hybrid-cloud-app/)で。
 
 >[!div class="step-by-step"]
 >[前へ](manage-production-docker-environments.md)

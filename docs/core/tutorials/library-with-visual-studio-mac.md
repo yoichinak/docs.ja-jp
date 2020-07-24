@@ -2,16 +2,16 @@
 title: Visual Studio for Mac を使用して .NET Standard クラス ライブラリを作成する
 description: Visual Studio for Mac を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713419"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416001"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Standard ライブラリを作成する
 
-このチュートリアルでは、1 つの文字列処理メソッドを含むシンプルなクラス ライブラリを作成します。 それを[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装し、<xref:System.String> クラスのメンバーと同じように呼び出すことができるようにします。
+このチュートリアルでは、1 つの文字列処理メソッドを含むクラス ライブラリを作成します。 それを[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装し、<xref:System.String> クラスのメンバーと同じように呼び出すことができるようにします。
 
 "*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.1 をターゲットとするクラス ライブラリは、バージョン 2.1 の .NET Standard をサポートする任意の .NET 実装をターゲットとするアプリケーションで使用できます。 クラス ライブラリが完成したら、サードパーティ製のコンポーネントとして配布するか、1 つ以上のアプリケーションを含むバンドルされたコンポーネントとして配布することができます。
 

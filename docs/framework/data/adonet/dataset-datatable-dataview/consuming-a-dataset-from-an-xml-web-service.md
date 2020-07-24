@@ -1,25 +1,26 @@
 ---
 title: XML Web サービスからの DataSet の使用
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389742"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416217"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 
-<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **DataSet** は、**DataSet** の内容を XML Web サービスからクライアントに (およびその逆方向に) ストリーム転送するためのコードを追加せずに XML Web サービスへの入力または出力として指定できるという点で、"シリアル化可能" です。 **DataSet** は、DiffGram 形式を使用して暗黙に XML ストリームに変換され、ネットワーク経由で送信されます。その後、受信側で XML ストリームから **DataSet** として再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「[DiffGrams](diffgrams.md)」を参照してください。  
+<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **DataSet** は、**DataSet** の内容を XML Web サービスからクライアントに (およびその逆方向に) ストリーム転送するためのコードを追加せずに XML Web サービスへの入力または出力として指定できるという点で、"シリアル化可能" です。 **DataSet** は、DiffGram 形式を使用して暗黙に XML ストリームに変換され、ネットワーク経由で送信されます。その後、受信側で XML ストリームから **DataSet** として再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「[DiffGrams](diffgrams.md)」を参照してください。  
   
  **DataSet** を使用してリレーショナル データ (変更データを含む) を転送し、更新内容を元のデータ ソースに反映させる XML Web サービスと XML Web サービスのクライアントを作成する手順を次の例に示します。  
   
 > [!NOTE]
-> XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスのセキュリティ保護については、「[ASP.NET を使用して作成した XML Web サービスのセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))」を参照してください。  
+> 入力が信頼されていない場合、XML Web サービスの呼び出しの一部として `DataSet` または `DataTable` のインスタンスを送信することは安全ではありません。 詳細については、「[DataSet と DataTable のセキュリティ ガイダンス](security-guidance.md)」を参照してください。
+> XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することもお勧めします。 XML Web サービスのセキュリティ保護については、「[ASP.NET を使用して作成した XML Web サービスのセキュリティ](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))」を参照してください。  
   
 ## <a name="create-an-xml-web-service"></a>XML Web サービスの作成
   

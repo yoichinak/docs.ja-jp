@@ -1,14 +1,14 @@
 ---
 title: .NET Compiler Platform SDK の概念とオブジェクト モデル
 description: この概要では、.NET Compiler SDK を効果的に使用するために必要な背景を示します。 API レイヤー、関連する主な型、全体のオブジェクト モデルについて学習します。
-ms.date: 10/10/2017
+ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975941"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374469"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK モデルについて
 
@@ -30,13 +30,11 @@ ms.locfileid: "82975941"
 
 各コンパイラは、これらのコンポーネントを一緒に単一のエンド ツー エンド全体として結合します。
 
-これらの API は、Visual Studio で使用されるものと同じです。 たとえば、コードのアウトライン表示と書式設定機能では構文ツリーを使用し、オブジェクト ブラウザーとナビゲーション機能ではシンボル テーブルを使用します。リファクタリングと定義へ移動ではセマンティック モデルを使用し、エディット コンティニュでは、生成 API を含む、これらすべてを使用します。
+これらの API は、Visual Studio で使用されるものと同じです。 たとえば、コードのアウトライン表示と書式設定機能では構文ツリーを使用し、**オブジェクト ブラウザー**とナビゲーション機能ではシンボル テーブルを使用します。リファクタリングと**定義へ移動**ではセマンティック モデルを使用し、**エディット コンティニュ**では、生成 API を含む、これらすべてを使用します。
 
 ## <a name="api-layers"></a>API レイヤー
 
-.NET Compiler SDK は、2 つの主要な API レイヤー (コンパイラ API とワークスペース API) で構成されています。
-
-![コンパイラ パイプライン API で表される API レイヤー](media/compiler-api-model/api-layers.png)
+.NET Compiler SDK は、いくつかの API レイヤー (コンパイラ API、診断 API、スクリプティング API、ワークスペース API) で構成されています。
 
 ### <a name="compiler-apis"></a>コンパイラ API
 

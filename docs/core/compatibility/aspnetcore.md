@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 07/08/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174394"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441948"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -26,8 +26,10 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [承認:AddAuthorization のオーバーロードを別のアセンブリに移動](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [承認:AuthorizationFilterContext.Filters から IAllowAnonymous を削除](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [承認:IAuthorizationPolicyProvider の実装に新しいメソッドが必要](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [承認:エンドポイント ルーティングのリソースは HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure:Microsoft というプレフィックスが付いた Azure 統合パッケージが削除された](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Blazor:コンパイル時にコンポーネントからトリミングされる無意味な空白文字](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor:NuGet パッケージのターゲット フレームワークを変更](#blazor-target-framework-of-nuget-packages-changed)
 - [キャッシュ:CompactOnMemoryPressure プロパティの削除](#caching-compactonmemorypressure-property-removed)
 - [キャッシュ:Microsoft.Extensions.Caching.SqlServer で新しい SqlClient パッケージを使用](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [キャッシュ:ResponseCaching の "pubternal" 型を internal に変更](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -62,6 +64,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [Kestrel:トランスポート抽象化レイヤーの変更](#kestrel-transport-abstractions-removed-and-made-public)
 - [ローカリゼーション:API を古いとしてマーク](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
 - [ローカリゼーション:"Pubternal" API の削除](#localization-pubternal-apis-removed)
+- [ローカリゼーション:ローカライズ ミドルウェア要求で古いコンストラクターを削除](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [ローカリゼーション:ResourceManagerWithCultureStringLocalizer クラスと WithCulture インターフェイス メンバーを削除](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [ログ:internal になった DebugLogger クラス](#logging-debuglogger-class-made-internal)
 - [MVC:コントローラー アクション Async サフィックスを削除](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -70,6 +73,8 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [MVC:型を internal に変更](#mvc-pubternal-types-changed-to-internal)
 - [MVC:Web API 互換性 shim を削除](#mvc-web-api-compatibility-shim-removed)
 - [Razor:実行時コンパイルをパッケージに移動](#razor-runtime-compilation-moved-to-a-package)
+- [セキュリティ:Cookie 名のエンコードを削除](#security-cookie-name-encoding-removed)
+- [セキュリティ:IdentityModel NuGet パッケージのバージョンを更新](#security-identitymodel-nuget-package-versions-updated)
 - [セッション状態:古い API を削除](#session-state-obsolete-apis-removed)
 - [共有フレームワーク:Microsoft.AspNetCore.App からアセンブリの削除](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
 - [共有フレームワーク:Microsoft.AspNetCore.All を削除](#shared-framework-removed-microsoftaspnetcoreall)
@@ -88,11 +93,19 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 
@@ -131,7 +144,19 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 
 ***
 
+[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
+
+***
+
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
+
+***
+
+[!INCLUDE[Security: IdentityModel NuGet package versions updated](~/includes/core-changes/aspnetcore/5.0/security-identitymodel-nuget-package-versions-updated.md)]
 
 ***
 

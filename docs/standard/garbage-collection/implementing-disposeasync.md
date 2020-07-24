@@ -10,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 31c4cc9136862551e02fae030e38ebd6c2916a38
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 91ace1932e8bb751e8e1d85e00b3e239a01aa9ea
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100926"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309821"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync メソッドの実装
 
@@ -64,11 +64,11 @@ public async ValueTask DisposeAsync()
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
-上の例では、<xref:System.Text.Json.Utf8JsonWriter> を使用しています。`System.Text.Json` の詳細については、[Newtonsoft.Json から System.Text.Json への移行](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)に関するページを参照してください。
+前の例では、<xref:System.Text.Json.Utf8JsonWriter> を使用しています。 `System.Text.Json` の詳細については、「[Newtonsoft.Json から System.Text.Json に移行する方法](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)」を参照してください。
 
 ## <a name="using-async-disposable"></a>非同期の破棄可能の使用
 
-<xref:System.IAsyncDisposable> インターフェイスを実装するオブジェクトを適切に使用するには、[await](../../csharp/language-reference/operators/await.md) キーワードと [using](../../csharp/language-reference/keywords/using.md) キーワードを一緒に使用します。 次の例では、`ExampleAsyncDisposable` クラスがインスタンス化され、`await using` ステートメントでラップされています。
+<xref:System.IAsyncDisposable> インターフェイスを実装するオブジェクトを適切に使用するには、[await](../../csharp/language-reference/operators/await.md) キーワードと [using](../../csharp/language-reference/keywords/using-statement.md) キーワードを一緒に使用します。 `ExampleAsyncDisposable` クラスがインスタンス化され、`await using` ステートメントでラップされる次の例について考察してください。
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

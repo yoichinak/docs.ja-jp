@@ -1,14 +1,14 @@
 ---
 title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202092"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441409"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -240,6 +240,7 @@ ms.locfileid: "84202092"
 
 - GC ヒープおよび GC ブックキーピングに対して、最大コミット サイズをバイト単位で指定します。
 - この設定は 64 ビットのコンピューターにのみ該当します。
+- [オブジェクトごとのヒープの制限](#per-object-heap-limits)が構成されている場合、この設定は無視されます。
 - 特定のケースにのみ該当する既定値は、20 MB より大、またはコンテナーのメモリ制限の 75% より大です。 次の場合に既定値は該当します。
 
   - プロセスが、メモリ制限が指定されたコンテナー内で実行されています。
@@ -271,6 +272,7 @@ ms.locfileid: "84202092"
 - この設定は、[System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) も設定されている場合、無視されます。
 - この設定は 64 ビットのコンピューターにのみ該当します。
 - プロセスが、メモリ制限が指定されたコンテナー内で実行されている場合、パーセンテージはそのメモリ制限に対するパーセンテージとして計算されます。
+- [オブジェクトごとのヒープの制限](#per-object-heap-limits)が構成されている場合、この設定は無視されます。
 - 特定のケースにのみ該当する既定値は、20 MB 未満であるか、コンテナーのメモリ制限の 75% 未満です。 次の場合に既定値は該当します。
 
   - プロセスが、メモリ制限が指定されたコンテナー内で実行されています。
@@ -295,6 +297,40 @@ ms.locfileid: "84202092"
 
 > [!TIP]
 > *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープの使用量を 30% に制限する場合、値は JSON ファイルでは 30、環境変数では 0x1E または 1E になります。
+
+### <a name="per-object-heap-limits"></a>オブジェクトごとのヒープの制限
+
+オブジェクトごとのヒープに基づいて、GC で許容されるヒープ使用量を指定できます。 ヒープには、大きなオブジェクト ヒープ (LOH)、小さなオブジェクト ヒープ (SOH)、固定オブジェクト ヒープ (POH) があります。
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH、COMPLUS_GCHeapHardLimitLOH、COMPLUS_GCHeapHardLimitPOH
+
+- `COMPLUS_GCHeapHardLimitSOH`、`COMPLUS_GCHeapHardLimitLOH`、`COMPLUS_GCHeapHardLimitPOH` 設定のいずれかの値を指定する場合、`COMPLUS_GCHeapHardLimitSOH` と `COMPLUS_GCHeapHardLimitLOH` の値も指定する必要があります。 そうしないと、ランタイムでの初期化が失敗します。
+- `COMPLUS_GCHeapHardLimitPOH` の既定値は 0 です。 `COMPLUS_GCHeapHardLimitSOH` と `COMPLUS_GCHeapHardLimitLOH` には既定値はありません。
+
+| | 設定の名前 | 値 | 導入されたバージョン |
+| - | - | - | - |
+| **環境変数** | `COMPLUS_GCHeapHardLimitSOH` | "*16 進値*" | .NET 5.0 |
+| **環境変数** | `COMPLUS_GCHeapHardLimitLOH` | "*16 進値*" | .NET 5.0 |
+| **環境変数** | `COMPLUS_GCHeapHardLimitPOH` | "*16 進値*" | .NET 5.0 |
+
+> [!TIP]
+> 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープのハード制限を 200 メビバイト (MiB) に指定する場合、値は 0xC800000 または C800000 になります。
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent、COMPLUS_GCHeapHardLimitLOHPercent、COMPLUS_GCHeapHardLimitPOHPercent
+
+- `COMPLUS_GCHeapHardLimitSOHPercent`、`COMPLUS_GCHeapHardLimitLOHPercent`、`COMPLUS_GCHeapHardLimitPOHPercent` 設定のいずれかの値を指定する場合、`COMPLUS_GCHeapHardLimitSOHPercent` と `COMPLUS_GCHeapHardLimitLOHPercent` の値も指定する必要があります。 そうしないと、ランタイムでの初期化が失敗します。
+- `COMPLUS_GCHeapHardLimitSOH`、`COMPLUS_GCHeapHardLimitLOH`、および `COMPLUS_GCHeapHardLimitPOH` が指定されている場合、これらの設定は無視されます。
+- 値 1 は、GC によって合計物理メモリの 1% がそのオブジェクト ヒープに使用されることを意味します。
+- 各値は、ゼロより大きく、100 未満である必要があります。 また、3 つのパーセンテージ値の合計は、100 未満である必要があります。 それ以外の場合、ランタイムでの初期化が失敗します。
+
+| | 設定の名前 | 値 | 導入されたバージョン |
+| - | - | - | - |
+| **環境変数** | `COMPLUS_GCHeapHardLimitSOHPercent` | "*16 進値*" | .NET 5.0 |
+| **環境変数** | `COMPLUS_GCHeapHardLimitLOHPercent` | "*16 進値*" | .NET 5.0 |
+| **環境変数** | `COMPLUS_GCHeapHardLimitPOHPercent` | "*16 進値*" | .NET 5.0 |
+
+> [!TIP]
+> 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープの使用量を 30% に制限する場合、値は 0x1E または 1E になります。
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 

@@ -4,12 +4,12 @@ description: macOS で、.NET Core ランタイム、SDK、および .Net Core �
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324617"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415957"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina の公証と、.NET Core のダウンロードおよびプロジェクトへの影響
 
@@ -93,5 +93,4 @@ macOS Catalina (バージョン 10.15) 以降でアプリケーションを実�
 ## <a name="next-steps"></a>次の手順
 
 - [.NET Core の依存関係と要件](dependencies.md)。
-- [.NET Core SDK をインストール](sdk.md)します。
-- [.NET Core ランタイムをインストールする](runtime.md)
+- [.NET Core ランタイムと SDK をインストールする](macos.md)。

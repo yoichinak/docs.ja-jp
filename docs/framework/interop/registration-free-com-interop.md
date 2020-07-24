@@ -1,5 +1,6 @@
 ---
 title: 登録を必要としない COM 相互運用機能
+description: 登録を必要としない COM 相互運用機能を使用してコンポーネントをアクティブにします。アセンブリ情報を格納するために Windows レジストリは使用しません。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124971"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281603"
 ---
 # <a name="registration-free-com-interop"></a>登録を必要としない COM 相互運用機能
 登録を必要としない COM 相互運用機能は、アセンブリ情報を格納するために Windows レジストリを使用しないで、コンポーネントをアクティブにします。 展開中にコンピューター上のコンポーネントを登録するのではなく、バインディングとアクティベーションに関する情報を含む Win32 スタイルのマニフェスト ファイルをデザイン時に作成します。 レジストリ キーではなく、これらのマニフェスト ファイルが、オブジェクトのアクティベーションを指示します。  

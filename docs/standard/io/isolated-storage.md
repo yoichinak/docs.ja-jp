@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325930"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416379"
 ---
 # <a name="isolated-storage"></a>分離ストレージ
-<a name="top"></a>デスクトップ アプリでは、分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 標準化には、ほかにも利点があります。 管理者は分離ストレージの操作用にデザインされたツールを使用して、ファイルのストレージ領域の構成、セキュリティ ポリシーの設定、および不要なデータの削除を行うことができます。 分離ストレージを使用すると、ファイル システムの安全な場所を指定するための固有のパスを指定する必要がなくなり、分離ストレージのアクセス権限を持たない他のアプリケーションからデータを保護できます。 アプリケーションのストレージ領域の場所を示すハードコーディングされた情報は不要になります。
+
+デスクトップ アプリでは、分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 標準化には、ほかにも利点があります。 管理者は分離ストレージの操作用にデザインされたツールを使用して、ファイルのストレージ領域の構成、セキュリティ ポリシーの設定、および不要なデータの削除を行うことができます。 分離ストレージを使用すると、ファイル システムの安全な場所を指定するための固有のパスを指定する必要がなくなり、分離ストレージのアクセス権限を持たない他のアプリケーションからデータを保護できます。 アプリケーションのストレージ領域の場所を示すハードコーディングされた情報は不要になります。
 
 > [!IMPORTANT]
 > 分離ストレージは Windows 8.x Store アプリでは使用できません。 代わりに、Windows ランタイム API に含まれる `Windows.Storage` 名前空間内のアプリケーション データ クラスを使用して、ローカル データとローカル ファイルを格納します。 詳細については、Windows デベロッパー センターの [アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) に関する説明を参照してください。
-
-このトピックは、次のセクションで構成されています。
-
-- [データ コンパートメントとデータ ストア](#data_compartments_and_stores)
-
-- [分離ストレージのクォータ](#quotas)
-
-- [安全なアクセス](#secure_access)
-
-- [許可されるアクセス権限とセキュリティのリスク](#allowed_usage)
-
-- [分離ストレージの場所](#isolated_storage_locations)
-
-- [分離ストレージの作成、列挙、および削除](#isolated_storage_tasks)
-
-- [分離ストレージのシナリオ](#scenarios_for_isolated_storage)
-
-- [関連トピック](#related_topics)
-
-- [参照](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __このセクションは、次のフレームワークに適用されます。
 - .NET Core 2.1 以降
 - .NET 5.0 以降
 
-.NET Framework および .NET Core では、ユーザー、アプリケーション、またはコンポーネントのデータを保持するメカニズムとして、[分離ストレージ](/dotnet/standard/io/isolated-storage)が提供されます。 これは主に、現在非推奨のコード アクセス セキュリティのシナリオ向けに設計されたレガシ コンポーネントです。
+.NET Framework および .NET Core では、ユーザー、アプリケーション、またはコンポーネントのデータを保持するメカニズムとして、分離ストレージが提供されます。 これは主に、現在非推奨のコード アクセス セキュリティのシナリオ向けに設計されたレガシ コンポーネントです。
 
 さまざまな分離ストレージ API とツールを使用して、信頼境界を越えてデータを読み取ることができます。 たとえば、コンピューター全体のスコープからデータを読み取ることで、コンピューター上の信頼度が低い可能性のある他のユーザー アカウントからデータを集計できます。 コンピューター全体の分離ストレージ スコープから読み取るコンポーネントまたはアプリケーションでは、このデータを読み取った場合の影響に注意する必要があります。
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>コンピューター全体のスコープから読み取ることができる、セキュリティ上の注意が必要な API
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>コンピューター全体のスコープから読み取ることができる、セキュリティ上の注意が必要な API
 
 次の API のいずれかを呼び出すコンポーネントまたはアプリケーションでは、コンピューター全体のスコープから読み取りを行います:
 
@@ -129,7 +110,7 @@ __このセクションは、次のフレームワークに適用されます。
 * [IsolatedStorageFile.GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore)。IsolatedStorageScope.Machine フラグを含むスコープを渡します
 * [IsolatedStorageFile.Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)。`IsolatedStorageScope.Machine` フラグを含むスコープを渡します
 
-次のコードに示すように、`/machine` スイッチで呼び出された場合、[分離ストレージ ツール](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` が影響を受けます。
+次のコードに示すように、`/machine` スイッチで呼び出された場合、[分離ストレージ ツール](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` が影響を受けます。
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,7 +233,7 @@ __重要:__ ご利用の環境に相互に信頼されていないユーザー�
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-articles"></a>関連記事
 
 |Title|説明|
 |-----------|-----------------|

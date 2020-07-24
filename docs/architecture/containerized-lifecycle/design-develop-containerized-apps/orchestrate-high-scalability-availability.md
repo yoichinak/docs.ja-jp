@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: 実際の運用アプリケーションは、すべてのコンテナーの正常性、ワークロードおよびライフ サイクルを管理するオーケストレーターと共に展開して管理する必要があります。
 ms.date: 02/15/2019
-ms.openlocfilehash: 369971455168026d768220dae6e2da5ce92bc698
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989000"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374482"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -74,7 +74,7 @@ AKS の使用を開始するには、Azure portal から、または CLI を使�
 
 AKS の一部として既定でインストールされるソフトウェアはいずれも無料です。 既定のすべてのオプションはオープン ソース ソフトウェアと共に実装されます。 AKS は Azure 内の複数の仮想マシンで使用できます。 選択したコンピューティング インスタンスと、ストレージやネットワーキングなどの利用された他の基になるインフラストラクチャ リソースにのみ課金されます。 AKS 自体に従量課金はありません。
 
-`kubectl` および元の `.yaml` ファイルに基づく Kubernetes へのデプロイの詳細については、[AKS (Azure Kubernetes Service) での eShopOnContainers の設定](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))に関する投稿記事を参照してください。
+`kubectl` および元の `.yaml` ファイルに基づく Kubernetes へのデプロイの詳細については、「[Deploy to Azure Kubernetes Service (AKS)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS))」 (Azure Kubernetes Service (AKS) へのデプロイ) を参照してください。
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Helm Chart を使用した Kubernetes クラスターへのデプロイ
 
@@ -86,7 +86,7 @@ Helm Chart を使用すると、非常に複雑な Kubernetes アプリケーシ
 
 Helm は、Microsoft、Google、Bitnami、および Helm の共同作成者コミュニティが協力し、[Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) が維持しています。
 
-Helm Chart および Kubernetes の実装の詳細については、[Helm Chart を使用した AKS への eShopOnContainers のデプロイ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts)に関する投稿記事を参照してください。
+Helm Chart および Kubernetes の実装の詳細については、「[Install eShopOnContainers using Helm](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#install-eshoponcontainers-using-helm)」 (Helm を利用した eShopOnContainers のインストール) を参照してください。
 
 ## <a name="use-azure-dev-spaces-for-you-kubernetes-application-lifecycle"></a>ご利用の Kubernetes アプリケーション ライフ サイクルに対して Azure Dev Spaces を使用する
 
@@ -106,7 +106,7 @@ Azure Dev Spaces では、運用環境のマイクロ サービスと開発コ�
 
 Azure Dev Spaces には、スペースという概念があります。このスペースにより、チーム メンバーの邪魔をすることを心配せずに、隔離された状態で作業を行うことができます。 この機能は URL のプレフィックスに基づいているため、コンテナーの要求に対して URL 内の開発スペースのプレフィックスを使用する場合、Azure Dev Spaces ではそのスペースにデプロイされたコンテナーの特別なバージョンを実行します (存在する場合)。 それ以外の場合は、グローバル/統合されたバージョンが実行されます。
 
-実際のビューの具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers Wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)を参照してください。
+具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers Wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)を参照してください。
 
 詳細については、「[Azure Dev Spaces を使用したチーム開発](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)」を参照してください。
 

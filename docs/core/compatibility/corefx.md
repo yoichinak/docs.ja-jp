@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 09/20/2019
-ms.openlocfilehash: 1c56358e69d0dd6e8572a41229c1b9edbcdad795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365618"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281307"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,8 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [既定の ActivityIdFormat は W3C](#default-activityidformat-is-w3c) | 5.0 |
+| [Vector2.Lerp と Vector4.Lerp の動作の変更](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [SSE および SSE2 の CompareGreaterThan メソッドで NaN 入力が正しく処理されるようになった](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [インスタンスが既に存在する場合、CounterSet.CreateCounterSetInstance は InvalidOperationException をスローするようになった](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [Microsoft.DotNet.PlatformAbstractions パッケージの削除](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
@@ -43,6 +45,14 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
+
+***
+
+[!INCLUDE [vector-lerp-behavior-change](../../../includes/core-changes/corefx/5.0/vector-lerp-behavior-change.md)]
+
+***
 
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
 

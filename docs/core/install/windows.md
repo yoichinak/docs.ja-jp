@@ -4,11 +4,12 @@ description: .NET Core をインストールできる Windows のバージョン
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804456"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308950"
 ---
 # <a name="install-net-core-on-windows"></a>Windows に .NET Core をインストールする
 
@@ -22,7 +23,8 @@ ms.locfileid: "85804456"
 
 .NET Core の最新バージョンは 3.1 です。
 
-[.NET Core をダウンロードする。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>サポートされているリリース
 
@@ -70,13 +72,15 @@ Windows 用の .NET Core WPF デスクトップ アプリおよび .NET Core Win
 *.NET Core ランタイム*\
 このランタイムは最も単純なランタイムであり、他のランタイムは含まれていません。 .NET Core アプリとの互換性を最善にするには、"*ASP.NET Core ランタイム*" と "*Desktop ランタイム*" の両方をインストールすることを強くお勧めします。
 
-[.NET Core ランタイムをダウンロードする。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK に関する情報
 
 SDK は、.NET Core アプリとライブラリを作成して公開するために使用されます。 SDK のインストールには、次の 3 つの[ランタイム](#runtime-information)が含まれます: ASP.NET Core、Desktop、.NET Core。
 
-[.NET Core SDK をダウンロードする。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK をダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>依存関係
 
@@ -217,7 +221,8 @@ Visual Studio を既にインストールしてある場合は、次の手順で
 
 Visual Studio では、最新の .NET Core SDK とランタイムをインストールできます。
 
-- [Visual Studio をダウンロードします](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)。
+> [!div class="button"]
+> [Visual Studio をダウンロードします](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)。
 
 ### <a name="select-a-workload"></a>ワークロードを選択する
 

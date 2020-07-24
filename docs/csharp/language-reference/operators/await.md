@@ -1,18 +1,18 @@
 ---
 title: await 演算子 - C# リファレンス
-ms.date: 11/08/2019
+ms.date: 07/13/2020
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141025"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308846"
 ---
 # <a name="await-operator-c-reference"></a>await 演算子 (C# リファレンス)
 
@@ -31,11 +31,17 @@ ms.locfileid: "82141025"
 
 .NET の型として <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask>、<xref:System.Threading.Tasks.ValueTask%601> がありますが、`await` 演算子のオペランドはそのいずれかになります。 ただし、待機可能な式であれば `await` 演算子のオペランドになります。 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[待機可能な式](~/_csharplang/spec/expressions.md#awaitable-expressions)」セクションを参照してください。
 
-C# 8.0 以降では、`await foreach` ステートメントを使用して、データの非同期ストリームを利用できます。 詳細については、[`foreach` ステートメント](../keywords/foreach-in.md)に関する記事、および記事「[C# 8.0 の新機能](../../whats-new/csharp-8.md)」の「[非同期ストリーム](../../whats-new/csharp-8.md#asynchronous-streams)」セクションを参照してください。
-
 式 `t` の型が <xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.ValueTask%601> の場合、式 `await t` の型は `TResult` になります。 `t` の型が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.ValueTask> の場合、`await t` の型は `void` になります。 いずれの場合も、`t` で例外がスローされる場合、`await t` で再び例外がスローされます。 例外処理の詳細については、[try-catch ステートメント](../keywords/try-catch.md)に関する記事の「[非同期メソッドの例外](../keywords/try-catch.md#exceptions-in-async-methods)」を参照してください。
 
 `async` キーワードと `await` キーワードは、C# 5 以降で使用できます。
+
+## <a name="asynchronous-streams-and-disposables"></a>非同期のストリームと破棄可能
+
+C# 8.0 以降、非同期のストリームと破棄可能を使用できます。
+
+`await foreach` ステートメントを使用してデータの非同期ストリームを利用できます。 詳細については、[`foreach` ステートメント](../keywords/foreach-in.md)に関する記事、および記事「[C# 8.0 の新機能](../../whats-new/csharp-8.md)」の「[非同期ストリーム](../../whats-new/csharp-8.md#asynchronous-streams)」セクションを参照してください。
+
+`await using` ステートメントを使用し、非同期破棄可能オブジェクト、つまり、<xref:System.IAsyncDisposable> インターフェイスを実装する型のオブジェクトを操作します。 詳細については、「[DisposeAsync メソッドの実装](../../../standard/garbage-collection/implementing-disposeasync.md)」記事の「[非同期の破棄可能の使用](../../../standard/garbage-collection/implementing-disposeasync.md#using-async-disposable)」を参照してください。
 
 ## <a name="await-operator-in-the-main-method"></a>Main メソッドの await 演算子
 

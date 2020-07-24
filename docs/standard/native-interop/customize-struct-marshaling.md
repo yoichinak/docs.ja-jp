@@ -5,14 +5,14 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003894"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374534"
 ---
-# <a name="customizing-structure-marshaling"></a>構造体のマーシャリングのカスタマイズ
+# <a name="customize-structure-marshaling"></a>構造体のマーシャリングのカスタマイズ
 
 構造体の既定のマーシャリング規則が、必要な規則とは異なる場合があります。 .NET ランタイムには、構造体のレイアウトやフィールドのマーシャリング方法をカスタマイズできる拡張ポイントがいくつか用意されています。
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-WinRT ベースの API を使用している場合は、文字列を `HSTRING` としてマーシャリングする必要があります。  <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 値を使用すると、文字列を `HSTRING` としてマーシャリングできます。
+WinRT ベースの API を使用している場合は、文字列を `HSTRING` としてマーシャリングする必要があります。 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 値を使用すると、文字列を `HSTRING` としてマーシャリングできます。
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10 進数フィールドのマーシャリングのカスタマイズ
 
-Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
+Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy-r1) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>`System.Object` のマーシャリング
+## <a name="marshal-systemobject"></a>`System.Object` をマーシャリングする
 
 Windows では、`object` 型のフィールドをネイティブ コードにマーシャリングできます。 このようなフィールドは、次の 3 つの型のいずれかにマーシャリングできます。
 

@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325011"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416056"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
 
@@ -75,7 +75,7 @@ Hello World!
 - [macOS 上の .NET Core での Visual Studio Code の使用に関する概要](./tutorials/using-on-macos.md)
 - [.NET Core でのコマンド ラインの使用に関する概要](./tutorials/cli-create-console-app.md)
 - [Visual Studio for Mac を使用した macOS での .NET Core の概要](./tutorials/using-on-mac-vs.md)
-- [Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](./tutorials/using-on-mac-vs-full-solution.md)
+- [Visual Studio for Mac を使用して macOS で .NET Standard ライブラリを構築する](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |
 |---|---|

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b5643dd7eddefebc9cbf922ff5cce75d72dee4dd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100900"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415981"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -207,7 +207,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-コードは少ないですが、LINQ と非同期コードを併用するときは注意が必要です。 LINQ は遅延実行を使うので、生成されたシーケンスを `.ToList()` または `.ToArray()` の呼び出しで強制的に反復処理させない限り、`foreach` ループ内で行われた非同期呼び出しはすぐに実行されません。
+コードは少ないですが、LINQ と非同期コードを併用するときは注意してください。 LINQ は遅延実行を使うので、生成されたシーケンスを `.ToList()` または `.ToArray()` の呼び出しで強制的に反復処理させない限り、`foreach` ループ内で行われた非同期呼び出しはすぐに実行されません。
 
 ## <a name="important-info-and-advice"></a>重要な情報とアドバイス
 

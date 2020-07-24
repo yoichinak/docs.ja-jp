@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174732"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309405"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -398,7 +398,7 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="asynchronous-disposable"></a>非同期の破棄可能
 
-C# 8.0 以降、この言語では <xref:System.IAsyncDisposable?displayProperty=nameWithType> インターフェイスを実装する非同期の破棄可能な型がサポートされます。 `using` 式のオペランドで、<xref:System.IDisposable> または <xref:System.IAsyncDisposable> を実装できます。 `IAsyncDisposable` の場合、<xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> から返される <xref:System.Threading.Tasks.Task> を `await` するコードがコンパイラによって生成されます。 詳細については、「[`using` ステートメント](../language-reference/keywords/using-statement.md)」を参照してください。
+C# 8.0 以降、この言語では <xref:System.IAsyncDisposable?displayProperty=nameWithType> インターフェイスを実装する非同期の破棄可能な型がサポートされます。 `await using` ステートメントを使用し、非同期破棄可能オブジェクトを操作します。 詳細については、「[DisposeAsync メソッドの実装](../../standard/garbage-collection/implementing-disposeasync.md)」の記事を参照してください。
 
 ## <a name="indices-and-ranges"></a>インデックスと範囲
 

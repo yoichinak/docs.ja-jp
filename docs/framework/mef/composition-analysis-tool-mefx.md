@@ -1,17 +1,18 @@
 ---
 title: コンポジション分析ツール (Mefx)
+description: .NET に Managed Extensibility Framework (MEF) パーツを含んでいる DLL ファイルと EXE ファイルを分析するコンポジション分析ツール (Mefx) について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abb1459afc5aeb2d39ee553c62fe382bb7af58d5
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181303"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281278"
 ---
 # <a name="composition-analysis-tool-mefx"></a>コンポジション分析ツール (Mefx)
 合成分析ツール (Mefx) は、Managed Extensibility Framework (MEF) のパートが含まれたライブラリ (.dll) ファイルとアプリケーション (.exe) ファイルを分析するコマンド ライン アプリケーションです。 Mefx の主な目的は、開発者が煩雑なトレース コードをアプリケーション自体に追加することなく、MEF アプリケーションの合成エラーを診断できるようにすることです。 また、Mefx は、サード パーティが提供するライブラリのパートについて理解する際にも役立ちます ここでは、Mefx の使用方法について説明し、構文のリファレンスを示します。  
