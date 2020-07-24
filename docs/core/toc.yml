@@ -304,6 +304,10 @@ items:
         items:
           - name: メモリ リークをデバッグする
             href: diagnostics/debug-memory-leak.md
+          - name: 高い CPU 使用率をデバッグする
+            href: diagnostics/debug-highcpu.md
+          - name: デッドロックをデバッグする
+            href: diagnostics/debug-deadlock.md
   - name: .NET Core の追加ツール
     items:
       - name: 概要

@@ -1,5 +1,6 @@
 ---
 title: .NET Framework の新機能
+description: .NET Framework のさまざまなバージョンの新機能を参照してください。 各バージョンでの主要な新機能と機能強化の概要を確認してください。
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244440"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925593"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
