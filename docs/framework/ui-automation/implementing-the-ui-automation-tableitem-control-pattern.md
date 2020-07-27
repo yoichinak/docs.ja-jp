@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション TableItem コントロール パターンの実装
+description: UI オートメーションで TableItem コントロールパターンを実装するためのガイドラインと規則を確認します。 ITableItemProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Table Item
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: f35b491c31e8725eac0025dfd6815079d0ea9b79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d6d31fe0e041fbba147df14d290a775188755f2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180078"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163516"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>UI オートメーション TableItem コントロール パターンの実装
 > [!NOTE]
@@ -24,15 +25,15 @@ ms.locfileid: "79180078"
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
   
-- 関連するグリッド項目の機能については、「 [UI オートメーション GridItem コントロール パターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)」を参照してください。  
+- 関連するグリッド項目の機能については、「 [UI オートメーション GridItem コントロールパターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)」を参照してください。  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider の必須メンバー  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|メソッド|なし|  
   
  このコントロール パターンに関連付けられるプロパティやイベントはありません。  
   
@@ -42,10 +43,10 @@ ms.locfileid: "79180078"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーション Table コントロール パターンの実装](implementing-the-ui-automation-table-control-pattern.md)
 - [UI オートメーション GridItem コントロール パターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

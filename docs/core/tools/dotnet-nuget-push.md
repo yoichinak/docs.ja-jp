@@ -3,12 +3,12 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895455"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925515"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -22,7 +22,7 @@ ms.locfileid: "82895455"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -64,7 +64,7 @@ dotnet nuget push -h|--help
 
   サーバーの API キーです。
 
-- **`-n|--no-symbols`**
+- **`-n|--no-symbols true`**
 
   シンボルをプッシュしません (存在する場合でも)。
 

@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション RangeValue コントロール パターンの実装
+description: UI オートメーションで RangeValue コントロールパターンを実装するためのガイドラインと規則を確認します。 IRangeValueProvider インターフェイスに必要なメンバーを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Range Value
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 847a8aae3fd0c3d6965c910d19a4cec11cd2a3b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccb6aeb5f8451975d7e2e9649bbb82c0c3ae23d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180181"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164081"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI オートメーション RangeValue コントロール パターンの実装
 > [!NOTE]
@@ -29,13 +30,13 @@ ms.locfileid: "79180181"
   
 - 進行状況バーやスライダーなどのあいまいな範囲の値を持つコントロールでは、それらの値を正規化する必要があります。  
   
- ![プログレスバー。](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![進行状況バー。](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 値が整数型で、最小値と最大値のプロパティ値がそれぞれ 0 と 100 に正規化された進行状況バーの例  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider の必須メンバー  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|プロパティ|なし|  
 |<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|プロパティ|なし|  
@@ -57,8 +58,8 @@ ms.locfileid: "79180181"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

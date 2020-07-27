@@ -3,18 +3,18 @@ title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397909"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164282"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
 .NET Framework ライブラリ コードを .NET Core に移植し、そこでクロスプラットフォームを実行して、それを使用するアプリの範囲を広げる方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 この記事では、以下を前提とします。
 
@@ -26,9 +26,6 @@ ms.locfileid: "79397909"
 
 [.NET Standard](../../standard/net-standard.md)\
 この記事では、すべての .NET 実装で使用可能にすることを目的とした、.NET API の正式な仕様について説明します。
-
-[パッケージ、メタパッケージ、フレームワーク](../packages.md)\
-この記事では、.NET Core でのパッケージの定義と使用について説明すると共に、複数の .NET 実装で実行されるコードがパッケージでどのようにサポートされるかについて説明します。
 
 [クロス プラットフォーム ツールによるライブラリの作成](../tutorials/libraries.md)\
 この記事では、.NET Core CLI を使用してライブラリを作成する方法について説明します。
@@ -111,10 +108,10 @@ ms.locfileid: "79397909"
 コードを移植したときにすべての機能が動作することを確認するには、コードを .NET Core に移植してテストすることをお勧めします。 このテストを行うには、.NET Core 用のテストを構築して実行するためのテスト フレームワークを使用する必要があります。 現在のところ、次の 3 つの選択肢があります。
 
 - [xUnit](https://xunit.github.io/)
-  - [作業の開始](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [はじめに](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   - [MSTest プロジェクトを xUnit に変換するツール](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  - [作業の開始](https://github.com/nunit/docs/wiki/Installation)
+  - [はじめに](https://github.com/nunit/docs/wiki/Installation)
   - [MSTest から NUnit への移行に関するブログ投稿](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](/visualstudio/test/unit-test-basics)
 
@@ -130,7 +127,7 @@ ms.locfileid: "79397909"
 
 ライブラリのベースから開始してベースから外側に向かい、必要に応じて各レイヤーをテストする場合、移植は、問題が一度でコードの 1 レイヤーに分離される体系的なプロセスになります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 >[!div class="nextstepaction"]
 >[.NET Core のプロジェクトを整理する](project-structure.md)

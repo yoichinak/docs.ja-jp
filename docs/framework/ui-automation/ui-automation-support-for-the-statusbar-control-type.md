@@ -1,17 +1,18 @@
 ---
 title: UI オートメーションによる StatusBar コントロール型のサポート
+description: UI オートメーションによる StatusBar コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロールパターン、およびイベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StatusBar control type
 - UI Automation, Status Bar control type
 - control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-ms.openlocfilehash: 0251eac3dff5f4b5a1ce0f7211c65fd0248b8891
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b199193ff4ee0fb9e22457cf19b15db189702e05
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179573"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163798"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>UI オートメーションによる StatusBar コントロール型のサポート
 > [!NOTE]
@@ -21,21 +22,21 @@ ms.locfileid: "79179573"
   
  ステータス バー コントロールは、アプリケーションのウィンドウに表示されているオブジェクトの情報、そのオブジェクトのコンポーネント、またはそのオブジェクトのアプリケーション内での操作に関連するコンテキストについての情報を表示します。  
   
- 以降のセクションで、StatusBar コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、イベントを定義します。 要件[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]は、Win32 または Windows[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]フォームのいずれでも、すべてのステータス バー コントロールに適用されます。  
+ 以降のセクションで、StatusBar コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、イベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]要件は [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、、Win32、Windows フォームのいずれであるかにかかわらず、すべてのステータスバーコントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、ステータス バー コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細については、「 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] UI[オートメーション ツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、ステータス バー コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|StatusBar<br /><br /> - 編集 (0 以上)<br />- プログレスバー (0 または多)<br />- 画像 (0 または多)<br />- ボタン (0 または多)|StatusBar<br /><br /> - 編集 (0 以上)<br />- プログレスバー (0 または多)<br />- 画像 (0 または多)<br />- ボタン (0 または多)|  
+|StatusBar<br /><br /> -Edit (0 以上)<br />-進行状況バー (0 以上)<br />-Image (0 以上)<br />-Button (0 以上)|StatusBar<br /><br /> -Edit (0 以上)<br />-ProgressBar (0 以上)<br />-Image (0 以上)<br />-Button (0 以上)|  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、進行状況バー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については、「[クライアントの UI オートメーション プロパティ 」](ui-automation-properties-for-clients.md)を参照してください。  
+ 次の表に、進行状況バー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|Value|Notes|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|ステータス バーの四角形領域は、ステータス バー コントロールに含まれるコントロールをすべて囲んでいる必要があります。|  
@@ -45,11 +46,11 @@ ms.locfileid: "79179573"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|通常、ステータス バー コントロールにラベルはありません。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|StatusBar|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「ステータス バー」|StatusBar コントロール型に対応する、ローカライズされた文字列。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|ステータス バー コントロールには、常にコンテンツが含まれます。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|ステータス バー コントロールは、常にコントロールです。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|正しい|ステータス バー コントロールには、常にコンテンツが含まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|正しい|ステータス バー コントロールは、常にコントロールです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|依存|ステータス バー コントロールは、現在画面上に表示されていなければこのプロパティに True を返します。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|依存|コントロールの向きを示す値 (水平または垂直)。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|False|適用なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|誤り|適用できません|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|ステータス バーにアクセラレータ キーはありません。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
@@ -58,7 +59,7 @@ ms.locfileid: "79179573"
   
 |コントロール パターン|サポート|Notes|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|省略可能|個々の項目を監視して簡単に情報を参照できるように、ステータス バー コントロールはグリッド コントロール パターンをサポートする必要があります。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Optional|個々の項目を監視して簡単に情報を参照できるように、ステータス バー コントロールはグリッド コントロール パターンをサポートする必要があります。|  
   
 <a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
@@ -66,11 +67,11 @@ ms.locfileid: "79179573"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|Notes|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Required|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目
 

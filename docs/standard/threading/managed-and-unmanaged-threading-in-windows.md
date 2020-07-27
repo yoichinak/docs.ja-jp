@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127543"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924384"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows でのマネージド スレッド処理とアンマネージド スレッド処理
 
@@ -23,9 +23,6 @@ ms.locfileid: "73127543"
  ただしアンマネージド スレッドが COM 呼び出し可能ラッパーなどを介してランタイムに入ると、システムがそのスレッド ローカル ストアで内部マネージド <xref:System.Threading.Thread> オブジェクトを検索します。 このオブジェクトが見つかった場合、ランタイムは既にこのスレッドを認識しています。 見つからない場合、ランタイムは新しい <xref:System.Threading.Thread> オブジェクトを作成し、そのスレッドのスレッド ローカル ストアにインストールします。  
   
  マネージド スレッド処理では、 <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> は安定したマネージド スレッド ID です。 この値は、取得されたアプリケーション ドメインに関係なく、スレッドの有効期間にわたって他のスレッドの値と競合することはありません。  
-  
-> [!NOTE]
-> オペレーティング システム **ThreadId** とマネージド スレッドの間には固定的な関係はありません。これは、アンマネージド ホストがマネージド スレッドとアンマネージド スレッドの間の関係を制御できるためです。 特に、高度なホストはファイバー API を使用して、多数のマネージド スレッドを同一オペレーティング システム スレッドに対してスケジュールしたり、マネージド スレッドを異なるオペレーティング システム スレッド間で移動したりできます。  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Win32 スレッド処理とマネージド スレッド処理の対応付け
 
@@ -65,7 +62,7 @@ ms.locfileid: "73127543"
   
 ## <a name="blocking-issues"></a>障害となっている問題点  
 
-アンマネージ コードでスレッドをブロックしているオペレーティング システムに対し、そのスレッドがアンマネージ呼び出しを実行する場合、ランタイムは <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> または <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>に対してその呼び出しを制御しません。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>では、スレッドが再びマネージド コードに入ると、ランタイムはスレッドを **Abort** 対象としてマークし、スレッドを制御します。 アンマネージド ブロックではなくマネージド ブロックを使用することをお勧めします。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>などはすべて <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>に応答します。 また、スレッドがシングルスレッド アパート内にある場合、これらのマネージド ブロック操作はすべて、スレッドがブロックされている間でもアパートメント内で正しくメッセージ ポンプを行います。  
+アンマネージ コードでスレッドをブロックしているオペレーティング システムに対し、そのスレッドがアンマネージ呼び出しを実行する場合、ランタイムは <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> または <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>に対してその呼び出しを制御しません。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>では、スレッドが再びマネージド コードに入ると、ランタイムはスレッドを **Abort** 対象としてマークし、スレッドを制御します。 アンマネージド ブロックではなくマネージド ブロックを使用することをお勧めします。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>、<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>、<xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> などはすべて、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> に応答します。 また、スレッドがシングルスレッド アパート内にある場合、これらのマネージド ブロック操作はすべて、スレッドがブロックされている間でもアパートメント内で正しくメッセージ ポンプを行います。  
 
 ## <a name="threads-and-fibers"></a>スレッドとファイバー
 

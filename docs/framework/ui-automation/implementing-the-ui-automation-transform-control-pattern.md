@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Transform コントロール パターンの実装
+description: UI オートメーションに変換コントロールパターンを実装するためのガイドラインと規則を確認します。 ITransformProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Transform
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: 5643bc85972ea33cc31b1a83ecf7615dbb275bc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180054"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168214"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>UI オートメーション Transform コントロール パターンの実装
 > [!NOTE]
@@ -37,14 +38,14 @@ ms.locfileid: "79180054"
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider の必須メンバー  
  <xref:System.Windows.Automation.Provider.ITransformProvider>の実装には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|メソッド|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -54,14 +55,14 @@ ms.locfileid: "79180054"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - 偽<xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty>の場合|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - 偽<xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty>の場合|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - 偽<xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty>の場合|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> が false の場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> が false の場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> が false の場合。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

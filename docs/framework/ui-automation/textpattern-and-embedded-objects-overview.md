@@ -1,5 +1,6 @@
 ---
 title: TextPattern および埋め込みオブジェクトの概要
+description: TextPattern と Textpattern 範囲を使用して、UI オートメーションがテキストドキュメントまたはコンテナー内の埋め込みオブジェクト (子要素) を公開する方法の概要について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201068"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163565"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
 > [!NOTE]

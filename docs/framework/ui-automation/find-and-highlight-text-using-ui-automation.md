@@ -1,5 +1,6 @@
 ---
 title: UI オートメーションを使用した、テキストの検索と強調表示
+description: UI オートメーションを使用してテキストを検索し、強調表示します。 例では、テキストコントロールのコンテンツ内で文字列の出現箇所を順番に検索し、強調表示します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +13,21 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: 0e5f856c69fab45a4c92e12746f357320d2e323c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4aca4b5ccdbc429a3d6267afc09b9f8b99cd7e9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435754"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164201"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>UI オートメーションを使用した、テキストの検索と強調表示
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
- このトピックでは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]を使用して、テキストコントロールのコンテンツ内の文字列の出現箇所を順番に検索し、強調表示する方法について説明します。  
+ このトピックでは、を使用して、テキストコントロールのコンテンツ内の文字列の出現箇所を順番に検索し、強調表示する方法を示し [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ます。  
   
 ## <a name="example"></a>例  
- 次の例では、テキストコントロールから <xref:System.Windows.Automation.TextPattern> オブジェクトを取得します。 ドキュメント全体のテキストコンテンツを表す <xref:System.Windows.Automation.Text.TextPatternRange> オブジェクトは、この <xref:System.Windows.Automation.TextPattern>の <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> プロパティを使用して作成されます。 その後、順次検索と強調表示の機能に対して、2つの <xref:System.Windows.Automation.Text.TextPatternRange> オブジェクトが作成されます。  
+ 次の例では、 <xref:System.Windows.Automation.TextPattern> テキストコントロールからオブジェクトを取得します。 <xref:System.Windows.Automation.Text.TextPatternRange>その後、ドキュメント全体のテキストコンテンツを表すオブジェクトが、こののプロパティを使用して作成され <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> <xref:System.Windows.Automation.TextPattern> ます。 その <xref:System.Windows.Automation.Text.TextPatternRange> 後、順次検索と強調表示の機能に対して、2つのオブジェクトが作成されます。  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -35,6 +36,6 @@ ms.locfileid: "74435754"
 [!code-csharp[FindText#SearchTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#searchtarget)]
 [!code-vb[FindText#SearchTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#searchtarget)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [UI オートメーションを使用した、テキストの検索と強調表示](find-and-highlight-text-using-ui-automation.md)

@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Value コントロール パターンの実装
+description: UI オートメーションに Value コントロールパターンを実装するためのガイドラインと規則を確認します。 IValueProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: eb77f26bbe3546a3f90804c3648f8547fb6abad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180088"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168201"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI オートメーション Value コントロール パターンの実装
 > [!NOTE]
@@ -36,7 +37,7 @@ ms.locfileid: "79180088"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> は、書式設定情報や部分文字列の値の取得をサポートしていません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>カラー値 ("黄" など) と同等の内部 RGB 構造体との間の文字列マッピングをサポートする Microsoft Word の**カラー ピッカー**選択コントロール (以下の図を参照) などのコントロールによって実装する必要があります。  
+- <xref:System.Windows.Automation.Provider.IValueProvider>色の値 ("黄" など) と同等の内部 RGB 構造との間の文字列マッピングをサポートする、Microsoft Word の**カラーピッカー**選択コントロール (下図参照) などのコントロールによって実装する必要があります。  
   
  ![黄色が強調表示されたカラー ピッカー。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列マッピング例  
@@ -47,11 +48,11 @@ ms.locfileid: "79180088"
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider の必須メンバー  
  <xref:System.Windows.Automation.Provider.IValueProvider>の実装には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|プロパティ|なし|  
 |<xref:System.Windows.Automation.ValuePattern.ValueProperty>|プロパティ|なし|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Method|なし|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|メソッド|なし|  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>例外  
@@ -59,15 +60,15 @@ ms.locfileid: "79180088"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - ロケール固有の情報が、不適切な形式の日付などの不適切な形式でコントロールに渡された場合。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 新しい値を文字列からコントロールが認識する形式に変換できない場合。|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 有効になっていないコントロールを操作しようとした場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -ロケール固有の情報が誤った形式でコントロールに渡された場合 (書式設定されていない日付など)。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -新しい値を文字列からコントロールが認識する形式に変換できない場合。|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -有効になっていないコントロールを操作しようとしたとき。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [値パターン挿入テキストのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [ValuePattern 挿入テキストのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

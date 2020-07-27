@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Selection コントロール パターンの実装
+description: UI オートメーションで Selection コントロールパターンを実装するためのガイドラインと規則を確認します。 ISelectionProvider インターフェイスに必要なメンバーを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection control pattern
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 083a4bb56fe76c1d65015ffabf741d7e1953d2ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3854a401ae6179be4e4e75d86964108d83b0ccf
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180132"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163587"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI オートメーション Selection コントロール パターンの実装
 > [!NOTE]
@@ -29,22 +30,22 @@ ms.locfileid: "79180132"
   
 - **音量** スライダー コントロールなど、最小値、最大値、連続した値の範囲を持つコントロールは、 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ではなく <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装する必要があります。  
   
-- <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>を実装する子コントロールを管理する単一選択コントロール **([画面のプロパティ]** ダイアログ ボックスの **[画面の解像度**] スライダー、または Microsoft Word の **[カラー ピッカー** ] 選択コントロールなど) は実装<xref:System.Windows.Automation.Provider.ISelectionProvider>する必要があります。彼らの子供たちは両方<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>を<xref:System.Windows.Automation.Provider.ISelectionItemProvider>実装する必要があります.  
+- [画面 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> の**プロパティ**] ダイアログボックスの [**画面解像度**] スライダーや Microsoft Word からの**カラーピッカー**選択コントロールなど、を実装する子コントロールを管理する単一選択コントロールはを実装する必要があり、 <xref:System.Windows.Automation.Provider.ISelectionProvider> その子はとの両方を実装する必要があり <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> <xref:System.Windows.Automation.Provider.ISelectionItemProvider> ます。  
   
  ![黄色が強調表示されたカラー ピッカー。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列マッピング例  
   
-- メニューは <xref:System.Windows.Automation.SelectionPattern>をサポートしていません。 グラフィックスとテキストの両方を含むメニュー項目 (Microsoft Outlook の **[表示**] メニューの **[プレビュー ウィンドウ**] 項目など) を操作<xref:System.Windows.Automation.Provider.IToggleProvider>していて、状態を伝える必要がある場合は、 を実装する必要があります。  
+- メニューは <xref:System.Windows.Automation.SelectionPattern>をサポートしていません。 グラフィックスとテキストの両方を含むメニュー項目 (Microsoft Outlook の [**表示**] メニューの [**プレビュー] ウィンドウ**項目など) を使用していて、状態を伝える必要がある場合は、を実装する必要があり <xref:System.Windows.Automation.Provider.IToggleProvider> ます。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider の必須メンバー  
  <xref:System.Windows.Automation.Provider.ISelectionProvider> インターフェイスには、次のプロパティ、メソッド、イベントが必要です。  
   
-|必須メンバー|Type|Notes|  
+|必須メンバー|Type|メモ|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|プロパティ|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> と <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>を使用してプロパティ変更イベントをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|プロパティ|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> と <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>を使用してプロパティ変更イベントをサポートする必要があります。|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|メソッド|なし|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Event|コンテナー内の選択が大幅に変更され、 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 定数で許可されるよりも多くの追加イベントと削除イベントを送信する必要がある場合に発生します。|  
   
  <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> プロパティと <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> プロパティは、動的に設定できます。 たとえば、既定で初期状態では何も項目が選択されていないコントロールがあるとします。これは、 <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> が `false`であるということです。 しかし、項目が 1 つ選択されると、このコントロールは、項目が常に 1 つ以上選択された状態を保持する必要があります。 同様に、まれなケースとして、初期設定では複数の項目の選択を許可し、以降は 1 項目の選択だけを許可するようにコントロールが設定される場合があります。  
@@ -60,9 +61,9 @@ ms.locfileid: "79180132"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーション SelectionItem コントロール パターンの実装](implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

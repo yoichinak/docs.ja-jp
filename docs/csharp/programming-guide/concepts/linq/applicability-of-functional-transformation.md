@@ -1,13 +1,14 @@
 ---
 title: 関数型変換の適用範囲 (C#)
+desciption: Learn about functional transformation. See how this approach to LINQ and other processes where the focus is on transforming data from one form to another.
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: bc2678354bb45f1ed0a4076f278f52d0ee7d350e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b507e0ad5c09478c3427f87d32a21d8facf1b7a0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594875"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105560"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>関数型変換の適用範囲 (C#)
 純粋関数型変換は、さまざまな状況で適用できます。  
@@ -32,7 +33,7 @@ ms.locfileid: "69594875"
   
  繰り返しになりますが、C# は命令型の方法と関数型の方法の両方をサポートしているため、両方の要素を組み込むことがアプリケーションにとって最善の設計であることを覚えておいてください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [純粋関数型変換の概要 (C#)](./introduction-to-pure-functional-transformations.md)
 - [XML の関数型変換 (C#)](./functional-transformation-of-xml.md)

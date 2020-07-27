@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Grid コントロール パターンの実装
+description: UI オートメーションで GridPattern grid コントロールパターンを実装するためのガイドラインと規則について説明します。 IGridProvider インターフェイスを実装する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 04f3ee1e01054df6a13ab2391e14a6a7f7274bb9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180215"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165868"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>UI オートメーション Grid コントロール パターンの実装
 > [!NOTE]
@@ -46,11 +47,11 @@ ms.locfileid: "79180215"
 ## <a name="required-members-for-igridprovider"></a>IGridProvider の必須メンバー  
  IGridProvider インターフェイスの実装時には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|Type|Notes|  
+|必須メンバー|Type|メモ|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|メソッド|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -60,14 +61,14 @@ ms.locfileid: "79180215"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 要求された行座標が より大<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>きい場合、または列の座標が<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 要求された行または列の座標のいずれかが 0 未満の場合。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -要求された行座標がより大きい <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> か、列座標がより大きい場合 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> 。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -要求された行または列の座標のいずれかが0未満の場合。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーション GridItem コントロール パターンの実装](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

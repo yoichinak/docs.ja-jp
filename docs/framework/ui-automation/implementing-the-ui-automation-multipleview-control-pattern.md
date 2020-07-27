@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション MultipleView コントロール パターンの実装
+description: UI オートメーションで、多重ビューコントロールパターンを実装するためのガイドラインと規則を確認します。 IMultipleViewProvider インターフェイスに必要なメンバーを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 9decb617e30a340d3e73e911f7848110de5599e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d65d57637891fcb1307f5ee83a417941ff323fb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180171"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168224"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI オートメーション MultipleView コントロール パターンの実装
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79180171"
   
  <xref:System.Windows.Automation.MultipleViewPattern> コントロール パターンは、同じ情報セットまたは子コントロールの複数の表現を提供し、それらの表現を切り替えることができるコントロールをサポートするために使用します。  
   
- 複数のビューを表示できるコントロールの例としては、リスト ビュー (サムネイル、タイル、アイコン、または詳細として表示できる)、Microsoft Excel のグラフ (円、折れ線、横棒、数式を使用したセル値)、Microsoft Word 文書 (標準、Web レイアウト、印刷)レイアウト、閲覧レイアウト、アウトライン、Outlook の予定表 (年、月、週、日)、および Windows メディア プレーヤーのスキン。 サポートされるビューはコントロールの開発者によって決定され、各コントロールに固有です。  
+ 複数のビューを表示できるコントロールの例としては、リストビュー (コンテンツをサムネイルとして表示できるもの) があります。タイル、アイコン、または詳細)、Microsoft Excel グラフ (円グラフ、折れ線グラフ、横棒グラフ、数式を含むセル値)、Microsoft Word 文書 (標準、Web レイアウト、印刷レイアウト、閲覧レイアウト、アウトライン)、Microsoft Outlook カレンダー (年、月、週、日)、および Microsoft Windows Media Player スキン。 サポートされるビューはコントロールの開発者によって決定され、各コントロールに固有です。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
@@ -39,12 +40,12 @@ ms.locfileid: "79180171"
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider の必須メンバー  
  IMultipleViewProvider の実装には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|メソッド|なし|  
   
  このコントロールのパターンに関連付けられているイベントはありません。  
   
@@ -58,8 +59,8 @@ ms.locfileid: "79180171"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

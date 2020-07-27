@@ -1,16 +1,17 @@
 ---
 title: UI オートメーション コントロール型の概要
+description: UI オートメーションコントロール型の概要について説明します。これは、要素が表すコントロールの種類を示すために使用できる既知の識別子です。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179931"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166133"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI オートメーション コントロール型の概要
 > [!NOTE]

@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Toggle コントロール パターンの実装
+description: UI オートメーションでトグルコントロールパターンを実装するためのガイドラインと規則を確認します。 IToggleProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Toggle control pattern
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: 5f64842d31d46af3d648b9b570d1cfb210e2910a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9ae850a560101582b5f1a461de19f260ef59798
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180060"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168032"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>UI オートメーション Toggle コントロール パターンの実装
 > [!NOTE]
@@ -37,9 +38,9 @@ ms.locfileid: "79180060"
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider の必須メンバー  
  <xref:System.Windows.Automation.Provider.IToggleProvider>の実装には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Method|なし|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|メソッド|なし|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|プロパティ|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
@@ -50,9 +51,9 @@ ms.locfileid: "79180060"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーションを使用した、チェック ボックスのトグル状態の取得](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

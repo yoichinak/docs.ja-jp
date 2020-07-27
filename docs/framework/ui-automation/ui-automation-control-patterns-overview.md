@@ -1,16 +1,17 @@
 ---
 title: UI オートメーション コントロール パターンの概要
+description: 「UI オートメーションコントロールパターンの概要」を参照してください。 コントロールパターンを使用すると、型や外観に関係なく、コントロールの機能を分類したり公開したりすることができます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: f62631a15dd348b6f6ea27a82d7b45aab92ceed2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0df24de4f8a877405dfecb6b0d245ff1caf0418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179946"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163887"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.locfileid: "79179946"
   
 - プロパティとイベントは、コントロール パターンの機能に関する情報だけでなく、コントロールの状態に関する情報も提供します。  
   
- コントロール パターンは[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]、インターフェイスがコンポーネント オブジェクト モデル (COM) オブジェクトに関連付けられているため、関連付けられます。 COM では、サポートしているインターフェイスをオブジェクトに問い合わせて、それらのインターフェイスを使って機能にアクセスできます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、UI オートメーション クライアントは、サポートされるコントロール パターンをコントロールに対して確認し、サポートされているコントロール パターンによって公開されているプロパティ、メソッド、イベント、構造体を使用してコントロールとやり取りすることができます。 たとえば、複数行のエディット ボックスでは、UI オートメーション プロバイダーは <xref:System.Windows.Automation.Provider.IScrollProvider>を実装します。 クライアントは、 <xref:System.Windows.Automation.AutomationElement> が <xref:System.Windows.Automation.ScrollPattern> コントロール パターンをサポートしていることを認識すると、そのコントロール パターンによって公開されているプロパティ、メソッド、イベントを使用して、コントロールを操作したり、コントロールに関する情報にアクセスしたりできます。  
+ コントロールパターンは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] コンポーネントオブジェクトモデル (COM) オブジェクトに関連するインターフェイスとしてに関連します。 COM では、サポートしているインターフェイスをオブジェクトに問い合わせて、それらのインターフェイスを使って機能にアクセスできます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、UI オートメーション クライアントは、サポートされるコントロール パターンをコントロールに対して確認し、サポートされているコントロール パターンによって公開されているプロパティ、メソッド、イベント、構造体を使用してコントロールとやり取りすることができます。 たとえば、複数行のエディット ボックスでは、UI オートメーション プロバイダーは <xref:System.Windows.Automation.Provider.IScrollProvider>を実装します。 クライアントは、 <xref:System.Windows.Automation.AutomationElement> が <xref:System.Windows.Automation.ScrollPattern> コントロール パターンをサポートしていることを認識すると、そのコントロール パターンによって公開されているプロパティ、メソッド、イベントを使用して、コントロールを操作したり、コントロールに関する情報にアクセスしたりできます。  
   
 <a name="uiautomation_control_pattern_client_provider"></a>
 ## <a name="ui-automation-providers-and-clients"></a>UI オートメーションのプロバイダーおよびクライアント  
@@ -41,7 +42,7 @@ ms.locfileid: "79179946"
   
  UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターン クラスのメソッドとプロパティにアクセスし、それらを使用して [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に関する情報を取得したり、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を操作したりします。 これらのコントロール パターン クラスは、 <xref:System.Windows.Automation> 名前空間 (たとえば、 <xref:System.Windows.Automation.InvokePattern> や <xref:System.Windows.Automation.SelectionPattern>) にあります。  
   
- クライアントは<xref:System.Windows.Automation.AutomationElement>、メソッド<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>(or<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>など) または共通言語ランタイム (CLR) アクセサー[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を使用して、パターンのプロパティにアクセスします。 各コントロール パターン クラスには、そのコントロール パターン<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>を<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>識別するフィールド メンバ ( または ) があり、パラメーター<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>として<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>渡したり、そのパターンを<xref:System.Windows.Automation.AutomationElement>取得したりすることができます。  
+ クライアントは、 <xref:System.Windows.Automation.AutomationElement> メソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> やなど <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ) または共通言語ランタイム (CLR) アクセサーを使用して、パターンのプロパティにアクセスし [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ます。 各コントロールパターンクラスには、そのコントロールパターンを識別するフィールドメンバー (やなど) があります。また、また <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType> はにパラメーターとして渡して <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 、そのパターンを取得することもでき <xref:System.Windows.Automation.AutomationElement> ます。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>
 ## <a name="dynamic-control-patterns"></a>動的コントロール パターン  
@@ -55,8 +56,8 @@ ms.locfileid: "79179946"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|ドッキング コンテナーにドッキングすることができるコントロールに使用されます。 たとえば、ツールバーやツール パレットです。|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|展開したり折りたたんだりできるコントロールに使用されます。 たとえば、 **[ファイル]** メニューなどアプリケーションのメニュー項目。|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|サイズ変更や指定したセルへの移動などグリッド機能をサポートするコントロールに使用されます。 たとえば、エクスプローラの大きなアイコン ビューや、Word のヘッダーのない単純なテーブルなどです。|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|グリッド内にセルを持つコントロールに使用されます。 個々のセルは GridItem パターンをサポートしている必要があります。 たとえば、エクスプローラの詳細ビューの各セルを表示します。|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|サイズ変更や指定したセルへの移動などグリッド機能をサポートするコントロールに使用されます。 たとえば、Windows エクスプローラーの大きいアイコンの表示や、Microsoft Word のヘッダーのない単純なテーブルなどです。|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|グリッド内にセルを持つコントロールに使用されます。 個々のセルは GridItem パターンをサポートしている必要があります。 たとえば、Microsoft Windows エクスプローラーの詳細ビューの各セルです。|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|ボタンなど、呼び出すことができるコントロールに使用されます。|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|情報、データ、子の同じセットの複数の表現の間で切り替えることができるコントロールに使用されます。 たとえば、サムネイル、タイル、アイコン、リスト、詳細ビューでデータを使用できるリスト ビュー コントロール。|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|コントロールに適用できる値の範囲を持つコントロールに使用されます。 たとえば、年を含むスピン ボックス コントロールは 1900 から 2010 の範囲を持ち、月を表すスピン ボックス コントロールは 1 から 12 の範囲を持ちます。|  
@@ -64,13 +65,13 @@ ms.locfileid: "79179946"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|スクロールされるリスト内に個々の項目を持つコントロールに使用されます。 たとえば、コンボ ボックス コントロールなどスクロール リストに個々の項目を持つリスト コントロール。|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|選択コンテナー コントロールに使用されます。 たとえば、リスト ボックスやコンボ ボックス。|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|リスト ボックスやコンボ ボックスなどの選択コンテナー コントロールの個々の項目に使用されます。|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|グリッドとヘッダー情報を持つコントロールに使用されます。 たとえば、Excel ワークシートなどです。|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|グリッドとヘッダー情報を持つコントロールに使用されます。 たとえば、Microsoft Excel のワークシートです。|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|テーブル内の項目に使用されます。|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|テキストの情報を公開するエディット コントロールとドキュメントに使用されます。|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|状態を切り替えることができるコントロールに使用されます。 たとえば、チェック ボックスやチェック可能なメニュー項目。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|サイズ変更、移動、または回転を行えるコントロールに使用されます。 Transform コントロール パターンの一般的な用途は、デザイナー、フォーム、グラフィカル エディター、および描画アプリケーションでの使用です。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|クライアントで、値の範囲をサポートしないコントロールで値を取得したり、設定したりできます。 たとえば、日時指定のピッカーなどがあります。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|ウィンドウ固有の情報を公開します。ウィンドウは、Microsoft Windows オペレーティング システムの基本概念です。 ウィンドウのコントロールの例としては、トップレベルのアプリケーション ウィンドウ (Microsoft Word、エクスプローラなど)、マルチドキュメント インターフェイス (MDI) 子ウィンドウ、ダイアログ ボックスがあります。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|ウィンドウ固有の情報を公開します。ウィンドウは、Microsoft Windows オペレーティング システムの基本概念です。 ウィンドウであるコントロールの例としては、トップレベルアプリケーションウィンドウ (Microsoft Word、Microsoft Windows エクスプローラーなど)、マルチドキュメントインターフェイス (MDI) 子ウィンドウ、およびダイアログがあります。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -78,4 +79,4 @@ ms.locfileid: "79179946"
 - [UI オートメーション クライアントのコントロール パターン マッピング](control-pattern-mapping-for-ui-automation-clients.md)
 - [UI オートメーションの概要](ui-automation-overview.md)
 - [クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [クライアントの UI オートメーション イベント](ui-automation-events-for-clients.md)

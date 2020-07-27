@@ -4,12 +4,12 @@ description: 参照アセンブリについて説明します。これはライ�
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43a9dab037f4d0f1926ff67f8f38eaa6734a6d67
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79141069"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164516"
 ---
 # <a name="reference-assemblies"></a>参照アセンブリ
 
@@ -25,7 +25,7 @@ ms.locfileid: "79141069"
 
 プロジェクトから特定の API を使用するには、アセンブリへの参照を追加する必要があります。 参照は、実装アセンブリに追加するか、参照アセンブリに追加できます。 使用可能な場合は常に参照アセンブリを使用することをお勧めします。 これにより、API デザイナーによる使用を意図されている、ターゲット バージョンでサポートされている API メンバーのみが使用されるようになります。 参照アセンブリを使用すると、確実に実装の詳細に依存しないようにすることができます。
 
-.NET Framework ライブラリの参照アセンブリは、ターゲット パックと共に配布されます。 これらを入手するには、スタンドアロン インストーラーをダウンロードするか、Visual Studio インストーラーでコンポーネントを選択します。 詳細については、「[開発者向けの .NET Framework のインストール](../../framework/install/guide-for-developers.md)」を参照してください。 .NET Core と .NET Standard の場合、参照アセンブリは必要に応じて (NuGet 経由で) 自動的にダウンロードされ、参照されます。 .NET Core 3.0 以降では、コア フレームワーク用の参照アセンブリが [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) パッケージに含まれています (3.0 より前のバージョンでは、代わりに [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) パッケージが使用されます)。 詳細については、.NET Core ガイドの「[パッケージ、メタパッケージ、フレームワーク](../../core/packages.md)」を参照してください。
+.NET Framework ライブラリの参照アセンブリは、ターゲット パックと共に配布されます。 これらを入手するには、スタンドアロン インストーラーをダウンロードするか、Visual Studio インストーラーでコンポーネントを選択します。 詳細については、「[開発者向けの .NET Framework のインストール](../../framework/install/guide-for-developers.md)」を参照してください。 .NET Core と .NET Standard の場合、参照アセンブリは必要に応じて (NuGet 経由で) 自動的にダウンロードされ、参照されます。 .NET Core 3.0 以降では、コア フレームワーク用の参照アセンブリが [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) パッケージに含まれています (3.0 より前のバージョンでは、代わりに [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) パッケージが使用されます)。
 
 Visual Studio で **[参照の追加]** ダイアログを使用して .NET Framework アセンブリへの参照を追加する場合、リストからアセンブリを選択すると、Visual Studio ではプロジェクトで選択されたターゲット フレームワーク バージョンに対応する参照アセンブリが自動的に検索されます。 [[参照]](/visualstudio/msbuild/common-msbuild-project-items#reference) プロジェクト項目を使用して MSBuild プロジェクトに参照を直接追加する場合も同様です。完全なファイルのパスではなく、アセンブリ名のみを指定する必要があります。 `-reference` コンパイラ オプション ([C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) および [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) を使用するか、Roslyn API の <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> メソッドを使用して、コマンド ラインでこれらのアセンブリに参照を追加する場合、正しいターゲット プラットフォーム バージョンの参照アセンブリ ファイルを手動で指定する必要があります。 .NET Framework 参照アセンブリ ファイルは、 *%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework* ディレクトリにあります。 .NET Core の場合、`PreserveCompilationContext` プロジェクト プロパティを `true` に設定することにより、ターゲット プラットフォームの参照アセンブリを出力ディレクトリの *publish/refs* サブディレクトリにコピーするように発行操作を強制できます。 次に、これらの参照アセンブリ ファイルをコンパイラに渡すことができます。 [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) パッケージから `DependencyContext` を使用すると、パスを特定するために役立ちます。
 

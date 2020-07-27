@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607707"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164919"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -15,7 +15,7 @@ ms.locfileid: "81607707"
 
 ## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
 
-メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳細については、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」を参照してください。
+メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。
 
 ```xml
  <PropertyGroup>

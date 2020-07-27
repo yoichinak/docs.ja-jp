@@ -1,23 +1,24 @@
 ---
 title: UI オートメーションのセキュリティの概要
+description: 「Microsoft UI オートメーションのセキュリティモデルの概要」を参照してください。 ユーザーアカウント制御、高い特権を必要とするタスク、およびマニフェストファイルについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: 70d24c3dcc531abcec6d4dce75b5f0b31757e0c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d483f282db8ce8e5653d6d83361fa44df05f63f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448776"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163148"
 ---
 # <a name="ui-automation-security-overview"></a>UI オートメーションのセキュリティの概要
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。
 
-この概要では、Windows Vista の [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] のセキュリティモデルについて説明します。
+この概要では、Windows Vista ののセキュリティモデルについて説明し [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ます。
 
 <a name="User_Account_Control"></a>
 
@@ -41,7 +42,7 @@ UI オートメーション クライアントは、他のプロセスと通信�
 
 ## <a name="manifest-files"></a>マニフェスト ファイル
 
-保護されたシステム UI にアクセスするには、次のように、`requestedExecutionLevel` タグに `uiAccess` 属性を含むマニフェストファイルを使用してアプリケーションをビルドする必要があります。
+保護されたシステム UI にアクセスするには、次のように、タグに属性を含むマニフェストファイルを使用してアプリケーションをビルドする必要があり `uiAccess` `requestedExecutionLevel` ます。
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +58,4 @@ UI オートメーション クライアントは、他のプロセスと通信�
 
 このコードの `level` 属性の値は一例にすぎません。
 
-既定では、`uiAccess` は "false" です。つまり、属性を省略した場合、またはアセンブリのマニフェストが存在しない場合、アプリケーションは保護された UI にアクセスできなくなります。
+`uiAccess`既定値は "false" です。つまり、属性を省略した場合、またはアセンブリのマニフェストが存在しない場合、アプリケーションは保護された UI にアクセスできなくなります。

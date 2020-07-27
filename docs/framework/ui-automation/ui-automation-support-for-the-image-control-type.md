@@ -1,17 +1,18 @@
 ---
 title: UI オートメーションによる Image コントロール型のサポート
+description: UI オートメーションによる Image コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロールパターン、およびイベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Image control type
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-ms.openlocfilehash: b77174a573b027f44be6104cda3d9846d12924e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97a71b31609566ca081dee1c66b911f0ad534a50
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179725"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166959"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>UI オートメーションによる Image コントロール型のサポート
 > [!NOTE]
@@ -21,11 +22,11 @@ ms.locfileid: "79179725"
   
  アイコン、情報のグラフィック、チャートとして使用されるイメージ コントロールは、Image コントロール型をサポートします。 背景、またはウォーターマークのイメージとして使用されるコントロールは、Image コントロール型をサポートしません。  
   
- 以降のセクションで、Image コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、イベントを定義します。 要件[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]は、Win32 または[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows フォームに関係なく、すべてのイメージ コントロールに適用されます。  
+ 以降のセクションで、Image コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、イベントを定義します。 要件は、、Win32、Windows フォームのいずれの場合で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] も、すべてのイメージコントロールに適用され [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、イメージ コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細については、「 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] UI[オートメーション ツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、イメージ コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細については [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
@@ -33,9 +34,9 @@ ms.locfileid: "79179725"
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、Image コントロール型に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については、「[クライアントの UI オートメーション プロパティ 」](ui-automation-properties-for-clients.md)を参照してください。  
+ 次の表に、Image コントロール型に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|Value|Notes|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|コントロール全体を格納する最も外側の四角形。|  
@@ -46,7 +47,7 @@ ms.locfileid: "79179725"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Image|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"image"|Image コントロール型に対応する、ローカライズされた文字列。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|「ノート」を参照してください。|エンド ユーザーに対してまだ公開されていない有用な情報がイメージ コントロールに含まれている場合、イメージ コントロールを [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに含める必要があります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|イメージ コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに含まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|正しい|イメージ コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに含まれます。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|「ノート」を参照してください。|HelpText プロパティは、コントロールの実際の外見 (白い 'X' が記された赤い四角形など) を説明するローカライズされた文字列や、イメージに関連する他のヒント情報を公開します。<br /><br /> イメージ コントロールについてより詳しい情報を示すために長い説明が必要な場合は、このプロパティをサポートする必要があります。 たとえば、複雑なチャートや図などです。 このプロパティは、HTML の LongDesc タグとスケーラブル ベクター グラフィックス (SVG) の Desc タグにマップされます。 イメージ コントロールを使用する開発者は、コントロールに視覚的な説明を設定できるようにするために、プロパティをサポートする必要があります。 このプロパティは、UI Automation VisualDescription プロパティにマップされる必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|「ノート」を参照してください。|イメージ コントロールが画面上の特定の項目に関する状態情報を表している場合は、そのコントロールを対象の項目に含める必要があります。 ある項目の中にイメージが含まれている場合、その項目は状態プロパティをサポートし、状態が変わったときに適切な通知を発生させる必要があります。<br /><br /> イメージがスタンドアロン コントロールであり、状態を示している場合は、このプロパティをサポートする必要があります。|  
   
@@ -58,8 +59,8 @@ ms.locfileid: "79179725"
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|依存|イメージ コントロールは、コントロールがグリッドのコンテナー内にある場合、Grid Item パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|依存|イメージ コントロールは、コントロールがヘッダー コントロールを持つコンテナー内にある場合、Table Item パターンをサポートします。|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|なし|イメージ コントロールにクリック可能なイメージが含まれている場合、コントロールは、Invoke パターン (ボタン コントロール型など) をサポートしているコントロール型をサポートする必要があります。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|なし|イメージ コントロールは、Selection Item パターンをサポートしてはなりません。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|行わない|イメージ コントロールにクリック可能なイメージが含まれている場合、コントロールは、Invoke パターン (ボタン コントロール型など) をサポートしているコントロール型をサポートする必要があります。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|行わない|イメージ コントロールは、Selection Item パターンをサポートしてはなりません。|  
   
 <a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
@@ -71,12 +72,12 @@ ms.locfileid: "79179725"
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|なし|なし|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|なし|なし|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|なし|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Required|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目
 

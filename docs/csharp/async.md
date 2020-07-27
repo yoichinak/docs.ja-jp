@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 35ba90f978b1993f80451a28a4cd08129afddd85
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415981"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864502"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 

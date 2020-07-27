@@ -1,16 +1,17 @@
 ---
 title: UI オートメーション プロパティの概要
+description: Microsoft UI オートメーションプロパティの概要については、「」を参照してください。 プロパティ識別子、カテゴリ別のプロパティ、ローカライズ、およびプロパティとイベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179867"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163209"
 ---
 # <a name="ui-automation-properties-overview"></a>UI オートメーション プロパティの概要
 > [!NOTE]
@@ -26,11 +27,11 @@ ms.locfileid: "79179867"
   
 <a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>プロパティ識別子  
- すべてのプロパティは、番号と名前によって識別されます。 プロパティの名前を使用するのは、デバッグおよび診断を行う場合のみです。 プロバイダーは、数値 ID を使用して、受信プロパティ要求を識別します。 ただし、クライアント アプリケーションは、番号と名前をカプセル化した <xref:System.Windows.Automation.AutomationProperty>だけを使用して、取得したいプロパティを識別します。  
+ すべてのプロパティは、番号と名前によって識別されます。 プロパティの名前を使用するのは、デバッグおよび診断を行う場合のみです。 プロバイダーは、数値 Id を使用して、受信プロパティ要求を識別します。 ただし、クライアント アプリケーションは、番号と名前をカプセル化した <xref:System.Windows.Automation.AutomationProperty>だけを使用して、取得したいプロパティを識別します。  
   
  特定のプロパティを表す<xref:System.Windows.Automation.AutomationProperty> オブジェクトは、さまざまなクラスでフィールドとして使用できます。 セキュリティ上の理由から、UI オートメーション プロバイダーは、Uiautomationtypes.dll に含まれている別のクラスのセットから、これらのオブジェクトを取得します。  
   
- 次の表は、ID を含むクラスごとに<xref:System.Windows.Automation.AutomationProperty>プロパティを分類します。  
+ 次の表は、id を含むクラスによってプロパティを分類して <xref:System.Windows.Automation.AutomationProperty> います。  
   
 |プロパティの種類|クライアントが ID を取得する場所|プロバイダーが ID を取得する場所|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +54,7 @@ ms.locfileid: "79179867"
   
 <a name="Properties_by_Category"></a>
 ## <a name="properties-by-category"></a>カテゴリ別プロパティ  
- 次の表は、 と で<xref:System.Windows.Automation.AutomationElement>ID が見<xref:System.Windows.Automation.AutomationElementIdentifiers>つかるプロパティを分類したものです。 これらのプロパティは、すべてのコントロールに共通です。 一部の例外を除き、ほとんどのプロパティがプロバイダー アプリケーションの有効期間にわたって静的です。動的プロパティのほとんどは、コントロール パターンに関連付けられています。  
+ 次の表は、とで Id が見つかったプロパティを分類したもの <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers> です。 これらのプロパティは、すべてのコントロールに共通です。 一部の例外を除き、ほとんどのプロパティがプロバイダー アプリケーションの有効期間にわたって静的です。動的プロパティのほとんどは、コントロール パターンに関連付けられています。  
   
  **「プロパティ アクセス」** 列には、 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> と <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>だけでなく、各プロパティのすべてのアクセサーを示しています。 クライアント アプリケーションでプロパティを取得する方法の詳細については、「 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)」を参照してください。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "79179867"
 |プロパティの識別子|「プロパティ アクセス」|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|300|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|該当なし|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
@@ -136,7 +137,7 @@ ms.locfileid: "79179867"
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>
-## <a name="localization"></a>ローカリゼーション  
+## <a name="localization"></a>ローカライズ  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、以下のプロパティをオペレーティング システムの言語で提示する必要があります。  
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  

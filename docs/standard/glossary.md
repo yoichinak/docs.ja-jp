@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287455"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163114"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -139,8 +139,6 @@ Just-In-Time コンパイラ。
 ## <a name="metapackage"></a>メタパッケージ
 
 それ自体のライブラリを持たず、依存するもののリストのみを含む NuGet パッケージ。 含まれるパッケージは、必要に応じて、ターゲット フレームワーク用の API を確立できます。
-
-「[パッケージ、メタパッケージ、フレームワーク](../core/packages.md)」をご覧ください
 
 ## <a name="mono"></a>Mono
 

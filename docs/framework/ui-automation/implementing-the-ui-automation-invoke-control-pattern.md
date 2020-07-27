@@ -1,24 +1,25 @@
 ---
 title: UI オートメーション Invoke コントロール パターンの実装
+description: UI オートメーションで Invoke コントロールパターンを実装するためのガイドラインと規則を参照してください。 IInvokeProvider インターフェイスに必要なメンバーを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 30ae83aa4b73f36afce1251387598ef9b61816d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b464b3ab5cd2b0789798f8b865b946c5eae017eb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435164"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166173"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI オートメーション Invoke コントロール パターンの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。
 
-このトピックでは、イベントおよびプロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IInvokeProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、このトピックの最後に記載します。
+このトピックでは、イベントおよびプロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IInvokeProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。
 
 <xref:System.Windows.Automation.InvokePattern> コントロール パターンは、アクティブになったときに状態を保持せずに単一の明確なアクションを開始または実行するコントロールをサポートするために使用されます。 チェック ボックスやオプション ボタンなどの状態を保持するコントロールは、代わりに <xref:System.Windows.Automation.Provider.IToggleProvider> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider> をそれぞれ実装する必要があります。 Invoke コントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。
 
@@ -51,7 +52,7 @@ Invoke コントロール パターンを実装する場合は、次のガイド
 
 - 要素は、呼び出されるとすぐに [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーから消える場合があります。 そのため、イベント コールバックで提供された要素に情報を要求すると失敗することがあります。 推奨される回避策は、キャッシュされた情報をプリフェッチすることです。
 
-- コントロールは、複数のコントロール パターンを実装できます。 たとえば、Microsoft Excel のツールバーの [塗りつぶしの色] コントロールには、<xref:System.Windows.Automation.InvokePattern> と <xref:System.Windows.Automation.ExpandCollapsePattern> の両方のコントロールパターンが実装されています。 <xref:System.Windows.Automation.ExpandCollapsePattern> はメニューを公開し、 <xref:System.Windows.Automation.InvokePattern> は選択された色でアクティブな選択内容を塗りつぶします。
+- コントロールは、複数のコントロール パターンを実装できます。 たとえば、Microsoft Excel のツールバーの [塗りつぶしの色] コントロールには、 <xref:System.Windows.Automation.InvokePattern> コントロールパターンとコントロールパターンの両方が実装さ <xref:System.Windows.Automation.ExpandCollapsePattern> れています。 <xref:System.Windows.Automation.ExpandCollapsePattern> はメニューを公開し、 <xref:System.Windows.Automation.InvokePattern> は選択された色でアクティブな選択内容を塗りつぶします。
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -59,9 +60,9 @@ Invoke コントロール パターンを実装する場合は、次のガイド
 
 <xref:System.Windows.Automation.Provider.IInvokeProvider>の実装には、次のプロパティとメソッドが必要です。
 
-|必須メンバー|メンバーの種類|説明|
+|必須メンバー|メンバーの型|メモ|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|メソッド|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> は非同期呼び出しであるため、クライアントをブロックせずに即座に戻る必要があります。<br /><br /> 呼び出されたときにモーダル ダイアログを直接的または間接的に表示するコントロールでは、この動作は特に重要です。 イベントを発生させたすべての UI オートメーション クライアントは、モーダル ダイアログが閉じられるまで、ブロックされたままになります。|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> は非同期呼び出しであるため、クライアントをブロックせずに即座に戻る必要があります。<br /><br /> 呼び出されたときにモーダル ダイアログを直接的または間接的に表示するコントロールでは、この動作は特に重要です。 イベントを発生させたすべての UI オートメーション クライアントは、モーダル ダイアログが閉じられるまで、ブロックされたままになります。|
 
 <a name="Exceptions"></a>
 
@@ -73,11 +74,11 @@ Invoke コントロール パターンを実装する場合は、次のガイド
 |--------------------|---------------|
 |<xref:System.Windows.Automation.ElementNotEnabledException>|コントロールが有効でない場合。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)
-- [UI Automation ツリーの概要](ui-automation-tree-overview.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
+- [UI オートメーションを使用したコントロールの呼び出し](invoke-a-control-using-ui-automation.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

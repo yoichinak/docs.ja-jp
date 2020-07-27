@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289474"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924579"
 ---
 # <a name="model-builder-azure-training-resources"></a>モデル ビルダーの Azure トレーニング リソース
 
@@ -56,7 +56,7 @@ Azure Machine Learning ワークスペースの作成には、次が必要です
 
 ## <a name="training"></a>トレーニング
 
-Azure でのトレーニングは、モデル ビルダーの画像分類のシナリオのみを用意しています。 これらのモデルのトレーニングに使用されるアルゴリズムは、ResNet50 アーキテクチャに基づくディープ ニューラル ネットワークです。 トレーニングには時間がかかり、この時間は選択したコンピューティングのサイズやデータ量によって変わります。 モデルの初回トレーニング時は、リソースのプロビジョニングのためにトレーニング時間が若干長くなります。 Visual Studio で [Monitor current run in Azure portal]\(Azure portal で現在の実行の監視\) リンクを選択すると、ご自分の実行の進行状況を追跡できます。
+Azure でのトレーニングは、モデル ビルダーの画像分類のシナリオのみを用意しています。 これらのモデルのトレーニングに使用されるアルゴリズムは、ResNet50 アーキテクチャに基づくディープ ニューラル ネットワークです。 トレーニングには時間がかかり、この時間は選択したコンピューティングのサイズやデータ量によって変わります。 Visual Studio で [Monitor current run in Azure portal]\(Azure portal で現在の実行の監視\) リンクを選択すると、ご自分の実行の進行状況を追跡できます。
 
 ## <a name="results"></a>結果
 
