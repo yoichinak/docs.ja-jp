@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Dock コントロール パターンの実装
+description: UI オートメーション dock コントロールパターンを実装する方法について説明します。 コントロールの dock プロパティを公開するには、DockPattern コントロールパターンを使用します。 IDockProvider を実装します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180203"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165904"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI オートメーション Dock コントロール パターンの実装
 > [!NOTE]
@@ -40,10 +41,10 @@ ms.locfileid: "79180203"
 ## <a name="required-members-for-idockprovider"></a>IDockProvider の必須メンバー  
  次のプロパティとメソッドは、IDockProvider インターフェイスの実装時に必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|メソッド|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -53,12 +54,12 @@ ms.locfileid: "79180203"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - コントロールが要求されたドック スタイルを実行できない場合。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -コントロールが、要求されたドッキングスタイルを実行できない場合。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

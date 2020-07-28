@@ -1,17 +1,18 @@
 ---
 title: UI オートメーションによる Text コントロール型のサポート
+description: UI オートメーションによる Text コントロール型のサポートに関する情報を取得します。 必要なツリー構造、プロパティ、コントロールパターン、およびイベントについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Text control type
 - UI Automation, Text control type
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-ms.openlocfilehash: 7fcfd783f4e6aa755d9c10f4a27296db548fd1df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29aad3af6c2f84fbadc616279d292d21235d83e5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179515"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163632"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>UI オートメーションによる Text コントロール型のサポート
 > [!NOTE]
@@ -21,15 +22,15 @@ ms.locfileid: "79179515"
   
  テキスト コントロールは、画面上のテキストを表す、基本的なユーザー インターフェイス項目です。  
   
- 以降のセクションで、Text コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 要件[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]は、Win32 または[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows フォームに関係なく、すべてのテキスト コントロールに適用されます。  
+ 以降のセクションで、Text コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 要件は、、Win32、Windows フォームのいずれの場合で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] も、すべてのテキストコントロールに適用され [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、テキスト コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細については、「 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] UI[オートメーション ツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、テキスト コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|Text|テキスト (コンテンツの場合)|  
+|テキスト|テキスト (コンテンツの場合)|  
   
  テキスト コントロールは、単独でラベルとして使用することも、フォーム上の静的テキストとして使用することもできます。 また、次の構造に含めることもできます。  
   
@@ -43,9 +44,9 @@ ms.locfileid: "79179515"
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、テキスト コンロトールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「[クライアントの UI オートメーション プロパティ 」](ui-automation-properties-for-clients.md)を参照してください。  
+ 次の表に、テキスト コンロトールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|Value|Notes|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|コントロール全体を格納する最も外側の四角形。|  
@@ -53,10 +54,10 @@ ms.locfileid: "79179515"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|「ノート」を参照してください。|コントロールがキーボード フォーカスを受け取ることができる場合は、このプロパティをサポートする必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」を参照してください。|常に、テキスト バー コントロールが表示するテキストが、そのコントロールの名前になります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|テキスト コントロールに静的なテキスト ラベルはありません。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Text|この値は、すべての UI フレームワークで同じです。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|テキスト|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"text"|Text コントロール型に対応する、ローカライズされた文字列。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|依存|テキスト コントロールに、別のコントロールの NameProperty で公開されていない情報が含まれている場合、テキスト コントロールはコンテンツになります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|テキスト コントロールは、常にコントロールである必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|正しい|テキスト コントロールは、常にコントロールである必要があります。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
@@ -64,7 +65,7 @@ ms.locfileid: "79179515"
   
 |コントロール パターン|サポート|Notes|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|なし|テキストが ValuePattern をサポートすることはありません。 テキストが編集可能な場合、それは Edit コントロール型です。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|行わない|テキストが ValuePattern をサポートすることはありません。 テキストが編集可能な場合、それは Edit コントロール型です。|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|依存|テキストはアクセシビリティを向上させるために Text コントロール パターンをサポートする必要がありますが、必須ではありません。 テキストにさまざまなスタイルや属性 (たとえば、色、太字、斜体など) がある場合、Text コントロール パターンを使用すると便利です。これは、フレームワークに依存します。|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|依存|テキスト要素がテーブル コントロール内に含まれている場合は、サポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|依存|テキスト要素がテーブル コントロール内に含まれている場合は、サポートする必要があります。|  
@@ -75,15 +76,15 @@ ms.locfileid: "79179515"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|Notes|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Required|なし|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> プロパティ変更イベント。|Required|なし|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必須|なし|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> プロパティ変更イベント。|なし|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Required|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Required|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション ScrollItem コントロール パターンの実装
+description: UI オートメーションでの ScrollItem コントロールパターンの実装に関するガイドラインと規則を確認します。 IScrollItemProvider インターフェイスに必要なメンバーを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Scroll Item
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 3a0647ab98dcb86306573a0e9826fa7232fa9ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a548eb25280d9a8feddc4633a1ba3e7dc022af36
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180136"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163579"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI オートメーション ScrollItem コントロール パターンの実装
 > [!NOTE]
@@ -31,9 +32,9 @@ ms.locfileid: "79180136"
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider の必須メンバー  
  IScrollProvider インターフェイスを実装するには、次のメソッドが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|- 方法|なし|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-メソッド|なし|  
   
  このコントロール パターンに関連付けられるプロパティやイベントはありません。  
   
@@ -47,8 +48,8 @@ ms.locfileid: "79180136"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

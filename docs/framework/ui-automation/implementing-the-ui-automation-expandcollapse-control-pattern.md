@@ -1,26 +1,27 @@
 ---
 title: UI オートメーション ExpandCollapse コントロール パターンの実装
+description: UI オートメーションの ExpandCollapse コントロールパターンの実装のガイドラインと規則について説明します。 IExpandCollapseProvider を実装する方法を理解します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, ExpandCollapse control pattern
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 525b57816071ba2d879036676201a0506d1a29db
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447155"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165859"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI オートメーション ExpandCollapse コントロール パターンの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。
 
 このトピックでは、プロパティ、メソッド、イベントに関する情報など、 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、概要の最後に記載します。
 
-<xref:System.Windows.Automation.ExpandCollapsePattern> コントロール パターンは、視覚的に展開してより多くのコンテンツを表示したり、折りたたんでコンテンツを非表示にしたりするコントロールをサポートするために使用します。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。
+<xref:System.Windows.Automation.ExpandCollapsePattern> コントロール パターンは、視覚的に展開してより多くのコンテンツを表示したり、折りたたんでコンテンツを非表示にしたりするコントロールをサポートするために使用します。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -53,7 +54,7 @@ ExpandCollapse コントロール パターンを実装する場合は、次の�
 
 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>の実装には、次のプロパティとメソッドが必要です。
 
-|必須メンバー|メンバーの種類|説明|
+|必須メンバー|メンバーの型|メモ|
 |----------------------|-----------------|-----------|
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|プロパティ|なし|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|メソッド|なし|
@@ -66,15 +67,15 @@ ExpandCollapse コントロール パターンを実装する場合は、次の�
 
 プロバイダーは、次の例外をスローする必要があります。
 
-|例外の種類|状態|
+|例外の種類|条件|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>するときに、<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> または <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> のいずれかが呼び出されます。|
+|<xref:System.InvalidOperationException>|が <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> の場合、またはのいずれかが呼び出され <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode> ます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [TreeWalker を使用した UI オートメーション要素間の移動](navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation ツリーの概要](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

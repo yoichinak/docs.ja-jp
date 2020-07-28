@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション SelectionItem コントロール パターンの実装
+description: UI オートメーションで SelectionItem コントロールパターンを実装するためのガイドラインと規則を参照してください。 ISelectionItemProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 02505224e4673592f1e169c40af1cfb098e5d9bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 441417aa370563a9ce8b513be6ca4507b21e1e4a
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180103"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163546"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI オートメーション SelectionItem コントロール パターンの実装
 > [!NOTE]
@@ -19,7 +20,7 @@ ms.locfileid: "79180103"
   
  このトピックでは、プロパティ、メソッド、イベントに関する情報など、 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、概要の最後に記載します。  
   
- <xref:System.Windows.Automation.SelectionItemPattern> コントロール パターンは、 <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装するコンテナー コントロールの個別の選択可能な子項目として機能するコントロールをサポートするために使用します。 SelectionItem コントロール パターンを実装するコントロールの例については[、「UI オートメーション クライアントのコントロール パターン マッピング」を](control-pattern-mapping-for-ui-automation-clients.md)参照してください。  
+ <xref:System.Windows.Automation.SelectionItemPattern> コントロール パターンは、 <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装するコンテナー コントロールの個別の選択可能な子項目として機能するコントロールをサポートするために使用します。 SelectionItem コントロールパターンを実装するコントロールの例については、「 [UI オートメーションクライアントのコントロールパターンマッピング](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
@@ -31,14 +32,14 @@ ms.locfileid: "79180103"
 ## <a name="required-members-for-iselectionitemprovider"></a>ISelectionItemProvider の必須メンバー  
  <xref:System.Windows.Automation.Provider.ISelectionItemProvider>の実装には、次のプロパティ、メソッド、およびイベントが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Method|なし|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Event|コンテナー内の選択が大幅に変更され、 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 定数で許可されたよりも多くの <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> イベントと <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> イベントを送信する必要がある場合に発生します。|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|イベント|コンテナー内の選択が大幅に変更され、 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 定数で許可されたよりも多くの <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> イベントと <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> イベントを送信する必要がある場合に発生します。|  
   
-- <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>の結果<xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>が 1 つの選択項目<xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A>である場合は、 が発生します<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>。それ以外<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>の場合は、必要に応じて送信します。  
+- 、、またはの結果が1つの選択された項目である場合は、を <xref:System.Windows.Automation.SelectionItemPattern.Select%2A> <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A> 生成する <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 必要があります。それ以外 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> の場合は、必要に応じてを送信します。  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>例外  
@@ -50,10 +51,10 @@ ms.locfileid: "79180103"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーション Selection コントロール パターンの実装](implementing-the-ui-automation-selection-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)
-- [フラグメント プロバイダーのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [フラグメントプロバイダーのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

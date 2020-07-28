@@ -1,5 +1,6 @@
 ---
 title: UI オートメーションと Microsoft Active Accessibility
+description: アプリケーションをアクセス可能にするための以前のソリューションである、UI オートメーションと Microsoft Active Accessibility の違いについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144787"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164063"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI オートメーションと Microsoft Active Accessibility
 > [!NOTE]
@@ -70,17 +71,17 @@ Active Accessibility は、デュアルインターフェイスをサポート�
   
 |Active Accessibility ロール|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のコントロール型|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
-|ROLE_SYSTEM_PUSHBUTTON|ボタン|  
+|ROLE_SYSTEM_PUSHBUTTON|Button|  
 |ROLE_SYSTEM_CLIENT|予定表|  
 |ROLE_SYSTEM_CHECKBUTTON|チェック ボックス|  
 |ROLE_SYSTEM_COMBOBOX|コンボ ボックス|  
-|ROLE_SYSTEM_CLIENT|Custom|  
+|ROLE_SYSTEM_CLIENT|カスタム|  
 |ROLE_SYSTEM_LIST|データ グリッド|  
 |ROLE_SYSTEM_LISTITEM|データ アイテム|  
 |ROLE_SYSTEM_DOCUMENT|ドキュメント|  
 |ROLE_SYSTEM_TEXT|編集|  
 |ROLE_SYSTEM_GROUPING|グループ|  
-|ROLE_SYSTEM_LIST|Header|  
+|ROLE_SYSTEM_LIST|ヘッダー|  
 |ROLE_SYSTEM_COLUMNHEADER|ヘッダー項目|  
 |ROLE_SYSTEM_LINK|ハイパーリンク|  
 |ROLE_SYSTEM_GRAPHIC|Image|  
@@ -191,7 +192,7 @@ Active Accessibility は、デュアルインターフェイスをサポート�
 |EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> プロパティの変更|  
 |EVENT_OBJECT_CONTENTSCROLLED|関連付けられたスクロール バーにおける または  プロパティの変更|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
-|EVENT_OBJECT_DEFACTIONCHANGE|該当するショートカットはありません|  
+|EVENT_OBJECT_DEFACTIONCHANGE|同等の機能がありません|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|まったく同等の項目はありません (おそらく <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> または <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> プロパティの変更)|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
@@ -204,19 +205,19 @@ Active Accessibility は、デュアルインターフェイスをサポート�
 |EVENT_OBJECT_SELECTION|<xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>|  
 |EVENT_OBJECT_SELECTIONADD|<xref:System.Windows.Automation.SelectionItemPattern.ElementAddedToSelectionEvent>|  
 |EVENT_OBJECT_SELECTIONREMOVE|<xref:System.Windows.Automation.SelectionItemPattern.ElementRemovedFromSelectionEvent>|  
-|EVENT_OBJECT_SELECTIONWITHIN|該当するショートカットはありません|  
+|EVENT_OBJECT_SELECTIONWITHIN|同等の機能がありません|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|さまざまなプロパティ変更イベント|  
 |EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> および <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> の変更|  
-|EVENT_SYSTEM_ALERT|該当するショートカットはありません|  
-|EVENT_SYSTEM_CAPTUREEND|該当するショートカットはありません|  
-|EVENT_SYSTEM_CAPTURESTART|該当するショートカットはありません|  
-|EVENT_SYSTEM_CONTEXTHELPEND|該当するショートカットはありません|  
-|EVENT_SYSTEM_CONTEXTHELPSTART|該当するショートカットはありません|  
+|EVENT_SYSTEM_ALERT|同等の機能がありません|  
+|EVENT_SYSTEM_CAPTUREEND|同等の機能がありません|  
+|EVENT_SYSTEM_CAPTURESTART|同等の機能がありません|  
+|EVENT_SYSTEM_CONTEXTHELPEND|同等の機能がありません|  
+|EVENT_SYSTEM_CONTEXTHELPSTART|同等の機能がありません|  
 |EVENT_SYSTEM_DIALOGEND|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|  
 |EVENT_SYSTEM_DIALOGSTART|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|  
-|EVENT_SYSTEM_DRAGDROPEND|該当するショートカットはありません|  
-|EVENT_SYSTEM_DRAGDROPSTART|該当するショートカットはありません|  
+|EVENT_SYSTEM_DRAGDROPEND|同等の機能がありません|  
+|EVENT_SYSTEM_DRAGDROPSTART|同等の機能がありません|  
 |EVENT_SYSTEM_FOREGROUND|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
 |EVENT_SYSTEM_MENUEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
 |EVENT_SYSTEM_MENUPOPUPEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
@@ -228,23 +229,23 @@ Active Accessibility は、デュアルインターフェイスをサポート�
 |EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> プロパティの変更|  
 |EVENT_SYSTEM_SCROLLINGEND|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> または <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> プロパティの変更|  
 |EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> または <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> プロパティの変更|  
-|EVENT_SYSTEM_SOUND|該当するショートカットはありません|  
+|EVENT_SYSTEM_SOUND|同等の機能がありません|  
 |EVENT_SYSTEM_SWITCHEND|同等の項目はありませんが、新しいアプリケーションがフォーカスを受け取ったことは <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> イベントによって通知されます。|  
-|EVENT_SYSTEM_SWITCHSTART|該当するショートカットはありません|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> プロパティの変更|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> イベント|  
-|該当するショートカットはありません|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
+|EVENT_SYSTEM_SWITCHSTART|同等の機能がありません|  
+|同等の機能がありません|<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> プロパティの変更|  
+|同等の機能がありません|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> イベント|  
+|同等の機能がありません|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  `IAccessible` をカスタマイズするシナリオでは、基本 `IAccessible` をラップしてからこれに対する呼び出しを行うという要件が生じることがあります。 このことは、セキュリティに影響を及ぼします。部分信頼コンポーネントにコード パスを中継させてはならないからです。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] モデルでは、プロバイダーが他のプロバイダー コードを呼び出す必要がありません。 必要な集約はすべて [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コア サービスが行います。  

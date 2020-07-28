@@ -1,17 +1,18 @@
 ---
 title: UI オートメーション Table コントロール パターンの実装
+description: UI オートメーションで Table コントロールパターンを実装するためのガイドラインと規則を確認します。 ITableProvider インターフェイスに必要なメンバーを確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Table control pattern
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 0b3d000112060550734890ad3c4063a26c320b04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88ddee04ba887daf1929d855526cd0d062f78d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180114"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168238"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI オートメーション Table コントロール パターンの実装
 > [!NOTE]
@@ -32,9 +33,9 @@ ms.locfileid: "79180114"
 - 列ヘッダーと行ヘッダーには、プライマリ ヘッダーだけでなく、任意の補助ヘッダーも含めることができます。  
   
 > [!NOTE]
-> この概念は、ユーザーが "名" 列を定義した Microsoft Excel スプレッドシートで明らかになります。 これで、この列のヘッダーは、ユーザーが定義した [ファースト ネーム] ヘッダーとアプリケーションによって割り当てられたその列の英数字指定の 2 つになります。  
+> この概念は、ユーザーが "First name" 列を定義した Microsoft Excel スプレッドシートで明らかになります。 これで、この列のヘッダーは、ユーザーが定義した [ファースト ネーム] ヘッダーとアプリケーションによって割り当てられたその列の英数字指定の 2 つになります。  
   
-- 関連する[グリッド機能については、「UI オートメーション グリッド コントロール パターンの実装](implementing-the-ui-automation-grid-control-pattern.md)」を参照してください。  
+- 関連するグリッド機能について[は、「UI オートメーション Grid コントロールパターンの実装](implementing-the-ui-automation-grid-control-pattern.md)」を参照してください。  
   
  ![複雑なヘッダー項目を含むテーブル。](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 列ヘッダーが複雑なテーブルの例  
@@ -46,11 +47,11 @@ RowOrColumnMajor プロパティがあいまいなテーブルの例
 ## <a name="required-members-for-itableprovider"></a>ITableProvider の必須メンバー  
  ITableProvider インターフェイスには、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|メンバーの型|Notes|  
+|必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Method|なし|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|メソッド|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
@@ -60,10 +61,10 @@ RowOrColumnMajor プロパティがあいまいなテーブルの例
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーション TableItem コントロール パターンの実装](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [UI オートメーション Grid コントロール パターンの実装](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)
