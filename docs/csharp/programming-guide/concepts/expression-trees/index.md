@@ -1,13 +1,14 @@
 ---
 title: 式ツリー (C#)
+description: 式ツリーについて説明します。 各ノードが式である、これらのデータ構造体によって表されるコードをコンパイルして実行する方法をご覧ください。
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241553"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105585"
 ---
 # <a name="expression-trees-c"></a>式ツリー (C#)
 式ツリーでは、コードがツリー状のデータ構造で表示されます。各ノードは 1 つの式に対応しています。たとえば、メソッドの呼び出しや `x < y` のような二項演算などです。  

@@ -1,13 +1,14 @@
 ---
 title: 統合言語クエリ (LINQ) (C#)
+description: 統合言語クエリ (LINQ) について説明し、完全なクエリ操作の例を確認します。
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: a2e53d6c7f4d24fd57b1f91c1428b8341386b6f9
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6c8844c387177ce858b63a52b1f5c7246b570beb
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463897"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103421"
 ---
 # <a name="language-integrated-query-linq"></a>統合言語クエリ (LINQ)
 

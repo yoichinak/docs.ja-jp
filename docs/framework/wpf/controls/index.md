@@ -1,5 +1,6 @@
 ---
 title: コントロール
+description: コントロールと呼ばれているが、コントロール クラスから継承していない可能性がある Windows Presentation Foundation の共通 UI コンポーネントについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: c3d9d3a38cf5f84e21df195e113e264e5a4ac025
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646482"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165844"
 ---
 # <a name="controls"></a>コントロール
 <a name="introduction"></a>

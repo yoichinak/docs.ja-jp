@@ -1,13 +1,14 @@
 ---
 title: 共変性と反変性 (C#)
+description: 共変性と反変性、およびそれらが割り当ての互換性に与える影響について説明します。 両者の違いを示すコード例を参照してください。
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 23633675059b9c295dda7ddf3d78754c0223f5f8
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241371"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105696"
 ---
 # <a name="covariance-and-contravariance-c"></a>共変性と反変性 (C#)
 C# では、共変性と反変性により、配列型、デリゲート型、およびジェネリック型引数の暗黙の参照変換が可能になります。 共変性は代入互換性を維持し、反変性はこれを反転させます。  
