@@ -1,16 +1,17 @@
 ---
 title: インサイド C# プログラム
+description: 標準的な例である Hello, World! を含め、C# プログラムの一般的な構造を理解するには、このリソースを使用します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ecf526d77fcf9df83fa832c57de0e1921d27e3f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69589254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303349"
 ---
 # <a name="inside-a-c-program"></a>インサイド C# プログラム
 
@@ -30,7 +31,7 @@ ms.locfileid: "69589254"
 
 - [C# の概要](../../getting-started/index.md)
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 
 - [C# リファレンス](../../language-reference/index.md)
 
@@ -40,6 +41,6 @@ ms.locfileid: "69589254"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
