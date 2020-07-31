@@ -105,7 +105,7 @@ ms.locfileid: "79398377"
 
 - [foreach](../../language-reference/keywords/foreach-in.md) ループでループ変数の型を決定するときは、暗黙の型指定は使用されません。
 
-     次の例では、`foreach` ステートメントで暗黙の型指定が使用されています。
+     次の例では、`foreach` ステートメントで明示的な型指定が使用されています。
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
